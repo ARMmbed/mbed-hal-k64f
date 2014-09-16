@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013 - 2014, Freescale Semiconductor, Inc.
+ * Copyright (c) 2014, Freescale Semiconductor, Inc.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without modification,
@@ -35,11 +35,198 @@
  *
  * The CPU macro should be declared in the project or makefile.
  */
-#if (defined(CPU_MK22FN512VDC12))
+#if (defined(CPU_MK02FN128VFM10) || defined(CPU_MK02FN64VFM10) || defined(CPU_MK02FN128VLF10) || \
+    defined(CPU_MK02FN64VLF10) || defined(CPU_MK02FN128VLH10) || defined(CPU_MK02FN64VLH10))
+
+    #define K02F12810_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MK02F12810/MK02F12810.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MK02F12810/MK02F12810_adc.h"
+    #include "device/MK02F12810/MK02F12810_cmp.h"
+    #include "device/MK02F12810/MK02F12810_crc.h"
+    #include "device/MK02F12810/MK02F12810_dac.h"
+    #include "device/MK02F12810/MK02F12810_dma.h"
+    #include "device/MK02F12810/MK02F12810_dmamux.h"
+    #include "device/MK02F12810/MK02F12810_ewm.h"
+    #include "device/MK02F12810/MK02F12810_fmc.h"
+    #include "device/MK02F12810/MK02F12810_ftfa.h"
+    #include "device/MK02F12810/MK02F12810_ftm.h"
+    #include "device/MK02F12810/MK02F12810_gpio.h"
+    #include "device/MK02F12810/MK02F12810_i2c.h"
+    #include "device/MK02F12810/MK02F12810_llwu.h"
+    #include "device/MK02F12810/MK02F12810_lptmr.h"
+    #include "device/MK02F12810/MK02F12810_mcg.h"
+    #include "device/MK02F12810/MK02F12810_mcm.h"
+    #include "device/MK02F12810/MK02F12810_nv.h"
+    #include "device/MK02F12810/MK02F12810_osc.h"
+    #include "device/MK02F12810/MK02F12810_pdb.h"
+    #include "device/MK02F12810/MK02F12810_pit.h"
+    #include "device/MK02F12810/MK02F12810_pmc.h"
+    #include "device/MK02F12810/MK02F12810_port.h"
+    #include "device/MK02F12810/MK02F12810_rcm.h"
+    #include "device/MK02F12810/MK02F12810_sim.h"
+    #include "device/MK02F12810/MK02F12810_smc.h"
+    #include "device/MK02F12810/MK02F12810_spi.h"
+    #include "device/MK02F12810/MK02F12810_uart.h"
+    #include "device/MK02F12810/MK02F12810_vref.h"
+    #include "device/MK02F12810/MK02F12810_wdog.h"
+
+#elif (defined(CPU_MK20DX128VMP5) || defined(CPU_MK20DN128VMP5) || defined(CPU_MK20DX64VMP5) || \
+    defined(CPU_MK20DN64VMP5) || defined(CPU_MK20DX32VMP5) || defined(CPU_MK20DN32VMP5) || \
+    defined(CPU_MK20DX128VLH5) || defined(CPU_MK20DN128VLH5) || defined(CPU_MK20DX64VLH5) || \
+    defined(CPU_MK20DN64VLH5) || defined(CPU_MK20DX32VLH5) || defined(CPU_MK20DN32VLH5) || \
+    defined(CPU_MK20DX128VFM5) || defined(CPU_MK20DN128VFM5) || defined(CPU_MK20DX64VFM5) || \
+    defined(CPU_MK20DN64VFM5) || defined(CPU_MK20DX32VFM5) || defined(CPU_MK20DN32VFM5) || \
+    defined(CPU_MK20DX128VFT5) || defined(CPU_MK20DN128VFT5) || defined(CPU_MK20DX64VFT5) || \
+    defined(CPU_MK20DN64VFT5) || defined(CPU_MK20DX32VFT5) || defined(CPU_MK20DN32VFT5) || \
+    defined(CPU_MK20DX128VLF5) || defined(CPU_MK20DN128VLF5) || defined(CPU_MK20DX64VLF5) || \
+    defined(CPU_MK20DN64VLF5) || defined(CPU_MK20DX32VLF5) || defined(CPU_MK20DN32VLF5))
+
+    #define K20D5_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MK20D5/MK20D5.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MK20D5/MK20D5_adc.h"
+    #include "device/MK20D5/MK20D5_cmp.h"
+    #include "device/MK20D5/MK20D5_cmt.h"
+    #include "device/MK20D5/MK20D5_crc.h"
+    #include "device/MK20D5/MK20D5_dma.h"
+    #include "device/MK20D5/MK20D5_dmamux.h"
+    #include "device/MK20D5/MK20D5_ewm.h"
+    #include "device/MK20D5/MK20D5_fmc.h"
+    #include "device/MK20D5/MK20D5_ftfl.h"
+    #include "device/MK20D5/MK20D5_ftm.h"
+    #include "device/MK20D5/MK20D5_gpio.h"
+    #include "device/MK20D5/MK20D5_i2c.h"
+    #include "device/MK20D5/MK20D5_i2s.h"
+    #include "device/MK20D5/MK20D5_llwu.h"
+    #include "device/MK20D5/MK20D5_lptmr.h"
+    #include "device/MK20D5/MK20D5_mcg.h"
+    #include "device/MK20D5/MK20D5_nv.h"
+    #include "device/MK20D5/MK20D5_osc.h"
+    #include "device/MK20D5/MK20D5_pdb.h"
+    #include "device/MK20D5/MK20D5_pit.h"
+    #include "device/MK20D5/MK20D5_pmc.h"
+    #include "device/MK20D5/MK20D5_port.h"
+    #include "device/MK20D5/MK20D5_rcm.h"
+    #include "device/MK20D5/MK20D5_rfsys.h"
+    #include "device/MK20D5/MK20D5_rfvbat.h"
+    #include "device/MK20D5/MK20D5_rtc.h"
+    #include "device/MK20D5/MK20D5_sim.h"
+    #include "device/MK20D5/MK20D5_smc.h"
+    #include "device/MK20D5/MK20D5_spi.h"
+    #include "device/MK20D5/MK20D5_tsi.h"
+    #include "device/MK20D5/MK20D5_uart.h"
+    #include "device/MK20D5/MK20D5_usb.h"
+    #include "device/MK20D5/MK20D5_usbdcd.h"
+    #include "device/MK20D5/MK20D5_vref.h"
+    #include "device/MK20D5/MK20D5_wdog.h"
+
+#elif (defined(CPU_MK22FN128VDC10) || defined(CPU_MK22FN128VLH10) || defined(CPU_MK22FN128VLL10) || \
+    defined(CPU_MK22FN128VMP10))
+
+    #define K22F12810_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MK22F12810/MK22F12810.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MK22F12810/MK22F12810_adc.h"
+    #include "device/MK22F12810/MK22F12810_cmp.h"
+    #include "device/MK22F12810/MK22F12810_crc.h"
+    #include "device/MK22F12810/MK22F12810_dac.h"
+    #include "device/MK22F12810/MK22F12810_dma.h"
+    #include "device/MK22F12810/MK22F12810_dmamux.h"
+    #include "device/MK22F12810/MK22F12810_ewm.h"
+    #include "device/MK22F12810/MK22F12810_fmc.h"
+    #include "device/MK22F12810/MK22F12810_ftfa.h"
+    #include "device/MK22F12810/MK22F12810_ftm.h"
+    #include "device/MK22F12810/MK22F12810_gpio.h"
+    #include "device/MK22F12810/MK22F12810_i2c.h"
+    #include "device/MK22F12810/MK22F12810_i2s.h"
+    #include "device/MK22F12810/MK22F12810_llwu.h"
+    #include "device/MK22F12810/MK22F12810_lptmr.h"
+    #include "device/MK22F12810/MK22F12810_lpuart.h"
+    #include "device/MK22F12810/MK22F12810_mcg.h"
+    #include "device/MK22F12810/MK22F12810_mcm.h"
+    #include "device/MK22F12810/MK22F12810_nv.h"
+    #include "device/MK22F12810/MK22F12810_osc.h"
+    #include "device/MK22F12810/MK22F12810_pdb.h"
+    #include "device/MK22F12810/MK22F12810_pit.h"
+    #include "device/MK22F12810/MK22F12810_pmc.h"
+    #include "device/MK22F12810/MK22F12810_port.h"
+    #include "device/MK22F12810/MK22F12810_rcm.h"
+    #include "device/MK22F12810/MK22F12810_rfsys.h"
+    #include "device/MK22F12810/MK22F12810_rfvbat.h"
+    #include "device/MK22F12810/MK22F12810_rtc.h"
+    #include "device/MK22F12810/MK22F12810_sim.h"
+    #include "device/MK22F12810/MK22F12810_smc.h"
+    #include "device/MK22F12810/MK22F12810_spi.h"
+    #include "device/MK22F12810/MK22F12810_uart.h"
+    #include "device/MK22F12810/MK22F12810_usb.h"
+    #include "device/MK22F12810/MK22F12810_vref.h"
+    #include "device/MK22F12810/MK22F12810_wdog.h"
+
+#elif (defined(CPU_MK22FN256VDC12) || defined(CPU_MK22FN256VLH12) || defined(CPU_MK22FN256VLL12) || \
+    defined(CPU_MK22FN256VMP12))
+
+    #define K22F25612_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MK22F25612/MK22F25612.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MK22F25612/MK22F25612_adc.h"
+    #include "device/MK22F25612/MK22F25612_cmp.h"
+    #include "device/MK22F25612/MK22F25612_crc.h"
+    #include "device/MK22F25612/MK22F25612_dac.h"
+    #include "device/MK22F25612/MK22F25612_dma.h"
+    #include "device/MK22F25612/MK22F25612_dmamux.h"
+    #include "device/MK22F25612/MK22F25612_ewm.h"
+    #include "device/MK22F25612/MK22F25612_fmc.h"
+    #include "device/MK22F25612/MK22F25612_ftfa.h"
+    #include "device/MK22F25612/MK22F25612_ftm.h"
+    #include "device/MK22F25612/MK22F25612_gpio.h"
+    #include "device/MK22F25612/MK22F25612_i2c.h"
+    #include "device/MK22F25612/MK22F25612_i2s.h"
+    #include "device/MK22F25612/MK22F25612_llwu.h"
+    #include "device/MK22F25612/MK22F25612_lptmr.h"
+    #include "device/MK22F25612/MK22F25612_lpuart.h"
+    #include "device/MK22F25612/MK22F25612_mcg.h"
+    #include "device/MK22F25612/MK22F25612_mcm.h"
+    #include "device/MK22F25612/MK22F25612_nv.h"
+    #include "device/MK22F25612/MK22F25612_osc.h"
+    #include "device/MK22F25612/MK22F25612_pdb.h"
+    #include "device/MK22F25612/MK22F25612_pit.h"
+    #include "device/MK22F25612/MK22F25612_pmc.h"
+    #include "device/MK22F25612/MK22F25612_port.h"
+    #include "device/MK22F25612/MK22F25612_rcm.h"
+    #include "device/MK22F25612/MK22F25612_rfsys.h"
+    #include "device/MK22F25612/MK22F25612_rfvbat.h"
+    #include "device/MK22F25612/MK22F25612_rng.h"
+    #include "device/MK22F25612/MK22F25612_rtc.h"
+    #include "device/MK22F25612/MK22F25612_sim.h"
+    #include "device/MK22F25612/MK22F25612_smc.h"
+    #include "device/MK22F25612/MK22F25612_spi.h"
+    #include "device/MK22F25612/MK22F25612_uart.h"
+    #include "device/MK22F25612/MK22F25612_usb.h"
+    #include "device/MK22F25612/MK22F25612_vref.h"
+    #include "device/MK22F25612/MK22F25612_wdog.h"
+
+#elif (defined(CPU_MK22FN512VDC12) || defined(CPU_MK22FN512VLH12) || defined(CPU_MK22FN512VLL12))
+
     #define K22F51212_SERIES
-    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.)*/
+
+    /* CMSIS-style register definitions */
+    #include "device/MK22F51212/MK22F51212.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
     #include "device/MK22F51212/MK22F51212_adc.h"
-    #include "device/MK22F51212/MK22F51212_aips.h"
     #include "device/MK22F51212/MK22F51212_cmp.h"
     #include "device/MK22F51212/MK22F51212_crc.h"
     #include "device/MK22F51212/MK22F51212_dac.h"
@@ -55,6 +242,7 @@
     #include "device/MK22F51212/MK22F51212_i2s.h"
     #include "device/MK22F51212/MK22F51212_llwu.h"
     #include "device/MK22F51212/MK22F51212_lptmr.h"
+    #include "device/MK22F51212/MK22F51212_lpuart.h"
     #include "device/MK22F51212/MK22F51212_mcg.h"
     #include "device/MK22F51212/MK22F51212_mcm.h"
     #include "device/MK22F51212/MK22F51212_nv.h"
@@ -76,11 +264,14 @@
     #include "device/MK22F51212/MK22F51212_vref.h"
     #include "device/MK22F51212/MK22F51212_wdog.h"
 
-    /* CMSIS-style register definitions*/
-    #include "device/MK22F51212/MK22F51212.h"
+#elif (defined(CPU_MK24FN1M0VDC12) || defined(CPU_MK24FN1M0VLQ12))
 
-#elif (defined(CPU_MK24FN1M0VLQ12))
-    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.)*/
+    #define K24F12_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MK24F12/MK24F12.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
     #include "device/MK24F12/MK24F12_adc.h"
     #include "device/MK24F12/MK24F12_aips.h"
     #include "device/MK24F12/MK24F12_axbs.h"
@@ -126,11 +317,60 @@
     #include "device/MK24F12/MK24F12_vref.h"
     #include "device/MK24F12/MK24F12_wdog.h"
 
-    /* CMSIS-style register definitions*/
-    #include "device/MK24F12/MK24F12.h"
+#elif (defined(CPU_MK24FN256VDC12))
 
-#elif (defined(CPU_MK63FN1M0VMD12))
-    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.)*/
+    #define K24F25612_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MK24F25612/MK24F25612.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MK24F25612/MK24F25612_adc.h"
+    #include "device/MK24F25612/MK24F25612_aips.h"
+    #include "device/MK24F25612/MK24F25612_cmp.h"
+    #include "device/MK24F25612/MK24F25612_cmt.h"
+    #include "device/MK24F25612/MK24F25612_crc.h"
+    #include "device/MK24F25612/MK24F25612_dac.h"
+    #include "device/MK24F25612/MK24F25612_dma.h"
+    #include "device/MK24F25612/MK24F25612_dmamux.h"
+    #include "device/MK24F25612/MK24F25612_ewm.h"
+    #include "device/MK24F25612/MK24F25612_fmc.h"
+    #include "device/MK24F25612/MK24F25612_ftfa.h"
+    #include "device/MK24F25612/MK24F25612_ftm.h"
+    #include "device/MK24F25612/MK24F25612_gpio.h"
+    #include "device/MK24F25612/MK24F25612_i2c.h"
+    #include "device/MK24F25612/MK24F25612_i2s.h"
+    #include "device/MK24F25612/MK24F25612_llwu.h"
+    #include "device/MK24F25612/MK24F25612_lptmr.h"
+    #include "device/MK24F25612/MK24F25612_mcg.h"
+    #include "device/MK24F25612/MK24F25612_mcm.h"
+    #include "device/MK24F25612/MK24F25612_osc.h"
+    #include "device/MK24F25612/MK24F25612_pdb.h"
+    #include "device/MK24F25612/MK24F25612_pit.h"
+    #include "device/MK24F25612/MK24F25612_pmc.h"
+    #include "device/MK24F25612/MK24F25612_port.h"
+    #include "device/MK24F25612/MK24F25612_rcm.h"
+    #include "device/MK24F25612/MK24F25612_rfsys.h"
+    #include "device/MK24F25612/MK24F25612_rfvbat.h"
+    #include "device/MK24F25612/MK24F25612_rng.h"
+    #include "device/MK24F25612/MK24F25612_rtc.h"
+    #include "device/MK24F25612/MK24F25612_sim.h"
+    #include "device/MK24F25612/MK24F25612_smc.h"
+    #include "device/MK24F25612/MK24F25612_spi.h"
+    #include "device/MK24F25612/MK24F25612_uart.h"
+    #include "device/MK24F25612/MK24F25612_usb.h"
+    #include "device/MK24F25612/MK24F25612_usbdcd.h"
+    #include "device/MK24F25612/MK24F25612_vref.h"
+    #include "device/MK24F25612/MK24F25612_wdog.h"
+
+#elif (defined(CPU_MK63FN1M0VLQ12) || defined(CPU_MK63FN1M0VMD12))
+
+    #define K63F12_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MK63F12/MK63F12.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
     #include "device/MK63F12/MK63F12_adc.h"
     #include "device/MK63F12/MK63F12_aips.h"
     #include "device/MK63F12/MK63F12_axbs.h"
@@ -177,64 +417,16 @@
     #include "device/MK63F12/MK63F12_vref.h"
     #include "device/MK63F12/MK63F12_wdog.h"
 
-    /* CMSIS-style register definitions*/
-    #include "device/MK63F12/MK63F12.h"
+#elif (defined(CPU_MK64FX512VDC12) || defined(CPU_MK64FN1M0VDC12) || defined(CPU_MK64FX512VLL12) || \
+    defined(CPU_MK64FN1M0VLL12) || defined(CPU_MK64FX512VLQ12) || defined(CPU_MK64FN1M0VLQ12) || \
+    defined(CPU_MK64FX512VMD12) || defined(CPU_MK64FN1M0VMD12))
 
-#elif (defined(CPU_MK63FN1M0VMD12WS))
-    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.)*/
-    #include "device/MK63F12WS/MK63F12WS_adc.h"
-    #include "device/MK63F12WS/MK63F12WS_aips.h"
-    #include "device/MK63F12WS/MK63F12WS_axbs.h"
-    #include "device/MK63F12WS/MK63F12WS_can.h"
-    #include "device/MK63F12WS/MK63F12WS_cau.h"
-    #include "device/MK63F12WS/MK63F12WS_cmp.h"
-    #include "device/MK63F12WS/MK63F12WS_cmt.h"
-    #include "device/MK63F12WS/MK63F12WS_crc.h"
-    #include "device/MK63F12WS/MK63F12WS_dac.h"
-    #include "device/MK63F12WS/MK63F12WS_dma.h"
-    #include "device/MK63F12WS/MK63F12WS_dmamux.h"
-    #include "device/MK63F12WS/MK63F12WS_dry.h"
-    #include "device/MK63F12WS/MK63F12WS_enet.h"
-    #include "device/MK63F12WS/MK63F12WS_ewm.h"
-    #include "device/MK63F12WS/MK63F12WS_fb.h"
-    #include "device/MK63F12WS/MK63F12WS_fmc.h"
-    #include "device/MK63F12WS/MK63F12WS_ftfe.h"
-    #include "device/MK63F12WS/MK63F12WS_ftm.h"
-    #include "device/MK63F12WS/MK63F12WS_gpio.h"
-    #include "device/MK63F12WS/MK63F12WS_i2c.h"
-    #include "device/MK63F12WS/MK63F12WS_i2s.h"
-    #include "device/MK63F12WS/MK63F12WS_llwu.h"
-    #include "device/MK63F12WS/MK63F12WS_lptmr.h"
-    #include "device/MK63F12WS/MK63F12WS_mcg.h"
-    #include "device/MK63F12WS/MK63F12WS_mcm.h"
-    #include "device/MK63F12WS/MK63F12WS_mpu.h"
-    #include "device/MK63F12WS/MK63F12WS_nv.h"
-    #include "device/MK63F12WS/MK63F12WS_osc.h"
-    #include "device/MK63F12WS/MK63F12WS_pdb.h"
-    #include "device/MK63F12WS/MK63F12WS_pit.h"
-    #include "device/MK63F12WS/MK63F12WS_pmc.h"
-    #include "device/MK63F12WS/MK63F12WS_port.h"
-    #include "device/MK63F12WS/MK63F12WS_rcm.h"
-    #include "device/MK63F12WS/MK63F12WS_rfsys.h"
-    #include "device/MK63F12WS/MK63F12WS_rfvbat.h"
-    #include "device/MK63F12WS/MK63F12WS_rng.h"
-    #include "device/MK63F12WS/MK63F12WS_rtc.h"
-    #include "device/MK63F12WS/MK63F12WS_sdhc.h"
-    #include "device/MK63F12WS/MK63F12WS_sim.h"
-    #include "device/MK63F12WS/MK63F12WS_smc.h"
-    #include "device/MK63F12WS/MK63F12WS_spi.h"
-    #include "device/MK63F12WS/MK63F12WS_uart.h"
-    #include "device/MK63F12WS/MK63F12WS_usb.h"
-    #include "device/MK63F12WS/MK63F12WS_usbdcd.h"
-    #include "device/MK63F12WS/MK63F12WS_vref.h"
-    #include "device/MK63F12WS/MK63F12WS_wdog.h"
-
-    /* CMSIS-style register definitions*/
-    #include "device/MK63F12WS/MK63F12WS.h"
-
-#elif (defined(CPU_MK64FN1M0VMD12) || defined(CPU_MK64FX512VMD12))
     #define K64F12_SERIES
-    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.)*/
+
+    /* CMSIS-style register definitions */
+    #include "device/MK64F12/MK64F12.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
     #include "device/MK64F12/MK64F12_adc.h"
     #include "device/MK64F12/MK64F12_aips.h"
     #include "device/MK64F12/MK64F12_axbs.h"
@@ -281,14 +473,142 @@
     #include "device/MK64F12/MK64F12_vref.h"
     #include "device/MK64F12/MK64F12_wdog.h"
 
-    /* CMSIS-style register definitions*/
-    #include "device/MK64F12/MK64F12.h"
+#elif (defined(CPU_MK65FN2M0CAC18) || defined(CPU_MK65FX1M0CAC18) || defined(CPU_MK65FN2M0VMI18) || \
+    defined(CPU_MK65FX1M0VMI18))
+
+    #define K65F18_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MK65F18/MK65F18.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MK65F18/MK65F18_adc.h"
+    #include "device/MK65F18/MK65F18_aips.h"
+    #include "device/MK65F18/MK65F18_axbs.h"
+    #include "device/MK65F18/MK65F18_can.h"
+    #include "device/MK65F18/MK65F18_cau.h"
+    #include "device/MK65F18/MK65F18_cmp.h"
+    #include "device/MK65F18/MK65F18_cmt.h"
+    #include "device/MK65F18/MK65F18_crc.h"
+    #include "device/MK65F18/MK65F18_dac.h"
+    #include "device/MK65F18/MK65F18_dma.h"
+    #include "device/MK65F18/MK65F18_dmamux.h"
+    #include "device/MK65F18/MK65F18_enet.h"
+    #include "device/MK65F18/MK65F18_ewm.h"
+    #include "device/MK65F18/MK65F18_fb.h"
+    #include "device/MK65F18/MK65F18_fmc.h"
+    #include "device/MK65F18/MK65F18_ftfe.h"
+    #include "device/MK65F18/MK65F18_ftm.h"
+    #include "device/MK65F18/MK65F18_gpio.h"
+    #include "device/MK65F18/MK65F18_i2c.h"
+    #include "device/MK65F18/MK65F18_i2s.h"
+    #include "device/MK65F18/MK65F18_llwu.h"
+    #include "device/MK65F18/MK65F18_lmem.h"
+    #include "device/MK65F18/MK65F18_lptmr.h"
+    #include "device/MK65F18/MK65F18_lpuart.h"
+    #include "device/MK65F18/MK65F18_mcg.h"
+    #include "device/MK65F18/MK65F18_mcm.h"
+    #include "device/MK65F18/MK65F18_mpu.h"
+    #include "device/MK65F18/MK65F18_nv.h"
+    #include "device/MK65F18/MK65F18_osc.h"
+    #include "device/MK65F18/MK65F18_pdb.h"
+    #include "device/MK65F18/MK65F18_pit.h"
+    #include "device/MK65F18/MK65F18_pmc.h"
+    #include "device/MK65F18/MK65F18_port.h"
+    #include "device/MK65F18/MK65F18_rcm.h"
+    #include "device/MK65F18/MK65F18_rfsys.h"
+    #include "device/MK65F18/MK65F18_rfvbat.h"
+    #include "device/MK65F18/MK65F18_rng.h"
+    #include "device/MK65F18/MK65F18_rtc.h"
+    #include "device/MK65F18/MK65F18_sdhc.h"
+    #include "device/MK65F18/MK65F18_sdram.h"
+    #include "device/MK65F18/MK65F18_sim.h"
+    #include "device/MK65F18/MK65F18_smc.h"
+    #include "device/MK65F18/MK65F18_spi.h"
+    #include "device/MK65F18/MK65F18_tpm.h"
+    #include "device/MK65F18/MK65F18_tsi.h"
+    #include "device/MK65F18/MK65F18_uart.h"
+    #include "device/MK65F18/MK65F18_usb.h"
+    #include "device/MK65F18/MK65F18_usbdcd.h"
+    #include "device/MK65F18/MK65F18_usbhs.h"
+    #include "device/MK65F18/MK65F18_usbhsdcd.h"
+    #include "device/MK65F18/MK65F18_usbphy.h"
+    #include "device/MK65F18/MK65F18_vref.h"
+    #include "device/MK65F18/MK65F18_wdog.h"
+
+#elif (defined(CPU_MK66FN2M0VLQ18) || defined(CPU_MK66FX1M0VLQ18) || defined(CPU_MK66FN2M0VMD18) || \
+    defined(CPU_MK66FX1M0VMD18))
+
+    #define K66F18_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MK66F18/MK66F18.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MK66F18/MK66F18_adc.h"
+    #include "device/MK66F18/MK66F18_aips.h"
+    #include "device/MK66F18/MK66F18_axbs.h"
+    #include "device/MK66F18/MK66F18_can.h"
+    #include "device/MK66F18/MK66F18_cau.h"
+    #include "device/MK66F18/MK66F18_cmp.h"
+    #include "device/MK66F18/MK66F18_cmt.h"
+    #include "device/MK66F18/MK66F18_crc.h"
+    #include "device/MK66F18/MK66F18_dac.h"
+    #include "device/MK66F18/MK66F18_dma.h"
+    #include "device/MK66F18/MK66F18_dmamux.h"
+    #include "device/MK66F18/MK66F18_enet.h"
+    #include "device/MK66F18/MK66F18_ewm.h"
+    #include "device/MK66F18/MK66F18_fb.h"
+    #include "device/MK66F18/MK66F18_fmc.h"
+    #include "device/MK66F18/MK66F18_ftfe.h"
+    #include "device/MK66F18/MK66F18_ftm.h"
+    #include "device/MK66F18/MK66F18_gpio.h"
+    #include "device/MK66F18/MK66F18_i2c.h"
+    #include "device/MK66F18/MK66F18_i2s.h"
+    #include "device/MK66F18/MK66F18_llwu.h"
+    #include "device/MK66F18/MK66F18_lmem.h"
+    #include "device/MK66F18/MK66F18_lptmr.h"
+    #include "device/MK66F18/MK66F18_lpuart.h"
+    #include "device/MK66F18/MK66F18_mcg.h"
+    #include "device/MK66F18/MK66F18_mcm.h"
+    #include "device/MK66F18/MK66F18_mpu.h"
+    #include "device/MK66F18/MK66F18_nv.h"
+    #include "device/MK66F18/MK66F18_osc.h"
+    #include "device/MK66F18/MK66F18_pdb.h"
+    #include "device/MK66F18/MK66F18_pit.h"
+    #include "device/MK66F18/MK66F18_pmc.h"
+    #include "device/MK66F18/MK66F18_port.h"
+    #include "device/MK66F18/MK66F18_rcm.h"
+    #include "device/MK66F18/MK66F18_rfsys.h"
+    #include "device/MK66F18/MK66F18_rfvbat.h"
+    #include "device/MK66F18/MK66F18_rng.h"
+    #include "device/MK66F18/MK66F18_rtc.h"
+    #include "device/MK66F18/MK66F18_sdhc.h"
+    #include "device/MK66F18/MK66F18_sdram.h"
+    #include "device/MK66F18/MK66F18_sim.h"
+    #include "device/MK66F18/MK66F18_smc.h"
+    #include "device/MK66F18/MK66F18_spi.h"
+    #include "device/MK66F18/MK66F18_tpm.h"
+    #include "device/MK66F18/MK66F18_tsi.h"
+    #include "device/MK66F18/MK66F18_uart.h"
+    #include "device/MK66F18/MK66F18_usb.h"
+    #include "device/MK66F18/MK66F18_usbdcd.h"
+    #include "device/MK66F18/MK66F18_usbhs.h"
+    #include "device/MK66F18/MK66F18_usbhsdcd.h"
+    #include "device/MK66F18/MK66F18_usbphy.h"
+    #include "device/MK66F18/MK66F18_vref.h"
+    #include "device/MK66F18/MK66F18_wdog.h"
 
 #elif (defined(CPU_MK70FN1M0VMF12) || defined(CPU_MK70FX512VMF12) || defined(CPU_MK70FN1M0VMF15) || \
     defined(CPU_MK70FX512VMF15) || defined(CPU_MK70FN1M0VMJ12) || defined(CPU_MK70FX512VMJ12) || \
     defined(CPU_MK70FN1M0VMJ15) || defined(CPU_MK70FX512VMJ15))
+
     #define K70F12_SERIES
-    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.)*/
+
+    /* CMSIS-style register definitions */
+    #include "device/MK70F12/MK70F12.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
     #include "device/MK70F12/MK70F12_adc.h"
     #include "device/MK70F12/MK70F12_aips.h"
     #include "device/MK70F12/MK70F12_axbs.h"
@@ -341,13 +661,16 @@
     #include "device/MK70F12/MK70F12_vref.h"
     #include "device/MK70F12/MK70F12_wdog.h"
 
-    /* CMSIS-style register definitions*/
-    #include "device/MK70F12/MK70F12.h"
-
 #elif (defined(CPU_MK70FN1M0VMF12) || defined(CPU_MK70FX512VMF12) || defined(CPU_MK70FN1M0VMF15) || \
     defined(CPU_MK70FX512VMF15) || defined(CPU_MK70FN1M0VMJ12) || defined(CPU_MK70FX512VMJ12) || \
     defined(CPU_MK70FN1M0VMJ15) || defined(CPU_MK70FX512VMJ15))
-    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.)*/
+
+    #define K70F15_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MK70F15/MK70F15.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
     #include "device/MK70F15/MK70F15_adc.h"
     #include "device/MK70F15/MK70F15_aips.h"
     #include "device/MK70F15/MK70F15_axbs.h"
@@ -400,133 +723,215 @@
     #include "device/MK70F15/MK70F15_vref.h"
     #include "device/MK70F15/MK70F15_wdog.h"
 
-    /* CMSIS-style register definitions*/
-    #include "device/MK70F15/MK70F15.h"
+#elif (defined(CPU_MKL02Z32CAF4) || defined(CPU_MKL02Z8VFG4) || defined(CPU_MKL02Z16VFG4) || \
+    defined(CPU_MKL02Z32VFG4) || defined(CPU_MKL02Z16VFK4) || defined(CPU_MKL02Z32VFK4) || \
+    defined(CPU_MKL02Z16VFM4) || defined(CPU_MKL02Z32VFM4))
 
-#elif (defined(CPU_MK70FN1M0VMJ12WS) || defined(CPU_MK70FX512VMJ12WS) || defined(CPU_MK70FN1M0VMJ15WS) || \
-    defined(CPU_MK70FX512VMJ15WS))
-    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.)*/
-    #include "device/MK70F12WS/MK70F12WS_adc.h"
-    #include "device/MK70F12WS/MK70F12WS_aips.h"
-    #include "device/MK70F12WS/MK70F12WS_axbs.h"
-    #include "device/MK70F12WS/MK70F12WS_can.h"
-    #include "device/MK70F12WS/MK70F12WS_cau.h"
-    #include "device/MK70F12WS/MK70F12WS_cmp.h"
-    #include "device/MK70F12WS/MK70F12WS_cmt.h"
-    #include "device/MK70F12WS/MK70F12WS_crc.h"
-    #include "device/MK70F12WS/MK70F12WS_dac.h"
-    #include "device/MK70F12WS/MK70F12WS_ddr.h"
-    #include "device/MK70F12WS/MK70F12WS_dma.h"
-    #include "device/MK70F12WS/MK70F12WS_dmamux.h"
-    #include "device/MK70F12WS/MK70F12WS_dry.h"
-    #include "device/MK70F12WS/MK70F12WS_enet.h"
-    #include "device/MK70F12WS/MK70F12WS_ewm.h"
-    #include "device/MK70F12WS/MK70F12WS_fb.h"
-    #include "device/MK70F12WS/MK70F12WS_fmc.h"
-    #include "device/MK70F12WS/MK70F12WS_ftfe.h"
-    #include "device/MK70F12WS/MK70F12WS_ftm.h"
-    #include "device/MK70F12WS/MK70F12WS_gpio.h"
-    #include "device/MK70F12WS/MK70F12WS_i2c.h"
-    #include "device/MK70F12WS/MK70F12WS_i2s.h"
-    #include "device/MK70F12WS/MK70F12WS_lcdc.h"
-    #include "device/MK70F12WS/MK70F12WS_llwu.h"
-    #include "device/MK70F12WS/MK70F12WS_lmem.h"
-    #include "device/MK70F12WS/MK70F12WS_lptmr.h"
-    #include "device/MK70F12WS/MK70F12WS_mcg.h"
-    #include "device/MK70F12WS/MK70F12WS_mcm.h"
-    #include "device/MK70F12WS/MK70F12WS_mpu.h"
-    #include "device/MK70F12WS/MK70F12WS_nfc.h"
-    #include "device/MK70F12WS/MK70F12WS_nv.h"
-    #include "device/MK70F12WS/MK70F12WS_osc.h"
-    #include "device/MK70F12WS/MK70F12WS_pdb.h"
-    #include "device/MK70F12WS/MK70F12WS_pit.h"
-    #include "device/MK70F12WS/MK70F12WS_pmc.h"
-    #include "device/MK70F12WS/MK70F12WS_port.h"
-    #include "device/MK70F12WS/MK70F12WS_rcm.h"
-    #include "device/MK70F12WS/MK70F12WS_rfsys.h"
-    #include "device/MK70F12WS/MK70F12WS_rfvbat.h"
-    #include "device/MK70F12WS/MK70F12WS_rng.h"
-    #include "device/MK70F12WS/MK70F12WS_rtc.h"
-    #include "device/MK70F12WS/MK70F12WS_sdhc.h"
-    #include "device/MK70F12WS/MK70F12WS_sim.h"
-    #include "device/MK70F12WS/MK70F12WS_smc.h"
-    #include "device/MK70F12WS/MK70F12WS_spi.h"
-    #include "device/MK70F12WS/MK70F12WS_tsi.h"
-    #include "device/MK70F12WS/MK70F12WS_uart.h"
-    #include "device/MK70F12WS/MK70F12WS_usb.h"
-    #include "device/MK70F12WS/MK70F12WS_usbdcd.h"
-    #include "device/MK70F12WS/MK70F12WS_usbhs.h"
-    #include "device/MK70F12WS/MK70F12WS_vref.h"
-    #include "device/MK70F12WS/MK70F12WS_wdog.h"
+    #define KL02Z4_SERIES
 
-    /* CMSIS-style register definitions*/
-    #include "device/MK70F12WS/MK70F12WS.h"
+    /* CMSIS-style register definitions */
+    #include "device/MKL02Z4/MKL02Z4.h"
 
-#elif (defined(CPU_MK70FN1M0VMJ12WS) || defined(CPU_MK70FX512VMJ12WS) || defined(CPU_MK70FN1M0VMJ15WS) || \
-    defined(CPU_MK70FX512VMJ15WS))
-    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.)*/
-    #include "device/MK70F15WS/MK70F15WS_adc.h"
-    #include "device/MK70F15WS/MK70F15WS_aips.h"
-    #include "device/MK70F15WS/MK70F15WS_axbs.h"
-    #include "device/MK70F15WS/MK70F15WS_can.h"
-    #include "device/MK70F15WS/MK70F15WS_cau.h"
-    #include "device/MK70F15WS/MK70F15WS_cmp.h"
-    #include "device/MK70F15WS/MK70F15WS_cmt.h"
-    #include "device/MK70F15WS/MK70F15WS_crc.h"
-    #include "device/MK70F15WS/MK70F15WS_dac.h"
-    #include "device/MK70F15WS/MK70F15WS_ddr.h"
-    #include "device/MK70F15WS/MK70F15WS_dma.h"
-    #include "device/MK70F15WS/MK70F15WS_dmamux.h"
-    #include "device/MK70F15WS/MK70F15WS_dry.h"
-    #include "device/MK70F15WS/MK70F15WS_enet.h"
-    #include "device/MK70F15WS/MK70F15WS_ewm.h"
-    #include "device/MK70F15WS/MK70F15WS_fb.h"
-    #include "device/MK70F15WS/MK70F15WS_fmc.h"
-    #include "device/MK70F15WS/MK70F15WS_ftfe.h"
-    #include "device/MK70F15WS/MK70F15WS_ftm.h"
-    #include "device/MK70F15WS/MK70F15WS_gpio.h"
-    #include "device/MK70F15WS/MK70F15WS_i2c.h"
-    #include "device/MK70F15WS/MK70F15WS_i2s.h"
-    #include "device/MK70F15WS/MK70F15WS_lcdc.h"
-    #include "device/MK70F15WS/MK70F15WS_llwu.h"
-    #include "device/MK70F15WS/MK70F15WS_lmem.h"
-    #include "device/MK70F15WS/MK70F15WS_lptmr.h"
-    #include "device/MK70F15WS/MK70F15WS_mcg.h"
-    #include "device/MK70F15WS/MK70F15WS_mcm.h"
-    #include "device/MK70F15WS/MK70F15WS_mpu.h"
-    #include "device/MK70F15WS/MK70F15WS_nfc.h"
-    #include "device/MK70F15WS/MK70F15WS_nv.h"
-    #include "device/MK70F15WS/MK70F15WS_osc.h"
-    #include "device/MK70F15WS/MK70F15WS_pdb.h"
-    #include "device/MK70F15WS/MK70F15WS_pit.h"
-    #include "device/MK70F15WS/MK70F15WS_pmc.h"
-    #include "device/MK70F15WS/MK70F15WS_port.h"
-    #include "device/MK70F15WS/MK70F15WS_rcm.h"
-    #include "device/MK70F15WS/MK70F15WS_rfsys.h"
-    #include "device/MK70F15WS/MK70F15WS_rfvbat.h"
-    #include "device/MK70F15WS/MK70F15WS_rng.h"
-    #include "device/MK70F15WS/MK70F15WS_rtc.h"
-    #include "device/MK70F15WS/MK70F15WS_sdhc.h"
-    #include "device/MK70F15WS/MK70F15WS_sim.h"
-    #include "device/MK70F15WS/MK70F15WS_smc.h"
-    #include "device/MK70F15WS/MK70F15WS_spi.h"
-    #include "device/MK70F15WS/MK70F15WS_tsi.h"
-    #include "device/MK70F15WS/MK70F15WS_uart.h"
-    #include "device/MK70F15WS/MK70F15WS_usb.h"
-    #include "device/MK70F15WS/MK70F15WS_usbdcd.h"
-    #include "device/MK70F15WS/MK70F15WS_usbhs.h"
-    #include "device/MK70F15WS/MK70F15WS_vref.h"
-    #include "device/MK70F15WS/MK70F15WS_wdog.h"
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKL02Z4/MKL02Z4_adc.h"
+    #include "device/MKL02Z4/MKL02Z4_cmp.h"
+    #include "device/MKL02Z4/MKL02Z4_fgpio.h"
+    #include "device/MKL02Z4/MKL02Z4_ftfa.h"
+    #include "device/MKL02Z4/MKL02Z4_gpio.h"
+    #include "device/MKL02Z4/MKL02Z4_i2c.h"
+    #include "device/MKL02Z4/MKL02Z4_lptmr.h"
+    #include "device/MKL02Z4/MKL02Z4_mcg.h"
+    #include "device/MKL02Z4/MKL02Z4_mcm.h"
+    #include "device/MKL02Z4/MKL02Z4_mtb.h"
+    #include "device/MKL02Z4/MKL02Z4_mtbdwt.h"
+    #include "device/MKL02Z4/MKL02Z4_nv.h"
+    #include "device/MKL02Z4/MKL02Z4_osc.h"
+    #include "device/MKL02Z4/MKL02Z4_pmc.h"
+    #include "device/MKL02Z4/MKL02Z4_port.h"
+    #include "device/MKL02Z4/MKL02Z4_rcm.h"
+    #include "device/MKL02Z4/MKL02Z4_rom.h"
+    #include "device/MKL02Z4/MKL02Z4_sim.h"
+    #include "device/MKL02Z4/MKL02Z4_smc.h"
+    #include "device/MKL02Z4/MKL02Z4_spi.h"
+    #include "device/MKL02Z4/MKL02Z4_tpm.h"
+    #include "device/MKL02Z4/MKL02Z4_uart0.h"
 
-    /* CMSIS-style register definitions*/
-    #include "device/MK70F15WS/MK70F15WS.h"
+#elif (defined(CPU_MKL03Z32CAF4) || defined(CPU_MKL03Z8VFG4) || defined(CPU_MKL03Z16VFG4) || \
+    defined(CPU_MKL03Z32VFG4) || defined(CPU_MKL03Z8VFK4) || defined(CPU_MKL03Z16VFK4) || \
+    defined(CPU_MKL03Z32VFK4))
+
+    #define KL03Z4_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MKL03Z4/MKL03Z4.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKL03Z4/MKL03Z4_adc.h"
+    #include "device/MKL03Z4/MKL03Z4_cmp.h"
+    #include "device/MKL03Z4/MKL03Z4_fgpio.h"
+    #include "device/MKL03Z4/MKL03Z4_ftfa.h"
+    #include "device/MKL03Z4/MKL03Z4_gpio.h"
+    #include "device/MKL03Z4/MKL03Z4_i2c.h"
+    #include "device/MKL03Z4/MKL03Z4_llwu.h"
+    #include "device/MKL03Z4/MKL03Z4_lptmr.h"
+    #include "device/MKL03Z4/MKL03Z4_lpuart.h"
+    #include "device/MKL03Z4/MKL03Z4_mcg.h"
+    #include "device/MKL03Z4/MKL03Z4_mcm.h"
+    #include "device/MKL03Z4/MKL03Z4_mtb.h"
+    #include "device/MKL03Z4/MKL03Z4_mtbdwt.h"
+    #include "device/MKL03Z4/MKL03Z4_nv.h"
+    #include "device/MKL03Z4/MKL03Z4_osc.h"
+    #include "device/MKL03Z4/MKL03Z4_pmc.h"
+    #include "device/MKL03Z4/MKL03Z4_port.h"
+    #include "device/MKL03Z4/MKL03Z4_rcm.h"
+    #include "device/MKL03Z4/MKL03Z4_rfsys.h"
+    #include "device/MKL03Z4/MKL03Z4_rom.h"
+    #include "device/MKL03Z4/MKL03Z4_rtc.h"
+    #include "device/MKL03Z4/MKL03Z4_sim.h"
+    #include "device/MKL03Z4/MKL03Z4_smc.h"
+    #include "device/MKL03Z4/MKL03Z4_spi.h"
+    #include "device/MKL03Z4/MKL03Z4_tpm.h"
+    #include "device/MKL03Z4/MKL03Z4_vref.h"
+
+#elif (defined(CPU_MKL05Z8VFK4) || defined(CPU_MKL05Z16VFK4) || defined(CPU_MKL05Z32VFK4) || \
+    defined(CPU_MKL05Z8VLC4) || defined(CPU_MKL05Z16VLC4) || defined(CPU_MKL05Z32VLC4) || \
+    defined(CPU_MKL05Z8VFM4) || defined(CPU_MKL05Z16VFM4) || defined(CPU_MKL05Z32VFM4) || \
+    defined(CPU_MKL05Z16VLF4) || defined(CPU_MKL05Z32VLF4))
+
+    #define KL05Z4_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MKL05Z4/MKL05Z4.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKL05Z4/MKL05Z4_adc.h"
+    #include "device/MKL05Z4/MKL05Z4_cmp.h"
+    #include "device/MKL05Z4/MKL05Z4_dac.h"
+    #include "device/MKL05Z4/MKL05Z4_dma.h"
+    #include "device/MKL05Z4/MKL05Z4_dmamux.h"
+    #include "device/MKL05Z4/MKL05Z4_fgpio.h"
+    #include "device/MKL05Z4/MKL05Z4_ftfa.h"
+    #include "device/MKL05Z4/MKL05Z4_gpio.h"
+    #include "device/MKL05Z4/MKL05Z4_i2c.h"
+    #include "device/MKL05Z4/MKL05Z4_llwu.h"
+    #include "device/MKL05Z4/MKL05Z4_lptmr.h"
+    #include "device/MKL05Z4/MKL05Z4_mcg.h"
+    #include "device/MKL05Z4/MKL05Z4_mcm.h"
+    #include "device/MKL05Z4/MKL05Z4_mtb.h"
+    #include "device/MKL05Z4/MKL05Z4_mtbdwt.h"
+    #include "device/MKL05Z4/MKL05Z4_nv.h"
+    #include "device/MKL05Z4/MKL05Z4_osc.h"
+    #include "device/MKL05Z4/MKL05Z4_pit.h"
+    #include "device/MKL05Z4/MKL05Z4_pmc.h"
+    #include "device/MKL05Z4/MKL05Z4_port.h"
+    #include "device/MKL05Z4/MKL05Z4_rcm.h"
+    #include "device/MKL05Z4/MKL05Z4_rom.h"
+    #include "device/MKL05Z4/MKL05Z4_rtc.h"
+    #include "device/MKL05Z4/MKL05Z4_sim.h"
+    #include "device/MKL05Z4/MKL05Z4_smc.h"
+    #include "device/MKL05Z4/MKL05Z4_spi.h"
+    #include "device/MKL05Z4/MKL05Z4_tpm.h"
+    #include "device/MKL05Z4/MKL05Z4_tsi.h"
+    #include "device/MKL05Z4/MKL05Z4_uart0.h"
+
+#elif (defined(CPU_MKL13Z64VFM4) || defined(CPU_MKL13Z128VFM4) || defined(CPU_MKL13Z256VFM4) || \
+    defined(CPU_MKL13Z64VFT4) || defined(CPU_MKL13Z128VFT4) || defined(CPU_MKL13Z256VFT4) || \
+    defined(CPU_MKL13Z64VLH4) || defined(CPU_MKL13Z128VLH4) || defined(CPU_MKL13Z256VLH4) || \
+    defined(CPU_MKL13Z64VMP4) || defined(CPU_MKL13Z128VMP4) || defined(CPU_MKL13Z256VMP4))
+
+    #define KL13Z4_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MKL13Z4/MKL13Z4.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKL13Z4/MKL13Z4_adc.h"
+    #include "device/MKL13Z4/MKL13Z4_cmp.h"
+    #include "device/MKL13Z4/MKL13Z4_dac.h"
+    #include "device/MKL13Z4/MKL13Z4_dma.h"
+    #include "device/MKL13Z4/MKL13Z4_dmamux.h"
+    #include "device/MKL13Z4/MKL13Z4_flexio.h"
+    #include "device/MKL13Z4/MKL13Z4_ftfa.h"
+    #include "device/MKL13Z4/MKL13Z4_gpio.h"
+    #include "device/MKL13Z4/MKL13Z4_i2c.h"
+    #include "device/MKL13Z4/MKL13Z4_i2s.h"
+    #include "device/MKL13Z4/MKL13Z4_llwu.h"
+    #include "device/MKL13Z4/MKL13Z4_lptmr.h"
+    #include "device/MKL13Z4/MKL13Z4_lpuart.h"
+    #include "device/MKL13Z4/MKL13Z4_mcg.h"
+    #include "device/MKL13Z4/MKL13Z4_mcm.h"
+    #include "device/MKL13Z4/MKL13Z4_mtb.h"
+    #include "device/MKL13Z4/MKL13Z4_mtbdwt.h"
+    #include "device/MKL13Z4/MKL13Z4_nv.h"
+    #include "device/MKL13Z4/MKL13Z4_osc.h"
+    #include "device/MKL13Z4/MKL13Z4_pit.h"
+    #include "device/MKL13Z4/MKL13Z4_pmc.h"
+    #include "device/MKL13Z4/MKL13Z4_port.h"
+    #include "device/MKL13Z4/MKL13Z4_rcm.h"
+    #include "device/MKL13Z4/MKL13Z4_rom.h"
+    #include "device/MKL13Z4/MKL13Z4_rtc.h"
+    #include "device/MKL13Z4/MKL13Z4_sim.h"
+    #include "device/MKL13Z4/MKL13Z4_smc.h"
+    #include "device/MKL13Z4/MKL13Z4_spi.h"
+    #include "device/MKL13Z4/MKL13Z4_tpm.h"
+    #include "device/MKL13Z4/MKL13Z4_uart.h"
+    #include "device/MKL13Z4/MKL13Z4_vref.h"
+
+#elif (defined(CPU_MKL23Z64VFM4) || defined(CPU_MKL23Z128VFM4) || defined(CPU_MKL23Z256VFM4) || \
+    defined(CPU_MKL23Z64VFT4) || defined(CPU_MKL23Z128VFT4) || defined(CPU_MKL23Z256VFT4) || \
+    defined(CPU_MKL23Z64VLH4) || defined(CPU_MKL23Z128VLH4) || defined(CPU_MKL23Z256VLH4) || \
+    defined(CPU_MKL23Z64VMP4) || defined(CPU_MKL23Z128VMP4) || defined(CPU_MKL23Z256VMP4))
+
+    #define KL23Z4_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MKL23Z4/MKL23Z4.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKL23Z4/MKL23Z4_adc.h"
+    #include "device/MKL23Z4/MKL23Z4_cmp.h"
+    #include "device/MKL23Z4/MKL23Z4_dac.h"
+    #include "device/MKL23Z4/MKL23Z4_dma.h"
+    #include "device/MKL23Z4/MKL23Z4_dmamux.h"
+    #include "device/MKL23Z4/MKL23Z4_flexio.h"
+    #include "device/MKL23Z4/MKL23Z4_ftfa.h"
+    #include "device/MKL23Z4/MKL23Z4_gpio.h"
+    #include "device/MKL23Z4/MKL23Z4_i2c.h"
+    #include "device/MKL23Z4/MKL23Z4_i2s.h"
+    #include "device/MKL23Z4/MKL23Z4_llwu.h"
+    #include "device/MKL23Z4/MKL23Z4_lptmr.h"
+    #include "device/MKL23Z4/MKL23Z4_lpuart.h"
+    #include "device/MKL23Z4/MKL23Z4_mcg.h"
+    #include "device/MKL23Z4/MKL23Z4_mcm.h"
+    #include "device/MKL23Z4/MKL23Z4_mtb.h"
+    #include "device/MKL23Z4/MKL23Z4_mtbdwt.h"
+    #include "device/MKL23Z4/MKL23Z4_nv.h"
+    #include "device/MKL23Z4/MKL23Z4_osc.h"
+    #include "device/MKL23Z4/MKL23Z4_pit.h"
+    #include "device/MKL23Z4/MKL23Z4_pmc.h"
+    #include "device/MKL23Z4/MKL23Z4_port.h"
+    #include "device/MKL23Z4/MKL23Z4_rcm.h"
+    #include "device/MKL23Z4/MKL23Z4_rom.h"
+    #include "device/MKL23Z4/MKL23Z4_rtc.h"
+    #include "device/MKL23Z4/MKL23Z4_sim.h"
+    #include "device/MKL23Z4/MKL23Z4_smc.h"
+    #include "device/MKL23Z4/MKL23Z4_spi.h"
+    #include "device/MKL23Z4/MKL23Z4_tpm.h"
+    #include "device/MKL23Z4/MKL23Z4_uart.h"
+    #include "device/MKL23Z4/MKL23Z4_usb.h"
+    #include "device/MKL23Z4/MKL23Z4_vref.h"
 
 #elif (defined(CPU_MKL25Z32VFM4) || defined(CPU_MKL25Z64VFM4) || defined(CPU_MKL25Z128VFM4) || \
     defined(CPU_MKL25Z32VFT4) || defined(CPU_MKL25Z64VFT4) || defined(CPU_MKL25Z128VFT4) || \
     defined(CPU_MKL25Z32VLH4) || defined(CPU_MKL25Z64VLH4) || defined(CPU_MKL25Z128VLH4) || \
     defined(CPU_MKL25Z32VLK4) || defined(CPU_MKL25Z64VLK4) || defined(CPU_MKL25Z128VLK4))
+
     #define KL25Z4_SERIES
-    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.)*/
+
+    /* CMSIS-style register definitions */
+    #include "device/MKL25Z4/MKL25Z4.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
     #include "device/MKL25Z4/MKL25Z4_adc.h"
     #include "device/MKL25Z4/MKL25Z4_cmp.h"
     #include "device/MKL25Z4/MKL25Z4_dac.h"
@@ -559,14 +964,563 @@
     #include "device/MKL25Z4/MKL25Z4_uart0.h"
     #include "device/MKL25Z4/MKL25Z4_usb.h"
 
-    /* CMSIS-style register definitions*/
-    #include "device/MKL25Z4/MKL25Z4.h"
+#elif (defined(CPU_MKL26Z32VFM4) || defined(CPU_MKL26Z64VFM4) || defined(CPU_MKL26Z128VFM4) || \
+    defined(CPU_MKL26Z32VFT4) || defined(CPU_MKL26Z64VFT4) || defined(CPU_MKL26Z128VFT4) || \
+    defined(CPU_MKL26Z32VLH4) || defined(CPU_MKL26Z64VLH4) || defined(CPU_MKL26Z128VLH4) || \
+    defined(CPU_MKL26Z256VLH4) || defined(CPU_MKL26Z256VLK4) || defined(CPU_MKL26Z128VLL4) || \
+    defined(CPU_MKL26Z256VLL4) || defined(CPU_MKL26Z128VMC4) || defined(CPU_MKL26Z256VMC4))
+
+    #define KL26Z4_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MKL26Z4/MKL26Z4.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKL26Z4/MKL26Z4_adc.h"
+    #include "device/MKL26Z4/MKL26Z4_cmp.h"
+    #include "device/MKL26Z4/MKL26Z4_dac.h"
+    #include "device/MKL26Z4/MKL26Z4_dma.h"
+    #include "device/MKL26Z4/MKL26Z4_dmamux.h"
+    #include "device/MKL26Z4/MKL26Z4_fgpio.h"
+    #include "device/MKL26Z4/MKL26Z4_ftfa.h"
+    #include "device/MKL26Z4/MKL26Z4_gpio.h"
+    #include "device/MKL26Z4/MKL26Z4_i2c.h"
+    #include "device/MKL26Z4/MKL26Z4_i2s.h"
+    #include "device/MKL26Z4/MKL26Z4_llwu.h"
+    #include "device/MKL26Z4/MKL26Z4_lptmr.h"
+    #include "device/MKL26Z4/MKL26Z4_mcg.h"
+    #include "device/MKL26Z4/MKL26Z4_mcm.h"
+    #include "device/MKL26Z4/MKL26Z4_mtb.h"
+    #include "device/MKL26Z4/MKL26Z4_mtbdwt.h"
+    #include "device/MKL26Z4/MKL26Z4_nv.h"
+    #include "device/MKL26Z4/MKL26Z4_osc.h"
+    #include "device/MKL26Z4/MKL26Z4_pit.h"
+    #include "device/MKL26Z4/MKL26Z4_pmc.h"
+    #include "device/MKL26Z4/MKL26Z4_port.h"
+    #include "device/MKL26Z4/MKL26Z4_rcm.h"
+    #include "device/MKL26Z4/MKL26Z4_rom.h"
+    #include "device/MKL26Z4/MKL26Z4_rtc.h"
+    #include "device/MKL26Z4/MKL26Z4_sim.h"
+    #include "device/MKL26Z4/MKL26Z4_smc.h"
+    #include "device/MKL26Z4/MKL26Z4_spi.h"
+    #include "device/MKL26Z4/MKL26Z4_tpm.h"
+    #include "device/MKL26Z4/MKL26Z4_tsi.h"
+    #include "device/MKL26Z4/MKL26Z4_uart.h"
+    #include "device/MKL26Z4/MKL26Z4_uart0.h"
+    #include "device/MKL26Z4/MKL26Z4_usb.h"
+
+#elif (defined(CPU_MKL33Z128VLH4) || defined(CPU_MKL33Z256VLH4) || defined(CPU_MKL33Z128VMP4) || \
+    defined(CPU_MKL33Z256VMP4))
+
+    #define KL33Z4_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MKL33Z4/MKL33Z4.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKL33Z4/MKL33Z4_adc.h"
+    #include "device/MKL33Z4/MKL33Z4_cmp.h"
+    #include "device/MKL33Z4/MKL33Z4_dac.h"
+    #include "device/MKL33Z4/MKL33Z4_dma.h"
+    #include "device/MKL33Z4/MKL33Z4_dmamux.h"
+    #include "device/MKL33Z4/MKL33Z4_flexio.h"
+    #include "device/MKL33Z4/MKL33Z4_ftfa.h"
+    #include "device/MKL33Z4/MKL33Z4_gpio.h"
+    #include "device/MKL33Z4/MKL33Z4_i2c.h"
+    #include "device/MKL33Z4/MKL33Z4_i2s.h"
+    #include "device/MKL33Z4/MKL33Z4_lcd.h"
+    #include "device/MKL33Z4/MKL33Z4_llwu.h"
+    #include "device/MKL33Z4/MKL33Z4_lptmr.h"
+    #include "device/MKL33Z4/MKL33Z4_lpuart.h"
+    #include "device/MKL33Z4/MKL33Z4_mcg.h"
+    #include "device/MKL33Z4/MKL33Z4_mcm.h"
+    #include "device/MKL33Z4/MKL33Z4_mtb.h"
+    #include "device/MKL33Z4/MKL33Z4_mtbdwt.h"
+    #include "device/MKL33Z4/MKL33Z4_nv.h"
+    #include "device/MKL33Z4/MKL33Z4_osc.h"
+    #include "device/MKL33Z4/MKL33Z4_pit.h"
+    #include "device/MKL33Z4/MKL33Z4_pmc.h"
+    #include "device/MKL33Z4/MKL33Z4_port.h"
+    #include "device/MKL33Z4/MKL33Z4_rcm.h"
+    #include "device/MKL33Z4/MKL33Z4_rom.h"
+    #include "device/MKL33Z4/MKL33Z4_rtc.h"
+    #include "device/MKL33Z4/MKL33Z4_sim.h"
+    #include "device/MKL33Z4/MKL33Z4_smc.h"
+    #include "device/MKL33Z4/MKL33Z4_spi.h"
+    #include "device/MKL33Z4/MKL33Z4_tpm.h"
+    #include "device/MKL33Z4/MKL33Z4_uart.h"
+    #include "device/MKL33Z4/MKL33Z4_vref.h"
+
+#elif (defined(CPU_MKL43Z64VLH4) || defined(CPU_MKL43Z128VLH4) || defined(CPU_MKL43Z256VLH4) || \
+    defined(CPU_MKL43Z64VMP4) || defined(CPU_MKL43Z128VMP4) || defined(CPU_MKL43Z256VMP4))
+
+    #define KL43Z4_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MKL43Z4/MKL43Z4.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKL43Z4/MKL43Z4_adc.h"
+    #include "device/MKL43Z4/MKL43Z4_cmp.h"
+    #include "device/MKL43Z4/MKL43Z4_dac.h"
+    #include "device/MKL43Z4/MKL43Z4_dma.h"
+    #include "device/MKL43Z4/MKL43Z4_dmamux.h"
+    #include "device/MKL43Z4/MKL43Z4_flexio.h"
+    #include "device/MKL43Z4/MKL43Z4_ftfa.h"
+    #include "device/MKL43Z4/MKL43Z4_gpio.h"
+    #include "device/MKL43Z4/MKL43Z4_i2c.h"
+    #include "device/MKL43Z4/MKL43Z4_i2s.h"
+    #include "device/MKL43Z4/MKL43Z4_lcd.h"
+    #include "device/MKL43Z4/MKL43Z4_llwu.h"
+    #include "device/MKL43Z4/MKL43Z4_lptmr.h"
+    #include "device/MKL43Z4/MKL43Z4_lpuart.h"
+    #include "device/MKL43Z4/MKL43Z4_mcg.h"
+    #include "device/MKL43Z4/MKL43Z4_mcm.h"
+    #include "device/MKL43Z4/MKL43Z4_mtb.h"
+    #include "device/MKL43Z4/MKL43Z4_mtbdwt.h"
+    #include "device/MKL43Z4/MKL43Z4_nv.h"
+    #include "device/MKL43Z4/MKL43Z4_osc.h"
+    #include "device/MKL43Z4/MKL43Z4_pit.h"
+    #include "device/MKL43Z4/MKL43Z4_pmc.h"
+    #include "device/MKL43Z4/MKL43Z4_port.h"
+    #include "device/MKL43Z4/MKL43Z4_rcm.h"
+    #include "device/MKL43Z4/MKL43Z4_rom.h"
+    #include "device/MKL43Z4/MKL43Z4_rtc.h"
+    #include "device/MKL43Z4/MKL43Z4_sim.h"
+    #include "device/MKL43Z4/MKL43Z4_smc.h"
+    #include "device/MKL43Z4/MKL43Z4_spi.h"
+    #include "device/MKL43Z4/MKL43Z4_tpm.h"
+    #include "device/MKL43Z4/MKL43Z4_uart.h"
+    #include "device/MKL43Z4/MKL43Z4_usb.h"
+    #include "device/MKL43Z4/MKL43Z4_vref.h"
+
+#elif (defined(CPU_MKL46Z128VLH4) || defined(CPU_MKL46Z256VLH4) || defined(CPU_MKL46Z128VLL4) || \
+    defined(CPU_MKL46Z256VLL4) || defined(CPU_MKL46Z128VMC4) || defined(CPU_MKL46Z256VMC4))
+
+    #define KL46Z4_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MKL46Z4/MKL46Z4.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKL46Z4/MKL46Z4_adc.h"
+    #include "device/MKL46Z4/MKL46Z4_cmp.h"
+    #include "device/MKL46Z4/MKL46Z4_dac.h"
+    #include "device/MKL46Z4/MKL46Z4_dma.h"
+    #include "device/MKL46Z4/MKL46Z4_dmamux.h"
+    #include "device/MKL46Z4/MKL46Z4_fgpio.h"
+    #include "device/MKL46Z4/MKL46Z4_ftfa.h"
+    #include "device/MKL46Z4/MKL46Z4_gpio.h"
+    #include "device/MKL46Z4/MKL46Z4_i2c.h"
+    #include "device/MKL46Z4/MKL46Z4_i2s.h"
+    #include "device/MKL46Z4/MKL46Z4_lcd.h"
+    #include "device/MKL46Z4/MKL46Z4_llwu.h"
+    #include "device/MKL46Z4/MKL46Z4_lptmr.h"
+    #include "device/MKL46Z4/MKL46Z4_mcg.h"
+    #include "device/MKL46Z4/MKL46Z4_mcm.h"
+    #include "device/MKL46Z4/MKL46Z4_mtb.h"
+    #include "device/MKL46Z4/MKL46Z4_mtbdwt.h"
+    #include "device/MKL46Z4/MKL46Z4_nv.h"
+    #include "device/MKL46Z4/MKL46Z4_osc.h"
+    #include "device/MKL46Z4/MKL46Z4_pit.h"
+    #include "device/MKL46Z4/MKL46Z4_pmc.h"
+    #include "device/MKL46Z4/MKL46Z4_port.h"
+    #include "device/MKL46Z4/MKL46Z4_rcm.h"
+    #include "device/MKL46Z4/MKL46Z4_rom.h"
+    #include "device/MKL46Z4/MKL46Z4_rtc.h"
+    #include "device/MKL46Z4/MKL46Z4_sim.h"
+    #include "device/MKL46Z4/MKL46Z4_smc.h"
+    #include "device/MKL46Z4/MKL46Z4_spi.h"
+    #include "device/MKL46Z4/MKL46Z4_tpm.h"
+    #include "device/MKL46Z4/MKL46Z4_tsi.h"
+    #include "device/MKL46Z4/MKL46Z4_uart.h"
+    #include "device/MKL46Z4/MKL46Z4_uart0.h"
+    #include "device/MKL46Z4/MKL46Z4_usb.h"
+
+#elif (defined(CPU_MKV30F128VFM10) || defined(CPU_MKV30F64VFM10) || defined(CPU_MKV30F128VLF10) || \
+    defined(CPU_MKV30F64VLF10) || defined(CPU_MKV30F128VLH10) || defined(CPU_MKV30F64VLH10))
+
+    #define KV30F12810_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MKV30F12810/MKV30F12810.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKV30F12810/MKV30F12810_adc.h"
+    #include "device/MKV30F12810/MKV30F12810_cmp.h"
+    #include "device/MKV30F12810/MKV30F12810_crc.h"
+    #include "device/MKV30F12810/MKV30F12810_dac.h"
+    #include "device/MKV30F12810/MKV30F12810_dma.h"
+    #include "device/MKV30F12810/MKV30F12810_dmamux.h"
+    #include "device/MKV30F12810/MKV30F12810_ewm.h"
+    #include "device/MKV30F12810/MKV30F12810_fmc.h"
+    #include "device/MKV30F12810/MKV30F12810_ftfa.h"
+    #include "device/MKV30F12810/MKV30F12810_ftm.h"
+    #include "device/MKV30F12810/MKV30F12810_gpio.h"
+    #include "device/MKV30F12810/MKV30F12810_i2c.h"
+    #include "device/MKV30F12810/MKV30F12810_llwu.h"
+    #include "device/MKV30F12810/MKV30F12810_lptmr.h"
+    #include "device/MKV30F12810/MKV30F12810_mcg.h"
+    #include "device/MKV30F12810/MKV30F12810_mcm.h"
+    #include "device/MKV30F12810/MKV30F12810_nv.h"
+    #include "device/MKV30F12810/MKV30F12810_osc.h"
+    #include "device/MKV30F12810/MKV30F12810_pdb.h"
+    #include "device/MKV30F12810/MKV30F12810_pit.h"
+    #include "device/MKV30F12810/MKV30F12810_pmc.h"
+    #include "device/MKV30F12810/MKV30F12810_port.h"
+    #include "device/MKV30F12810/MKV30F12810_rcm.h"
+    #include "device/MKV30F12810/MKV30F12810_sim.h"
+    #include "device/MKV30F12810/MKV30F12810_smc.h"
+    #include "device/MKV30F12810/MKV30F12810_spi.h"
+    #include "device/MKV30F12810/MKV30F12810_uart.h"
+    #include "device/MKV30F12810/MKV30F12810_vref.h"
+    #include "device/MKV30F12810/MKV30F12810_wdog.h"
+
+#elif (defined(CPU_MKV31F128VLH10) || defined(CPU_MKV31F128VLL10))
+
+    #define KV31F12810_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MKV31F12810/MKV31F12810.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKV31F12810/MKV31F12810_adc.h"
+    #include "device/MKV31F12810/MKV31F12810_cmp.h"
+    #include "device/MKV31F12810/MKV31F12810_crc.h"
+    #include "device/MKV31F12810/MKV31F12810_dac.h"
+    #include "device/MKV31F12810/MKV31F12810_dma.h"
+    #include "device/MKV31F12810/MKV31F12810_dmamux.h"
+    #include "device/MKV31F12810/MKV31F12810_ewm.h"
+    #include "device/MKV31F12810/MKV31F12810_fmc.h"
+    #include "device/MKV31F12810/MKV31F12810_ftfa.h"
+    #include "device/MKV31F12810/MKV31F12810_ftm.h"
+    #include "device/MKV31F12810/MKV31F12810_gpio.h"
+    #include "device/MKV31F12810/MKV31F12810_i2c.h"
+    #include "device/MKV31F12810/MKV31F12810_llwu.h"
+    #include "device/MKV31F12810/MKV31F12810_lptmr.h"
+    #include "device/MKV31F12810/MKV31F12810_lpuart.h"
+    #include "device/MKV31F12810/MKV31F12810_mcg.h"
+    #include "device/MKV31F12810/MKV31F12810_mcm.h"
+    #include "device/MKV31F12810/MKV31F12810_nv.h"
+    #include "device/MKV31F12810/MKV31F12810_osc.h"
+    #include "device/MKV31F12810/MKV31F12810_pdb.h"
+    #include "device/MKV31F12810/MKV31F12810_pit.h"
+    #include "device/MKV31F12810/MKV31F12810_pmc.h"
+    #include "device/MKV31F12810/MKV31F12810_port.h"
+    #include "device/MKV31F12810/MKV31F12810_rcm.h"
+    #include "device/MKV31F12810/MKV31F12810_rfsys.h"
+    #include "device/MKV31F12810/MKV31F12810_sim.h"
+    #include "device/MKV31F12810/MKV31F12810_smc.h"
+    #include "device/MKV31F12810/MKV31F12810_spi.h"
+    #include "device/MKV31F12810/MKV31F12810_uart.h"
+    #include "device/MKV31F12810/MKV31F12810_vref.h"
+    #include "device/MKV31F12810/MKV31F12810_wdog.h"
+
+#elif (defined(CPU_MKV31F256VLH12) || defined(CPU_MKV31F256VLL12))
+
+    #define KV31F25612_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MKV31F25612/MKV31F25612.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKV31F25612/MKV31F25612_adc.h"
+    #include "device/MKV31F25612/MKV31F25612_cmp.h"
+    #include "device/MKV31F25612/MKV31F25612_crc.h"
+    #include "device/MKV31F25612/MKV31F25612_dac.h"
+    #include "device/MKV31F25612/MKV31F25612_dma.h"
+    #include "device/MKV31F25612/MKV31F25612_dmamux.h"
+    #include "device/MKV31F25612/MKV31F25612_ewm.h"
+    #include "device/MKV31F25612/MKV31F25612_fmc.h"
+    #include "device/MKV31F25612/MKV31F25612_ftfa.h"
+    #include "device/MKV31F25612/MKV31F25612_ftm.h"
+    #include "device/MKV31F25612/MKV31F25612_gpio.h"
+    #include "device/MKV31F25612/MKV31F25612_i2c.h"
+    #include "device/MKV31F25612/MKV31F25612_llwu.h"
+    #include "device/MKV31F25612/MKV31F25612_lptmr.h"
+    #include "device/MKV31F25612/MKV31F25612_lpuart.h"
+    #include "device/MKV31F25612/MKV31F25612_mcg.h"
+    #include "device/MKV31F25612/MKV31F25612_mcm.h"
+    #include "device/MKV31F25612/MKV31F25612_nv.h"
+    #include "device/MKV31F25612/MKV31F25612_osc.h"
+    #include "device/MKV31F25612/MKV31F25612_pdb.h"
+    #include "device/MKV31F25612/MKV31F25612_pit.h"
+    #include "device/MKV31F25612/MKV31F25612_pmc.h"
+    #include "device/MKV31F25612/MKV31F25612_port.h"
+    #include "device/MKV31F25612/MKV31F25612_rcm.h"
+    #include "device/MKV31F25612/MKV31F25612_rfsys.h"
+    #include "device/MKV31F25612/MKV31F25612_rng.h"
+    #include "device/MKV31F25612/MKV31F25612_sim.h"
+    #include "device/MKV31F25612/MKV31F25612_smc.h"
+    #include "device/MKV31F25612/MKV31F25612_spi.h"
+    #include "device/MKV31F25612/MKV31F25612_uart.h"
+    #include "device/MKV31F25612/MKV31F25612_vref.h"
+    #include "device/MKV31F25612/MKV31F25612_wdog.h"
+
+#elif (defined(CPU_MKV31F512VLH12) || defined(CPU_MKV31F512VLL12))
+
+    #define KV31F51212_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MKV31F51212/MKV31F51212.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKV31F51212/MKV31F51212_adc.h"
+    #include "device/MKV31F51212/MKV31F51212_cmp.h"
+    #include "device/MKV31F51212/MKV31F51212_crc.h"
+    #include "device/MKV31F51212/MKV31F51212_dac.h"
+    #include "device/MKV31F51212/MKV31F51212_dma.h"
+    #include "device/MKV31F51212/MKV31F51212_dmamux.h"
+    #include "device/MKV31F51212/MKV31F51212_ewm.h"
+    #include "device/MKV31F51212/MKV31F51212_fb.h"
+    #include "device/MKV31F51212/MKV31F51212_fmc.h"
+    #include "device/MKV31F51212/MKV31F51212_ftfa.h"
+    #include "device/MKV31F51212/MKV31F51212_ftm.h"
+    #include "device/MKV31F51212/MKV31F51212_gpio.h"
+    #include "device/MKV31F51212/MKV31F51212_i2c.h"
+    #include "device/MKV31F51212/MKV31F51212_llwu.h"
+    #include "device/MKV31F51212/MKV31F51212_lptmr.h"
+    #include "device/MKV31F51212/MKV31F51212_lpuart.h"
+    #include "device/MKV31F51212/MKV31F51212_mcg.h"
+    #include "device/MKV31F51212/MKV31F51212_mcm.h"
+    #include "device/MKV31F51212/MKV31F51212_nv.h"
+    #include "device/MKV31F51212/MKV31F51212_osc.h"
+    #include "device/MKV31F51212/MKV31F51212_pdb.h"
+    #include "device/MKV31F51212/MKV31F51212_pit.h"
+    #include "device/MKV31F51212/MKV31F51212_pmc.h"
+    #include "device/MKV31F51212/MKV31F51212_port.h"
+    #include "device/MKV31F51212/MKV31F51212_rcm.h"
+    #include "device/MKV31F51212/MKV31F51212_rfsys.h"
+    #include "device/MKV31F51212/MKV31F51212_rng.h"
+    #include "device/MKV31F51212/MKV31F51212_sim.h"
+    #include "device/MKV31F51212/MKV31F51212_smc.h"
+    #include "device/MKV31F51212/MKV31F51212_spi.h"
+    #include "device/MKV31F51212/MKV31F51212_uart.h"
+    #include "device/MKV31F51212/MKV31F51212_vref.h"
+    #include "device/MKV31F51212/MKV31F51212_wdog.h"
+
+#elif (defined(CPU_MKV40F128VLH15) || defined(CPU_MKV40F128VLL15) || defined(CPU_MKV40F256VLH15) || \
+    defined(CPU_MKV40F256VLL15) || defined(CPU_MKV40F64VLH15))
+
+    #define KV40F15_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MKV40F15/MKV40F15.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKV40F15/MKV40F15_adc.h"
+    #include "device/MKV40F15/MKV40F15_aoi.h"
+    #include "device/MKV40F15/MKV40F15_can.h"
+    #include "device/MKV40F15/MKV40F15_cmp.h"
+    #include "device/MKV40F15/MKV40F15_crc.h"
+    #include "device/MKV40F15/MKV40F15_dma.h"
+    #include "device/MKV40F15/MKV40F15_dmamux.h"
+    #include "device/MKV40F15/MKV40F15_enc.h"
+    #include "device/MKV40F15/MKV40F15_ewm.h"
+    #include "device/MKV40F15/MKV40F15_fmc.h"
+    #include "device/MKV40F15/MKV40F15_ftfa.h"
+    #include "device/MKV40F15/MKV40F15_ftm.h"
+    #include "device/MKV40F15/MKV40F15_gpio.h"
+    #include "device/MKV40F15/MKV40F15_i2c.h"
+    #include "device/MKV40F15/MKV40F15_llwu.h"
+    #include "device/MKV40F15/MKV40F15_lptmr.h"
+    #include "device/MKV40F15/MKV40F15_mcg.h"
+    #include "device/MKV40F15/MKV40F15_mcm.h"
+    #include "device/MKV40F15/MKV40F15_nv.h"
+    #include "device/MKV40F15/MKV40F15_osc.h"
+    #include "device/MKV40F15/MKV40F15_pdb.h"
+    #include "device/MKV40F15/MKV40F15_pit.h"
+    #include "device/MKV40F15/MKV40F15_pmc.h"
+    #include "device/MKV40F15/MKV40F15_port.h"
+    #include "device/MKV40F15/MKV40F15_rcm.h"
+    #include "device/MKV40F15/MKV40F15_sim.h"
+    #include "device/MKV40F15/MKV40F15_smc.h"
+    #include "device/MKV40F15/MKV40F15_spi.h"
+    #include "device/MKV40F15/MKV40F15_uart.h"
+    #include "device/MKV40F15/MKV40F15_vref.h"
+    #include "device/MKV40F15/MKV40F15_wdog.h"
+    #include "device/MKV40F15/MKV40F15_xbara.h"
+    #include "device/MKV40F15/MKV40F15_xbarb.h"
+
+#elif (defined(CPU_MKV43F128VLH15) || defined(CPU_MKV43F128VLL15) || defined(CPU_MKV43F64VLH15))
+
+    #define KV43F15_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MKV43F15/MKV43F15.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKV43F15/MKV43F15_adc.h"
+    #include "device/MKV43F15/MKV43F15_aoi.h"
+    #include "device/MKV43F15/MKV43F15_can.h"
+    #include "device/MKV43F15/MKV43F15_cmp.h"
+    #include "device/MKV43F15/MKV43F15_crc.h"
+    #include "device/MKV43F15/MKV43F15_dma.h"
+    #include "device/MKV43F15/MKV43F15_dmamux.h"
+    #include "device/MKV43F15/MKV43F15_enc.h"
+    #include "device/MKV43F15/MKV43F15_ewm.h"
+    #include "device/MKV43F15/MKV43F15_fmc.h"
+    #include "device/MKV43F15/MKV43F15_ftfa.h"
+    #include "device/MKV43F15/MKV43F15_gpio.h"
+    #include "device/MKV43F15/MKV43F15_i2c.h"
+    #include "device/MKV43F15/MKV43F15_llwu.h"
+    #include "device/MKV43F15/MKV43F15_lptmr.h"
+    #include "device/MKV43F15/MKV43F15_mcg.h"
+    #include "device/MKV43F15/MKV43F15_mcm.h"
+    #include "device/MKV43F15/MKV43F15_nv.h"
+    #include "device/MKV43F15/MKV43F15_osc.h"
+    #include "device/MKV43F15/MKV43F15_pdb.h"
+    #include "device/MKV43F15/MKV43F15_pit.h"
+    #include "device/MKV43F15/MKV43F15_pmc.h"
+    #include "device/MKV43F15/MKV43F15_port.h"
+    #include "device/MKV43F15/MKV43F15_pwm.h"
+    #include "device/MKV43F15/MKV43F15_rcm.h"
+    #include "device/MKV43F15/MKV43F15_sim.h"
+    #include "device/MKV43F15/MKV43F15_smc.h"
+    #include "device/MKV43F15/MKV43F15_spi.h"
+    #include "device/MKV43F15/MKV43F15_uart.h"
+    #include "device/MKV43F15/MKV43F15_vref.h"
+    #include "device/MKV43F15/MKV43F15_wdog.h"
+    #include "device/MKV43F15/MKV43F15_xbara.h"
+    #include "device/MKV43F15/MKV43F15_xbarb.h"
+
+#elif (defined(CPU_MKV44F128VLH15) || defined(CPU_MKV44F128VLL15) || defined(CPU_MKV44F64VLH15))
+
+    #define KV44F15_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MKV44F15/MKV44F15.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKV44F15/MKV44F15_adc.h"
+    #include "device/MKV44F15/MKV44F15_aoi.h"
+    #include "device/MKV44F15/MKV44F15_can.h"
+    #include "device/MKV44F15/MKV44F15_cmp.h"
+    #include "device/MKV44F15/MKV44F15_crc.h"
+    #include "device/MKV44F15/MKV44F15_dac.h"
+    #include "device/MKV44F15/MKV44F15_dma.h"
+    #include "device/MKV44F15/MKV44F15_dmamux.h"
+    #include "device/MKV44F15/MKV44F15_enc.h"
+    #include "device/MKV44F15/MKV44F15_ewm.h"
+    #include "device/MKV44F15/MKV44F15_fmc.h"
+    #include "device/MKV44F15/MKV44F15_ftfa.h"
+    #include "device/MKV44F15/MKV44F15_gpio.h"
+    #include "device/MKV44F15/MKV44F15_i2c.h"
+    #include "device/MKV44F15/MKV44F15_llwu.h"
+    #include "device/MKV44F15/MKV44F15_lptmr.h"
+    #include "device/MKV44F15/MKV44F15_mcg.h"
+    #include "device/MKV44F15/MKV44F15_mcm.h"
+    #include "device/MKV44F15/MKV44F15_nv.h"
+    #include "device/MKV44F15/MKV44F15_osc.h"
+    #include "device/MKV44F15/MKV44F15_pdb.h"
+    #include "device/MKV44F15/MKV44F15_pit.h"
+    #include "device/MKV44F15/MKV44F15_pmc.h"
+    #include "device/MKV44F15/MKV44F15_port.h"
+    #include "device/MKV44F15/MKV44F15_pwm.h"
+    #include "device/MKV44F15/MKV44F15_rcm.h"
+    #include "device/MKV44F15/MKV44F15_sim.h"
+    #include "device/MKV44F15/MKV44F15_smc.h"
+    #include "device/MKV44F15/MKV44F15_spi.h"
+    #include "device/MKV44F15/MKV44F15_uart.h"
+    #include "device/MKV44F15/MKV44F15_vref.h"
+    #include "device/MKV44F15/MKV44F15_wdog.h"
+    #include "device/MKV44F15/MKV44F15_xbara.h"
+    #include "device/MKV44F15/MKV44F15_xbarb.h"
+
+#elif (defined(CPU_MKV45F128VLH15) || defined(CPU_MKV45F128VLL15) || defined(CPU_MKV45F256VLH15) || \
+    defined(CPU_MKV45F256VLL15))
+
+    #define KV45F15_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MKV45F15/MKV45F15.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKV45F15/MKV45F15_adc.h"
+    #include "device/MKV45F15/MKV45F15_aoi.h"
+    #include "device/MKV45F15/MKV45F15_can.h"
+    #include "device/MKV45F15/MKV45F15_cmp.h"
+    #include "device/MKV45F15/MKV45F15_crc.h"
+    #include "device/MKV45F15/MKV45F15_dma.h"
+    #include "device/MKV45F15/MKV45F15_dmamux.h"
+    #include "device/MKV45F15/MKV45F15_enc.h"
+    #include "device/MKV45F15/MKV45F15_ewm.h"
+    #include "device/MKV45F15/MKV45F15_fmc.h"
+    #include "device/MKV45F15/MKV45F15_ftfa.h"
+    #include "device/MKV45F15/MKV45F15_ftm.h"
+    #include "device/MKV45F15/MKV45F15_gpio.h"
+    #include "device/MKV45F15/MKV45F15_i2c.h"
+    #include "device/MKV45F15/MKV45F15_llwu.h"
+    #include "device/MKV45F15/MKV45F15_lptmr.h"
+    #include "device/MKV45F15/MKV45F15_mcg.h"
+    #include "device/MKV45F15/MKV45F15_mcm.h"
+    #include "device/MKV45F15/MKV45F15_nv.h"
+    #include "device/MKV45F15/MKV45F15_osc.h"
+    #include "device/MKV45F15/MKV45F15_pdb.h"
+    #include "device/MKV45F15/MKV45F15_pit.h"
+    #include "device/MKV45F15/MKV45F15_pmc.h"
+    #include "device/MKV45F15/MKV45F15_port.h"
+    #include "device/MKV45F15/MKV45F15_pwm.h"
+    #include "device/MKV45F15/MKV45F15_rcm.h"
+    #include "device/MKV45F15/MKV45F15_sim.h"
+    #include "device/MKV45F15/MKV45F15_smc.h"
+    #include "device/MKV45F15/MKV45F15_spi.h"
+    #include "device/MKV45F15/MKV45F15_uart.h"
+    #include "device/MKV45F15/MKV45F15_vref.h"
+    #include "device/MKV45F15/MKV45F15_wdog.h"
+    #include "device/MKV45F15/MKV45F15_xbara.h"
+    #include "device/MKV45F15/MKV45F15_xbarb.h"
+
+#elif (defined(CPU_MKV46F128VLH15) || defined(CPU_MKV46F128VLL15) || defined(CPU_MKV46F256VLH15) || \
+    defined(CPU_MKV46F256VLL15))
+
+    #define KV46F15_SERIES
+
+    /* CMSIS-style register definitions */
+    #include "device/MKV46F15/MKV46F15.h"
+
+    /* Extension register headers. (These will eventually be merged into the CMSIS-style header.) */
+    #include "device/MKV46F15/MKV46F15_adc.h"
+    #include "device/MKV46F15/MKV46F15_aoi.h"
+    #include "device/MKV46F15/MKV46F15_can.h"
+    #include "device/MKV46F15/MKV46F15_cmp.h"
+    #include "device/MKV46F15/MKV46F15_crc.h"
+    #include "device/MKV46F15/MKV46F15_dac.h"
+    #include "device/MKV46F15/MKV46F15_dma.h"
+    #include "device/MKV46F15/MKV46F15_dmamux.h"
+    #include "device/MKV46F15/MKV46F15_enc.h"
+    #include "device/MKV46F15/MKV46F15_ewm.h"
+    #include "device/MKV46F15/MKV46F15_fmc.h"
+    #include "device/MKV46F15/MKV46F15_ftfa.h"
+    #include "device/MKV46F15/MKV46F15_ftm.h"
+    #include "device/MKV46F15/MKV46F15_gpio.h"
+    #include "device/MKV46F15/MKV46F15_i2c.h"
+    #include "device/MKV46F15/MKV46F15_llwu.h"
+    #include "device/MKV46F15/MKV46F15_lptmr.h"
+    #include "device/MKV46F15/MKV46F15_mcg.h"
+    #include "device/MKV46F15/MKV46F15_mcm.h"
+    #include "device/MKV46F15/MKV46F15_nv.h"
+    #include "device/MKV46F15/MKV46F15_osc.h"
+    #include "device/MKV46F15/MKV46F15_pdb.h"
+    #include "device/MKV46F15/MKV46F15_pit.h"
+    #include "device/MKV46F15/MKV46F15_pmc.h"
+    #include "device/MKV46F15/MKV46F15_port.h"
+    #include "device/MKV46F15/MKV46F15_pwm.h"
+    #include "device/MKV46F15/MKV46F15_rcm.h"
+    #include "device/MKV46F15/MKV46F15_sim.h"
+    #include "device/MKV46F15/MKV46F15_smc.h"
+    #include "device/MKV46F15/MKV46F15_spi.h"
+    #include "device/MKV46F15/MKV46F15_uart.h"
+    #include "device/MKV46F15/MKV46F15_vref.h"
+    #include "device/MKV46F15/MKV46F15_wdog.h"
+    #include "device/MKV46F15/MKV46F15_xbara.h"
+    #include "device/MKV46F15/MKV46F15_xbarb.h"
 
 #else
     #error "No valid CPU defined!"
 #endif
 
-#endif /* __FSL_DEVICE_REGISTERS_H__*/
+#endif /* __FSL_DEVICE_REGISTERS_H__ */
 /*******************************************************************************
  * EOF
  ******************************************************************************/
