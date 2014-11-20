@@ -28,7 +28,7 @@
     "mbed-hal":"ARMmbed/mbed-hal"
   },
   "targetDependencies": {
-    "k64f": {
+    "frdm-k64f": {
       "mbed-hal-frdm-k64f": "ARMmbed/mbed-hal-frdm-k64f"
     }
   }
