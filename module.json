@@ -22,7 +22,8 @@
     }
   ],
   "extraIncludes": [
-    "mbed-hal-k64f"
+    "mbed-hal-k64f",
+    "mbed-hal-k64f/device"
   ],
   "dependencies": {
     "mbed-hal":"ARMmbed/mbed-hal"
