@@ -27,7 +27,7 @@
     "mbed-hal-k64f/MK64F12"
   ],
   "dependencies": {
-    "uvisor-bin": "ARMmbed/uvisor-bin",
+    "uvisor-lib": "ARMmbed/uvisor-lib",
     "mbed-hal":"ARMmbed/mbed-hal"
   },
   "targetDependencies": {
