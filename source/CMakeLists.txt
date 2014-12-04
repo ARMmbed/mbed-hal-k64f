@@ -45,6 +45,7 @@ set_target_properties(mbed-hal-k64f PROPERTIES
 )
 
 target_link_libraries(mbed-hal-k64f
+    uvisor-bin
     mbed-hal
     mbed-hal-frdm-k64f
 )
