@@ -465,6 +465,7 @@
     #include "device/MK64F12/MK64F12_rtc.h"
     #include "device/MK64F12/MK64F12_sdhc.h"
     #include "device/MK64F12/MK64F12_sim.h"
+    #include "device/MK64F12/MK64F12_sim_uvisor.h" /* this must be after MK64F12_sim.h */
     #include "device/MK64F12/MK64F12_smc.h"
     #include "device/MK64F12/MK64F12_spi.h"
     #include "device/MK64F12/MK64F12_uart.h"
