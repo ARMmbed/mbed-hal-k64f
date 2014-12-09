@@ -14,7 +14,7 @@
  * The uvisor is present by default, but if it is not enabled, the
  * write to the register is performed as usual */
 
-#if defined(K64F12_SERIES)
+#if defined(K64F12_SERIES) && defined(__GNUC__)
 
 #include "MK64F12.h"
 #include "fsl_bitaccess.h"
@@ -73,6 +73,6 @@ static inline void uvisor_bitband(uint32_t *addr, uint32_t val)
 #undef  BW_SIM_SCGC5_PORTE
 #define BW_SIM_SCGC5_PORTE(x, v) uvisor_bitband(BITBAND_ADDRESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTE), v)
 
-#endif/*defined(K64F12_SERIES)*/
+#endif/*defined(K64F12_SERIES) && defined(__GNUC__)*/
 
 #endif/*__MK64F12_SIM_UVISOR_H__*/
