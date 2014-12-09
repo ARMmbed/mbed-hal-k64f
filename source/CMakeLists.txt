@@ -18,19 +18,31 @@
 # toolchain being used
 
 
-# !!! FIXME could also use if(TARGET_LIKE_GCC) / TARGET_LIKE_ARMCC / etc set by
-# the yotta targets, maybe that'd be clearer
 if(${CMAKE_C_COMPILER_ID} STREQUAL GNU)
     set(STARTUP_ASM "bootstrap_gcc/startup_MK64F12.S")
     set(STARTUP_SRC "")
 elseif(${CMAKE_C_COMPILER_ID} STREQUAL ARMCC)
     set(STARTUP_ASM "bootstrap_armcc/startup_MK64F12.s")
     set(STARTUP_SRC "bootstrap_armcc/sys.cpp")
+
+    # unfortunately, for armlink we have to pass the executable startup code as
+    # an object file, not as part of an archive.
+    # 
+    add_library(startupcod_thefishofdoom OBJECT ${STARTUP_ASM})
+
+    # This is the "neatest" way of making sure the startup code gets linked
+    # into every executable. Needless to say this is, despite its brevity,
+    # not neat.
+    macro (add_executable _name)
+        _add_executable(${ARGV} $<TARGET_OBJECTS:startupcod_thefishofdoom>)
+    Endmacro()
 else()
     set(STARTUP_ASM "")
     set(STARTUP_SRC "")
-    message(ERROR "Unsupported target toolchain (gcc and armcc are supported)")
+    message(FATAL_ERROR "Unsupported target toolchain (gcc and armcc are supported)")
 endif()
+
+
 
 enable_language(ASM)
 set_property(SOURCE ${STARTUP_ASM} PROPERTY LANGUAGE ASM)
