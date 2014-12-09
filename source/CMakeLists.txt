@@ -44,8 +44,15 @@ set_target_properties(mbed-hal-k64f PROPERTIES
     LINKER_LANGUAGE C
 )
 
+# uvisor-lib is only a dependency if we're building for gcc
+if(TARGET_LIKE_GCC)
+    set(EXTRA_LINK_LIBS uvisor-lib)
+else()
+    set(EXTRA_LINK_LIBS)
+endif()
+
 target_link_libraries(mbed-hal-k64f
-    uvisor-lib
+    ${EXTRA_LINK_LIBS}
     mbed-hal
     mbed-hal-frdm-k64f
 )
