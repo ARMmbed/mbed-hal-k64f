@@ -14,7 +14,7 @@
  * The uvisor is present by default, but if it is not enabled, the
  * write to the register is performed as usual */
 
-#if defined(K64F12_SERIES) && defined(__GNUC__)
+#if defined(K64F12_SERIES) && (defined(__GNUC__) && !defined(__ARMCC_VERSION))
 
 #include "MK64F12.h"
 #include "fsl_bitaccess.h"
