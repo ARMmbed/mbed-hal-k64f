@@ -37,6 +37,7 @@ set_property(SOURCE ${STARTUP_ASM} PROPERTY LANGUAGE ASM)
 
 add_library(mbed-hal-k64f
     ${STARTUP_ASM}
+    ${STARTUP_SRC}
     "fsl_clock_K64F12.c"
     "fsl_sim_hal_K64F12.c"
 )
