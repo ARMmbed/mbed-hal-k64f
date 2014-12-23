@@ -1,0 +1,39 @@
+# mbed Microcontroller Library
+# Copyright (c) 2014 ARM Limited
+# 
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# 
+#     http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# 
+
+# this custom build file pulls in different startup assembly based on the
+# toolchain being used
+
+import os
+Import('env BuilddirObject')
+env = env.Clone()
+objects = []
+builddir = os.path.join(env['builddir'], 'source')
+
+compiler_id = env['compiler_id']
+sources = ['fsl_clock_K64F12.c', 'fsl_sim_hal_K64F12.c']
+if compiler_id == 'GCC_ARM':
+    sources.append('bootstrap_gcc/startup_MK64F12.S')
+elif compiler_id == 'ARMCC':
+    sources.append('bootstrap_armcc/startup_MK64F12.s')
+    sources.append('bootstrap_armcc/sys.cpp')
+else:
+    print "Unknown compiler '%s'" % compiler_id
+    Exit(1)
+
+for s in sources:
+    objects.append(BuilddirObject(env, builddir, s))
+Return('objects')
