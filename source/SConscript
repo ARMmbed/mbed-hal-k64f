@@ -18,10 +18,11 @@
 # toolchain being used
 
 import os
-Import('env BuilddirObject')
+Import('env BuilddirObject modinfo')
 env = env.Clone()
 objects = []
 builddir = os.path.join(env['builddir'], 'source')
+moddata = modinfo["mbed-hal-k64f"]
 
 compiler_id = env['compiler_id']
 sources = ['fsl_clock_K64F12.c', 'fsl_sim_hal_K64F12.c']
@@ -35,5 +36,5 @@ else:
     Exit(1)
 
 for s in sources:
-    objects.append(BuilddirObject(env, builddir, s))
+    objects.append(BuilddirObject(env, builddir, s, moddata))
 Return('objects')
