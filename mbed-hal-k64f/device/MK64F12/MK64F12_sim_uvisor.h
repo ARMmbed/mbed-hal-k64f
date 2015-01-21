@@ -35,7 +35,7 @@ extern const uint32_t __uvisor_mode;
 
 /* translate a bitband access in an SVCall if the uvisor is enabled
  * normal bitband access is provided otherwise */
-static inline void uvisor_bitband(uint32_t *addr, uint32_t val)
+static inline void uvisor_bitband(uint32_t volatile *addr, uint32_t val)
 {
     if (__uvisor_mode == 0) {
         *addr = val;
