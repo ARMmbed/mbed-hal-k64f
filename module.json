@@ -27,14 +27,14 @@
     "mbed-hal-k64f/MK64F12"
   ],
   "dependencies": {
-    "mbed-hal": "ARMmbed/mbed-hal"
+    "mbed-hal": "ARMmbed/mbed-hal-private"
   },
   "targetDependencies": {
     "gcc": {
-      "uvisor-lib": "ARMmbed/uvisor-lib#~0.1.2"
+      "uvisor-lib": "ARMmbed/uvisor-lib-private#~0.2.0"
     },
     "frdm-k64f": {
-      "mbed-hal-frdm-k64f": "ARMmbed/mbed-hal-frdm-k64f#~0.0.1"
+      "mbed-hal-frdm-k64f": "ARMmbed/mbed-hal-frdm-k64f-private#~0.1.0"
     }
   }
 }
