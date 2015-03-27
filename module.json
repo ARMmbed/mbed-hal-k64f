@@ -31,7 +31,7 @@
   },
   "targetDependencies": {
     "gcc": {
-      "uvisor-lib": "ARMmbed/uvisor-lib-private#~0.2.3"
+      "uvisor-lib": "ARMmbed/uvisor-lib-private#~0.3.0"
     },
     "frdm-k64f": {
       "mbed-hal-frdm-k64f": "ARMmbed/mbed-hal-frdm-k64f-private#~0.1.0"
