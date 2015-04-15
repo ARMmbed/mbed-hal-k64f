@@ -62,6 +62,7 @@ const clock_name_config_t kClockNameConfigTable [] =  {
  *END**************************************************************************/
 void SIM_HAL_EnableDmaClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC7_DMA(baseAddr, 1);
 }
 
@@ -74,6 +75,7 @@ void SIM_HAL_EnableDmaClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableDmaClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC7_DMA(baseAddr, 0);
 }
 
@@ -86,6 +88,7 @@ void SIM_HAL_DisableDmaClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetDmaGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC7_DMA(baseAddr);
 }
 
@@ -98,6 +101,7 @@ bool SIM_HAL_GetDmaGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableDmamuxClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_DMAMUX(baseAddr, 1);
 }
 
@@ -110,6 +114,7 @@ void SIM_HAL_EnableDmamuxClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableDmamuxClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_DMAMUX(baseAddr, 0);
 }
 
@@ -122,6 +127,7 @@ void SIM_HAL_DisableDmamuxClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetDmamuxGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC6_DMAMUX(baseAddr);
 }
 
@@ -232,6 +238,7 @@ bool SIM_HAL_GetPortGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableMpuClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC7_MPU(baseAddr, 1);
 }
 
@@ -244,6 +251,7 @@ void SIM_HAL_EnableMpuClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableMpuClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC7_MPU(baseAddr, 0);
 }
 
@@ -256,6 +264,7 @@ void SIM_HAL_DisableMpuClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetMpuGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC7_MPU(baseAddr);
 }
 
@@ -268,6 +277,7 @@ bool SIM_HAL_GetMpuGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableEwmClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC4_EWM(baseAddr, 1);
 }
 
@@ -280,6 +290,7 @@ void SIM_HAL_EnableEwmClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableEwmClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC4_EWM(baseAddr, 0);
 }
 
@@ -292,6 +303,7 @@ void SIM_HAL_DisableEwmClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetEwmGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC4_EWM(baseAddr);
 }
 
@@ -304,6 +316,7 @@ bool SIM_HAL_GetEwmGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableFlexbusClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC7_FLEXBUS(baseAddr, 1);
 }
 
@@ -316,6 +329,7 @@ void SIM_HAL_EnableFlexbusClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableFlexbusClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC7_FLEXBUS(baseAddr, 0);
 }
 
@@ -328,6 +342,7 @@ void SIM_HAL_DisableFlexbusClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetFlexbusGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC7_FLEXBUS(baseAddr);
 }
 
@@ -340,6 +355,7 @@ bool SIM_HAL_GetFlexbusGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableFtfClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_FTF(baseAddr, 1);
 }
 
@@ -352,6 +368,7 @@ void SIM_HAL_EnableFtfClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableFtfClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_FTF(baseAddr, 0);
 }
 
@@ -364,6 +381,7 @@ void SIM_HAL_DisableFtfClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetFtfGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC6_FTF(baseAddr);
 }
 
@@ -376,6 +394,7 @@ bool SIM_HAL_GetFtfGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableCrcClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_CRC(baseAddr, 1);
 }
 
@@ -388,6 +407,7 @@ void SIM_HAL_EnableCrcClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableCrcClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_CRC(baseAddr, 0);
 }
 
@@ -400,6 +420,7 @@ void SIM_HAL_DisableCrcClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetCrcGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC6_CRC(baseAddr);
 }
 
@@ -412,6 +433,7 @@ bool SIM_HAL_GetCrcGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableRngaClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_RNGA(baseAddr, 1);
 }
 
@@ -424,6 +446,7 @@ void SIM_HAL_EnableRngaClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableRngaClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_RNGA(baseAddr, 0);
 }
 
@@ -436,6 +459,7 @@ void SIM_HAL_DisableRngaClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetRngaGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC6_RNGA(baseAddr);
 }
 
@@ -519,6 +543,7 @@ bool SIM_HAL_GetAdcGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableCmpClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC4_CMP(baseAddr, 1);
 }
 
@@ -531,6 +556,7 @@ void SIM_HAL_EnableCmpClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableCmpClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC4_CMP(baseAddr, 0);
 }
 
@@ -543,6 +569,7 @@ void SIM_HAL_DisableCmpClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetCmpGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC4_CMP(baseAddr);
 }
 
@@ -626,6 +653,7 @@ bool SIM_HAL_GetDacGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableVrefClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC4_VREF(baseAddr, 1);
 }
 
@@ -638,6 +666,7 @@ void SIM_HAL_EnableVrefClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableVrefClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC4_VREF(baseAddr, 0);
 }
 
@@ -650,6 +679,7 @@ void SIM_HAL_DisableVrefClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetVrefGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC4_VREF(baseAddr);
 }
 
@@ -662,6 +692,7 @@ bool SIM_HAL_GetVrefGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableSaiClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_I2S(baseAddr, 1);
 }
 
@@ -674,6 +705,7 @@ void SIM_HAL_EnableSaiClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableSaiClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_I2S(baseAddr, 0);
 }
 
@@ -686,6 +718,7 @@ void SIM_HAL_DisableSaiClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetSaiGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC6_I2S(baseAddr);
 }
 
@@ -698,6 +731,7 @@ bool SIM_HAL_GetSaiGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnablePdbClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_PDB(baseAddr, 1);
 }
 
@@ -710,6 +744,7 @@ void SIM_HAL_EnablePdbClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisablePdbClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_PDB(baseAddr, 0);
 }
 
@@ -722,6 +757,7 @@ void SIM_HAL_DisablePdbClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetPdbGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC6_PDB(baseAddr);
 }
 
@@ -823,6 +859,7 @@ bool SIM_HAL_GetFtmGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnablePitClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_PIT(baseAddr, 1);
 }
 
@@ -835,6 +872,7 @@ void SIM_HAL_EnablePitClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisablePitClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_PIT(baseAddr, 0);
 }
 
@@ -847,6 +885,7 @@ void SIM_HAL_DisablePitClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetPitGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC6_PIT(baseAddr);
 }
 
@@ -859,6 +898,7 @@ bool SIM_HAL_GetPitGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableLptimerClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC5_LPTMR(baseAddr, 1);
 }
 
@@ -871,6 +911,7 @@ void SIM_HAL_EnableLptimerClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableLptimerClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC5_LPTMR(baseAddr, 0);
 }
 
@@ -883,6 +924,7 @@ void SIM_HAL_DisableLptimerClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetLptimerGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC5_LPTMR(baseAddr);
 }
 
@@ -895,6 +937,7 @@ bool SIM_HAL_GetLptimerGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableCmtClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC4_CMT(baseAddr, 1);
 }
 
@@ -907,6 +950,7 @@ void SIM_HAL_EnableCmtClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableCmtClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC4_CMT(baseAddr, 0);
 }
 
@@ -919,6 +963,7 @@ void SIM_HAL_DisableCmtClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetCmtGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC4_CMT(baseAddr);
 }
 
@@ -931,6 +976,7 @@ bool SIM_HAL_GetCmtGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableRtcClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_RTC(baseAddr, 1);
 }
 
@@ -943,6 +989,7 @@ void SIM_HAL_EnableRtcClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableRtcClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_RTC(baseAddr, 0);
 }
 
@@ -955,6 +1002,7 @@ void SIM_HAL_DisableRtcClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetRtcGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC6_RTC(baseAddr);
 }
 
@@ -967,6 +1015,7 @@ bool SIM_HAL_GetRtcGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableEnetClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC2_ENET(baseAddr, 1);
 }
 
@@ -979,6 +1028,7 @@ void SIM_HAL_EnableEnetClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableEnetClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC2_ENET(baseAddr, 0);
 }
 
@@ -991,6 +1041,7 @@ void SIM_HAL_DisableEnetClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetEnetGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC2_ENET(baseAddr);
 }
 
@@ -1003,6 +1054,7 @@ bool SIM_HAL_GetEnetGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableUsbClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC4_USBOTG(baseAddr, 1);
 }
 
@@ -1015,6 +1067,7 @@ void SIM_HAL_EnableUsbClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableUsbClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC4_USBOTG(baseAddr, 0);
 }
 
@@ -1027,6 +1080,7 @@ void SIM_HAL_DisableUsbClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetUsbGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC4_USBOTG(baseAddr);
 }
 
@@ -1039,6 +1093,7 @@ bool SIM_HAL_GetUsbGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableUsbdcdClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_USBDCD(baseAddr, 1);
 }
 
@@ -1051,6 +1106,7 @@ void SIM_HAL_EnableUsbdcdClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableUsbdcdClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_USBDCD(baseAddr, 0);
 }
 
@@ -1063,6 +1119,7 @@ void SIM_HAL_DisableUsbdcdClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetUsbdcdGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC6_USBDCD(baseAddr);
 }
 
@@ -1075,6 +1132,7 @@ bool SIM_HAL_GetUsbdcdGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableFlexcanClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_FLEXCAN0(baseAddr, 1);
 }
 
@@ -1087,6 +1145,7 @@ void SIM_HAL_EnableFlexcanClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableFlexcanClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC6_FLEXCAN0(baseAddr, 0);
 }
 
@@ -1099,6 +1158,7 @@ void SIM_HAL_DisableFlexcanClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetFlexcanGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC6_FLEXCAN0(baseAddr);
 }
 
@@ -1378,6 +1438,7 @@ bool SIM_HAL_GetUartGateCmd(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_EnableSdhcClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC3_SDHC(baseAddr, 1);
 }
 
@@ -1390,6 +1451,7 @@ void SIM_HAL_EnableSdhcClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 void SIM_HAL_DisableSdhcClock(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     BW_SIM_SCGC3_SDHC(baseAddr, 0);
 }
 
@@ -1402,9 +1464,9 @@ void SIM_HAL_DisableSdhcClock(uint32_t baseAddr, uint32_t instance)
  *END**************************************************************************/
 bool SIM_HAL_GetSdhcGateCmd(uint32_t baseAddr, uint32_t instance)
 {
+    (void) instance;
     return BR_SIM_SCGC3_SDHC(baseAddr);
 }
 /*******************************************************************************
  * EOF
  ******************************************************************************/
-
