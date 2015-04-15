@@ -56,6 +56,7 @@ extern const uint32_t g_mcgBaseAddr[];
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetDmaFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kSystemClock, &freq);
     return freq;
@@ -70,6 +71,7 @@ uint32_t    CLOCK_SYS_GetDmaFreq(uint32_t instance)
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetDmamuxFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kBusClock, &freq);
     return freq;
@@ -84,6 +86,7 @@ uint32_t    CLOCK_SYS_GetDmamuxFreq(uint32_t instance)
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetPortFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kLpoClock, &freq);
     return freq;
@@ -98,6 +101,7 @@ uint32_t    CLOCK_SYS_GetPortFreq(uint32_t instance)
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetMpuFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kSystemClock, &freq);
     return freq;
@@ -112,6 +116,7 @@ uint32_t    CLOCK_SYS_GetMpuFreq(uint32_t instance)
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetEwmFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kLpoClock, &freq);
     return freq;
@@ -126,6 +131,7 @@ uint32_t    CLOCK_SYS_GetEwmFreq(uint32_t instance)
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetFlexbusFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kSystemClock, &freq);
     return freq;
@@ -140,6 +146,7 @@ uint32_t    CLOCK_SYS_GetFlexbusFreq(uint32_t instance)
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetFtfFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kFlashClock, &freq);
     return freq;
@@ -154,6 +161,7 @@ uint32_t    CLOCK_SYS_GetFtfFreq(uint32_t instance)
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetCrcFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kBusClock, &freq);
     return freq;
@@ -168,6 +176,7 @@ uint32_t    CLOCK_SYS_GetCrcFreq(uint32_t instance)
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetRngaFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kBusClock, &freq);
     return freq;
@@ -182,6 +191,7 @@ uint32_t    CLOCK_SYS_GetRngaFreq(uint32_t instance)
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetAdcFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kOsc0ErClock, &freq);
     return freq;
@@ -196,6 +206,7 @@ uint32_t    CLOCK_SYS_GetAdcFreq(uint32_t instance)
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetCmpFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kBusClock, &freq);
     return freq;
@@ -210,6 +221,7 @@ uint32_t    CLOCK_SYS_GetCmpFreq(uint32_t instance)
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetVrefFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kBusClock, &freq);
     return freq;
@@ -224,6 +236,7 @@ uint32_t    CLOCK_SYS_GetVrefFreq(uint32_t instance)
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetPdbFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kBusClock, &freq);
     return freq;
@@ -238,6 +251,7 @@ uint32_t    CLOCK_SYS_GetPdbFreq(uint32_t instance)
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetFtmFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kMcgFfClock, &freq);
     return freq;
@@ -246,12 +260,13 @@ uint32_t    CLOCK_SYS_GetFtmFreq(uint32_t instance)
 /*FUNCTION**********************************************************************
  *
  * Function Name : CLOCK_SYS_GetPitFreq
- * Description   : Gets the clock frequency for Pit module. 
+ * Description   : Gets the clock frequency for Pit module.
  * This function gets the clock frequency for Pit moudle.
  *
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetPitFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kBusClock, &freq);
     return freq;
@@ -260,12 +275,13 @@ uint32_t    CLOCK_SYS_GetPitFreq(uint32_t instance)
 /*FUNCTION**********************************************************************
  *
  * Function Name : CLOCK_SYS_GetCmtFreq
- * Description   : Gets the clock frequency for CMT module. 
+ * Description   : Gets the clock frequency for CMT module.
  * This function gets the clock frequency for CMT moudle.
  *
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetCmtFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kBusClock, &freq);
     return freq;
@@ -274,12 +290,13 @@ uint32_t    CLOCK_SYS_GetCmtFreq(uint32_t instance)
 /*FUNCTION**********************************************************************
  *
  * Function Name : CLOCK_SYS_GetEnetRmiiFreq
- * Description   : Gets the clock frequency for ENET module RMII clock. 
+ * Description   : Gets the clock frequency for ENET module RMII clock.
  * This function gets the clock frequency for ENET moudle RMII clock.
  *
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetEnetRmiiFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     uint8_t setting;
     clock_names_t clockName;
@@ -305,12 +322,13 @@ uint32_t    CLOCK_SYS_GetEnetRmiiFreq(uint32_t instance)
 /*FUNCTION**********************************************************************
  *
  * Function Name : CLOCK_SYS_GetEnetTimeStampFreq
- * Description   : Gets the clock frequency for ENET module TIME clock. 
+ * Description   : Gets the clock frequency for ENET module TIME clock.
  * This function gets the clock frequency for ENET moudle TIME clock.
  *
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetEnetTimeStampFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     uint8_t setting;
     clock_names_t clockName;
@@ -333,7 +351,7 @@ uint32_t    CLOCK_SYS_GetEnetTimeStampFreq(uint32_t instance)
             return freq;
         }
 
-        switch ((sim_pllfll_clock_sel_t)setting) 
+        switch ((sim_pllfll_clock_sel_t)setting)
         {
         case kSimPllFllSelFll:       /* Fll clock */
             clockName = kMcgFllClock;
@@ -365,12 +383,13 @@ uint32_t    CLOCK_SYS_GetEnetTimeStampFreq(uint32_t instance)
 /*FUNCTION**********************************************************************
  *
  * Function Name : CLOCK_SYS_GetUsbFreq
- * Description   : Gets the clock frequency for USB FS OTG module. 
+ * Description   : Gets the clock frequency for USB FS OTG module.
  * This function gets the clock frequency for USB FS OTG moudle.
  *
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetUsbFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     uint8_t setting;
     clock_names_t clockName;
@@ -395,7 +414,7 @@ uint32_t    CLOCK_SYS_GetUsbFreq(uint32_t instance)
             return freq;
         }
 
-        switch ((sim_pllfll_clock_sel_t)setting) 
+        switch ((sim_pllfll_clock_sel_t)setting)
         {
         case kSimPllFllSelFll:       /* Fll clock */
             clockName = kMcgFllClock;
@@ -420,7 +439,7 @@ uint32_t    CLOCK_SYS_GetUsbFreq(uint32_t instance)
     CLOCK_HAL_GetDivider(g_simBaseAddr[0], kClockDividerUsbDiv, &divider);
     CLOCK_HAL_GetDivider(g_simBaseAddr[0], kClockDividerUsbFrac, &frac);
 
-    /* Divider output clock = Divider input clock × [ (FRAC+1) / (DIV+1) ]*/
+    /* Divider output clock = Divider input clock ï¿½ [ (FRAC+1) / (DIV+1) ]*/
     freq = (freq) * (frac + 1) / (divider + 1);
 
     return freq;
@@ -429,12 +448,13 @@ uint32_t    CLOCK_SYS_GetUsbFreq(uint32_t instance)
 /*FUNCTION**********************************************************************
  *
  * Function Name : CLOCK_SYS_GetUsbdcdFreq
- * Description   : Gets the clock frequency for USB DCD module. 
+ * Description   : Gets the clock frequency for USB DCD module.
  * This function gets the clock frequency for USB DCD moudle.
  *
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetUsbdcdFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kBusClock, &freq);
     return freq;
@@ -443,12 +463,13 @@ uint32_t    CLOCK_SYS_GetUsbdcdFreq(uint32_t instance)
 /*FUNCTION**********************************************************************
  *
  * Function Name : CLOCK_SYS_GetSpiFreq
- * Description   : Gets the clock frequency for SPI module. 
+ * Description   : Gets the clock frequency for SPI module.
  * This function gets the clock frequency for SPI moudle.
  *
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetSpiFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kBusClock, &freq);
     return freq;
@@ -457,12 +478,13 @@ uint32_t    CLOCK_SYS_GetSpiFreq(uint32_t instance)
 /*FUNCTION**********************************************************************
  *
  * Function Name : CLOCK_SYS_GetI2cFreq
- * Description   : Gets the clock frequency for I2C module. 
+ * Description   : Gets the clock frequency for I2C module.
  * This function gets the clock frequency for I2C moudle.
  *
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetI2cFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kBusClock, &freq);
     return freq;
@@ -471,7 +493,7 @@ uint32_t    CLOCK_SYS_GetI2cFreq(uint32_t instance)
 /*FUNCTION**********************************************************************
  *
  * Function Name : CLOCK_SYS_GetUartFreq
- * Description   : Gets the clock frequency for UART module. 
+ * Description   : Gets the clock frequency for UART module.
  * This function gets the clock frequency for UART moudle.
  *
  *END**************************************************************************/
@@ -507,6 +529,7 @@ uint32_t    CLOCK_SYS_GetUartFreq(uint32_t instance)
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetSdhcFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     uint8_t setting;
     clock_names_t clockName;
@@ -529,7 +552,7 @@ uint32_t    CLOCK_SYS_GetSdhcFreq(uint32_t instance)
             return freq;
         }
 
-        switch ((sim_pllfll_clock_sel_t)setting) 
+        switch ((sim_pllfll_clock_sel_t)setting)
         {
         case kSimPllFllSelFll:       /* Fll clock */
             clockName = kMcgFllClock;
@@ -567,6 +590,7 @@ uint32_t    CLOCK_SYS_GetSdhcFreq(uint32_t instance)
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetSaiFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
     CLOCK_SYS_GetFreq(kBusClock, &freq);
     return freq;
@@ -575,12 +599,13 @@ uint32_t    CLOCK_SYS_GetSaiFreq(uint32_t instance)
 /*FUNCTION**********************************************************************
  *
  * Function Name : CLOCK_SYS_GetGpioFreq
- * Description   : Gets the clock frequency for GPIO module. 
+ * Description   : Gets the clock frequency for GPIO module.
  * This function gets the clock frequency for GPIO moudle.
  *
  *END**************************************************************************/
 uint32_t    CLOCK_SYS_GetGpioFreq(uint32_t instance)
 {
+    (void) instance;
     uint32_t freq = 0;
 
     CLOCK_SYS_GetFreq(kSystemClock, &freq);
