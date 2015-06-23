@@ -23,7 +23,7 @@ if(${CMAKE_C_COMPILER_ID} STREQUAL GNU)
     set(STARTUP_SRC "")
 elseif(${CMAKE_C_COMPILER_ID} STREQUAL ARMCC)
     set(STARTUP_ASM "bootstrap_armcc/startup_MK64F12.s")
-    set(STARTUP_SRC "bootstrap_armcc/sys.cpp")
+    set(STARTUP_SRC "")
 
     # unfortunately, for armlink we have to pass the executable startup code as
     # an object file, not as part of an archive.
