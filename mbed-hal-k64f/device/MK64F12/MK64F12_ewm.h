@@ -157,13 +157,13 @@ typedef union _hw_ewm_ctrl
 #define BS_EWM_CTRL_EWMEN    (1U)          /*!< Bit field size in bits for EWM_CTRL_EWMEN. */
 
 /*! @brief Read current value of the EWM_CTRL_EWMEN field. */
-#define BR_EWM_CTRL_EWMEN(x) (BITBAND_ACCESS8(HW_EWM_CTRL_ADDR(x), BP_EWM_CTRL_EWMEN))
+#define BR_EWM_CTRL_EWMEN(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_EWM_CTRL_ADDR(x), BP_EWM_CTRL_EWMEN)))
 
 /*! @brief Format value for bitfield EWM_CTRL_EWMEN. */
 #define BF_EWM_CTRL_EWMEN(v) ((uint8_t)((uint8_t)(v) << BP_EWM_CTRL_EWMEN) & BM_EWM_CTRL_EWMEN)
 
 /*! @brief Set the EWMEN field to a new value. */
-#define BW_EWM_CTRL_EWMEN(x, v) (BITBAND_ACCESS8(HW_EWM_CTRL_ADDR(x), BP_EWM_CTRL_EWMEN) = (v))
+#define BW_EWM_CTRL_EWMEN(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_EWM_CTRL_ADDR(x), BP_EWM_CTRL_EWMEN), v))
 /*@}*/
 
 /*!
@@ -178,13 +178,13 @@ typedef union _hw_ewm_ctrl
 #define BS_EWM_CTRL_ASSIN    (1U)          /*!< Bit field size in bits for EWM_CTRL_ASSIN. */
 
 /*! @brief Read current value of the EWM_CTRL_ASSIN field. */
-#define BR_EWM_CTRL_ASSIN(x) (BITBAND_ACCESS8(HW_EWM_CTRL_ADDR(x), BP_EWM_CTRL_ASSIN))
+#define BR_EWM_CTRL_ASSIN(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_EWM_CTRL_ADDR(x), BP_EWM_CTRL_ASSIN)))
 
 /*! @brief Format value for bitfield EWM_CTRL_ASSIN. */
 #define BF_EWM_CTRL_ASSIN(v) ((uint8_t)((uint8_t)(v) << BP_EWM_CTRL_ASSIN) & BM_EWM_CTRL_ASSIN)
 
 /*! @brief Set the ASSIN field to a new value. */
-#define BW_EWM_CTRL_ASSIN(x, v) (BITBAND_ACCESS8(HW_EWM_CTRL_ADDR(x), BP_EWM_CTRL_ASSIN) = (v))
+#define BW_EWM_CTRL_ASSIN(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_EWM_CTRL_ADDR(x), BP_EWM_CTRL_ASSIN), v))
 /*@}*/
 
 /*!
@@ -198,13 +198,13 @@ typedef union _hw_ewm_ctrl
 #define BS_EWM_CTRL_INEN     (1U)          /*!< Bit field size in bits for EWM_CTRL_INEN. */
 
 /*! @brief Read current value of the EWM_CTRL_INEN field. */
-#define BR_EWM_CTRL_INEN(x)  (BITBAND_ACCESS8(HW_EWM_CTRL_ADDR(x), BP_EWM_CTRL_INEN))
+#define BR_EWM_CTRL_INEN(x)  (ADDRESS_READ8(BITBAND_ADDRESS8(HW_EWM_CTRL_ADDR(x), BP_EWM_CTRL_INEN)))
 
 /*! @brief Format value for bitfield EWM_CTRL_INEN. */
 #define BF_EWM_CTRL_INEN(v)  ((uint8_t)((uint8_t)(v) << BP_EWM_CTRL_INEN) & BM_EWM_CTRL_INEN)
 
 /*! @brief Set the INEN field to a new value. */
-#define BW_EWM_CTRL_INEN(x, v) (BITBAND_ACCESS8(HW_EWM_CTRL_ADDR(x), BP_EWM_CTRL_INEN) = (v))
+#define BW_EWM_CTRL_INEN(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_EWM_CTRL_ADDR(x), BP_EWM_CTRL_INEN), v))
 /*@}*/
 
 /*!
@@ -219,13 +219,13 @@ typedef union _hw_ewm_ctrl
 #define BS_EWM_CTRL_INTEN    (1U)          /*!< Bit field size in bits for EWM_CTRL_INTEN. */
 
 /*! @brief Read current value of the EWM_CTRL_INTEN field. */
-#define BR_EWM_CTRL_INTEN(x) (BITBAND_ACCESS8(HW_EWM_CTRL_ADDR(x), BP_EWM_CTRL_INTEN))
+#define BR_EWM_CTRL_INTEN(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_EWM_CTRL_ADDR(x), BP_EWM_CTRL_INTEN)))
 
 /*! @brief Format value for bitfield EWM_CTRL_INTEN. */
 #define BF_EWM_CTRL_INTEN(v) ((uint8_t)((uint8_t)(v) << BP_EWM_CTRL_INTEN) & BM_EWM_CTRL_INTEN)
 
 /*! @brief Set the INTEN field to a new value. */
-#define BW_EWM_CTRL_INTEN(x, v) (BITBAND_ACCESS8(HW_EWM_CTRL_ADDR(x), BP_EWM_CTRL_INTEN) = (v))
+#define BW_EWM_CTRL_INTEN(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_EWM_CTRL_ADDR(x), BP_EWM_CTRL_INTEN), v))
 /*@}*/
 
 /*******************************************************************************
@@ -283,7 +283,7 @@ typedef union _hw_ewm_serv
 #define BF_EWM_SERV_SERVICE(v) ((uint8_t)((uint8_t)(v) << BP_EWM_SERV_SERVICE) & BM_EWM_SERV_SERVICE)
 
 /*! @brief Set the SERVICE field to a new value. */
-#define BW_EWM_SERV_SERVICE(x, v) (HW_EWM_SERV_WR(x, v))
+#define BW_EWM_SERV_SERVICE(x, v) (ADDRESS_WRITE32(HW_EWM_SERV_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -340,13 +340,13 @@ typedef union _hw_ewm_cmpl
 #define BS_EWM_CMPL_COMPAREL (8U)          /*!< Bit field size in bits for EWM_CMPL_COMPAREL. */
 
 /*! @brief Read current value of the EWM_CMPL_COMPAREL field. */
-#define BR_EWM_CMPL_COMPAREL(x) (HW_EWM_CMPL(x).U)
+#define BR_EWM_CMPL_COMPAREL(x) (ADDRESS_READ32(HW_EWM_CMPL_ADDR(x)))
 
 /*! @brief Format value for bitfield EWM_CMPL_COMPAREL. */
 #define BF_EWM_CMPL_COMPAREL(v) ((uint8_t)((uint8_t)(v) << BP_EWM_CMPL_COMPAREL) & BM_EWM_CMPL_COMPAREL)
 
 /*! @brief Set the COMPAREL field to a new value. */
-#define BW_EWM_CMPL_COMPAREL(x, v) (HW_EWM_CMPL_WR(x, v))
+#define BW_EWM_CMPL_COMPAREL(x, v) (ADDRESS_WRITE32(HW_EWM_CMPL_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -405,13 +405,13 @@ typedef union _hw_ewm_cmph
 #define BS_EWM_CMPH_COMPAREH (8U)          /*!< Bit field size in bits for EWM_CMPH_COMPAREH. */
 
 /*! @brief Read current value of the EWM_CMPH_COMPAREH field. */
-#define BR_EWM_CMPH_COMPAREH(x) (HW_EWM_CMPH(x).U)
+#define BR_EWM_CMPH_COMPAREH(x) (ADDRESS_READ32(HW_EWM_CMPH_ADDR(x)))
 
 /*! @brief Format value for bitfield EWM_CMPH_COMPAREH. */
 #define BF_EWM_CMPH_COMPAREH(v) ((uint8_t)((uint8_t)(v) << BP_EWM_CMPH_COMPAREH) & BM_EWM_CMPH_COMPAREH)
 
 /*! @brief Set the COMPAREH field to a new value. */
-#define BW_EWM_CMPH_COMPAREH(x, v) (HW_EWM_CMPH_WR(x, v))
+#define BW_EWM_CMPH_COMPAREH(x, v) (ADDRESS_WRITE32(HW_EWM_CMPH_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************

@@ -157,13 +157,13 @@ typedef union _hw_crc_datal
 #define BS_CRC_DATAL_DATAL   (16U)         /*!< Bit field size in bits for CRC_DATAL_DATAL. */
 
 /*! @brief Read current value of the CRC_DATAL_DATAL field. */
-#define BR_CRC_DATAL_DATAL(x) (HW_CRC_DATAL(x).U)
+#define BR_CRC_DATAL_DATAL(x) (ADDRESS_READ32(HW_CRC_DATAL_ADDR(x)))
 
 /*! @brief Format value for bitfield CRC_DATAL_DATAL. */
 #define BF_CRC_DATAL_DATAL(v) ((uint16_t)((uint16_t)(v) << BP_CRC_DATAL_DATAL) & BM_CRC_DATAL_DATAL)
 
 /*! @brief Set the DATAL field to a new value. */
-#define BW_CRC_DATAL_DATAL(x, v) (HW_CRC_DATAL_WR(x, v))
+#define BW_CRC_DATAL_DATAL(x, v) (ADDRESS_WRITE32(HW_CRC_DATAL_ADDR(x), v))
 /*@}*/
 /*******************************************************************************
  * HW_CRC_DATAH - CRC_DATAH register.
@@ -211,13 +211,13 @@ typedef union _hw_crc_datah
 #define BS_CRC_DATAH_DATAH   (16U)         /*!< Bit field size in bits for CRC_DATAH_DATAH. */
 
 /*! @brief Read current value of the CRC_DATAH_DATAH field. */
-#define BR_CRC_DATAH_DATAH(x) (HW_CRC_DATAH(x).U)
+#define BR_CRC_DATAH_DATAH(x) (ADDRESS_READ32(HW_CRC_DATAH_ADDR(x)))
 
 /*! @brief Format value for bitfield CRC_DATAH_DATAH. */
 #define BF_CRC_DATAH_DATAH(v) ((uint16_t)((uint16_t)(v) << BP_CRC_DATAH_DATAH) & BM_CRC_DATAH_DATAH)
 
 /*! @brief Set the DATAH field to a new value. */
-#define BW_CRC_DATAH_DATAH(x, v) (HW_CRC_DATAH_WR(x, v))
+#define BW_CRC_DATAH_DATAH(x, v) (ADDRESS_WRITE32(HW_CRC_DATAH_ADDR(x), v))
 /*@}*/
 /*******************************************************************************
  * HW_CRC_DATALL - CRC_DATALL register.
@@ -265,13 +265,13 @@ typedef union _hw_crc_datall
 #define BS_CRC_DATALL_DATALL (8U)          /*!< Bit field size in bits for CRC_DATALL_DATALL. */
 
 /*! @brief Read current value of the CRC_DATALL_DATALL field. */
-#define BR_CRC_DATALL_DATALL(x) (HW_CRC_DATALL(x).U)
+#define BR_CRC_DATALL_DATALL(x) (ADDRESS_READ32(HW_CRC_DATALL_ADDR(x)))
 
 /*! @brief Format value for bitfield CRC_DATALL_DATALL. */
 #define BF_CRC_DATALL_DATALL(v) ((uint8_t)((uint8_t)(v) << BP_CRC_DATALL_DATALL) & BM_CRC_DATALL_DATALL)
 
 /*! @brief Set the DATALL field to a new value. */
-#define BW_CRC_DATALL_DATALL(x, v) (HW_CRC_DATALL_WR(x, v))
+#define BW_CRC_DATALL_DATALL(x, v) (ADDRESS_WRITE32(HW_CRC_DATALL_ADDR(x), v))
 /*@}*/
 /*******************************************************************************
  * HW_CRC_DATALU - CRC_DATALU register.
@@ -319,13 +319,13 @@ typedef union _hw_crc_datalu
 #define BS_CRC_DATALU_DATALU (8U)          /*!< Bit field size in bits for CRC_DATALU_DATALU. */
 
 /*! @brief Read current value of the CRC_DATALU_DATALU field. */
-#define BR_CRC_DATALU_DATALU(x) (HW_CRC_DATALU(x).U)
+#define BR_CRC_DATALU_DATALU(x) (ADDRESS_READ32(HW_CRC_DATALU_ADDR(x)))
 
 /*! @brief Format value for bitfield CRC_DATALU_DATALU. */
 #define BF_CRC_DATALU_DATALU(v) ((uint8_t)((uint8_t)(v) << BP_CRC_DATALU_DATALU) & BM_CRC_DATALU_DATALU)
 
 /*! @brief Set the DATALU field to a new value. */
-#define BW_CRC_DATALU_DATALU(x, v) (HW_CRC_DATALU_WR(x, v))
+#define BW_CRC_DATALU_DATALU(x, v) (ADDRESS_WRITE32(HW_CRC_DATALU_ADDR(x), v))
 /*@}*/
 /*******************************************************************************
  * HW_CRC_DATAHL - CRC_DATAHL register.
@@ -373,13 +373,13 @@ typedef union _hw_crc_datahl
 #define BS_CRC_DATAHL_DATAHL (8U)          /*!< Bit field size in bits for CRC_DATAHL_DATAHL. */
 
 /*! @brief Read current value of the CRC_DATAHL_DATAHL field. */
-#define BR_CRC_DATAHL_DATAHL(x) (HW_CRC_DATAHL(x).U)
+#define BR_CRC_DATAHL_DATAHL(x) (ADDRESS_READ32(HW_CRC_DATAHL_ADDR(x)))
 
 /*! @brief Format value for bitfield CRC_DATAHL_DATAHL. */
 #define BF_CRC_DATAHL_DATAHL(v) ((uint8_t)((uint8_t)(v) << BP_CRC_DATAHL_DATAHL) & BM_CRC_DATAHL_DATAHL)
 
 /*! @brief Set the DATAHL field to a new value. */
-#define BW_CRC_DATAHL_DATAHL(x, v) (HW_CRC_DATAHL_WR(x, v))
+#define BW_CRC_DATAHL_DATAHL(x, v) (ADDRESS_WRITE32(HW_CRC_DATAHL_ADDR(x), v))
 /*@}*/
 /*******************************************************************************
  * HW_CRC_DATAHU - CRC_DATAHU register.
@@ -427,13 +427,13 @@ typedef union _hw_crc_datahu
 #define BS_CRC_DATAHU_DATAHU (8U)          /*!< Bit field size in bits for CRC_DATAHU_DATAHU. */
 
 /*! @brief Read current value of the CRC_DATAHU_DATAHU field. */
-#define BR_CRC_DATAHU_DATAHU(x) (HW_CRC_DATAHU(x).U)
+#define BR_CRC_DATAHU_DATAHU(x) (ADDRESS_READ32(HW_CRC_DATAHU_ADDR(x)))
 
 /*! @brief Format value for bitfield CRC_DATAHU_DATAHU. */
 #define BF_CRC_DATAHU_DATAHU(v) ((uint8_t)((uint8_t)(v) << BP_CRC_DATAHU_DATAHU) & BM_CRC_DATAHU_DATAHU)
 
 /*! @brief Set the DATAHU field to a new value. */
-#define BW_CRC_DATAHU_DATAHU(x, v) (HW_CRC_DATAHU_WR(x, v))
+#define BW_CRC_DATAHU_DATAHU(x, v) (ADDRESS_WRITE32(HW_CRC_DATAHU_ADDR(x), v))
 /*@}*/
 /*******************************************************************************
  * HW_CRC_DATA - CRC Data register
@@ -501,13 +501,13 @@ typedef union _hw_crc_data
 #define BS_CRC_DATA_LL       (8U)          /*!< Bit field size in bits for CRC_DATA_LL. */
 
 /*! @brief Read current value of the CRC_DATA_LL field. */
-#define BR_CRC_DATA_LL(x)    (HW_CRC_DATA(x).B.LL)
+#define BR_CRC_DATA_LL(x)    (UNION_READ_FS(HW_CRC_DATA_ADDR(x), hw_crc_data, B.LL))
 
 /*! @brief Format value for bitfield CRC_DATA_LL. */
 #define BF_CRC_DATA_LL(v)    ((uint32_t)((uint32_t)(v) << BP_CRC_DATA_LL) & BM_CRC_DATA_LL)
 
 /*! @brief Set the LL field to a new value. */
-#define BW_CRC_DATA_LL(x, v) (HW_CRC_DATA_WR(x, (HW_CRC_DATA_RD(x) & ~BM_CRC_DATA_LL) | BF_CRC_DATA_LL(v)))
+#define BW_CRC_DATA_LL(x, v) (ADDRESS_WRITE32(HW_CRC_DATA_ADDR(x), (HW_CRC_DATA_RD(x) & ~BM_CRC_DATA_LL) | BF_CRC_DATA_LL(v)))
 /*@}*/
 
 /*!
@@ -523,13 +523,13 @@ typedef union _hw_crc_data
 #define BS_CRC_DATA_LU       (8U)          /*!< Bit field size in bits for CRC_DATA_LU. */
 
 /*! @brief Read current value of the CRC_DATA_LU field. */
-#define BR_CRC_DATA_LU(x)    (HW_CRC_DATA(x).B.LU)
+#define BR_CRC_DATA_LU(x)    (UNION_READ_FS(HW_CRC_DATA_ADDR(x), hw_crc_data, B.LU))
 
 /*! @brief Format value for bitfield CRC_DATA_LU. */
 #define BF_CRC_DATA_LU(v)    ((uint32_t)((uint32_t)(v) << BP_CRC_DATA_LU) & BM_CRC_DATA_LU)
 
 /*! @brief Set the LU field to a new value. */
-#define BW_CRC_DATA_LU(x, v) (HW_CRC_DATA_WR(x, (HW_CRC_DATA_RD(x) & ~BM_CRC_DATA_LU) | BF_CRC_DATA_LU(v)))
+#define BW_CRC_DATA_LU(x, v) (ADDRESS_WRITE32(HW_CRC_DATA_ADDR(x), (HW_CRC_DATA_RD(x) & ~BM_CRC_DATA_LU) | BF_CRC_DATA_LU(v)))
 /*@}*/
 
 /*!
@@ -547,13 +547,13 @@ typedef union _hw_crc_data
 #define BS_CRC_DATA_HL       (8U)          /*!< Bit field size in bits for CRC_DATA_HL. */
 
 /*! @brief Read current value of the CRC_DATA_HL field. */
-#define BR_CRC_DATA_HL(x)    (HW_CRC_DATA(x).B.HL)
+#define BR_CRC_DATA_HL(x)    (UNION_READ_FS(HW_CRC_DATA_ADDR(x), hw_crc_data, B.HL))
 
 /*! @brief Format value for bitfield CRC_DATA_HL. */
 #define BF_CRC_DATA_HL(v)    ((uint32_t)((uint32_t)(v) << BP_CRC_DATA_HL) & BM_CRC_DATA_HL)
 
 /*! @brief Set the HL field to a new value. */
-#define BW_CRC_DATA_HL(x, v) (HW_CRC_DATA_WR(x, (HW_CRC_DATA_RD(x) & ~BM_CRC_DATA_HL) | BF_CRC_DATA_HL(v)))
+#define BW_CRC_DATA_HL(x, v) (ADDRESS_WRITE32(HW_CRC_DATA_ADDR(x), (HW_CRC_DATA_RD(x) & ~BM_CRC_DATA_HL) | BF_CRC_DATA_HL(v)))
 /*@}*/
 
 /*!
@@ -571,13 +571,13 @@ typedef union _hw_crc_data
 #define BS_CRC_DATA_HU       (8U)          /*!< Bit field size in bits for CRC_DATA_HU. */
 
 /*! @brief Read current value of the CRC_DATA_HU field. */
-#define BR_CRC_DATA_HU(x)    (HW_CRC_DATA(x).B.HU)
+#define BR_CRC_DATA_HU(x)    (UNION_READ_FS(HW_CRC_DATA_ADDR(x), hw_crc_data, B.HU))
 
 /*! @brief Format value for bitfield CRC_DATA_HU. */
 #define BF_CRC_DATA_HU(v)    ((uint32_t)((uint32_t)(v) << BP_CRC_DATA_HU) & BM_CRC_DATA_HU)
 
 /*! @brief Set the HU field to a new value. */
-#define BW_CRC_DATA_HU(x, v) (HW_CRC_DATA_WR(x, (HW_CRC_DATA_RD(x) & ~BM_CRC_DATA_HU) | BF_CRC_DATA_HU(v)))
+#define BW_CRC_DATA_HU(x, v) (ADDRESS_WRITE32(HW_CRC_DATA_ADDR(x), (HW_CRC_DATA_RD(x) & ~BM_CRC_DATA_HU) | BF_CRC_DATA_HU(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -634,13 +634,13 @@ typedef union _hw_crc_gpoly
 #define BS_CRC_GPOLY_LOW     (16U)         /*!< Bit field size in bits for CRC_GPOLY_LOW. */
 
 /*! @brief Read current value of the CRC_GPOLY_LOW field. */
-#define BR_CRC_GPOLY_LOW(x)  (HW_CRC_GPOLY(x).B.LOW)
+#define BR_CRC_GPOLY_LOW(x)  (UNION_READ_FS(HW_CRC_GPOLY_ADDR(x), hw_crc_gpoly, B.LOW))
 
 /*! @brief Format value for bitfield CRC_GPOLY_LOW. */
 #define BF_CRC_GPOLY_LOW(v)  ((uint32_t)((uint32_t)(v) << BP_CRC_GPOLY_LOW) & BM_CRC_GPOLY_LOW)
 
 /*! @brief Set the LOW field to a new value. */
-#define BW_CRC_GPOLY_LOW(x, v) (HW_CRC_GPOLY_WR(x, (HW_CRC_GPOLY_RD(x) & ~BM_CRC_GPOLY_LOW) | BF_CRC_GPOLY_LOW(v)))
+#define BW_CRC_GPOLY_LOW(x, v) (ADDRESS_WRITE32(HW_CRC_GPOLY_ADDR(x), (HW_CRC_GPOLY_RD(x) & ~BM_CRC_GPOLY_LOW) | BF_CRC_GPOLY_LOW(v)))
 /*@}*/
 
 /*!
@@ -655,13 +655,13 @@ typedef union _hw_crc_gpoly
 #define BS_CRC_GPOLY_HIGH    (16U)         /*!< Bit field size in bits for CRC_GPOLY_HIGH. */
 
 /*! @brief Read current value of the CRC_GPOLY_HIGH field. */
-#define BR_CRC_GPOLY_HIGH(x) (HW_CRC_GPOLY(x).B.HIGH)
+#define BR_CRC_GPOLY_HIGH(x) (UNION_READ_FS(HW_CRC_GPOLY_ADDR(x), hw_crc_gpoly, B.HIGH))
 
 /*! @brief Format value for bitfield CRC_GPOLY_HIGH. */
 #define BF_CRC_GPOLY_HIGH(v) ((uint32_t)((uint32_t)(v) << BP_CRC_GPOLY_HIGH) & BM_CRC_GPOLY_HIGH)
 
 /*! @brief Set the HIGH field to a new value. */
-#define BW_CRC_GPOLY_HIGH(x, v) (HW_CRC_GPOLY_WR(x, (HW_CRC_GPOLY_RD(x) & ~BM_CRC_GPOLY_HIGH) | BF_CRC_GPOLY_HIGH(v)))
+#define BW_CRC_GPOLY_HIGH(x, v) (ADDRESS_WRITE32(HW_CRC_GPOLY_ADDR(x), (HW_CRC_GPOLY_RD(x) & ~BM_CRC_GPOLY_HIGH) | BF_CRC_GPOLY_HIGH(v)))
 /*@}*/
 /*******************************************************************************
  * HW_CRC_GPOLYL - CRC_GPOLYL register.
@@ -709,13 +709,13 @@ typedef union _hw_crc_gpolyl
 #define BS_CRC_GPOLYL_GPOLYL (16U)         /*!< Bit field size in bits for CRC_GPOLYL_GPOLYL. */
 
 /*! @brief Read current value of the CRC_GPOLYL_GPOLYL field. */
-#define BR_CRC_GPOLYL_GPOLYL(x) (HW_CRC_GPOLYL(x).U)
+#define BR_CRC_GPOLYL_GPOLYL(x) (ADDRESS_READ32(HW_CRC_GPOLYL_ADDR(x)))
 
 /*! @brief Format value for bitfield CRC_GPOLYL_GPOLYL. */
 #define BF_CRC_GPOLYL_GPOLYL(v) ((uint16_t)((uint16_t)(v) << BP_CRC_GPOLYL_GPOLYL) & BM_CRC_GPOLYL_GPOLYL)
 
 /*! @brief Set the GPOLYL field to a new value. */
-#define BW_CRC_GPOLYL_GPOLYL(x, v) (HW_CRC_GPOLYL_WR(x, v))
+#define BW_CRC_GPOLYL_GPOLYL(x, v) (ADDRESS_WRITE32(HW_CRC_GPOLYL_ADDR(x), v))
 /*@}*/
 /*******************************************************************************
  * HW_CRC_GPOLYH - CRC_GPOLYH register.
@@ -763,13 +763,13 @@ typedef union _hw_crc_gpolyh
 #define BS_CRC_GPOLYH_GPOLYH (16U)         /*!< Bit field size in bits for CRC_GPOLYH_GPOLYH. */
 
 /*! @brief Read current value of the CRC_GPOLYH_GPOLYH field. */
-#define BR_CRC_GPOLYH_GPOLYH(x) (HW_CRC_GPOLYH(x).U)
+#define BR_CRC_GPOLYH_GPOLYH(x) (ADDRESS_READ32(HW_CRC_GPOLYH_ADDR(x)))
 
 /*! @brief Format value for bitfield CRC_GPOLYH_GPOLYH. */
 #define BF_CRC_GPOLYH_GPOLYH(v) ((uint16_t)((uint16_t)(v) << BP_CRC_GPOLYH_GPOLYH) & BM_CRC_GPOLYH_GPOLYH)
 
 /*! @brief Set the GPOLYH field to a new value. */
-#define BW_CRC_GPOLYH_GPOLYH(x, v) (HW_CRC_GPOLYH_WR(x, v))
+#define BW_CRC_GPOLYH_GPOLYH(x, v) (ADDRESS_WRITE32(HW_CRC_GPOLYH_ADDR(x), v))
 /*@}*/
 /*******************************************************************************
  * HW_CRC_GPOLYLL - CRC_GPOLYLL register.
@@ -817,13 +817,13 @@ typedef union _hw_crc_gpolyll
 #define BS_CRC_GPOLYLL_GPOLYLL (8U)        /*!< Bit field size in bits for CRC_GPOLYLL_GPOLYLL. */
 
 /*! @brief Read current value of the CRC_GPOLYLL_GPOLYLL field. */
-#define BR_CRC_GPOLYLL_GPOLYLL(x) (HW_CRC_GPOLYLL(x).U)
+#define BR_CRC_GPOLYLL_GPOLYLL(x) (ADDRESS_READ32(HW_CRC_GPOLYLL_ADDR(x)))
 
 /*! @brief Format value for bitfield CRC_GPOLYLL_GPOLYLL. */
 #define BF_CRC_GPOLYLL_GPOLYLL(v) ((uint8_t)((uint8_t)(v) << BP_CRC_GPOLYLL_GPOLYLL) & BM_CRC_GPOLYLL_GPOLYLL)
 
 /*! @brief Set the GPOLYLL field to a new value. */
-#define BW_CRC_GPOLYLL_GPOLYLL(x, v) (HW_CRC_GPOLYLL_WR(x, v))
+#define BW_CRC_GPOLYLL_GPOLYLL(x, v) (ADDRESS_WRITE32(HW_CRC_GPOLYLL_ADDR(x), v))
 /*@}*/
 /*******************************************************************************
  * HW_CRC_GPOLYLU - CRC_GPOLYLU register.
@@ -871,13 +871,13 @@ typedef union _hw_crc_gpolylu
 #define BS_CRC_GPOLYLU_GPOLYLU (8U)        /*!< Bit field size in bits for CRC_GPOLYLU_GPOLYLU. */
 
 /*! @brief Read current value of the CRC_GPOLYLU_GPOLYLU field. */
-#define BR_CRC_GPOLYLU_GPOLYLU(x) (HW_CRC_GPOLYLU(x).U)
+#define BR_CRC_GPOLYLU_GPOLYLU(x) (ADDRESS_READ32(HW_CRC_GPOLYLU_ADDR(x)))
 
 /*! @brief Format value for bitfield CRC_GPOLYLU_GPOLYLU. */
 #define BF_CRC_GPOLYLU_GPOLYLU(v) ((uint8_t)((uint8_t)(v) << BP_CRC_GPOLYLU_GPOLYLU) & BM_CRC_GPOLYLU_GPOLYLU)
 
 /*! @brief Set the GPOLYLU field to a new value. */
-#define BW_CRC_GPOLYLU_GPOLYLU(x, v) (HW_CRC_GPOLYLU_WR(x, v))
+#define BW_CRC_GPOLYLU_GPOLYLU(x, v) (ADDRESS_WRITE32(HW_CRC_GPOLYLU_ADDR(x), v))
 /*@}*/
 /*******************************************************************************
  * HW_CRC_GPOLYHL - CRC_GPOLYHL register.
@@ -925,13 +925,13 @@ typedef union _hw_crc_gpolyhl
 #define BS_CRC_GPOLYHL_GPOLYHL (8U)        /*!< Bit field size in bits for CRC_GPOLYHL_GPOLYHL. */
 
 /*! @brief Read current value of the CRC_GPOLYHL_GPOLYHL field. */
-#define BR_CRC_GPOLYHL_GPOLYHL(x) (HW_CRC_GPOLYHL(x).U)
+#define BR_CRC_GPOLYHL_GPOLYHL(x) (ADDRESS_READ32(HW_CRC_GPOLYHL_ADDR(x)))
 
 /*! @brief Format value for bitfield CRC_GPOLYHL_GPOLYHL. */
 #define BF_CRC_GPOLYHL_GPOLYHL(v) ((uint8_t)((uint8_t)(v) << BP_CRC_GPOLYHL_GPOLYHL) & BM_CRC_GPOLYHL_GPOLYHL)
 
 /*! @brief Set the GPOLYHL field to a new value. */
-#define BW_CRC_GPOLYHL_GPOLYHL(x, v) (HW_CRC_GPOLYHL_WR(x, v))
+#define BW_CRC_GPOLYHL_GPOLYHL(x, v) (ADDRESS_WRITE32(HW_CRC_GPOLYHL_ADDR(x), v))
 /*@}*/
 /*******************************************************************************
  * HW_CRC_GPOLYHU - CRC_GPOLYHU register.
@@ -979,13 +979,13 @@ typedef union _hw_crc_gpolyhu
 #define BS_CRC_GPOLYHU_GPOLYHU (8U)        /*!< Bit field size in bits for CRC_GPOLYHU_GPOLYHU. */
 
 /*! @brief Read current value of the CRC_GPOLYHU_GPOLYHU field. */
-#define BR_CRC_GPOLYHU_GPOLYHU(x) (HW_CRC_GPOLYHU(x).U)
+#define BR_CRC_GPOLYHU_GPOLYHU(x) (ADDRESS_READ32(HW_CRC_GPOLYHU_ADDR(x)))
 
 /*! @brief Format value for bitfield CRC_GPOLYHU_GPOLYHU. */
 #define BF_CRC_GPOLYHU_GPOLYHU(v) ((uint8_t)((uint8_t)(v) << BP_CRC_GPOLYHU_GPOLYHU) & BM_CRC_GPOLYHU_GPOLYHU)
 
 /*! @brief Set the GPOLYHU field to a new value. */
-#define BW_CRC_GPOLYHU_GPOLYHU(x, v) (HW_CRC_GPOLYHU_WR(x, v))
+#define BW_CRC_GPOLYHU_GPOLYHU(x, v) (ADDRESS_WRITE32(HW_CRC_GPOLYHU_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -1050,13 +1050,13 @@ typedef union _hw_crc_ctrl
 #define BS_CRC_CTRL_TCRC     (1U)          /*!< Bit field size in bits for CRC_CTRL_TCRC. */
 
 /*! @brief Read current value of the CRC_CTRL_TCRC field. */
-#define BR_CRC_CTRL_TCRC(x)  (BITBAND_ACCESS32(HW_CRC_CTRL_ADDR(x), BP_CRC_CTRL_TCRC))
+#define BR_CRC_CTRL_TCRC(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_CRC_CTRL_ADDR(x), BP_CRC_CTRL_TCRC)))
 
 /*! @brief Format value for bitfield CRC_CTRL_TCRC. */
 #define BF_CRC_CTRL_TCRC(v)  ((uint32_t)((uint32_t)(v) << BP_CRC_CTRL_TCRC) & BM_CRC_CTRL_TCRC)
 
 /*! @brief Set the TCRC field to a new value. */
-#define BW_CRC_CTRL_TCRC(x, v) (BITBAND_ACCESS32(HW_CRC_CTRL_ADDR(x), BP_CRC_CTRL_TCRC) = (v))
+#define BW_CRC_CTRL_TCRC(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_CRC_CTRL_ADDR(x), BP_CRC_CTRL_TCRC), v))
 /*@}*/
 
 /*!
@@ -1076,13 +1076,13 @@ typedef union _hw_crc_ctrl
 #define BS_CRC_CTRL_WAS      (1U)          /*!< Bit field size in bits for CRC_CTRL_WAS. */
 
 /*! @brief Read current value of the CRC_CTRL_WAS field. */
-#define BR_CRC_CTRL_WAS(x)   (BITBAND_ACCESS32(HW_CRC_CTRL_ADDR(x), BP_CRC_CTRL_WAS))
+#define BR_CRC_CTRL_WAS(x)   (ADDRESS_READ32(BITBAND_ADDRESS32(HW_CRC_CTRL_ADDR(x), BP_CRC_CTRL_WAS)))
 
 /*! @brief Format value for bitfield CRC_CTRL_WAS. */
 #define BF_CRC_CTRL_WAS(v)   ((uint32_t)((uint32_t)(v) << BP_CRC_CTRL_WAS) & BM_CRC_CTRL_WAS)
 
 /*! @brief Set the WAS field to a new value. */
-#define BW_CRC_CTRL_WAS(x, v) (BITBAND_ACCESS32(HW_CRC_CTRL_ADDR(x), BP_CRC_CTRL_WAS) = (v))
+#define BW_CRC_CTRL_WAS(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_CRC_CTRL_ADDR(x), BP_CRC_CTRL_WAS), v))
 /*@}*/
 
 /*!
@@ -1101,13 +1101,13 @@ typedef union _hw_crc_ctrl
 #define BS_CRC_CTRL_FXOR     (1U)          /*!< Bit field size in bits for CRC_CTRL_FXOR. */
 
 /*! @brief Read current value of the CRC_CTRL_FXOR field. */
-#define BR_CRC_CTRL_FXOR(x)  (BITBAND_ACCESS32(HW_CRC_CTRL_ADDR(x), BP_CRC_CTRL_FXOR))
+#define BR_CRC_CTRL_FXOR(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_CRC_CTRL_ADDR(x), BP_CRC_CTRL_FXOR)))
 
 /*! @brief Format value for bitfield CRC_CTRL_FXOR. */
 #define BF_CRC_CTRL_FXOR(v)  ((uint32_t)((uint32_t)(v) << BP_CRC_CTRL_FXOR) & BM_CRC_CTRL_FXOR)
 
 /*! @brief Set the FXOR field to a new value. */
-#define BW_CRC_CTRL_FXOR(x, v) (BITBAND_ACCESS32(HW_CRC_CTRL_ADDR(x), BP_CRC_CTRL_FXOR) = (v))
+#define BW_CRC_CTRL_FXOR(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_CRC_CTRL_ADDR(x), BP_CRC_CTRL_FXOR), v))
 /*@}*/
 
 /*!
@@ -1129,13 +1129,13 @@ typedef union _hw_crc_ctrl
 #define BS_CRC_CTRL_TOTR     (2U)          /*!< Bit field size in bits for CRC_CTRL_TOTR. */
 
 /*! @brief Read current value of the CRC_CTRL_TOTR field. */
-#define BR_CRC_CTRL_TOTR(x)  (HW_CRC_CTRL(x).B.TOTR)
+#define BR_CRC_CTRL_TOTR(x)  (UNION_READ_FS(HW_CRC_CTRL_ADDR(x), hw_crc_ctrl, B.TOTR))
 
 /*! @brief Format value for bitfield CRC_CTRL_TOTR. */
 #define BF_CRC_CTRL_TOTR(v)  ((uint32_t)((uint32_t)(v) << BP_CRC_CTRL_TOTR) & BM_CRC_CTRL_TOTR)
 
 /*! @brief Set the TOTR field to a new value. */
-#define BW_CRC_CTRL_TOTR(x, v) (HW_CRC_CTRL_WR(x, (HW_CRC_CTRL_RD(x) & ~BM_CRC_CTRL_TOTR) | BF_CRC_CTRL_TOTR(v)))
+#define BW_CRC_CTRL_TOTR(x, v) (ADDRESS_WRITE32(HW_CRC_CTRL_ADDR(x), (HW_CRC_CTRL_RD(x) & ~BM_CRC_CTRL_TOTR) | BF_CRC_CTRL_TOTR(v)))
 /*@}*/
 
 /*!
@@ -1157,13 +1157,13 @@ typedef union _hw_crc_ctrl
 #define BS_CRC_CTRL_TOT      (2U)          /*!< Bit field size in bits for CRC_CTRL_TOT. */
 
 /*! @brief Read current value of the CRC_CTRL_TOT field. */
-#define BR_CRC_CTRL_TOT(x)   (HW_CRC_CTRL(x).B.TOT)
+#define BR_CRC_CTRL_TOT(x)   (UNION_READ_FS(HW_CRC_CTRL_ADDR(x), hw_crc_ctrl, B.TOT))
 
 /*! @brief Format value for bitfield CRC_CTRL_TOT. */
 #define BF_CRC_CTRL_TOT(v)   ((uint32_t)((uint32_t)(v) << BP_CRC_CTRL_TOT) & BM_CRC_CTRL_TOT)
 
 /*! @brief Set the TOT field to a new value. */
-#define BW_CRC_CTRL_TOT(x, v) (HW_CRC_CTRL_WR(x, (HW_CRC_CTRL_RD(x) & ~BM_CRC_CTRL_TOT) | BF_CRC_CTRL_TOT(v)))
+#define BW_CRC_CTRL_TOT(x, v) (ADDRESS_WRITE32(HW_CRC_CTRL_ADDR(x), (HW_CRC_CTRL_RD(x) & ~BM_CRC_CTRL_TOT) | BF_CRC_CTRL_TOT(v)))
 /*@}*/
 /*******************************************************************************
  * HW_CRC_CTRLHU - CRC_CTRLHU register.
@@ -1219,13 +1219,13 @@ typedef union _hw_crc_ctrlhu
 #define BS_CRC_CTRLHU_TCRC   (1U)          /*!< Bit field size in bits for CRC_CTRLHU_TCRC. */
 
 /*! @brief Read current value of the CRC_CTRLHU_TCRC field. */
-#define BR_CRC_CTRLHU_TCRC(x) (BITBAND_ACCESS8(HW_CRC_CTRLHU_ADDR(x), BP_CRC_CTRLHU_TCRC))
+#define BR_CRC_CTRLHU_TCRC(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_CRC_CTRLHU_ADDR(x), BP_CRC_CTRLHU_TCRC)))
 
 /*! @brief Format value for bitfield CRC_CTRLHU_TCRC. */
 #define BF_CRC_CTRLHU_TCRC(v) ((uint8_t)((uint8_t)(v) << BP_CRC_CTRLHU_TCRC) & BM_CRC_CTRLHU_TCRC)
 
 /*! @brief Set the TCRC field to a new value. */
-#define BW_CRC_CTRLHU_TCRC(x, v) (BITBAND_ACCESS8(HW_CRC_CTRLHU_ADDR(x), BP_CRC_CTRLHU_TCRC) = (v))
+#define BW_CRC_CTRLHU_TCRC(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_CRC_CTRLHU_ADDR(x), BP_CRC_CTRLHU_TCRC), v))
 /*@}*/
 
 /*!
@@ -1241,13 +1241,13 @@ typedef union _hw_crc_ctrlhu
 #define BS_CRC_CTRLHU_WAS    (1U)          /*!< Bit field size in bits for CRC_CTRLHU_WAS. */
 
 /*! @brief Read current value of the CRC_CTRLHU_WAS field. */
-#define BR_CRC_CTRLHU_WAS(x) (BITBAND_ACCESS8(HW_CRC_CTRLHU_ADDR(x), BP_CRC_CTRLHU_WAS))
+#define BR_CRC_CTRLHU_WAS(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_CRC_CTRLHU_ADDR(x), BP_CRC_CTRLHU_WAS)))
 
 /*! @brief Format value for bitfield CRC_CTRLHU_WAS. */
 #define BF_CRC_CTRLHU_WAS(v) ((uint8_t)((uint8_t)(v) << BP_CRC_CTRLHU_WAS) & BM_CRC_CTRLHU_WAS)
 
 /*! @brief Set the WAS field to a new value. */
-#define BW_CRC_CTRLHU_WAS(x, v) (BITBAND_ACCESS8(HW_CRC_CTRLHU_ADDR(x), BP_CRC_CTRLHU_WAS) = (v))
+#define BW_CRC_CTRLHU_WAS(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_CRC_CTRLHU_ADDR(x), BP_CRC_CTRLHU_WAS), v))
 /*@}*/
 
 /*!
@@ -1263,13 +1263,13 @@ typedef union _hw_crc_ctrlhu
 #define BS_CRC_CTRLHU_FXOR   (1U)          /*!< Bit field size in bits for CRC_CTRLHU_FXOR. */
 
 /*! @brief Read current value of the CRC_CTRLHU_FXOR field. */
-#define BR_CRC_CTRLHU_FXOR(x) (BITBAND_ACCESS8(HW_CRC_CTRLHU_ADDR(x), BP_CRC_CTRLHU_FXOR))
+#define BR_CRC_CTRLHU_FXOR(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_CRC_CTRLHU_ADDR(x), BP_CRC_CTRLHU_FXOR)))
 
 /*! @brief Format value for bitfield CRC_CTRLHU_FXOR. */
 #define BF_CRC_CTRLHU_FXOR(v) ((uint8_t)((uint8_t)(v) << BP_CRC_CTRLHU_FXOR) & BM_CRC_CTRLHU_FXOR)
 
 /*! @brief Set the FXOR field to a new value. */
-#define BW_CRC_CTRLHU_FXOR(x, v) (BITBAND_ACCESS8(HW_CRC_CTRLHU_ADDR(x), BP_CRC_CTRLHU_FXOR) = (v))
+#define BW_CRC_CTRLHU_FXOR(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_CRC_CTRLHU_ADDR(x), BP_CRC_CTRLHU_FXOR), v))
 /*@}*/
 
 /*!
@@ -1287,13 +1287,13 @@ typedef union _hw_crc_ctrlhu
 #define BS_CRC_CTRLHU_TOTR   (2U)          /*!< Bit field size in bits for CRC_CTRLHU_TOTR. */
 
 /*! @brief Read current value of the CRC_CTRLHU_TOTR field. */
-#define BR_CRC_CTRLHU_TOTR(x) (HW_CRC_CTRLHU(x).B.TOTR)
+#define BR_CRC_CTRLHU_TOTR(x) (UNION_READ_FS(HW_CRC_CTRLHU_ADDR(x), hw_crc_ctrlhu, B.TOTR))
 
 /*! @brief Format value for bitfield CRC_CTRLHU_TOTR. */
 #define BF_CRC_CTRLHU_TOTR(v) ((uint8_t)((uint8_t)(v) << BP_CRC_CTRLHU_TOTR) & BM_CRC_CTRLHU_TOTR)
 
 /*! @brief Set the TOTR field to a new value. */
-#define BW_CRC_CTRLHU_TOTR(x, v) (HW_CRC_CTRLHU_WR(x, (HW_CRC_CTRLHU_RD(x) & ~BM_CRC_CTRLHU_TOTR) | BF_CRC_CTRLHU_TOTR(v)))
+#define BW_CRC_CTRLHU_TOTR(x, v) (ADDRESS_WRITE32(HW_CRC_CTRLHU_ADDR(x), (HW_CRC_CTRLHU_RD(x) & ~BM_CRC_CTRLHU_TOTR) | BF_CRC_CTRLHU_TOTR(v)))
 /*@}*/
 
 /*!
@@ -1311,13 +1311,13 @@ typedef union _hw_crc_ctrlhu
 #define BS_CRC_CTRLHU_TOT    (2U)          /*!< Bit field size in bits for CRC_CTRLHU_TOT. */
 
 /*! @brief Read current value of the CRC_CTRLHU_TOT field. */
-#define BR_CRC_CTRLHU_TOT(x) (HW_CRC_CTRLHU(x).B.TOT)
+#define BR_CRC_CTRLHU_TOT(x) (UNION_READ_FS(HW_CRC_CTRLHU_ADDR(x), hw_crc_ctrlhu, B.TOT))
 
 /*! @brief Format value for bitfield CRC_CTRLHU_TOT. */
 #define BF_CRC_CTRLHU_TOT(v) ((uint8_t)((uint8_t)(v) << BP_CRC_CTRLHU_TOT) & BM_CRC_CTRLHU_TOT)
 
 /*! @brief Set the TOT field to a new value. */
-#define BW_CRC_CTRLHU_TOT(x, v) (HW_CRC_CTRLHU_WR(x, (HW_CRC_CTRLHU_RD(x) & ~BM_CRC_CTRLHU_TOT) | BF_CRC_CTRLHU_TOT(v)))
+#define BW_CRC_CTRLHU_TOT(x, v) (ADDRESS_WRITE32(HW_CRC_CTRLHU_ADDR(x), (HW_CRC_CTRLHU_RD(x) & ~BM_CRC_CTRLHU_TOT) | BF_CRC_CTRLHU_TOT(v)))
 /*@}*/
 
 /*

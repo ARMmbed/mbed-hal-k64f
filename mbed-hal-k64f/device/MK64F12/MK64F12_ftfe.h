@@ -183,7 +183,7 @@ typedef union _hw_ftfe_fstat
 #define BS_FTFE_FSTAT_MGSTAT0 (1U)         /*!< Bit field size in bits for FTFE_FSTAT_MGSTAT0. */
 
 /*! @brief Read current value of the FTFE_FSTAT_MGSTAT0 field. */
-#define BR_FTFE_FSTAT_MGSTAT0(x) (BITBAND_ACCESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_MGSTAT0))
+#define BR_FTFE_FSTAT_MGSTAT0(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_MGSTAT0)))
 /*@}*/
 
 /*!
@@ -206,13 +206,13 @@ typedef union _hw_ftfe_fstat
 #define BS_FTFE_FSTAT_FPVIOL (1U)          /*!< Bit field size in bits for FTFE_FSTAT_FPVIOL. */
 
 /*! @brief Read current value of the FTFE_FSTAT_FPVIOL field. */
-#define BR_FTFE_FSTAT_FPVIOL(x) (BITBAND_ACCESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_FPVIOL))
+#define BR_FTFE_FSTAT_FPVIOL(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_FPVIOL)))
 
 /*! @brief Format value for bitfield FTFE_FSTAT_FPVIOL. */
 #define BF_FTFE_FSTAT_FPVIOL(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FSTAT_FPVIOL) & BM_FTFE_FSTAT_FPVIOL)
 
 /*! @brief Set the FPVIOL field to a new value. */
-#define BW_FTFE_FSTAT_FPVIOL(x, v) (BITBAND_ACCESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_FPVIOL) = (v))
+#define BW_FTFE_FSTAT_FPVIOL(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_FPVIOL), v))
 /*@}*/
 
 /*!
@@ -234,13 +234,13 @@ typedef union _hw_ftfe_fstat
 #define BS_FTFE_FSTAT_ACCERR (1U)          /*!< Bit field size in bits for FTFE_FSTAT_ACCERR. */
 
 /*! @brief Read current value of the FTFE_FSTAT_ACCERR field. */
-#define BR_FTFE_FSTAT_ACCERR(x) (BITBAND_ACCESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_ACCERR))
+#define BR_FTFE_FSTAT_ACCERR(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_ACCERR)))
 
 /*! @brief Format value for bitfield FTFE_FSTAT_ACCERR. */
 #define BF_FTFE_FSTAT_ACCERR(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FSTAT_ACCERR) & BM_FTFE_FSTAT_ACCERR)
 
 /*! @brief Set the ACCERR field to a new value. */
-#define BW_FTFE_FSTAT_ACCERR(x, v) (BITBAND_ACCESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_ACCERR) = (v))
+#define BW_FTFE_FSTAT_ACCERR(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_ACCERR), v))
 /*@}*/
 
 /*!
@@ -262,13 +262,13 @@ typedef union _hw_ftfe_fstat
 #define BS_FTFE_FSTAT_RDCOLERR (1U)        /*!< Bit field size in bits for FTFE_FSTAT_RDCOLERR. */
 
 /*! @brief Read current value of the FTFE_FSTAT_RDCOLERR field. */
-#define BR_FTFE_FSTAT_RDCOLERR(x) (BITBAND_ACCESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_RDCOLERR))
+#define BR_FTFE_FSTAT_RDCOLERR(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_RDCOLERR)))
 
 /*! @brief Format value for bitfield FTFE_FSTAT_RDCOLERR. */
 #define BF_FTFE_FSTAT_RDCOLERR(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FSTAT_RDCOLERR) & BM_FTFE_FSTAT_RDCOLERR)
 
 /*! @brief Set the RDCOLERR field to a new value. */
-#define BW_FTFE_FSTAT_RDCOLERR(x, v) (BITBAND_ACCESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_RDCOLERR) = (v))
+#define BW_FTFE_FSTAT_RDCOLERR(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_RDCOLERR), v))
 /*@}*/
 
 /*!
@@ -294,13 +294,13 @@ typedef union _hw_ftfe_fstat
 #define BS_FTFE_FSTAT_CCIF   (1U)          /*!< Bit field size in bits for FTFE_FSTAT_CCIF. */
 
 /*! @brief Read current value of the FTFE_FSTAT_CCIF field. */
-#define BR_FTFE_FSTAT_CCIF(x) (BITBAND_ACCESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_CCIF))
+#define BR_FTFE_FSTAT_CCIF(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_CCIF)))
 
 /*! @brief Format value for bitfield FTFE_FSTAT_CCIF. */
 #define BF_FTFE_FSTAT_CCIF(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FSTAT_CCIF) & BM_FTFE_FSTAT_CCIF)
 
 /*! @brief Set the CCIF field to a new value. */
-#define BW_FTFE_FSTAT_CCIF(x, v) (BITBAND_ACCESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_CCIF) = (v))
+#define BW_FTFE_FSTAT_CCIF(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_FTFE_FSTAT_ADDR(x), BP_FTFE_FSTAT_CCIF), v))
 /*@}*/
 
 /*******************************************************************************
@@ -375,7 +375,7 @@ typedef union _hw_ftfe_fcnfg
 #define BS_FTFE_FCNFG_EEERDY (1U)          /*!< Bit field size in bits for FTFE_FCNFG_EEERDY. */
 
 /*! @brief Read current value of the FTFE_FCNFG_EEERDY field. */
-#define BR_FTFE_FCNFG_EEERDY(x) (BITBAND_ACCESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_EEERDY))
+#define BR_FTFE_FCNFG_EEERDY(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_EEERDY)))
 /*@}*/
 
 /*!
@@ -405,7 +405,7 @@ typedef union _hw_ftfe_fcnfg
 #define BS_FTFE_FCNFG_RAMRDY (1U)          /*!< Bit field size in bits for FTFE_FCNFG_RAMRDY. */
 
 /*! @brief Read current value of the FTFE_FCNFG_RAMRDY field. */
-#define BR_FTFE_FCNFG_RAMRDY(x) (BITBAND_ACCESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_RAMRDY))
+#define BR_FTFE_FCNFG_RAMRDY(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_RAMRDY)))
 /*@}*/
 
 /*!
@@ -424,7 +424,7 @@ typedef union _hw_ftfe_fcnfg
 #define BS_FTFE_FCNFG_PFLSH  (1U)          /*!< Bit field size in bits for FTFE_FCNFG_PFLSH. */
 
 /*! @brief Read current value of the FTFE_FCNFG_PFLSH field. */
-#define BR_FTFE_FCNFG_PFLSH(x) (BITBAND_ACCESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_PFLSH))
+#define BR_FTFE_FCNFG_PFLSH(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_PFLSH)))
 /*@}*/
 
 /*!
@@ -447,7 +447,7 @@ typedef union _hw_ftfe_fcnfg
 #define BS_FTFE_FCNFG_SWAP   (1U)          /*!< Bit field size in bits for FTFE_FCNFG_SWAP. */
 
 /*! @brief Read current value of the FTFE_FCNFG_SWAP field. */
-#define BR_FTFE_FCNFG_SWAP(x) (BITBAND_ACCESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_SWAP))
+#define BR_FTFE_FCNFG_SWAP(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_SWAP)))
 /*@}*/
 
 /*!
@@ -466,13 +466,13 @@ typedef union _hw_ftfe_fcnfg
 #define BS_FTFE_FCNFG_ERSSUSP (1U)         /*!< Bit field size in bits for FTFE_FCNFG_ERSSUSP. */
 
 /*! @brief Read current value of the FTFE_FCNFG_ERSSUSP field. */
-#define BR_FTFE_FCNFG_ERSSUSP(x) (BITBAND_ACCESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_ERSSUSP))
+#define BR_FTFE_FCNFG_ERSSUSP(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_ERSSUSP)))
 
 /*! @brief Format value for bitfield FTFE_FCNFG_ERSSUSP. */
 #define BF_FTFE_FCNFG_ERSSUSP(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FCNFG_ERSSUSP) & BM_FTFE_FCNFG_ERSSUSP)
 
 /*! @brief Set the ERSSUSP field to a new value. */
-#define BW_FTFE_FCNFG_ERSSUSP(x, v) (BITBAND_ACCESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_ERSSUSP) = (v))
+#define BW_FTFE_FCNFG_ERSSUSP(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_ERSSUSP), v))
 /*@}*/
 
 /*!
@@ -498,7 +498,7 @@ typedef union _hw_ftfe_fcnfg
 #define BS_FTFE_FCNFG_ERSAREQ (1U)         /*!< Bit field size in bits for FTFE_FCNFG_ERSAREQ. */
 
 /*! @brief Read current value of the FTFE_FCNFG_ERSAREQ field. */
-#define BR_FTFE_FCNFG_ERSAREQ(x) (BITBAND_ACCESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_ERSAREQ))
+#define BR_FTFE_FCNFG_ERSAREQ(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_ERSAREQ)))
 /*@}*/
 
 /*!
@@ -519,13 +519,13 @@ typedef union _hw_ftfe_fcnfg
 #define BS_FTFE_FCNFG_RDCOLLIE (1U)        /*!< Bit field size in bits for FTFE_FCNFG_RDCOLLIE. */
 
 /*! @brief Read current value of the FTFE_FCNFG_RDCOLLIE field. */
-#define BR_FTFE_FCNFG_RDCOLLIE(x) (BITBAND_ACCESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_RDCOLLIE))
+#define BR_FTFE_FCNFG_RDCOLLIE(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_RDCOLLIE)))
 
 /*! @brief Format value for bitfield FTFE_FCNFG_RDCOLLIE. */
 #define BF_FTFE_FCNFG_RDCOLLIE(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FCNFG_RDCOLLIE) & BM_FTFE_FCNFG_RDCOLLIE)
 
 /*! @brief Set the RDCOLLIE field to a new value. */
-#define BW_FTFE_FCNFG_RDCOLLIE(x, v) (BITBAND_ACCESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_RDCOLLIE) = (v))
+#define BW_FTFE_FCNFG_RDCOLLIE(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_RDCOLLIE), v))
 /*@}*/
 
 /*!
@@ -544,13 +544,13 @@ typedef union _hw_ftfe_fcnfg
 #define BS_FTFE_FCNFG_CCIE   (1U)          /*!< Bit field size in bits for FTFE_FCNFG_CCIE. */
 
 /*! @brief Read current value of the FTFE_FCNFG_CCIE field. */
-#define BR_FTFE_FCNFG_CCIE(x) (BITBAND_ACCESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_CCIE))
+#define BR_FTFE_FCNFG_CCIE(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_CCIE)))
 
 /*! @brief Format value for bitfield FTFE_FCNFG_CCIE. */
 #define BF_FTFE_FCNFG_CCIE(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FCNFG_CCIE) & BM_FTFE_FCNFG_CCIE)
 
 /*! @brief Set the CCIE field to a new value. */
-#define BW_FTFE_FCNFG_CCIE(x, v) (BITBAND_ACCESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_CCIE) = (v))
+#define BW_FTFE_FCNFG_CCIE(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_FTFE_FCNFG_ADDR(x), BP_FTFE_FCNFG_CCIE), v))
 /*@}*/
 
 /*******************************************************************************
@@ -616,7 +616,7 @@ typedef union _hw_ftfe_fsec
 #define BS_FTFE_FSEC_SEC     (2U)          /*!< Bit field size in bits for FTFE_FSEC_SEC. */
 
 /*! @brief Read current value of the FTFE_FSEC_SEC field. */
-#define BR_FTFE_FSEC_SEC(x)  (HW_FTFE_FSEC(x).B.SEC)
+#define BR_FTFE_FSEC_SEC(x)  (UNION_READ_FS(HW_FTFE_FSEC_ADDR(x), hw_ftfe_fsec, B.SEC))
 /*@}*/
 
 /*!
@@ -644,7 +644,7 @@ typedef union _hw_ftfe_fsec
 #define BS_FTFE_FSEC_FSLACC  (2U)          /*!< Bit field size in bits for FTFE_FSEC_FSLACC. */
 
 /*! @brief Read current value of the FTFE_FSEC_FSLACC field. */
-#define BR_FTFE_FSEC_FSLACC(x) (HW_FTFE_FSEC(x).B.FSLACC)
+#define BR_FTFE_FSEC_FSLACC(x) (UNION_READ_FS(HW_FTFE_FSEC_ADDR(x), hw_ftfe_fsec, B.FSLACC))
 /*@}*/
 
 /*!
@@ -667,7 +667,7 @@ typedef union _hw_ftfe_fsec
 #define BS_FTFE_FSEC_MEEN    (2U)          /*!< Bit field size in bits for FTFE_FSEC_MEEN. */
 
 /*! @brief Read current value of the FTFE_FSEC_MEEN field. */
-#define BR_FTFE_FSEC_MEEN(x) (HW_FTFE_FSEC(x).B.MEEN)
+#define BR_FTFE_FSEC_MEEN(x) (UNION_READ_FS(HW_FTFE_FSEC_ADDR(x), hw_ftfe_fsec, B.MEEN))
 /*@}*/
 
 /*!
@@ -688,7 +688,7 @@ typedef union _hw_ftfe_fsec
 #define BS_FTFE_FSEC_KEYEN   (2U)          /*!< Bit field size in bits for FTFE_FSEC_KEYEN. */
 
 /*! @brief Read current value of the FTFE_FSEC_KEYEN field. */
-#define BR_FTFE_FSEC_KEYEN(x) (HW_FTFE_FSEC(x).B.KEYEN)
+#define BR_FTFE_FSEC_KEYEN(x) (UNION_READ_FS(HW_FTFE_FSEC_ADDR(x), hw_ftfe_fsec, B.KEYEN))
 /*@}*/
 
 /*******************************************************************************
@@ -743,7 +743,7 @@ typedef union _hw_ftfe_fopt
 #define BS_FTFE_FOPT_OPT     (8U)          /*!< Bit field size in bits for FTFE_FOPT_OPT. */
 
 /*! @brief Read current value of the FTFE_FOPT_OPT field. */
-#define BR_FTFE_FOPT_OPT(x)  (HW_FTFE_FOPT(x).U)
+#define BR_FTFE_FOPT_OPT(x)  (ADDRESS_READ32(HW_FTFE_FOPT_ADDR(x)))
 /*@}*/
 
 /*******************************************************************************
@@ -822,13 +822,13 @@ typedef union _hw_ftfe_fccob3
 #define BS_FTFE_FCCOB3_CCOBn (8U)          /*!< Bit field size in bits for FTFE_FCCOB3_CCOBn. */
 
 /*! @brief Read current value of the FTFE_FCCOB3_CCOBn field. */
-#define BR_FTFE_FCCOB3_CCOBn(x) (HW_FTFE_FCCOB3(x).U)
+#define BR_FTFE_FCCOB3_CCOBn(x) (ADDRESS_READ32(HW_FTFE_FCCOB3_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FCCOB3_CCOBn. */
 #define BF_FTFE_FCCOB3_CCOBn(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FCCOB3_CCOBn) & BM_FTFE_FCCOB3_CCOBn)
 
 /*! @brief Set the CCOBn field to a new value. */
-#define BW_FTFE_FCCOB3_CCOBn(x, v) (HW_FTFE_FCCOB3_WR(x, v))
+#define BW_FTFE_FCCOB3_CCOBn(x, v) (ADDRESS_WRITE32(HW_FTFE_FCCOB3_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -907,13 +907,13 @@ typedef union _hw_ftfe_fccob2
 #define BS_FTFE_FCCOB2_CCOBn (8U)          /*!< Bit field size in bits for FTFE_FCCOB2_CCOBn. */
 
 /*! @brief Read current value of the FTFE_FCCOB2_CCOBn field. */
-#define BR_FTFE_FCCOB2_CCOBn(x) (HW_FTFE_FCCOB2(x).U)
+#define BR_FTFE_FCCOB2_CCOBn(x) (ADDRESS_READ32(HW_FTFE_FCCOB2_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FCCOB2_CCOBn. */
 #define BF_FTFE_FCCOB2_CCOBn(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FCCOB2_CCOBn) & BM_FTFE_FCCOB2_CCOBn)
 
 /*! @brief Set the CCOBn field to a new value. */
-#define BW_FTFE_FCCOB2_CCOBn(x, v) (HW_FTFE_FCCOB2_WR(x, v))
+#define BW_FTFE_FCCOB2_CCOBn(x, v) (ADDRESS_WRITE32(HW_FTFE_FCCOB2_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -992,13 +992,13 @@ typedef union _hw_ftfe_fccob1
 #define BS_FTFE_FCCOB1_CCOBn (8U)          /*!< Bit field size in bits for FTFE_FCCOB1_CCOBn. */
 
 /*! @brief Read current value of the FTFE_FCCOB1_CCOBn field. */
-#define BR_FTFE_FCCOB1_CCOBn(x) (HW_FTFE_FCCOB1(x).U)
+#define BR_FTFE_FCCOB1_CCOBn(x) (ADDRESS_READ32(HW_FTFE_FCCOB1_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FCCOB1_CCOBn. */
 #define BF_FTFE_FCCOB1_CCOBn(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FCCOB1_CCOBn) & BM_FTFE_FCCOB1_CCOBn)
 
 /*! @brief Set the CCOBn field to a new value. */
-#define BW_FTFE_FCCOB1_CCOBn(x, v) (HW_FTFE_FCCOB1_WR(x, v))
+#define BW_FTFE_FCCOB1_CCOBn(x, v) (ADDRESS_WRITE32(HW_FTFE_FCCOB1_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -1077,13 +1077,13 @@ typedef union _hw_ftfe_fccob0
 #define BS_FTFE_FCCOB0_CCOBn (8U)          /*!< Bit field size in bits for FTFE_FCCOB0_CCOBn. */
 
 /*! @brief Read current value of the FTFE_FCCOB0_CCOBn field. */
-#define BR_FTFE_FCCOB0_CCOBn(x) (HW_FTFE_FCCOB0(x).U)
+#define BR_FTFE_FCCOB0_CCOBn(x) (ADDRESS_READ32(HW_FTFE_FCCOB0_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FCCOB0_CCOBn. */
 #define BF_FTFE_FCCOB0_CCOBn(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FCCOB0_CCOBn) & BM_FTFE_FCCOB0_CCOBn)
 
 /*! @brief Set the CCOBn field to a new value. */
-#define BW_FTFE_FCCOB0_CCOBn(x, v) (HW_FTFE_FCCOB0_WR(x, v))
+#define BW_FTFE_FCCOB0_CCOBn(x, v) (ADDRESS_WRITE32(HW_FTFE_FCCOB0_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -1162,13 +1162,13 @@ typedef union _hw_ftfe_fccob7
 #define BS_FTFE_FCCOB7_CCOBn (8U)          /*!< Bit field size in bits for FTFE_FCCOB7_CCOBn. */
 
 /*! @brief Read current value of the FTFE_FCCOB7_CCOBn field. */
-#define BR_FTFE_FCCOB7_CCOBn(x) (HW_FTFE_FCCOB7(x).U)
+#define BR_FTFE_FCCOB7_CCOBn(x) (ADDRESS_READ32(HW_FTFE_FCCOB7_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FCCOB7_CCOBn. */
 #define BF_FTFE_FCCOB7_CCOBn(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FCCOB7_CCOBn) & BM_FTFE_FCCOB7_CCOBn)
 
 /*! @brief Set the CCOBn field to a new value. */
-#define BW_FTFE_FCCOB7_CCOBn(x, v) (HW_FTFE_FCCOB7_WR(x, v))
+#define BW_FTFE_FCCOB7_CCOBn(x, v) (ADDRESS_WRITE32(HW_FTFE_FCCOB7_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -1247,13 +1247,13 @@ typedef union _hw_ftfe_fccob6
 #define BS_FTFE_FCCOB6_CCOBn (8U)          /*!< Bit field size in bits for FTFE_FCCOB6_CCOBn. */
 
 /*! @brief Read current value of the FTFE_FCCOB6_CCOBn field. */
-#define BR_FTFE_FCCOB6_CCOBn(x) (HW_FTFE_FCCOB6(x).U)
+#define BR_FTFE_FCCOB6_CCOBn(x) (ADDRESS_READ32(HW_FTFE_FCCOB6_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FCCOB6_CCOBn. */
 #define BF_FTFE_FCCOB6_CCOBn(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FCCOB6_CCOBn) & BM_FTFE_FCCOB6_CCOBn)
 
 /*! @brief Set the CCOBn field to a new value. */
-#define BW_FTFE_FCCOB6_CCOBn(x, v) (HW_FTFE_FCCOB6_WR(x, v))
+#define BW_FTFE_FCCOB6_CCOBn(x, v) (ADDRESS_WRITE32(HW_FTFE_FCCOB6_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -1332,13 +1332,13 @@ typedef union _hw_ftfe_fccob5
 #define BS_FTFE_FCCOB5_CCOBn (8U)          /*!< Bit field size in bits for FTFE_FCCOB5_CCOBn. */
 
 /*! @brief Read current value of the FTFE_FCCOB5_CCOBn field. */
-#define BR_FTFE_FCCOB5_CCOBn(x) (HW_FTFE_FCCOB5(x).U)
+#define BR_FTFE_FCCOB5_CCOBn(x) (ADDRESS_READ32(HW_FTFE_FCCOB5_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FCCOB5_CCOBn. */
 #define BF_FTFE_FCCOB5_CCOBn(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FCCOB5_CCOBn) & BM_FTFE_FCCOB5_CCOBn)
 
 /*! @brief Set the CCOBn field to a new value. */
-#define BW_FTFE_FCCOB5_CCOBn(x, v) (HW_FTFE_FCCOB5_WR(x, v))
+#define BW_FTFE_FCCOB5_CCOBn(x, v) (ADDRESS_WRITE32(HW_FTFE_FCCOB5_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -1417,13 +1417,13 @@ typedef union _hw_ftfe_fccob4
 #define BS_FTFE_FCCOB4_CCOBn (8U)          /*!< Bit field size in bits for FTFE_FCCOB4_CCOBn. */
 
 /*! @brief Read current value of the FTFE_FCCOB4_CCOBn field. */
-#define BR_FTFE_FCCOB4_CCOBn(x) (HW_FTFE_FCCOB4(x).U)
+#define BR_FTFE_FCCOB4_CCOBn(x) (ADDRESS_READ32(HW_FTFE_FCCOB4_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FCCOB4_CCOBn. */
 #define BF_FTFE_FCCOB4_CCOBn(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FCCOB4_CCOBn) & BM_FTFE_FCCOB4_CCOBn)
 
 /*! @brief Set the CCOBn field to a new value. */
-#define BW_FTFE_FCCOB4_CCOBn(x, v) (HW_FTFE_FCCOB4_WR(x, v))
+#define BW_FTFE_FCCOB4_CCOBn(x, v) (ADDRESS_WRITE32(HW_FTFE_FCCOB4_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -1502,13 +1502,13 @@ typedef union _hw_ftfe_fccobb
 #define BS_FTFE_FCCOBB_CCOBn (8U)          /*!< Bit field size in bits for FTFE_FCCOBB_CCOBn. */
 
 /*! @brief Read current value of the FTFE_FCCOBB_CCOBn field. */
-#define BR_FTFE_FCCOBB_CCOBn(x) (HW_FTFE_FCCOBB(x).U)
+#define BR_FTFE_FCCOBB_CCOBn(x) (ADDRESS_READ32(HW_FTFE_FCCOBB_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FCCOBB_CCOBn. */
 #define BF_FTFE_FCCOBB_CCOBn(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FCCOBB_CCOBn) & BM_FTFE_FCCOBB_CCOBn)
 
 /*! @brief Set the CCOBn field to a new value. */
-#define BW_FTFE_FCCOBB_CCOBn(x, v) (HW_FTFE_FCCOBB_WR(x, v))
+#define BW_FTFE_FCCOBB_CCOBn(x, v) (ADDRESS_WRITE32(HW_FTFE_FCCOBB_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -1587,13 +1587,13 @@ typedef union _hw_ftfe_fccoba
 #define BS_FTFE_FCCOBA_CCOBn (8U)          /*!< Bit field size in bits for FTFE_FCCOBA_CCOBn. */
 
 /*! @brief Read current value of the FTFE_FCCOBA_CCOBn field. */
-#define BR_FTFE_FCCOBA_CCOBn(x) (HW_FTFE_FCCOBA(x).U)
+#define BR_FTFE_FCCOBA_CCOBn(x) (ADDRESS_READ32(HW_FTFE_FCCOBA_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FCCOBA_CCOBn. */
 #define BF_FTFE_FCCOBA_CCOBn(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FCCOBA_CCOBn) & BM_FTFE_FCCOBA_CCOBn)
 
 /*! @brief Set the CCOBn field to a new value. */
-#define BW_FTFE_FCCOBA_CCOBn(x, v) (HW_FTFE_FCCOBA_WR(x, v))
+#define BW_FTFE_FCCOBA_CCOBn(x, v) (ADDRESS_WRITE32(HW_FTFE_FCCOBA_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -1672,13 +1672,13 @@ typedef union _hw_ftfe_fccob9
 #define BS_FTFE_FCCOB9_CCOBn (8U)          /*!< Bit field size in bits for FTFE_FCCOB9_CCOBn. */
 
 /*! @brief Read current value of the FTFE_FCCOB9_CCOBn field. */
-#define BR_FTFE_FCCOB9_CCOBn(x) (HW_FTFE_FCCOB9(x).U)
+#define BR_FTFE_FCCOB9_CCOBn(x) (ADDRESS_READ32(HW_FTFE_FCCOB9_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FCCOB9_CCOBn. */
 #define BF_FTFE_FCCOB9_CCOBn(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FCCOB9_CCOBn) & BM_FTFE_FCCOB9_CCOBn)
 
 /*! @brief Set the CCOBn field to a new value. */
-#define BW_FTFE_FCCOB9_CCOBn(x, v) (HW_FTFE_FCCOB9_WR(x, v))
+#define BW_FTFE_FCCOB9_CCOBn(x, v) (ADDRESS_WRITE32(HW_FTFE_FCCOB9_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -1757,13 +1757,13 @@ typedef union _hw_ftfe_fccob8
 #define BS_FTFE_FCCOB8_CCOBn (8U)          /*!< Bit field size in bits for FTFE_FCCOB8_CCOBn. */
 
 /*! @brief Read current value of the FTFE_FCCOB8_CCOBn field. */
-#define BR_FTFE_FCCOB8_CCOBn(x) (HW_FTFE_FCCOB8(x).U)
+#define BR_FTFE_FCCOB8_CCOBn(x) (ADDRESS_READ32(HW_FTFE_FCCOB8_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FCCOB8_CCOBn. */
 #define BF_FTFE_FCCOB8_CCOBn(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FCCOB8_CCOBn) & BM_FTFE_FCCOB8_CCOBn)
 
 /*! @brief Set the CCOBn field to a new value. */
-#define BW_FTFE_FCCOB8_CCOBn(x, v) (HW_FTFE_FCCOB8_WR(x, v))
+#define BW_FTFE_FCCOB8_CCOBn(x, v) (ADDRESS_WRITE32(HW_FTFE_FCCOB8_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -1845,13 +1845,13 @@ typedef union _hw_ftfe_fprot3
 #define BS_FTFE_FPROT3_PROT  (8U)          /*!< Bit field size in bits for FTFE_FPROT3_PROT. */
 
 /*! @brief Read current value of the FTFE_FPROT3_PROT field. */
-#define BR_FTFE_FPROT3_PROT(x) (HW_FTFE_FPROT3(x).U)
+#define BR_FTFE_FPROT3_PROT(x) (ADDRESS_READ32(HW_FTFE_FPROT3_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FPROT3_PROT. */
 #define BF_FTFE_FPROT3_PROT(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FPROT3_PROT) & BM_FTFE_FPROT3_PROT)
 
 /*! @brief Set the PROT field to a new value. */
-#define BW_FTFE_FPROT3_PROT(x, v) (HW_FTFE_FPROT3_WR(x, v))
+#define BW_FTFE_FPROT3_PROT(x, v) (ADDRESS_WRITE32(HW_FTFE_FPROT3_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -1933,13 +1933,13 @@ typedef union _hw_ftfe_fprot2
 #define BS_FTFE_FPROT2_PROT  (8U)          /*!< Bit field size in bits for FTFE_FPROT2_PROT. */
 
 /*! @brief Read current value of the FTFE_FPROT2_PROT field. */
-#define BR_FTFE_FPROT2_PROT(x) (HW_FTFE_FPROT2(x).U)
+#define BR_FTFE_FPROT2_PROT(x) (ADDRESS_READ32(HW_FTFE_FPROT2_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FPROT2_PROT. */
 #define BF_FTFE_FPROT2_PROT(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FPROT2_PROT) & BM_FTFE_FPROT2_PROT)
 
 /*! @brief Set the PROT field to a new value. */
-#define BW_FTFE_FPROT2_PROT(x, v) (HW_FTFE_FPROT2_WR(x, v))
+#define BW_FTFE_FPROT2_PROT(x, v) (ADDRESS_WRITE32(HW_FTFE_FPROT2_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -2021,13 +2021,13 @@ typedef union _hw_ftfe_fprot1
 #define BS_FTFE_FPROT1_PROT  (8U)          /*!< Bit field size in bits for FTFE_FPROT1_PROT. */
 
 /*! @brief Read current value of the FTFE_FPROT1_PROT field. */
-#define BR_FTFE_FPROT1_PROT(x) (HW_FTFE_FPROT1(x).U)
+#define BR_FTFE_FPROT1_PROT(x) (ADDRESS_READ32(HW_FTFE_FPROT1_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FPROT1_PROT. */
 #define BF_FTFE_FPROT1_PROT(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FPROT1_PROT) & BM_FTFE_FPROT1_PROT)
 
 /*! @brief Set the PROT field to a new value. */
-#define BW_FTFE_FPROT1_PROT(x, v) (HW_FTFE_FPROT1_WR(x, v))
+#define BW_FTFE_FPROT1_PROT(x, v) (ADDRESS_WRITE32(HW_FTFE_FPROT1_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -2109,13 +2109,13 @@ typedef union _hw_ftfe_fprot0
 #define BS_FTFE_FPROT0_PROT  (8U)          /*!< Bit field size in bits for FTFE_FPROT0_PROT. */
 
 /*! @brief Read current value of the FTFE_FPROT0_PROT field. */
-#define BR_FTFE_FPROT0_PROT(x) (HW_FTFE_FPROT0(x).U)
+#define BR_FTFE_FPROT0_PROT(x) (ADDRESS_READ32(HW_FTFE_FPROT0_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FPROT0_PROT. */
 #define BF_FTFE_FPROT0_PROT(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FPROT0_PROT) & BM_FTFE_FPROT0_PROT)
 
 /*! @brief Set the PROT field to a new value. */
-#define BW_FTFE_FPROT0_PROT(x, v) (HW_FTFE_FPROT0_WR(x, v))
+#define BW_FTFE_FPROT0_PROT(x, v) (ADDRESS_WRITE32(HW_FTFE_FPROT0_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -2199,13 +2199,13 @@ typedef union _hw_ftfe_feprot
 #define BS_FTFE_FEPROT_EPROT (8U)          /*!< Bit field size in bits for FTFE_FEPROT_EPROT. */
 
 /*! @brief Read current value of the FTFE_FEPROT_EPROT field. */
-#define BR_FTFE_FEPROT_EPROT(x) (HW_FTFE_FEPROT(x).U)
+#define BR_FTFE_FEPROT_EPROT(x) (ADDRESS_READ32(HW_FTFE_FEPROT_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FEPROT_EPROT. */
 #define BF_FTFE_FEPROT_EPROT(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FEPROT_EPROT) & BM_FTFE_FEPROT_EPROT)
 
 /*! @brief Set the EPROT field to a new value. */
-#define BW_FTFE_FEPROT_EPROT(x, v) (HW_FTFE_FEPROT_WR(x, v))
+#define BW_FTFE_FEPROT_EPROT(x, v) (ADDRESS_WRITE32(HW_FTFE_FEPROT_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -2290,13 +2290,13 @@ typedef union _hw_ftfe_fdprot
 #define BS_FTFE_FDPROT_DPROT (8U)          /*!< Bit field size in bits for FTFE_FDPROT_DPROT. */
 
 /*! @brief Read current value of the FTFE_FDPROT_DPROT field. */
-#define BR_FTFE_FDPROT_DPROT(x) (HW_FTFE_FDPROT(x).U)
+#define BR_FTFE_FDPROT_DPROT(x) (ADDRESS_READ32(HW_FTFE_FDPROT_ADDR(x)))
 
 /*! @brief Format value for bitfield FTFE_FDPROT_DPROT. */
 #define BF_FTFE_FDPROT_DPROT(v) ((uint8_t)((uint8_t)(v) << BP_FTFE_FDPROT_DPROT) & BM_FTFE_FDPROT_DPROT)
 
 /*! @brief Set the DPROT field to a new value. */
-#define BW_FTFE_FDPROT_DPROT(x, v) (HW_FTFE_FDPROT_WR(x, v))
+#define BW_FTFE_FDPROT_DPROT(x, v) (ADDRESS_WRITE32(HW_FTFE_FDPROT_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************

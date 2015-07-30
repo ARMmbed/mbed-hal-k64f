@@ -164,13 +164,13 @@ typedef union _hw_gpio_pdor
 #define BS_GPIO_PDOR_PDO     (32U)         /*!< Bit field size in bits for GPIO_PDOR_PDO. */
 
 /*! @brief Read current value of the GPIO_PDOR_PDO field. */
-#define BR_GPIO_PDOR_PDO(x)  (HW_GPIO_PDOR(x).U)
+#define BR_GPIO_PDOR_PDO(x)  (ADDRESS_READ32(HW_GPIO_PDOR_ADDR(x)))
 
 /*! @brief Format value for bitfield GPIO_PDOR_PDO. */
 #define BF_GPIO_PDOR_PDO(v)  ((uint32_t)((uint32_t)(v) << BP_GPIO_PDOR_PDO) & BM_GPIO_PDOR_PDO)
 
 /*! @brief Set the PDO field to a new value. */
-#define BW_GPIO_PDOR_PDO(x, v) (HW_GPIO_PDOR_WR(x, v))
+#define BW_GPIO_PDOR_PDO(x, v) (ADDRESS_WRITE32(HW_GPIO_PDOR_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -227,7 +227,7 @@ typedef union _hw_gpio_psor
 #define BF_GPIO_PSOR_PTSO(v) ((uint32_t)((uint32_t)(v) << BP_GPIO_PSOR_PTSO) & BM_GPIO_PSOR_PTSO)
 
 /*! @brief Set the PTSO field to a new value. */
-#define BW_GPIO_PSOR_PTSO(x, v) (HW_GPIO_PSOR_WR(x, v))
+#define BW_GPIO_PSOR_PTSO(x, v) (ADDRESS_WRITE32(HW_GPIO_PSOR_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -284,7 +284,7 @@ typedef union _hw_gpio_pcor
 #define BF_GPIO_PCOR_PTCO(v) ((uint32_t)((uint32_t)(v) << BP_GPIO_PCOR_PTCO) & BM_GPIO_PCOR_PTCO)
 
 /*! @brief Set the PTCO field to a new value. */
-#define BW_GPIO_PCOR_PTCO(x, v) (HW_GPIO_PCOR_WR(x, v))
+#define BW_GPIO_PCOR_PTCO(x, v) (ADDRESS_WRITE32(HW_GPIO_PCOR_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -340,7 +340,7 @@ typedef union _hw_gpio_ptor
 #define BF_GPIO_PTOR_PTTO(v) ((uint32_t)((uint32_t)(v) << BP_GPIO_PTOR_PTTO) & BM_GPIO_PTOR_PTTO)
 
 /*! @brief Set the PTTO field to a new value. */
-#define BW_GPIO_PTOR_PTTO(x, v) (HW_GPIO_PTOR_WR(x, v))
+#define BW_GPIO_PTOR_PTTO(x, v) (ADDRESS_WRITE32(HW_GPIO_PTOR_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -397,7 +397,7 @@ typedef union _hw_gpio_pdir
 #define BS_GPIO_PDIR_PDI     (32U)         /*!< Bit field size in bits for GPIO_PDIR_PDI. */
 
 /*! @brief Read current value of the GPIO_PDIR_PDI field. */
-#define BR_GPIO_PDIR_PDI(x)  (HW_GPIO_PDIR(x).U)
+#define BR_GPIO_PDIR_PDI(x)  (ADDRESS_READ32(HW_GPIO_PDIR_ADDR(x)))
 /*@}*/
 
 /*******************************************************************************
@@ -453,13 +453,13 @@ typedef union _hw_gpio_pddr
 #define BS_GPIO_PDDR_PDD     (32U)         /*!< Bit field size in bits for GPIO_PDDR_PDD. */
 
 /*! @brief Read current value of the GPIO_PDDR_PDD field. */
-#define BR_GPIO_PDDR_PDD(x)  (HW_GPIO_PDDR(x).U)
+#define BR_GPIO_PDDR_PDD(x)  (ADDRESS_READ32(HW_GPIO_PDDR_ADDR(x)))
 
 /*! @brief Format value for bitfield GPIO_PDDR_PDD. */
 #define BF_GPIO_PDDR_PDD(v)  ((uint32_t)((uint32_t)(v) << BP_GPIO_PDDR_PDD) & BM_GPIO_PDDR_PDD)
 
 /*! @brief Set the PDD field to a new value. */
-#define BW_GPIO_PDDR_PDD(x, v) (HW_GPIO_PDDR_WR(x, v))
+#define BW_GPIO_PDDR_PDD(x, v) (ADDRESS_WRITE32(HW_GPIO_PDDR_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************

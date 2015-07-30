@@ -150,13 +150,13 @@ typedef union _hw_rfvbat_regn
 #define BS_RFVBAT_REGn_LL    (8U)          /*!< Bit field size in bits for RFVBAT_REGn_LL. */
 
 /*! @brief Read current value of the RFVBAT_REGn_LL field. */
-#define BR_RFVBAT_REGn_LL(x, n) (HW_RFVBAT_REGn(x, n).B.LL)
+#define BR_RFVBAT_REGn_LL(x, n) (UNION_READ_FS(HW_RFVBAT_REGn_ADDR(x, n), hw_rfvbat_regn, B.LL))
 
 /*! @brief Format value for bitfield RFVBAT_REGn_LL. */
 #define BF_RFVBAT_REGn_LL(v) ((uint32_t)((uint32_t)(v) << BP_RFVBAT_REGn_LL) & BM_RFVBAT_REGn_LL)
 
 /*! @brief Set the LL field to a new value. */
-#define BW_RFVBAT_REGn_LL(x, n, v) (HW_RFVBAT_REGn_WR(x, n, (HW_RFVBAT_REGn_RD(x, n) & ~BM_RFVBAT_REGn_LL) | BF_RFVBAT_REGn_LL(v)))
+#define BW_RFVBAT_REGn_LL(x, n, v) (ADDRESS_WRITE32(HW_RFVBAT_REGn_ADDR(x, n), (HW_RFVBAT_REGn_RD(x, n) & ~BM_RFVBAT_REGn_LL) | BF_RFVBAT_REGn_LL(v)))
 /*@}*/
 
 /*!
@@ -170,13 +170,13 @@ typedef union _hw_rfvbat_regn
 #define BS_RFVBAT_REGn_LH    (8U)          /*!< Bit field size in bits for RFVBAT_REGn_LH. */
 
 /*! @brief Read current value of the RFVBAT_REGn_LH field. */
-#define BR_RFVBAT_REGn_LH(x, n) (HW_RFVBAT_REGn(x, n).B.LH)
+#define BR_RFVBAT_REGn_LH(x, n) (UNION_READ_FS(HW_RFVBAT_REGn_ADDR(x, n), hw_rfvbat_regn, B.LH))
 
 /*! @brief Format value for bitfield RFVBAT_REGn_LH. */
 #define BF_RFVBAT_REGn_LH(v) ((uint32_t)((uint32_t)(v) << BP_RFVBAT_REGn_LH) & BM_RFVBAT_REGn_LH)
 
 /*! @brief Set the LH field to a new value. */
-#define BW_RFVBAT_REGn_LH(x, n, v) (HW_RFVBAT_REGn_WR(x, n, (HW_RFVBAT_REGn_RD(x, n) & ~BM_RFVBAT_REGn_LH) | BF_RFVBAT_REGn_LH(v)))
+#define BW_RFVBAT_REGn_LH(x, n, v) (ADDRESS_WRITE32(HW_RFVBAT_REGn_ADDR(x, n), (HW_RFVBAT_REGn_RD(x, n) & ~BM_RFVBAT_REGn_LH) | BF_RFVBAT_REGn_LH(v)))
 /*@}*/
 
 /*!
@@ -190,13 +190,13 @@ typedef union _hw_rfvbat_regn
 #define BS_RFVBAT_REGn_HL    (8U)          /*!< Bit field size in bits for RFVBAT_REGn_HL. */
 
 /*! @brief Read current value of the RFVBAT_REGn_HL field. */
-#define BR_RFVBAT_REGn_HL(x, n) (HW_RFVBAT_REGn(x, n).B.HL)
+#define BR_RFVBAT_REGn_HL(x, n) (UNION_READ_FS(HW_RFVBAT_REGn_ADDR(x, n), hw_rfvbat_regn, B.HL))
 
 /*! @brief Format value for bitfield RFVBAT_REGn_HL. */
 #define BF_RFVBAT_REGn_HL(v) ((uint32_t)((uint32_t)(v) << BP_RFVBAT_REGn_HL) & BM_RFVBAT_REGn_HL)
 
 /*! @brief Set the HL field to a new value. */
-#define BW_RFVBAT_REGn_HL(x, n, v) (HW_RFVBAT_REGn_WR(x, n, (HW_RFVBAT_REGn_RD(x, n) & ~BM_RFVBAT_REGn_HL) | BF_RFVBAT_REGn_HL(v)))
+#define BW_RFVBAT_REGn_HL(x, n, v) (ADDRESS_WRITE32(HW_RFVBAT_REGn_ADDR(x, n), (HW_RFVBAT_REGn_RD(x, n) & ~BM_RFVBAT_REGn_HL) | BF_RFVBAT_REGn_HL(v)))
 /*@}*/
 
 /*!
@@ -210,13 +210,13 @@ typedef union _hw_rfvbat_regn
 #define BS_RFVBAT_REGn_HH    (8U)          /*!< Bit field size in bits for RFVBAT_REGn_HH. */
 
 /*! @brief Read current value of the RFVBAT_REGn_HH field. */
-#define BR_RFVBAT_REGn_HH(x, n) (HW_RFVBAT_REGn(x, n).B.HH)
+#define BR_RFVBAT_REGn_HH(x, n) (UNION_READ_FS(HW_RFVBAT_REGn_ADDR(x, n), hw_rfvbat_regn, B.HH))
 
 /*! @brief Format value for bitfield RFVBAT_REGn_HH. */
 #define BF_RFVBAT_REGn_HH(v) ((uint32_t)((uint32_t)(v) << BP_RFVBAT_REGn_HH) & BM_RFVBAT_REGn_HH)
 
 /*! @brief Set the HH field to a new value. */
-#define BW_RFVBAT_REGn_HH(x, n, v) (HW_RFVBAT_REGn_WR(x, n, (HW_RFVBAT_REGn_RD(x, n) & ~BM_RFVBAT_REGn_HH) | BF_RFVBAT_REGn_HH(v)))
+#define BW_RFVBAT_REGn_HH(x, n, v) (ADDRESS_WRITE32(HW_RFVBAT_REGn_ADDR(x, n), (HW_RFVBAT_REGn_RD(x, n) & ~BM_RFVBAT_REGn_HH) | BF_RFVBAT_REGn_HH(v)))
 /*@}*/
 
 /*******************************************************************************

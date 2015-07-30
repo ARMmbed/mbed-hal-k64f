@@ -169,13 +169,13 @@ typedef union _hw_smc_pmprot
 #define BS_SMC_PMPROT_AVLLS  (1U)          /*!< Bit field size in bits for SMC_PMPROT_AVLLS. */
 
 /*! @brief Read current value of the SMC_PMPROT_AVLLS field. */
-#define BR_SMC_PMPROT_AVLLS(x) (BITBAND_ACCESS8(HW_SMC_PMPROT_ADDR(x), BP_SMC_PMPROT_AVLLS))
+#define BR_SMC_PMPROT_AVLLS(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_SMC_PMPROT_ADDR(x), BP_SMC_PMPROT_AVLLS)))
 
 /*! @brief Format value for bitfield SMC_PMPROT_AVLLS. */
 #define BF_SMC_PMPROT_AVLLS(v) ((uint8_t)((uint8_t)(v) << BP_SMC_PMPROT_AVLLS) & BM_SMC_PMPROT_AVLLS)
 
 /*! @brief Set the AVLLS field to a new value. */
-#define BW_SMC_PMPROT_AVLLS(x, v) (BITBAND_ACCESS8(HW_SMC_PMPROT_ADDR(x), BP_SMC_PMPROT_AVLLS) = (v))
+#define BW_SMC_PMPROT_AVLLS(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_SMC_PMPROT_ADDR(x), BP_SMC_PMPROT_AVLLS), v))
 /*@}*/
 
 /*!
@@ -194,13 +194,13 @@ typedef union _hw_smc_pmprot
 #define BS_SMC_PMPROT_ALLS   (1U)          /*!< Bit field size in bits for SMC_PMPROT_ALLS. */
 
 /*! @brief Read current value of the SMC_PMPROT_ALLS field. */
-#define BR_SMC_PMPROT_ALLS(x) (BITBAND_ACCESS8(HW_SMC_PMPROT_ADDR(x), BP_SMC_PMPROT_ALLS))
+#define BR_SMC_PMPROT_ALLS(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_SMC_PMPROT_ADDR(x), BP_SMC_PMPROT_ALLS)))
 
 /*! @brief Format value for bitfield SMC_PMPROT_ALLS. */
 #define BF_SMC_PMPROT_ALLS(v) ((uint8_t)((uint8_t)(v) << BP_SMC_PMPROT_ALLS) & BM_SMC_PMPROT_ALLS)
 
 /*! @brief Set the ALLS field to a new value. */
-#define BW_SMC_PMPROT_ALLS(x, v) (BITBAND_ACCESS8(HW_SMC_PMPROT_ADDR(x), BP_SMC_PMPROT_ALLS) = (v))
+#define BW_SMC_PMPROT_ALLS(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_SMC_PMPROT_ADDR(x), BP_SMC_PMPROT_ALLS), v))
 /*@}*/
 
 /*!
@@ -219,13 +219,13 @@ typedef union _hw_smc_pmprot
 #define BS_SMC_PMPROT_AVLP   (1U)          /*!< Bit field size in bits for SMC_PMPROT_AVLP. */
 
 /*! @brief Read current value of the SMC_PMPROT_AVLP field. */
-#define BR_SMC_PMPROT_AVLP(x) (BITBAND_ACCESS8(HW_SMC_PMPROT_ADDR(x), BP_SMC_PMPROT_AVLP))
+#define BR_SMC_PMPROT_AVLP(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_SMC_PMPROT_ADDR(x), BP_SMC_PMPROT_AVLP)))
 
 /*! @brief Format value for bitfield SMC_PMPROT_AVLP. */
 #define BF_SMC_PMPROT_AVLP(v) ((uint8_t)((uint8_t)(v) << BP_SMC_PMPROT_AVLP) & BM_SMC_PMPROT_AVLP)
 
 /*! @brief Set the AVLP field to a new value. */
-#define BW_SMC_PMPROT_AVLP(x, v) (BITBAND_ACCESS8(HW_SMC_PMPROT_ADDR(x), BP_SMC_PMPROT_AVLP) = (v))
+#define BW_SMC_PMPROT_AVLP(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_SMC_PMPROT_ADDR(x), BP_SMC_PMPROT_AVLP), v))
 /*@}*/
 
 /*******************************************************************************
@@ -302,13 +302,13 @@ typedef union _hw_smc_pmctrl
 #define BS_SMC_PMCTRL_STOPM  (3U)          /*!< Bit field size in bits for SMC_PMCTRL_STOPM. */
 
 /*! @brief Read current value of the SMC_PMCTRL_STOPM field. */
-#define BR_SMC_PMCTRL_STOPM(x) (HW_SMC_PMCTRL(x).B.STOPM)
+#define BR_SMC_PMCTRL_STOPM(x) (UNION_READ_FS(HW_SMC_PMCTRL_ADDR(x), hw_smc_pmctrl, B.STOPM))
 
 /*! @brief Format value for bitfield SMC_PMCTRL_STOPM. */
 #define BF_SMC_PMCTRL_STOPM(v) ((uint8_t)((uint8_t)(v) << BP_SMC_PMCTRL_STOPM) & BM_SMC_PMCTRL_STOPM)
 
 /*! @brief Set the STOPM field to a new value. */
-#define BW_SMC_PMCTRL_STOPM(x, v) (HW_SMC_PMCTRL_WR(x, (HW_SMC_PMCTRL_RD(x) & ~BM_SMC_PMCTRL_STOPM) | BF_SMC_PMCTRL_STOPM(v)))
+#define BW_SMC_PMCTRL_STOPM(x, v) (ADDRESS_WRITE32(HW_SMC_PMCTRL_ADDR(x), (HW_SMC_PMCTRL_RD(x) & ~BM_SMC_PMCTRL_STOPM) | BF_SMC_PMCTRL_STOPM(v)))
 /*@}*/
 
 /*!
@@ -329,7 +329,7 @@ typedef union _hw_smc_pmctrl
 #define BS_SMC_PMCTRL_STOPA  (1U)          /*!< Bit field size in bits for SMC_PMCTRL_STOPA. */
 
 /*! @brief Read current value of the SMC_PMCTRL_STOPA field. */
-#define BR_SMC_PMCTRL_STOPA(x) (BITBAND_ACCESS8(HW_SMC_PMCTRL_ADDR(x), BP_SMC_PMCTRL_STOPA))
+#define BR_SMC_PMCTRL_STOPA(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_SMC_PMCTRL_ADDR(x), BP_SMC_PMCTRL_STOPA)))
 /*@}*/
 
 /*!
@@ -352,13 +352,13 @@ typedef union _hw_smc_pmctrl
 #define BS_SMC_PMCTRL_RUNM   (2U)          /*!< Bit field size in bits for SMC_PMCTRL_RUNM. */
 
 /*! @brief Read current value of the SMC_PMCTRL_RUNM field. */
-#define BR_SMC_PMCTRL_RUNM(x) (HW_SMC_PMCTRL(x).B.RUNM)
+#define BR_SMC_PMCTRL_RUNM(x) (UNION_READ_FS(HW_SMC_PMCTRL_ADDR(x), hw_smc_pmctrl, B.RUNM))
 
 /*! @brief Format value for bitfield SMC_PMCTRL_RUNM. */
 #define BF_SMC_PMCTRL_RUNM(v) ((uint8_t)((uint8_t)(v) << BP_SMC_PMCTRL_RUNM) & BM_SMC_PMCTRL_RUNM)
 
 /*! @brief Set the RUNM field to a new value. */
-#define BW_SMC_PMCTRL_RUNM(x, v) (HW_SMC_PMCTRL_WR(x, (HW_SMC_PMCTRL_RD(x) & ~BM_SMC_PMCTRL_RUNM) | BF_SMC_PMCTRL_RUNM(v)))
+#define BW_SMC_PMCTRL_RUNM(x, v) (ADDRESS_WRITE32(HW_SMC_PMCTRL_ADDR(x), (HW_SMC_PMCTRL_RD(x) & ~BM_SMC_PMCTRL_RUNM) | BF_SMC_PMCTRL_RUNM(v)))
 /*@}*/
 
 /*!
@@ -380,13 +380,13 @@ typedef union _hw_smc_pmctrl
 #define BS_SMC_PMCTRL_LPWUI  (1U)          /*!< Bit field size in bits for SMC_PMCTRL_LPWUI. */
 
 /*! @brief Read current value of the SMC_PMCTRL_LPWUI field. */
-#define BR_SMC_PMCTRL_LPWUI(x) (BITBAND_ACCESS8(HW_SMC_PMCTRL_ADDR(x), BP_SMC_PMCTRL_LPWUI))
+#define BR_SMC_PMCTRL_LPWUI(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_SMC_PMCTRL_ADDR(x), BP_SMC_PMCTRL_LPWUI)))
 
 /*! @brief Format value for bitfield SMC_PMCTRL_LPWUI. */
 #define BF_SMC_PMCTRL_LPWUI(v) ((uint8_t)((uint8_t)(v) << BP_SMC_PMCTRL_LPWUI) & BM_SMC_PMCTRL_LPWUI)
 
 /*! @brief Set the LPWUI field to a new value. */
-#define BW_SMC_PMCTRL_LPWUI(x, v) (BITBAND_ACCESS8(HW_SMC_PMCTRL_ADDR(x), BP_SMC_PMCTRL_LPWUI) = (v))
+#define BW_SMC_PMCTRL_LPWUI(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_SMC_PMCTRL_ADDR(x), BP_SMC_PMCTRL_LPWUI), v))
 /*@}*/
 
 /*******************************************************************************
@@ -454,13 +454,13 @@ typedef union _hw_smc_vllsctrl
 #define BS_SMC_VLLSCTRL_VLLSM (3U)         /*!< Bit field size in bits for SMC_VLLSCTRL_VLLSM. */
 
 /*! @brief Read current value of the SMC_VLLSCTRL_VLLSM field. */
-#define BR_SMC_VLLSCTRL_VLLSM(x) (HW_SMC_VLLSCTRL(x).B.VLLSM)
+#define BR_SMC_VLLSCTRL_VLLSM(x) (UNION_READ_FS(HW_SMC_VLLSCTRL_ADDR(x), hw_smc_vllsctrl, B.VLLSM))
 
 /*! @brief Format value for bitfield SMC_VLLSCTRL_VLLSM. */
 #define BF_SMC_VLLSCTRL_VLLSM(v) ((uint8_t)((uint8_t)(v) << BP_SMC_VLLSCTRL_VLLSM) & BM_SMC_VLLSCTRL_VLLSM)
 
 /*! @brief Set the VLLSM field to a new value. */
-#define BW_SMC_VLLSCTRL_VLLSM(x, v) (HW_SMC_VLLSCTRL_WR(x, (HW_SMC_VLLSCTRL_RD(x) & ~BM_SMC_VLLSCTRL_VLLSM) | BF_SMC_VLLSCTRL_VLLSM(v)))
+#define BW_SMC_VLLSCTRL_VLLSM(x, v) (ADDRESS_WRITE32(HW_SMC_VLLSCTRL_ADDR(x), (HW_SMC_VLLSCTRL_RD(x) & ~BM_SMC_VLLSCTRL_VLLSM) | BF_SMC_VLLSCTRL_VLLSM(v)))
 /*@}*/
 
 /*!
@@ -479,13 +479,13 @@ typedef union _hw_smc_vllsctrl
 #define BS_SMC_VLLSCTRL_PORPO (1U)         /*!< Bit field size in bits for SMC_VLLSCTRL_PORPO. */
 
 /*! @brief Read current value of the SMC_VLLSCTRL_PORPO field. */
-#define BR_SMC_VLLSCTRL_PORPO(x) (BITBAND_ACCESS8(HW_SMC_VLLSCTRL_ADDR(x), BP_SMC_VLLSCTRL_PORPO))
+#define BR_SMC_VLLSCTRL_PORPO(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_SMC_VLLSCTRL_ADDR(x), BP_SMC_VLLSCTRL_PORPO)))
 
 /*! @brief Format value for bitfield SMC_VLLSCTRL_PORPO. */
 #define BF_SMC_VLLSCTRL_PORPO(v) ((uint8_t)((uint8_t)(v) << BP_SMC_VLLSCTRL_PORPO) & BM_SMC_VLLSCTRL_PORPO)
 
 /*! @brief Set the PORPO field to a new value. */
-#define BW_SMC_VLLSCTRL_PORPO(x, v) (BITBAND_ACCESS8(HW_SMC_VLLSCTRL_ADDR(x), BP_SMC_VLLSCTRL_PORPO) = (v))
+#define BW_SMC_VLLSCTRL_PORPO(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_SMC_VLLSCTRL_ADDR(x), BP_SMC_VLLSCTRL_PORPO), v))
 /*@}*/
 
 /*******************************************************************************
@@ -537,7 +537,7 @@ typedef union _hw_smc_pmstat
 #define BS_SMC_PMSTAT_PMSTAT (7U)          /*!< Bit field size in bits for SMC_PMSTAT_PMSTAT. */
 
 /*! @brief Read current value of the SMC_PMSTAT_PMSTAT field. */
-#define BR_SMC_PMSTAT_PMSTAT(x) (HW_SMC_PMSTAT(x).B.PMSTAT)
+#define BR_SMC_PMSTAT_PMSTAT(x) (UNION_READ_FS(HW_SMC_PMSTAT_ADDR(x), hw_smc_pmstat, B.PMSTAT))
 /*@}*/
 
 /*******************************************************************************

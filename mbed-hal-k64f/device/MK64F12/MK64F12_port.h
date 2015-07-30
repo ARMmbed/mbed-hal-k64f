@@ -182,13 +182,13 @@ typedef union _hw_port_pcrn
 #define BS_PORT_PCRn_PS      (1U)          /*!< Bit field size in bits for PORT_PCRn_PS. */
 
 /*! @brief Read current value of the PORT_PCRn_PS field. */
-#define BR_PORT_PCRn_PS(x, n) (BITBAND_ACCESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_PS))
+#define BR_PORT_PCRn_PS(x, n) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_PS)))
 
 /*! @brief Format value for bitfield PORT_PCRn_PS. */
 #define BF_PORT_PCRn_PS(v)   ((uint32_t)((uint32_t)(v) << BP_PORT_PCRn_PS) & BM_PORT_PCRn_PS)
 
 /*! @brief Set the PS field to a new value. */
-#define BW_PORT_PCRn_PS(x, n, v) (BITBAND_ACCESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_PS) = (v))
+#define BW_PORT_PCRn_PS(x, n, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_PS), v))
 /*@}*/
 
 /*!
@@ -208,13 +208,13 @@ typedef union _hw_port_pcrn
 #define BS_PORT_PCRn_PE      (1U)          /*!< Bit field size in bits for PORT_PCRn_PE. */
 
 /*! @brief Read current value of the PORT_PCRn_PE field. */
-#define BR_PORT_PCRn_PE(x, n) (BITBAND_ACCESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_PE))
+#define BR_PORT_PCRn_PE(x, n) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_PE)))
 
 /*! @brief Format value for bitfield PORT_PCRn_PE. */
 #define BF_PORT_PCRn_PE(v)   ((uint32_t)((uint32_t)(v) << BP_PORT_PCRn_PE) & BM_PORT_PCRn_PE)
 
 /*! @brief Set the PE field to a new value. */
-#define BW_PORT_PCRn_PE(x, n, v) (BITBAND_ACCESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_PE) = (v))
+#define BW_PORT_PCRn_PE(x, n, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_PE), v))
 /*@}*/
 
 /*!
@@ -234,13 +234,13 @@ typedef union _hw_port_pcrn
 #define BS_PORT_PCRn_SRE     (1U)          /*!< Bit field size in bits for PORT_PCRn_SRE. */
 
 /*! @brief Read current value of the PORT_PCRn_SRE field. */
-#define BR_PORT_PCRn_SRE(x, n) (BITBAND_ACCESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_SRE))
+#define BR_PORT_PCRn_SRE(x, n) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_SRE)))
 
 /*! @brief Format value for bitfield PORT_PCRn_SRE. */
 #define BF_PORT_PCRn_SRE(v)  ((uint32_t)((uint32_t)(v) << BP_PORT_PCRn_SRE) & BM_PORT_PCRn_SRE)
 
 /*! @brief Set the SRE field to a new value. */
-#define BW_PORT_PCRn_SRE(x, n, v) (BITBAND_ACCESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_SRE) = (v))
+#define BW_PORT_PCRn_SRE(x, n, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_SRE), v))
 /*@}*/
 
 /*!
@@ -260,13 +260,13 @@ typedef union _hw_port_pcrn
 #define BS_PORT_PCRn_PFE     (1U)          /*!< Bit field size in bits for PORT_PCRn_PFE. */
 
 /*! @brief Read current value of the PORT_PCRn_PFE field. */
-#define BR_PORT_PCRn_PFE(x, n) (BITBAND_ACCESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_PFE))
+#define BR_PORT_PCRn_PFE(x, n) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_PFE)))
 
 /*! @brief Format value for bitfield PORT_PCRn_PFE. */
 #define BF_PORT_PCRn_PFE(v)  ((uint32_t)((uint32_t)(v) << BP_PORT_PCRn_PFE) & BM_PORT_PCRn_PFE)
 
 /*! @brief Set the PFE field to a new value. */
-#define BW_PORT_PCRn_PFE(x, n, v) (BITBAND_ACCESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_PFE) = (v))
+#define BW_PORT_PCRn_PFE(x, n, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_PFE), v))
 /*@}*/
 
 /*!
@@ -285,13 +285,13 @@ typedef union _hw_port_pcrn
 #define BS_PORT_PCRn_ODE     (1U)          /*!< Bit field size in bits for PORT_PCRn_ODE. */
 
 /*! @brief Read current value of the PORT_PCRn_ODE field. */
-#define BR_PORT_PCRn_ODE(x, n) (BITBAND_ACCESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_ODE))
+#define BR_PORT_PCRn_ODE(x, n) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_ODE)))
 
 /*! @brief Format value for bitfield PORT_PCRn_ODE. */
 #define BF_PORT_PCRn_ODE(v)  ((uint32_t)((uint32_t)(v) << BP_PORT_PCRn_ODE) & BM_PORT_PCRn_ODE)
 
 /*! @brief Set the ODE field to a new value. */
-#define BW_PORT_PCRn_ODE(x, n, v) (BITBAND_ACCESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_ODE) = (v))
+#define BW_PORT_PCRn_ODE(x, n, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_ODE), v))
 /*@}*/
 
 /*!
@@ -311,13 +311,13 @@ typedef union _hw_port_pcrn
 #define BS_PORT_PCRn_DSE     (1U)          /*!< Bit field size in bits for PORT_PCRn_DSE. */
 
 /*! @brief Read current value of the PORT_PCRn_DSE field. */
-#define BR_PORT_PCRn_DSE(x, n) (BITBAND_ACCESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_DSE))
+#define BR_PORT_PCRn_DSE(x, n) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_DSE)))
 
 /*! @brief Format value for bitfield PORT_PCRn_DSE. */
 #define BF_PORT_PCRn_DSE(v)  ((uint32_t)((uint32_t)(v) << BP_PORT_PCRn_DSE) & BM_PORT_PCRn_DSE)
 
 /*! @brief Set the DSE field to a new value. */
-#define BW_PORT_PCRn_DSE(x, n, v) (BITBAND_ACCESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_DSE) = (v))
+#define BW_PORT_PCRn_DSE(x, n, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_DSE), v))
 /*@}*/
 
 /*!
@@ -344,13 +344,13 @@ typedef union _hw_port_pcrn
 #define BS_PORT_PCRn_MUX     (3U)          /*!< Bit field size in bits for PORT_PCRn_MUX. */
 
 /*! @brief Read current value of the PORT_PCRn_MUX field. */
-#define BR_PORT_PCRn_MUX(x, n) (HW_PORT_PCRn(x, n).B.MUX)
+#define BR_PORT_PCRn_MUX(x, n) (UNION_READ_FS(HW_PORT_PCRn_ADDR(x, n), hw_port_pcrn, B.MUX))
 
 /*! @brief Format value for bitfield PORT_PCRn_MUX. */
 #define BF_PORT_PCRn_MUX(v)  ((uint32_t)((uint32_t)(v) << BP_PORT_PCRn_MUX) & BM_PORT_PCRn_MUX)
 
 /*! @brief Set the MUX field to a new value. */
-#define BW_PORT_PCRn_MUX(x, n, v) (HW_PORT_PCRn_WR(x, n, (HW_PORT_PCRn_RD(x, n) & ~BM_PORT_PCRn_MUX) | BF_PORT_PCRn_MUX(v)))
+#define BW_PORT_PCRn_MUX(x, n, v) (ADDRESS_WRITE32(HW_PORT_PCRn_ADDR(x, n), (HW_PORT_PCRn_RD(x, n) & ~BM_PORT_PCRn_MUX) | BF_PORT_PCRn_MUX(v)))
 /*@}*/
 
 /*!
@@ -367,13 +367,13 @@ typedef union _hw_port_pcrn
 #define BS_PORT_PCRn_LK      (1U)          /*!< Bit field size in bits for PORT_PCRn_LK. */
 
 /*! @brief Read current value of the PORT_PCRn_LK field. */
-#define BR_PORT_PCRn_LK(x, n) (BITBAND_ACCESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_LK))
+#define BR_PORT_PCRn_LK(x, n) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_LK)))
 
 /*! @brief Format value for bitfield PORT_PCRn_LK. */
 #define BF_PORT_PCRn_LK(v)   ((uint32_t)((uint32_t)(v) << BP_PORT_PCRn_LK) & BM_PORT_PCRn_LK)
 
 /*! @brief Set the LK field to a new value. */
-#define BW_PORT_PCRn_LK(x, n, v) (BITBAND_ACCESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_LK) = (v))
+#define BW_PORT_PCRn_LK(x, n, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_LK), v))
 /*@}*/
 
 /*!
@@ -399,13 +399,13 @@ typedef union _hw_port_pcrn
 #define BS_PORT_PCRn_IRQC    (4U)          /*!< Bit field size in bits for PORT_PCRn_IRQC. */
 
 /*! @brief Read current value of the PORT_PCRn_IRQC field. */
-#define BR_PORT_PCRn_IRQC(x, n) (HW_PORT_PCRn(x, n).B.IRQC)
+#define BR_PORT_PCRn_IRQC(x, n) (UNION_READ_FS(HW_PORT_PCRn_ADDR(x, n), hw_port_pcrn, B.IRQC))
 
 /*! @brief Format value for bitfield PORT_PCRn_IRQC. */
 #define BF_PORT_PCRn_IRQC(v) ((uint32_t)((uint32_t)(v) << BP_PORT_PCRn_IRQC) & BM_PORT_PCRn_IRQC)
 
 /*! @brief Set the IRQC field to a new value. */
-#define BW_PORT_PCRn_IRQC(x, n, v) (HW_PORT_PCRn_WR(x, n, (HW_PORT_PCRn_RD(x, n) & ~BM_PORT_PCRn_IRQC) | BF_PORT_PCRn_IRQC(v)))
+#define BW_PORT_PCRn_IRQC(x, n, v) (ADDRESS_WRITE32(HW_PORT_PCRn_ADDR(x, n), (HW_PORT_PCRn_RD(x, n) & ~BM_PORT_PCRn_IRQC) | BF_PORT_PCRn_IRQC(v)))
 /*@}*/
 
 /*!
@@ -428,13 +428,13 @@ typedef union _hw_port_pcrn
 #define BS_PORT_PCRn_ISF     (1U)          /*!< Bit field size in bits for PORT_PCRn_ISF. */
 
 /*! @brief Read current value of the PORT_PCRn_ISF field. */
-#define BR_PORT_PCRn_ISF(x, n) (BITBAND_ACCESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_ISF))
+#define BR_PORT_PCRn_ISF(x, n) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_ISF)))
 
 /*! @brief Format value for bitfield PORT_PCRn_ISF. */
 #define BF_PORT_PCRn_ISF(v)  ((uint32_t)((uint32_t)(v) << BP_PORT_PCRn_ISF) & BM_PORT_PCRn_ISF)
 
 /*! @brief Set the ISF field to a new value. */
-#define BW_PORT_PCRn_ISF(x, n, v) (BITBAND_ACCESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_ISF) = (v))
+#define BW_PORT_PCRn_ISF(x, n, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PORT_PCRn_ADDR(x, n), BP_PORT_PCRn_ISF), v))
 /*@}*/
 
 /*******************************************************************************
@@ -488,7 +488,7 @@ typedef union _hw_port_gpclr
 #define BF_PORT_GPCLR_GPWD(v) ((uint32_t)((uint32_t)(v) << BP_PORT_GPCLR_GPWD) & BM_PORT_GPCLR_GPWD)
 
 /*! @brief Set the GPWD field to a new value. */
-#define BW_PORT_GPCLR_GPWD(x, v) (HW_PORT_GPCLR_WR(x, (HW_PORT_GPCLR_RD(x) & ~BM_PORT_GPCLR_GPWD) | BF_PORT_GPCLR_GPWD(v)))
+#define BW_PORT_GPCLR_GPWD(x, v) (ADDRESS_WRITE32(HW_PORT_GPCLR_ADDR(x), (HW_PORT_GPCLR_RD(x) & ~BM_PORT_GPCLR_GPWD) | BF_PORT_GPCLR_GPWD(v)))
 /*@}*/
 
 /*!
@@ -512,7 +512,7 @@ typedef union _hw_port_gpclr
 #define BF_PORT_GPCLR_GPWE(v) ((uint32_t)((uint32_t)(v) << BP_PORT_GPCLR_GPWE) & BM_PORT_GPCLR_GPWE)
 
 /*! @brief Set the GPWE field to a new value. */
-#define BW_PORT_GPCLR_GPWE(x, v) (HW_PORT_GPCLR_WR(x, (HW_PORT_GPCLR_RD(x) & ~BM_PORT_GPCLR_GPWE) | BF_PORT_GPCLR_GPWE(v)))
+#define BW_PORT_GPCLR_GPWE(x, v) (ADDRESS_WRITE32(HW_PORT_GPCLR_ADDR(x), (HW_PORT_GPCLR_RD(x) & ~BM_PORT_GPCLR_GPWE) | BF_PORT_GPCLR_GPWE(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -566,7 +566,7 @@ typedef union _hw_port_gpchr
 #define BF_PORT_GPCHR_GPWD(v) ((uint32_t)((uint32_t)(v) << BP_PORT_GPCHR_GPWD) & BM_PORT_GPCHR_GPWD)
 
 /*! @brief Set the GPWD field to a new value. */
-#define BW_PORT_GPCHR_GPWD(x, v) (HW_PORT_GPCHR_WR(x, (HW_PORT_GPCHR_RD(x) & ~BM_PORT_GPCHR_GPWD) | BF_PORT_GPCHR_GPWD(v)))
+#define BW_PORT_GPCHR_GPWD(x, v) (ADDRESS_WRITE32(HW_PORT_GPCHR_ADDR(x), (HW_PORT_GPCHR_RD(x) & ~BM_PORT_GPCHR_GPWD) | BF_PORT_GPCHR_GPWD(v)))
 /*@}*/
 
 /*!
@@ -590,7 +590,7 @@ typedef union _hw_port_gpchr
 #define BF_PORT_GPCHR_GPWE(v) ((uint32_t)((uint32_t)(v) << BP_PORT_GPCHR_GPWE) & BM_PORT_GPCHR_GPWE)
 
 /*! @brief Set the GPWE field to a new value. */
-#define BW_PORT_GPCHR_GPWE(x, v) (HW_PORT_GPCHR_WR(x, (HW_PORT_GPCHR_RD(x) & ~BM_PORT_GPCHR_GPWE) | BF_PORT_GPCHR_GPWE(v)))
+#define BW_PORT_GPCHR_GPWE(x, v) (ADDRESS_WRITE32(HW_PORT_GPCHR_ADDR(x), (HW_PORT_GPCHR_RD(x) & ~BM_PORT_GPCHR_GPWE) | BF_PORT_GPCHR_GPWE(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -654,13 +654,13 @@ typedef union _hw_port_isfr
 #define BS_PORT_ISFR_ISF     (32U)         /*!< Bit field size in bits for PORT_ISFR_ISF. */
 
 /*! @brief Read current value of the PORT_ISFR_ISF field. */
-#define BR_PORT_ISFR_ISF(x)  (HW_PORT_ISFR(x).U)
+#define BR_PORT_ISFR_ISF(x)  (ADDRESS_READ32(HW_PORT_ISFR_ADDR(x)))
 
 /*! @brief Format value for bitfield PORT_ISFR_ISF. */
 #define BF_PORT_ISFR_ISF(v)  ((uint32_t)((uint32_t)(v) << BP_PORT_ISFR_ISF) & BM_PORT_ISFR_ISF)
 
 /*! @brief Set the ISF field to a new value. */
-#define BW_PORT_ISFR_ISF(x, v) (HW_PORT_ISFR_WR(x, v))
+#define BW_PORT_ISFR_ISF(x, v) (ADDRESS_WRITE32(HW_PORT_ISFR_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -724,13 +724,13 @@ typedef union _hw_port_dfer
 #define BS_PORT_DFER_DFE     (32U)         /*!< Bit field size in bits for PORT_DFER_DFE. */
 
 /*! @brief Read current value of the PORT_DFER_DFE field. */
-#define BR_PORT_DFER_DFE(x)  (HW_PORT_DFER(x).U)
+#define BR_PORT_DFER_DFE(x)  (ADDRESS_READ32(HW_PORT_DFER_ADDR(x)))
 
 /*! @brief Format value for bitfield PORT_DFER_DFE. */
 #define BF_PORT_DFER_DFE(v)  ((uint32_t)((uint32_t)(v) << BP_PORT_DFER_DFE) & BM_PORT_DFER_DFE)
 
 /*! @brief Set the DFE field to a new value. */
-#define BW_PORT_DFER_DFE(x, v) (HW_PORT_DFER_WR(x, v))
+#define BW_PORT_DFER_DFE(x, v) (ADDRESS_WRITE32(HW_PORT_DFER_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -790,13 +790,13 @@ typedef union _hw_port_dfcr
 #define BS_PORT_DFCR_CS      (1U)          /*!< Bit field size in bits for PORT_DFCR_CS. */
 
 /*! @brief Read current value of the PORT_DFCR_CS field. */
-#define BR_PORT_DFCR_CS(x)   (BITBAND_ACCESS32(HW_PORT_DFCR_ADDR(x), BP_PORT_DFCR_CS))
+#define BR_PORT_DFCR_CS(x)   (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PORT_DFCR_ADDR(x), BP_PORT_DFCR_CS)))
 
 /*! @brief Format value for bitfield PORT_DFCR_CS. */
 #define BF_PORT_DFCR_CS(v)   ((uint32_t)((uint32_t)(v) << BP_PORT_DFCR_CS) & BM_PORT_DFCR_CS)
 
 /*! @brief Set the CS field to a new value. */
-#define BW_PORT_DFCR_CS(x, v) (BITBAND_ACCESS32(HW_PORT_DFCR_ADDR(x), BP_PORT_DFCR_CS) = (v))
+#define BW_PORT_DFCR_CS(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PORT_DFCR_ADDR(x), BP_PORT_DFCR_CS), v))
 /*@}*/
 
 /*******************************************************************************
@@ -855,13 +855,13 @@ typedef union _hw_port_dfwr
 #define BS_PORT_DFWR_FILT    (5U)          /*!< Bit field size in bits for PORT_DFWR_FILT. */
 
 /*! @brief Read current value of the PORT_DFWR_FILT field. */
-#define BR_PORT_DFWR_FILT(x) (HW_PORT_DFWR(x).B.FILT)
+#define BR_PORT_DFWR_FILT(x) (UNION_READ_FS(HW_PORT_DFWR_ADDR(x), hw_port_dfwr, B.FILT))
 
 /*! @brief Format value for bitfield PORT_DFWR_FILT. */
 #define BF_PORT_DFWR_FILT(v) ((uint32_t)((uint32_t)(v) << BP_PORT_DFWR_FILT) & BM_PORT_DFWR_FILT)
 
 /*! @brief Set the FILT field to a new value. */
-#define BW_PORT_DFWR_FILT(x, v) (HW_PORT_DFWR_WR(x, (HW_PORT_DFWR_RD(x) & ~BM_PORT_DFWR_FILT) | BF_PORT_DFWR_FILT(v)))
+#define BW_PORT_DFWR_FILT(x, v) (ADDRESS_WRITE32(HW_PORT_DFWR_ADDR(x), (HW_PORT_DFWR_RD(x) & ~BM_PORT_DFWR_FILT) | BF_PORT_DFWR_FILT(v)))
 /*@}*/
 
 /*******************************************************************************
