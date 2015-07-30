@@ -1,6 +1,6 @@
 {
   "name": "mbed-hal-k64f",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "mbed HAL for Freescale K64F MCUs",
   "private": true,
   "keywords": [
@@ -35,7 +35,7 @@
       "uvisor-lib": "~0.7.0"
     },
     "frdm-k64f": {
-      "mbed-hal-frdm-k64f": "~0.2.0"
+      "mbed-hal-frdm-k64f": "~0.3.0"
     }
   }
 }
