@@ -186,7 +186,7 @@ typedef union _hw_sim_sopt1
 #define BS_SIM_SOPT1_RAMSIZE (4U)          /*!< Bit field size in bits for SIM_SOPT1_RAMSIZE. */
 
 /*! @brief Read current value of the SIM_SOPT1_RAMSIZE field. */
-#define BR_SIM_SOPT1_RAMSIZE(x) (HW_SIM_SOPT1(x).B.RAMSIZE)
+#define BR_SIM_SOPT1_RAMSIZE(x) (UNION_READ_FS(HW_SIM_SOPT1_ADDR(x), hw_sim_sopt1, B.RAMSIZE))
 /*@}*/
 
 /*!
@@ -207,13 +207,13 @@ typedef union _hw_sim_sopt1
 #define BS_SIM_SOPT1_OSC32KSEL (2U)        /*!< Bit field size in bits for SIM_SOPT1_OSC32KSEL. */
 
 /*! @brief Read current value of the SIM_SOPT1_OSC32KSEL field. */
-#define BR_SIM_SOPT1_OSC32KSEL(x) (HW_SIM_SOPT1(x).B.OSC32KSEL)
+#define BR_SIM_SOPT1_OSC32KSEL(x) (UNION_READ_FS(HW_SIM_SOPT1_ADDR(x), hw_sim_sopt1, B.OSC32KSEL))
 
 /*! @brief Format value for bitfield SIM_SOPT1_OSC32KSEL. */
 #define BF_SIM_SOPT1_OSC32KSEL(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT1_OSC32KSEL) & BM_SIM_SOPT1_OSC32KSEL)
 
 /*! @brief Set the OSC32KSEL field to a new value. */
-#define BW_SIM_SOPT1_OSC32KSEL(x, v) (HW_SIM_SOPT1_WR(x, (HW_SIM_SOPT1_RD(x) & ~BM_SIM_SOPT1_OSC32KSEL) | BF_SIM_SOPT1_OSC32KSEL(v)))
+#define BW_SIM_SOPT1_OSC32KSEL(x, v) (ADDRESS_WRITE32(HW_SIM_SOPT1_ADDR(x), (HW_SIM_SOPT1_RD(x) & ~BM_SIM_SOPT1_OSC32KSEL) | BF_SIM_SOPT1_OSC32KSEL(v)))
 /*@}*/
 
 /*!
@@ -232,13 +232,13 @@ typedef union _hw_sim_sopt1
 #define BS_SIM_SOPT1_USBVSTBY (1U)         /*!< Bit field size in bits for SIM_SOPT1_USBVSTBY. */
 
 /*! @brief Read current value of the SIM_SOPT1_USBVSTBY field. */
-#define BR_SIM_SOPT1_USBVSTBY(x) (BITBAND_ACCESS32(HW_SIM_SOPT1_ADDR(x), BP_SIM_SOPT1_USBVSTBY))
+#define BR_SIM_SOPT1_USBVSTBY(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT1_ADDR(x), BP_SIM_SOPT1_USBVSTBY)))
 
 /*! @brief Format value for bitfield SIM_SOPT1_USBVSTBY. */
 #define BF_SIM_SOPT1_USBVSTBY(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT1_USBVSTBY) & BM_SIM_SOPT1_USBVSTBY)
 
 /*! @brief Set the USBVSTBY field to a new value. */
-#define BW_SIM_SOPT1_USBVSTBY(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT1_ADDR(x), BP_SIM_SOPT1_USBVSTBY) = (v))
+#define BW_SIM_SOPT1_USBVSTBY(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT1_ADDR(x), BP_SIM_SOPT1_USBVSTBY), v))
 /*@}*/
 
 /*!
@@ -258,13 +258,13 @@ typedef union _hw_sim_sopt1
 #define BS_SIM_SOPT1_USBSSTBY (1U)         /*!< Bit field size in bits for SIM_SOPT1_USBSSTBY. */
 
 /*! @brief Read current value of the SIM_SOPT1_USBSSTBY field. */
-#define BR_SIM_SOPT1_USBSSTBY(x) (BITBAND_ACCESS32(HW_SIM_SOPT1_ADDR(x), BP_SIM_SOPT1_USBSSTBY))
+#define BR_SIM_SOPT1_USBSSTBY(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT1_ADDR(x), BP_SIM_SOPT1_USBSSTBY)))
 
 /*! @brief Format value for bitfield SIM_SOPT1_USBSSTBY. */
 #define BF_SIM_SOPT1_USBSSTBY(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT1_USBSSTBY) & BM_SIM_SOPT1_USBSSTBY)
 
 /*! @brief Set the USBSSTBY field to a new value. */
-#define BW_SIM_SOPT1_USBSSTBY(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT1_ADDR(x), BP_SIM_SOPT1_USBSSTBY) = (v))
+#define BW_SIM_SOPT1_USBSSTBY(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT1_ADDR(x), BP_SIM_SOPT1_USBSSTBY), v))
 /*@}*/
 
 /*!
@@ -282,13 +282,13 @@ typedef union _hw_sim_sopt1
 #define BS_SIM_SOPT1_USBREGEN (1U)         /*!< Bit field size in bits for SIM_SOPT1_USBREGEN. */
 
 /*! @brief Read current value of the SIM_SOPT1_USBREGEN field. */
-#define BR_SIM_SOPT1_USBREGEN(x) (BITBAND_ACCESS32(HW_SIM_SOPT1_ADDR(x), BP_SIM_SOPT1_USBREGEN))
+#define BR_SIM_SOPT1_USBREGEN(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT1_ADDR(x), BP_SIM_SOPT1_USBREGEN)))
 
 /*! @brief Format value for bitfield SIM_SOPT1_USBREGEN. */
 #define BF_SIM_SOPT1_USBREGEN(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT1_USBREGEN) & BM_SIM_SOPT1_USBREGEN)
 
 /*! @brief Set the USBREGEN field to a new value. */
-#define BW_SIM_SOPT1_USBREGEN(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT1_ADDR(x), BP_SIM_SOPT1_USBREGEN) = (v))
+#define BW_SIM_SOPT1_USBREGEN(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT1_ADDR(x), BP_SIM_SOPT1_USBREGEN), v))
 /*@}*/
 
 /*******************************************************************************
@@ -352,13 +352,13 @@ typedef union _hw_sim_sopt1cfg
 #define BS_SIM_SOPT1CFG_URWE (1U)          /*!< Bit field size in bits for SIM_SOPT1CFG_URWE. */
 
 /*! @brief Read current value of the SIM_SOPT1CFG_URWE field. */
-#define BR_SIM_SOPT1CFG_URWE(x) (BITBAND_ACCESS32(HW_SIM_SOPT1CFG_ADDR(x), BP_SIM_SOPT1CFG_URWE))
+#define BR_SIM_SOPT1CFG_URWE(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT1CFG_ADDR(x), BP_SIM_SOPT1CFG_URWE)))
 
 /*! @brief Format value for bitfield SIM_SOPT1CFG_URWE. */
 #define BF_SIM_SOPT1CFG_URWE(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT1CFG_URWE) & BM_SIM_SOPT1CFG_URWE)
 
 /*! @brief Set the URWE field to a new value. */
-#define BW_SIM_SOPT1CFG_URWE(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT1CFG_ADDR(x), BP_SIM_SOPT1CFG_URWE) = (v))
+#define BW_SIM_SOPT1CFG_URWE(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT1CFG_ADDR(x), BP_SIM_SOPT1CFG_URWE), v))
 /*@}*/
 
 /*!
@@ -377,13 +377,13 @@ typedef union _hw_sim_sopt1cfg
 #define BS_SIM_SOPT1CFG_UVSWE (1U)         /*!< Bit field size in bits for SIM_SOPT1CFG_UVSWE. */
 
 /*! @brief Read current value of the SIM_SOPT1CFG_UVSWE field. */
-#define BR_SIM_SOPT1CFG_UVSWE(x) (BITBAND_ACCESS32(HW_SIM_SOPT1CFG_ADDR(x), BP_SIM_SOPT1CFG_UVSWE))
+#define BR_SIM_SOPT1CFG_UVSWE(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT1CFG_ADDR(x), BP_SIM_SOPT1CFG_UVSWE)))
 
 /*! @brief Format value for bitfield SIM_SOPT1CFG_UVSWE. */
 #define BF_SIM_SOPT1CFG_UVSWE(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT1CFG_UVSWE) & BM_SIM_SOPT1CFG_UVSWE)
 
 /*! @brief Set the UVSWE field to a new value. */
-#define BW_SIM_SOPT1CFG_UVSWE(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT1CFG_ADDR(x), BP_SIM_SOPT1CFG_UVSWE) = (v))
+#define BW_SIM_SOPT1CFG_UVSWE(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT1CFG_ADDR(x), BP_SIM_SOPT1CFG_UVSWE), v))
 /*@}*/
 
 /*!
@@ -402,13 +402,13 @@ typedef union _hw_sim_sopt1cfg
 #define BS_SIM_SOPT1CFG_USSWE (1U)         /*!< Bit field size in bits for SIM_SOPT1CFG_USSWE. */
 
 /*! @brief Read current value of the SIM_SOPT1CFG_USSWE field. */
-#define BR_SIM_SOPT1CFG_USSWE(x) (BITBAND_ACCESS32(HW_SIM_SOPT1CFG_ADDR(x), BP_SIM_SOPT1CFG_USSWE))
+#define BR_SIM_SOPT1CFG_USSWE(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT1CFG_ADDR(x), BP_SIM_SOPT1CFG_USSWE)))
 
 /*! @brief Format value for bitfield SIM_SOPT1CFG_USSWE. */
 #define BF_SIM_SOPT1CFG_USSWE(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT1CFG_USSWE) & BM_SIM_SOPT1CFG_USSWE)
 
 /*! @brief Set the USSWE field to a new value. */
-#define BW_SIM_SOPT1CFG_USSWE(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT1CFG_ADDR(x), BP_SIM_SOPT1CFG_USSWE) = (v))
+#define BW_SIM_SOPT1CFG_USSWE(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT1CFG_ADDR(x), BP_SIM_SOPT1CFG_USSWE), v))
 /*@}*/
 
 /*******************************************************************************
@@ -482,13 +482,13 @@ typedef union _hw_sim_sopt2
 #define BS_SIM_SOPT2_RTCCLKOUTSEL (1U)     /*!< Bit field size in bits for SIM_SOPT2_RTCCLKOUTSEL. */
 
 /*! @brief Read current value of the SIM_SOPT2_RTCCLKOUTSEL field. */
-#define BR_SIM_SOPT2_RTCCLKOUTSEL(x) (BITBAND_ACCESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_RTCCLKOUTSEL))
+#define BR_SIM_SOPT2_RTCCLKOUTSEL(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_RTCCLKOUTSEL)))
 
 /*! @brief Format value for bitfield SIM_SOPT2_RTCCLKOUTSEL. */
 #define BF_SIM_SOPT2_RTCCLKOUTSEL(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT2_RTCCLKOUTSEL) & BM_SIM_SOPT2_RTCCLKOUTSEL)
 
 /*! @brief Set the RTCCLKOUTSEL field to a new value. */
-#define BW_SIM_SOPT2_RTCCLKOUTSEL(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_RTCCLKOUTSEL) = (v))
+#define BW_SIM_SOPT2_RTCCLKOUTSEL(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_RTCCLKOUTSEL), v))
 /*@}*/
 
 /*!
@@ -512,13 +512,13 @@ typedef union _hw_sim_sopt2
 #define BS_SIM_SOPT2_CLKOUTSEL (3U)        /*!< Bit field size in bits for SIM_SOPT2_CLKOUTSEL. */
 
 /*! @brief Read current value of the SIM_SOPT2_CLKOUTSEL field. */
-#define BR_SIM_SOPT2_CLKOUTSEL(x) (HW_SIM_SOPT2(x).B.CLKOUTSEL)
+#define BR_SIM_SOPT2_CLKOUTSEL(x) (UNION_READ_FS(HW_SIM_SOPT2_ADDR(x), hw_sim_sopt2, B.CLKOUTSEL))
 
 /*! @brief Format value for bitfield SIM_SOPT2_CLKOUTSEL. */
 #define BF_SIM_SOPT2_CLKOUTSEL(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT2_CLKOUTSEL) & BM_SIM_SOPT2_CLKOUTSEL)
 
 /*! @brief Set the CLKOUTSEL field to a new value. */
-#define BW_SIM_SOPT2_CLKOUTSEL(x, v) (HW_SIM_SOPT2_WR(x, (HW_SIM_SOPT2_RD(x) & ~BM_SIM_SOPT2_CLKOUTSEL) | BF_SIM_SOPT2_CLKOUTSEL(v)))
+#define BW_SIM_SOPT2_CLKOUTSEL(x, v) (ADDRESS_WRITE32(HW_SIM_SOPT2_ADDR(x), (HW_SIM_SOPT2_RD(x) & ~BM_SIM_SOPT2_CLKOUTSEL) | BF_SIM_SOPT2_CLKOUTSEL(v)))
 /*@}*/
 
 /*!
@@ -543,13 +543,13 @@ typedef union _hw_sim_sopt2
 #define BS_SIM_SOPT2_FBSL    (2U)          /*!< Bit field size in bits for SIM_SOPT2_FBSL. */
 
 /*! @brief Read current value of the SIM_SOPT2_FBSL field. */
-#define BR_SIM_SOPT2_FBSL(x) (HW_SIM_SOPT2(x).B.FBSL)
+#define BR_SIM_SOPT2_FBSL(x) (UNION_READ_FS(HW_SIM_SOPT2_ADDR(x), hw_sim_sopt2, B.FBSL))
 
 /*! @brief Format value for bitfield SIM_SOPT2_FBSL. */
 #define BF_SIM_SOPT2_FBSL(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT2_FBSL) & BM_SIM_SOPT2_FBSL)
 
 /*! @brief Set the FBSL field to a new value. */
-#define BW_SIM_SOPT2_FBSL(x, v) (HW_SIM_SOPT2_WR(x, (HW_SIM_SOPT2_RD(x) & ~BM_SIM_SOPT2_FBSL) | BF_SIM_SOPT2_FBSL(v)))
+#define BW_SIM_SOPT2_FBSL(x, v) (ADDRESS_WRITE32(HW_SIM_SOPT2_ADDR(x), (HW_SIM_SOPT2_RD(x) & ~BM_SIM_SOPT2_FBSL) | BF_SIM_SOPT2_FBSL(v)))
 /*@}*/
 
 /*!
@@ -568,13 +568,13 @@ typedef union _hw_sim_sopt2
 #define BS_SIM_SOPT2_PTD7PAD (1U)          /*!< Bit field size in bits for SIM_SOPT2_PTD7PAD. */
 
 /*! @brief Read current value of the SIM_SOPT2_PTD7PAD field. */
-#define BR_SIM_SOPT2_PTD7PAD(x) (BITBAND_ACCESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_PTD7PAD))
+#define BR_SIM_SOPT2_PTD7PAD(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_PTD7PAD)))
 
 /*! @brief Format value for bitfield SIM_SOPT2_PTD7PAD. */
 #define BF_SIM_SOPT2_PTD7PAD(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT2_PTD7PAD) & BM_SIM_SOPT2_PTD7PAD)
 
 /*! @brief Set the PTD7PAD field to a new value. */
-#define BW_SIM_SOPT2_PTD7PAD(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_PTD7PAD) = (v))
+#define BW_SIM_SOPT2_PTD7PAD(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_PTD7PAD), v))
 /*@}*/
 
 /*!
@@ -593,13 +593,13 @@ typedef union _hw_sim_sopt2
 #define BS_SIM_SOPT2_TRACECLKSEL (1U)      /*!< Bit field size in bits for SIM_SOPT2_TRACECLKSEL. */
 
 /*! @brief Read current value of the SIM_SOPT2_TRACECLKSEL field. */
-#define BR_SIM_SOPT2_TRACECLKSEL(x) (BITBAND_ACCESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_TRACECLKSEL))
+#define BR_SIM_SOPT2_TRACECLKSEL(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_TRACECLKSEL)))
 
 /*! @brief Format value for bitfield SIM_SOPT2_TRACECLKSEL. */
 #define BF_SIM_SOPT2_TRACECLKSEL(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT2_TRACECLKSEL) & BM_SIM_SOPT2_TRACECLKSEL)
 
 /*! @brief Set the TRACECLKSEL field to a new value. */
-#define BW_SIM_SOPT2_TRACECLKSEL(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_TRACECLKSEL) = (v))
+#define BW_SIM_SOPT2_TRACECLKSEL(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_TRACECLKSEL), v))
 /*@}*/
 
 /*!
@@ -619,13 +619,13 @@ typedef union _hw_sim_sopt2
 #define BS_SIM_SOPT2_PLLFLLSEL (2U)        /*!< Bit field size in bits for SIM_SOPT2_PLLFLLSEL. */
 
 /*! @brief Read current value of the SIM_SOPT2_PLLFLLSEL field. */
-#define BR_SIM_SOPT2_PLLFLLSEL(x) (HW_SIM_SOPT2(x).B.PLLFLLSEL)
+#define BR_SIM_SOPT2_PLLFLLSEL(x) (UNION_READ_FS(HW_SIM_SOPT2_ADDR(x), hw_sim_sopt2, B.PLLFLLSEL))
 
 /*! @brief Format value for bitfield SIM_SOPT2_PLLFLLSEL. */
 #define BF_SIM_SOPT2_PLLFLLSEL(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT2_PLLFLLSEL) & BM_SIM_SOPT2_PLLFLLSEL)
 
 /*! @brief Set the PLLFLLSEL field to a new value. */
-#define BW_SIM_SOPT2_PLLFLLSEL(x, v) (HW_SIM_SOPT2_WR(x, (HW_SIM_SOPT2_RD(x) & ~BM_SIM_SOPT2_PLLFLLSEL) | BF_SIM_SOPT2_PLLFLLSEL(v)))
+#define BW_SIM_SOPT2_PLLFLLSEL(x, v) (ADDRESS_WRITE32(HW_SIM_SOPT2_ADDR(x), (HW_SIM_SOPT2_RD(x) & ~BM_SIM_SOPT2_PLLFLLSEL) | BF_SIM_SOPT2_PLLFLLSEL(v)))
 /*@}*/
 
 /*!
@@ -645,13 +645,13 @@ typedef union _hw_sim_sopt2
 #define BS_SIM_SOPT2_USBSRC  (1U)          /*!< Bit field size in bits for SIM_SOPT2_USBSRC. */
 
 /*! @brief Read current value of the SIM_SOPT2_USBSRC field. */
-#define BR_SIM_SOPT2_USBSRC(x) (BITBAND_ACCESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_USBSRC))
+#define BR_SIM_SOPT2_USBSRC(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_USBSRC)))
 
 /*! @brief Format value for bitfield SIM_SOPT2_USBSRC. */
 #define BF_SIM_SOPT2_USBSRC(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT2_USBSRC) & BM_SIM_SOPT2_USBSRC)
 
 /*! @brief Set the USBSRC field to a new value. */
-#define BW_SIM_SOPT2_USBSRC(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_USBSRC) = (v))
+#define BW_SIM_SOPT2_USBSRC(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_USBSRC), v))
 /*@}*/
 
 /*!
@@ -669,13 +669,13 @@ typedef union _hw_sim_sopt2
 #define BS_SIM_SOPT2_RMIISRC (1U)          /*!< Bit field size in bits for SIM_SOPT2_RMIISRC. */
 
 /*! @brief Read current value of the SIM_SOPT2_RMIISRC field. */
-#define BR_SIM_SOPT2_RMIISRC(x) (BITBAND_ACCESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_RMIISRC))
+#define BR_SIM_SOPT2_RMIISRC(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_RMIISRC)))
 
 /*! @brief Format value for bitfield SIM_SOPT2_RMIISRC. */
 #define BF_SIM_SOPT2_RMIISRC(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT2_RMIISRC) & BM_SIM_SOPT2_RMIISRC)
 
 /*! @brief Set the RMIISRC field to a new value. */
-#define BW_SIM_SOPT2_RMIISRC(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_RMIISRC) = (v))
+#define BW_SIM_SOPT2_RMIISRC(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT2_ADDR(x), BP_SIM_SOPT2_RMIISRC), v))
 /*@}*/
 
 /*!
@@ -696,13 +696,13 @@ typedef union _hw_sim_sopt2
 #define BS_SIM_SOPT2_TIMESRC (2U)          /*!< Bit field size in bits for SIM_SOPT2_TIMESRC. */
 
 /*! @brief Read current value of the SIM_SOPT2_TIMESRC field. */
-#define BR_SIM_SOPT2_TIMESRC(x) (HW_SIM_SOPT2(x).B.TIMESRC)
+#define BR_SIM_SOPT2_TIMESRC(x) (UNION_READ_FS(HW_SIM_SOPT2_ADDR(x), hw_sim_sopt2, B.TIMESRC))
 
 /*! @brief Format value for bitfield SIM_SOPT2_TIMESRC. */
 #define BF_SIM_SOPT2_TIMESRC(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT2_TIMESRC) & BM_SIM_SOPT2_TIMESRC)
 
 /*! @brief Set the TIMESRC field to a new value. */
-#define BW_SIM_SOPT2_TIMESRC(x, v) (HW_SIM_SOPT2_WR(x, (HW_SIM_SOPT2_RD(x) & ~BM_SIM_SOPT2_TIMESRC) | BF_SIM_SOPT2_TIMESRC(v)))
+#define BW_SIM_SOPT2_TIMESRC(x, v) (ADDRESS_WRITE32(HW_SIM_SOPT2_ADDR(x), (HW_SIM_SOPT2_RD(x) & ~BM_SIM_SOPT2_TIMESRC) | BF_SIM_SOPT2_TIMESRC(v)))
 /*@}*/
 
 /*!
@@ -723,13 +723,13 @@ typedef union _hw_sim_sopt2
 #define BS_SIM_SOPT2_SDHCSRC (2U)          /*!< Bit field size in bits for SIM_SOPT2_SDHCSRC. */
 
 /*! @brief Read current value of the SIM_SOPT2_SDHCSRC field. */
-#define BR_SIM_SOPT2_SDHCSRC(x) (HW_SIM_SOPT2(x).B.SDHCSRC)
+#define BR_SIM_SOPT2_SDHCSRC(x) (UNION_READ_FS(HW_SIM_SOPT2_ADDR(x), hw_sim_sopt2, B.SDHCSRC))
 
 /*! @brief Format value for bitfield SIM_SOPT2_SDHCSRC. */
 #define BF_SIM_SOPT2_SDHCSRC(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT2_SDHCSRC) & BM_SIM_SOPT2_SDHCSRC)
 
 /*! @brief Set the SDHCSRC field to a new value. */
-#define BW_SIM_SOPT2_SDHCSRC(x, v) (HW_SIM_SOPT2_WR(x, (HW_SIM_SOPT2_RD(x) & ~BM_SIM_SOPT2_SDHCSRC) | BF_SIM_SOPT2_SDHCSRC(v)))
+#define BW_SIM_SOPT2_SDHCSRC(x, v) (ADDRESS_WRITE32(HW_SIM_SOPT2_ADDR(x), (HW_SIM_SOPT2_RD(x) & ~BM_SIM_SOPT2_SDHCSRC) | BF_SIM_SOPT2_SDHCSRC(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -814,13 +814,13 @@ typedef union _hw_sim_sopt4
 #define BS_SIM_SOPT4_FTM0FLT0 (1U)         /*!< Bit field size in bits for SIM_SOPT4_FTM0FLT0. */
 
 /*! @brief Read current value of the SIM_SOPT4_FTM0FLT0 field. */
-#define BR_SIM_SOPT4_FTM0FLT0(x) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0FLT0))
+#define BR_SIM_SOPT4_FTM0FLT0(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0FLT0)))
 
 /*! @brief Format value for bitfield SIM_SOPT4_FTM0FLT0. */
 #define BF_SIM_SOPT4_FTM0FLT0(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT4_FTM0FLT0) & BM_SIM_SOPT4_FTM0FLT0)
 
 /*! @brief Set the FTM0FLT0 field to a new value. */
-#define BW_SIM_SOPT4_FTM0FLT0(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0FLT0) = (v))
+#define BW_SIM_SOPT4_FTM0FLT0(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0FLT0), v))
 /*@}*/
 
 /*!
@@ -840,13 +840,13 @@ typedef union _hw_sim_sopt4
 #define BS_SIM_SOPT4_FTM0FLT1 (1U)         /*!< Bit field size in bits for SIM_SOPT4_FTM0FLT1. */
 
 /*! @brief Read current value of the SIM_SOPT4_FTM0FLT1 field. */
-#define BR_SIM_SOPT4_FTM0FLT1(x) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0FLT1))
+#define BR_SIM_SOPT4_FTM0FLT1(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0FLT1)))
 
 /*! @brief Format value for bitfield SIM_SOPT4_FTM0FLT1. */
 #define BF_SIM_SOPT4_FTM0FLT1(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT4_FTM0FLT1) & BM_SIM_SOPT4_FTM0FLT1)
 
 /*! @brief Set the FTM0FLT1 field to a new value. */
-#define BW_SIM_SOPT4_FTM0FLT1(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0FLT1) = (v))
+#define BW_SIM_SOPT4_FTM0FLT1(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0FLT1), v))
 /*@}*/
 
 /*!
@@ -866,13 +866,13 @@ typedef union _hw_sim_sopt4
 #define BS_SIM_SOPT4_FTM0FLT2 (1U)         /*!< Bit field size in bits for SIM_SOPT4_FTM0FLT2. */
 
 /*! @brief Read current value of the SIM_SOPT4_FTM0FLT2 field. */
-#define BR_SIM_SOPT4_FTM0FLT2(x) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0FLT2))
+#define BR_SIM_SOPT4_FTM0FLT2(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0FLT2)))
 
 /*! @brief Format value for bitfield SIM_SOPT4_FTM0FLT2. */
 #define BF_SIM_SOPT4_FTM0FLT2(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT4_FTM0FLT2) & BM_SIM_SOPT4_FTM0FLT2)
 
 /*! @brief Set the FTM0FLT2 field to a new value. */
-#define BW_SIM_SOPT4_FTM0FLT2(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0FLT2) = (v))
+#define BW_SIM_SOPT4_FTM0FLT2(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0FLT2), v))
 /*@}*/
 
 /*!
@@ -892,13 +892,13 @@ typedef union _hw_sim_sopt4
 #define BS_SIM_SOPT4_FTM1FLT0 (1U)         /*!< Bit field size in bits for SIM_SOPT4_FTM1FLT0. */
 
 /*! @brief Read current value of the SIM_SOPT4_FTM1FLT0 field. */
-#define BR_SIM_SOPT4_FTM1FLT0(x) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM1FLT0))
+#define BR_SIM_SOPT4_FTM1FLT0(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM1FLT0)))
 
 /*! @brief Format value for bitfield SIM_SOPT4_FTM1FLT0. */
 #define BF_SIM_SOPT4_FTM1FLT0(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT4_FTM1FLT0) & BM_SIM_SOPT4_FTM1FLT0)
 
 /*! @brief Set the FTM1FLT0 field to a new value. */
-#define BW_SIM_SOPT4_FTM1FLT0(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM1FLT0) = (v))
+#define BW_SIM_SOPT4_FTM1FLT0(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM1FLT0), v))
 /*@}*/
 
 /*!
@@ -918,13 +918,13 @@ typedef union _hw_sim_sopt4
 #define BS_SIM_SOPT4_FTM2FLT0 (1U)         /*!< Bit field size in bits for SIM_SOPT4_FTM2FLT0. */
 
 /*! @brief Read current value of the SIM_SOPT4_FTM2FLT0 field. */
-#define BR_SIM_SOPT4_FTM2FLT0(x) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM2FLT0))
+#define BR_SIM_SOPT4_FTM2FLT0(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM2FLT0)))
 
 /*! @brief Format value for bitfield SIM_SOPT4_FTM2FLT0. */
 #define BF_SIM_SOPT4_FTM2FLT0(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT4_FTM2FLT0) & BM_SIM_SOPT4_FTM2FLT0)
 
 /*! @brief Set the FTM2FLT0 field to a new value. */
-#define BW_SIM_SOPT4_FTM2FLT0(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM2FLT0) = (v))
+#define BW_SIM_SOPT4_FTM2FLT0(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM2FLT0), v))
 /*@}*/
 
 /*!
@@ -944,13 +944,13 @@ typedef union _hw_sim_sopt4
 #define BS_SIM_SOPT4_FTM3FLT0 (1U)         /*!< Bit field size in bits for SIM_SOPT4_FTM3FLT0. */
 
 /*! @brief Read current value of the SIM_SOPT4_FTM3FLT0 field. */
-#define BR_SIM_SOPT4_FTM3FLT0(x) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM3FLT0))
+#define BR_SIM_SOPT4_FTM3FLT0(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM3FLT0)))
 
 /*! @brief Format value for bitfield SIM_SOPT4_FTM3FLT0. */
 #define BF_SIM_SOPT4_FTM3FLT0(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT4_FTM3FLT0) & BM_SIM_SOPT4_FTM3FLT0)
 
 /*! @brief Set the FTM3FLT0 field to a new value. */
-#define BW_SIM_SOPT4_FTM3FLT0(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM3FLT0) = (v))
+#define BW_SIM_SOPT4_FTM3FLT0(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM3FLT0), v))
 /*@}*/
 
 /*!
@@ -971,13 +971,13 @@ typedef union _hw_sim_sopt4
 #define BS_SIM_SOPT4_FTM1CH0SRC (2U)       /*!< Bit field size in bits for SIM_SOPT4_FTM1CH0SRC. */
 
 /*! @brief Read current value of the SIM_SOPT4_FTM1CH0SRC field. */
-#define BR_SIM_SOPT4_FTM1CH0SRC(x) (HW_SIM_SOPT4(x).B.FTM1CH0SRC)
+#define BR_SIM_SOPT4_FTM1CH0SRC(x) (UNION_READ_FS(HW_SIM_SOPT4_ADDR(x), hw_sim_sopt4, B.FTM1CH0SRC))
 
 /*! @brief Format value for bitfield SIM_SOPT4_FTM1CH0SRC. */
 #define BF_SIM_SOPT4_FTM1CH0SRC(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT4_FTM1CH0SRC) & BM_SIM_SOPT4_FTM1CH0SRC)
 
 /*! @brief Set the FTM1CH0SRC field to a new value. */
-#define BW_SIM_SOPT4_FTM1CH0SRC(x, v) (HW_SIM_SOPT4_WR(x, (HW_SIM_SOPT4_RD(x) & ~BM_SIM_SOPT4_FTM1CH0SRC) | BF_SIM_SOPT4_FTM1CH0SRC(v)))
+#define BW_SIM_SOPT4_FTM1CH0SRC(x, v) (ADDRESS_WRITE32(HW_SIM_SOPT4_ADDR(x), (HW_SIM_SOPT4_RD(x) & ~BM_SIM_SOPT4_FTM1CH0SRC) | BF_SIM_SOPT4_FTM1CH0SRC(v)))
 /*@}*/
 
 /*!
@@ -998,13 +998,13 @@ typedef union _hw_sim_sopt4
 #define BS_SIM_SOPT4_FTM2CH0SRC (2U)       /*!< Bit field size in bits for SIM_SOPT4_FTM2CH0SRC. */
 
 /*! @brief Read current value of the SIM_SOPT4_FTM2CH0SRC field. */
-#define BR_SIM_SOPT4_FTM2CH0SRC(x) (HW_SIM_SOPT4(x).B.FTM2CH0SRC)
+#define BR_SIM_SOPT4_FTM2CH0SRC(x) (UNION_READ_FS(HW_SIM_SOPT4_ADDR(x), hw_sim_sopt4, B.FTM2CH0SRC))
 
 /*! @brief Format value for bitfield SIM_SOPT4_FTM2CH0SRC. */
 #define BF_SIM_SOPT4_FTM2CH0SRC(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT4_FTM2CH0SRC) & BM_SIM_SOPT4_FTM2CH0SRC)
 
 /*! @brief Set the FTM2CH0SRC field to a new value. */
-#define BW_SIM_SOPT4_FTM2CH0SRC(x, v) (HW_SIM_SOPT4_WR(x, (HW_SIM_SOPT4_RD(x) & ~BM_SIM_SOPT4_FTM2CH0SRC) | BF_SIM_SOPT4_FTM2CH0SRC(v)))
+#define BW_SIM_SOPT4_FTM2CH0SRC(x, v) (ADDRESS_WRITE32(HW_SIM_SOPT4_ADDR(x), (HW_SIM_SOPT4_RD(x) & ~BM_SIM_SOPT4_FTM2CH0SRC) | BF_SIM_SOPT4_FTM2CH0SRC(v)))
 /*@}*/
 
 /*!
@@ -1024,13 +1024,13 @@ typedef union _hw_sim_sopt4
 #define BS_SIM_SOPT4_FTM0CLKSEL (1U)       /*!< Bit field size in bits for SIM_SOPT4_FTM0CLKSEL. */
 
 /*! @brief Read current value of the SIM_SOPT4_FTM0CLKSEL field. */
-#define BR_SIM_SOPT4_FTM0CLKSEL(x) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0CLKSEL))
+#define BR_SIM_SOPT4_FTM0CLKSEL(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0CLKSEL)))
 
 /*! @brief Format value for bitfield SIM_SOPT4_FTM0CLKSEL. */
 #define BF_SIM_SOPT4_FTM0CLKSEL(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT4_FTM0CLKSEL) & BM_SIM_SOPT4_FTM0CLKSEL)
 
 /*! @brief Set the FTM0CLKSEL field to a new value. */
-#define BW_SIM_SOPT4_FTM0CLKSEL(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0CLKSEL) = (v))
+#define BW_SIM_SOPT4_FTM0CLKSEL(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0CLKSEL), v))
 /*@}*/
 
 /*!
@@ -1050,13 +1050,13 @@ typedef union _hw_sim_sopt4
 #define BS_SIM_SOPT4_FTM1CLKSEL (1U)       /*!< Bit field size in bits for SIM_SOPT4_FTM1CLKSEL. */
 
 /*! @brief Read current value of the SIM_SOPT4_FTM1CLKSEL field. */
-#define BR_SIM_SOPT4_FTM1CLKSEL(x) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM1CLKSEL))
+#define BR_SIM_SOPT4_FTM1CLKSEL(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM1CLKSEL)))
 
 /*! @brief Format value for bitfield SIM_SOPT4_FTM1CLKSEL. */
 #define BF_SIM_SOPT4_FTM1CLKSEL(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT4_FTM1CLKSEL) & BM_SIM_SOPT4_FTM1CLKSEL)
 
 /*! @brief Set the FTM1CLKSEL field to a new value. */
-#define BW_SIM_SOPT4_FTM1CLKSEL(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM1CLKSEL) = (v))
+#define BW_SIM_SOPT4_FTM1CLKSEL(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM1CLKSEL), v))
 /*@}*/
 
 /*!
@@ -1076,13 +1076,13 @@ typedef union _hw_sim_sopt4
 #define BS_SIM_SOPT4_FTM2CLKSEL (1U)       /*!< Bit field size in bits for SIM_SOPT4_FTM2CLKSEL. */
 
 /*! @brief Read current value of the SIM_SOPT4_FTM2CLKSEL field. */
-#define BR_SIM_SOPT4_FTM2CLKSEL(x) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM2CLKSEL))
+#define BR_SIM_SOPT4_FTM2CLKSEL(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM2CLKSEL)))
 
 /*! @brief Format value for bitfield SIM_SOPT4_FTM2CLKSEL. */
 #define BF_SIM_SOPT4_FTM2CLKSEL(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT4_FTM2CLKSEL) & BM_SIM_SOPT4_FTM2CLKSEL)
 
 /*! @brief Set the FTM2CLKSEL field to a new value. */
-#define BW_SIM_SOPT4_FTM2CLKSEL(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM2CLKSEL) = (v))
+#define BW_SIM_SOPT4_FTM2CLKSEL(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM2CLKSEL), v))
 /*@}*/
 
 /*!
@@ -1102,13 +1102,13 @@ typedef union _hw_sim_sopt4
 #define BS_SIM_SOPT4_FTM3CLKSEL (1U)       /*!< Bit field size in bits for SIM_SOPT4_FTM3CLKSEL. */
 
 /*! @brief Read current value of the SIM_SOPT4_FTM3CLKSEL field. */
-#define BR_SIM_SOPT4_FTM3CLKSEL(x) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM3CLKSEL))
+#define BR_SIM_SOPT4_FTM3CLKSEL(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM3CLKSEL)))
 
 /*! @brief Format value for bitfield SIM_SOPT4_FTM3CLKSEL. */
 #define BF_SIM_SOPT4_FTM3CLKSEL(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT4_FTM3CLKSEL) & BM_SIM_SOPT4_FTM3CLKSEL)
 
 /*! @brief Set the FTM3CLKSEL field to a new value. */
-#define BW_SIM_SOPT4_FTM3CLKSEL(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM3CLKSEL) = (v))
+#define BW_SIM_SOPT4_FTM3CLKSEL(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM3CLKSEL), v))
 /*@}*/
 
 /*!
@@ -1126,13 +1126,13 @@ typedef union _hw_sim_sopt4
 #define BS_SIM_SOPT4_FTM0TRG0SRC (1U)      /*!< Bit field size in bits for SIM_SOPT4_FTM0TRG0SRC. */
 
 /*! @brief Read current value of the SIM_SOPT4_FTM0TRG0SRC field. */
-#define BR_SIM_SOPT4_FTM0TRG0SRC(x) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0TRG0SRC))
+#define BR_SIM_SOPT4_FTM0TRG0SRC(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0TRG0SRC)))
 
 /*! @brief Format value for bitfield SIM_SOPT4_FTM0TRG0SRC. */
 #define BF_SIM_SOPT4_FTM0TRG0SRC(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT4_FTM0TRG0SRC) & BM_SIM_SOPT4_FTM0TRG0SRC)
 
 /*! @brief Set the FTM0TRG0SRC field to a new value. */
-#define BW_SIM_SOPT4_FTM0TRG0SRC(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0TRG0SRC) = (v))
+#define BW_SIM_SOPT4_FTM0TRG0SRC(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0TRG0SRC), v))
 /*@}*/
 
 /*!
@@ -1150,13 +1150,13 @@ typedef union _hw_sim_sopt4
 #define BS_SIM_SOPT4_FTM0TRG1SRC (1U)      /*!< Bit field size in bits for SIM_SOPT4_FTM0TRG1SRC. */
 
 /*! @brief Read current value of the SIM_SOPT4_FTM0TRG1SRC field. */
-#define BR_SIM_SOPT4_FTM0TRG1SRC(x) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0TRG1SRC))
+#define BR_SIM_SOPT4_FTM0TRG1SRC(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0TRG1SRC)))
 
 /*! @brief Format value for bitfield SIM_SOPT4_FTM0TRG1SRC. */
 #define BF_SIM_SOPT4_FTM0TRG1SRC(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT4_FTM0TRG1SRC) & BM_SIM_SOPT4_FTM0TRG1SRC)
 
 /*! @brief Set the FTM0TRG1SRC field to a new value. */
-#define BW_SIM_SOPT4_FTM0TRG1SRC(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0TRG1SRC) = (v))
+#define BW_SIM_SOPT4_FTM0TRG1SRC(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM0TRG1SRC), v))
 /*@}*/
 
 /*!
@@ -1174,13 +1174,13 @@ typedef union _hw_sim_sopt4
 #define BS_SIM_SOPT4_FTM3TRG0SRC (1U)      /*!< Bit field size in bits for SIM_SOPT4_FTM3TRG0SRC. */
 
 /*! @brief Read current value of the SIM_SOPT4_FTM3TRG0SRC field. */
-#define BR_SIM_SOPT4_FTM3TRG0SRC(x) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM3TRG0SRC))
+#define BR_SIM_SOPT4_FTM3TRG0SRC(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM3TRG0SRC)))
 
 /*! @brief Format value for bitfield SIM_SOPT4_FTM3TRG0SRC. */
 #define BF_SIM_SOPT4_FTM3TRG0SRC(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT4_FTM3TRG0SRC) & BM_SIM_SOPT4_FTM3TRG0SRC)
 
 /*! @brief Set the FTM3TRG0SRC field to a new value. */
-#define BW_SIM_SOPT4_FTM3TRG0SRC(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM3TRG0SRC) = (v))
+#define BW_SIM_SOPT4_FTM3TRG0SRC(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM3TRG0SRC), v))
 /*@}*/
 
 /*!
@@ -1198,13 +1198,13 @@ typedef union _hw_sim_sopt4
 #define BS_SIM_SOPT4_FTM3TRG1SRC (1U)      /*!< Bit field size in bits for SIM_SOPT4_FTM3TRG1SRC. */
 
 /*! @brief Read current value of the SIM_SOPT4_FTM3TRG1SRC field. */
-#define BR_SIM_SOPT4_FTM3TRG1SRC(x) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM3TRG1SRC))
+#define BR_SIM_SOPT4_FTM3TRG1SRC(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM3TRG1SRC)))
 
 /*! @brief Format value for bitfield SIM_SOPT4_FTM3TRG1SRC. */
 #define BF_SIM_SOPT4_FTM3TRG1SRC(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT4_FTM3TRG1SRC) & BM_SIM_SOPT4_FTM3TRG1SRC)
 
 /*! @brief Set the FTM3TRG1SRC field to a new value. */
-#define BW_SIM_SOPT4_FTM3TRG1SRC(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM3TRG1SRC) = (v))
+#define BW_SIM_SOPT4_FTM3TRG1SRC(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT4_ADDR(x), BP_SIM_SOPT4_FTM3TRG1SRC), v))
 /*@}*/
 
 /*******************************************************************************
@@ -1268,13 +1268,13 @@ typedef union _hw_sim_sopt5
 #define BS_SIM_SOPT5_UART0TXSRC (2U)       /*!< Bit field size in bits for SIM_SOPT5_UART0TXSRC. */
 
 /*! @brief Read current value of the SIM_SOPT5_UART0TXSRC field. */
-#define BR_SIM_SOPT5_UART0TXSRC(x) (HW_SIM_SOPT5(x).B.UART0TXSRC)
+#define BR_SIM_SOPT5_UART0TXSRC(x) (UNION_READ_FS(HW_SIM_SOPT5_ADDR(x), hw_sim_sopt5, B.UART0TXSRC))
 
 /*! @brief Format value for bitfield SIM_SOPT5_UART0TXSRC. */
 #define BF_SIM_SOPT5_UART0TXSRC(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT5_UART0TXSRC) & BM_SIM_SOPT5_UART0TXSRC)
 
 /*! @brief Set the UART0TXSRC field to a new value. */
-#define BW_SIM_SOPT5_UART0TXSRC(x, v) (HW_SIM_SOPT5_WR(x, (HW_SIM_SOPT5_RD(x) & ~BM_SIM_SOPT5_UART0TXSRC) | BF_SIM_SOPT5_UART0TXSRC(v)))
+#define BW_SIM_SOPT5_UART0TXSRC(x, v) (ADDRESS_WRITE32(HW_SIM_SOPT5_ADDR(x), (HW_SIM_SOPT5_RD(x) & ~BM_SIM_SOPT5_UART0TXSRC) | BF_SIM_SOPT5_UART0TXSRC(v)))
 /*@}*/
 
 /*!
@@ -1294,13 +1294,13 @@ typedef union _hw_sim_sopt5
 #define BS_SIM_SOPT5_UART0RXSRC (2U)       /*!< Bit field size in bits for SIM_SOPT5_UART0RXSRC. */
 
 /*! @brief Read current value of the SIM_SOPT5_UART0RXSRC field. */
-#define BR_SIM_SOPT5_UART0RXSRC(x) (HW_SIM_SOPT5(x).B.UART0RXSRC)
+#define BR_SIM_SOPT5_UART0RXSRC(x) (UNION_READ_FS(HW_SIM_SOPT5_ADDR(x), hw_sim_sopt5, B.UART0RXSRC))
 
 /*! @brief Format value for bitfield SIM_SOPT5_UART0RXSRC. */
 #define BF_SIM_SOPT5_UART0RXSRC(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT5_UART0RXSRC) & BM_SIM_SOPT5_UART0RXSRC)
 
 /*! @brief Set the UART0RXSRC field to a new value. */
-#define BW_SIM_SOPT5_UART0RXSRC(x, v) (HW_SIM_SOPT5_WR(x, (HW_SIM_SOPT5_RD(x) & ~BM_SIM_SOPT5_UART0RXSRC) | BF_SIM_SOPT5_UART0RXSRC(v)))
+#define BW_SIM_SOPT5_UART0RXSRC(x, v) (ADDRESS_WRITE32(HW_SIM_SOPT5_ADDR(x), (HW_SIM_SOPT5_RD(x) & ~BM_SIM_SOPT5_UART0RXSRC) | BF_SIM_SOPT5_UART0RXSRC(v)))
 /*@}*/
 
 /*!
@@ -1320,13 +1320,13 @@ typedef union _hw_sim_sopt5
 #define BS_SIM_SOPT5_UART1TXSRC (2U)       /*!< Bit field size in bits for SIM_SOPT5_UART1TXSRC. */
 
 /*! @brief Read current value of the SIM_SOPT5_UART1TXSRC field. */
-#define BR_SIM_SOPT5_UART1TXSRC(x) (HW_SIM_SOPT5(x).B.UART1TXSRC)
+#define BR_SIM_SOPT5_UART1TXSRC(x) (UNION_READ_FS(HW_SIM_SOPT5_ADDR(x), hw_sim_sopt5, B.UART1TXSRC))
 
 /*! @brief Format value for bitfield SIM_SOPT5_UART1TXSRC. */
 #define BF_SIM_SOPT5_UART1TXSRC(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT5_UART1TXSRC) & BM_SIM_SOPT5_UART1TXSRC)
 
 /*! @brief Set the UART1TXSRC field to a new value. */
-#define BW_SIM_SOPT5_UART1TXSRC(x, v) (HW_SIM_SOPT5_WR(x, (HW_SIM_SOPT5_RD(x) & ~BM_SIM_SOPT5_UART1TXSRC) | BF_SIM_SOPT5_UART1TXSRC(v)))
+#define BW_SIM_SOPT5_UART1TXSRC(x, v) (ADDRESS_WRITE32(HW_SIM_SOPT5_ADDR(x), (HW_SIM_SOPT5_RD(x) & ~BM_SIM_SOPT5_UART1TXSRC) | BF_SIM_SOPT5_UART1TXSRC(v)))
 /*@}*/
 
 /*!
@@ -1346,13 +1346,13 @@ typedef union _hw_sim_sopt5
 #define BS_SIM_SOPT5_UART1RXSRC (2U)       /*!< Bit field size in bits for SIM_SOPT5_UART1RXSRC. */
 
 /*! @brief Read current value of the SIM_SOPT5_UART1RXSRC field. */
-#define BR_SIM_SOPT5_UART1RXSRC(x) (HW_SIM_SOPT5(x).B.UART1RXSRC)
+#define BR_SIM_SOPT5_UART1RXSRC(x) (UNION_READ_FS(HW_SIM_SOPT5_ADDR(x), hw_sim_sopt5, B.UART1RXSRC))
 
 /*! @brief Format value for bitfield SIM_SOPT5_UART1RXSRC. */
 #define BF_SIM_SOPT5_UART1RXSRC(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT5_UART1RXSRC) & BM_SIM_SOPT5_UART1RXSRC)
 
 /*! @brief Set the UART1RXSRC field to a new value. */
-#define BW_SIM_SOPT5_UART1RXSRC(x, v) (HW_SIM_SOPT5_WR(x, (HW_SIM_SOPT5_RD(x) & ~BM_SIM_SOPT5_UART1RXSRC) | BF_SIM_SOPT5_UART1RXSRC(v)))
+#define BW_SIM_SOPT5_UART1RXSRC(x, v) (ADDRESS_WRITE32(HW_SIM_SOPT5_ADDR(x), (HW_SIM_SOPT5_RD(x) & ~BM_SIM_SOPT5_UART1RXSRC) | BF_SIM_SOPT5_UART1RXSRC(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1429,13 +1429,13 @@ typedef union _hw_sim_sopt7
 #define BS_SIM_SOPT7_ADC0TRGSEL (4U)       /*!< Bit field size in bits for SIM_SOPT7_ADC0TRGSEL. */
 
 /*! @brief Read current value of the SIM_SOPT7_ADC0TRGSEL field. */
-#define BR_SIM_SOPT7_ADC0TRGSEL(x) (HW_SIM_SOPT7(x).B.ADC0TRGSEL)
+#define BR_SIM_SOPT7_ADC0TRGSEL(x) (UNION_READ_FS(HW_SIM_SOPT7_ADDR(x), hw_sim_sopt7, B.ADC0TRGSEL))
 
 /*! @brief Format value for bitfield SIM_SOPT7_ADC0TRGSEL. */
 #define BF_SIM_SOPT7_ADC0TRGSEL(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT7_ADC0TRGSEL) & BM_SIM_SOPT7_ADC0TRGSEL)
 
 /*! @brief Set the ADC0TRGSEL field to a new value. */
-#define BW_SIM_SOPT7_ADC0TRGSEL(x, v) (HW_SIM_SOPT7_WR(x, (HW_SIM_SOPT7_RD(x) & ~BM_SIM_SOPT7_ADC0TRGSEL) | BF_SIM_SOPT7_ADC0TRGSEL(v)))
+#define BW_SIM_SOPT7_ADC0TRGSEL(x, v) (ADDRESS_WRITE32(HW_SIM_SOPT7_ADDR(x), (HW_SIM_SOPT7_RD(x) & ~BM_SIM_SOPT7_ADC0TRGSEL) | BF_SIM_SOPT7_ADC0TRGSEL(v)))
 /*@}*/
 
 /*!
@@ -1454,13 +1454,13 @@ typedef union _hw_sim_sopt7
 #define BS_SIM_SOPT7_ADC0PRETRGSEL (1U)    /*!< Bit field size in bits for SIM_SOPT7_ADC0PRETRGSEL. */
 
 /*! @brief Read current value of the SIM_SOPT7_ADC0PRETRGSEL field. */
-#define BR_SIM_SOPT7_ADC0PRETRGSEL(x) (BITBAND_ACCESS32(HW_SIM_SOPT7_ADDR(x), BP_SIM_SOPT7_ADC0PRETRGSEL))
+#define BR_SIM_SOPT7_ADC0PRETRGSEL(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT7_ADDR(x), BP_SIM_SOPT7_ADC0PRETRGSEL)))
 
 /*! @brief Format value for bitfield SIM_SOPT7_ADC0PRETRGSEL. */
 #define BF_SIM_SOPT7_ADC0PRETRGSEL(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT7_ADC0PRETRGSEL) & BM_SIM_SOPT7_ADC0PRETRGSEL)
 
 /*! @brief Set the ADC0PRETRGSEL field to a new value. */
-#define BW_SIM_SOPT7_ADC0PRETRGSEL(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT7_ADDR(x), BP_SIM_SOPT7_ADC0PRETRGSEL) = (v))
+#define BW_SIM_SOPT7_ADC0PRETRGSEL(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT7_ADDR(x), BP_SIM_SOPT7_ADC0PRETRGSEL), v))
 /*@}*/
 
 /*!
@@ -1478,13 +1478,13 @@ typedef union _hw_sim_sopt7
 #define BS_SIM_SOPT7_ADC0ALTTRGEN (1U)     /*!< Bit field size in bits for SIM_SOPT7_ADC0ALTTRGEN. */
 
 /*! @brief Read current value of the SIM_SOPT7_ADC0ALTTRGEN field. */
-#define BR_SIM_SOPT7_ADC0ALTTRGEN(x) (BITBAND_ACCESS32(HW_SIM_SOPT7_ADDR(x), BP_SIM_SOPT7_ADC0ALTTRGEN))
+#define BR_SIM_SOPT7_ADC0ALTTRGEN(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT7_ADDR(x), BP_SIM_SOPT7_ADC0ALTTRGEN)))
 
 /*! @brief Format value for bitfield SIM_SOPT7_ADC0ALTTRGEN. */
 #define BF_SIM_SOPT7_ADC0ALTTRGEN(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT7_ADC0ALTTRGEN) & BM_SIM_SOPT7_ADC0ALTTRGEN)
 
 /*! @brief Set the ADC0ALTTRGEN field to a new value. */
-#define BW_SIM_SOPT7_ADC0ALTTRGEN(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT7_ADDR(x), BP_SIM_SOPT7_ADC0ALTTRGEN) = (v))
+#define BW_SIM_SOPT7_ADC0ALTTRGEN(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT7_ADDR(x), BP_SIM_SOPT7_ADC0ALTTRGEN), v))
 /*@}*/
 
 /*!
@@ -1517,13 +1517,13 @@ typedef union _hw_sim_sopt7
 #define BS_SIM_SOPT7_ADC1TRGSEL (4U)       /*!< Bit field size in bits for SIM_SOPT7_ADC1TRGSEL. */
 
 /*! @brief Read current value of the SIM_SOPT7_ADC1TRGSEL field. */
-#define BR_SIM_SOPT7_ADC1TRGSEL(x) (HW_SIM_SOPT7(x).B.ADC1TRGSEL)
+#define BR_SIM_SOPT7_ADC1TRGSEL(x) (UNION_READ_FS(HW_SIM_SOPT7_ADDR(x), hw_sim_sopt7, B.ADC1TRGSEL))
 
 /*! @brief Format value for bitfield SIM_SOPT7_ADC1TRGSEL. */
 #define BF_SIM_SOPT7_ADC1TRGSEL(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT7_ADC1TRGSEL) & BM_SIM_SOPT7_ADC1TRGSEL)
 
 /*! @brief Set the ADC1TRGSEL field to a new value. */
-#define BW_SIM_SOPT7_ADC1TRGSEL(x, v) (HW_SIM_SOPT7_WR(x, (HW_SIM_SOPT7_RD(x) & ~BM_SIM_SOPT7_ADC1TRGSEL) | BF_SIM_SOPT7_ADC1TRGSEL(v)))
+#define BW_SIM_SOPT7_ADC1TRGSEL(x, v) (ADDRESS_WRITE32(HW_SIM_SOPT7_ADDR(x), (HW_SIM_SOPT7_RD(x) & ~BM_SIM_SOPT7_ADC1TRGSEL) | BF_SIM_SOPT7_ADC1TRGSEL(v)))
 /*@}*/
 
 /*!
@@ -1542,13 +1542,13 @@ typedef union _hw_sim_sopt7
 #define BS_SIM_SOPT7_ADC1PRETRGSEL (1U)    /*!< Bit field size in bits for SIM_SOPT7_ADC1PRETRGSEL. */
 
 /*! @brief Read current value of the SIM_SOPT7_ADC1PRETRGSEL field. */
-#define BR_SIM_SOPT7_ADC1PRETRGSEL(x) (BITBAND_ACCESS32(HW_SIM_SOPT7_ADDR(x), BP_SIM_SOPT7_ADC1PRETRGSEL))
+#define BR_SIM_SOPT7_ADC1PRETRGSEL(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT7_ADDR(x), BP_SIM_SOPT7_ADC1PRETRGSEL)))
 
 /*! @brief Format value for bitfield SIM_SOPT7_ADC1PRETRGSEL. */
 #define BF_SIM_SOPT7_ADC1PRETRGSEL(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT7_ADC1PRETRGSEL) & BM_SIM_SOPT7_ADC1PRETRGSEL)
 
 /*! @brief Set the ADC1PRETRGSEL field to a new value. */
-#define BW_SIM_SOPT7_ADC1PRETRGSEL(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT7_ADDR(x), BP_SIM_SOPT7_ADC1PRETRGSEL) = (v))
+#define BW_SIM_SOPT7_ADC1PRETRGSEL(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT7_ADDR(x), BP_SIM_SOPT7_ADC1PRETRGSEL), v))
 /*@}*/
 
 /*!
@@ -1566,13 +1566,13 @@ typedef union _hw_sim_sopt7
 #define BS_SIM_SOPT7_ADC1ALTTRGEN (1U)     /*!< Bit field size in bits for SIM_SOPT7_ADC1ALTTRGEN. */
 
 /*! @brief Read current value of the SIM_SOPT7_ADC1ALTTRGEN field. */
-#define BR_SIM_SOPT7_ADC1ALTTRGEN(x) (BITBAND_ACCESS32(HW_SIM_SOPT7_ADDR(x), BP_SIM_SOPT7_ADC1ALTTRGEN))
+#define BR_SIM_SOPT7_ADC1ALTTRGEN(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SOPT7_ADDR(x), BP_SIM_SOPT7_ADC1ALTTRGEN)))
 
 /*! @brief Format value for bitfield SIM_SOPT7_ADC1ALTTRGEN. */
 #define BF_SIM_SOPT7_ADC1ALTTRGEN(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SOPT7_ADC1ALTTRGEN) & BM_SIM_SOPT7_ADC1ALTTRGEN)
 
 /*! @brief Set the ADC1ALTTRGEN field to a new value. */
-#define BW_SIM_SOPT7_ADC1ALTTRGEN(x, v) (BITBAND_ACCESS32(HW_SIM_SOPT7_ADDR(x), BP_SIM_SOPT7_ADC1ALTTRGEN) = (v))
+#define BW_SIM_SOPT7_ADC1ALTTRGEN(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SOPT7_ADDR(x), BP_SIM_SOPT7_ADC1ALTTRGEN), v))
 /*@}*/
 
 /*******************************************************************************
@@ -1643,7 +1643,7 @@ typedef union _hw_sim_sdid
 #define BS_SIM_SDID_PINID    (4U)          /*!< Bit field size in bits for SIM_SDID_PINID. */
 
 /*! @brief Read current value of the SIM_SDID_PINID field. */
-#define BR_SIM_SDID_PINID(x) (HW_SIM_SDID(x).B.PINID)
+#define BR_SIM_SDID_PINID(x) (UNION_READ_FS(HW_SIM_SDID_ADDR(x), hw_sim_sdid, B.PINID))
 /*@}*/
 
 /*!
@@ -1668,7 +1668,7 @@ typedef union _hw_sim_sdid
 #define BS_SIM_SDID_FAMID    (3U)          /*!< Bit field size in bits for SIM_SDID_FAMID. */
 
 /*! @brief Read current value of the SIM_SDID_FAMID field. */
-#define BR_SIM_SDID_FAMID(x) (HW_SIM_SDID(x).B.FAMID)
+#define BR_SIM_SDID_FAMID(x) (UNION_READ_FS(HW_SIM_SDID_ADDR(x), hw_sim_sdid, B.FAMID))
 /*@}*/
 
 /*!
@@ -1682,7 +1682,7 @@ typedef union _hw_sim_sdid
 #define BS_SIM_SDID_DIEID    (5U)          /*!< Bit field size in bits for SIM_SDID_DIEID. */
 
 /*! @brief Read current value of the SIM_SDID_DIEID field. */
-#define BR_SIM_SDID_DIEID(x) (HW_SIM_SDID(x).B.DIEID)
+#define BR_SIM_SDID_DIEID(x) (UNION_READ_FS(HW_SIM_SDID_ADDR(x), hw_sim_sdid, B.DIEID))
 /*@}*/
 
 /*!
@@ -1696,7 +1696,7 @@ typedef union _hw_sim_sdid
 #define BS_SIM_SDID_REVID    (4U)          /*!< Bit field size in bits for SIM_SDID_REVID. */
 
 /*! @brief Read current value of the SIM_SDID_REVID field. */
-#define BR_SIM_SDID_REVID(x) (HW_SIM_SDID(x).B.REVID)
+#define BR_SIM_SDID_REVID(x) (UNION_READ_FS(HW_SIM_SDID_ADDR(x), hw_sim_sdid, B.REVID))
 /*@}*/
 
 /*!
@@ -1716,7 +1716,7 @@ typedef union _hw_sim_sdid
 #define BS_SIM_SDID_SERIESID (4U)          /*!< Bit field size in bits for SIM_SDID_SERIESID. */
 
 /*! @brief Read current value of the SIM_SDID_SERIESID field. */
-#define BR_SIM_SDID_SERIESID(x) (HW_SIM_SDID(x).B.SERIESID)
+#define BR_SIM_SDID_SERIESID(x) (UNION_READ_FS(HW_SIM_SDID_ADDR(x), hw_sim_sdid, B.SERIESID))
 /*@}*/
 
 /*!
@@ -1739,7 +1739,7 @@ typedef union _hw_sim_sdid
 #define BS_SIM_SDID_SUBFAMID (4U)          /*!< Bit field size in bits for SIM_SDID_SUBFAMID. */
 
 /*! @brief Read current value of the SIM_SDID_SUBFAMID field. */
-#define BR_SIM_SDID_SUBFAMID(x) (HW_SIM_SDID(x).B.SUBFAMID)
+#define BR_SIM_SDID_SUBFAMID(x) (UNION_READ_FS(HW_SIM_SDID_ADDR(x), hw_sim_sdid, B.SUBFAMID))
 /*@}*/
 
 /*!
@@ -1761,7 +1761,7 @@ typedef union _hw_sim_sdid
 #define BS_SIM_SDID_FAMILYID (4U)          /*!< Bit field size in bits for SIM_SDID_FAMILYID. */
 
 /*! @brief Read current value of the SIM_SDID_FAMILYID field. */
-#define BR_SIM_SDID_FAMILYID(x) (HW_SIM_SDID(x).B.FAMILYID)
+#define BR_SIM_SDID_FAMILYID(x) (UNION_READ_FS(HW_SIM_SDID_ADDR(x), hw_sim_sdid, B.FAMILYID))
 /*@}*/
 
 /*******************************************************************************
@@ -1820,13 +1820,13 @@ typedef union _hw_sim_scgc1
 #define BS_SIM_SCGC1_I2C2    (1U)          /*!< Bit field size in bits for SIM_SCGC1_I2C2. */
 
 /*! @brief Read current value of the SIM_SCGC1_I2C2 field. */
-#define BR_SIM_SCGC1_I2C2(x) (BITBAND_ACCESS32(HW_SIM_SCGC1_ADDR(x), BP_SIM_SCGC1_I2C2))
+#define BR_SIM_SCGC1_I2C2(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC1_ADDR(x), BP_SIM_SCGC1_I2C2)))
 
 /*! @brief Format value for bitfield SIM_SCGC1_I2C2. */
 #define BF_SIM_SCGC1_I2C2(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC1_I2C2) & BM_SIM_SCGC1_I2C2)
 
 /*! @brief Set the I2C2 field to a new value. */
-#define BW_SIM_SCGC1_I2C2(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC1_ADDR(x), BP_SIM_SCGC1_I2C2) = (v))
+#define BW_SIM_SCGC1_I2C2(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC1_ADDR(x), BP_SIM_SCGC1_I2C2), v))
 /*@}*/
 
 /*!
@@ -1844,13 +1844,13 @@ typedef union _hw_sim_scgc1
 #define BS_SIM_SCGC1_UART4   (1U)          /*!< Bit field size in bits for SIM_SCGC1_UART4. */
 
 /*! @brief Read current value of the SIM_SCGC1_UART4 field. */
-#define BR_SIM_SCGC1_UART4(x) (BITBAND_ACCESS32(HW_SIM_SCGC1_ADDR(x), BP_SIM_SCGC1_UART4))
+#define BR_SIM_SCGC1_UART4(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC1_ADDR(x), BP_SIM_SCGC1_UART4)))
 
 /*! @brief Format value for bitfield SIM_SCGC1_UART4. */
 #define BF_SIM_SCGC1_UART4(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC1_UART4) & BM_SIM_SCGC1_UART4)
 
 /*! @brief Set the UART4 field to a new value. */
-#define BW_SIM_SCGC1_UART4(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC1_ADDR(x), BP_SIM_SCGC1_UART4) = (v))
+#define BW_SIM_SCGC1_UART4(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC1_ADDR(x), BP_SIM_SCGC1_UART4), v))
 /*@}*/
 
 /*!
@@ -1868,13 +1868,13 @@ typedef union _hw_sim_scgc1
 #define BS_SIM_SCGC1_UART5   (1U)          /*!< Bit field size in bits for SIM_SCGC1_UART5. */
 
 /*! @brief Read current value of the SIM_SCGC1_UART5 field. */
-#define BR_SIM_SCGC1_UART5(x) (BITBAND_ACCESS32(HW_SIM_SCGC1_ADDR(x), BP_SIM_SCGC1_UART5))
+#define BR_SIM_SCGC1_UART5(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC1_ADDR(x), BP_SIM_SCGC1_UART5)))
 
 /*! @brief Format value for bitfield SIM_SCGC1_UART5. */
 #define BF_SIM_SCGC1_UART5(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC1_UART5) & BM_SIM_SCGC1_UART5)
 
 /*! @brief Set the UART5 field to a new value. */
-#define BW_SIM_SCGC1_UART5(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC1_ADDR(x), BP_SIM_SCGC1_UART5) = (v))
+#define BW_SIM_SCGC1_UART5(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC1_ADDR(x), BP_SIM_SCGC1_UART5), v))
 /*@}*/
 
 /*******************************************************************************
@@ -1936,13 +1936,13 @@ typedef union _hw_sim_scgc2
 #define BS_SIM_SCGC2_ENET    (1U)          /*!< Bit field size in bits for SIM_SCGC2_ENET. */
 
 /*! @brief Read current value of the SIM_SCGC2_ENET field. */
-#define BR_SIM_SCGC2_ENET(x) (BITBAND_ACCESS32(HW_SIM_SCGC2_ADDR(x), BP_SIM_SCGC2_ENET))
+#define BR_SIM_SCGC2_ENET(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC2_ADDR(x), BP_SIM_SCGC2_ENET)))
 
 /*! @brief Format value for bitfield SIM_SCGC2_ENET. */
 #define BF_SIM_SCGC2_ENET(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC2_ENET) & BM_SIM_SCGC2_ENET)
 
 /*! @brief Set the ENET field to a new value. */
-#define BW_SIM_SCGC2_ENET(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC2_ADDR(x), BP_SIM_SCGC2_ENET) = (v))
+#define BW_SIM_SCGC2_ENET(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC2_ADDR(x), BP_SIM_SCGC2_ENET), v))
 /*@}*/
 
 /*!
@@ -1960,13 +1960,13 @@ typedef union _hw_sim_scgc2
 #define BS_SIM_SCGC2_DAC0    (1U)          /*!< Bit field size in bits for SIM_SCGC2_DAC0. */
 
 /*! @brief Read current value of the SIM_SCGC2_DAC0 field. */
-#define BR_SIM_SCGC2_DAC0(x) (BITBAND_ACCESS32(HW_SIM_SCGC2_ADDR(x), BP_SIM_SCGC2_DAC0))
+#define BR_SIM_SCGC2_DAC0(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC2_ADDR(x), BP_SIM_SCGC2_DAC0)))
 
 /*! @brief Format value for bitfield SIM_SCGC2_DAC0. */
 #define BF_SIM_SCGC2_DAC0(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC2_DAC0) & BM_SIM_SCGC2_DAC0)
 
 /*! @brief Set the DAC0 field to a new value. */
-#define BW_SIM_SCGC2_DAC0(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC2_ADDR(x), BP_SIM_SCGC2_DAC0) = (v))
+#define BW_SIM_SCGC2_DAC0(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC2_ADDR(x), BP_SIM_SCGC2_DAC0), v))
 /*@}*/
 
 /*!
@@ -1984,13 +1984,13 @@ typedef union _hw_sim_scgc2
 #define BS_SIM_SCGC2_DAC1    (1U)          /*!< Bit field size in bits for SIM_SCGC2_DAC1. */
 
 /*! @brief Read current value of the SIM_SCGC2_DAC1 field. */
-#define BR_SIM_SCGC2_DAC1(x) (BITBAND_ACCESS32(HW_SIM_SCGC2_ADDR(x), BP_SIM_SCGC2_DAC1))
+#define BR_SIM_SCGC2_DAC1(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC2_ADDR(x), BP_SIM_SCGC2_DAC1)))
 
 /*! @brief Format value for bitfield SIM_SCGC2_DAC1. */
 #define BF_SIM_SCGC2_DAC1(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC2_DAC1) & BM_SIM_SCGC2_DAC1)
 
 /*! @brief Set the DAC1 field to a new value. */
-#define BW_SIM_SCGC2_DAC1(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC2_ADDR(x), BP_SIM_SCGC2_DAC1) = (v))
+#define BW_SIM_SCGC2_DAC1(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC2_ADDR(x), BP_SIM_SCGC2_DAC1), v))
 /*@}*/
 
 /*******************************************************************************
@@ -2058,13 +2058,13 @@ typedef union _hw_sim_scgc3
 #define BS_SIM_SCGC3_RNGA    (1U)          /*!< Bit field size in bits for SIM_SCGC3_RNGA. */
 
 /*! @brief Read current value of the SIM_SCGC3_RNGA field. */
-#define BR_SIM_SCGC3_RNGA(x) (BITBAND_ACCESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_RNGA))
+#define BR_SIM_SCGC3_RNGA(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_RNGA)))
 
 /*! @brief Format value for bitfield SIM_SCGC3_RNGA. */
 #define BF_SIM_SCGC3_RNGA(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC3_RNGA) & BM_SIM_SCGC3_RNGA)
 
 /*! @brief Set the RNGA field to a new value. */
-#define BW_SIM_SCGC3_RNGA(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_RNGA) = (v))
+#define BW_SIM_SCGC3_RNGA(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_RNGA), v))
 /*@}*/
 
 /*!
@@ -2082,13 +2082,13 @@ typedef union _hw_sim_scgc3
 #define BS_SIM_SCGC3_SPI2    (1U)          /*!< Bit field size in bits for SIM_SCGC3_SPI2. */
 
 /*! @brief Read current value of the SIM_SCGC3_SPI2 field. */
-#define BR_SIM_SCGC3_SPI2(x) (BITBAND_ACCESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_SPI2))
+#define BR_SIM_SCGC3_SPI2(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_SPI2)))
 
 /*! @brief Format value for bitfield SIM_SCGC3_SPI2. */
 #define BF_SIM_SCGC3_SPI2(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC3_SPI2) & BM_SIM_SCGC3_SPI2)
 
 /*! @brief Set the SPI2 field to a new value. */
-#define BW_SIM_SCGC3_SPI2(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_SPI2) = (v))
+#define BW_SIM_SCGC3_SPI2(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_SPI2), v))
 /*@}*/
 
 /*!
@@ -2106,13 +2106,13 @@ typedef union _hw_sim_scgc3
 #define BS_SIM_SCGC3_SDHC    (1U)          /*!< Bit field size in bits for SIM_SCGC3_SDHC. */
 
 /*! @brief Read current value of the SIM_SCGC3_SDHC field. */
-#define BR_SIM_SCGC3_SDHC(x) (BITBAND_ACCESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_SDHC))
+#define BR_SIM_SCGC3_SDHC(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_SDHC)))
 
 /*! @brief Format value for bitfield SIM_SCGC3_SDHC. */
 #define BF_SIM_SCGC3_SDHC(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC3_SDHC) & BM_SIM_SCGC3_SDHC)
 
 /*! @brief Set the SDHC field to a new value. */
-#define BW_SIM_SCGC3_SDHC(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_SDHC) = (v))
+#define BW_SIM_SCGC3_SDHC(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_SDHC), v))
 /*@}*/
 
 /*!
@@ -2130,13 +2130,13 @@ typedef union _hw_sim_scgc3
 #define BS_SIM_SCGC3_FTM2    (1U)          /*!< Bit field size in bits for SIM_SCGC3_FTM2. */
 
 /*! @brief Read current value of the SIM_SCGC3_FTM2 field. */
-#define BR_SIM_SCGC3_FTM2(x) (BITBAND_ACCESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_FTM2))
+#define BR_SIM_SCGC3_FTM2(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_FTM2)))
 
 /*! @brief Format value for bitfield SIM_SCGC3_FTM2. */
 #define BF_SIM_SCGC3_FTM2(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC3_FTM2) & BM_SIM_SCGC3_FTM2)
 
 /*! @brief Set the FTM2 field to a new value. */
-#define BW_SIM_SCGC3_FTM2(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_FTM2) = (v))
+#define BW_SIM_SCGC3_FTM2(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_FTM2), v))
 /*@}*/
 
 /*!
@@ -2154,13 +2154,13 @@ typedef union _hw_sim_scgc3
 #define BS_SIM_SCGC3_FTM3    (1U)          /*!< Bit field size in bits for SIM_SCGC3_FTM3. */
 
 /*! @brief Read current value of the SIM_SCGC3_FTM3 field. */
-#define BR_SIM_SCGC3_FTM3(x) (BITBAND_ACCESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_FTM3))
+#define BR_SIM_SCGC3_FTM3(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_FTM3)))
 
 /*! @brief Format value for bitfield SIM_SCGC3_FTM3. */
 #define BF_SIM_SCGC3_FTM3(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC3_FTM3) & BM_SIM_SCGC3_FTM3)
 
 /*! @brief Set the FTM3 field to a new value. */
-#define BW_SIM_SCGC3_FTM3(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_FTM3) = (v))
+#define BW_SIM_SCGC3_FTM3(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_FTM3), v))
 /*@}*/
 
 /*!
@@ -2178,13 +2178,13 @@ typedef union _hw_sim_scgc3
 #define BS_SIM_SCGC3_ADC1    (1U)          /*!< Bit field size in bits for SIM_SCGC3_ADC1. */
 
 /*! @brief Read current value of the SIM_SCGC3_ADC1 field. */
-#define BR_SIM_SCGC3_ADC1(x) (BITBAND_ACCESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_ADC1))
+#define BR_SIM_SCGC3_ADC1(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_ADC1)))
 
 /*! @brief Format value for bitfield SIM_SCGC3_ADC1. */
 #define BF_SIM_SCGC3_ADC1(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC3_ADC1) & BM_SIM_SCGC3_ADC1)
 
 /*! @brief Set the ADC1 field to a new value. */
-#define BW_SIM_SCGC3_ADC1(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_ADC1) = (v))
+#define BW_SIM_SCGC3_ADC1(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC3_ADDR(x), BP_SIM_SCGC3_ADC1), v))
 /*@}*/
 
 /*******************************************************************************
@@ -2253,13 +2253,13 @@ typedef union _hw_sim_scgc4
 #define BS_SIM_SCGC4_EWM     (1U)          /*!< Bit field size in bits for SIM_SCGC4_EWM. */
 
 /*! @brief Read current value of the SIM_SCGC4_EWM field. */
-#define BR_SIM_SCGC4_EWM(x)  (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_EWM))
+#define BR_SIM_SCGC4_EWM(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_EWM)))
 
 /*! @brief Format value for bitfield SIM_SCGC4_EWM. */
 #define BF_SIM_SCGC4_EWM(v)  ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC4_EWM) & BM_SIM_SCGC4_EWM)
 
 /*! @brief Set the EWM field to a new value. */
-#define BW_SIM_SCGC4_EWM(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_EWM) = (v))
+#define BW_SIM_SCGC4_EWM(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_EWM), v))
 /*@}*/
 
 /*!
@@ -2277,13 +2277,13 @@ typedef union _hw_sim_scgc4
 #define BS_SIM_SCGC4_CMT     (1U)          /*!< Bit field size in bits for SIM_SCGC4_CMT. */
 
 /*! @brief Read current value of the SIM_SCGC4_CMT field. */
-#define BR_SIM_SCGC4_CMT(x)  (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_CMT))
+#define BR_SIM_SCGC4_CMT(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_CMT)))
 
 /*! @brief Format value for bitfield SIM_SCGC4_CMT. */
 #define BF_SIM_SCGC4_CMT(v)  ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC4_CMT) & BM_SIM_SCGC4_CMT)
 
 /*! @brief Set the CMT field to a new value. */
-#define BW_SIM_SCGC4_CMT(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_CMT) = (v))
+#define BW_SIM_SCGC4_CMT(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_CMT), v))
 /*@}*/
 
 /*!
@@ -2301,13 +2301,13 @@ typedef union _hw_sim_scgc4
 #define BS_SIM_SCGC4_I2C0    (1U)          /*!< Bit field size in bits for SIM_SCGC4_I2C0. */
 
 /*! @brief Read current value of the SIM_SCGC4_I2C0 field. */
-#define BR_SIM_SCGC4_I2C0(x) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_I2C0))
+#define BR_SIM_SCGC4_I2C0(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_I2C0)))
 
 /*! @brief Format value for bitfield SIM_SCGC4_I2C0. */
 #define BF_SIM_SCGC4_I2C0(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC4_I2C0) & BM_SIM_SCGC4_I2C0)
 
 /*! @brief Set the I2C0 field to a new value. */
-#define BW_SIM_SCGC4_I2C0(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_I2C0) = (v))
+#define BW_SIM_SCGC4_I2C0(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_I2C0), v))
 /*@}*/
 
 /*!
@@ -2325,13 +2325,13 @@ typedef union _hw_sim_scgc4
 #define BS_SIM_SCGC4_I2C1    (1U)          /*!< Bit field size in bits for SIM_SCGC4_I2C1. */
 
 /*! @brief Read current value of the SIM_SCGC4_I2C1 field. */
-#define BR_SIM_SCGC4_I2C1(x) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_I2C1))
+#define BR_SIM_SCGC4_I2C1(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_I2C1)))
 
 /*! @brief Format value for bitfield SIM_SCGC4_I2C1. */
 #define BF_SIM_SCGC4_I2C1(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC4_I2C1) & BM_SIM_SCGC4_I2C1)
 
 /*! @brief Set the I2C1 field to a new value. */
-#define BW_SIM_SCGC4_I2C1(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_I2C1) = (v))
+#define BW_SIM_SCGC4_I2C1(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_I2C1), v))
 /*@}*/
 
 /*!
@@ -2349,13 +2349,13 @@ typedef union _hw_sim_scgc4
 #define BS_SIM_SCGC4_UART0   (1U)          /*!< Bit field size in bits for SIM_SCGC4_UART0. */
 
 /*! @brief Read current value of the SIM_SCGC4_UART0 field. */
-#define BR_SIM_SCGC4_UART0(x) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_UART0))
+#define BR_SIM_SCGC4_UART0(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_UART0)))
 
 /*! @brief Format value for bitfield SIM_SCGC4_UART0. */
 #define BF_SIM_SCGC4_UART0(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC4_UART0) & BM_SIM_SCGC4_UART0)
 
 /*! @brief Set the UART0 field to a new value. */
-#define BW_SIM_SCGC4_UART0(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_UART0) = (v))
+#define BW_SIM_SCGC4_UART0(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_UART0), v))
 /*@}*/
 
 /*!
@@ -2373,13 +2373,13 @@ typedef union _hw_sim_scgc4
 #define BS_SIM_SCGC4_UART1   (1U)          /*!< Bit field size in bits for SIM_SCGC4_UART1. */
 
 /*! @brief Read current value of the SIM_SCGC4_UART1 field. */
-#define BR_SIM_SCGC4_UART1(x) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_UART1))
+#define BR_SIM_SCGC4_UART1(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_UART1)))
 
 /*! @brief Format value for bitfield SIM_SCGC4_UART1. */
 #define BF_SIM_SCGC4_UART1(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC4_UART1) & BM_SIM_SCGC4_UART1)
 
 /*! @brief Set the UART1 field to a new value. */
-#define BW_SIM_SCGC4_UART1(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_UART1) = (v))
+#define BW_SIM_SCGC4_UART1(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_UART1), v))
 /*@}*/
 
 /*!
@@ -2397,13 +2397,13 @@ typedef union _hw_sim_scgc4
 #define BS_SIM_SCGC4_UART2   (1U)          /*!< Bit field size in bits for SIM_SCGC4_UART2. */
 
 /*! @brief Read current value of the SIM_SCGC4_UART2 field. */
-#define BR_SIM_SCGC4_UART2(x) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_UART2))
+#define BR_SIM_SCGC4_UART2(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_UART2)))
 
 /*! @brief Format value for bitfield SIM_SCGC4_UART2. */
 #define BF_SIM_SCGC4_UART2(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC4_UART2) & BM_SIM_SCGC4_UART2)
 
 /*! @brief Set the UART2 field to a new value. */
-#define BW_SIM_SCGC4_UART2(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_UART2) = (v))
+#define BW_SIM_SCGC4_UART2(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_UART2), v))
 /*@}*/
 
 /*!
@@ -2421,13 +2421,13 @@ typedef union _hw_sim_scgc4
 #define BS_SIM_SCGC4_UART3   (1U)          /*!< Bit field size in bits for SIM_SCGC4_UART3. */
 
 /*! @brief Read current value of the SIM_SCGC4_UART3 field. */
-#define BR_SIM_SCGC4_UART3(x) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_UART3))
+#define BR_SIM_SCGC4_UART3(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_UART3)))
 
 /*! @brief Format value for bitfield SIM_SCGC4_UART3. */
 #define BF_SIM_SCGC4_UART3(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC4_UART3) & BM_SIM_SCGC4_UART3)
 
 /*! @brief Set the UART3 field to a new value. */
-#define BW_SIM_SCGC4_UART3(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_UART3) = (v))
+#define BW_SIM_SCGC4_UART3(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_UART3), v))
 /*@}*/
 
 /*!
@@ -2445,13 +2445,13 @@ typedef union _hw_sim_scgc4
 #define BS_SIM_SCGC4_USBOTG  (1U)          /*!< Bit field size in bits for SIM_SCGC4_USBOTG. */
 
 /*! @brief Read current value of the SIM_SCGC4_USBOTG field. */
-#define BR_SIM_SCGC4_USBOTG(x) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_USBOTG))
+#define BR_SIM_SCGC4_USBOTG(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_USBOTG)))
 
 /*! @brief Format value for bitfield SIM_SCGC4_USBOTG. */
 #define BF_SIM_SCGC4_USBOTG(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC4_USBOTG) & BM_SIM_SCGC4_USBOTG)
 
 /*! @brief Set the USBOTG field to a new value. */
-#define BW_SIM_SCGC4_USBOTG(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_USBOTG) = (v))
+#define BW_SIM_SCGC4_USBOTG(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_USBOTG), v))
 /*@}*/
 
 /*!
@@ -2469,13 +2469,13 @@ typedef union _hw_sim_scgc4
 #define BS_SIM_SCGC4_CMP     (1U)          /*!< Bit field size in bits for SIM_SCGC4_CMP. */
 
 /*! @brief Read current value of the SIM_SCGC4_CMP field. */
-#define BR_SIM_SCGC4_CMP(x)  (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_CMP))
+#define BR_SIM_SCGC4_CMP(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_CMP)))
 
 /*! @brief Format value for bitfield SIM_SCGC4_CMP. */
 #define BF_SIM_SCGC4_CMP(v)  ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC4_CMP) & BM_SIM_SCGC4_CMP)
 
 /*! @brief Set the CMP field to a new value. */
-#define BW_SIM_SCGC4_CMP(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_CMP) = (v))
+#define BW_SIM_SCGC4_CMP(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_CMP), v))
 /*@}*/
 
 /*!
@@ -2493,13 +2493,13 @@ typedef union _hw_sim_scgc4
 #define BS_SIM_SCGC4_VREF    (1U)          /*!< Bit field size in bits for SIM_SCGC4_VREF. */
 
 /*! @brief Read current value of the SIM_SCGC4_VREF field. */
-#define BR_SIM_SCGC4_VREF(x) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_VREF))
+#define BR_SIM_SCGC4_VREF(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_VREF)))
 
 /*! @brief Format value for bitfield SIM_SCGC4_VREF. */
 #define BF_SIM_SCGC4_VREF(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC4_VREF) & BM_SIM_SCGC4_VREF)
 
 /*! @brief Set the VREF field to a new value. */
-#define BW_SIM_SCGC4_VREF(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_VREF) = (v))
+#define BW_SIM_SCGC4_VREF(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC4_ADDR(x), BP_SIM_SCGC4_VREF), v))
 /*@}*/
 
 /*******************************************************************************
@@ -2560,13 +2560,13 @@ typedef union _hw_sim_scgc5
 #define BS_SIM_SCGC5_LPTMR   (1U)          /*!< Bit field size in bits for SIM_SCGC5_LPTMR. */
 
 /*! @brief Read current value of the SIM_SCGC5_LPTMR field. */
-#define BR_SIM_SCGC5_LPTMR(x) (BITBAND_ACCESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_LPTMR))
+#define BR_SIM_SCGC5_LPTMR(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_LPTMR)))
 
 /*! @brief Format value for bitfield SIM_SCGC5_LPTMR. */
 #define BF_SIM_SCGC5_LPTMR(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC5_LPTMR) & BM_SIM_SCGC5_LPTMR)
 
 /*! @brief Set the LPTMR field to a new value. */
-#define BW_SIM_SCGC5_LPTMR(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_LPTMR) = (v))
+#define BW_SIM_SCGC5_LPTMR(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_LPTMR), v))
 /*@}*/
 
 /*!
@@ -2584,13 +2584,13 @@ typedef union _hw_sim_scgc5
 #define BS_SIM_SCGC5_PORTA   (1U)          /*!< Bit field size in bits for SIM_SCGC5_PORTA. */
 
 /*! @brief Read current value of the SIM_SCGC5_PORTA field. */
-#define BR_SIM_SCGC5_PORTA(x) (BITBAND_ACCESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTA))
+#define BR_SIM_SCGC5_PORTA(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTA)))
 
 /*! @brief Format value for bitfield SIM_SCGC5_PORTA. */
 #define BF_SIM_SCGC5_PORTA(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC5_PORTA) & BM_SIM_SCGC5_PORTA)
 
 /*! @brief Set the PORTA field to a new value. */
-#define BW_SIM_SCGC5_PORTA(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTA) = (v))
+#define BW_SIM_SCGC5_PORTA(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTA), v))
 /*@}*/
 
 /*!
@@ -2608,13 +2608,13 @@ typedef union _hw_sim_scgc5
 #define BS_SIM_SCGC5_PORTB   (1U)          /*!< Bit field size in bits for SIM_SCGC5_PORTB. */
 
 /*! @brief Read current value of the SIM_SCGC5_PORTB field. */
-#define BR_SIM_SCGC5_PORTB(x) (BITBAND_ACCESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTB))
+#define BR_SIM_SCGC5_PORTB(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTB)))
 
 /*! @brief Format value for bitfield SIM_SCGC5_PORTB. */
 #define BF_SIM_SCGC5_PORTB(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC5_PORTB) & BM_SIM_SCGC5_PORTB)
 
 /*! @brief Set the PORTB field to a new value. */
-#define BW_SIM_SCGC5_PORTB(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTB) = (v))
+#define BW_SIM_SCGC5_PORTB(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTB), v))
 /*@}*/
 
 /*!
@@ -2632,13 +2632,13 @@ typedef union _hw_sim_scgc5
 #define BS_SIM_SCGC5_PORTC   (1U)          /*!< Bit field size in bits for SIM_SCGC5_PORTC. */
 
 /*! @brief Read current value of the SIM_SCGC5_PORTC field. */
-#define BR_SIM_SCGC5_PORTC(x) (BITBAND_ACCESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTC))
+#define BR_SIM_SCGC5_PORTC(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTC)))
 
 /*! @brief Format value for bitfield SIM_SCGC5_PORTC. */
 #define BF_SIM_SCGC5_PORTC(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC5_PORTC) & BM_SIM_SCGC5_PORTC)
 
 /*! @brief Set the PORTC field to a new value. */
-#define BW_SIM_SCGC5_PORTC(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTC) = (v))
+#define BW_SIM_SCGC5_PORTC(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTC), v))
 /*@}*/
 
 /*!
@@ -2656,13 +2656,13 @@ typedef union _hw_sim_scgc5
 #define BS_SIM_SCGC5_PORTD   (1U)          /*!< Bit field size in bits for SIM_SCGC5_PORTD. */
 
 /*! @brief Read current value of the SIM_SCGC5_PORTD field. */
-#define BR_SIM_SCGC5_PORTD(x) (BITBAND_ACCESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTD))
+#define BR_SIM_SCGC5_PORTD(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTD)))
 
 /*! @brief Format value for bitfield SIM_SCGC5_PORTD. */
 #define BF_SIM_SCGC5_PORTD(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC5_PORTD) & BM_SIM_SCGC5_PORTD)
 
 /*! @brief Set the PORTD field to a new value. */
-#define BW_SIM_SCGC5_PORTD(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTD) = (v))
+#define BW_SIM_SCGC5_PORTD(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTD), v))
 /*@}*/
 
 /*!
@@ -2680,13 +2680,13 @@ typedef union _hw_sim_scgc5
 #define BS_SIM_SCGC5_PORTE   (1U)          /*!< Bit field size in bits for SIM_SCGC5_PORTE. */
 
 /*! @brief Read current value of the SIM_SCGC5_PORTE field. */
-#define BR_SIM_SCGC5_PORTE(x) (BITBAND_ACCESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTE))
+#define BR_SIM_SCGC5_PORTE(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTE)))
 
 /*! @brief Format value for bitfield SIM_SCGC5_PORTE. */
 #define BF_SIM_SCGC5_PORTE(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC5_PORTE) & BM_SIM_SCGC5_PORTE)
 
 /*! @brief Set the PORTE field to a new value. */
-#define BW_SIM_SCGC5_PORTE(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTE) = (v))
+#define BW_SIM_SCGC5_PORTE(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC5_ADDR(x), BP_SIM_SCGC5_PORTE), v))
 /*@}*/
 
 /*******************************************************************************
@@ -2770,13 +2770,13 @@ typedef union _hw_sim_scgc6
 #define BS_SIM_SCGC6_FTF     (1U)          /*!< Bit field size in bits for SIM_SCGC6_FTF. */
 
 /*! @brief Read current value of the SIM_SCGC6_FTF field. */
-#define BR_SIM_SCGC6_FTF(x)  (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FTF))
+#define BR_SIM_SCGC6_FTF(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FTF)))
 
 /*! @brief Format value for bitfield SIM_SCGC6_FTF. */
 #define BF_SIM_SCGC6_FTF(v)  ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC6_FTF) & BM_SIM_SCGC6_FTF)
 
 /*! @brief Set the FTF field to a new value. */
-#define BW_SIM_SCGC6_FTF(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FTF) = (v))
+#define BW_SIM_SCGC6_FTF(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FTF), v))
 /*@}*/
 
 /*!
@@ -2794,13 +2794,13 @@ typedef union _hw_sim_scgc6
 #define BS_SIM_SCGC6_DMAMUX  (1U)          /*!< Bit field size in bits for SIM_SCGC6_DMAMUX. */
 
 /*! @brief Read current value of the SIM_SCGC6_DMAMUX field. */
-#define BR_SIM_SCGC6_DMAMUX(x) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_DMAMUX))
+#define BR_SIM_SCGC6_DMAMUX(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_DMAMUX)))
 
 /*! @brief Format value for bitfield SIM_SCGC6_DMAMUX. */
 #define BF_SIM_SCGC6_DMAMUX(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC6_DMAMUX) & BM_SIM_SCGC6_DMAMUX)
 
 /*! @brief Set the DMAMUX field to a new value. */
-#define BW_SIM_SCGC6_DMAMUX(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_DMAMUX) = (v))
+#define BW_SIM_SCGC6_DMAMUX(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_DMAMUX), v))
 /*@}*/
 
 /*!
@@ -2818,13 +2818,13 @@ typedef union _hw_sim_scgc6
 #define BS_SIM_SCGC6_FLEXCAN0 (1U)         /*!< Bit field size in bits for SIM_SCGC6_FLEXCAN0. */
 
 /*! @brief Read current value of the SIM_SCGC6_FLEXCAN0 field. */
-#define BR_SIM_SCGC6_FLEXCAN0(x) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FLEXCAN0))
+#define BR_SIM_SCGC6_FLEXCAN0(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FLEXCAN0)))
 
 /*! @brief Format value for bitfield SIM_SCGC6_FLEXCAN0. */
 #define BF_SIM_SCGC6_FLEXCAN0(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC6_FLEXCAN0) & BM_SIM_SCGC6_FLEXCAN0)
 
 /*! @brief Set the FLEXCAN0 field to a new value. */
-#define BW_SIM_SCGC6_FLEXCAN0(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FLEXCAN0) = (v))
+#define BW_SIM_SCGC6_FLEXCAN0(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FLEXCAN0), v))
 /*@}*/
 
 /*!
@@ -2838,13 +2838,13 @@ typedef union _hw_sim_scgc6
 #define BS_SIM_SCGC6_RNGA    (1U)          /*!< Bit field size in bits for SIM_SCGC6_RNGA. */
 
 /*! @brief Read current value of the SIM_SCGC6_RNGA field. */
-#define BR_SIM_SCGC6_RNGA(x) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_RNGA))
+#define BR_SIM_SCGC6_RNGA(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_RNGA)))
 
 /*! @brief Format value for bitfield SIM_SCGC6_RNGA. */
 #define BF_SIM_SCGC6_RNGA(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC6_RNGA) & BM_SIM_SCGC6_RNGA)
 
 /*! @brief Set the RNGA field to a new value. */
-#define BW_SIM_SCGC6_RNGA(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_RNGA) = (v))
+#define BW_SIM_SCGC6_RNGA(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_RNGA), v))
 /*@}*/
 
 /*!
@@ -2862,13 +2862,13 @@ typedef union _hw_sim_scgc6
 #define BS_SIM_SCGC6_SPI0    (1U)          /*!< Bit field size in bits for SIM_SCGC6_SPI0. */
 
 /*! @brief Read current value of the SIM_SCGC6_SPI0 field. */
-#define BR_SIM_SCGC6_SPI0(x) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_SPI0))
+#define BR_SIM_SCGC6_SPI0(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_SPI0)))
 
 /*! @brief Format value for bitfield SIM_SCGC6_SPI0. */
 #define BF_SIM_SCGC6_SPI0(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC6_SPI0) & BM_SIM_SCGC6_SPI0)
 
 /*! @brief Set the SPI0 field to a new value. */
-#define BW_SIM_SCGC6_SPI0(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_SPI0) = (v))
+#define BW_SIM_SCGC6_SPI0(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_SPI0), v))
 /*@}*/
 
 /*!
@@ -2886,13 +2886,13 @@ typedef union _hw_sim_scgc6
 #define BS_SIM_SCGC6_SPI1    (1U)          /*!< Bit field size in bits for SIM_SCGC6_SPI1. */
 
 /*! @brief Read current value of the SIM_SCGC6_SPI1 field. */
-#define BR_SIM_SCGC6_SPI1(x) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_SPI1))
+#define BR_SIM_SCGC6_SPI1(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_SPI1)))
 
 /*! @brief Format value for bitfield SIM_SCGC6_SPI1. */
 #define BF_SIM_SCGC6_SPI1(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC6_SPI1) & BM_SIM_SCGC6_SPI1)
 
 /*! @brief Set the SPI1 field to a new value. */
-#define BW_SIM_SCGC6_SPI1(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_SPI1) = (v))
+#define BW_SIM_SCGC6_SPI1(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_SPI1), v))
 /*@}*/
 
 /*!
@@ -2910,13 +2910,13 @@ typedef union _hw_sim_scgc6
 #define BS_SIM_SCGC6_I2S     (1U)          /*!< Bit field size in bits for SIM_SCGC6_I2S. */
 
 /*! @brief Read current value of the SIM_SCGC6_I2S field. */
-#define BR_SIM_SCGC6_I2S(x)  (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_I2S))
+#define BR_SIM_SCGC6_I2S(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_I2S)))
 
 /*! @brief Format value for bitfield SIM_SCGC6_I2S. */
 #define BF_SIM_SCGC6_I2S(v)  ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC6_I2S) & BM_SIM_SCGC6_I2S)
 
 /*! @brief Set the I2S field to a new value. */
-#define BW_SIM_SCGC6_I2S(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_I2S) = (v))
+#define BW_SIM_SCGC6_I2S(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_I2S), v))
 /*@}*/
 
 /*!
@@ -2934,13 +2934,13 @@ typedef union _hw_sim_scgc6
 #define BS_SIM_SCGC6_CRC     (1U)          /*!< Bit field size in bits for SIM_SCGC6_CRC. */
 
 /*! @brief Read current value of the SIM_SCGC6_CRC field. */
-#define BR_SIM_SCGC6_CRC(x)  (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_CRC))
+#define BR_SIM_SCGC6_CRC(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_CRC)))
 
 /*! @brief Format value for bitfield SIM_SCGC6_CRC. */
 #define BF_SIM_SCGC6_CRC(v)  ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC6_CRC) & BM_SIM_SCGC6_CRC)
 
 /*! @brief Set the CRC field to a new value. */
-#define BW_SIM_SCGC6_CRC(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_CRC) = (v))
+#define BW_SIM_SCGC6_CRC(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_CRC), v))
 /*@}*/
 
 /*!
@@ -2958,13 +2958,13 @@ typedef union _hw_sim_scgc6
 #define BS_SIM_SCGC6_USBDCD  (1U)          /*!< Bit field size in bits for SIM_SCGC6_USBDCD. */
 
 /*! @brief Read current value of the SIM_SCGC6_USBDCD field. */
-#define BR_SIM_SCGC6_USBDCD(x) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_USBDCD))
+#define BR_SIM_SCGC6_USBDCD(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_USBDCD)))
 
 /*! @brief Format value for bitfield SIM_SCGC6_USBDCD. */
 #define BF_SIM_SCGC6_USBDCD(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC6_USBDCD) & BM_SIM_SCGC6_USBDCD)
 
 /*! @brief Set the USBDCD field to a new value. */
-#define BW_SIM_SCGC6_USBDCD(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_USBDCD) = (v))
+#define BW_SIM_SCGC6_USBDCD(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_USBDCD), v))
 /*@}*/
 
 /*!
@@ -2982,13 +2982,13 @@ typedef union _hw_sim_scgc6
 #define BS_SIM_SCGC6_PDB     (1U)          /*!< Bit field size in bits for SIM_SCGC6_PDB. */
 
 /*! @brief Read current value of the SIM_SCGC6_PDB field. */
-#define BR_SIM_SCGC6_PDB(x)  (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_PDB))
+#define BR_SIM_SCGC6_PDB(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_PDB)))
 
 /*! @brief Format value for bitfield SIM_SCGC6_PDB. */
 #define BF_SIM_SCGC6_PDB(v)  ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC6_PDB) & BM_SIM_SCGC6_PDB)
 
 /*! @brief Set the PDB field to a new value. */
-#define BW_SIM_SCGC6_PDB(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_PDB) = (v))
+#define BW_SIM_SCGC6_PDB(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_PDB), v))
 /*@}*/
 
 /*!
@@ -3006,13 +3006,13 @@ typedef union _hw_sim_scgc6
 #define BS_SIM_SCGC6_PIT     (1U)          /*!< Bit field size in bits for SIM_SCGC6_PIT. */
 
 /*! @brief Read current value of the SIM_SCGC6_PIT field. */
-#define BR_SIM_SCGC6_PIT(x)  (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_PIT))
+#define BR_SIM_SCGC6_PIT(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_PIT)))
 
 /*! @brief Format value for bitfield SIM_SCGC6_PIT. */
 #define BF_SIM_SCGC6_PIT(v)  ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC6_PIT) & BM_SIM_SCGC6_PIT)
 
 /*! @brief Set the PIT field to a new value. */
-#define BW_SIM_SCGC6_PIT(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_PIT) = (v))
+#define BW_SIM_SCGC6_PIT(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_PIT), v))
 /*@}*/
 
 /*!
@@ -3030,13 +3030,13 @@ typedef union _hw_sim_scgc6
 #define BS_SIM_SCGC6_FTM0    (1U)          /*!< Bit field size in bits for SIM_SCGC6_FTM0. */
 
 /*! @brief Read current value of the SIM_SCGC6_FTM0 field. */
-#define BR_SIM_SCGC6_FTM0(x) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FTM0))
+#define BR_SIM_SCGC6_FTM0(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FTM0)))
 
 /*! @brief Format value for bitfield SIM_SCGC6_FTM0. */
 #define BF_SIM_SCGC6_FTM0(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC6_FTM0) & BM_SIM_SCGC6_FTM0)
 
 /*! @brief Set the FTM0 field to a new value. */
-#define BW_SIM_SCGC6_FTM0(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FTM0) = (v))
+#define BW_SIM_SCGC6_FTM0(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FTM0), v))
 /*@}*/
 
 /*!
@@ -3054,13 +3054,13 @@ typedef union _hw_sim_scgc6
 #define BS_SIM_SCGC6_FTM1    (1U)          /*!< Bit field size in bits for SIM_SCGC6_FTM1. */
 
 /*! @brief Read current value of the SIM_SCGC6_FTM1 field. */
-#define BR_SIM_SCGC6_FTM1(x) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FTM1))
+#define BR_SIM_SCGC6_FTM1(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FTM1)))
 
 /*! @brief Format value for bitfield SIM_SCGC6_FTM1. */
 #define BF_SIM_SCGC6_FTM1(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC6_FTM1) & BM_SIM_SCGC6_FTM1)
 
 /*! @brief Set the FTM1 field to a new value. */
-#define BW_SIM_SCGC6_FTM1(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FTM1) = (v))
+#define BW_SIM_SCGC6_FTM1(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FTM1), v))
 /*@}*/
 
 /*!
@@ -3078,13 +3078,13 @@ typedef union _hw_sim_scgc6
 #define BS_SIM_SCGC6_FTM2    (1U)          /*!< Bit field size in bits for SIM_SCGC6_FTM2. */
 
 /*! @brief Read current value of the SIM_SCGC6_FTM2 field. */
-#define BR_SIM_SCGC6_FTM2(x) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FTM2))
+#define BR_SIM_SCGC6_FTM2(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FTM2)))
 
 /*! @brief Format value for bitfield SIM_SCGC6_FTM2. */
 #define BF_SIM_SCGC6_FTM2(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC6_FTM2) & BM_SIM_SCGC6_FTM2)
 
 /*! @brief Set the FTM2 field to a new value. */
-#define BW_SIM_SCGC6_FTM2(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FTM2) = (v))
+#define BW_SIM_SCGC6_FTM2(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_FTM2), v))
 /*@}*/
 
 /*!
@@ -3102,13 +3102,13 @@ typedef union _hw_sim_scgc6
 #define BS_SIM_SCGC6_ADC0    (1U)          /*!< Bit field size in bits for SIM_SCGC6_ADC0. */
 
 /*! @brief Read current value of the SIM_SCGC6_ADC0 field. */
-#define BR_SIM_SCGC6_ADC0(x) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_ADC0))
+#define BR_SIM_SCGC6_ADC0(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_ADC0)))
 
 /*! @brief Format value for bitfield SIM_SCGC6_ADC0. */
 #define BF_SIM_SCGC6_ADC0(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC6_ADC0) & BM_SIM_SCGC6_ADC0)
 
 /*! @brief Set the ADC0 field to a new value. */
-#define BW_SIM_SCGC6_ADC0(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_ADC0) = (v))
+#define BW_SIM_SCGC6_ADC0(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_ADC0), v))
 /*@}*/
 
 /*!
@@ -3126,13 +3126,13 @@ typedef union _hw_sim_scgc6
 #define BS_SIM_SCGC6_RTC     (1U)          /*!< Bit field size in bits for SIM_SCGC6_RTC. */
 
 /*! @brief Read current value of the SIM_SCGC6_RTC field. */
-#define BR_SIM_SCGC6_RTC(x)  (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_RTC))
+#define BR_SIM_SCGC6_RTC(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_RTC)))
 
 /*! @brief Format value for bitfield SIM_SCGC6_RTC. */
 #define BF_SIM_SCGC6_RTC(v)  ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC6_RTC) & BM_SIM_SCGC6_RTC)
 
 /*! @brief Set the RTC field to a new value. */
-#define BW_SIM_SCGC6_RTC(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_RTC) = (v))
+#define BW_SIM_SCGC6_RTC(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_RTC), v))
 /*@}*/
 
 /*!
@@ -3150,13 +3150,13 @@ typedef union _hw_sim_scgc6
 #define BS_SIM_SCGC6_DAC0    (1U)          /*!< Bit field size in bits for SIM_SCGC6_DAC0. */
 
 /*! @brief Read current value of the SIM_SCGC6_DAC0 field. */
-#define BR_SIM_SCGC6_DAC0(x) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_DAC0))
+#define BR_SIM_SCGC6_DAC0(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_DAC0)))
 
 /*! @brief Format value for bitfield SIM_SCGC6_DAC0. */
 #define BF_SIM_SCGC6_DAC0(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC6_DAC0) & BM_SIM_SCGC6_DAC0)
 
 /*! @brief Set the DAC0 field to a new value. */
-#define BW_SIM_SCGC6_DAC0(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_DAC0) = (v))
+#define BW_SIM_SCGC6_DAC0(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC6_ADDR(x), BP_SIM_SCGC6_DAC0), v))
 /*@}*/
 
 /*******************************************************************************
@@ -3213,13 +3213,13 @@ typedef union _hw_sim_scgc7
 #define BS_SIM_SCGC7_FLEXBUS (1U)          /*!< Bit field size in bits for SIM_SCGC7_FLEXBUS. */
 
 /*! @brief Read current value of the SIM_SCGC7_FLEXBUS field. */
-#define BR_SIM_SCGC7_FLEXBUS(x) (BITBAND_ACCESS32(HW_SIM_SCGC7_ADDR(x), BP_SIM_SCGC7_FLEXBUS))
+#define BR_SIM_SCGC7_FLEXBUS(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC7_ADDR(x), BP_SIM_SCGC7_FLEXBUS)))
 
 /*! @brief Format value for bitfield SIM_SCGC7_FLEXBUS. */
 #define BF_SIM_SCGC7_FLEXBUS(v) ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC7_FLEXBUS) & BM_SIM_SCGC7_FLEXBUS)
 
 /*! @brief Set the FLEXBUS field to a new value. */
-#define BW_SIM_SCGC7_FLEXBUS(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC7_ADDR(x), BP_SIM_SCGC7_FLEXBUS) = (v))
+#define BW_SIM_SCGC7_FLEXBUS(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC7_ADDR(x), BP_SIM_SCGC7_FLEXBUS), v))
 /*@}*/
 
 /*!
@@ -3237,13 +3237,13 @@ typedef union _hw_sim_scgc7
 #define BS_SIM_SCGC7_DMA     (1U)          /*!< Bit field size in bits for SIM_SCGC7_DMA. */
 
 /*! @brief Read current value of the SIM_SCGC7_DMA field. */
-#define BR_SIM_SCGC7_DMA(x)  (BITBAND_ACCESS32(HW_SIM_SCGC7_ADDR(x), BP_SIM_SCGC7_DMA))
+#define BR_SIM_SCGC7_DMA(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC7_ADDR(x), BP_SIM_SCGC7_DMA)))
 
 /*! @brief Format value for bitfield SIM_SCGC7_DMA. */
 #define BF_SIM_SCGC7_DMA(v)  ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC7_DMA) & BM_SIM_SCGC7_DMA)
 
 /*! @brief Set the DMA field to a new value. */
-#define BW_SIM_SCGC7_DMA(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC7_ADDR(x), BP_SIM_SCGC7_DMA) = (v))
+#define BW_SIM_SCGC7_DMA(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC7_ADDR(x), BP_SIM_SCGC7_DMA), v))
 /*@}*/
 
 /*!
@@ -3261,13 +3261,13 @@ typedef union _hw_sim_scgc7
 #define BS_SIM_SCGC7_MPU     (1U)          /*!< Bit field size in bits for SIM_SCGC7_MPU. */
 
 /*! @brief Read current value of the SIM_SCGC7_MPU field. */
-#define BR_SIM_SCGC7_MPU(x)  (BITBAND_ACCESS32(HW_SIM_SCGC7_ADDR(x), BP_SIM_SCGC7_MPU))
+#define BR_SIM_SCGC7_MPU(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_SCGC7_ADDR(x), BP_SIM_SCGC7_MPU)))
 
 /*! @brief Format value for bitfield SIM_SCGC7_MPU. */
 #define BF_SIM_SCGC7_MPU(v)  ((uint32_t)((uint32_t)(v) << BP_SIM_SCGC7_MPU) & BM_SIM_SCGC7_MPU)
 
 /*! @brief Set the MPU field to a new value. */
-#define BW_SIM_SCGC7_MPU(x, v) (BITBAND_ACCESS32(HW_SIM_SCGC7_ADDR(x), BP_SIM_SCGC7_MPU) = (v))
+#define BW_SIM_SCGC7_MPU(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_SCGC7_ADDR(x), BP_SIM_SCGC7_MPU), v))
 /*@}*/
 
 /*******************************************************************************
@@ -3350,13 +3350,13 @@ typedef union _hw_sim_clkdiv1
 #define BS_SIM_CLKDIV1_OUTDIV4 (4U)        /*!< Bit field size in bits for SIM_CLKDIV1_OUTDIV4. */
 
 /*! @brief Read current value of the SIM_CLKDIV1_OUTDIV4 field. */
-#define BR_SIM_CLKDIV1_OUTDIV4(x) (HW_SIM_CLKDIV1(x).B.OUTDIV4)
+#define BR_SIM_CLKDIV1_OUTDIV4(x) (UNION_READ_FS(HW_SIM_CLKDIV1_ADDR(x), hw_sim_clkdiv1, B.OUTDIV4))
 
 /*! @brief Format value for bitfield SIM_CLKDIV1_OUTDIV4. */
 #define BF_SIM_CLKDIV1_OUTDIV4(v) ((uint32_t)((uint32_t)(v) << BP_SIM_CLKDIV1_OUTDIV4) & BM_SIM_CLKDIV1_OUTDIV4)
 
 /*! @brief Set the OUTDIV4 field to a new value. */
-#define BW_SIM_CLKDIV1_OUTDIV4(x, v) (HW_SIM_CLKDIV1_WR(x, (HW_SIM_CLKDIV1_RD(x) & ~BM_SIM_CLKDIV1_OUTDIV4) | BF_SIM_CLKDIV1_OUTDIV4(v)))
+#define BW_SIM_CLKDIV1_OUTDIV4(x, v) (ADDRESS_WRITE32(HW_SIM_CLKDIV1_ADDR(x), (HW_SIM_CLKDIV1_RD(x) & ~BM_SIM_CLKDIV1_OUTDIV4) | BF_SIM_CLKDIV1_OUTDIV4(v)))
 /*@}*/
 
 /*!
@@ -3391,13 +3391,13 @@ typedef union _hw_sim_clkdiv1
 #define BS_SIM_CLKDIV1_OUTDIV3 (4U)        /*!< Bit field size in bits for SIM_CLKDIV1_OUTDIV3. */
 
 /*! @brief Read current value of the SIM_CLKDIV1_OUTDIV3 field. */
-#define BR_SIM_CLKDIV1_OUTDIV3(x) (HW_SIM_CLKDIV1(x).B.OUTDIV3)
+#define BR_SIM_CLKDIV1_OUTDIV3(x) (UNION_READ_FS(HW_SIM_CLKDIV1_ADDR(x), hw_sim_clkdiv1, B.OUTDIV3))
 
 /*! @brief Format value for bitfield SIM_CLKDIV1_OUTDIV3. */
 #define BF_SIM_CLKDIV1_OUTDIV3(v) ((uint32_t)((uint32_t)(v) << BP_SIM_CLKDIV1_OUTDIV3) & BM_SIM_CLKDIV1_OUTDIV3)
 
 /*! @brief Set the OUTDIV3 field to a new value. */
-#define BW_SIM_CLKDIV1_OUTDIV3(x, v) (HW_SIM_CLKDIV1_WR(x, (HW_SIM_CLKDIV1_RD(x) & ~BM_SIM_CLKDIV1_OUTDIV3) | BF_SIM_CLKDIV1_OUTDIV3(v)))
+#define BW_SIM_CLKDIV1_OUTDIV3(x, v) (ADDRESS_WRITE32(HW_SIM_CLKDIV1_ADDR(x), (HW_SIM_CLKDIV1_RD(x) & ~BM_SIM_CLKDIV1_OUTDIV3) | BF_SIM_CLKDIV1_OUTDIV3(v)))
 /*@}*/
 
 /*!
@@ -3432,13 +3432,13 @@ typedef union _hw_sim_clkdiv1
 #define BS_SIM_CLKDIV1_OUTDIV2 (4U)        /*!< Bit field size in bits for SIM_CLKDIV1_OUTDIV2. */
 
 /*! @brief Read current value of the SIM_CLKDIV1_OUTDIV2 field. */
-#define BR_SIM_CLKDIV1_OUTDIV2(x) (HW_SIM_CLKDIV1(x).B.OUTDIV2)
+#define BR_SIM_CLKDIV1_OUTDIV2(x) (UNION_READ_FS(HW_SIM_CLKDIV1_ADDR(x), hw_sim_clkdiv1, B.OUTDIV2))
 
 /*! @brief Format value for bitfield SIM_CLKDIV1_OUTDIV2. */
 #define BF_SIM_CLKDIV1_OUTDIV2(v) ((uint32_t)((uint32_t)(v) << BP_SIM_CLKDIV1_OUTDIV2) & BM_SIM_CLKDIV1_OUTDIV2)
 
 /*! @brief Set the OUTDIV2 field to a new value. */
-#define BW_SIM_CLKDIV1_OUTDIV2(x, v) (HW_SIM_CLKDIV1_WR(x, (HW_SIM_CLKDIV1_RD(x) & ~BM_SIM_CLKDIV1_OUTDIV2) | BF_SIM_CLKDIV1_OUTDIV2(v)))
+#define BW_SIM_CLKDIV1_OUTDIV2(x, v) (ADDRESS_WRITE32(HW_SIM_CLKDIV1_ADDR(x), (HW_SIM_CLKDIV1_RD(x) & ~BM_SIM_CLKDIV1_OUTDIV2) | BF_SIM_CLKDIV1_OUTDIV2(v)))
 /*@}*/
 
 /*!
@@ -3472,13 +3472,13 @@ typedef union _hw_sim_clkdiv1
 #define BS_SIM_CLKDIV1_OUTDIV1 (4U)        /*!< Bit field size in bits for SIM_CLKDIV1_OUTDIV1. */
 
 /*! @brief Read current value of the SIM_CLKDIV1_OUTDIV1 field. */
-#define BR_SIM_CLKDIV1_OUTDIV1(x) (HW_SIM_CLKDIV1(x).B.OUTDIV1)
+#define BR_SIM_CLKDIV1_OUTDIV1(x) (UNION_READ_FS(HW_SIM_CLKDIV1_ADDR(x), hw_sim_clkdiv1, B.OUTDIV1))
 
 /*! @brief Format value for bitfield SIM_CLKDIV1_OUTDIV1. */
 #define BF_SIM_CLKDIV1_OUTDIV1(v) ((uint32_t)((uint32_t)(v) << BP_SIM_CLKDIV1_OUTDIV1) & BM_SIM_CLKDIV1_OUTDIV1)
 
 /*! @brief Set the OUTDIV1 field to a new value. */
-#define BW_SIM_CLKDIV1_OUTDIV1(x, v) (HW_SIM_CLKDIV1_WR(x, (HW_SIM_CLKDIV1_RD(x) & ~BM_SIM_CLKDIV1_OUTDIV1) | BF_SIM_CLKDIV1_OUTDIV1(v)))
+#define BW_SIM_CLKDIV1_OUTDIV1(x, v) (ADDRESS_WRITE32(HW_SIM_CLKDIV1_ADDR(x), (HW_SIM_CLKDIV1_RD(x) & ~BM_SIM_CLKDIV1_OUTDIV1) | BF_SIM_CLKDIV1_OUTDIV1(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -3532,13 +3532,13 @@ typedef union _hw_sim_clkdiv2
 #define BS_SIM_CLKDIV2_USBFRAC (1U)        /*!< Bit field size in bits for SIM_CLKDIV2_USBFRAC. */
 
 /*! @brief Read current value of the SIM_CLKDIV2_USBFRAC field. */
-#define BR_SIM_CLKDIV2_USBFRAC(x) (BITBAND_ACCESS32(HW_SIM_CLKDIV2_ADDR(x), BP_SIM_CLKDIV2_USBFRAC))
+#define BR_SIM_CLKDIV2_USBFRAC(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_CLKDIV2_ADDR(x), BP_SIM_CLKDIV2_USBFRAC)))
 
 /*! @brief Format value for bitfield SIM_CLKDIV2_USBFRAC. */
 #define BF_SIM_CLKDIV2_USBFRAC(v) ((uint32_t)((uint32_t)(v) << BP_SIM_CLKDIV2_USBFRAC) & BM_SIM_CLKDIV2_USBFRAC)
 
 /*! @brief Set the USBFRAC field to a new value. */
-#define BW_SIM_CLKDIV2_USBFRAC(x, v) (BITBAND_ACCESS32(HW_SIM_CLKDIV2_ADDR(x), BP_SIM_CLKDIV2_USBFRAC) = (v))
+#define BW_SIM_CLKDIV2_USBFRAC(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_CLKDIV2_ADDR(x), BP_SIM_CLKDIV2_USBFRAC), v))
 /*@}*/
 
 /*!
@@ -3554,13 +3554,13 @@ typedef union _hw_sim_clkdiv2
 #define BS_SIM_CLKDIV2_USBDIV (3U)         /*!< Bit field size in bits for SIM_CLKDIV2_USBDIV. */
 
 /*! @brief Read current value of the SIM_CLKDIV2_USBDIV field. */
-#define BR_SIM_CLKDIV2_USBDIV(x) (HW_SIM_CLKDIV2(x).B.USBDIV)
+#define BR_SIM_CLKDIV2_USBDIV(x) (UNION_READ_FS(HW_SIM_CLKDIV2_ADDR(x), hw_sim_clkdiv2, B.USBDIV))
 
 /*! @brief Format value for bitfield SIM_CLKDIV2_USBDIV. */
 #define BF_SIM_CLKDIV2_USBDIV(v) ((uint32_t)((uint32_t)(v) << BP_SIM_CLKDIV2_USBDIV) & BM_SIM_CLKDIV2_USBDIV)
 
 /*! @brief Set the USBDIV field to a new value. */
-#define BW_SIM_CLKDIV2_USBDIV(x, v) (HW_SIM_CLKDIV2_WR(x, (HW_SIM_CLKDIV2_RD(x) & ~BM_SIM_CLKDIV2_USBDIV) | BF_SIM_CLKDIV2_USBDIV(v)))
+#define BW_SIM_CLKDIV2_USBDIV(x, v) (ADDRESS_WRITE32(HW_SIM_CLKDIV2_ADDR(x), (HW_SIM_CLKDIV2_RD(x) & ~BM_SIM_CLKDIV2_USBDIV) | BF_SIM_CLKDIV2_USBDIV(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -3629,13 +3629,13 @@ typedef union _hw_sim_fcfg1
 #define BS_SIM_FCFG1_FLASHDIS (1U)         /*!< Bit field size in bits for SIM_FCFG1_FLASHDIS. */
 
 /*! @brief Read current value of the SIM_FCFG1_FLASHDIS field. */
-#define BR_SIM_FCFG1_FLASHDIS(x) (BITBAND_ACCESS32(HW_SIM_FCFG1_ADDR(x), BP_SIM_FCFG1_FLASHDIS))
+#define BR_SIM_FCFG1_FLASHDIS(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_FCFG1_ADDR(x), BP_SIM_FCFG1_FLASHDIS)))
 
 /*! @brief Format value for bitfield SIM_FCFG1_FLASHDIS. */
 #define BF_SIM_FCFG1_FLASHDIS(v) ((uint32_t)((uint32_t)(v) << BP_SIM_FCFG1_FLASHDIS) & BM_SIM_FCFG1_FLASHDIS)
 
 /*! @brief Set the FLASHDIS field to a new value. */
-#define BW_SIM_FCFG1_FLASHDIS(x, v) (BITBAND_ACCESS32(HW_SIM_FCFG1_ADDR(x), BP_SIM_FCFG1_FLASHDIS) = (v))
+#define BW_SIM_FCFG1_FLASHDIS(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_FCFG1_ADDR(x), BP_SIM_FCFG1_FLASHDIS), v))
 /*@}*/
 
 /*!
@@ -3658,13 +3658,13 @@ typedef union _hw_sim_fcfg1
 #define BS_SIM_FCFG1_FLASHDOZE (1U)        /*!< Bit field size in bits for SIM_FCFG1_FLASHDOZE. */
 
 /*! @brief Read current value of the SIM_FCFG1_FLASHDOZE field. */
-#define BR_SIM_FCFG1_FLASHDOZE(x) (BITBAND_ACCESS32(HW_SIM_FCFG1_ADDR(x), BP_SIM_FCFG1_FLASHDOZE))
+#define BR_SIM_FCFG1_FLASHDOZE(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_FCFG1_ADDR(x), BP_SIM_FCFG1_FLASHDOZE)))
 
 /*! @brief Format value for bitfield SIM_FCFG1_FLASHDOZE. */
 #define BF_SIM_FCFG1_FLASHDOZE(v) ((uint32_t)((uint32_t)(v) << BP_SIM_FCFG1_FLASHDOZE) & BM_SIM_FCFG1_FLASHDOZE)
 
 /*! @brief Set the FLASHDOZE field to a new value. */
-#define BW_SIM_FCFG1_FLASHDOZE(x, v) (BITBAND_ACCESS32(HW_SIM_FCFG1_ADDR(x), BP_SIM_FCFG1_FLASHDOZE) = (v))
+#define BW_SIM_FCFG1_FLASHDOZE(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_SIM_FCFG1_ADDR(x), BP_SIM_FCFG1_FLASHDOZE), v))
 /*@}*/
 
 /*!
@@ -3679,7 +3679,7 @@ typedef union _hw_sim_fcfg1
 #define BS_SIM_FCFG1_DEPART  (4U)          /*!< Bit field size in bits for SIM_FCFG1_DEPART. */
 
 /*! @brief Read current value of the SIM_FCFG1_DEPART field. */
-#define BR_SIM_FCFG1_DEPART(x) (HW_SIM_FCFG1(x).B.DEPART)
+#define BR_SIM_FCFG1_DEPART(x) (UNION_READ_FS(HW_SIM_FCFG1_ADDR(x), hw_sim_fcfg1, B.DEPART))
 /*@}*/
 
 /*!
@@ -3706,7 +3706,7 @@ typedef union _hw_sim_fcfg1
 #define BS_SIM_FCFG1_EESIZE  (4U)          /*!< Bit field size in bits for SIM_FCFG1_EESIZE. */
 
 /*! @brief Read current value of the SIM_FCFG1_EESIZE field. */
-#define BR_SIM_FCFG1_EESIZE(x) (HW_SIM_FCFG1(x).B.EESIZE)
+#define BR_SIM_FCFG1_EESIZE(x) (UNION_READ_FS(HW_SIM_FCFG1_ADDR(x), hw_sim_fcfg1, B.EESIZE))
 /*@}*/
 
 /*!
@@ -3730,7 +3730,7 @@ typedef union _hw_sim_fcfg1
 #define BS_SIM_FCFG1_PFSIZE  (4U)          /*!< Bit field size in bits for SIM_FCFG1_PFSIZE. */
 
 /*! @brief Read current value of the SIM_FCFG1_PFSIZE field. */
-#define BR_SIM_FCFG1_PFSIZE(x) (HW_SIM_FCFG1(x).B.PFSIZE)
+#define BR_SIM_FCFG1_PFSIZE(x) (UNION_READ_FS(HW_SIM_FCFG1_ADDR(x), hw_sim_fcfg1, B.PFSIZE))
 /*@}*/
 
 /*!
@@ -3754,7 +3754,7 @@ typedef union _hw_sim_fcfg1
 #define BS_SIM_FCFG1_NVMSIZE (4U)          /*!< Bit field size in bits for SIM_FCFG1_NVMSIZE. */
 
 /*! @brief Read current value of the SIM_FCFG1_NVMSIZE field. */
-#define BR_SIM_FCFG1_NVMSIZE(x) (HW_SIM_FCFG1(x).B.NVMSIZE)
+#define BR_SIM_FCFG1_NVMSIZE(x) (UNION_READ_FS(HW_SIM_FCFG1_ADDR(x), hw_sim_fcfg1, B.NVMSIZE))
 /*@}*/
 
 /*******************************************************************************
@@ -3813,7 +3813,7 @@ typedef union _hw_sim_fcfg2
 #define BS_SIM_FCFG2_MAXADDR1 (7U)         /*!< Bit field size in bits for SIM_FCFG2_MAXADDR1. */
 
 /*! @brief Read current value of the SIM_FCFG2_MAXADDR1 field. */
-#define BR_SIM_FCFG2_MAXADDR1(x) (HW_SIM_FCFG2(x).B.MAXADDR1)
+#define BR_SIM_FCFG2_MAXADDR1(x) (UNION_READ_FS(HW_SIM_FCFG2_ADDR(x), hw_sim_fcfg2, B.MAXADDR1))
 /*@}*/
 
 /*!
@@ -3832,7 +3832,7 @@ typedef union _hw_sim_fcfg2
 #define BS_SIM_FCFG2_PFLSH   (1U)          /*!< Bit field size in bits for SIM_FCFG2_PFLSH. */
 
 /*! @brief Read current value of the SIM_FCFG2_PFLSH field. */
-#define BR_SIM_FCFG2_PFLSH(x) (BITBAND_ACCESS32(HW_SIM_FCFG2_ADDR(x), BP_SIM_FCFG2_PFLSH))
+#define BR_SIM_FCFG2_PFLSH(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_SIM_FCFG2_ADDR(x), BP_SIM_FCFG2_PFLSH)))
 /*@}*/
 
 /*!
@@ -3849,7 +3849,7 @@ typedef union _hw_sim_fcfg2
 #define BS_SIM_FCFG2_MAXADDR0 (7U)         /*!< Bit field size in bits for SIM_FCFG2_MAXADDR0. */
 
 /*! @brief Read current value of the SIM_FCFG2_MAXADDR0 field. */
-#define BR_SIM_FCFG2_MAXADDR0(x) (HW_SIM_FCFG2(x).B.MAXADDR0)
+#define BR_SIM_FCFG2_MAXADDR0(x) (UNION_READ_FS(HW_SIM_FCFG2_ADDR(x), hw_sim_fcfg2, B.MAXADDR0))
 /*@}*/
 
 /*******************************************************************************
@@ -3895,7 +3895,7 @@ typedef union _hw_sim_uidh
 #define BS_SIM_UIDH_UID      (32U)         /*!< Bit field size in bits for SIM_UIDH_UID. */
 
 /*! @brief Read current value of the SIM_UIDH_UID field. */
-#define BR_SIM_UIDH_UID(x)   (HW_SIM_UIDH(x).U)
+#define BR_SIM_UIDH_UID(x)   (ADDRESS_READ32(HW_SIM_UIDH_ADDR(x)))
 /*@}*/
 
 /*******************************************************************************
@@ -3941,7 +3941,7 @@ typedef union _hw_sim_uidmh
 #define BS_SIM_UIDMH_UID     (32U)         /*!< Bit field size in bits for SIM_UIDMH_UID. */
 
 /*! @brief Read current value of the SIM_UIDMH_UID field. */
-#define BR_SIM_UIDMH_UID(x)  (HW_SIM_UIDMH(x).U)
+#define BR_SIM_UIDMH_UID(x)  (ADDRESS_READ32(HW_SIM_UIDMH_ADDR(x)))
 /*@}*/
 
 /*******************************************************************************
@@ -3987,7 +3987,7 @@ typedef union _hw_sim_uidml
 #define BS_SIM_UIDML_UID     (32U)         /*!< Bit field size in bits for SIM_UIDML_UID. */
 
 /*! @brief Read current value of the SIM_UIDML_UID field. */
-#define BR_SIM_UIDML_UID(x)  (HW_SIM_UIDML(x).U)
+#define BR_SIM_UIDML_UID(x)  (ADDRESS_READ32(HW_SIM_UIDML_ADDR(x)))
 /*@}*/
 
 /*******************************************************************************
@@ -4033,7 +4033,7 @@ typedef union _hw_sim_uidl
 #define BS_SIM_UIDL_UID      (32U)         /*!< Bit field size in bits for SIM_UIDL_UID. */
 
 /*! @brief Read current value of the SIM_UIDL_UID field. */
-#define BR_SIM_UIDL_UID(x)   (HW_SIM_UIDL(x).U)
+#define BR_SIM_UIDL_UID(x)   (ADDRESS_READ32(HW_SIM_UIDL_ADDR(x)))
 /*@}*/
 
 /*******************************************************************************

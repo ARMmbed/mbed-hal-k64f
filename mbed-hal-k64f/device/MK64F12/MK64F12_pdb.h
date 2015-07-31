@@ -176,13 +176,13 @@ typedef union _hw_pdb_sc
 #define BS_PDB_SC_LDOK       (1U)          /*!< Bit field size in bits for PDB_SC_LDOK. */
 
 /*! @brief Read current value of the PDB_SC_LDOK field. */
-#define BR_PDB_SC_LDOK(x)    (BITBAND_ACCESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_LDOK))
+#define BR_PDB_SC_LDOK(x)    (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_LDOK)))
 
 /*! @brief Format value for bitfield PDB_SC_LDOK. */
 #define BF_PDB_SC_LDOK(v)    ((uint32_t)((uint32_t)(v) << BP_PDB_SC_LDOK) & BM_PDB_SC_LDOK)
 
 /*! @brief Set the LDOK field to a new value. */
-#define BW_PDB_SC_LDOK(x, v) (BITBAND_ACCESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_LDOK) = (v))
+#define BW_PDB_SC_LDOK(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_LDOK), v))
 /*@}*/
 
 /*!
@@ -200,13 +200,13 @@ typedef union _hw_pdb_sc
 #define BS_PDB_SC_CONT       (1U)          /*!< Bit field size in bits for PDB_SC_CONT. */
 
 /*! @brief Read current value of the PDB_SC_CONT field. */
-#define BR_PDB_SC_CONT(x)    (BITBAND_ACCESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_CONT))
+#define BR_PDB_SC_CONT(x)    (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_CONT)))
 
 /*! @brief Format value for bitfield PDB_SC_CONT. */
 #define BF_PDB_SC_CONT(v)    ((uint32_t)((uint32_t)(v) << BP_PDB_SC_CONT) & BM_PDB_SC_CONT)
 
 /*! @brief Set the CONT field to a new value. */
-#define BW_PDB_SC_CONT(x, v) (BITBAND_ACCESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_CONT) = (v))
+#define BW_PDB_SC_CONT(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_CONT), v))
 /*@}*/
 
 /*!
@@ -227,13 +227,13 @@ typedef union _hw_pdb_sc
 #define BS_PDB_SC_MULT       (2U)          /*!< Bit field size in bits for PDB_SC_MULT. */
 
 /*! @brief Read current value of the PDB_SC_MULT field. */
-#define BR_PDB_SC_MULT(x)    (HW_PDB_SC(x).B.MULT)
+#define BR_PDB_SC_MULT(x)    (UNION_READ_FS(HW_PDB_SC_ADDR(x), hw_pdb_sc, B.MULT))
 
 /*! @brief Format value for bitfield PDB_SC_MULT. */
 #define BF_PDB_SC_MULT(v)    ((uint32_t)((uint32_t)(v) << BP_PDB_SC_MULT) & BM_PDB_SC_MULT)
 
 /*! @brief Set the MULT field to a new value. */
-#define BW_PDB_SC_MULT(x, v) (HW_PDB_SC_WR(x, (HW_PDB_SC_RD(x) & ~BM_PDB_SC_MULT) | BF_PDB_SC_MULT(v)))
+#define BW_PDB_SC_MULT(x, v) (ADDRESS_WRITE32(HW_PDB_SC_ADDR(x), (HW_PDB_SC_RD(x) & ~BM_PDB_SC_MULT) | BF_PDB_SC_MULT(v)))
 /*@}*/
 
 /*!
@@ -252,13 +252,13 @@ typedef union _hw_pdb_sc
 #define BS_PDB_SC_PDBIE      (1U)          /*!< Bit field size in bits for PDB_SC_PDBIE. */
 
 /*! @brief Read current value of the PDB_SC_PDBIE field. */
-#define BR_PDB_SC_PDBIE(x)   (BITBAND_ACCESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_PDBIE))
+#define BR_PDB_SC_PDBIE(x)   (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_PDBIE)))
 
 /*! @brief Format value for bitfield PDB_SC_PDBIE. */
 #define BF_PDB_SC_PDBIE(v)   ((uint32_t)((uint32_t)(v) << BP_PDB_SC_PDBIE) & BM_PDB_SC_PDBIE)
 
 /*! @brief Set the PDBIE field to a new value. */
-#define BW_PDB_SC_PDBIE(x, v) (BITBAND_ACCESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_PDBIE) = (v))
+#define BW_PDB_SC_PDBIE(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_PDBIE), v))
 /*@}*/
 
 /*!
@@ -273,13 +273,13 @@ typedef union _hw_pdb_sc
 #define BS_PDB_SC_PDBIF      (1U)          /*!< Bit field size in bits for PDB_SC_PDBIF. */
 
 /*! @brief Read current value of the PDB_SC_PDBIF field. */
-#define BR_PDB_SC_PDBIF(x)   (BITBAND_ACCESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_PDBIF))
+#define BR_PDB_SC_PDBIF(x)   (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_PDBIF)))
 
 /*! @brief Format value for bitfield PDB_SC_PDBIF. */
 #define BF_PDB_SC_PDBIF(v)   ((uint32_t)((uint32_t)(v) << BP_PDB_SC_PDBIF) & BM_PDB_SC_PDBIF)
 
 /*! @brief Set the PDBIF field to a new value. */
-#define BW_PDB_SC_PDBIF(x, v) (BITBAND_ACCESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_PDBIF) = (v))
+#define BW_PDB_SC_PDBIF(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_PDBIF), v))
 /*@}*/
 
 /*!
@@ -295,13 +295,13 @@ typedef union _hw_pdb_sc
 #define BS_PDB_SC_PDBEN      (1U)          /*!< Bit field size in bits for PDB_SC_PDBEN. */
 
 /*! @brief Read current value of the PDB_SC_PDBEN field. */
-#define BR_PDB_SC_PDBEN(x)   (BITBAND_ACCESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_PDBEN))
+#define BR_PDB_SC_PDBEN(x)   (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_PDBEN)))
 
 /*! @brief Format value for bitfield PDB_SC_PDBEN. */
 #define BF_PDB_SC_PDBEN(v)   ((uint32_t)((uint32_t)(v) << BP_PDB_SC_PDBEN) & BM_PDB_SC_PDBEN)
 
 /*! @brief Set the PDBEN field to a new value. */
-#define BW_PDB_SC_PDBEN(x, v) (BITBAND_ACCESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_PDBEN) = (v))
+#define BW_PDB_SC_PDBEN(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_PDBEN), v))
 /*@}*/
 
 /*!
@@ -335,13 +335,13 @@ typedef union _hw_pdb_sc
 #define BS_PDB_SC_TRGSEL     (4U)          /*!< Bit field size in bits for PDB_SC_TRGSEL. */
 
 /*! @brief Read current value of the PDB_SC_TRGSEL field. */
-#define BR_PDB_SC_TRGSEL(x)  (HW_PDB_SC(x).B.TRGSEL)
+#define BR_PDB_SC_TRGSEL(x)  (UNION_READ_FS(HW_PDB_SC_ADDR(x), hw_pdb_sc, B.TRGSEL))
 
 /*! @brief Format value for bitfield PDB_SC_TRGSEL. */
 #define BF_PDB_SC_TRGSEL(v)  ((uint32_t)((uint32_t)(v) << BP_PDB_SC_TRGSEL) & BM_PDB_SC_TRGSEL)
 
 /*! @brief Set the TRGSEL field to a new value. */
-#define BW_PDB_SC_TRGSEL(x, v) (HW_PDB_SC_WR(x, (HW_PDB_SC_RD(x) & ~BM_PDB_SC_TRGSEL) | BF_PDB_SC_TRGSEL(v)))
+#define BW_PDB_SC_TRGSEL(x, v) (ADDRESS_WRITE32(HW_PDB_SC_ADDR(x), (HW_PDB_SC_RD(x) & ~BM_PDB_SC_TRGSEL) | BF_PDB_SC_TRGSEL(v)))
 /*@}*/
 
 /*!
@@ -371,13 +371,13 @@ typedef union _hw_pdb_sc
 #define BS_PDB_SC_PRESCALER  (3U)          /*!< Bit field size in bits for PDB_SC_PRESCALER. */
 
 /*! @brief Read current value of the PDB_SC_PRESCALER field. */
-#define BR_PDB_SC_PRESCALER(x) (HW_PDB_SC(x).B.PRESCALER)
+#define BR_PDB_SC_PRESCALER(x) (UNION_READ_FS(HW_PDB_SC_ADDR(x), hw_pdb_sc, B.PRESCALER))
 
 /*! @brief Format value for bitfield PDB_SC_PRESCALER. */
 #define BF_PDB_SC_PRESCALER(v) ((uint32_t)((uint32_t)(v) << BP_PDB_SC_PRESCALER) & BM_PDB_SC_PRESCALER)
 
 /*! @brief Set the PRESCALER field to a new value. */
-#define BW_PDB_SC_PRESCALER(x, v) (HW_PDB_SC_WR(x, (HW_PDB_SC_RD(x) & ~BM_PDB_SC_PRESCALER) | BF_PDB_SC_PRESCALER(v)))
+#define BW_PDB_SC_PRESCALER(x, v) (ADDRESS_WRITE32(HW_PDB_SC_ADDR(x), (HW_PDB_SC_RD(x) & ~BM_PDB_SC_PRESCALER) | BF_PDB_SC_PRESCALER(v)))
 /*@}*/
 
 /*!
@@ -396,13 +396,13 @@ typedef union _hw_pdb_sc
 #define BS_PDB_SC_DMAEN      (1U)          /*!< Bit field size in bits for PDB_SC_DMAEN. */
 
 /*! @brief Read current value of the PDB_SC_DMAEN field. */
-#define BR_PDB_SC_DMAEN(x)   (BITBAND_ACCESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_DMAEN))
+#define BR_PDB_SC_DMAEN(x)   (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_DMAEN)))
 
 /*! @brief Format value for bitfield PDB_SC_DMAEN. */
 #define BF_PDB_SC_DMAEN(v)   ((uint32_t)((uint32_t)(v) << BP_PDB_SC_DMAEN) & BM_PDB_SC_DMAEN)
 
 /*! @brief Set the DMAEN field to a new value. */
-#define BW_PDB_SC_DMAEN(x, v) (BITBAND_ACCESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_DMAEN) = (v))
+#define BW_PDB_SC_DMAEN(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_DMAEN), v))
 /*@}*/
 
 /*!
@@ -421,7 +421,7 @@ typedef union _hw_pdb_sc
 #define BF_PDB_SC_SWTRIG(v)  ((uint32_t)((uint32_t)(v) << BP_PDB_SC_SWTRIG) & BM_PDB_SC_SWTRIG)
 
 /*! @brief Set the SWTRIG field to a new value. */
-#define BW_PDB_SC_SWTRIG(x, v) (BITBAND_ACCESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_SWTRIG) = (v))
+#define BW_PDB_SC_SWTRIG(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_SWTRIG), v))
 /*@}*/
 
 /*!
@@ -440,13 +440,13 @@ typedef union _hw_pdb_sc
 #define BS_PDB_SC_PDBEIE     (1U)          /*!< Bit field size in bits for PDB_SC_PDBEIE. */
 
 /*! @brief Read current value of the PDB_SC_PDBEIE field. */
-#define BR_PDB_SC_PDBEIE(x)  (BITBAND_ACCESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_PDBEIE))
+#define BR_PDB_SC_PDBEIE(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_PDBEIE)))
 
 /*! @brief Format value for bitfield PDB_SC_PDBEIE. */
 #define BF_PDB_SC_PDBEIE(v)  ((uint32_t)((uint32_t)(v) << BP_PDB_SC_PDBEIE) & BM_PDB_SC_PDBEIE)
 
 /*! @brief Set the PDBEIE field to a new value. */
-#define BW_PDB_SC_PDBEIE(x, v) (BITBAND_ACCESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_PDBEIE) = (v))
+#define BW_PDB_SC_PDBEIE(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PDB_SC_ADDR(x), BP_PDB_SC_PDBEIE), v))
 /*@}*/
 
 /*!
@@ -473,13 +473,13 @@ typedef union _hw_pdb_sc
 #define BS_PDB_SC_LDMOD      (2U)          /*!< Bit field size in bits for PDB_SC_LDMOD. */
 
 /*! @brief Read current value of the PDB_SC_LDMOD field. */
-#define BR_PDB_SC_LDMOD(x)   (HW_PDB_SC(x).B.LDMOD)
+#define BR_PDB_SC_LDMOD(x)   (UNION_READ_FS(HW_PDB_SC_ADDR(x), hw_pdb_sc, B.LDMOD))
 
 /*! @brief Format value for bitfield PDB_SC_LDMOD. */
 #define BF_PDB_SC_LDMOD(v)   ((uint32_t)((uint32_t)(v) << BP_PDB_SC_LDMOD) & BM_PDB_SC_LDMOD)
 
 /*! @brief Set the LDMOD field to a new value. */
-#define BW_PDB_SC_LDMOD(x, v) (HW_PDB_SC_WR(x, (HW_PDB_SC_RD(x) & ~BM_PDB_SC_LDMOD) | BF_PDB_SC_LDMOD(v)))
+#define BW_PDB_SC_LDMOD(x, v) (ADDRESS_WRITE32(HW_PDB_SC_ADDR(x), (HW_PDB_SC_RD(x) & ~BM_PDB_SC_LDMOD) | BF_PDB_SC_LDMOD(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -533,13 +533,13 @@ typedef union _hw_pdb_mod
 #define BS_PDB_MOD_MOD       (16U)         /*!< Bit field size in bits for PDB_MOD_MOD. */
 
 /*! @brief Read current value of the PDB_MOD_MOD field. */
-#define BR_PDB_MOD_MOD(x)    (HW_PDB_MOD(x).B.MOD)
+#define BR_PDB_MOD_MOD(x)    (UNION_READ_FS(HW_PDB_MOD_ADDR(x), hw_pdb_mod, B.MOD))
 
 /*! @brief Format value for bitfield PDB_MOD_MOD. */
 #define BF_PDB_MOD_MOD(v)    ((uint32_t)((uint32_t)(v) << BP_PDB_MOD_MOD) & BM_PDB_MOD_MOD)
 
 /*! @brief Set the MOD field to a new value. */
-#define BW_PDB_MOD_MOD(x, v) (HW_PDB_MOD_WR(x, (HW_PDB_MOD_RD(x) & ~BM_PDB_MOD_MOD) | BF_PDB_MOD_MOD(v)))
+#define BW_PDB_MOD_MOD(x, v) (ADDRESS_WRITE32(HW_PDB_MOD_ADDR(x), (HW_PDB_MOD_RD(x) & ~BM_PDB_MOD_MOD) | BF_PDB_MOD_MOD(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -586,7 +586,7 @@ typedef union _hw_pdb_cnt
 #define BS_PDB_CNT_CNT       (16U)         /*!< Bit field size in bits for PDB_CNT_CNT. */
 
 /*! @brief Read current value of the PDB_CNT_CNT field. */
-#define BR_PDB_CNT_CNT(x)    (HW_PDB_CNT(x).B.CNT)
+#define BR_PDB_CNT_CNT(x)    (UNION_READ_FS(HW_PDB_CNT_ADDR(x), hw_pdb_cnt, B.CNT))
 /*@}*/
 
 /*******************************************************************************
@@ -641,13 +641,13 @@ typedef union _hw_pdb_idly
 #define BS_PDB_IDLY_IDLY     (16U)         /*!< Bit field size in bits for PDB_IDLY_IDLY. */
 
 /*! @brief Read current value of the PDB_IDLY_IDLY field. */
-#define BR_PDB_IDLY_IDLY(x)  (HW_PDB_IDLY(x).B.IDLY)
+#define BR_PDB_IDLY_IDLY(x)  (UNION_READ_FS(HW_PDB_IDLY_ADDR(x), hw_pdb_idly, B.IDLY))
 
 /*! @brief Format value for bitfield PDB_IDLY_IDLY. */
 #define BF_PDB_IDLY_IDLY(v)  ((uint32_t)((uint32_t)(v) << BP_PDB_IDLY_IDLY) & BM_PDB_IDLY_IDLY)
 
 /*! @brief Set the IDLY field to a new value. */
-#define BW_PDB_IDLY_IDLY(x, v) (HW_PDB_IDLY_WR(x, (HW_PDB_IDLY_RD(x) & ~BM_PDB_IDLY_IDLY) | BF_PDB_IDLY_IDLY(v)))
+#define BW_PDB_IDLY_IDLY(x, v) (ADDRESS_WRITE32(HW_PDB_IDLY_ADDR(x), (HW_PDB_IDLY_RD(x) & ~BM_PDB_IDLY_IDLY) | BF_PDB_IDLY_IDLY(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -711,13 +711,13 @@ typedef union _hw_pdb_chnc1
 #define BS_PDB_CHnC1_EN      (8U)          /*!< Bit field size in bits for PDB_CHnC1_EN. */
 
 /*! @brief Read current value of the PDB_CHnC1_EN field. */
-#define BR_PDB_CHnC1_EN(x, n) (HW_PDB_CHnC1(x, n).B.EN)
+#define BR_PDB_CHnC1_EN(x, n) (UNION_READ_FS(HW_PDB_CHnC1_ADDR(x, n), hw_pdb_chnc1, B.EN))
 
 /*! @brief Format value for bitfield PDB_CHnC1_EN. */
 #define BF_PDB_CHnC1_EN(v)   ((uint32_t)((uint32_t)(v) << BP_PDB_CHnC1_EN) & BM_PDB_CHnC1_EN)
 
 /*! @brief Set the EN field to a new value. */
-#define BW_PDB_CHnC1_EN(x, n, v) (HW_PDB_CHnC1_WR(x, n, (HW_PDB_CHnC1_RD(x, n) & ~BM_PDB_CHnC1_EN) | BF_PDB_CHnC1_EN(v)))
+#define BW_PDB_CHnC1_EN(x, n, v) (ADDRESS_WRITE32(HW_PDB_CHnC1_ADDR(x, n), (HW_PDB_CHnC1_RD(x, n) & ~BM_PDB_CHnC1_EN) | BF_PDB_CHnC1_EN(v)))
 /*@}*/
 
 /*!
@@ -742,13 +742,13 @@ typedef union _hw_pdb_chnc1
 #define BS_PDB_CHnC1_TOS     (8U)          /*!< Bit field size in bits for PDB_CHnC1_TOS. */
 
 /*! @brief Read current value of the PDB_CHnC1_TOS field. */
-#define BR_PDB_CHnC1_TOS(x, n) (HW_PDB_CHnC1(x, n).B.TOS)
+#define BR_PDB_CHnC1_TOS(x, n) (UNION_READ_FS(HW_PDB_CHnC1_ADDR(x, n), hw_pdb_chnc1, B.TOS))
 
 /*! @brief Format value for bitfield PDB_CHnC1_TOS. */
 #define BF_PDB_CHnC1_TOS(v)  ((uint32_t)((uint32_t)(v) << BP_PDB_CHnC1_TOS) & BM_PDB_CHnC1_TOS)
 
 /*! @brief Set the TOS field to a new value. */
-#define BW_PDB_CHnC1_TOS(x, n, v) (HW_PDB_CHnC1_WR(x, n, (HW_PDB_CHnC1_RD(x, n) & ~BM_PDB_CHnC1_TOS) | BF_PDB_CHnC1_TOS(v)))
+#define BW_PDB_CHnC1_TOS(x, n, v) (ADDRESS_WRITE32(HW_PDB_CHnC1_ADDR(x, n), (HW_PDB_CHnC1_RD(x, n) & ~BM_PDB_CHnC1_TOS) | BF_PDB_CHnC1_TOS(v)))
 /*@}*/
 
 /*!
@@ -772,13 +772,13 @@ typedef union _hw_pdb_chnc1
 #define BS_PDB_CHnC1_BB      (8U)          /*!< Bit field size in bits for PDB_CHnC1_BB. */
 
 /*! @brief Read current value of the PDB_CHnC1_BB field. */
-#define BR_PDB_CHnC1_BB(x, n) (HW_PDB_CHnC1(x, n).B.BB)
+#define BR_PDB_CHnC1_BB(x, n) (UNION_READ_FS(HW_PDB_CHnC1_ADDR(x, n), hw_pdb_chnc1, B.BB))
 
 /*! @brief Format value for bitfield PDB_CHnC1_BB. */
 #define BF_PDB_CHnC1_BB(v)   ((uint32_t)((uint32_t)(v) << BP_PDB_CHnC1_BB) & BM_PDB_CHnC1_BB)
 
 /*! @brief Set the BB field to a new value. */
-#define BW_PDB_CHnC1_BB(x, n, v) (HW_PDB_CHnC1_WR(x, n, (HW_PDB_CHnC1_RD(x, n) & ~BM_PDB_CHnC1_BB) | BF_PDB_CHnC1_BB(v)))
+#define BW_PDB_CHnC1_BB(x, n, v) (ADDRESS_WRITE32(HW_PDB_CHnC1_ADDR(x, n), (HW_PDB_CHnC1_RD(x, n) & ~BM_PDB_CHnC1_BB) | BF_PDB_CHnC1_BB(v)))
 /*@}*/
 /*******************************************************************************
  * HW_PDB_CHnS - Channel n Status register
@@ -841,13 +841,13 @@ typedef union _hw_pdb_chns
 #define BS_PDB_CHnS_ERR      (8U)          /*!< Bit field size in bits for PDB_CHnS_ERR. */
 
 /*! @brief Read current value of the PDB_CHnS_ERR field. */
-#define BR_PDB_CHnS_ERR(x, n) (HW_PDB_CHnS(x, n).B.ERR)
+#define BR_PDB_CHnS_ERR(x, n) (UNION_READ_FS(HW_PDB_CHnS_ADDR(x, n), hw_pdb_chns, B.ERR))
 
 /*! @brief Format value for bitfield PDB_CHnS_ERR. */
 #define BF_PDB_CHnS_ERR(v)   ((uint32_t)((uint32_t)(v) << BP_PDB_CHnS_ERR) & BM_PDB_CHnS_ERR)
 
 /*! @brief Set the ERR field to a new value. */
-#define BW_PDB_CHnS_ERR(x, n, v) (HW_PDB_CHnS_WR(x, n, (HW_PDB_CHnS_RD(x, n) & ~BM_PDB_CHnS_ERR) | BF_PDB_CHnS_ERR(v)))
+#define BW_PDB_CHnS_ERR(x, n, v) (ADDRESS_WRITE32(HW_PDB_CHnS_ADDR(x, n), (HW_PDB_CHnS_RD(x, n) & ~BM_PDB_CHnS_ERR) | BF_PDB_CHnS_ERR(v)))
 /*@}*/
 
 /*!
@@ -862,13 +862,13 @@ typedef union _hw_pdb_chns
 #define BS_PDB_CHnS_CF       (8U)          /*!< Bit field size in bits for PDB_CHnS_CF. */
 
 /*! @brief Read current value of the PDB_CHnS_CF field. */
-#define BR_PDB_CHnS_CF(x, n) (HW_PDB_CHnS(x, n).B.CF)
+#define BR_PDB_CHnS_CF(x, n) (UNION_READ_FS(HW_PDB_CHnS_ADDR(x, n), hw_pdb_chns, B.CF))
 
 /*! @brief Format value for bitfield PDB_CHnS_CF. */
 #define BF_PDB_CHnS_CF(v)    ((uint32_t)((uint32_t)(v) << BP_PDB_CHnS_CF) & BM_PDB_CHnS_CF)
 
 /*! @brief Set the CF field to a new value. */
-#define BW_PDB_CHnS_CF(x, n, v) (HW_PDB_CHnS_WR(x, n, (HW_PDB_CHnS_RD(x, n) & ~BM_PDB_CHnS_CF) | BF_PDB_CHnS_CF(v)))
+#define BW_PDB_CHnS_CF(x, n, v) (ADDRESS_WRITE32(HW_PDB_CHnS_ADDR(x, n), (HW_PDB_CHnS_RD(x, n) & ~BM_PDB_CHnS_CF) | BF_PDB_CHnS_CF(v)))
 /*@}*/
 /*******************************************************************************
  * HW_PDB_CHnDLY0 - Channel n Delay 0 register
@@ -922,13 +922,13 @@ typedef union _hw_pdb_chndly0
 #define BS_PDB_CHnDLY0_DLY   (16U)         /*!< Bit field size in bits for PDB_CHnDLY0_DLY. */
 
 /*! @brief Read current value of the PDB_CHnDLY0_DLY field. */
-#define BR_PDB_CHnDLY0_DLY(x, n) (HW_PDB_CHnDLY0(x, n).B.DLY)
+#define BR_PDB_CHnDLY0_DLY(x, n) (UNION_READ_FS(HW_PDB_CHnDLY0_ADDR(x, n), hw_pdb_chndly0, B.DLY))
 
 /*! @brief Format value for bitfield PDB_CHnDLY0_DLY. */
 #define BF_PDB_CHnDLY0_DLY(v) ((uint32_t)((uint32_t)(v) << BP_PDB_CHnDLY0_DLY) & BM_PDB_CHnDLY0_DLY)
 
 /*! @brief Set the DLY field to a new value. */
-#define BW_PDB_CHnDLY0_DLY(x, n, v) (HW_PDB_CHnDLY0_WR(x, n, (HW_PDB_CHnDLY0_RD(x, n) & ~BM_PDB_CHnDLY0_DLY) | BF_PDB_CHnDLY0_DLY(v)))
+#define BW_PDB_CHnDLY0_DLY(x, n, v) (ADDRESS_WRITE32(HW_PDB_CHnDLY0_ADDR(x, n), (HW_PDB_CHnDLY0_RD(x, n) & ~BM_PDB_CHnDLY0_DLY) | BF_PDB_CHnDLY0_DLY(v)))
 /*@}*/
 /*******************************************************************************
  * HW_PDB_CHnDLY1 - Channel n Delay 1 register
@@ -983,13 +983,13 @@ typedef union _hw_pdb_chndly1
 #define BS_PDB_CHnDLY1_DLY   (16U)         /*!< Bit field size in bits for PDB_CHnDLY1_DLY. */
 
 /*! @brief Read current value of the PDB_CHnDLY1_DLY field. */
-#define BR_PDB_CHnDLY1_DLY(x, n) (HW_PDB_CHnDLY1(x, n).B.DLY)
+#define BR_PDB_CHnDLY1_DLY(x, n) (UNION_READ_FS(HW_PDB_CHnDLY1_ADDR(x, n), hw_pdb_chndly1, B.DLY))
 
 /*! @brief Format value for bitfield PDB_CHnDLY1_DLY. */
 #define BF_PDB_CHnDLY1_DLY(v) ((uint32_t)((uint32_t)(v) << BP_PDB_CHnDLY1_DLY) & BM_PDB_CHnDLY1_DLY)
 
 /*! @brief Set the DLY field to a new value. */
-#define BW_PDB_CHnDLY1_DLY(x, n, v) (HW_PDB_CHnDLY1_WR(x, n, (HW_PDB_CHnDLY1_RD(x, n) & ~BM_PDB_CHnDLY1_DLY) | BF_PDB_CHnDLY1_DLY(v)))
+#define BW_PDB_CHnDLY1_DLY(x, n, v) (ADDRESS_WRITE32(HW_PDB_CHnDLY1_ADDR(x, n), (HW_PDB_CHnDLY1_RD(x, n) & ~BM_PDB_CHnDLY1_DLY) | BF_PDB_CHnDLY1_DLY(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1047,13 +1047,13 @@ typedef union _hw_pdb_dacintcn
 #define BS_PDB_DACINTCn_TOE  (1U)          /*!< Bit field size in bits for PDB_DACINTCn_TOE. */
 
 /*! @brief Read current value of the PDB_DACINTCn_TOE field. */
-#define BR_PDB_DACINTCn_TOE(x, n) (BITBAND_ACCESS32(HW_PDB_DACINTCn_ADDR(x, n), BP_PDB_DACINTCn_TOE))
+#define BR_PDB_DACINTCn_TOE(x, n) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PDB_DACINTCn_ADDR(x, n), BP_PDB_DACINTCn_TOE)))
 
 /*! @brief Format value for bitfield PDB_DACINTCn_TOE. */
 #define BF_PDB_DACINTCn_TOE(v) ((uint32_t)((uint32_t)(v) << BP_PDB_DACINTCn_TOE) & BM_PDB_DACINTCn_TOE)
 
 /*! @brief Set the TOE field to a new value. */
-#define BW_PDB_DACINTCn_TOE(x, n, v) (BITBAND_ACCESS32(HW_PDB_DACINTCn_ADDR(x, n), BP_PDB_DACINTCn_TOE) = (v))
+#define BW_PDB_DACINTCn_TOE(x, n, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PDB_DACINTCn_ADDR(x, n), BP_PDB_DACINTCn_TOE), v))
 /*@}*/
 
 /*!
@@ -1074,13 +1074,13 @@ typedef union _hw_pdb_dacintcn
 #define BS_PDB_DACINTCn_EXT  (1U)          /*!< Bit field size in bits for PDB_DACINTCn_EXT. */
 
 /*! @brief Read current value of the PDB_DACINTCn_EXT field. */
-#define BR_PDB_DACINTCn_EXT(x, n) (BITBAND_ACCESS32(HW_PDB_DACINTCn_ADDR(x, n), BP_PDB_DACINTCn_EXT))
+#define BR_PDB_DACINTCn_EXT(x, n) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_PDB_DACINTCn_ADDR(x, n), BP_PDB_DACINTCn_EXT)))
 
 /*! @brief Format value for bitfield PDB_DACINTCn_EXT. */
 #define BF_PDB_DACINTCn_EXT(v) ((uint32_t)((uint32_t)(v) << BP_PDB_DACINTCn_EXT) & BM_PDB_DACINTCn_EXT)
 
 /*! @brief Set the EXT field to a new value. */
-#define BW_PDB_DACINTCn_EXT(x, n, v) (BITBAND_ACCESS32(HW_PDB_DACINTCn_ADDR(x, n), BP_PDB_DACINTCn_EXT) = (v))
+#define BW_PDB_DACINTCn_EXT(x, n, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_PDB_DACINTCn_ADDR(x, n), BP_PDB_DACINTCn_EXT), v))
 /*@}*/
 /*******************************************************************************
  * HW_PDB_DACINTn - DAC Interval n register
@@ -1135,13 +1135,13 @@ typedef union _hw_pdb_dacintn
 #define BS_PDB_DACINTn_INT   (16U)         /*!< Bit field size in bits for PDB_DACINTn_INT. */
 
 /*! @brief Read current value of the PDB_DACINTn_INT field. */
-#define BR_PDB_DACINTn_INT(x, n) (HW_PDB_DACINTn(x, n).B.INT)
+#define BR_PDB_DACINTn_INT(x, n) (UNION_READ_FS(HW_PDB_DACINTn_ADDR(x, n), hw_pdb_dacintn, B.INT))
 
 /*! @brief Format value for bitfield PDB_DACINTn_INT. */
 #define BF_PDB_DACINTn_INT(v) ((uint32_t)((uint32_t)(v) << BP_PDB_DACINTn_INT) & BM_PDB_DACINTn_INT)
 
 /*! @brief Set the INT field to a new value. */
-#define BW_PDB_DACINTn_INT(x, n, v) (HW_PDB_DACINTn_WR(x, n, (HW_PDB_DACINTn_RD(x, n) & ~BM_PDB_DACINTn_INT) | BF_PDB_DACINTn_INT(v)))
+#define BW_PDB_DACINTn_INT(x, n, v) (ADDRESS_WRITE32(HW_PDB_DACINTn_ADDR(x, n), (HW_PDB_DACINTn_RD(x, n) & ~BM_PDB_DACINTn_INT) | BF_PDB_DACINTn_INT(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1196,13 +1196,13 @@ typedef union _hw_pdb_poen
 #define BS_PDB_POEN_POEN     (8U)          /*!< Bit field size in bits for PDB_POEN_POEN. */
 
 /*! @brief Read current value of the PDB_POEN_POEN field. */
-#define BR_PDB_POEN_POEN(x)  (HW_PDB_POEN(x).B.POEN)
+#define BR_PDB_POEN_POEN(x)  (UNION_READ_FS(HW_PDB_POEN_ADDR(x), hw_pdb_poen, B.POEN))
 
 /*! @brief Format value for bitfield PDB_POEN_POEN. */
 #define BF_PDB_POEN_POEN(v)  ((uint32_t)((uint32_t)(v) << BP_PDB_POEN_POEN) & BM_PDB_POEN_POEN)
 
 /*! @brief Set the POEN field to a new value. */
-#define BW_PDB_POEN_POEN(x, v) (HW_PDB_POEN_WR(x, (HW_PDB_POEN_RD(x) & ~BM_PDB_POEN_POEN) | BF_PDB_POEN_POEN(v)))
+#define BW_PDB_POEN_POEN(x, v) (ADDRESS_WRITE32(HW_PDB_POEN_ADDR(x), (HW_PDB_POEN_RD(x) & ~BM_PDB_POEN_POEN) | BF_PDB_POEN_POEN(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1257,13 +1257,13 @@ typedef union _hw_pdb_pondly
 #define BS_PDB_POnDLY_DLY2   (16U)         /*!< Bit field size in bits for PDB_POnDLY_DLY2. */
 
 /*! @brief Read current value of the PDB_POnDLY_DLY2 field. */
-#define BR_PDB_POnDLY_DLY2(x, n) (HW_PDB_POnDLY(x, n).B.DLY2)
+#define BR_PDB_POnDLY_DLY2(x, n) (UNION_READ_FS(HW_PDB_POnDLY_ADDR(x, n), hw_pdb_pondly, B.DLY2))
 
 /*! @brief Format value for bitfield PDB_POnDLY_DLY2. */
 #define BF_PDB_POnDLY_DLY2(v) ((uint32_t)((uint32_t)(v) << BP_PDB_POnDLY_DLY2) & BM_PDB_POnDLY_DLY2)
 
 /*! @brief Set the DLY2 field to a new value. */
-#define BW_PDB_POnDLY_DLY2(x, n, v) (HW_PDB_POnDLY_WR(x, n, (HW_PDB_POnDLY_RD(x, n) & ~BM_PDB_POnDLY_DLY2) | BF_PDB_POnDLY_DLY2(v)))
+#define BW_PDB_POnDLY_DLY2(x, n, v) (ADDRESS_WRITE32(HW_PDB_POnDLY_ADDR(x, n), (HW_PDB_POnDLY_RD(x, n) & ~BM_PDB_POnDLY_DLY2) | BF_PDB_POnDLY_DLY2(v)))
 /*@}*/
 
 /*!
@@ -1279,13 +1279,13 @@ typedef union _hw_pdb_pondly
 #define BS_PDB_POnDLY_DLY1   (16U)         /*!< Bit field size in bits for PDB_POnDLY_DLY1. */
 
 /*! @brief Read current value of the PDB_POnDLY_DLY1 field. */
-#define BR_PDB_POnDLY_DLY1(x, n) (HW_PDB_POnDLY(x, n).B.DLY1)
+#define BR_PDB_POnDLY_DLY1(x, n) (UNION_READ_FS(HW_PDB_POnDLY_ADDR(x, n), hw_pdb_pondly, B.DLY1))
 
 /*! @brief Format value for bitfield PDB_POnDLY_DLY1. */
 #define BF_PDB_POnDLY_DLY1(v) ((uint32_t)((uint32_t)(v) << BP_PDB_POnDLY_DLY1) & BM_PDB_POnDLY_DLY1)
 
 /*! @brief Set the DLY1 field to a new value. */
-#define BW_PDB_POnDLY_DLY1(x, n, v) (HW_PDB_POnDLY_WR(x, n, (HW_PDB_POnDLY_RD(x, n) & ~BM_PDB_POnDLY_DLY1) | BF_PDB_POnDLY_DLY1(v)))
+#define BW_PDB_POnDLY_DLY1(x, n, v) (ADDRESS_WRITE32(HW_PDB_POnDLY_ADDR(x, n), (HW_PDB_POnDLY_RD(x, n) & ~BM_PDB_POnDLY_DLY1) | BF_PDB_POnDLY_DLY1(v)))
 /*@}*/
 
 /*******************************************************************************

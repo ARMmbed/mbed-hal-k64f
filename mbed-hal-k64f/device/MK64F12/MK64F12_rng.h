@@ -159,13 +159,13 @@ typedef union _hw_rng_cr
 #define BS_RNG_CR_GO         (1U)          /*!< Bit field size in bits for RNG_CR_GO. */
 
 /*! @brief Read current value of the RNG_CR_GO field. */
-#define BR_RNG_CR_GO(x)      (BITBAND_ACCESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_GO))
+#define BR_RNG_CR_GO(x)      (ADDRESS_READ32(BITBAND_ADDRESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_GO)))
 
 /*! @brief Format value for bitfield RNG_CR_GO. */
 #define BF_RNG_CR_GO(v)      ((uint32_t)((uint32_t)(v) << BP_RNG_CR_GO) & BM_RNG_CR_GO)
 
 /*! @brief Set the GO field to a new value. */
-#define BW_RNG_CR_GO(x, v)   (BITBAND_ACCESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_GO) = (v))
+#define BW_RNG_CR_GO(x, v)   (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_GO), v))
 /*@}*/
 
 /*!
@@ -186,13 +186,13 @@ typedef union _hw_rng_cr
 #define BS_RNG_CR_HA         (1U)          /*!< Bit field size in bits for RNG_CR_HA. */
 
 /*! @brief Read current value of the RNG_CR_HA field. */
-#define BR_RNG_CR_HA(x)      (BITBAND_ACCESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_HA))
+#define BR_RNG_CR_HA(x)      (ADDRESS_READ32(BITBAND_ADDRESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_HA)))
 
 /*! @brief Format value for bitfield RNG_CR_HA. */
 #define BF_RNG_CR_HA(v)      ((uint32_t)((uint32_t)(v) << BP_RNG_CR_HA) & BM_RNG_CR_HA)
 
 /*! @brief Set the HA field to a new value. */
-#define BW_RNG_CR_HA(x, v)   (BITBAND_ACCESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_HA) = (v))
+#define BW_RNG_CR_HA(x, v)   (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_HA), v))
 /*@}*/
 
 /*!
@@ -212,13 +212,13 @@ typedef union _hw_rng_cr
 #define BS_RNG_CR_INTM       (1U)          /*!< Bit field size in bits for RNG_CR_INTM. */
 
 /*! @brief Read current value of the RNG_CR_INTM field. */
-#define BR_RNG_CR_INTM(x)    (BITBAND_ACCESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_INTM))
+#define BR_RNG_CR_INTM(x)    (ADDRESS_READ32(BITBAND_ADDRESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_INTM)))
 
 /*! @brief Format value for bitfield RNG_CR_INTM. */
 #define BF_RNG_CR_INTM(v)    ((uint32_t)((uint32_t)(v) << BP_RNG_CR_INTM) & BM_RNG_CR_INTM)
 
 /*! @brief Set the INTM field to a new value. */
-#define BW_RNG_CR_INTM(x, v) (BITBAND_ACCESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_INTM) = (v))
+#define BW_RNG_CR_INTM(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_INTM), v))
 /*@}*/
 
 /*!
@@ -240,7 +240,7 @@ typedef union _hw_rng_cr
 #define BF_RNG_CR_CLRI(v)    ((uint32_t)((uint32_t)(v) << BP_RNG_CR_CLRI) & BM_RNG_CR_CLRI)
 
 /*! @brief Set the CLRI field to a new value. */
-#define BW_RNG_CR_CLRI(x, v) (BITBAND_ACCESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_CLRI) = (v))
+#define BW_RNG_CR_CLRI(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_CLRI), v))
 /*@}*/
 
 /*!
@@ -259,13 +259,13 @@ typedef union _hw_rng_cr
 #define BS_RNG_CR_SLP        (1U)          /*!< Bit field size in bits for RNG_CR_SLP. */
 
 /*! @brief Read current value of the RNG_CR_SLP field. */
-#define BR_RNG_CR_SLP(x)     (BITBAND_ACCESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_SLP))
+#define BR_RNG_CR_SLP(x)     (ADDRESS_READ32(BITBAND_ADDRESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_SLP)))
 
 /*! @brief Format value for bitfield RNG_CR_SLP. */
 #define BF_RNG_CR_SLP(v)     ((uint32_t)((uint32_t)(v) << BP_RNG_CR_SLP) & BM_RNG_CR_SLP)
 
 /*! @brief Set the SLP field to a new value. */
-#define BW_RNG_CR_SLP(x, v)  (BITBAND_ACCESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_SLP) = (v))
+#define BW_RNG_CR_SLP(x, v)  (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_RNG_CR_ADDR(x), BP_RNG_CR_SLP), v))
 /*@}*/
 
 /*******************************************************************************
@@ -327,7 +327,7 @@ typedef union _hw_rng_sr
 #define BS_RNG_SR_SECV       (1U)          /*!< Bit field size in bits for RNG_SR_SECV. */
 
 /*! @brief Read current value of the RNG_SR_SECV field. */
-#define BR_RNG_SR_SECV(x)    (BITBAND_ACCESS32(HW_RNG_SR_ADDR(x), BP_RNG_SR_SECV))
+#define BR_RNG_SR_SECV(x)    (ADDRESS_READ32(BITBAND_ADDRESS32(HW_RNG_SR_ADDR(x), BP_RNG_SR_SECV)))
 /*@}*/
 
 /*!
@@ -348,7 +348,7 @@ typedef union _hw_rng_sr
 #define BS_RNG_SR_LRS        (1U)          /*!< Bit field size in bits for RNG_SR_LRS. */
 
 /*! @brief Read current value of the RNG_SR_LRS field. */
-#define BR_RNG_SR_LRS(x)     (BITBAND_ACCESS32(HW_RNG_SR_ADDR(x), BP_RNG_SR_LRS))
+#define BR_RNG_SR_LRS(x)     (ADDRESS_READ32(BITBAND_ADDRESS32(HW_RNG_SR_ADDR(x), BP_RNG_SR_LRS)))
 /*@}*/
 
 /*!
@@ -370,7 +370,7 @@ typedef union _hw_rng_sr
 #define BS_RNG_SR_ORU        (1U)          /*!< Bit field size in bits for RNG_SR_ORU. */
 
 /*! @brief Read current value of the RNG_SR_ORU field. */
-#define BR_RNG_SR_ORU(x)     (BITBAND_ACCESS32(HW_RNG_SR_ADDR(x), BP_RNG_SR_ORU))
+#define BR_RNG_SR_ORU(x)     (ADDRESS_READ32(BITBAND_ADDRESS32(HW_RNG_SR_ADDR(x), BP_RNG_SR_ORU)))
 /*@}*/
 
 /*!
@@ -392,7 +392,7 @@ typedef union _hw_rng_sr
 #define BS_RNG_SR_ERRI       (1U)          /*!< Bit field size in bits for RNG_SR_ERRI. */
 
 /*! @brief Read current value of the RNG_SR_ERRI field. */
-#define BR_RNG_SR_ERRI(x)    (BITBAND_ACCESS32(HW_RNG_SR_ADDR(x), BP_RNG_SR_ERRI))
+#define BR_RNG_SR_ERRI(x)    (ADDRESS_READ32(BITBAND_ADDRESS32(HW_RNG_SR_ADDR(x), BP_RNG_SR_ERRI)))
 /*@}*/
 
 /*!
@@ -411,7 +411,7 @@ typedef union _hw_rng_sr
 #define BS_RNG_SR_SLP        (1U)          /*!< Bit field size in bits for RNG_SR_SLP. */
 
 /*! @brief Read current value of the RNG_SR_SLP field. */
-#define BR_RNG_SR_SLP(x)     (BITBAND_ACCESS32(HW_RNG_SR_ADDR(x), BP_RNG_SR_SLP))
+#define BR_RNG_SR_SLP(x)     (ADDRESS_READ32(BITBAND_ADDRESS32(HW_RNG_SR_ADDR(x), BP_RNG_SR_SLP)))
 /*@}*/
 
 /*!
@@ -432,7 +432,7 @@ typedef union _hw_rng_sr
 #define BS_RNG_SR_OREG_LVL   (8U)          /*!< Bit field size in bits for RNG_SR_OREG_LVL. */
 
 /*! @brief Read current value of the RNG_SR_OREG_LVL field. */
-#define BR_RNG_SR_OREG_LVL(x) (HW_RNG_SR(x).B.OREG_LVL)
+#define BR_RNG_SR_OREG_LVL(x) (UNION_READ_FS(HW_RNG_SR_ADDR(x), hw_rng_sr, B.OREG_LVL))
 /*@}*/
 
 /*!
@@ -450,7 +450,7 @@ typedef union _hw_rng_sr
 #define BS_RNG_SR_OREG_SIZE  (8U)          /*!< Bit field size in bits for RNG_SR_OREG_SIZE. */
 
 /*! @brief Read current value of the RNG_SR_OREG_SIZE field. */
-#define BR_RNG_SR_OREG_SIZE(x) (HW_RNG_SR(x).B.OREG_SIZE)
+#define BR_RNG_SR_OREG_SIZE(x) (UNION_READ_FS(HW_RNG_SR_ADDR(x), hw_rng_sr, B.OREG_SIZE))
 /*@}*/
 
 /*******************************************************************************
@@ -506,7 +506,7 @@ typedef union _hw_rng_er
 #define BF_RNG_ER_EXT_ENT(v) ((uint32_t)((uint32_t)(v) << BP_RNG_ER_EXT_ENT) & BM_RNG_ER_EXT_ENT)
 
 /*! @brief Set the EXT_ENT field to a new value. */
-#define BW_RNG_ER_EXT_ENT(x, v) (HW_RNG_ER_WR(x, v))
+#define BW_RNG_ER_EXT_ENT(x, v) (ADDRESS_WRITE32(HW_RNG_ER_ADDR(x), v))
 /*@}*/
 
 /*******************************************************************************
@@ -561,7 +561,7 @@ typedef union _hw_rng_or
 #define BS_RNG_OR_RANDOUT    (32U)         /*!< Bit field size in bits for RNG_OR_RANDOUT. */
 
 /*! @brief Read current value of the RNG_OR_RANDOUT field. */
-#define BR_RNG_OR_RANDOUT(x) (HW_RNG_OR(x).U)
+#define BR_RNG_OR_RANDOUT(x) (ADDRESS_READ32(HW_RNG_OR_ADDR(x)))
 /*@}*/
 
 /*******************************************************************************

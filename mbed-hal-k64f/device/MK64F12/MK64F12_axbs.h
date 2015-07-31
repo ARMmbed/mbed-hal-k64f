@@ -194,13 +194,13 @@ typedef union _hw_axbs_prsn
 #define BS_AXBS_PRSn_M0      (3U)          /*!< Bit field size in bits for AXBS_PRSn_M0. */
 
 /*! @brief Read current value of the AXBS_PRSn_M0 field. */
-#define BR_AXBS_PRSn_M0(x, n) (HW_AXBS_PRSn(x, n).B.M0)
+#define BR_AXBS_PRSn_M0(x, n) (UNION_READ_FS(HW_AXBS_PRSn_ADDR(x, n), hw_axbs_prsn, B.M0))
 
 /*! @brief Format value for bitfield AXBS_PRSn_M0. */
 #define BF_AXBS_PRSn_M0(v)   ((uint32_t)((uint32_t)(v) << BP_AXBS_PRSn_M0) & BM_AXBS_PRSn_M0)
 
 /*! @brief Set the M0 field to a new value. */
-#define BW_AXBS_PRSn_M0(x, n, v) (HW_AXBS_PRSn_WR(x, n, (HW_AXBS_PRSn_RD(x, n) & ~BM_AXBS_PRSn_M0) | BF_AXBS_PRSn_M0(v)))
+#define BW_AXBS_PRSn_M0(x, n, v) (ADDRESS_WRITE32(HW_AXBS_PRSn_ADDR(x, n), (HW_AXBS_PRSn_RD(x, n) & ~BM_AXBS_PRSn_M0) | BF_AXBS_PRSn_M0(v)))
 /*@}*/
 
 /*!
@@ -224,13 +224,13 @@ typedef union _hw_axbs_prsn
 #define BS_AXBS_PRSn_M1      (3U)          /*!< Bit field size in bits for AXBS_PRSn_M1. */
 
 /*! @brief Read current value of the AXBS_PRSn_M1 field. */
-#define BR_AXBS_PRSn_M1(x, n) (HW_AXBS_PRSn(x, n).B.M1)
+#define BR_AXBS_PRSn_M1(x, n) (UNION_READ_FS(HW_AXBS_PRSn_ADDR(x, n), hw_axbs_prsn, B.M1))
 
 /*! @brief Format value for bitfield AXBS_PRSn_M1. */
 #define BF_AXBS_PRSn_M1(v)   ((uint32_t)((uint32_t)(v) << BP_AXBS_PRSn_M1) & BM_AXBS_PRSn_M1)
 
 /*! @brief Set the M1 field to a new value. */
-#define BW_AXBS_PRSn_M1(x, n, v) (HW_AXBS_PRSn_WR(x, n, (HW_AXBS_PRSn_RD(x, n) & ~BM_AXBS_PRSn_M1) | BF_AXBS_PRSn_M1(v)))
+#define BW_AXBS_PRSn_M1(x, n, v) (ADDRESS_WRITE32(HW_AXBS_PRSn_ADDR(x, n), (HW_AXBS_PRSn_RD(x, n) & ~BM_AXBS_PRSn_M1) | BF_AXBS_PRSn_M1(v)))
 /*@}*/
 
 /*!
@@ -254,13 +254,13 @@ typedef union _hw_axbs_prsn
 #define BS_AXBS_PRSn_M2      (3U)          /*!< Bit field size in bits for AXBS_PRSn_M2. */
 
 /*! @brief Read current value of the AXBS_PRSn_M2 field. */
-#define BR_AXBS_PRSn_M2(x, n) (HW_AXBS_PRSn(x, n).B.M2)
+#define BR_AXBS_PRSn_M2(x, n) (UNION_READ_FS(HW_AXBS_PRSn_ADDR(x, n), hw_axbs_prsn, B.M2))
 
 /*! @brief Format value for bitfield AXBS_PRSn_M2. */
 #define BF_AXBS_PRSn_M2(v)   ((uint32_t)((uint32_t)(v) << BP_AXBS_PRSn_M2) & BM_AXBS_PRSn_M2)
 
 /*! @brief Set the M2 field to a new value. */
-#define BW_AXBS_PRSn_M2(x, n, v) (HW_AXBS_PRSn_WR(x, n, (HW_AXBS_PRSn_RD(x, n) & ~BM_AXBS_PRSn_M2) | BF_AXBS_PRSn_M2(v)))
+#define BW_AXBS_PRSn_M2(x, n, v) (ADDRESS_WRITE32(HW_AXBS_PRSn_ADDR(x, n), (HW_AXBS_PRSn_RD(x, n) & ~BM_AXBS_PRSn_M2) | BF_AXBS_PRSn_M2(v)))
 /*@}*/
 
 /*!
@@ -284,13 +284,13 @@ typedef union _hw_axbs_prsn
 #define BS_AXBS_PRSn_M3      (3U)          /*!< Bit field size in bits for AXBS_PRSn_M3. */
 
 /*! @brief Read current value of the AXBS_PRSn_M3 field. */
-#define BR_AXBS_PRSn_M3(x, n) (HW_AXBS_PRSn(x, n).B.M3)
+#define BR_AXBS_PRSn_M3(x, n) (UNION_READ_FS(HW_AXBS_PRSn_ADDR(x, n), hw_axbs_prsn, B.M3))
 
 /*! @brief Format value for bitfield AXBS_PRSn_M3. */
 #define BF_AXBS_PRSn_M3(v)   ((uint32_t)((uint32_t)(v) << BP_AXBS_PRSn_M3) & BM_AXBS_PRSn_M3)
 
 /*! @brief Set the M3 field to a new value. */
-#define BW_AXBS_PRSn_M3(x, n, v) (HW_AXBS_PRSn_WR(x, n, (HW_AXBS_PRSn_RD(x, n) & ~BM_AXBS_PRSn_M3) | BF_AXBS_PRSn_M3(v)))
+#define BW_AXBS_PRSn_M3(x, n, v) (ADDRESS_WRITE32(HW_AXBS_PRSn_ADDR(x, n), (HW_AXBS_PRSn_RD(x, n) & ~BM_AXBS_PRSn_M3) | BF_AXBS_PRSn_M3(v)))
 /*@}*/
 
 /*!
@@ -314,13 +314,13 @@ typedef union _hw_axbs_prsn
 #define BS_AXBS_PRSn_M4      (3U)          /*!< Bit field size in bits for AXBS_PRSn_M4. */
 
 /*! @brief Read current value of the AXBS_PRSn_M4 field. */
-#define BR_AXBS_PRSn_M4(x, n) (HW_AXBS_PRSn(x, n).B.M4)
+#define BR_AXBS_PRSn_M4(x, n) (UNION_READ_FS(HW_AXBS_PRSn_ADDR(x, n), hw_axbs_prsn, B.M4))
 
 /*! @brief Format value for bitfield AXBS_PRSn_M4. */
 #define BF_AXBS_PRSn_M4(v)   ((uint32_t)((uint32_t)(v) << BP_AXBS_PRSn_M4) & BM_AXBS_PRSn_M4)
 
 /*! @brief Set the M4 field to a new value. */
-#define BW_AXBS_PRSn_M4(x, n, v) (HW_AXBS_PRSn_WR(x, n, (HW_AXBS_PRSn_RD(x, n) & ~BM_AXBS_PRSn_M4) | BF_AXBS_PRSn_M4(v)))
+#define BW_AXBS_PRSn_M4(x, n, v) (ADDRESS_WRITE32(HW_AXBS_PRSn_ADDR(x, n), (HW_AXBS_PRSn_RD(x, n) & ~BM_AXBS_PRSn_M4) | BF_AXBS_PRSn_M4(v)))
 /*@}*/
 
 /*!
@@ -344,13 +344,13 @@ typedef union _hw_axbs_prsn
 #define BS_AXBS_PRSn_M5      (3U)          /*!< Bit field size in bits for AXBS_PRSn_M5. */
 
 /*! @brief Read current value of the AXBS_PRSn_M5 field. */
-#define BR_AXBS_PRSn_M5(x, n) (HW_AXBS_PRSn(x, n).B.M5)
+#define BR_AXBS_PRSn_M5(x, n) (UNION_READ_FS(HW_AXBS_PRSn_ADDR(x, n), hw_axbs_prsn, B.M5))
 
 /*! @brief Format value for bitfield AXBS_PRSn_M5. */
 #define BF_AXBS_PRSn_M5(v)   ((uint32_t)((uint32_t)(v) << BP_AXBS_PRSn_M5) & BM_AXBS_PRSn_M5)
 
 /*! @brief Set the M5 field to a new value. */
-#define BW_AXBS_PRSn_M5(x, n, v) (HW_AXBS_PRSn_WR(x, n, (HW_AXBS_PRSn_RD(x, n) & ~BM_AXBS_PRSn_M5) | BF_AXBS_PRSn_M5(v)))
+#define BW_AXBS_PRSn_M5(x, n, v) (ADDRESS_WRITE32(HW_AXBS_PRSn_ADDR(x, n), (HW_AXBS_PRSn_RD(x, n) & ~BM_AXBS_PRSn_M5) | BF_AXBS_PRSn_M5(v)))
 /*@}*/
 /*******************************************************************************
  * HW_AXBS_CRSn - Control Register
@@ -424,13 +424,13 @@ typedef union _hw_axbs_crsn
 #define BS_AXBS_CRSn_PARK    (3U)          /*!< Bit field size in bits for AXBS_CRSn_PARK. */
 
 /*! @brief Read current value of the AXBS_CRSn_PARK field. */
-#define BR_AXBS_CRSn_PARK(x, n) (HW_AXBS_CRSn(x, n).B.PARK)
+#define BR_AXBS_CRSn_PARK(x, n) (UNION_READ_FS(HW_AXBS_CRSn_ADDR(x, n), hw_axbs_crsn, B.PARK))
 
 /*! @brief Format value for bitfield AXBS_CRSn_PARK. */
 #define BF_AXBS_CRSn_PARK(v) ((uint32_t)((uint32_t)(v) << BP_AXBS_CRSn_PARK) & BM_AXBS_CRSn_PARK)
 
 /*! @brief Set the PARK field to a new value. */
-#define BW_AXBS_CRSn_PARK(x, n, v) (HW_AXBS_CRSn_WR(x, n, (HW_AXBS_CRSn_RD(x, n) & ~BM_AXBS_CRSn_PARK) | BF_AXBS_CRSn_PARK(v)))
+#define BW_AXBS_CRSn_PARK(x, n, v) (ADDRESS_WRITE32(HW_AXBS_CRSn_ADDR(x, n), (HW_AXBS_CRSn_RD(x, n) & ~BM_AXBS_CRSn_PARK) | BF_AXBS_CRSn_PARK(v)))
 /*@}*/
 
 /*!
@@ -456,13 +456,13 @@ typedef union _hw_axbs_crsn
 #define BS_AXBS_CRSn_PCTL    (2U)          /*!< Bit field size in bits for AXBS_CRSn_PCTL. */
 
 /*! @brief Read current value of the AXBS_CRSn_PCTL field. */
-#define BR_AXBS_CRSn_PCTL(x, n) (HW_AXBS_CRSn(x, n).B.PCTL)
+#define BR_AXBS_CRSn_PCTL(x, n) (UNION_READ_FS(HW_AXBS_CRSn_ADDR(x, n), hw_axbs_crsn, B.PCTL))
 
 /*! @brief Format value for bitfield AXBS_CRSn_PCTL. */
 #define BF_AXBS_CRSn_PCTL(v) ((uint32_t)((uint32_t)(v) << BP_AXBS_CRSn_PCTL) & BM_AXBS_CRSn_PCTL)
 
 /*! @brief Set the PCTL field to a new value. */
-#define BW_AXBS_CRSn_PCTL(x, n, v) (HW_AXBS_CRSn_WR(x, n, (HW_AXBS_CRSn_RD(x, n) & ~BM_AXBS_CRSn_PCTL) | BF_AXBS_CRSn_PCTL(v)))
+#define BW_AXBS_CRSn_PCTL(x, n, v) (ADDRESS_WRITE32(HW_AXBS_CRSn_ADDR(x, n), (HW_AXBS_CRSn_RD(x, n) & ~BM_AXBS_CRSn_PCTL) | BF_AXBS_CRSn_PCTL(v)))
 /*@}*/
 
 /*!
@@ -482,13 +482,13 @@ typedef union _hw_axbs_crsn
 #define BS_AXBS_CRSn_ARB     (2U)          /*!< Bit field size in bits for AXBS_CRSn_ARB. */
 
 /*! @brief Read current value of the AXBS_CRSn_ARB field. */
-#define BR_AXBS_CRSn_ARB(x, n) (HW_AXBS_CRSn(x, n).B.ARB)
+#define BR_AXBS_CRSn_ARB(x, n) (UNION_READ_FS(HW_AXBS_CRSn_ADDR(x, n), hw_axbs_crsn, B.ARB))
 
 /*! @brief Format value for bitfield AXBS_CRSn_ARB. */
 #define BF_AXBS_CRSn_ARB(v)  ((uint32_t)((uint32_t)(v) << BP_AXBS_CRSn_ARB) & BM_AXBS_CRSn_ARB)
 
 /*! @brief Set the ARB field to a new value. */
-#define BW_AXBS_CRSn_ARB(x, n, v) (HW_AXBS_CRSn_WR(x, n, (HW_AXBS_CRSn_RD(x, n) & ~BM_AXBS_CRSn_ARB) | BF_AXBS_CRSn_ARB(v)))
+#define BW_AXBS_CRSn_ARB(x, n, v) (ADDRESS_WRITE32(HW_AXBS_CRSn_ADDR(x, n), (HW_AXBS_CRSn_RD(x, n) & ~BM_AXBS_CRSn_ARB) | BF_AXBS_CRSn_ARB(v)))
 /*@}*/
 
 /*!
@@ -510,13 +510,13 @@ typedef union _hw_axbs_crsn
 #define BS_AXBS_CRSn_HLP     (1U)          /*!< Bit field size in bits for AXBS_CRSn_HLP. */
 
 /*! @brief Read current value of the AXBS_CRSn_HLP field. */
-#define BR_AXBS_CRSn_HLP(x, n) (BITBAND_ACCESS32(HW_AXBS_CRSn_ADDR(x, n), BP_AXBS_CRSn_HLP))
+#define BR_AXBS_CRSn_HLP(x, n) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_AXBS_CRSn_ADDR(x, n), BP_AXBS_CRSn_HLP)))
 
 /*! @brief Format value for bitfield AXBS_CRSn_HLP. */
 #define BF_AXBS_CRSn_HLP(v)  ((uint32_t)((uint32_t)(v) << BP_AXBS_CRSn_HLP) & BM_AXBS_CRSn_HLP)
 
 /*! @brief Set the HLP field to a new value. */
-#define BW_AXBS_CRSn_HLP(x, n, v) (BITBAND_ACCESS32(HW_AXBS_CRSn_ADDR(x, n), BP_AXBS_CRSn_HLP) = (v))
+#define BW_AXBS_CRSn_HLP(x, n, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_AXBS_CRSn_ADDR(x, n), BP_AXBS_CRSn_HLP), v))
 /*@}*/
 
 /*!
@@ -537,13 +537,13 @@ typedef union _hw_axbs_crsn
 #define BS_AXBS_CRSn_RO      (1U)          /*!< Bit field size in bits for AXBS_CRSn_RO. */
 
 /*! @brief Read current value of the AXBS_CRSn_RO field. */
-#define BR_AXBS_CRSn_RO(x, n) (BITBAND_ACCESS32(HW_AXBS_CRSn_ADDR(x, n), BP_AXBS_CRSn_RO))
+#define BR_AXBS_CRSn_RO(x, n) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_AXBS_CRSn_ADDR(x, n), BP_AXBS_CRSn_RO)))
 
 /*! @brief Format value for bitfield AXBS_CRSn_RO. */
 #define BF_AXBS_CRSn_RO(v)   ((uint32_t)((uint32_t)(v) << BP_AXBS_CRSn_RO) & BM_AXBS_CRSn_RO)
 
 /*! @brief Set the RO field to a new value. */
-#define BW_AXBS_CRSn_RO(x, n, v) (BITBAND_ACCESS32(HW_AXBS_CRSn_ADDR(x, n), BP_AXBS_CRSn_RO) = (v))
+#define BW_AXBS_CRSn_RO(x, n, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_AXBS_CRSn_ADDR(x, n), BP_AXBS_CRSn_RO), v))
 /*@}*/
 
 /*******************************************************************************
@@ -611,13 +611,13 @@ typedef union _hw_axbs_mgpcr0
 #define BS_AXBS_MGPCR0_AULB  (3U)          /*!< Bit field size in bits for AXBS_MGPCR0_AULB. */
 
 /*! @brief Read current value of the AXBS_MGPCR0_AULB field. */
-#define BR_AXBS_MGPCR0_AULB(x) (HW_AXBS_MGPCR0(x).B.AULB)
+#define BR_AXBS_MGPCR0_AULB(x) (UNION_READ_FS(HW_AXBS_MGPCR0_ADDR(x), hw_axbs_mgpcr0, B.AULB))
 
 /*! @brief Format value for bitfield AXBS_MGPCR0_AULB. */
 #define BF_AXBS_MGPCR0_AULB(v) ((uint32_t)((uint32_t)(v) << BP_AXBS_MGPCR0_AULB) & BM_AXBS_MGPCR0_AULB)
 
 /*! @brief Set the AULB field to a new value. */
-#define BW_AXBS_MGPCR0_AULB(x, v) (HW_AXBS_MGPCR0_WR(x, (HW_AXBS_MGPCR0_RD(x) & ~BM_AXBS_MGPCR0_AULB) | BF_AXBS_MGPCR0_AULB(v)))
+#define BW_AXBS_MGPCR0_AULB(x, v) (ADDRESS_WRITE32(HW_AXBS_MGPCR0_ADDR(x), (HW_AXBS_MGPCR0_RD(x) & ~BM_AXBS_MGPCR0_AULB) | BF_AXBS_MGPCR0_AULB(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -685,13 +685,13 @@ typedef union _hw_axbs_mgpcr1
 #define BS_AXBS_MGPCR1_AULB  (3U)          /*!< Bit field size in bits for AXBS_MGPCR1_AULB. */
 
 /*! @brief Read current value of the AXBS_MGPCR1_AULB field. */
-#define BR_AXBS_MGPCR1_AULB(x) (HW_AXBS_MGPCR1(x).B.AULB)
+#define BR_AXBS_MGPCR1_AULB(x) (UNION_READ_FS(HW_AXBS_MGPCR1_ADDR(x), hw_axbs_mgpcr1, B.AULB))
 
 /*! @brief Format value for bitfield AXBS_MGPCR1_AULB. */
 #define BF_AXBS_MGPCR1_AULB(v) ((uint32_t)((uint32_t)(v) << BP_AXBS_MGPCR1_AULB) & BM_AXBS_MGPCR1_AULB)
 
 /*! @brief Set the AULB field to a new value. */
-#define BW_AXBS_MGPCR1_AULB(x, v) (HW_AXBS_MGPCR1_WR(x, (HW_AXBS_MGPCR1_RD(x) & ~BM_AXBS_MGPCR1_AULB) | BF_AXBS_MGPCR1_AULB(v)))
+#define BW_AXBS_MGPCR1_AULB(x, v) (ADDRESS_WRITE32(HW_AXBS_MGPCR1_ADDR(x), (HW_AXBS_MGPCR1_RD(x) & ~BM_AXBS_MGPCR1_AULB) | BF_AXBS_MGPCR1_AULB(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -759,13 +759,13 @@ typedef union _hw_axbs_mgpcr2
 #define BS_AXBS_MGPCR2_AULB  (3U)          /*!< Bit field size in bits for AXBS_MGPCR2_AULB. */
 
 /*! @brief Read current value of the AXBS_MGPCR2_AULB field. */
-#define BR_AXBS_MGPCR2_AULB(x) (HW_AXBS_MGPCR2(x).B.AULB)
+#define BR_AXBS_MGPCR2_AULB(x) (UNION_READ_FS(HW_AXBS_MGPCR2_ADDR(x), hw_axbs_mgpcr2, B.AULB))
 
 /*! @brief Format value for bitfield AXBS_MGPCR2_AULB. */
 #define BF_AXBS_MGPCR2_AULB(v) ((uint32_t)((uint32_t)(v) << BP_AXBS_MGPCR2_AULB) & BM_AXBS_MGPCR2_AULB)
 
 /*! @brief Set the AULB field to a new value. */
-#define BW_AXBS_MGPCR2_AULB(x, v) (HW_AXBS_MGPCR2_WR(x, (HW_AXBS_MGPCR2_RD(x) & ~BM_AXBS_MGPCR2_AULB) | BF_AXBS_MGPCR2_AULB(v)))
+#define BW_AXBS_MGPCR2_AULB(x, v) (ADDRESS_WRITE32(HW_AXBS_MGPCR2_ADDR(x), (HW_AXBS_MGPCR2_RD(x) & ~BM_AXBS_MGPCR2_AULB) | BF_AXBS_MGPCR2_AULB(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -833,13 +833,13 @@ typedef union _hw_axbs_mgpcr3
 #define BS_AXBS_MGPCR3_AULB  (3U)          /*!< Bit field size in bits for AXBS_MGPCR3_AULB. */
 
 /*! @brief Read current value of the AXBS_MGPCR3_AULB field. */
-#define BR_AXBS_MGPCR3_AULB(x) (HW_AXBS_MGPCR3(x).B.AULB)
+#define BR_AXBS_MGPCR3_AULB(x) (UNION_READ_FS(HW_AXBS_MGPCR3_ADDR(x), hw_axbs_mgpcr3, B.AULB))
 
 /*! @brief Format value for bitfield AXBS_MGPCR3_AULB. */
 #define BF_AXBS_MGPCR3_AULB(v) ((uint32_t)((uint32_t)(v) << BP_AXBS_MGPCR3_AULB) & BM_AXBS_MGPCR3_AULB)
 
 /*! @brief Set the AULB field to a new value. */
-#define BW_AXBS_MGPCR3_AULB(x, v) (HW_AXBS_MGPCR3_WR(x, (HW_AXBS_MGPCR3_RD(x) & ~BM_AXBS_MGPCR3_AULB) | BF_AXBS_MGPCR3_AULB(v)))
+#define BW_AXBS_MGPCR3_AULB(x, v) (ADDRESS_WRITE32(HW_AXBS_MGPCR3_ADDR(x), (HW_AXBS_MGPCR3_RD(x) & ~BM_AXBS_MGPCR3_AULB) | BF_AXBS_MGPCR3_AULB(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -907,13 +907,13 @@ typedef union _hw_axbs_mgpcr4
 #define BS_AXBS_MGPCR4_AULB  (3U)          /*!< Bit field size in bits for AXBS_MGPCR4_AULB. */
 
 /*! @brief Read current value of the AXBS_MGPCR4_AULB field. */
-#define BR_AXBS_MGPCR4_AULB(x) (HW_AXBS_MGPCR4(x).B.AULB)
+#define BR_AXBS_MGPCR4_AULB(x) (UNION_READ_FS(HW_AXBS_MGPCR4_ADDR(x), hw_axbs_mgpcr4, B.AULB))
 
 /*! @brief Format value for bitfield AXBS_MGPCR4_AULB. */
 #define BF_AXBS_MGPCR4_AULB(v) ((uint32_t)((uint32_t)(v) << BP_AXBS_MGPCR4_AULB) & BM_AXBS_MGPCR4_AULB)
 
 /*! @brief Set the AULB field to a new value. */
-#define BW_AXBS_MGPCR4_AULB(x, v) (HW_AXBS_MGPCR4_WR(x, (HW_AXBS_MGPCR4_RD(x) & ~BM_AXBS_MGPCR4_AULB) | BF_AXBS_MGPCR4_AULB(v)))
+#define BW_AXBS_MGPCR4_AULB(x, v) (ADDRESS_WRITE32(HW_AXBS_MGPCR4_ADDR(x), (HW_AXBS_MGPCR4_RD(x) & ~BM_AXBS_MGPCR4_AULB) | BF_AXBS_MGPCR4_AULB(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -981,13 +981,13 @@ typedef union _hw_axbs_mgpcr5
 #define BS_AXBS_MGPCR5_AULB  (3U)          /*!< Bit field size in bits for AXBS_MGPCR5_AULB. */
 
 /*! @brief Read current value of the AXBS_MGPCR5_AULB field. */
-#define BR_AXBS_MGPCR5_AULB(x) (HW_AXBS_MGPCR5(x).B.AULB)
+#define BR_AXBS_MGPCR5_AULB(x) (UNION_READ_FS(HW_AXBS_MGPCR5_ADDR(x), hw_axbs_mgpcr5, B.AULB))
 
 /*! @brief Format value for bitfield AXBS_MGPCR5_AULB. */
 #define BF_AXBS_MGPCR5_AULB(v) ((uint32_t)((uint32_t)(v) << BP_AXBS_MGPCR5_AULB) & BM_AXBS_MGPCR5_AULB)
 
 /*! @brief Set the AULB field to a new value. */
-#define BW_AXBS_MGPCR5_AULB(x, v) (HW_AXBS_MGPCR5_WR(x, (HW_AXBS_MGPCR5_RD(x) & ~BM_AXBS_MGPCR5_AULB) | BF_AXBS_MGPCR5_AULB(v)))
+#define BW_AXBS_MGPCR5_AULB(x, v) (ADDRESS_WRITE32(HW_AXBS_MGPCR5_ADDR(x), (HW_AXBS_MGPCR5_RD(x) & ~BM_AXBS_MGPCR5_AULB) | BF_AXBS_MGPCR5_AULB(v)))
 /*@}*/
 
 /*******************************************************************************
