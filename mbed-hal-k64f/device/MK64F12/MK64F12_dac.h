@@ -154,13 +154,13 @@ typedef union _hw_dac_datnl
 #define BS_DAC_DATnL_DATA0   (8U)          /*!< Bit field size in bits for DAC_DATnL_DATA0. */
 
 /*! @brief Read current value of the DAC_DATnL_DATA0 field. */
-#define BR_DAC_DATnL_DATA0(x, n) (ADDRESS_READ32(HW_DAC_DATnL_ADDR(x, n)))
+#define BR_DAC_DATnL_DATA0(x, n) (UNION_READ_REG_FS(HW_DAC_DATnL_ADDR(x, n), hw_dac_datnl))
 
 /*! @brief Format value for bitfield DAC_DATnL_DATA0. */
 #define BF_DAC_DATnL_DATA0(v) ((uint8_t)((uint8_t)(v) << BP_DAC_DATnL_DATA0) & BM_DAC_DATnL_DATA0)
 
 /*! @brief Set the DATA0 field to a new value. */
-#define BW_DAC_DATnL_DATA0(x, n, v) (ADDRESS_WRITE32(HW_DAC_DATnL_ADDR(x, n), v))
+#define BW_DAC_DATnL_DATA0(x, n, v) (UNION_WRITE_REG_FS(HW_DAC_DATnL_ADDR(x, n), hw_dac_datnl, v))
 /*@}*/
 /*******************************************************************************
  * HW_DAC_DATnH - DAC Data High Register
@@ -214,13 +214,13 @@ typedef union _hw_dac_datnh
 #define BS_DAC_DATnH_DATA1   (4U)          /*!< Bit field size in bits for DAC_DATnH_DATA1. */
 
 /*! @brief Read current value of the DAC_DATnH_DATA1 field. */
-#define BR_DAC_DATnH_DATA1(x, n) (UNION_READ_FS(HW_DAC_DATnH_ADDR(x, n), hw_dac_datnh, B.DATA1))
+#define BR_DAC_DATnH_DATA1(x, n) (UNION_READ_BIT_FS(HW_DAC_DATnH_ADDR(x, n), hw_dac_datnh, B.DATA1))
 
 /*! @brief Format value for bitfield DAC_DATnH_DATA1. */
 #define BF_DAC_DATnH_DATA1(v) ((uint8_t)((uint8_t)(v) << BP_DAC_DATnH_DATA1) & BM_DAC_DATnH_DATA1)
 
 /*! @brief Set the DATA1 field to a new value. */
-#define BW_DAC_DATnH_DATA1(x, n, v) (ADDRESS_WRITE32(HW_DAC_DATnH_ADDR(x, n), (HW_DAC_DATnH_RD(x, n) & ~BM_DAC_DATnH_DATA1) | BF_DAC_DATnH_DATA1(v)))
+#define BW_DAC_DATnH_DATA1(x, n, v) (UNION_WRITE_REG_FS(HW_DAC_DATnH_ADDR(x, n), hw_dac_datnh, (HW_DAC_DATnH_RD(x, n) & ~BM_DAC_DATnH_DATA1) | BF_DAC_DATnH_DATA1(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -648,13 +648,13 @@ typedef union _hw_dac_c1
 #define BS_DAC_C1_DACBFMD    (2U)          /*!< Bit field size in bits for DAC_C1_DACBFMD. */
 
 /*! @brief Read current value of the DAC_C1_DACBFMD field. */
-#define BR_DAC_C1_DACBFMD(x) (UNION_READ_FS(HW_DAC_C1_ADDR(x), hw_dac_c1, B.DACBFMD))
+#define BR_DAC_C1_DACBFMD(x) (UNION_READ_BIT_FS(HW_DAC_C1_ADDR(x), hw_dac_c1, B.DACBFMD))
 
 /*! @brief Format value for bitfield DAC_C1_DACBFMD. */
 #define BF_DAC_C1_DACBFMD(v) ((uint8_t)((uint8_t)(v) << BP_DAC_C1_DACBFMD) & BM_DAC_C1_DACBFMD)
 
 /*! @brief Set the DACBFMD field to a new value. */
-#define BW_DAC_C1_DACBFMD(x, v) (ADDRESS_WRITE32(HW_DAC_C1_ADDR(x), (HW_DAC_C1_RD(x) & ~BM_DAC_C1_DACBFMD) | BF_DAC_C1_DACBFMD(v)))
+#define BW_DAC_C1_DACBFMD(x, v) (UNION_WRITE_REG_FS(HW_DAC_C1_ADDR(x), hw_dac_c1, (HW_DAC_C1_RD(x) & ~BM_DAC_C1_DACBFMD) | BF_DAC_C1_DACBFMD(v)))
 /*@}*/
 
 /*!
@@ -677,13 +677,13 @@ typedef union _hw_dac_c1
 #define BS_DAC_C1_DACBFWM    (2U)          /*!< Bit field size in bits for DAC_C1_DACBFWM. */
 
 /*! @brief Read current value of the DAC_C1_DACBFWM field. */
-#define BR_DAC_C1_DACBFWM(x) (UNION_READ_FS(HW_DAC_C1_ADDR(x), hw_dac_c1, B.DACBFWM))
+#define BR_DAC_C1_DACBFWM(x) (UNION_READ_BIT_FS(HW_DAC_C1_ADDR(x), hw_dac_c1, B.DACBFWM))
 
 /*! @brief Format value for bitfield DAC_C1_DACBFWM. */
 #define BF_DAC_C1_DACBFWM(v) ((uint8_t)((uint8_t)(v) << BP_DAC_C1_DACBFWM) & BM_DAC_C1_DACBFWM)
 
 /*! @brief Set the DACBFWM field to a new value. */
-#define BW_DAC_C1_DACBFWM(x, v) (ADDRESS_WRITE32(HW_DAC_C1_ADDR(x), (HW_DAC_C1_RD(x) & ~BM_DAC_C1_DACBFWM) | BF_DAC_C1_DACBFWM(v)))
+#define BW_DAC_C1_DACBFWM(x, v) (UNION_WRITE_REG_FS(HW_DAC_C1_ADDR(x), hw_dac_c1, (HW_DAC_C1_RD(x) & ~BM_DAC_C1_DACBFWM) | BF_DAC_C1_DACBFWM(v)))
 /*@}*/
 
 /*!
@@ -759,13 +759,13 @@ typedef union _hw_dac_c2
 #define BS_DAC_C2_DACBFUP    (4U)          /*!< Bit field size in bits for DAC_C2_DACBFUP. */
 
 /*! @brief Read current value of the DAC_C2_DACBFUP field. */
-#define BR_DAC_C2_DACBFUP(x) (UNION_READ_FS(HW_DAC_C2_ADDR(x), hw_dac_c2, B.DACBFUP))
+#define BR_DAC_C2_DACBFUP(x) (UNION_READ_BIT_FS(HW_DAC_C2_ADDR(x), hw_dac_c2, B.DACBFUP))
 
 /*! @brief Format value for bitfield DAC_C2_DACBFUP. */
 #define BF_DAC_C2_DACBFUP(v) ((uint8_t)((uint8_t)(v) << BP_DAC_C2_DACBFUP) & BM_DAC_C2_DACBFUP)
 
 /*! @brief Set the DACBFUP field to a new value. */
-#define BW_DAC_C2_DACBFUP(x, v) (ADDRESS_WRITE32(HW_DAC_C2_ADDR(x), (HW_DAC_C2_RD(x) & ~BM_DAC_C2_DACBFUP) | BF_DAC_C2_DACBFUP(v)))
+#define BW_DAC_C2_DACBFUP(x, v) (UNION_WRITE_REG_FS(HW_DAC_C2_ADDR(x), hw_dac_c2, (HW_DAC_C2_RD(x) & ~BM_DAC_C2_DACBFUP) | BF_DAC_C2_DACBFUP(v)))
 /*@}*/
 
 /*!
@@ -779,13 +779,13 @@ typedef union _hw_dac_c2
 #define BS_DAC_C2_DACBFRP    (4U)          /*!< Bit field size in bits for DAC_C2_DACBFRP. */
 
 /*! @brief Read current value of the DAC_C2_DACBFRP field. */
-#define BR_DAC_C2_DACBFRP(x) (UNION_READ_FS(HW_DAC_C2_ADDR(x), hw_dac_c2, B.DACBFRP))
+#define BR_DAC_C2_DACBFRP(x) (UNION_READ_BIT_FS(HW_DAC_C2_ADDR(x), hw_dac_c2, B.DACBFRP))
 
 /*! @brief Format value for bitfield DAC_C2_DACBFRP. */
 #define BF_DAC_C2_DACBFRP(v) ((uint8_t)((uint8_t)(v) << BP_DAC_C2_DACBFRP) & BM_DAC_C2_DACBFRP)
 
 /*! @brief Set the DACBFRP field to a new value. */
-#define BW_DAC_C2_DACBFRP(x, v) (ADDRESS_WRITE32(HW_DAC_C2_ADDR(x), (HW_DAC_C2_RD(x) & ~BM_DAC_C2_DACBFRP) | BF_DAC_C2_DACBFRP(v)))
+#define BW_DAC_C2_DACBFRP(x, v) (UNION_WRITE_REG_FS(HW_DAC_C2_ADDR(x), hw_dac_c2, (HW_DAC_C2_RD(x) & ~BM_DAC_C2_DACBFRP) | BF_DAC_C2_DACBFRP(v)))
 /*@}*/
 
 /*******************************************************************************

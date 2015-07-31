@@ -425,13 +425,13 @@ typedef union _hw_wdog_stctrlh
 #define BS_WDOG_STCTRLH_BYTESEL (2U)       /*!< Bit field size in bits for WDOG_STCTRLH_BYTESEL. */
 
 /*! @brief Read current value of the WDOG_STCTRLH_BYTESEL field. */
-#define BR_WDOG_STCTRLH_BYTESEL(x) (UNION_READ_FS(HW_WDOG_STCTRLH_ADDR(x), hw_wdog_stctrlh, B.BYTESEL))
+#define BR_WDOG_STCTRLH_BYTESEL(x) (UNION_READ_BIT_FS(HW_WDOG_STCTRLH_ADDR(x), hw_wdog_stctrlh, B.BYTESEL))
 
 /*! @brief Format value for bitfield WDOG_STCTRLH_BYTESEL. */
 #define BF_WDOG_STCTRLH_BYTESEL(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_STCTRLH_BYTESEL) & BM_WDOG_STCTRLH_BYTESEL)
 
 /*! @brief Set the BYTESEL field to a new value. */
-#define BW_WDOG_STCTRLH_BYTESEL(x, v) (ADDRESS_WRITE32(HW_WDOG_STCTRLH_ADDR(x), (HW_WDOG_STCTRLH_RD(x) & ~BM_WDOG_STCTRLH_BYTESEL) | BF_WDOG_STCTRLH_BYTESEL(v)))
+#define BW_WDOG_STCTRLH_BYTESEL(x, v) (UNION_WRITE_REG_FS(HW_WDOG_STCTRLH_ADDR(x), hw_wdog_stctrlh, (HW_WDOG_STCTRLH_RD(x) & ~BM_WDOG_STCTRLH_BYTESEL) | BF_WDOG_STCTRLH_BYTESEL(v)))
 /*@}*/
 
 /*!
@@ -568,13 +568,13 @@ typedef union _hw_wdog_tovalh
 #define BS_WDOG_TOVALH_TOVALHIGH (16U)     /*!< Bit field size in bits for WDOG_TOVALH_TOVALHIGH. */
 
 /*! @brief Read current value of the WDOG_TOVALH_TOVALHIGH field. */
-#define BR_WDOG_TOVALH_TOVALHIGH(x) (ADDRESS_READ32(HW_WDOG_TOVALH_ADDR(x)))
+#define BR_WDOG_TOVALH_TOVALHIGH(x) (UNION_READ_REG_FS(HW_WDOG_TOVALH_ADDR(x), hw_wdog_tovalh))
 
 /*! @brief Format value for bitfield WDOG_TOVALH_TOVALHIGH. */
 #define BF_WDOG_TOVALH_TOVALHIGH(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_TOVALH_TOVALHIGH) & BM_WDOG_TOVALH_TOVALHIGH)
 
 /*! @brief Set the TOVALHIGH field to a new value. */
-#define BW_WDOG_TOVALH_TOVALHIGH(x, v) (ADDRESS_WRITE32(HW_WDOG_TOVALH_ADDR(x), v))
+#define BW_WDOG_TOVALH_TOVALHIGH(x, v) (UNION_WRITE_REG_FS(HW_WDOG_TOVALH_ADDR(x), hw_wdog_tovalh, v))
 /*@}*/
 
 /*******************************************************************************
@@ -629,13 +629,13 @@ typedef union _hw_wdog_tovall
 #define BS_WDOG_TOVALL_TOVALLOW (16U)      /*!< Bit field size in bits for WDOG_TOVALL_TOVALLOW. */
 
 /*! @brief Read current value of the WDOG_TOVALL_TOVALLOW field. */
-#define BR_WDOG_TOVALL_TOVALLOW(x) (ADDRESS_READ32(HW_WDOG_TOVALL_ADDR(x)))
+#define BR_WDOG_TOVALL_TOVALLOW(x) (UNION_READ_REG_FS(HW_WDOG_TOVALL_ADDR(x), hw_wdog_tovall))
 
 /*! @brief Format value for bitfield WDOG_TOVALL_TOVALLOW. */
 #define BF_WDOG_TOVALL_TOVALLOW(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_TOVALL_TOVALLOW) & BM_WDOG_TOVALL_TOVALLOW)
 
 /*! @brief Set the TOVALLOW field to a new value. */
-#define BW_WDOG_TOVALL_TOVALLOW(x, v) (ADDRESS_WRITE32(HW_WDOG_TOVALL_ADDR(x), v))
+#define BW_WDOG_TOVALL_TOVALLOW(x, v) (UNION_WRITE_REG_FS(HW_WDOG_TOVALL_ADDR(x), hw_wdog_tovall, v))
 /*@}*/
 
 /*******************************************************************************
@@ -692,13 +692,13 @@ typedef union _hw_wdog_winh
 #define BS_WDOG_WINH_WINHIGH (16U)         /*!< Bit field size in bits for WDOG_WINH_WINHIGH. */
 
 /*! @brief Read current value of the WDOG_WINH_WINHIGH field. */
-#define BR_WDOG_WINH_WINHIGH(x) (ADDRESS_READ32(HW_WDOG_WINH_ADDR(x)))
+#define BR_WDOG_WINH_WINHIGH(x) (UNION_READ_REG_FS(HW_WDOG_WINH_ADDR(x), hw_wdog_winh))
 
 /*! @brief Format value for bitfield WDOG_WINH_WINHIGH. */
 #define BF_WDOG_WINH_WINHIGH(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_WINH_WINHIGH) & BM_WDOG_WINH_WINHIGH)
 
 /*! @brief Set the WINHIGH field to a new value. */
-#define BW_WDOG_WINH_WINHIGH(x, v) (ADDRESS_WRITE32(HW_WDOG_WINH_ADDR(x), v))
+#define BW_WDOG_WINH_WINHIGH(x, v) (UNION_WRITE_REG_FS(HW_WDOG_WINH_ADDR(x), hw_wdog_winh, v))
 /*@}*/
 
 /*******************************************************************************
@@ -755,13 +755,13 @@ typedef union _hw_wdog_winl
 #define BS_WDOG_WINL_WINLOW  (16U)         /*!< Bit field size in bits for WDOG_WINL_WINLOW. */
 
 /*! @brief Read current value of the WDOG_WINL_WINLOW field. */
-#define BR_WDOG_WINL_WINLOW(x) (ADDRESS_READ32(HW_WDOG_WINL_ADDR(x)))
+#define BR_WDOG_WINL_WINLOW(x) (UNION_READ_REG_FS(HW_WDOG_WINL_ADDR(x), hw_wdog_winl))
 
 /*! @brief Format value for bitfield WDOG_WINL_WINLOW. */
 #define BF_WDOG_WINL_WINLOW(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_WINL_WINLOW) & BM_WDOG_WINL_WINLOW)
 
 /*! @brief Set the WINLOW field to a new value. */
-#define BW_WDOG_WINL_WINLOW(x, v) (ADDRESS_WRITE32(HW_WDOG_WINL_ADDR(x), v))
+#define BW_WDOG_WINL_WINLOW(x, v) (UNION_WRITE_REG_FS(HW_WDOG_WINL_ADDR(x), hw_wdog_winl, v))
 /*@}*/
 
 /*******************************************************************************
@@ -815,13 +815,13 @@ typedef union _hw_wdog_refresh
 #define BS_WDOG_REFRESH_WDOGREFRESH (16U)  /*!< Bit field size in bits for WDOG_REFRESH_WDOGREFRESH. */
 
 /*! @brief Read current value of the WDOG_REFRESH_WDOGREFRESH field. */
-#define BR_WDOG_REFRESH_WDOGREFRESH(x) (ADDRESS_READ32(HW_WDOG_REFRESH_ADDR(x)))
+#define BR_WDOG_REFRESH_WDOGREFRESH(x) (UNION_READ_REG_FS(HW_WDOG_REFRESH_ADDR(x), hw_wdog_refresh))
 
 /*! @brief Format value for bitfield WDOG_REFRESH_WDOGREFRESH. */
 #define BF_WDOG_REFRESH_WDOGREFRESH(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_REFRESH_WDOGREFRESH) & BM_WDOG_REFRESH_WDOGREFRESH)
 
 /*! @brief Set the WDOGREFRESH field to a new value. */
-#define BW_WDOG_REFRESH_WDOGREFRESH(x, v) (ADDRESS_WRITE32(HW_WDOG_REFRESH_ADDR(x), v))
+#define BW_WDOG_REFRESH_WDOGREFRESH(x, v) (UNION_WRITE_REG_FS(HW_WDOG_REFRESH_ADDR(x), hw_wdog_refresh, v))
 /*@}*/
 
 /*******************************************************************************
@@ -878,13 +878,13 @@ typedef union _hw_wdog_unlock
 #define BS_WDOG_UNLOCK_WDOGUNLOCK (16U)    /*!< Bit field size in bits for WDOG_UNLOCK_WDOGUNLOCK. */
 
 /*! @brief Read current value of the WDOG_UNLOCK_WDOGUNLOCK field. */
-#define BR_WDOG_UNLOCK_WDOGUNLOCK(x) (ADDRESS_READ32(HW_WDOG_UNLOCK_ADDR(x)))
+#define BR_WDOG_UNLOCK_WDOGUNLOCK(x) (UNION_READ_REG_FS(HW_WDOG_UNLOCK_ADDR(x), hw_wdog_unlock))
 
 /*! @brief Format value for bitfield WDOG_UNLOCK_WDOGUNLOCK. */
 #define BF_WDOG_UNLOCK_WDOGUNLOCK(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_UNLOCK_WDOGUNLOCK) & BM_WDOG_UNLOCK_WDOGUNLOCK)
 
 /*! @brief Set the WDOGUNLOCK field to a new value. */
-#define BW_WDOG_UNLOCK_WDOGUNLOCK(x, v) (ADDRESS_WRITE32(HW_WDOG_UNLOCK_ADDR(x), v))
+#define BW_WDOG_UNLOCK_WDOGUNLOCK(x, v) (UNION_WRITE_REG_FS(HW_WDOG_UNLOCK_ADDR(x), hw_wdog_unlock, v))
 /*@}*/
 
 /*******************************************************************************
@@ -934,13 +934,13 @@ typedef union _hw_wdog_tmrouth
 #define BS_WDOG_TMROUTH_TIMEROUTHIGH (16U) /*!< Bit field size in bits for WDOG_TMROUTH_TIMEROUTHIGH. */
 
 /*! @brief Read current value of the WDOG_TMROUTH_TIMEROUTHIGH field. */
-#define BR_WDOG_TMROUTH_TIMEROUTHIGH(x) (ADDRESS_READ32(HW_WDOG_TMROUTH_ADDR(x)))
+#define BR_WDOG_TMROUTH_TIMEROUTHIGH(x) (UNION_READ_REG_FS(HW_WDOG_TMROUTH_ADDR(x), hw_wdog_tmrouth))
 
 /*! @brief Format value for bitfield WDOG_TMROUTH_TIMEROUTHIGH. */
 #define BF_WDOG_TMROUTH_TIMEROUTHIGH(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_TMROUTH_TIMEROUTHIGH) & BM_WDOG_TMROUTH_TIMEROUTHIGH)
 
 /*! @brief Set the TIMEROUTHIGH field to a new value. */
-#define BW_WDOG_TMROUTH_TIMEROUTHIGH(x, v) (ADDRESS_WRITE32(HW_WDOG_TMROUTH_ADDR(x), v))
+#define BW_WDOG_TMROUTH_TIMEROUTHIGH(x, v) (UNION_WRITE_REG_FS(HW_WDOG_TMROUTH_ADDR(x), hw_wdog_tmrouth, v))
 /*@}*/
 
 /*******************************************************************************
@@ -995,13 +995,13 @@ typedef union _hw_wdog_tmroutl
 #define BS_WDOG_TMROUTL_TIMEROUTLOW (16U)  /*!< Bit field size in bits for WDOG_TMROUTL_TIMEROUTLOW. */
 
 /*! @brief Read current value of the WDOG_TMROUTL_TIMEROUTLOW field. */
-#define BR_WDOG_TMROUTL_TIMEROUTLOW(x) (ADDRESS_READ32(HW_WDOG_TMROUTL_ADDR(x)))
+#define BR_WDOG_TMROUTL_TIMEROUTLOW(x) (UNION_READ_REG_FS(HW_WDOG_TMROUTL_ADDR(x), hw_wdog_tmroutl))
 
 /*! @brief Format value for bitfield WDOG_TMROUTL_TIMEROUTLOW. */
 #define BF_WDOG_TMROUTL_TIMEROUTLOW(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_TMROUTL_TIMEROUTLOW) & BM_WDOG_TMROUTL_TIMEROUTLOW)
 
 /*! @brief Set the TIMEROUTLOW field to a new value. */
-#define BW_WDOG_TMROUTL_TIMEROUTLOW(x, v) (ADDRESS_WRITE32(HW_WDOG_TMROUTL_ADDR(x), v))
+#define BW_WDOG_TMROUTL_TIMEROUTLOW(x, v) (UNION_WRITE_REG_FS(HW_WDOG_TMROUTL_ADDR(x), hw_wdog_tmroutl, v))
 /*@}*/
 
 /*******************************************************************************
@@ -1053,13 +1053,13 @@ typedef union _hw_wdog_rstcnt
 #define BS_WDOG_RSTCNT_RSTCNT (16U)        /*!< Bit field size in bits for WDOG_RSTCNT_RSTCNT. */
 
 /*! @brief Read current value of the WDOG_RSTCNT_RSTCNT field. */
-#define BR_WDOG_RSTCNT_RSTCNT(x) (ADDRESS_READ32(HW_WDOG_RSTCNT_ADDR(x)))
+#define BR_WDOG_RSTCNT_RSTCNT(x) (UNION_READ_REG_FS(HW_WDOG_RSTCNT_ADDR(x), hw_wdog_rstcnt))
 
 /*! @brief Format value for bitfield WDOG_RSTCNT_RSTCNT. */
 #define BF_WDOG_RSTCNT_RSTCNT(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_RSTCNT_RSTCNT) & BM_WDOG_RSTCNT_RSTCNT)
 
 /*! @brief Set the RSTCNT field to a new value. */
-#define BW_WDOG_RSTCNT_RSTCNT(x, v) (ADDRESS_WRITE32(HW_WDOG_RSTCNT_ADDR(x), v))
+#define BW_WDOG_RSTCNT_RSTCNT(x, v) (UNION_WRITE_REG_FS(HW_WDOG_RSTCNT_ADDR(x), hw_wdog_rstcnt, v))
 /*@}*/
 
 /*******************************************************************************
@@ -1113,13 +1113,13 @@ typedef union _hw_wdog_presc
 #define BS_WDOG_PRESC_PRESCVAL (3U)        /*!< Bit field size in bits for WDOG_PRESC_PRESCVAL. */
 
 /*! @brief Read current value of the WDOG_PRESC_PRESCVAL field. */
-#define BR_WDOG_PRESC_PRESCVAL(x) (UNION_READ_FS(HW_WDOG_PRESC_ADDR(x), hw_wdog_presc, B.PRESCVAL))
+#define BR_WDOG_PRESC_PRESCVAL(x) (UNION_READ_BIT_FS(HW_WDOG_PRESC_ADDR(x), hw_wdog_presc, B.PRESCVAL))
 
 /*! @brief Format value for bitfield WDOG_PRESC_PRESCVAL. */
 #define BF_WDOG_PRESC_PRESCVAL(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_PRESC_PRESCVAL) & BM_WDOG_PRESC_PRESCVAL)
 
 /*! @brief Set the PRESCVAL field to a new value. */
-#define BW_WDOG_PRESC_PRESCVAL(x, v) (ADDRESS_WRITE32(HW_WDOG_PRESC_ADDR(x), (HW_WDOG_PRESC_RD(x) & ~BM_WDOG_PRESC_PRESCVAL) | BF_WDOG_PRESC_PRESCVAL(v)))
+#define BW_WDOG_PRESC_PRESCVAL(x, v) (UNION_WRITE_REG_FS(HW_WDOG_PRESC_ADDR(x), hw_wdog_presc, (HW_WDOG_PRESC_RD(x) & ~BM_WDOG_PRESC_PRESCVAL) | BF_WDOG_PRESC_PRESCVAL(v)))
 /*@}*/
 
 /*******************************************************************************

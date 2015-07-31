@@ -266,13 +266,13 @@ typedef union _hw_lptmr_csr
 #define BS_LPTMR_CSR_TPS     (2U)          /*!< Bit field size in bits for LPTMR_CSR_TPS. */
 
 /*! @brief Read current value of the LPTMR_CSR_TPS field. */
-#define BR_LPTMR_CSR_TPS(x)  (UNION_READ_FS(HW_LPTMR_CSR_ADDR(x), hw_lptmr_csr, B.TPS))
+#define BR_LPTMR_CSR_TPS(x)  (UNION_READ_BIT_FS(HW_LPTMR_CSR_ADDR(x), hw_lptmr_csr, B.TPS))
 
 /*! @brief Format value for bitfield LPTMR_CSR_TPS. */
 #define BF_LPTMR_CSR_TPS(v)  ((uint32_t)((uint32_t)(v) << BP_LPTMR_CSR_TPS) & BM_LPTMR_CSR_TPS)
 
 /*! @brief Set the TPS field to a new value. */
-#define BW_LPTMR_CSR_TPS(x, v) (ADDRESS_WRITE32(HW_LPTMR_CSR_ADDR(x), (HW_LPTMR_CSR_RD(x) & ~BM_LPTMR_CSR_TPS) | BF_LPTMR_CSR_TPS(v)))
+#define BW_LPTMR_CSR_TPS(x, v) (UNION_WRITE_REG_FS(HW_LPTMR_CSR_ADDR(x), hw_lptmr_csr, (HW_LPTMR_CSR_RD(x) & ~BM_LPTMR_CSR_TPS) | BF_LPTMR_CSR_TPS(v)))
 /*@}*/
 
 /*!
@@ -383,13 +383,13 @@ typedef union _hw_lptmr_psr
 #define BS_LPTMR_PSR_PCS     (2U)          /*!< Bit field size in bits for LPTMR_PSR_PCS. */
 
 /*! @brief Read current value of the LPTMR_PSR_PCS field. */
-#define BR_LPTMR_PSR_PCS(x)  (UNION_READ_FS(HW_LPTMR_PSR_ADDR(x), hw_lptmr_psr, B.PCS))
+#define BR_LPTMR_PSR_PCS(x)  (UNION_READ_BIT_FS(HW_LPTMR_PSR_ADDR(x), hw_lptmr_psr, B.PCS))
 
 /*! @brief Format value for bitfield LPTMR_PSR_PCS. */
 #define BF_LPTMR_PSR_PCS(v)  ((uint32_t)((uint32_t)(v) << BP_LPTMR_PSR_PCS) & BM_LPTMR_PSR_PCS)
 
 /*! @brief Set the PCS field to a new value. */
-#define BW_LPTMR_PSR_PCS(x, v) (ADDRESS_WRITE32(HW_LPTMR_PSR_ADDR(x), (HW_LPTMR_PSR_RD(x) & ~BM_LPTMR_PSR_PCS) | BF_LPTMR_PSR_PCS(v)))
+#define BW_LPTMR_PSR_PCS(x, v) (UNION_WRITE_REG_FS(HW_LPTMR_PSR_ADDR(x), hw_lptmr_psr, (HW_LPTMR_PSR_RD(x) & ~BM_LPTMR_PSR_PCS) | BF_LPTMR_PSR_PCS(v)))
 /*@}*/
 
 /*!
@@ -466,13 +466,13 @@ typedef union _hw_lptmr_psr
 #define BS_LPTMR_PSR_PRESCALE (4U)         /*!< Bit field size in bits for LPTMR_PSR_PRESCALE. */
 
 /*! @brief Read current value of the LPTMR_PSR_PRESCALE field. */
-#define BR_LPTMR_PSR_PRESCALE(x) (UNION_READ_FS(HW_LPTMR_PSR_ADDR(x), hw_lptmr_psr, B.PRESCALE))
+#define BR_LPTMR_PSR_PRESCALE(x) (UNION_READ_BIT_FS(HW_LPTMR_PSR_ADDR(x), hw_lptmr_psr, B.PRESCALE))
 
 /*! @brief Format value for bitfield LPTMR_PSR_PRESCALE. */
 #define BF_LPTMR_PSR_PRESCALE(v) ((uint32_t)((uint32_t)(v) << BP_LPTMR_PSR_PRESCALE) & BM_LPTMR_PSR_PRESCALE)
 
 /*! @brief Set the PRESCALE field to a new value. */
-#define BW_LPTMR_PSR_PRESCALE(x, v) (ADDRESS_WRITE32(HW_LPTMR_PSR_ADDR(x), (HW_LPTMR_PSR_RD(x) & ~BM_LPTMR_PSR_PRESCALE) | BF_LPTMR_PSR_PRESCALE(v)))
+#define BW_LPTMR_PSR_PRESCALE(x, v) (UNION_WRITE_REG_FS(HW_LPTMR_PSR_ADDR(x), hw_lptmr_psr, (HW_LPTMR_PSR_RD(x) & ~BM_LPTMR_PSR_PRESCALE) | BF_LPTMR_PSR_PRESCALE(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -527,13 +527,13 @@ typedef union _hw_lptmr_cmr
 #define BS_LPTMR_CMR_COMPARE (16U)         /*!< Bit field size in bits for LPTMR_CMR_COMPARE. */
 
 /*! @brief Read current value of the LPTMR_CMR_COMPARE field. */
-#define BR_LPTMR_CMR_COMPARE(x) (UNION_READ_FS(HW_LPTMR_CMR_ADDR(x), hw_lptmr_cmr, B.COMPARE))
+#define BR_LPTMR_CMR_COMPARE(x) (UNION_READ_BIT_FS(HW_LPTMR_CMR_ADDR(x), hw_lptmr_cmr, B.COMPARE))
 
 /*! @brief Format value for bitfield LPTMR_CMR_COMPARE. */
 #define BF_LPTMR_CMR_COMPARE(v) ((uint32_t)((uint32_t)(v) << BP_LPTMR_CMR_COMPARE) & BM_LPTMR_CMR_COMPARE)
 
 /*! @brief Set the COMPARE field to a new value. */
-#define BW_LPTMR_CMR_COMPARE(x, v) (ADDRESS_WRITE32(HW_LPTMR_CMR_ADDR(x), (HW_LPTMR_CMR_RD(x) & ~BM_LPTMR_CMR_COMPARE) | BF_LPTMR_CMR_COMPARE(v)))
+#define BW_LPTMR_CMR_COMPARE(x, v) (UNION_WRITE_REG_FS(HW_LPTMR_CMR_ADDR(x), hw_lptmr_cmr, (HW_LPTMR_CMR_RD(x) & ~BM_LPTMR_CMR_COMPARE) | BF_LPTMR_CMR_COMPARE(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -582,13 +582,13 @@ typedef union _hw_lptmr_cnr
 #define BS_LPTMR_CNR_COUNTER (16U)         /*!< Bit field size in bits for LPTMR_CNR_COUNTER. */
 
 /*! @brief Read current value of the LPTMR_CNR_COUNTER field. */
-#define BR_LPTMR_CNR_COUNTER(x) (UNION_READ_FS(HW_LPTMR_CNR_ADDR(x), hw_lptmr_cnr, B.COUNTER))
+#define BR_LPTMR_CNR_COUNTER(x) (UNION_READ_BIT_FS(HW_LPTMR_CNR_ADDR(x), hw_lptmr_cnr, B.COUNTER))
 
 /*! @brief Format value for bitfield LPTMR_CNR_COUNTER. */
 #define BF_LPTMR_CNR_COUNTER(v) ((uint32_t)((uint32_t)(v) << BP_LPTMR_CNR_COUNTER) & BM_LPTMR_CNR_COUNTER)
 
 /*! @brief Set the COUNTER field to a new value. */
-#define BW_LPTMR_CNR_COUNTER(x, v) (ADDRESS_WRITE32(HW_LPTMR_CNR_ADDR(x), (HW_LPTMR_CNR_RD(x) & ~BM_LPTMR_CNR_COUNTER) | BF_LPTMR_CNR_COUNTER(v)))
+#define BW_LPTMR_CNR_COUNTER(x, v) (UNION_WRITE_REG_FS(HW_LPTMR_CNR_ADDR(x), hw_lptmr_cnr, (HW_LPTMR_CNR_RD(x) & ~BM_LPTMR_CNR_COUNTER) | BF_LPTMR_CNR_COUNTER(v)))
 /*@}*/
 
 /*******************************************************************************

@@ -186,13 +186,13 @@ typedef union _hw_sdhc_dsaddr
 #define BS_SDHC_DSADDR_DSADDR (30U)        /*!< Bit field size in bits for SDHC_DSADDR_DSADDR. */
 
 /*! @brief Read current value of the SDHC_DSADDR_DSADDR field. */
-#define BR_SDHC_DSADDR_DSADDR(x) (UNION_READ_FS(HW_SDHC_DSADDR_ADDR(x), hw_sdhc_dsaddr, B.DSADDR))
+#define BR_SDHC_DSADDR_DSADDR(x) (UNION_READ_BIT_FS(HW_SDHC_DSADDR_ADDR(x), hw_sdhc_dsaddr, B.DSADDR))
 
 /*! @brief Format value for bitfield SDHC_DSADDR_DSADDR. */
 #define BF_SDHC_DSADDR_DSADDR(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_DSADDR_DSADDR) & BM_SDHC_DSADDR_DSADDR)
 
 /*! @brief Set the DSADDR field to a new value. */
-#define BW_SDHC_DSADDR_DSADDR(x, v) (ADDRESS_WRITE32(HW_SDHC_DSADDR_ADDR(x), (HW_SDHC_DSADDR_RD(x) & ~BM_SDHC_DSADDR_DSADDR) | BF_SDHC_DSADDR_DSADDR(v)))
+#define BW_SDHC_DSADDR_DSADDR(x, v) (UNION_WRITE_REG_FS(HW_SDHC_DSADDR_ADDR(x), hw_sdhc_dsaddr, (HW_SDHC_DSADDR_RD(x) & ~BM_SDHC_DSADDR_DSADDR) | BF_SDHC_DSADDR_DSADDR(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -263,13 +263,13 @@ typedef union _hw_sdhc_blkattr
 #define BS_SDHC_BLKATTR_BLKSIZE (13U)      /*!< Bit field size in bits for SDHC_BLKATTR_BLKSIZE. */
 
 /*! @brief Read current value of the SDHC_BLKATTR_BLKSIZE field. */
-#define BR_SDHC_BLKATTR_BLKSIZE(x) (UNION_READ_FS(HW_SDHC_BLKATTR_ADDR(x), hw_sdhc_blkattr, B.BLKSIZE))
+#define BR_SDHC_BLKATTR_BLKSIZE(x) (UNION_READ_BIT_FS(HW_SDHC_BLKATTR_ADDR(x), hw_sdhc_blkattr, B.BLKSIZE))
 
 /*! @brief Format value for bitfield SDHC_BLKATTR_BLKSIZE. */
 #define BF_SDHC_BLKATTR_BLKSIZE(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_BLKATTR_BLKSIZE) & BM_SDHC_BLKATTR_BLKSIZE)
 
 /*! @brief Set the BLKSIZE field to a new value. */
-#define BW_SDHC_BLKATTR_BLKSIZE(x, v) (ADDRESS_WRITE32(HW_SDHC_BLKATTR_ADDR(x), (HW_SDHC_BLKATTR_RD(x) & ~BM_SDHC_BLKATTR_BLKSIZE) | BF_SDHC_BLKATTR_BLKSIZE(v)))
+#define BW_SDHC_BLKATTR_BLKSIZE(x, v) (UNION_WRITE_REG_FS(HW_SDHC_BLKATTR_ADDR(x), hw_sdhc_blkattr, (HW_SDHC_BLKATTR_RD(x) & ~BM_SDHC_BLKATTR_BLKSIZE) | BF_SDHC_BLKATTR_BLKSIZE(v)))
 /*@}*/
 
 /*!
@@ -308,13 +308,13 @@ typedef union _hw_sdhc_blkattr
 #define BS_SDHC_BLKATTR_BLKCNT (16U)       /*!< Bit field size in bits for SDHC_BLKATTR_BLKCNT. */
 
 /*! @brief Read current value of the SDHC_BLKATTR_BLKCNT field. */
-#define BR_SDHC_BLKATTR_BLKCNT(x) (UNION_READ_FS(HW_SDHC_BLKATTR_ADDR(x), hw_sdhc_blkattr, B.BLKCNT))
+#define BR_SDHC_BLKATTR_BLKCNT(x) (UNION_READ_BIT_FS(HW_SDHC_BLKATTR_ADDR(x), hw_sdhc_blkattr, B.BLKCNT))
 
 /*! @brief Format value for bitfield SDHC_BLKATTR_BLKCNT. */
 #define BF_SDHC_BLKATTR_BLKCNT(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_BLKATTR_BLKCNT) & BM_SDHC_BLKATTR_BLKCNT)
 
 /*! @brief Set the BLKCNT field to a new value. */
-#define BW_SDHC_BLKATTR_BLKCNT(x, v) (ADDRESS_WRITE32(HW_SDHC_BLKATTR_ADDR(x), (HW_SDHC_BLKATTR_RD(x) & ~BM_SDHC_BLKATTR_BLKCNT) | BF_SDHC_BLKATTR_BLKCNT(v)))
+#define BW_SDHC_BLKATTR_BLKCNT(x, v) (UNION_WRITE_REG_FS(HW_SDHC_BLKATTR_ADDR(x), hw_sdhc_blkattr, (HW_SDHC_BLKATTR_RD(x) & ~BM_SDHC_BLKATTR_BLKCNT) | BF_SDHC_BLKATTR_BLKCNT(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -368,13 +368,13 @@ typedef union _hw_sdhc_cmdarg
 #define BS_SDHC_CMDARG_CMDARG (32U)        /*!< Bit field size in bits for SDHC_CMDARG_CMDARG. */
 
 /*! @brief Read current value of the SDHC_CMDARG_CMDARG field. */
-#define BR_SDHC_CMDARG_CMDARG(x) (ADDRESS_READ32(HW_SDHC_CMDARG_ADDR(x)))
+#define BR_SDHC_CMDARG_CMDARG(x) (UNION_READ_REG_FS(HW_SDHC_CMDARG_ADDR(x), hw_sdhc_cmdarg))
 
 /*! @brief Format value for bitfield SDHC_CMDARG_CMDARG. */
 #define BF_SDHC_CMDARG_CMDARG(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_CMDARG_CMDARG) & BM_SDHC_CMDARG_CMDARG)
 
 /*! @brief Set the CMDARG field to a new value. */
-#define BW_SDHC_CMDARG_CMDARG(x, v) (ADDRESS_WRITE32(HW_SDHC_CMDARG_ADDR(x), v))
+#define BW_SDHC_CMDARG_CMDARG(x, v) (UNION_WRITE_REG_FS(HW_SDHC_CMDARG_ADDR(x), hw_sdhc_cmdarg, v))
 /*@}*/
 
 /*******************************************************************************
@@ -616,13 +616,13 @@ typedef union _hw_sdhc_xfertyp
 #define BS_SDHC_XFERTYP_RSPTYP (2U)        /*!< Bit field size in bits for SDHC_XFERTYP_RSPTYP. */
 
 /*! @brief Read current value of the SDHC_XFERTYP_RSPTYP field. */
-#define BR_SDHC_XFERTYP_RSPTYP(x) (UNION_READ_FS(HW_SDHC_XFERTYP_ADDR(x), hw_sdhc_xfertyp, B.RSPTYP))
+#define BR_SDHC_XFERTYP_RSPTYP(x) (UNION_READ_BIT_FS(HW_SDHC_XFERTYP_ADDR(x), hw_sdhc_xfertyp, B.RSPTYP))
 
 /*! @brief Format value for bitfield SDHC_XFERTYP_RSPTYP. */
 #define BF_SDHC_XFERTYP_RSPTYP(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_XFERTYP_RSPTYP) & BM_SDHC_XFERTYP_RSPTYP)
 
 /*! @brief Set the RSPTYP field to a new value. */
-#define BW_SDHC_XFERTYP_RSPTYP(x, v) (ADDRESS_WRITE32(HW_SDHC_XFERTYP_ADDR(x), (HW_SDHC_XFERTYP_RD(x) & ~BM_SDHC_XFERTYP_RSPTYP) | BF_SDHC_XFERTYP_RSPTYP(v)))
+#define BW_SDHC_XFERTYP_RSPTYP(x, v) (UNION_WRITE_REG_FS(HW_SDHC_XFERTYP_ADDR(x), hw_sdhc_xfertyp, (HW_SDHC_XFERTYP_RD(x) & ~BM_SDHC_XFERTYP_RSPTYP) | BF_SDHC_XFERTYP_RSPTYP(v)))
 /*@}*/
 
 /*!
@@ -747,13 +747,13 @@ typedef union _hw_sdhc_xfertyp
 #define BS_SDHC_XFERTYP_CMDTYP (2U)        /*!< Bit field size in bits for SDHC_XFERTYP_CMDTYP. */
 
 /*! @brief Read current value of the SDHC_XFERTYP_CMDTYP field. */
-#define BR_SDHC_XFERTYP_CMDTYP(x) (UNION_READ_FS(HW_SDHC_XFERTYP_ADDR(x), hw_sdhc_xfertyp, B.CMDTYP))
+#define BR_SDHC_XFERTYP_CMDTYP(x) (UNION_READ_BIT_FS(HW_SDHC_XFERTYP_ADDR(x), hw_sdhc_xfertyp, B.CMDTYP))
 
 /*! @brief Format value for bitfield SDHC_XFERTYP_CMDTYP. */
 #define BF_SDHC_XFERTYP_CMDTYP(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_XFERTYP_CMDTYP) & BM_SDHC_XFERTYP_CMDTYP)
 
 /*! @brief Set the CMDTYP field to a new value. */
-#define BW_SDHC_XFERTYP_CMDTYP(x, v) (ADDRESS_WRITE32(HW_SDHC_XFERTYP_ADDR(x), (HW_SDHC_XFERTYP_RD(x) & ~BM_SDHC_XFERTYP_CMDTYP) | BF_SDHC_XFERTYP_CMDTYP(v)))
+#define BW_SDHC_XFERTYP_CMDTYP(x, v) (UNION_WRITE_REG_FS(HW_SDHC_XFERTYP_ADDR(x), hw_sdhc_xfertyp, (HW_SDHC_XFERTYP_RD(x) & ~BM_SDHC_XFERTYP_CMDTYP) | BF_SDHC_XFERTYP_CMDTYP(v)))
 /*@}*/
 
 /*!
@@ -769,13 +769,13 @@ typedef union _hw_sdhc_xfertyp
 #define BS_SDHC_XFERTYP_CMDINX (6U)        /*!< Bit field size in bits for SDHC_XFERTYP_CMDINX. */
 
 /*! @brief Read current value of the SDHC_XFERTYP_CMDINX field. */
-#define BR_SDHC_XFERTYP_CMDINX(x) (UNION_READ_FS(HW_SDHC_XFERTYP_ADDR(x), hw_sdhc_xfertyp, B.CMDINX))
+#define BR_SDHC_XFERTYP_CMDINX(x) (UNION_READ_BIT_FS(HW_SDHC_XFERTYP_ADDR(x), hw_sdhc_xfertyp, B.CMDINX))
 
 /*! @brief Format value for bitfield SDHC_XFERTYP_CMDINX. */
 #define BF_SDHC_XFERTYP_CMDINX(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_XFERTYP_CMDINX) & BM_SDHC_XFERTYP_CMDINX)
 
 /*! @brief Set the CMDINX field to a new value. */
-#define BW_SDHC_XFERTYP_CMDINX(x, v) (ADDRESS_WRITE32(HW_SDHC_XFERTYP_ADDR(x), (HW_SDHC_XFERTYP_RD(x) & ~BM_SDHC_XFERTYP_CMDINX) | BF_SDHC_XFERTYP_CMDINX(v)))
+#define BW_SDHC_XFERTYP_CMDINX(x, v) (UNION_WRITE_REG_FS(HW_SDHC_XFERTYP_ADDR(x), hw_sdhc_xfertyp, (HW_SDHC_XFERTYP_RD(x) & ~BM_SDHC_XFERTYP_CMDINX) | BF_SDHC_XFERTYP_CMDINX(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -821,7 +821,7 @@ typedef union _hw_sdhc_cmdrsp0
 #define BS_SDHC_CMDRSP0_CMDRSP0 (32U)      /*!< Bit field size in bits for SDHC_CMDRSP0_CMDRSP0. */
 
 /*! @brief Read current value of the SDHC_CMDRSP0_CMDRSP0 field. */
-#define BR_SDHC_CMDRSP0_CMDRSP0(x) (ADDRESS_READ32(HW_SDHC_CMDRSP0_ADDR(x)))
+#define BR_SDHC_CMDRSP0_CMDRSP0(x) (UNION_READ_REG_FS(HW_SDHC_CMDRSP0_ADDR(x), hw_sdhc_cmdrsp0))
 /*@}*/
 
 /*******************************************************************************
@@ -867,7 +867,7 @@ typedef union _hw_sdhc_cmdrsp1
 #define BS_SDHC_CMDRSP1_CMDRSP1 (32U)      /*!< Bit field size in bits for SDHC_CMDRSP1_CMDRSP1. */
 
 /*! @brief Read current value of the SDHC_CMDRSP1_CMDRSP1 field. */
-#define BR_SDHC_CMDRSP1_CMDRSP1(x) (ADDRESS_READ32(HW_SDHC_CMDRSP1_ADDR(x)))
+#define BR_SDHC_CMDRSP1_CMDRSP1(x) (UNION_READ_REG_FS(HW_SDHC_CMDRSP1_ADDR(x), hw_sdhc_cmdrsp1))
 /*@}*/
 
 /*******************************************************************************
@@ -913,7 +913,7 @@ typedef union _hw_sdhc_cmdrsp2
 #define BS_SDHC_CMDRSP2_CMDRSP2 (32U)      /*!< Bit field size in bits for SDHC_CMDRSP2_CMDRSP2. */
 
 /*! @brief Read current value of the SDHC_CMDRSP2_CMDRSP2 field. */
-#define BR_SDHC_CMDRSP2_CMDRSP2(x) (ADDRESS_READ32(HW_SDHC_CMDRSP2_ADDR(x)))
+#define BR_SDHC_CMDRSP2_CMDRSP2(x) (UNION_READ_REG_FS(HW_SDHC_CMDRSP2_ADDR(x), hw_sdhc_cmdrsp2))
 /*@}*/
 
 /*******************************************************************************
@@ -988,7 +988,7 @@ typedef union _hw_sdhc_cmdrsp3
 #define BS_SDHC_CMDRSP3_CMDRSP3 (32U)      /*!< Bit field size in bits for SDHC_CMDRSP3_CMDRSP3. */
 
 /*! @brief Read current value of the SDHC_CMDRSP3_CMDRSP3 field. */
-#define BR_SDHC_CMDRSP3_CMDRSP3(x) (ADDRESS_READ32(HW_SDHC_CMDRSP3_ADDR(x)))
+#define BR_SDHC_CMDRSP3_CMDRSP3(x) (UNION_READ_REG_FS(HW_SDHC_CMDRSP3_ADDR(x), hw_sdhc_cmdrsp3))
 /*@}*/
 
 /*******************************************************************************
@@ -1043,13 +1043,13 @@ typedef union _hw_sdhc_datport
 #define BS_SDHC_DATPORT_DATCONT (32U)      /*!< Bit field size in bits for SDHC_DATPORT_DATCONT. */
 
 /*! @brief Read current value of the SDHC_DATPORT_DATCONT field. */
-#define BR_SDHC_DATPORT_DATCONT(x) (ADDRESS_READ32(HW_SDHC_DATPORT_ADDR(x)))
+#define BR_SDHC_DATPORT_DATCONT(x) (UNION_READ_REG_FS(HW_SDHC_DATPORT_ADDR(x), hw_sdhc_datport))
 
 /*! @brief Format value for bitfield SDHC_DATPORT_DATCONT. */
 #define BF_SDHC_DATPORT_DATCONT(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_DATPORT_DATCONT) & BM_SDHC_DATPORT_DATCONT)
 
 /*! @brief Set the DATCONT field to a new value. */
-#define BW_SDHC_DATPORT_DATCONT(x, v) (ADDRESS_WRITE32(HW_SDHC_DATPORT_ADDR(x), v))
+#define BW_SDHC_DATPORT_DATCONT(x, v) (UNION_WRITE_REG_FS(HW_SDHC_DATPORT_ADDR(x), hw_sdhc_datport, v))
 /*@}*/
 
 /*******************************************************************************
@@ -1462,7 +1462,7 @@ typedef union _hw_sdhc_prsstat
 #define BS_SDHC_PRSSTAT_DLSL (8U)          /*!< Bit field size in bits for SDHC_PRSSTAT_DLSL. */
 
 /*! @brief Read current value of the SDHC_PRSSTAT_DLSL field. */
-#define BR_SDHC_PRSSTAT_DLSL(x) (UNION_READ_FS(HW_SDHC_PRSSTAT_ADDR(x), hw_sdhc_prsstat, B.DLSL))
+#define BR_SDHC_PRSSTAT_DLSL(x) (UNION_READ_BIT_FS(HW_SDHC_PRSSTAT_ADDR(x), hw_sdhc_prsstat, B.DLSL))
 /*@}*/
 
 /*******************************************************************************
@@ -1581,13 +1581,13 @@ typedef union _hw_sdhc_proctl
 #define BS_SDHC_PROCTL_DTW   (2U)          /*!< Bit field size in bits for SDHC_PROCTL_DTW. */
 
 /*! @brief Read current value of the SDHC_PROCTL_DTW field. */
-#define BR_SDHC_PROCTL_DTW(x) (UNION_READ_FS(HW_SDHC_PROCTL_ADDR(x), hw_sdhc_proctl, B.DTW))
+#define BR_SDHC_PROCTL_DTW(x) (UNION_READ_BIT_FS(HW_SDHC_PROCTL_ADDR(x), hw_sdhc_proctl, B.DTW))
 
 /*! @brief Format value for bitfield SDHC_PROCTL_DTW. */
 #define BF_SDHC_PROCTL_DTW(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_PROCTL_DTW) & BM_SDHC_PROCTL_DTW)
 
 /*! @brief Set the DTW field to a new value. */
-#define BW_SDHC_PROCTL_DTW(x, v) (ADDRESS_WRITE32(HW_SDHC_PROCTL_ADDR(x), (HW_SDHC_PROCTL_RD(x) & ~BM_SDHC_PROCTL_DTW) | BF_SDHC_PROCTL_DTW(v)))
+#define BW_SDHC_PROCTL_DTW(x, v) (UNION_WRITE_REG_FS(HW_SDHC_PROCTL_ADDR(x), hw_sdhc_proctl, (HW_SDHC_PROCTL_RD(x) & ~BM_SDHC_PROCTL_DTW) | BF_SDHC_PROCTL_DTW(v)))
 /*@}*/
 
 /*!
@@ -1635,13 +1635,13 @@ typedef union _hw_sdhc_proctl
 #define BS_SDHC_PROCTL_EMODE (2U)          /*!< Bit field size in bits for SDHC_PROCTL_EMODE. */
 
 /*! @brief Read current value of the SDHC_PROCTL_EMODE field. */
-#define BR_SDHC_PROCTL_EMODE(x) (UNION_READ_FS(HW_SDHC_PROCTL_ADDR(x), hw_sdhc_proctl, B.EMODE))
+#define BR_SDHC_PROCTL_EMODE(x) (UNION_READ_BIT_FS(HW_SDHC_PROCTL_ADDR(x), hw_sdhc_proctl, B.EMODE))
 
 /*! @brief Format value for bitfield SDHC_PROCTL_EMODE. */
 #define BF_SDHC_PROCTL_EMODE(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_PROCTL_EMODE) & BM_SDHC_PROCTL_EMODE)
 
 /*! @brief Set the EMODE field to a new value. */
-#define BW_SDHC_PROCTL_EMODE(x, v) (ADDRESS_WRITE32(HW_SDHC_PROCTL_ADDR(x), (HW_SDHC_PROCTL_RD(x) & ~BM_SDHC_PROCTL_EMODE) | BF_SDHC_PROCTL_EMODE(v)))
+#define BW_SDHC_PROCTL_EMODE(x, v) (UNION_WRITE_REG_FS(HW_SDHC_PROCTL_ADDR(x), hw_sdhc_proctl, (HW_SDHC_PROCTL_RD(x) & ~BM_SDHC_PROCTL_EMODE) | BF_SDHC_PROCTL_EMODE(v)))
 /*@}*/
 
 /*!
@@ -1710,13 +1710,13 @@ typedef union _hw_sdhc_proctl
 #define BS_SDHC_PROCTL_DMAS  (2U)          /*!< Bit field size in bits for SDHC_PROCTL_DMAS. */
 
 /*! @brief Read current value of the SDHC_PROCTL_DMAS field. */
-#define BR_SDHC_PROCTL_DMAS(x) (UNION_READ_FS(HW_SDHC_PROCTL_ADDR(x), hw_sdhc_proctl, B.DMAS))
+#define BR_SDHC_PROCTL_DMAS(x) (UNION_READ_BIT_FS(HW_SDHC_PROCTL_ADDR(x), hw_sdhc_proctl, B.DMAS))
 
 /*! @brief Format value for bitfield SDHC_PROCTL_DMAS. */
 #define BF_SDHC_PROCTL_DMAS(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_PROCTL_DMAS) & BM_SDHC_PROCTL_DMAS)
 
 /*! @brief Set the DMAS field to a new value. */
-#define BW_SDHC_PROCTL_DMAS(x, v) (ADDRESS_WRITE32(HW_SDHC_PROCTL_ADDR(x), (HW_SDHC_PROCTL_RD(x) & ~BM_SDHC_PROCTL_DMAS) | BF_SDHC_PROCTL_DMAS(v)))
+#define BW_SDHC_PROCTL_DMAS(x, v) (UNION_WRITE_REG_FS(HW_SDHC_PROCTL_ADDR(x), hw_sdhc_proctl, (HW_SDHC_PROCTL_RD(x) & ~BM_SDHC_PROCTL_DMAS) | BF_SDHC_PROCTL_DMAS(v)))
 /*@}*/
 
 /*!
@@ -2118,13 +2118,13 @@ typedef union _hw_sdhc_sysctl
 #define BS_SDHC_SYSCTL_DVS   (4U)          /*!< Bit field size in bits for SDHC_SYSCTL_DVS. */
 
 /*! @brief Read current value of the SDHC_SYSCTL_DVS field. */
-#define BR_SDHC_SYSCTL_DVS(x) (UNION_READ_FS(HW_SDHC_SYSCTL_ADDR(x), hw_sdhc_sysctl, B.DVS))
+#define BR_SDHC_SYSCTL_DVS(x) (UNION_READ_BIT_FS(HW_SDHC_SYSCTL_ADDR(x), hw_sdhc_sysctl, B.DVS))
 
 /*! @brief Format value for bitfield SDHC_SYSCTL_DVS. */
 #define BF_SDHC_SYSCTL_DVS(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_SYSCTL_DVS) & BM_SDHC_SYSCTL_DVS)
 
 /*! @brief Set the DVS field to a new value. */
-#define BW_SDHC_SYSCTL_DVS(x, v) (ADDRESS_WRITE32(HW_SDHC_SYSCTL_ADDR(x), (HW_SDHC_SYSCTL_RD(x) & ~BM_SDHC_SYSCTL_DVS) | BF_SDHC_SYSCTL_DVS(v)))
+#define BW_SDHC_SYSCTL_DVS(x, v) (UNION_WRITE_REG_FS(HW_SDHC_SYSCTL_ADDR(x), hw_sdhc_sysctl, (HW_SDHC_SYSCTL_RD(x) & ~BM_SDHC_SYSCTL_DVS) | BF_SDHC_SYSCTL_DVS(v)))
 /*@}*/
 
 /*!
@@ -2164,13 +2164,13 @@ typedef union _hw_sdhc_sysctl
 #define BS_SDHC_SYSCTL_SDCLKFS (8U)        /*!< Bit field size in bits for SDHC_SYSCTL_SDCLKFS. */
 
 /*! @brief Read current value of the SDHC_SYSCTL_SDCLKFS field. */
-#define BR_SDHC_SYSCTL_SDCLKFS(x) (UNION_READ_FS(HW_SDHC_SYSCTL_ADDR(x), hw_sdhc_sysctl, B.SDCLKFS))
+#define BR_SDHC_SYSCTL_SDCLKFS(x) (UNION_READ_BIT_FS(HW_SDHC_SYSCTL_ADDR(x), hw_sdhc_sysctl, B.SDCLKFS))
 
 /*! @brief Format value for bitfield SDHC_SYSCTL_SDCLKFS. */
 #define BF_SDHC_SYSCTL_SDCLKFS(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_SYSCTL_SDCLKFS) & BM_SDHC_SYSCTL_SDCLKFS)
 
 /*! @brief Set the SDCLKFS field to a new value. */
-#define BW_SDHC_SYSCTL_SDCLKFS(x, v) (ADDRESS_WRITE32(HW_SDHC_SYSCTL_ADDR(x), (HW_SDHC_SYSCTL_RD(x) & ~BM_SDHC_SYSCTL_SDCLKFS) | BF_SDHC_SYSCTL_SDCLKFS(v)))
+#define BW_SDHC_SYSCTL_SDCLKFS(x, v) (UNION_WRITE_REG_FS(HW_SDHC_SYSCTL_ADDR(x), hw_sdhc_sysctl, (HW_SDHC_SYSCTL_RD(x) & ~BM_SDHC_SYSCTL_SDCLKFS) | BF_SDHC_SYSCTL_SDCLKFS(v)))
 /*@}*/
 
 /*!
@@ -2194,13 +2194,13 @@ typedef union _hw_sdhc_sysctl
 #define BS_SDHC_SYSCTL_DTOCV (4U)          /*!< Bit field size in bits for SDHC_SYSCTL_DTOCV. */
 
 /*! @brief Read current value of the SDHC_SYSCTL_DTOCV field. */
-#define BR_SDHC_SYSCTL_DTOCV(x) (UNION_READ_FS(HW_SDHC_SYSCTL_ADDR(x), hw_sdhc_sysctl, B.DTOCV))
+#define BR_SDHC_SYSCTL_DTOCV(x) (UNION_READ_BIT_FS(HW_SDHC_SYSCTL_ADDR(x), hw_sdhc_sysctl, B.DTOCV))
 
 /*! @brief Format value for bitfield SDHC_SYSCTL_DTOCV. */
 #define BF_SDHC_SYSCTL_DTOCV(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_SYSCTL_DTOCV) & BM_SDHC_SYSCTL_DTOCV)
 
 /*! @brief Set the DTOCV field to a new value. */
-#define BW_SDHC_SYSCTL_DTOCV(x, v) (ADDRESS_WRITE32(HW_SDHC_SYSCTL_ADDR(x), (HW_SDHC_SYSCTL_RD(x) & ~BM_SDHC_SYSCTL_DTOCV) | BF_SDHC_SYSCTL_DTOCV(v)))
+#define BW_SDHC_SYSCTL_DTOCV(x, v) (UNION_WRITE_REG_FS(HW_SDHC_SYSCTL_ADDR(x), hw_sdhc_sysctl, (HW_SDHC_SYSCTL_RD(x) & ~BM_SDHC_SYSCTL_DTOCV) | BF_SDHC_SYSCTL_DTOCV(v)))
 /*@}*/
 
 /*!
@@ -4067,7 +4067,7 @@ typedef union _hw_sdhc_htcapblt
 #define BS_SDHC_HTCAPBLT_MBL (3U)          /*!< Bit field size in bits for SDHC_HTCAPBLT_MBL. */
 
 /*! @brief Read current value of the SDHC_HTCAPBLT_MBL field. */
-#define BR_SDHC_HTCAPBLT_MBL(x) (UNION_READ_FS(HW_SDHC_HTCAPBLT_ADDR(x), hw_sdhc_htcapblt, B.MBL))
+#define BR_SDHC_HTCAPBLT_MBL(x) (UNION_READ_BIT_FS(HW_SDHC_HTCAPBLT_ADDR(x), hw_sdhc_htcapblt, B.MBL))
 /*@}*/
 
 /*!
@@ -4221,13 +4221,13 @@ typedef union _hw_sdhc_wml
 #define BS_SDHC_WML_RDWML    (8U)          /*!< Bit field size in bits for SDHC_WML_RDWML. */
 
 /*! @brief Read current value of the SDHC_WML_RDWML field. */
-#define BR_SDHC_WML_RDWML(x) (UNION_READ_FS(HW_SDHC_WML_ADDR(x), hw_sdhc_wml, B.RDWML))
+#define BR_SDHC_WML_RDWML(x) (UNION_READ_BIT_FS(HW_SDHC_WML_ADDR(x), hw_sdhc_wml, B.RDWML))
 
 /*! @brief Format value for bitfield SDHC_WML_RDWML. */
 #define BF_SDHC_WML_RDWML(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_WML_RDWML) & BM_SDHC_WML_RDWML)
 
 /*! @brief Set the RDWML field to a new value. */
-#define BW_SDHC_WML_RDWML(x, v) (ADDRESS_WRITE32(HW_SDHC_WML_ADDR(x), (HW_SDHC_WML_RD(x) & ~BM_SDHC_WML_RDWML) | BF_SDHC_WML_RDWML(v)))
+#define BW_SDHC_WML_RDWML(x, v) (UNION_WRITE_REG_FS(HW_SDHC_WML_ADDR(x), hw_sdhc_wml, (HW_SDHC_WML_RD(x) & ~BM_SDHC_WML_RDWML) | BF_SDHC_WML_RDWML(v)))
 /*@}*/
 
 /*!
@@ -4243,13 +4243,13 @@ typedef union _hw_sdhc_wml
 #define BS_SDHC_WML_WRWML    (8U)          /*!< Bit field size in bits for SDHC_WML_WRWML. */
 
 /*! @brief Read current value of the SDHC_WML_WRWML field. */
-#define BR_SDHC_WML_WRWML(x) (UNION_READ_FS(HW_SDHC_WML_ADDR(x), hw_sdhc_wml, B.WRWML))
+#define BR_SDHC_WML_WRWML(x) (UNION_READ_BIT_FS(HW_SDHC_WML_ADDR(x), hw_sdhc_wml, B.WRWML))
 
 /*! @brief Format value for bitfield SDHC_WML_WRWML. */
 #define BF_SDHC_WML_WRWML(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_WML_WRWML) & BM_SDHC_WML_WRWML)
 
 /*! @brief Set the WRWML field to a new value. */
-#define BW_SDHC_WML_WRWML(x, v) (ADDRESS_WRITE32(HW_SDHC_WML_ADDR(x), (HW_SDHC_WML_RD(x) & ~BM_SDHC_WML_WRWML) | BF_SDHC_WML_WRWML(v)))
+#define BW_SDHC_WML_WRWML(x, v) (UNION_WRITE_REG_FS(HW_SDHC_WML_ADDR(x), hw_sdhc_wml, (HW_SDHC_WML_RD(x) & ~BM_SDHC_WML_WRWML) | BF_SDHC_WML_WRWML(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -4666,7 +4666,7 @@ typedef union _hw_sdhc_admaes
 #define BS_SDHC_ADMAES_ADMAES (2U)         /*!< Bit field size in bits for SDHC_ADMAES_ADMAES. */
 
 /*! @brief Read current value of the SDHC_ADMAES_ADMAES field. */
-#define BR_SDHC_ADMAES_ADMAES(x) (UNION_READ_FS(HW_SDHC_ADMAES_ADDR(x), hw_sdhc_admaes, B.ADMAES))
+#define BR_SDHC_ADMAES_ADMAES(x) (UNION_READ_BIT_FS(HW_SDHC_ADMAES_ADDR(x), hw_sdhc_admaes, B.ADMAES))
 /*@}*/
 
 /*!
@@ -4769,13 +4769,13 @@ typedef union _hw_sdhc_adsaddr
 #define BS_SDHC_ADSADDR_ADSADDR (30U)      /*!< Bit field size in bits for SDHC_ADSADDR_ADSADDR. */
 
 /*! @brief Read current value of the SDHC_ADSADDR_ADSADDR field. */
-#define BR_SDHC_ADSADDR_ADSADDR(x) (UNION_READ_FS(HW_SDHC_ADSADDR_ADDR(x), hw_sdhc_adsaddr, B.ADSADDR))
+#define BR_SDHC_ADSADDR_ADSADDR(x) (UNION_READ_BIT_FS(HW_SDHC_ADSADDR_ADDR(x), hw_sdhc_adsaddr, B.ADSADDR))
 
 /*! @brief Format value for bitfield SDHC_ADSADDR_ADSADDR. */
 #define BF_SDHC_ADSADDR_ADSADDR(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_ADSADDR_ADSADDR) & BM_SDHC_ADSADDR_ADSADDR)
 
 /*! @brief Set the ADSADDR field to a new value. */
-#define BW_SDHC_ADSADDR_ADSADDR(x, v) (ADDRESS_WRITE32(HW_SDHC_ADSADDR_ADDR(x), (HW_SDHC_ADSADDR_RD(x) & ~BM_SDHC_ADSADDR_ADSADDR) | BF_SDHC_ADSADDR_ADSADDR(v)))
+#define BW_SDHC_ADSADDR_ADSADDR(x, v) (UNION_WRITE_REG_FS(HW_SDHC_ADSADDR_ADDR(x), hw_sdhc_adsaddr, (HW_SDHC_ADSADDR_RD(x) & ~BM_SDHC_ADSADDR_ADSADDR) | BF_SDHC_ADSADDR_ADSADDR(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -4889,7 +4889,7 @@ typedef union _hw_sdhc_vendor
 #define BS_SDHC_VENDOR_INTSTVAL (8U)       /*!< Bit field size in bits for SDHC_VENDOR_INTSTVAL. */
 
 /*! @brief Read current value of the SDHC_VENDOR_INTSTVAL field. */
-#define BR_SDHC_VENDOR_INTSTVAL(x) (UNION_READ_FS(HW_SDHC_VENDOR_ADDR(x), hw_sdhc_vendor, B.INTSTVAL))
+#define BR_SDHC_VENDOR_INTSTVAL(x) (UNION_READ_BIT_FS(HW_SDHC_VENDOR_ADDR(x), hw_sdhc_vendor, B.INTSTVAL))
 /*@}*/
 
 /*******************************************************************************
@@ -4957,13 +4957,13 @@ typedef union _hw_sdhc_mmcboot
 #define BS_SDHC_MMCBOOT_DTOCVACK (4U)      /*!< Bit field size in bits for SDHC_MMCBOOT_DTOCVACK. */
 
 /*! @brief Read current value of the SDHC_MMCBOOT_DTOCVACK field. */
-#define BR_SDHC_MMCBOOT_DTOCVACK(x) (UNION_READ_FS(HW_SDHC_MMCBOOT_ADDR(x), hw_sdhc_mmcboot, B.DTOCVACK))
+#define BR_SDHC_MMCBOOT_DTOCVACK(x) (UNION_READ_BIT_FS(HW_SDHC_MMCBOOT_ADDR(x), hw_sdhc_mmcboot, B.DTOCVACK))
 
 /*! @brief Format value for bitfield SDHC_MMCBOOT_DTOCVACK. */
 #define BF_SDHC_MMCBOOT_DTOCVACK(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_MMCBOOT_DTOCVACK) & BM_SDHC_MMCBOOT_DTOCVACK)
 
 /*! @brief Set the DTOCVACK field to a new value. */
-#define BW_SDHC_MMCBOOT_DTOCVACK(x, v) (ADDRESS_WRITE32(HW_SDHC_MMCBOOT_ADDR(x), (HW_SDHC_MMCBOOT_RD(x) & ~BM_SDHC_MMCBOOT_DTOCVACK) | BF_SDHC_MMCBOOT_DTOCVACK(v)))
+#define BW_SDHC_MMCBOOT_DTOCVACK(x, v) (UNION_WRITE_REG_FS(HW_SDHC_MMCBOOT_ADDR(x), hw_sdhc_mmcboot, (HW_SDHC_MMCBOOT_RD(x) & ~BM_SDHC_MMCBOOT_DTOCVACK) | BF_SDHC_MMCBOOT_DTOCVACK(v)))
 /*@}*/
 
 /*!
@@ -5066,13 +5066,13 @@ typedef union _hw_sdhc_mmcboot
 #define BS_SDHC_MMCBOOT_BOOTBLKCNT (16U)   /*!< Bit field size in bits for SDHC_MMCBOOT_BOOTBLKCNT. */
 
 /*! @brief Read current value of the SDHC_MMCBOOT_BOOTBLKCNT field. */
-#define BR_SDHC_MMCBOOT_BOOTBLKCNT(x) (UNION_READ_FS(HW_SDHC_MMCBOOT_ADDR(x), hw_sdhc_mmcboot, B.BOOTBLKCNT))
+#define BR_SDHC_MMCBOOT_BOOTBLKCNT(x) (UNION_READ_BIT_FS(HW_SDHC_MMCBOOT_ADDR(x), hw_sdhc_mmcboot, B.BOOTBLKCNT))
 
 /*! @brief Format value for bitfield SDHC_MMCBOOT_BOOTBLKCNT. */
 #define BF_SDHC_MMCBOOT_BOOTBLKCNT(v) ((uint32_t)((uint32_t)(v) << BP_SDHC_MMCBOOT_BOOTBLKCNT) & BM_SDHC_MMCBOOT_BOOTBLKCNT)
 
 /*! @brief Set the BOOTBLKCNT field to a new value. */
-#define BW_SDHC_MMCBOOT_BOOTBLKCNT(x, v) (ADDRESS_WRITE32(HW_SDHC_MMCBOOT_ADDR(x), (HW_SDHC_MMCBOOT_RD(x) & ~BM_SDHC_MMCBOOT_BOOTBLKCNT) | BF_SDHC_MMCBOOT_BOOTBLKCNT(v)))
+#define BW_SDHC_MMCBOOT_BOOTBLKCNT(x, v) (UNION_WRITE_REG_FS(HW_SDHC_MMCBOOT_ADDR(x), hw_sdhc_mmcboot, (HW_SDHC_MMCBOOT_RD(x) & ~BM_SDHC_MMCBOOT_BOOTBLKCNT) | BF_SDHC_MMCBOOT_BOOTBLKCNT(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -5127,7 +5127,7 @@ typedef union _hw_sdhc_hostver
 #define BS_SDHC_HOSTVER_SVN  (8U)          /*!< Bit field size in bits for SDHC_HOSTVER_SVN. */
 
 /*! @brief Read current value of the SDHC_HOSTVER_SVN field. */
-#define BR_SDHC_HOSTVER_SVN(x) (UNION_READ_FS(HW_SDHC_HOSTVER_ADDR(x), hw_sdhc_hostver, B.SVN))
+#define BR_SDHC_HOSTVER_SVN(x) (UNION_READ_BIT_FS(HW_SDHC_HOSTVER_ADDR(x), hw_sdhc_hostver, B.SVN))
 /*@}*/
 
 /*!
@@ -5148,7 +5148,7 @@ typedef union _hw_sdhc_hostver
 #define BS_SDHC_HOSTVER_VVN  (8U)          /*!< Bit field size in bits for SDHC_HOSTVER_VVN. */
 
 /*! @brief Read current value of the SDHC_HOSTVER_VVN field. */
-#define BR_SDHC_HOSTVER_VVN(x) (UNION_READ_FS(HW_SDHC_HOSTVER_ADDR(x), hw_sdhc_hostver, B.VVN))
+#define BR_SDHC_HOSTVER_VVN(x) (UNION_READ_BIT_FS(HW_SDHC_HOSTVER_ADDR(x), hw_sdhc_hostver, B.VVN))
 /*@}*/
 
 /*******************************************************************************

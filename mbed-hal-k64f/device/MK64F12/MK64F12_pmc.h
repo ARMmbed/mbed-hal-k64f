@@ -168,13 +168,13 @@ typedef union _hw_pmc_lvdsc1
 #define BS_PMC_LVDSC1_LVDV   (2U)          /*!< Bit field size in bits for PMC_LVDSC1_LVDV. */
 
 /*! @brief Read current value of the PMC_LVDSC1_LVDV field. */
-#define BR_PMC_LVDSC1_LVDV(x) (UNION_READ_FS(HW_PMC_LVDSC1_ADDR(x), hw_pmc_lvdsc1, B.LVDV))
+#define BR_PMC_LVDSC1_LVDV(x) (UNION_READ_BIT_FS(HW_PMC_LVDSC1_ADDR(x), hw_pmc_lvdsc1, B.LVDV))
 
 /*! @brief Format value for bitfield PMC_LVDSC1_LVDV. */
 #define BF_PMC_LVDSC1_LVDV(v) ((uint8_t)((uint8_t)(v) << BP_PMC_LVDSC1_LVDV) & BM_PMC_LVDSC1_LVDV)
 
 /*! @brief Set the LVDV field to a new value. */
-#define BW_PMC_LVDSC1_LVDV(x, v) (ADDRESS_WRITE32(HW_PMC_LVDSC1_ADDR(x), (HW_PMC_LVDSC1_RD(x) & ~BM_PMC_LVDSC1_LVDV) | BF_PMC_LVDSC1_LVDV(v)))
+#define BW_PMC_LVDSC1_LVDV(x, v) (UNION_WRITE_REG_FS(HW_PMC_LVDSC1_ADDR(x), hw_pmc_lvdsc1, (HW_PMC_LVDSC1_RD(x) & ~BM_PMC_LVDSC1_LVDV) | BF_PMC_LVDSC1_LVDV(v)))
 /*@}*/
 
 /*!
@@ -328,13 +328,13 @@ typedef union _hw_pmc_lvdsc2
 #define BS_PMC_LVDSC2_LVWV   (2U)          /*!< Bit field size in bits for PMC_LVDSC2_LVWV. */
 
 /*! @brief Read current value of the PMC_LVDSC2_LVWV field. */
-#define BR_PMC_LVDSC2_LVWV(x) (UNION_READ_FS(HW_PMC_LVDSC2_ADDR(x), hw_pmc_lvdsc2, B.LVWV))
+#define BR_PMC_LVDSC2_LVWV(x) (UNION_READ_BIT_FS(HW_PMC_LVDSC2_ADDR(x), hw_pmc_lvdsc2, B.LVWV))
 
 /*! @brief Format value for bitfield PMC_LVDSC2_LVWV. */
 #define BF_PMC_LVDSC2_LVWV(v) ((uint8_t)((uint8_t)(v) << BP_PMC_LVDSC2_LVWV) & BM_PMC_LVDSC2_LVWV)
 
 /*! @brief Set the LVWV field to a new value. */
-#define BW_PMC_LVDSC2_LVWV(x, v) (ADDRESS_WRITE32(HW_PMC_LVDSC2_ADDR(x), (HW_PMC_LVDSC2_RD(x) & ~BM_PMC_LVDSC2_LVWV) | BF_PMC_LVDSC2_LVWV(v)))
+#define BW_PMC_LVDSC2_LVWV(x, v) (UNION_WRITE_REG_FS(HW_PMC_LVDSC2_ADDR(x), hw_pmc_lvdsc2, (HW_PMC_LVDSC2_RD(x) & ~BM_PMC_LVDSC2_LVWV) | BF_PMC_LVDSC2_LVWV(v)))
 /*@}*/
 
 /*!

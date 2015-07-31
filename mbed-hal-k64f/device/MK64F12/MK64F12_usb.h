@@ -172,7 +172,7 @@ typedef union _hw_usb_perid
 #define BS_USB_PERID_ID      (6U)          /*!< Bit field size in bits for USB_PERID_ID. */
 
 /*! @brief Read current value of the USB_PERID_ID field. */
-#define BR_USB_PERID_ID(x)   (UNION_READ_FS(HW_USB_PERID_ADDR(x), hw_usb_perid, B.ID))
+#define BR_USB_PERID_ID(x)   (UNION_READ_BIT_FS(HW_USB_PERID_ADDR(x), hw_usb_perid, B.ID))
 /*@}*/
 
 /*******************************************************************************
@@ -222,7 +222,7 @@ typedef union _hw_usb_idcomp
 #define BS_USB_IDCOMP_NID    (6U)          /*!< Bit field size in bits for USB_IDCOMP_NID. */
 
 /*! @brief Read current value of the USB_IDCOMP_NID field. */
-#define BR_USB_IDCOMP_NID(x) (UNION_READ_FS(HW_USB_IDCOMP_ADDR(x), hw_usb_idcomp, B.NID))
+#define BR_USB_IDCOMP_NID(x) (UNION_READ_BIT_FS(HW_USB_IDCOMP_ADDR(x), hw_usb_idcomp, B.NID))
 /*@}*/
 
 /*******************************************************************************
@@ -270,7 +270,7 @@ typedef union _hw_usb_rev
 #define BS_USB_REV_REV       (8U)          /*!< Bit field size in bits for USB_REV_REV. */
 
 /*! @brief Read current value of the USB_REV_REV field. */
-#define BR_USB_REV_REV(x)    (ADDRESS_READ32(HW_USB_REV_ADDR(x)))
+#define BR_USB_REV_REV(x)    (UNION_READ_REG_FS(HW_USB_REV_ADDR(x), hw_usb_rev))
 /*@}*/
 
 /*******************************************************************************
@@ -333,7 +333,7 @@ typedef union _hw_usb_addinfo
 #define BS_USB_ADDINFO_IRQNUM (5U)         /*!< Bit field size in bits for USB_ADDINFO_IRQNUM. */
 
 /*! @brief Read current value of the USB_ADDINFO_IRQNUM field. */
-#define BR_USB_ADDINFO_IRQNUM(x) (UNION_READ_FS(HW_USB_ADDINFO_ADDR(x), hw_usb_addinfo, B.IRQNUM))
+#define BR_USB_ADDINFO_IRQNUM(x) (UNION_READ_BIT_FS(HW_USB_ADDINFO_ADDR(x), hw_usb_addinfo, B.IRQNUM))
 /*@}*/
 
 /*******************************************************************************
@@ -1979,7 +1979,7 @@ typedef union _hw_usb_stat
 #define BS_USB_STAT_ENDP     (4U)          /*!< Bit field size in bits for USB_STAT_ENDP. */
 
 /*! @brief Read current value of the USB_STAT_ENDP field. */
-#define BR_USB_STAT_ENDP(x)  (UNION_READ_FS(HW_USB_STAT_ADDR(x), hw_usb_stat, B.ENDP))
+#define BR_USB_STAT_ENDP(x)  (UNION_READ_BIT_FS(HW_USB_STAT_ADDR(x), hw_usb_stat, B.ENDP))
 /*@}*/
 
 /*******************************************************************************
@@ -2270,13 +2270,13 @@ typedef union _hw_usb_addr
 #define BS_USB_ADDR_ADDR     (7U)          /*!< Bit field size in bits for USB_ADDR_ADDR. */
 
 /*! @brief Read current value of the USB_ADDR_ADDR field. */
-#define BR_USB_ADDR_ADDR(x)  (UNION_READ_FS(HW_USB_ADDR_ADDR(x), hw_usb_addr, B.ADDR))
+#define BR_USB_ADDR_ADDR(x)  (UNION_READ_BIT_FS(HW_USB_ADDR_ADDR(x), hw_usb_addr, B.ADDR))
 
 /*! @brief Format value for bitfield USB_ADDR_ADDR. */
 #define BF_USB_ADDR_ADDR(v)  ((uint8_t)((uint8_t)(v) << BP_USB_ADDR_ADDR) & BM_USB_ADDR_ADDR)
 
 /*! @brief Set the ADDR field to a new value. */
-#define BW_USB_ADDR_ADDR(x, v) (ADDRESS_WRITE32(HW_USB_ADDR_ADDR(x), (HW_USB_ADDR_RD(x) & ~BM_USB_ADDR_ADDR) | BF_USB_ADDR_ADDR(v)))
+#define BW_USB_ADDR_ADDR(x, v) (UNION_WRITE_REG_FS(HW_USB_ADDR_ADDR(x), hw_usb_addr, (HW_USB_ADDR_RD(x) & ~BM_USB_ADDR_ADDR) | BF_USB_ADDR_ADDR(v)))
 /*@}*/
 
 /*!
@@ -2354,13 +2354,13 @@ typedef union _hw_usb_bdtpage1
 #define BS_USB_BDTPAGE1_BDTBA (7U)         /*!< Bit field size in bits for USB_BDTPAGE1_BDTBA. */
 
 /*! @brief Read current value of the USB_BDTPAGE1_BDTBA field. */
-#define BR_USB_BDTPAGE1_BDTBA(x) (UNION_READ_FS(HW_USB_BDTPAGE1_ADDR(x), hw_usb_bdtpage1, B.BDTBA))
+#define BR_USB_BDTPAGE1_BDTBA(x) (UNION_READ_BIT_FS(HW_USB_BDTPAGE1_ADDR(x), hw_usb_bdtpage1, B.BDTBA))
 
 /*! @brief Format value for bitfield USB_BDTPAGE1_BDTBA. */
 #define BF_USB_BDTPAGE1_BDTBA(v) ((uint8_t)((uint8_t)(v) << BP_USB_BDTPAGE1_BDTBA) & BM_USB_BDTPAGE1_BDTBA)
 
 /*! @brief Set the BDTBA field to a new value. */
-#define BW_USB_BDTPAGE1_BDTBA(x, v) (ADDRESS_WRITE32(HW_USB_BDTPAGE1_ADDR(x), (HW_USB_BDTPAGE1_RD(x) & ~BM_USB_BDTPAGE1_BDTBA) | BF_USB_BDTPAGE1_BDTBA(v)))
+#define BW_USB_BDTPAGE1_BDTBA(x, v) (UNION_WRITE_REG_FS(HW_USB_BDTPAGE1_ADDR(x), hw_usb_bdtpage1, (HW_USB_BDTPAGE1_RD(x) & ~BM_USB_BDTPAGE1_BDTBA) | BF_USB_BDTPAGE1_BDTBA(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -2416,13 +2416,13 @@ typedef union _hw_usb_frmnuml
 #define BS_USB_FRMNUML_FRM   (8U)          /*!< Bit field size in bits for USB_FRMNUML_FRM. */
 
 /*! @brief Read current value of the USB_FRMNUML_FRM field. */
-#define BR_USB_FRMNUML_FRM(x) (ADDRESS_READ32(HW_USB_FRMNUML_ADDR(x)))
+#define BR_USB_FRMNUML_FRM(x) (UNION_READ_REG_FS(HW_USB_FRMNUML_ADDR(x), hw_usb_frmnuml))
 
 /*! @brief Format value for bitfield USB_FRMNUML_FRM. */
 #define BF_USB_FRMNUML_FRM(v) ((uint8_t)((uint8_t)(v) << BP_USB_FRMNUML_FRM) & BM_USB_FRMNUML_FRM)
 
 /*! @brief Set the FRM field to a new value. */
-#define BW_USB_FRMNUML_FRM(x, v) (ADDRESS_WRITE32(HW_USB_FRMNUML_ADDR(x), v))
+#define BW_USB_FRMNUML_FRM(x, v) (UNION_WRITE_REG_FS(HW_USB_FRMNUML_ADDR(x), hw_usb_frmnuml, v))
 /*@}*/
 
 /*******************************************************************************
@@ -2479,13 +2479,13 @@ typedef union _hw_usb_frmnumh
 #define BS_USB_FRMNUMH_FRM   (3U)          /*!< Bit field size in bits for USB_FRMNUMH_FRM. */
 
 /*! @brief Read current value of the USB_FRMNUMH_FRM field. */
-#define BR_USB_FRMNUMH_FRM(x) (UNION_READ_FS(HW_USB_FRMNUMH_ADDR(x), hw_usb_frmnumh, B.FRM))
+#define BR_USB_FRMNUMH_FRM(x) (UNION_READ_BIT_FS(HW_USB_FRMNUMH_ADDR(x), hw_usb_frmnumh, B.FRM))
 
 /*! @brief Format value for bitfield USB_FRMNUMH_FRM. */
 #define BF_USB_FRMNUMH_FRM(v) ((uint8_t)((uint8_t)(v) << BP_USB_FRMNUMH_FRM) & BM_USB_FRMNUMH_FRM)
 
 /*! @brief Set the FRM field to a new value. */
-#define BW_USB_FRMNUMH_FRM(x, v) (ADDRESS_WRITE32(HW_USB_FRMNUMH_ADDR(x), (HW_USB_FRMNUMH_RD(x) & ~BM_USB_FRMNUMH_FRM) | BF_USB_FRMNUMH_FRM(v)))
+#define BW_USB_FRMNUMH_FRM(x, v) (UNION_WRITE_REG_FS(HW_USB_FRMNUMH_ADDR(x), hw_usb_frmnumh, (HW_USB_FRMNUMH_RD(x) & ~BM_USB_FRMNUMH_FRM) | BF_USB_FRMNUMH_FRM(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -2550,13 +2550,13 @@ typedef union _hw_usb_token
 #define BS_USB_TOKEN_TOKENENDPT (4U)       /*!< Bit field size in bits for USB_TOKEN_TOKENENDPT. */
 
 /*! @brief Read current value of the USB_TOKEN_TOKENENDPT field. */
-#define BR_USB_TOKEN_TOKENENDPT(x) (UNION_READ_FS(HW_USB_TOKEN_ADDR(x), hw_usb_token, B.TOKENENDPT))
+#define BR_USB_TOKEN_TOKENENDPT(x) (UNION_READ_BIT_FS(HW_USB_TOKEN_ADDR(x), hw_usb_token, B.TOKENENDPT))
 
 /*! @brief Format value for bitfield USB_TOKEN_TOKENENDPT. */
 #define BF_USB_TOKEN_TOKENENDPT(v) ((uint8_t)((uint8_t)(v) << BP_USB_TOKEN_TOKENENDPT) & BM_USB_TOKEN_TOKENENDPT)
 
 /*! @brief Set the TOKENENDPT field to a new value. */
-#define BW_USB_TOKEN_TOKENENDPT(x, v) (ADDRESS_WRITE32(HW_USB_TOKEN_ADDR(x), (HW_USB_TOKEN_RD(x) & ~BM_USB_TOKEN_TOKENENDPT) | BF_USB_TOKEN_TOKENENDPT(v)))
+#define BW_USB_TOKEN_TOKENENDPT(x, v) (UNION_WRITE_REG_FS(HW_USB_TOKEN_ADDR(x), hw_usb_token, (HW_USB_TOKEN_RD(x) & ~BM_USB_TOKEN_TOKENENDPT) | BF_USB_TOKEN_TOKENENDPT(v)))
 /*@}*/
 
 /*!
@@ -2575,13 +2575,13 @@ typedef union _hw_usb_token
 #define BS_USB_TOKEN_TOKENPID (4U)         /*!< Bit field size in bits for USB_TOKEN_TOKENPID. */
 
 /*! @brief Read current value of the USB_TOKEN_TOKENPID field. */
-#define BR_USB_TOKEN_TOKENPID(x) (UNION_READ_FS(HW_USB_TOKEN_ADDR(x), hw_usb_token, B.TOKENPID))
+#define BR_USB_TOKEN_TOKENPID(x) (UNION_READ_BIT_FS(HW_USB_TOKEN_ADDR(x), hw_usb_token, B.TOKENPID))
 
 /*! @brief Format value for bitfield USB_TOKEN_TOKENPID. */
 #define BF_USB_TOKEN_TOKENPID(v) ((uint8_t)((uint8_t)(v) << BP_USB_TOKEN_TOKENPID) & BM_USB_TOKEN_TOKENPID)
 
 /*! @brief Set the TOKENPID field to a new value. */
-#define BW_USB_TOKEN_TOKENPID(x, v) (ADDRESS_WRITE32(HW_USB_TOKEN_ADDR(x), (HW_USB_TOKEN_RD(x) & ~BM_USB_TOKEN_TOKENPID) | BF_USB_TOKEN_TOKENPID(v)))
+#define BW_USB_TOKEN_TOKENPID(x, v) (UNION_WRITE_REG_FS(HW_USB_TOKEN_ADDR(x), hw_usb_token, (HW_USB_TOKEN_RD(x) & ~BM_USB_TOKEN_TOKENPID) | BF_USB_TOKEN_TOKENPID(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -2648,13 +2648,13 @@ typedef union _hw_usb_softhld
 #define BS_USB_SOFTHLD_CNT   (8U)          /*!< Bit field size in bits for USB_SOFTHLD_CNT. */
 
 /*! @brief Read current value of the USB_SOFTHLD_CNT field. */
-#define BR_USB_SOFTHLD_CNT(x) (ADDRESS_READ32(HW_USB_SOFTHLD_ADDR(x)))
+#define BR_USB_SOFTHLD_CNT(x) (UNION_READ_REG_FS(HW_USB_SOFTHLD_ADDR(x), hw_usb_softhld))
 
 /*! @brief Format value for bitfield USB_SOFTHLD_CNT. */
 #define BF_USB_SOFTHLD_CNT(v) ((uint8_t)((uint8_t)(v) << BP_USB_SOFTHLD_CNT) & BM_USB_SOFTHLD_CNT)
 
 /*! @brief Set the CNT field to a new value. */
-#define BW_USB_SOFTHLD_CNT(x, v) (ADDRESS_WRITE32(HW_USB_SOFTHLD_ADDR(x), v))
+#define BW_USB_SOFTHLD_CNT(x, v) (UNION_WRITE_REG_FS(HW_USB_SOFTHLD_ADDR(x), hw_usb_softhld, v))
 /*@}*/
 
 /*******************************************************************************
@@ -2708,13 +2708,13 @@ typedef union _hw_usb_bdtpage2
 #define BS_USB_BDTPAGE2_BDTBA (8U)         /*!< Bit field size in bits for USB_BDTPAGE2_BDTBA. */
 
 /*! @brief Read current value of the USB_BDTPAGE2_BDTBA field. */
-#define BR_USB_BDTPAGE2_BDTBA(x) (ADDRESS_READ32(HW_USB_BDTPAGE2_ADDR(x)))
+#define BR_USB_BDTPAGE2_BDTBA(x) (UNION_READ_REG_FS(HW_USB_BDTPAGE2_ADDR(x), hw_usb_bdtpage2))
 
 /*! @brief Format value for bitfield USB_BDTPAGE2_BDTBA. */
 #define BF_USB_BDTPAGE2_BDTBA(v) ((uint8_t)((uint8_t)(v) << BP_USB_BDTPAGE2_BDTBA) & BM_USB_BDTPAGE2_BDTBA)
 
 /*! @brief Set the BDTBA field to a new value. */
-#define BW_USB_BDTPAGE2_BDTBA(x, v) (ADDRESS_WRITE32(HW_USB_BDTPAGE2_ADDR(x), v))
+#define BW_USB_BDTPAGE2_BDTBA(x, v) (UNION_WRITE_REG_FS(HW_USB_BDTPAGE2_ADDR(x), hw_usb_bdtpage2, v))
 /*@}*/
 
 /*******************************************************************************
@@ -2768,13 +2768,13 @@ typedef union _hw_usb_bdtpage3
 #define BS_USB_BDTPAGE3_BDTBA (8U)         /*!< Bit field size in bits for USB_BDTPAGE3_BDTBA. */
 
 /*! @brief Read current value of the USB_BDTPAGE3_BDTBA field. */
-#define BR_USB_BDTPAGE3_BDTBA(x) (ADDRESS_READ32(HW_USB_BDTPAGE3_ADDR(x)))
+#define BR_USB_BDTPAGE3_BDTBA(x) (UNION_READ_REG_FS(HW_USB_BDTPAGE3_ADDR(x), hw_usb_bdtpage3))
 
 /*! @brief Format value for bitfield USB_BDTPAGE3_BDTBA. */
 #define BF_USB_BDTPAGE3_BDTBA(v) ((uint8_t)((uint8_t)(v) << BP_USB_BDTPAGE3_BDTBA) & BM_USB_BDTPAGE3_BDTBA)
 
 /*! @brief Set the BDTBA field to a new value. */
-#define BW_USB_BDTPAGE3_BDTBA(x, v) (ADDRESS_WRITE32(HW_USB_BDTPAGE3_ADDR(x), v))
+#define BW_USB_BDTPAGE3_BDTBA(x, v) (UNION_WRITE_REG_FS(HW_USB_BDTPAGE3_ADDR(x), hw_usb_bdtpage3, v))
 /*@}*/
 
 /*******************************************************************************
@@ -3443,13 +3443,13 @@ typedef union _hw_usb_usbfrmadjust
 #define BS_USB_USBFRMADJUST_ADJ (8U)       /*!< Bit field size in bits for USB_USBFRMADJUST_ADJ. */
 
 /*! @brief Read current value of the USB_USBFRMADJUST_ADJ field. */
-#define BR_USB_USBFRMADJUST_ADJ(x) (ADDRESS_READ32(HW_USB_USBFRMADJUST_ADDR(x)))
+#define BR_USB_USBFRMADJUST_ADJ(x) (UNION_READ_REG_FS(HW_USB_USBFRMADJUST_ADDR(x), hw_usb_usbfrmadjust))
 
 /*! @brief Format value for bitfield USB_USBFRMADJUST_ADJ. */
 #define BF_USB_USBFRMADJUST_ADJ(v) ((uint8_t)((uint8_t)(v) << BP_USB_USBFRMADJUST_ADJ) & BM_USB_USBFRMADJUST_ADJ)
 
 /*! @brief Set the ADJ field to a new value. */
-#define BW_USB_USBFRMADJUST_ADJ(x, v) (ADDRESS_WRITE32(HW_USB_USBFRMADJUST_ADDR(x), v))
+#define BW_USB_USBFRMADJUST_ADJ(x, v) (UNION_WRITE_REG_FS(HW_USB_USBFRMADJUST_ADDR(x), hw_usb_usbfrmadjust, v))
 /*@}*/
 
 /*******************************************************************************

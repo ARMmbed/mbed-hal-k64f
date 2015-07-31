@@ -156,13 +156,13 @@ typedef union _hw_dmamux_chcfgn
 #define BS_DMAMUX_CHCFGn_SOURCE (6U)       /*!< Bit field size in bits for DMAMUX_CHCFGn_SOURCE. */
 
 /*! @brief Read current value of the DMAMUX_CHCFGn_SOURCE field. */
-#define BR_DMAMUX_CHCFGn_SOURCE(x, n) (UNION_READ_FS(HW_DMAMUX_CHCFGn_ADDR(x, n), hw_dmamux_chcfgn, B.SOURCE))
+#define BR_DMAMUX_CHCFGn_SOURCE(x, n) (UNION_READ_BIT_FS(HW_DMAMUX_CHCFGn_ADDR(x, n), hw_dmamux_chcfgn, B.SOURCE))
 
 /*! @brief Format value for bitfield DMAMUX_CHCFGn_SOURCE. */
 #define BF_DMAMUX_CHCFGn_SOURCE(v) ((uint8_t)((uint8_t)(v) << BP_DMAMUX_CHCFGn_SOURCE) & BM_DMAMUX_CHCFGn_SOURCE)
 
 /*! @brief Set the SOURCE field to a new value. */
-#define BW_DMAMUX_CHCFGn_SOURCE(x, n, v) (ADDRESS_WRITE32(HW_DMAMUX_CHCFGn_ADDR(x, n), (HW_DMAMUX_CHCFGn_RD(x, n) & ~BM_DMAMUX_CHCFGn_SOURCE) | BF_DMAMUX_CHCFGn_SOURCE(v)))
+#define BW_DMAMUX_CHCFGn_SOURCE(x, n, v) (UNION_WRITE_REG_FS(HW_DMAMUX_CHCFGn_ADDR(x, n), hw_dmamux_chcfgn, (HW_DMAMUX_CHCFGn_RD(x, n) & ~BM_DMAMUX_CHCFGn_SOURCE) | BF_DMAMUX_CHCFGn_SOURCE(v)))
 /*@}*/
 
 /*!

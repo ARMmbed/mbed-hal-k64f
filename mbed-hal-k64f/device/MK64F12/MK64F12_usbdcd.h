@@ -359,13 +359,13 @@ typedef union _hw_usbdcd_clock
 #define BS_USBDCD_CLOCK_CLOCK_SPEED (10U)  /*!< Bit field size in bits for USBDCD_CLOCK_CLOCK_SPEED. */
 
 /*! @brief Read current value of the USBDCD_CLOCK_CLOCK_SPEED field. */
-#define BR_USBDCD_CLOCK_CLOCK_SPEED(x) (UNION_READ_FS(HW_USBDCD_CLOCK_ADDR(x), hw_usbdcd_clock, B.CLOCK_SPEED))
+#define BR_USBDCD_CLOCK_CLOCK_SPEED(x) (UNION_READ_BIT_FS(HW_USBDCD_CLOCK_ADDR(x), hw_usbdcd_clock, B.CLOCK_SPEED))
 
 /*! @brief Format value for bitfield USBDCD_CLOCK_CLOCK_SPEED. */
 #define BF_USBDCD_CLOCK_CLOCK_SPEED(v) ((uint32_t)((uint32_t)(v) << BP_USBDCD_CLOCK_CLOCK_SPEED) & BM_USBDCD_CLOCK_CLOCK_SPEED)
 
 /*! @brief Set the CLOCK_SPEED field to a new value. */
-#define BW_USBDCD_CLOCK_CLOCK_SPEED(x, v) (ADDRESS_WRITE32(HW_USBDCD_CLOCK_ADDR(x), (HW_USBDCD_CLOCK_RD(x) & ~BM_USBDCD_CLOCK_CLOCK_SPEED) | BF_USBDCD_CLOCK_CLOCK_SPEED(v)))
+#define BW_USBDCD_CLOCK_CLOCK_SPEED(x, v) (UNION_WRITE_REG_FS(HW_USBDCD_CLOCK_ADDR(x), hw_usbdcd_clock, (HW_USBDCD_CLOCK_RD(x) & ~BM_USBDCD_CLOCK_CLOCK_SPEED) | BF_USBDCD_CLOCK_CLOCK_SPEED(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -431,7 +431,7 @@ typedef union _hw_usbdcd_status
 #define BS_USBDCD_STATUS_SEQ_RES (2U)      /*!< Bit field size in bits for USBDCD_STATUS_SEQ_RES. */
 
 /*! @brief Read current value of the USBDCD_STATUS_SEQ_RES field. */
-#define BR_USBDCD_STATUS_SEQ_RES(x) (UNION_READ_FS(HW_USBDCD_STATUS_ADDR(x), hw_usbdcd_status, B.SEQ_RES))
+#define BR_USBDCD_STATUS_SEQ_RES(x) (UNION_READ_BIT_FS(HW_USBDCD_STATUS_ADDR(x), hw_usbdcd_status, B.SEQ_RES))
 /*@}*/
 
 /*!
@@ -452,7 +452,7 @@ typedef union _hw_usbdcd_status
 #define BS_USBDCD_STATUS_SEQ_STAT (2U)     /*!< Bit field size in bits for USBDCD_STATUS_SEQ_STAT. */
 
 /*! @brief Read current value of the USBDCD_STATUS_SEQ_STAT field. */
-#define BR_USBDCD_STATUS_SEQ_STAT(x) (UNION_READ_FS(HW_USBDCD_STATUS_ADDR(x), hw_usbdcd_status, B.SEQ_STAT))
+#define BR_USBDCD_STATUS_SEQ_STAT(x) (UNION_READ_BIT_FS(HW_USBDCD_STATUS_ADDR(x), hw_usbdcd_status, B.SEQ_STAT))
 /*@}*/
 
 /*!
@@ -579,7 +579,7 @@ typedef union _hw_usbdcd_timer0
 #define BS_USBDCD_TIMER0_TUNITCON (12U)    /*!< Bit field size in bits for USBDCD_TIMER0_TUNITCON. */
 
 /*! @brief Read current value of the USBDCD_TIMER0_TUNITCON field. */
-#define BR_USBDCD_TIMER0_TUNITCON(x) (UNION_READ_FS(HW_USBDCD_TIMER0_ADDR(x), hw_usbdcd_timer0, B.TUNITCON))
+#define BR_USBDCD_TIMER0_TUNITCON(x) (UNION_READ_BIT_FS(HW_USBDCD_TIMER0_ADDR(x), hw_usbdcd_timer0, B.TUNITCON))
 /*@}*/
 
 /*!
@@ -598,13 +598,13 @@ typedef union _hw_usbdcd_timer0
 #define BS_USBDCD_TIMER0_TSEQ_INIT (10U)   /*!< Bit field size in bits for USBDCD_TIMER0_TSEQ_INIT. */
 
 /*! @brief Read current value of the USBDCD_TIMER0_TSEQ_INIT field. */
-#define BR_USBDCD_TIMER0_TSEQ_INIT(x) (UNION_READ_FS(HW_USBDCD_TIMER0_ADDR(x), hw_usbdcd_timer0, B.TSEQ_INIT))
+#define BR_USBDCD_TIMER0_TSEQ_INIT(x) (UNION_READ_BIT_FS(HW_USBDCD_TIMER0_ADDR(x), hw_usbdcd_timer0, B.TSEQ_INIT))
 
 /*! @brief Format value for bitfield USBDCD_TIMER0_TSEQ_INIT. */
 #define BF_USBDCD_TIMER0_TSEQ_INIT(v) ((uint32_t)((uint32_t)(v) << BP_USBDCD_TIMER0_TSEQ_INIT) & BM_USBDCD_TIMER0_TSEQ_INIT)
 
 /*! @brief Set the TSEQ_INIT field to a new value. */
-#define BW_USBDCD_TIMER0_TSEQ_INIT(x, v) (ADDRESS_WRITE32(HW_USBDCD_TIMER0_ADDR(x), (HW_USBDCD_TIMER0_RD(x) & ~BM_USBDCD_TIMER0_TSEQ_INIT) | BF_USBDCD_TIMER0_TSEQ_INIT(v)))
+#define BW_USBDCD_TIMER0_TSEQ_INIT(x, v) (UNION_WRITE_REG_FS(HW_USBDCD_TIMER0_ADDR(x), hw_usbdcd_timer0, (HW_USBDCD_TIMER0_RD(x) & ~BM_USBDCD_TIMER0_TSEQ_INIT) | BF_USBDCD_TIMER0_TSEQ_INIT(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -664,13 +664,13 @@ typedef union _hw_usbdcd_timer1
 #define BS_USBDCD_TIMER1_TVDPSRC_ON (10U)  /*!< Bit field size in bits for USBDCD_TIMER1_TVDPSRC_ON. */
 
 /*! @brief Read current value of the USBDCD_TIMER1_TVDPSRC_ON field. */
-#define BR_USBDCD_TIMER1_TVDPSRC_ON(x) (UNION_READ_FS(HW_USBDCD_TIMER1_ADDR(x), hw_usbdcd_timer1, B.TVDPSRC_ON))
+#define BR_USBDCD_TIMER1_TVDPSRC_ON(x) (UNION_READ_BIT_FS(HW_USBDCD_TIMER1_ADDR(x), hw_usbdcd_timer1, B.TVDPSRC_ON))
 
 /*! @brief Format value for bitfield USBDCD_TIMER1_TVDPSRC_ON. */
 #define BF_USBDCD_TIMER1_TVDPSRC_ON(v) ((uint32_t)((uint32_t)(v) << BP_USBDCD_TIMER1_TVDPSRC_ON) & BM_USBDCD_TIMER1_TVDPSRC_ON)
 
 /*! @brief Set the TVDPSRC_ON field to a new value. */
-#define BW_USBDCD_TIMER1_TVDPSRC_ON(x, v) (ADDRESS_WRITE32(HW_USBDCD_TIMER1_ADDR(x), (HW_USBDCD_TIMER1_RD(x) & ~BM_USBDCD_TIMER1_TVDPSRC_ON) | BF_USBDCD_TIMER1_TVDPSRC_ON(v)))
+#define BW_USBDCD_TIMER1_TVDPSRC_ON(x, v) (UNION_WRITE_REG_FS(HW_USBDCD_TIMER1_ADDR(x), hw_usbdcd_timer1, (HW_USBDCD_TIMER1_RD(x) & ~BM_USBDCD_TIMER1_TVDPSRC_ON) | BF_USBDCD_TIMER1_TVDPSRC_ON(v)))
 /*@}*/
 
 /*!
@@ -687,13 +687,13 @@ typedef union _hw_usbdcd_timer1
 #define BS_USBDCD_TIMER1_TDCD_DBNC (10U)   /*!< Bit field size in bits for USBDCD_TIMER1_TDCD_DBNC. */
 
 /*! @brief Read current value of the USBDCD_TIMER1_TDCD_DBNC field. */
-#define BR_USBDCD_TIMER1_TDCD_DBNC(x) (UNION_READ_FS(HW_USBDCD_TIMER1_ADDR(x), hw_usbdcd_timer1, B.TDCD_DBNC))
+#define BR_USBDCD_TIMER1_TDCD_DBNC(x) (UNION_READ_BIT_FS(HW_USBDCD_TIMER1_ADDR(x), hw_usbdcd_timer1, B.TDCD_DBNC))
 
 /*! @brief Format value for bitfield USBDCD_TIMER1_TDCD_DBNC. */
 #define BF_USBDCD_TIMER1_TDCD_DBNC(v) ((uint32_t)((uint32_t)(v) << BP_USBDCD_TIMER1_TDCD_DBNC) & BM_USBDCD_TIMER1_TDCD_DBNC)
 
 /*! @brief Set the TDCD_DBNC field to a new value. */
-#define BW_USBDCD_TIMER1_TDCD_DBNC(x, v) (ADDRESS_WRITE32(HW_USBDCD_TIMER1_ADDR(x), (HW_USBDCD_TIMER1_RD(x) & ~BM_USBDCD_TIMER1_TDCD_DBNC) | BF_USBDCD_TIMER1_TDCD_DBNC(v)))
+#define BW_USBDCD_TIMER1_TDCD_DBNC(x, v) (UNION_WRITE_REG_FS(HW_USBDCD_TIMER1_ADDR(x), hw_usbdcd_timer1, (HW_USBDCD_TIMER1_RD(x) & ~BM_USBDCD_TIMER1_TDCD_DBNC) | BF_USBDCD_TIMER1_TDCD_DBNC(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -754,13 +754,13 @@ typedef union _hw_usbdcd_timer2_bc11
 #define BS_USBDCD_TIMER2_BC11_CHECK_DM (4U) /*!< Bit field size in bits for USBDCD_TIMER2_BC11_CHECK_DM. */
 
 /*! @brief Read current value of the USBDCD_TIMER2_BC11_CHECK_DM field. */
-#define BR_USBDCD_TIMER2_BC11_CHECK_DM(x) (UNION_READ_FS(HW_USBDCD_TIMER2_BC11_ADDR(x), hw_usbdcd_timer2_bc11, B.CHECK_DM))
+#define BR_USBDCD_TIMER2_BC11_CHECK_DM(x) (UNION_READ_BIT_FS(HW_USBDCD_TIMER2_BC11_ADDR(x), hw_usbdcd_timer2_bc11, B.CHECK_DM))
 
 /*! @brief Format value for bitfield USBDCD_TIMER2_BC11_CHECK_DM. */
 #define BF_USBDCD_TIMER2_BC11_CHECK_DM(v) ((uint32_t)((uint32_t)(v) << BP_USBDCD_TIMER2_BC11_CHECK_DM) & BM_USBDCD_TIMER2_BC11_CHECK_DM)
 
 /*! @brief Set the CHECK_DM field to a new value. */
-#define BW_USBDCD_TIMER2_BC11_CHECK_DM(x, v) (ADDRESS_WRITE32(HW_USBDCD_TIMER2_BC11_ADDR(x), (HW_USBDCD_TIMER2_BC11_RD(x) & ~BM_USBDCD_TIMER2_BC11_CHECK_DM) | BF_USBDCD_TIMER2_BC11_CHECK_DM(v)))
+#define BW_USBDCD_TIMER2_BC11_CHECK_DM(x, v) (UNION_WRITE_REG_FS(HW_USBDCD_TIMER2_BC11_ADDR(x), hw_usbdcd_timer2_bc11, (HW_USBDCD_TIMER2_BC11_RD(x) & ~BM_USBDCD_TIMER2_BC11_CHECK_DM) | BF_USBDCD_TIMER2_BC11_CHECK_DM(v)))
 /*@}*/
 
 /*!
@@ -777,13 +777,13 @@ typedef union _hw_usbdcd_timer2_bc11
 #define BS_USBDCD_TIMER2_BC11_TVDPSRC_CON (10U) /*!< Bit field size in bits for USBDCD_TIMER2_BC11_TVDPSRC_CON. */
 
 /*! @brief Read current value of the USBDCD_TIMER2_BC11_TVDPSRC_CON field. */
-#define BR_USBDCD_TIMER2_BC11_TVDPSRC_CON(x) (UNION_READ_FS(HW_USBDCD_TIMER2_BC11_ADDR(x), hw_usbdcd_timer2_bc11, B.TVDPSRC_CON))
+#define BR_USBDCD_TIMER2_BC11_TVDPSRC_CON(x) (UNION_READ_BIT_FS(HW_USBDCD_TIMER2_BC11_ADDR(x), hw_usbdcd_timer2_bc11, B.TVDPSRC_CON))
 
 /*! @brief Format value for bitfield USBDCD_TIMER2_BC11_TVDPSRC_CON. */
 #define BF_USBDCD_TIMER2_BC11_TVDPSRC_CON(v) ((uint32_t)((uint32_t)(v) << BP_USBDCD_TIMER2_BC11_TVDPSRC_CON) & BM_USBDCD_TIMER2_BC11_TVDPSRC_CON)
 
 /*! @brief Set the TVDPSRC_CON field to a new value. */
-#define BW_USBDCD_TIMER2_BC11_TVDPSRC_CON(x, v) (ADDRESS_WRITE32(HW_USBDCD_TIMER2_BC11_ADDR(x), (HW_USBDCD_TIMER2_BC11_RD(x) & ~BM_USBDCD_TIMER2_BC11_TVDPSRC_CON) | BF_USBDCD_TIMER2_BC11_TVDPSRC_CON(v)))
+#define BW_USBDCD_TIMER2_BC11_TVDPSRC_CON(x, v) (UNION_WRITE_REG_FS(HW_USBDCD_TIMER2_BC11_ADDR(x), hw_usbdcd_timer2_bc11, (HW_USBDCD_TIMER2_BC11_RD(x) & ~BM_USBDCD_TIMER2_BC11_TVDPSRC_CON) | BF_USBDCD_TIMER2_BC11_TVDPSRC_CON(v)))
 /*@}*/
 /*******************************************************************************
  * HW_USBDCD_TIMER2_BC12 - TIMER2_BC12 register
@@ -841,13 +841,13 @@ typedef union _hw_usbdcd_timer2_bc12
 #define BS_USBDCD_TIMER2_BC12_TVDMSRC_ON (10U) /*!< Bit field size in bits for USBDCD_TIMER2_BC12_TVDMSRC_ON. */
 
 /*! @brief Read current value of the USBDCD_TIMER2_BC12_TVDMSRC_ON field. */
-#define BR_USBDCD_TIMER2_BC12_TVDMSRC_ON(x) (UNION_READ_FS(HW_USBDCD_TIMER2_BC12_ADDR(x), hw_usbdcd_timer2_bc12, B.TVDMSRC_ON))
+#define BR_USBDCD_TIMER2_BC12_TVDMSRC_ON(x) (UNION_READ_BIT_FS(HW_USBDCD_TIMER2_BC12_ADDR(x), hw_usbdcd_timer2_bc12, B.TVDMSRC_ON))
 
 /*! @brief Format value for bitfield USBDCD_TIMER2_BC12_TVDMSRC_ON. */
 #define BF_USBDCD_TIMER2_BC12_TVDMSRC_ON(v) ((uint32_t)((uint32_t)(v) << BP_USBDCD_TIMER2_BC12_TVDMSRC_ON) & BM_USBDCD_TIMER2_BC12_TVDMSRC_ON)
 
 /*! @brief Set the TVDMSRC_ON field to a new value. */
-#define BW_USBDCD_TIMER2_BC12_TVDMSRC_ON(x, v) (ADDRESS_WRITE32(HW_USBDCD_TIMER2_BC12_ADDR(x), (HW_USBDCD_TIMER2_BC12_RD(x) & ~BM_USBDCD_TIMER2_BC12_TVDMSRC_ON) | BF_USBDCD_TIMER2_BC12_TVDMSRC_ON(v)))
+#define BW_USBDCD_TIMER2_BC12_TVDMSRC_ON(x, v) (UNION_WRITE_REG_FS(HW_USBDCD_TIMER2_BC12_ADDR(x), hw_usbdcd_timer2_bc12, (HW_USBDCD_TIMER2_BC12_RD(x) & ~BM_USBDCD_TIMER2_BC12_TVDMSRC_ON) | BF_USBDCD_TIMER2_BC12_TVDMSRC_ON(v)))
 /*@}*/
 
 /*!
@@ -863,13 +863,13 @@ typedef union _hw_usbdcd_timer2_bc12
 #define BS_USBDCD_TIMER2_BC12_TWAIT_AFTER_PRD (10U) /*!< Bit field size in bits for USBDCD_TIMER2_BC12_TWAIT_AFTER_PRD. */
 
 /*! @brief Read current value of the USBDCD_TIMER2_BC12_TWAIT_AFTER_PRD field. */
-#define BR_USBDCD_TIMER2_BC12_TWAIT_AFTER_PRD(x) (UNION_READ_FS(HW_USBDCD_TIMER2_BC12_ADDR(x), hw_usbdcd_timer2_bc12, B.TWAIT_AFTER_PRD))
+#define BR_USBDCD_TIMER2_BC12_TWAIT_AFTER_PRD(x) (UNION_READ_BIT_FS(HW_USBDCD_TIMER2_BC12_ADDR(x), hw_usbdcd_timer2_bc12, B.TWAIT_AFTER_PRD))
 
 /*! @brief Format value for bitfield USBDCD_TIMER2_BC12_TWAIT_AFTER_PRD. */
 #define BF_USBDCD_TIMER2_BC12_TWAIT_AFTER_PRD(v) ((uint32_t)((uint32_t)(v) << BP_USBDCD_TIMER2_BC12_TWAIT_AFTER_PRD) & BM_USBDCD_TIMER2_BC12_TWAIT_AFTER_PRD)
 
 /*! @brief Set the TWAIT_AFTER_PRD field to a new value. */
-#define BW_USBDCD_TIMER2_BC12_TWAIT_AFTER_PRD(x, v) (ADDRESS_WRITE32(HW_USBDCD_TIMER2_BC12_ADDR(x), (HW_USBDCD_TIMER2_BC12_RD(x) & ~BM_USBDCD_TIMER2_BC12_TWAIT_AFTER_PRD) | BF_USBDCD_TIMER2_BC12_TWAIT_AFTER_PRD(v)))
+#define BW_USBDCD_TIMER2_BC12_TWAIT_AFTER_PRD(x, v) (UNION_WRITE_REG_FS(HW_USBDCD_TIMER2_BC12_ADDR(x), hw_usbdcd_timer2_bc12, (HW_USBDCD_TIMER2_BC12_RD(x) & ~BM_USBDCD_TIMER2_BC12_TWAIT_AFTER_PRD) | BF_USBDCD_TIMER2_BC12_TWAIT_AFTER_PRD(v)))
 /*@}*/
 
 /*

@@ -185,7 +185,7 @@ typedef union _hw_mpu_cesr
 #define BS_MPU_CESR_NRGD     (4U)          /*!< Bit field size in bits for MPU_CESR_NRGD. */
 
 /*! @brief Read current value of the MPU_CESR_NRGD field. */
-#define BR_MPU_CESR_NRGD(x)  (UNION_READ_FS(HW_MPU_CESR_ADDR(x), hw_mpu_cesr, B.NRGD))
+#define BR_MPU_CESR_NRGD(x)  (UNION_READ_BIT_FS(HW_MPU_CESR_ADDR(x), hw_mpu_cesr, B.NRGD))
 /*@}*/
 
 /*!
@@ -199,7 +199,7 @@ typedef union _hw_mpu_cesr
 #define BS_MPU_CESR_NSP      (4U)          /*!< Bit field size in bits for MPU_CESR_NSP. */
 
 /*! @brief Read current value of the MPU_CESR_NSP field. */
-#define BR_MPU_CESR_NSP(x)   (UNION_READ_FS(HW_MPU_CESR_ADDR(x), hw_mpu_cesr, B.NSP))
+#define BR_MPU_CESR_NSP(x)   (UNION_READ_BIT_FS(HW_MPU_CESR_ADDR(x), hw_mpu_cesr, B.NSP))
 /*@}*/
 
 /*!
@@ -214,7 +214,7 @@ typedef union _hw_mpu_cesr
 #define BS_MPU_CESR_HRL      (4U)          /*!< Bit field size in bits for MPU_CESR_HRL. */
 
 /*! @brief Read current value of the MPU_CESR_HRL field. */
-#define BR_MPU_CESR_HRL(x)   (UNION_READ_FS(HW_MPU_CESR_ADDR(x), hw_mpu_cesr, B.HRL))
+#define BR_MPU_CESR_HRL(x)   (UNION_READ_BIT_FS(HW_MPU_CESR_ADDR(x), hw_mpu_cesr, B.HRL))
 /*@}*/
 
 /*!
@@ -239,13 +239,13 @@ typedef union _hw_mpu_cesr
 #define BS_MPU_CESR_SPERR    (5U)          /*!< Bit field size in bits for MPU_CESR_SPERR. */
 
 /*! @brief Read current value of the MPU_CESR_SPERR field. */
-#define BR_MPU_CESR_SPERR(x) (UNION_READ_FS(HW_MPU_CESR_ADDR(x), hw_mpu_cesr, B.SPERR))
+#define BR_MPU_CESR_SPERR(x) (UNION_READ_BIT_FS(HW_MPU_CESR_ADDR(x), hw_mpu_cesr, B.SPERR))
 
 /*! @brief Format value for bitfield MPU_CESR_SPERR. */
 #define BF_MPU_CESR_SPERR(v) ((uint32_t)((uint32_t)(v) << BP_MPU_CESR_SPERR) & BM_MPU_CESR_SPERR)
 
 /*! @brief Set the SPERR field to a new value. */
-#define BW_MPU_CESR_SPERR(x, v) (ADDRESS_WRITE32(HW_MPU_CESR_ADDR(x), (HW_MPU_CESR_RD(x) & ~BM_MPU_CESR_SPERR) | BF_MPU_CESR_SPERR(v)))
+#define BW_MPU_CESR_SPERR(x, v) (UNION_WRITE_REG_FS(HW_MPU_CESR_ADDR(x), hw_mpu_cesr, (HW_MPU_CESR_RD(x) & ~BM_MPU_CESR_SPERR) | BF_MPU_CESR_SPERR(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -302,7 +302,7 @@ typedef union _hw_mpu_earn
 #define BS_MPU_EARn_EADDR    (32U)         /*!< Bit field size in bits for MPU_EARn_EADDR. */
 
 /*! @brief Read current value of the MPU_EARn_EADDR field. */
-#define BR_MPU_EARn_EADDR(x, n) (ADDRESS_READ32(HW_MPU_EARn_ADDR(x, n)))
+#define BR_MPU_EARn_EADDR(x, n) (UNION_READ_REG_FS(HW_MPU_EARn_ADDR(x, n), hw_mpu_earn))
 /*@}*/
 /*******************************************************************************
  * HW_MPU_EDRn - Error Detail Register, slave port n
@@ -386,7 +386,7 @@ typedef union _hw_mpu_edrn
 #define BS_MPU_EDRn_EATTR    (3U)          /*!< Bit field size in bits for MPU_EDRn_EATTR. */
 
 /*! @brief Read current value of the MPU_EDRn_EATTR field. */
-#define BR_MPU_EDRn_EATTR(x, n) (UNION_READ_FS(HW_MPU_EDRn_ADDR(x, n), hw_mpu_edrn, B.EATTR))
+#define BR_MPU_EDRn_EATTR(x, n) (UNION_READ_BIT_FS(HW_MPU_EDRn_ADDR(x, n), hw_mpu_edrn, B.EATTR))
 /*@}*/
 
 /*!
@@ -400,7 +400,7 @@ typedef union _hw_mpu_edrn
 #define BS_MPU_EDRn_EMN      (4U)          /*!< Bit field size in bits for MPU_EDRn_EMN. */
 
 /*! @brief Read current value of the MPU_EDRn_EMN field. */
-#define BR_MPU_EDRn_EMN(x, n) (UNION_READ_FS(HW_MPU_EDRn_ADDR(x, n), hw_mpu_edrn, B.EMN))
+#define BR_MPU_EDRn_EMN(x, n) (UNION_READ_BIT_FS(HW_MPU_EDRn_ADDR(x, n), hw_mpu_edrn, B.EMN))
 /*@}*/
 
 /*!
@@ -416,7 +416,7 @@ typedef union _hw_mpu_edrn
 #define BS_MPU_EDRn_EPID     (8U)          /*!< Bit field size in bits for MPU_EDRn_EPID. */
 
 /*! @brief Read current value of the MPU_EDRn_EPID field. */
-#define BR_MPU_EDRn_EPID(x, n) (UNION_READ_FS(HW_MPU_EDRn_ADDR(x, n), hw_mpu_edrn, B.EPID))
+#define BR_MPU_EDRn_EPID(x, n) (UNION_READ_BIT_FS(HW_MPU_EDRn_ADDR(x, n), hw_mpu_edrn, B.EPID))
 /*@}*/
 
 /*!
@@ -434,7 +434,7 @@ typedef union _hw_mpu_edrn
 #define BS_MPU_EDRn_EACD     (16U)         /*!< Bit field size in bits for MPU_EDRn_EACD. */
 
 /*! @brief Read current value of the MPU_EDRn_EACD field. */
-#define BR_MPU_EDRn_EACD(x, n) (UNION_READ_FS(HW_MPU_EDRn_ADDR(x, n), hw_mpu_edrn, B.EACD))
+#define BR_MPU_EDRn_EACD(x, n) (UNION_READ_BIT_FS(HW_MPU_EDRn_ADDR(x, n), hw_mpu_edrn, B.EACD))
 /*@}*/
 
 /*******************************************************************************
@@ -492,13 +492,13 @@ typedef union _hw_mpu_rgdn_word0
 #define BS_MPU_RGDn_WORD0_SRTADDR (27U)    /*!< Bit field size in bits for MPU_RGDn_WORD0_SRTADDR. */
 
 /*! @brief Read current value of the MPU_RGDn_WORD0_SRTADDR field. */
-#define BR_MPU_RGDn_WORD0_SRTADDR(x, n) (UNION_READ_FS(HW_MPU_RGDn_WORD0_ADDR(x, n), hw_mpu_rgdn_word0, B.SRTADDR))
+#define BR_MPU_RGDn_WORD0_SRTADDR(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDn_WORD0_ADDR(x, n), hw_mpu_rgdn_word0, B.SRTADDR))
 
 /*! @brief Format value for bitfield MPU_RGDn_WORD0_SRTADDR. */
 #define BF_MPU_RGDn_WORD0_SRTADDR(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDn_WORD0_SRTADDR) & BM_MPU_RGDn_WORD0_SRTADDR)
 
 /*! @brief Set the SRTADDR field to a new value. */
-#define BW_MPU_RGDn_WORD0_SRTADDR(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDn_WORD0_ADDR(x, n), (HW_MPU_RGDn_WORD0_RD(x, n) & ~BM_MPU_RGDn_WORD0_SRTADDR) | BF_MPU_RGDn_WORD0_SRTADDR(v)))
+#define BW_MPU_RGDn_WORD0_SRTADDR(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDn_WORD0_ADDR(x, n), hw_mpu_rgdn_word0, (HW_MPU_RGDn_WORD0_RD(x, n) & ~BM_MPU_RGDn_WORD0_SRTADDR) | BF_MPU_RGDn_WORD0_SRTADDR(v)))
 /*@}*/
 /*******************************************************************************
  * HW_MPU_RGDn_WORD1 - Region Descriptor n, Word 1
@@ -555,13 +555,13 @@ typedef union _hw_mpu_rgdn_word1
 #define BS_MPU_RGDn_WORD1_ENDADDR (27U)    /*!< Bit field size in bits for MPU_RGDn_WORD1_ENDADDR. */
 
 /*! @brief Read current value of the MPU_RGDn_WORD1_ENDADDR field. */
-#define BR_MPU_RGDn_WORD1_ENDADDR(x, n) (UNION_READ_FS(HW_MPU_RGDn_WORD1_ADDR(x, n), hw_mpu_rgdn_word1, B.ENDADDR))
+#define BR_MPU_RGDn_WORD1_ENDADDR(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDn_WORD1_ADDR(x, n), hw_mpu_rgdn_word1, B.ENDADDR))
 
 /*! @brief Format value for bitfield MPU_RGDn_WORD1_ENDADDR. */
 #define BF_MPU_RGDn_WORD1_ENDADDR(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDn_WORD1_ENDADDR) & BM_MPU_RGDn_WORD1_ENDADDR)
 
 /*! @brief Set the ENDADDR field to a new value. */
-#define BW_MPU_RGDn_WORD1_ENDADDR(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDn_WORD1_ADDR(x, n), (HW_MPU_RGDn_WORD1_RD(x, n) & ~BM_MPU_RGDn_WORD1_ENDADDR) | BF_MPU_RGDn_WORD1_ENDADDR(v)))
+#define BW_MPU_RGDn_WORD1_ENDADDR(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDn_WORD1_ADDR(x, n), hw_mpu_rgdn_word1, (HW_MPU_RGDn_WORD1_RD(x, n) & ~BM_MPU_RGDn_WORD1_ENDADDR) | BF_MPU_RGDn_WORD1_ENDADDR(v)))
 /*@}*/
 /*******************************************************************************
  * HW_MPU_RGDn_WORD2 - Region Descriptor n, Word 2
@@ -652,13 +652,13 @@ typedef union _hw_mpu_rgdn_word2
 #define BS_MPU_RGDn_WORD2_M0UM (3U)        /*!< Bit field size in bits for MPU_RGDn_WORD2_M0UM. */
 
 /*! @brief Read current value of the MPU_RGDn_WORD2_M0UM field. */
-#define BR_MPU_RGDn_WORD2_M0UM(x, n) (UNION_READ_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, B.M0UM))
+#define BR_MPU_RGDn_WORD2_M0UM(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, B.M0UM))
 
 /*! @brief Format value for bitfield MPU_RGDn_WORD2_M0UM. */
 #define BF_MPU_RGDn_WORD2_M0UM(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDn_WORD2_M0UM) & BM_MPU_RGDn_WORD2_M0UM)
 
 /*! @brief Set the M0UM field to a new value. */
-#define BW_MPU_RGDn_WORD2_M0UM(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDn_WORD2_ADDR(x, n), (HW_MPU_RGDn_WORD2_RD(x, n) & ~BM_MPU_RGDn_WORD2_M0UM) | BF_MPU_RGDn_WORD2_M0UM(v)))
+#define BW_MPU_RGDn_WORD2_M0UM(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, (HW_MPU_RGDn_WORD2_RD(x, n) & ~BM_MPU_RGDn_WORD2_M0UM) | BF_MPU_RGDn_WORD2_M0UM(v)))
 /*@}*/
 
 /*!
@@ -672,13 +672,13 @@ typedef union _hw_mpu_rgdn_word2
 #define BS_MPU_RGDn_WORD2_M0SM (2U)        /*!< Bit field size in bits for MPU_RGDn_WORD2_M0SM. */
 
 /*! @brief Read current value of the MPU_RGDn_WORD2_M0SM field. */
-#define BR_MPU_RGDn_WORD2_M0SM(x, n) (UNION_READ_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, B.M0SM))
+#define BR_MPU_RGDn_WORD2_M0SM(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, B.M0SM))
 
 /*! @brief Format value for bitfield MPU_RGDn_WORD2_M0SM. */
 #define BF_MPU_RGDn_WORD2_M0SM(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDn_WORD2_M0SM) & BM_MPU_RGDn_WORD2_M0SM)
 
 /*! @brief Set the M0SM field to a new value. */
-#define BW_MPU_RGDn_WORD2_M0SM(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDn_WORD2_ADDR(x, n), (HW_MPU_RGDn_WORD2_RD(x, n) & ~BM_MPU_RGDn_WORD2_M0SM) | BF_MPU_RGDn_WORD2_M0SM(v)))
+#define BW_MPU_RGDn_WORD2_M0SM(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, (HW_MPU_RGDn_WORD2_RD(x, n) & ~BM_MPU_RGDn_WORD2_M0SM) | BF_MPU_RGDn_WORD2_M0SM(v)))
 /*@}*/
 
 /*!
@@ -712,13 +712,13 @@ typedef union _hw_mpu_rgdn_word2
 #define BS_MPU_RGDn_WORD2_M1UM (3U)        /*!< Bit field size in bits for MPU_RGDn_WORD2_M1UM. */
 
 /*! @brief Read current value of the MPU_RGDn_WORD2_M1UM field. */
-#define BR_MPU_RGDn_WORD2_M1UM(x, n) (UNION_READ_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, B.M1UM))
+#define BR_MPU_RGDn_WORD2_M1UM(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, B.M1UM))
 
 /*! @brief Format value for bitfield MPU_RGDn_WORD2_M1UM. */
 #define BF_MPU_RGDn_WORD2_M1UM(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDn_WORD2_M1UM) & BM_MPU_RGDn_WORD2_M1UM)
 
 /*! @brief Set the M1UM field to a new value. */
-#define BW_MPU_RGDn_WORD2_M1UM(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDn_WORD2_ADDR(x, n), (HW_MPU_RGDn_WORD2_RD(x, n) & ~BM_MPU_RGDn_WORD2_M1UM) | BF_MPU_RGDn_WORD2_M1UM(v)))
+#define BW_MPU_RGDn_WORD2_M1UM(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, (HW_MPU_RGDn_WORD2_RD(x, n) & ~BM_MPU_RGDn_WORD2_M1UM) | BF_MPU_RGDn_WORD2_M1UM(v)))
 /*@}*/
 
 /*!
@@ -732,13 +732,13 @@ typedef union _hw_mpu_rgdn_word2
 #define BS_MPU_RGDn_WORD2_M1SM (2U)        /*!< Bit field size in bits for MPU_RGDn_WORD2_M1SM. */
 
 /*! @brief Read current value of the MPU_RGDn_WORD2_M1SM field. */
-#define BR_MPU_RGDn_WORD2_M1SM(x, n) (UNION_READ_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, B.M1SM))
+#define BR_MPU_RGDn_WORD2_M1SM(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, B.M1SM))
 
 /*! @brief Format value for bitfield MPU_RGDn_WORD2_M1SM. */
 #define BF_MPU_RGDn_WORD2_M1SM(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDn_WORD2_M1SM) & BM_MPU_RGDn_WORD2_M1SM)
 
 /*! @brief Set the M1SM field to a new value. */
-#define BW_MPU_RGDn_WORD2_M1SM(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDn_WORD2_ADDR(x, n), (HW_MPU_RGDn_WORD2_RD(x, n) & ~BM_MPU_RGDn_WORD2_M1SM) | BF_MPU_RGDn_WORD2_M1SM(v)))
+#define BW_MPU_RGDn_WORD2_M1SM(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, (HW_MPU_RGDn_WORD2_RD(x, n) & ~BM_MPU_RGDn_WORD2_M1SM) | BF_MPU_RGDn_WORD2_M1SM(v)))
 /*@}*/
 
 /*!
@@ -772,13 +772,13 @@ typedef union _hw_mpu_rgdn_word2
 #define BS_MPU_RGDn_WORD2_M2UM (3U)        /*!< Bit field size in bits for MPU_RGDn_WORD2_M2UM. */
 
 /*! @brief Read current value of the MPU_RGDn_WORD2_M2UM field. */
-#define BR_MPU_RGDn_WORD2_M2UM(x, n) (UNION_READ_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, B.M2UM))
+#define BR_MPU_RGDn_WORD2_M2UM(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, B.M2UM))
 
 /*! @brief Format value for bitfield MPU_RGDn_WORD2_M2UM. */
 #define BF_MPU_RGDn_WORD2_M2UM(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDn_WORD2_M2UM) & BM_MPU_RGDn_WORD2_M2UM)
 
 /*! @brief Set the M2UM field to a new value. */
-#define BW_MPU_RGDn_WORD2_M2UM(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDn_WORD2_ADDR(x, n), (HW_MPU_RGDn_WORD2_RD(x, n) & ~BM_MPU_RGDn_WORD2_M2UM) | BF_MPU_RGDn_WORD2_M2UM(v)))
+#define BW_MPU_RGDn_WORD2_M2UM(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, (HW_MPU_RGDn_WORD2_RD(x, n) & ~BM_MPU_RGDn_WORD2_M2UM) | BF_MPU_RGDn_WORD2_M2UM(v)))
 /*@}*/
 
 /*!
@@ -792,13 +792,13 @@ typedef union _hw_mpu_rgdn_word2
 #define BS_MPU_RGDn_WORD2_M2SM (2U)        /*!< Bit field size in bits for MPU_RGDn_WORD2_M2SM. */
 
 /*! @brief Read current value of the MPU_RGDn_WORD2_M2SM field. */
-#define BR_MPU_RGDn_WORD2_M2SM(x, n) (UNION_READ_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, B.M2SM))
+#define BR_MPU_RGDn_WORD2_M2SM(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, B.M2SM))
 
 /*! @brief Format value for bitfield MPU_RGDn_WORD2_M2SM. */
 #define BF_MPU_RGDn_WORD2_M2SM(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDn_WORD2_M2SM) & BM_MPU_RGDn_WORD2_M2SM)
 
 /*! @brief Set the M2SM field to a new value. */
-#define BW_MPU_RGDn_WORD2_M2SM(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDn_WORD2_ADDR(x, n), (HW_MPU_RGDn_WORD2_RD(x, n) & ~BM_MPU_RGDn_WORD2_M2SM) | BF_MPU_RGDn_WORD2_M2SM(v)))
+#define BW_MPU_RGDn_WORD2_M2SM(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, (HW_MPU_RGDn_WORD2_RD(x, n) & ~BM_MPU_RGDn_WORD2_M2SM) | BF_MPU_RGDn_WORD2_M2SM(v)))
 /*@}*/
 
 /*!
@@ -839,13 +839,13 @@ typedef union _hw_mpu_rgdn_word2
 #define BS_MPU_RGDn_WORD2_M3UM (3U)        /*!< Bit field size in bits for MPU_RGDn_WORD2_M3UM. */
 
 /*! @brief Read current value of the MPU_RGDn_WORD2_M3UM field. */
-#define BR_MPU_RGDn_WORD2_M3UM(x, n) (UNION_READ_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, B.M3UM))
+#define BR_MPU_RGDn_WORD2_M3UM(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, B.M3UM))
 
 /*! @brief Format value for bitfield MPU_RGDn_WORD2_M3UM. */
 #define BF_MPU_RGDn_WORD2_M3UM(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDn_WORD2_M3UM) & BM_MPU_RGDn_WORD2_M3UM)
 
 /*! @brief Set the M3UM field to a new value. */
-#define BW_MPU_RGDn_WORD2_M3UM(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDn_WORD2_ADDR(x, n), (HW_MPU_RGDn_WORD2_RD(x, n) & ~BM_MPU_RGDn_WORD2_M3UM) | BF_MPU_RGDn_WORD2_M3UM(v)))
+#define BW_MPU_RGDn_WORD2_M3UM(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, (HW_MPU_RGDn_WORD2_RD(x, n) & ~BM_MPU_RGDn_WORD2_M3UM) | BF_MPU_RGDn_WORD2_M3UM(v)))
 /*@}*/
 
 /*!
@@ -865,13 +865,13 @@ typedef union _hw_mpu_rgdn_word2
 #define BS_MPU_RGDn_WORD2_M3SM (2U)        /*!< Bit field size in bits for MPU_RGDn_WORD2_M3SM. */
 
 /*! @brief Read current value of the MPU_RGDn_WORD2_M3SM field. */
-#define BR_MPU_RGDn_WORD2_M3SM(x, n) (UNION_READ_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, B.M3SM))
+#define BR_MPU_RGDn_WORD2_M3SM(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, B.M3SM))
 
 /*! @brief Format value for bitfield MPU_RGDn_WORD2_M3SM. */
 #define BF_MPU_RGDn_WORD2_M3SM(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDn_WORD2_M3SM) & BM_MPU_RGDn_WORD2_M3SM)
 
 /*! @brief Set the M3SM field to a new value. */
-#define BW_MPU_RGDn_WORD2_M3SM(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDn_WORD2_ADDR(x, n), (HW_MPU_RGDn_WORD2_RD(x, n) & ~BM_MPU_RGDn_WORD2_M3SM) | BF_MPU_RGDn_WORD2_M3SM(v)))
+#define BW_MPU_RGDn_WORD2_M3SM(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDn_WORD2_ADDR(x, n), hw_mpu_rgdn_word2, (HW_MPU_RGDn_WORD2_RD(x, n) & ~BM_MPU_RGDn_WORD2_M3SM) | BF_MPU_RGDn_WORD2_M3SM(v)))
 /*@}*/
 
 /*!
@@ -1165,13 +1165,13 @@ typedef union _hw_mpu_rgdn_word3
 #define BS_MPU_RGDn_WORD3_PIDMASK (8U)     /*!< Bit field size in bits for MPU_RGDn_WORD3_PIDMASK. */
 
 /*! @brief Read current value of the MPU_RGDn_WORD3_PIDMASK field. */
-#define BR_MPU_RGDn_WORD3_PIDMASK(x, n) (UNION_READ_FS(HW_MPU_RGDn_WORD3_ADDR(x, n), hw_mpu_rgdn_word3, B.PIDMASK))
+#define BR_MPU_RGDn_WORD3_PIDMASK(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDn_WORD3_ADDR(x, n), hw_mpu_rgdn_word3, B.PIDMASK))
 
 /*! @brief Format value for bitfield MPU_RGDn_WORD3_PIDMASK. */
 #define BF_MPU_RGDn_WORD3_PIDMASK(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDn_WORD3_PIDMASK) & BM_MPU_RGDn_WORD3_PIDMASK)
 
 /*! @brief Set the PIDMASK field to a new value. */
-#define BW_MPU_RGDn_WORD3_PIDMASK(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDn_WORD3_ADDR(x, n), (HW_MPU_RGDn_WORD3_RD(x, n) & ~BM_MPU_RGDn_WORD3_PIDMASK) | BF_MPU_RGDn_WORD3_PIDMASK(v)))
+#define BW_MPU_RGDn_WORD3_PIDMASK(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDn_WORD3_ADDR(x, n), hw_mpu_rgdn_word3, (HW_MPU_RGDn_WORD3_RD(x, n) & ~BM_MPU_RGDn_WORD3_PIDMASK) | BF_MPU_RGDn_WORD3_PIDMASK(v)))
 /*@}*/
 
 /*!
@@ -1187,13 +1187,13 @@ typedef union _hw_mpu_rgdn_word3
 #define BS_MPU_RGDn_WORD3_PID (8U)         /*!< Bit field size in bits for MPU_RGDn_WORD3_PID. */
 
 /*! @brief Read current value of the MPU_RGDn_WORD3_PID field. */
-#define BR_MPU_RGDn_WORD3_PID(x, n) (UNION_READ_FS(HW_MPU_RGDn_WORD3_ADDR(x, n), hw_mpu_rgdn_word3, B.PID))
+#define BR_MPU_RGDn_WORD3_PID(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDn_WORD3_ADDR(x, n), hw_mpu_rgdn_word3, B.PID))
 
 /*! @brief Format value for bitfield MPU_RGDn_WORD3_PID. */
 #define BF_MPU_RGDn_WORD3_PID(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDn_WORD3_PID) & BM_MPU_RGDn_WORD3_PID)
 
 /*! @brief Set the PID field to a new value. */
-#define BW_MPU_RGDn_WORD3_PID(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDn_WORD3_ADDR(x, n), (HW_MPU_RGDn_WORD3_RD(x, n) & ~BM_MPU_RGDn_WORD3_PID) | BF_MPU_RGDn_WORD3_PID(v)))
+#define BW_MPU_RGDn_WORD3_PID(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDn_WORD3_ADDR(x, n), hw_mpu_rgdn_word3, (HW_MPU_RGDn_WORD3_RD(x, n) & ~BM_MPU_RGDn_WORD3_PID) | BF_MPU_RGDn_WORD3_PID(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1275,13 +1275,13 @@ typedef union _hw_mpu_rgdaacn
 #define BS_MPU_RGDAACn_M0UM  (3U)          /*!< Bit field size in bits for MPU_RGDAACn_M0UM. */
 
 /*! @brief Read current value of the MPU_RGDAACn_M0UM field. */
-#define BR_MPU_RGDAACn_M0UM(x, n) (UNION_READ_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, B.M0UM))
+#define BR_MPU_RGDAACn_M0UM(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, B.M0UM))
 
 /*! @brief Format value for bitfield MPU_RGDAACn_M0UM. */
 #define BF_MPU_RGDAACn_M0UM(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDAACn_M0UM) & BM_MPU_RGDAACn_M0UM)
 
 /*! @brief Set the M0UM field to a new value. */
-#define BW_MPU_RGDAACn_M0UM(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDAACn_ADDR(x, n), (HW_MPU_RGDAACn_RD(x, n) & ~BM_MPU_RGDAACn_M0UM) | BF_MPU_RGDAACn_M0UM(v)))
+#define BW_MPU_RGDAACn_M0UM(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, (HW_MPU_RGDAACn_RD(x, n) & ~BM_MPU_RGDAACn_M0UM) | BF_MPU_RGDAACn_M0UM(v)))
 /*@}*/
 
 /*!
@@ -1295,13 +1295,13 @@ typedef union _hw_mpu_rgdaacn
 #define BS_MPU_RGDAACn_M0SM  (2U)          /*!< Bit field size in bits for MPU_RGDAACn_M0SM. */
 
 /*! @brief Read current value of the MPU_RGDAACn_M0SM field. */
-#define BR_MPU_RGDAACn_M0SM(x, n) (UNION_READ_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, B.M0SM))
+#define BR_MPU_RGDAACn_M0SM(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, B.M0SM))
 
 /*! @brief Format value for bitfield MPU_RGDAACn_M0SM. */
 #define BF_MPU_RGDAACn_M0SM(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDAACn_M0SM) & BM_MPU_RGDAACn_M0SM)
 
 /*! @brief Set the M0SM field to a new value. */
-#define BW_MPU_RGDAACn_M0SM(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDAACn_ADDR(x, n), (HW_MPU_RGDAACn_RD(x, n) & ~BM_MPU_RGDAACn_M0SM) | BF_MPU_RGDAACn_M0SM(v)))
+#define BW_MPU_RGDAACn_M0SM(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, (HW_MPU_RGDAACn_RD(x, n) & ~BM_MPU_RGDAACn_M0SM) | BF_MPU_RGDAACn_M0SM(v)))
 /*@}*/
 
 /*!
@@ -1335,13 +1335,13 @@ typedef union _hw_mpu_rgdaacn
 #define BS_MPU_RGDAACn_M1UM  (3U)          /*!< Bit field size in bits for MPU_RGDAACn_M1UM. */
 
 /*! @brief Read current value of the MPU_RGDAACn_M1UM field. */
-#define BR_MPU_RGDAACn_M1UM(x, n) (UNION_READ_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, B.M1UM))
+#define BR_MPU_RGDAACn_M1UM(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, B.M1UM))
 
 /*! @brief Format value for bitfield MPU_RGDAACn_M1UM. */
 #define BF_MPU_RGDAACn_M1UM(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDAACn_M1UM) & BM_MPU_RGDAACn_M1UM)
 
 /*! @brief Set the M1UM field to a new value. */
-#define BW_MPU_RGDAACn_M1UM(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDAACn_ADDR(x, n), (HW_MPU_RGDAACn_RD(x, n) & ~BM_MPU_RGDAACn_M1UM) | BF_MPU_RGDAACn_M1UM(v)))
+#define BW_MPU_RGDAACn_M1UM(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, (HW_MPU_RGDAACn_RD(x, n) & ~BM_MPU_RGDAACn_M1UM) | BF_MPU_RGDAACn_M1UM(v)))
 /*@}*/
 
 /*!
@@ -1355,13 +1355,13 @@ typedef union _hw_mpu_rgdaacn
 #define BS_MPU_RGDAACn_M1SM  (2U)          /*!< Bit field size in bits for MPU_RGDAACn_M1SM. */
 
 /*! @brief Read current value of the MPU_RGDAACn_M1SM field. */
-#define BR_MPU_RGDAACn_M1SM(x, n) (UNION_READ_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, B.M1SM))
+#define BR_MPU_RGDAACn_M1SM(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, B.M1SM))
 
 /*! @brief Format value for bitfield MPU_RGDAACn_M1SM. */
 #define BF_MPU_RGDAACn_M1SM(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDAACn_M1SM) & BM_MPU_RGDAACn_M1SM)
 
 /*! @brief Set the M1SM field to a new value. */
-#define BW_MPU_RGDAACn_M1SM(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDAACn_ADDR(x, n), (HW_MPU_RGDAACn_RD(x, n) & ~BM_MPU_RGDAACn_M1SM) | BF_MPU_RGDAACn_M1SM(v)))
+#define BW_MPU_RGDAACn_M1SM(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, (HW_MPU_RGDAACn_RD(x, n) & ~BM_MPU_RGDAACn_M1SM) | BF_MPU_RGDAACn_M1SM(v)))
 /*@}*/
 
 /*!
@@ -1395,13 +1395,13 @@ typedef union _hw_mpu_rgdaacn
 #define BS_MPU_RGDAACn_M2UM  (3U)          /*!< Bit field size in bits for MPU_RGDAACn_M2UM. */
 
 /*! @brief Read current value of the MPU_RGDAACn_M2UM field. */
-#define BR_MPU_RGDAACn_M2UM(x, n) (UNION_READ_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, B.M2UM))
+#define BR_MPU_RGDAACn_M2UM(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, B.M2UM))
 
 /*! @brief Format value for bitfield MPU_RGDAACn_M2UM. */
 #define BF_MPU_RGDAACn_M2UM(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDAACn_M2UM) & BM_MPU_RGDAACn_M2UM)
 
 /*! @brief Set the M2UM field to a new value. */
-#define BW_MPU_RGDAACn_M2UM(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDAACn_ADDR(x, n), (HW_MPU_RGDAACn_RD(x, n) & ~BM_MPU_RGDAACn_M2UM) | BF_MPU_RGDAACn_M2UM(v)))
+#define BW_MPU_RGDAACn_M2UM(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, (HW_MPU_RGDAACn_RD(x, n) & ~BM_MPU_RGDAACn_M2UM) | BF_MPU_RGDAACn_M2UM(v)))
 /*@}*/
 
 /*!
@@ -1415,13 +1415,13 @@ typedef union _hw_mpu_rgdaacn
 #define BS_MPU_RGDAACn_M2SM  (2U)          /*!< Bit field size in bits for MPU_RGDAACn_M2SM. */
 
 /*! @brief Read current value of the MPU_RGDAACn_M2SM field. */
-#define BR_MPU_RGDAACn_M2SM(x, n) (UNION_READ_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, B.M2SM))
+#define BR_MPU_RGDAACn_M2SM(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, B.M2SM))
 
 /*! @brief Format value for bitfield MPU_RGDAACn_M2SM. */
 #define BF_MPU_RGDAACn_M2SM(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDAACn_M2SM) & BM_MPU_RGDAACn_M2SM)
 
 /*! @brief Set the M2SM field to a new value. */
-#define BW_MPU_RGDAACn_M2SM(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDAACn_ADDR(x, n), (HW_MPU_RGDAACn_RD(x, n) & ~BM_MPU_RGDAACn_M2SM) | BF_MPU_RGDAACn_M2SM(v)))
+#define BW_MPU_RGDAACn_M2SM(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, (HW_MPU_RGDAACn_RD(x, n) & ~BM_MPU_RGDAACn_M2SM) | BF_MPU_RGDAACn_M2SM(v)))
 /*@}*/
 
 /*!
@@ -1462,13 +1462,13 @@ typedef union _hw_mpu_rgdaacn
 #define BS_MPU_RGDAACn_M3UM  (3U)          /*!< Bit field size in bits for MPU_RGDAACn_M3UM. */
 
 /*! @brief Read current value of the MPU_RGDAACn_M3UM field. */
-#define BR_MPU_RGDAACn_M3UM(x, n) (UNION_READ_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, B.M3UM))
+#define BR_MPU_RGDAACn_M3UM(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, B.M3UM))
 
 /*! @brief Format value for bitfield MPU_RGDAACn_M3UM. */
 #define BF_MPU_RGDAACn_M3UM(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDAACn_M3UM) & BM_MPU_RGDAACn_M3UM)
 
 /*! @brief Set the M3UM field to a new value. */
-#define BW_MPU_RGDAACn_M3UM(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDAACn_ADDR(x, n), (HW_MPU_RGDAACn_RD(x, n) & ~BM_MPU_RGDAACn_M3UM) | BF_MPU_RGDAACn_M3UM(v)))
+#define BW_MPU_RGDAACn_M3UM(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, (HW_MPU_RGDAACn_RD(x, n) & ~BM_MPU_RGDAACn_M3UM) | BF_MPU_RGDAACn_M3UM(v)))
 /*@}*/
 
 /*!
@@ -1488,13 +1488,13 @@ typedef union _hw_mpu_rgdaacn
 #define BS_MPU_RGDAACn_M3SM  (2U)          /*!< Bit field size in bits for MPU_RGDAACn_M3SM. */
 
 /*! @brief Read current value of the MPU_RGDAACn_M3SM field. */
-#define BR_MPU_RGDAACn_M3SM(x, n) (UNION_READ_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, B.M3SM))
+#define BR_MPU_RGDAACn_M3SM(x, n) (UNION_READ_BIT_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, B.M3SM))
 
 /*! @brief Format value for bitfield MPU_RGDAACn_M3SM. */
 #define BF_MPU_RGDAACn_M3SM(v) ((uint32_t)((uint32_t)(v) << BP_MPU_RGDAACn_M3SM) & BM_MPU_RGDAACn_M3SM)
 
 /*! @brief Set the M3SM field to a new value. */
-#define BW_MPU_RGDAACn_M3SM(x, n, v) (ADDRESS_WRITE32(HW_MPU_RGDAACn_ADDR(x, n), (HW_MPU_RGDAACn_RD(x, n) & ~BM_MPU_RGDAACn_M3SM) | BF_MPU_RGDAACn_M3SM(v)))
+#define BW_MPU_RGDAACn_M3SM(x, n, v) (UNION_WRITE_REG_FS(HW_MPU_RGDAACn_ADDR(x, n), hw_mpu_rgdaacn, (HW_MPU_RGDAACn_RD(x, n) & ~BM_MPU_RGDAACn_M3SM) | BF_MPU_RGDAACn_M3SM(v)))
 /*@}*/
 
 /*!

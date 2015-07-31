@@ -162,13 +162,13 @@ typedef union _hw_cmt_cgh1
 #define BS_CMT_CGH1_PH       (8U)          /*!< Bit field size in bits for CMT_CGH1_PH. */
 
 /*! @brief Read current value of the CMT_CGH1_PH field. */
-#define BR_CMT_CGH1_PH(x)    (ADDRESS_READ32(HW_CMT_CGH1_ADDR(x)))
+#define BR_CMT_CGH1_PH(x)    (UNION_READ_REG_FS(HW_CMT_CGH1_ADDR(x), hw_cmt_cgh1))
 
 /*! @brief Format value for bitfield CMT_CGH1_PH. */
 #define BF_CMT_CGH1_PH(v)    ((uint8_t)((uint8_t)(v) << BP_CMT_CGH1_PH) & BM_CMT_CGH1_PH)
 
 /*! @brief Set the PH field to a new value. */
-#define BW_CMT_CGH1_PH(x, v) (ADDRESS_WRITE32(HW_CMT_CGH1_ADDR(x), v))
+#define BW_CMT_CGH1_PH(x, v) (UNION_WRITE_REG_FS(HW_CMT_CGH1_ADDR(x), hw_cmt_cgh1, v))
 /*@}*/
 
 /*******************************************************************************
@@ -226,13 +226,13 @@ typedef union _hw_cmt_cgl1
 #define BS_CMT_CGL1_PL       (8U)          /*!< Bit field size in bits for CMT_CGL1_PL. */
 
 /*! @brief Read current value of the CMT_CGL1_PL field. */
-#define BR_CMT_CGL1_PL(x)    (ADDRESS_READ32(HW_CMT_CGL1_ADDR(x)))
+#define BR_CMT_CGL1_PL(x)    (UNION_READ_REG_FS(HW_CMT_CGL1_ADDR(x), hw_cmt_cgl1))
 
 /*! @brief Format value for bitfield CMT_CGL1_PL. */
 #define BF_CMT_CGL1_PL(v)    ((uint8_t)((uint8_t)(v) << BP_CMT_CGL1_PL) & BM_CMT_CGL1_PL)
 
 /*! @brief Set the PL field to a new value. */
-#define BW_CMT_CGL1_PL(x, v) (ADDRESS_WRITE32(HW_CMT_CGL1_ADDR(x), v))
+#define BW_CMT_CGL1_PL(x, v) (UNION_WRITE_REG_FS(HW_CMT_CGL1_ADDR(x), hw_cmt_cgl1, v))
 /*@}*/
 
 /*******************************************************************************
@@ -290,13 +290,13 @@ typedef union _hw_cmt_cgh2
 #define BS_CMT_CGH2_SH       (8U)          /*!< Bit field size in bits for CMT_CGH2_SH. */
 
 /*! @brief Read current value of the CMT_CGH2_SH field. */
-#define BR_CMT_CGH2_SH(x)    (ADDRESS_READ32(HW_CMT_CGH2_ADDR(x)))
+#define BR_CMT_CGH2_SH(x)    (UNION_READ_REG_FS(HW_CMT_CGH2_ADDR(x), hw_cmt_cgh2))
 
 /*! @brief Format value for bitfield CMT_CGH2_SH. */
 #define BF_CMT_CGH2_SH(v)    ((uint8_t)((uint8_t)(v) << BP_CMT_CGH2_SH) & BM_CMT_CGH2_SH)
 
 /*! @brief Set the SH field to a new value. */
-#define BW_CMT_CGH2_SH(x, v) (ADDRESS_WRITE32(HW_CMT_CGH2_ADDR(x), v))
+#define BW_CMT_CGH2_SH(x, v) (UNION_WRITE_REG_FS(HW_CMT_CGH2_ADDR(x), hw_cmt_cgh2, v))
 /*@}*/
 
 /*******************************************************************************
@@ -354,13 +354,13 @@ typedef union _hw_cmt_cgl2
 #define BS_CMT_CGL2_SL       (8U)          /*!< Bit field size in bits for CMT_CGL2_SL. */
 
 /*! @brief Read current value of the CMT_CGL2_SL field. */
-#define BR_CMT_CGL2_SL(x)    (ADDRESS_READ32(HW_CMT_CGL2_ADDR(x)))
+#define BR_CMT_CGL2_SL(x)    (UNION_READ_REG_FS(HW_CMT_CGL2_ADDR(x), hw_cmt_cgl2))
 
 /*! @brief Format value for bitfield CMT_CGL2_SL. */
 #define BF_CMT_CGL2_SL(v)    ((uint8_t)((uint8_t)(v) << BP_CMT_CGL2_SL) & BM_CMT_CGL2_SL)
 
 /*! @brief Set the SL field to a new value. */
-#define BW_CMT_CGL2_SL(x, v) (ADDRESS_WRITE32(HW_CMT_CGL2_ADDR(x), v))
+#define BW_CMT_CGL2_SL(x, v) (UNION_WRITE_REG_FS(HW_CMT_CGL2_ADDR(x), hw_cmt_cgl2, v))
 /*@}*/
 
 /*******************************************************************************
@@ -675,13 +675,13 @@ typedef union _hw_cmt_msc
 #define BS_CMT_MSC_CMTDIV    (2U)          /*!< Bit field size in bits for CMT_MSC_CMTDIV. */
 
 /*! @brief Read current value of the CMT_MSC_CMTDIV field. */
-#define BR_CMT_MSC_CMTDIV(x) (UNION_READ_FS(HW_CMT_MSC_ADDR(x), hw_cmt_msc, B.CMTDIV))
+#define BR_CMT_MSC_CMTDIV(x) (UNION_READ_BIT_FS(HW_CMT_MSC_ADDR(x), hw_cmt_msc, B.CMTDIV))
 
 /*! @brief Format value for bitfield CMT_MSC_CMTDIV. */
 #define BF_CMT_MSC_CMTDIV(v) ((uint8_t)((uint8_t)(v) << BP_CMT_MSC_CMTDIV) & BM_CMT_MSC_CMTDIV)
 
 /*! @brief Set the CMTDIV field to a new value. */
-#define BW_CMT_MSC_CMTDIV(x, v) (ADDRESS_WRITE32(HW_CMT_MSC_ADDR(x), (HW_CMT_MSC_RD(x) & ~BM_CMT_MSC_CMTDIV) | BF_CMT_MSC_CMTDIV(v)))
+#define BW_CMT_MSC_CMTDIV(x, v) (UNION_WRITE_REG_FS(HW_CMT_MSC_ADDR(x), hw_cmt_msc, (HW_CMT_MSC_RD(x) & ~BM_CMT_MSC_CMTDIV) | BF_CMT_MSC_CMTDIV(v)))
 /*@}*/
 
 /*!
@@ -759,13 +759,13 @@ typedef union _hw_cmt_cmd1
 #define BS_CMT_CMD1_MB       (8U)          /*!< Bit field size in bits for CMT_CMD1_MB. */
 
 /*! @brief Read current value of the CMT_CMD1_MB field. */
-#define BR_CMT_CMD1_MB(x)    (ADDRESS_READ32(HW_CMT_CMD1_ADDR(x)))
+#define BR_CMT_CMD1_MB(x)    (UNION_READ_REG_FS(HW_CMT_CMD1_ADDR(x), hw_cmt_cmd1))
 
 /*! @brief Format value for bitfield CMT_CMD1_MB. */
 #define BF_CMT_CMD1_MB(v)    ((uint8_t)((uint8_t)(v) << BP_CMT_CMD1_MB) & BM_CMT_CMD1_MB)
 
 /*! @brief Set the MB field to a new value. */
-#define BW_CMT_CMD1_MB(x, v) (ADDRESS_WRITE32(HW_CMT_CMD1_ADDR(x), v))
+#define BW_CMT_CMD1_MB(x, v) (UNION_WRITE_REG_FS(HW_CMT_CMD1_ADDR(x), hw_cmt_cmd1, v))
 /*@}*/
 
 /*******************************************************************************
@@ -818,13 +818,13 @@ typedef union _hw_cmt_cmd2
 #define BS_CMT_CMD2_MB       (8U)          /*!< Bit field size in bits for CMT_CMD2_MB. */
 
 /*! @brief Read current value of the CMT_CMD2_MB field. */
-#define BR_CMT_CMD2_MB(x)    (ADDRESS_READ32(HW_CMT_CMD2_ADDR(x)))
+#define BR_CMT_CMD2_MB(x)    (UNION_READ_REG_FS(HW_CMT_CMD2_ADDR(x), hw_cmt_cmd2))
 
 /*! @brief Format value for bitfield CMT_CMD2_MB. */
 #define BF_CMT_CMD2_MB(v)    ((uint8_t)((uint8_t)(v) << BP_CMT_CMD2_MB) & BM_CMT_CMD2_MB)
 
 /*! @brief Set the MB field to a new value. */
-#define BW_CMT_CMD2_MB(x, v) (ADDRESS_WRITE32(HW_CMT_CMD2_ADDR(x), v))
+#define BW_CMT_CMD2_MB(x, v) (UNION_WRITE_REG_FS(HW_CMT_CMD2_ADDR(x), hw_cmt_cmd2, v))
 /*@}*/
 
 /*******************************************************************************
@@ -877,13 +877,13 @@ typedef union _hw_cmt_cmd3
 #define BS_CMT_CMD3_SB       (8U)          /*!< Bit field size in bits for CMT_CMD3_SB. */
 
 /*! @brief Read current value of the CMT_CMD3_SB field. */
-#define BR_CMT_CMD3_SB(x)    (ADDRESS_READ32(HW_CMT_CMD3_ADDR(x)))
+#define BR_CMT_CMD3_SB(x)    (UNION_READ_REG_FS(HW_CMT_CMD3_ADDR(x), hw_cmt_cmd3))
 
 /*! @brief Format value for bitfield CMT_CMD3_SB. */
 #define BF_CMT_CMD3_SB(v)    ((uint8_t)((uint8_t)(v) << BP_CMT_CMD3_SB) & BM_CMT_CMD3_SB)
 
 /*! @brief Set the SB field to a new value. */
-#define BW_CMT_CMD3_SB(x, v) (ADDRESS_WRITE32(HW_CMT_CMD3_ADDR(x), v))
+#define BW_CMT_CMD3_SB(x, v) (UNION_WRITE_REG_FS(HW_CMT_CMD3_ADDR(x), hw_cmt_cmd3, v))
 /*@}*/
 
 /*******************************************************************************
@@ -936,13 +936,13 @@ typedef union _hw_cmt_cmd4
 #define BS_CMT_CMD4_SB       (8U)          /*!< Bit field size in bits for CMT_CMD4_SB. */
 
 /*! @brief Read current value of the CMT_CMD4_SB field. */
-#define BR_CMT_CMD4_SB(x)    (ADDRESS_READ32(HW_CMT_CMD4_ADDR(x)))
+#define BR_CMT_CMD4_SB(x)    (UNION_READ_REG_FS(HW_CMT_CMD4_ADDR(x), hw_cmt_cmd4))
 
 /*! @brief Format value for bitfield CMT_CMD4_SB. */
 #define BF_CMT_CMD4_SB(v)    ((uint8_t)((uint8_t)(v) << BP_CMT_CMD4_SB) & BM_CMT_CMD4_SB)
 
 /*! @brief Set the SB field to a new value. */
-#define BW_CMT_CMD4_SB(x, v) (ADDRESS_WRITE32(HW_CMT_CMD4_ADDR(x), v))
+#define BW_CMT_CMD4_SB(x, v) (UNION_WRITE_REG_FS(HW_CMT_CMD4_ADDR(x), hw_cmt_cmd4, v))
 /*@}*/
 
 /*******************************************************************************
@@ -1014,13 +1014,13 @@ typedef union _hw_cmt_pps
 #define BS_CMT_PPS_PPSDIV    (4U)          /*!< Bit field size in bits for CMT_PPS_PPSDIV. */
 
 /*! @brief Read current value of the CMT_PPS_PPSDIV field. */
-#define BR_CMT_PPS_PPSDIV(x) (UNION_READ_FS(HW_CMT_PPS_ADDR(x), hw_cmt_pps, B.PPSDIV))
+#define BR_CMT_PPS_PPSDIV(x) (UNION_READ_BIT_FS(HW_CMT_PPS_ADDR(x), hw_cmt_pps, B.PPSDIV))
 
 /*! @brief Format value for bitfield CMT_PPS_PPSDIV. */
 #define BF_CMT_PPS_PPSDIV(v) ((uint8_t)((uint8_t)(v) << BP_CMT_PPS_PPSDIV) & BM_CMT_PPS_PPSDIV)
 
 /*! @brief Set the PPSDIV field to a new value. */
-#define BW_CMT_PPS_PPSDIV(x, v) (ADDRESS_WRITE32(HW_CMT_PPS_ADDR(x), (HW_CMT_PPS_RD(x) & ~BM_CMT_PPS_PPSDIV) | BF_CMT_PPS_PPSDIV(v)))
+#define BW_CMT_PPS_PPSDIV(x, v) (UNION_WRITE_REG_FS(HW_CMT_PPS_ADDR(x), hw_cmt_pps, (HW_CMT_PPS_RD(x) & ~BM_CMT_PPS_PPSDIV) | BF_CMT_PPS_PPSDIV(v)))
 /*@}*/
 
 /*******************************************************************************

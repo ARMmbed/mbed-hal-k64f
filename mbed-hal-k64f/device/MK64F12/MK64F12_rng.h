@@ -432,7 +432,7 @@ typedef union _hw_rng_sr
 #define BS_RNG_SR_OREG_LVL   (8U)          /*!< Bit field size in bits for RNG_SR_OREG_LVL. */
 
 /*! @brief Read current value of the RNG_SR_OREG_LVL field. */
-#define BR_RNG_SR_OREG_LVL(x) (UNION_READ_FS(HW_RNG_SR_ADDR(x), hw_rng_sr, B.OREG_LVL))
+#define BR_RNG_SR_OREG_LVL(x) (UNION_READ_BIT_FS(HW_RNG_SR_ADDR(x), hw_rng_sr, B.OREG_LVL))
 /*@}*/
 
 /*!
@@ -450,7 +450,7 @@ typedef union _hw_rng_sr
 #define BS_RNG_SR_OREG_SIZE  (8U)          /*!< Bit field size in bits for RNG_SR_OREG_SIZE. */
 
 /*! @brief Read current value of the RNG_SR_OREG_SIZE field. */
-#define BR_RNG_SR_OREG_SIZE(x) (UNION_READ_FS(HW_RNG_SR_ADDR(x), hw_rng_sr, B.OREG_SIZE))
+#define BR_RNG_SR_OREG_SIZE(x) (UNION_READ_BIT_FS(HW_RNG_SR_ADDR(x), hw_rng_sr, B.OREG_SIZE))
 /*@}*/
 
 /*******************************************************************************
@@ -506,7 +506,7 @@ typedef union _hw_rng_er
 #define BF_RNG_ER_EXT_ENT(v) ((uint32_t)((uint32_t)(v) << BP_RNG_ER_EXT_ENT) & BM_RNG_ER_EXT_ENT)
 
 /*! @brief Set the EXT_ENT field to a new value. */
-#define BW_RNG_ER_EXT_ENT(x, v) (ADDRESS_WRITE32(HW_RNG_ER_ADDR(x), v))
+#define BW_RNG_ER_EXT_ENT(x, v) (UNION_WRITE_REG_FS(HW_RNG_ER_ADDR(x), hw_rng_er, v))
 /*@}*/
 
 /*******************************************************************************
@@ -561,7 +561,7 @@ typedef union _hw_rng_or
 #define BS_RNG_OR_RANDOUT    (32U)         /*!< Bit field size in bits for RNG_OR_RANDOUT. */
 
 /*! @brief Read current value of the RNG_OR_RANDOUT field. */
-#define BR_RNG_OR_RANDOUT(x) (ADDRESS_READ32(HW_RNG_OR_ADDR(x)))
+#define BR_RNG_OR_RANDOUT(x) (UNION_READ_REG_FS(HW_RNG_OR_ADDR(x), hw_rng_or))
 /*@}*/
 
 /*******************************************************************************
