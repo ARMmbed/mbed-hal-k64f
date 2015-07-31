@@ -104,8 +104,16 @@
 #define ADDRESS_WRITE8(addr, val)  (*((uint8_t  volatile *) (addr)) = (val))
 #endif
 
-#ifndef UNION_READ_FS
-#define UNION_READ_FS(addr, type, field) ((*((__IO type ## _t *) (addr))).field)
+#ifndef UNION_READ_BIT_FS
+#define UNION_READ_BIT_FS(addr, type, field) ((*((__IO type ## _t *) (addr))).field)
+#endif
+
+#ifndef UNION_READ_REG_FS
+#define UNION_READ_REG_FS(addr, type) ((*((__IO type ## _t *) (addr))).U)
+#endif
+
+#ifndef UNION_WRITE_REG_FS
+#define UNION_WRITE_REG_FS(addr, type, val) (*((__IO type ## _t *) (addr)) = (val))
 #endif
 
 /*
