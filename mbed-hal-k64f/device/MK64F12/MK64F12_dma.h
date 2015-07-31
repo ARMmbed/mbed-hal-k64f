@@ -604,7 +604,7 @@ typedef union _hw_dma_es
 #define BS_DMA_ES_ERRCHN     (4U)          /*!< Bit field size in bits for DMA_ES_ERRCHN. */
 
 /*! @brief Read current value of the DMA_ES_ERRCHN field. */
-#define BR_DMA_ES_ERRCHN(x)  (UNION_READ_FS(HW_DMA_ES_ADDR(x), hw_dma_es, B.ERRCHN))
+#define BR_DMA_ES_ERRCHN(x)  (UNION_READ_BIT_FS(HW_DMA_ES_ADDR(x), hw_dma_es, B.ERRCHN))
 /*@}*/
 
 /*!
@@ -1577,7 +1577,7 @@ typedef union _hw_dma_ceei
 #define BF_DMA_CEEI_CEEI(v)  ((uint8_t)((uint8_t)(v) << BP_DMA_CEEI_CEEI) & BM_DMA_CEEI_CEEI)
 
 /*! @brief Set the CEEI field to a new value. */
-#define BW_DMA_CEEI_CEEI(x, v) (ADDRESS_WRITE32(HW_DMA_CEEI_ADDR(x), (HW_DMA_CEEI_RD(x) & ~BM_DMA_CEEI_CEEI) | BF_DMA_CEEI_CEEI(v)))
+#define BW_DMA_CEEI_CEEI(x, v) (UNION_WRITE_REG_FS(HW_DMA_CEEI_ADDR(x), hw_dma_ceei, (HW_DMA_CEEI_RD(x) & ~BM_DMA_CEEI_CEEI) | BF_DMA_CEEI_CEEI(v)))
 /*@}*/
 
 /*!
@@ -1676,7 +1676,7 @@ typedef union _hw_dma_seei
 #define BF_DMA_SEEI_SEEI(v)  ((uint8_t)((uint8_t)(v) << BP_DMA_SEEI_SEEI) & BM_DMA_SEEI_SEEI)
 
 /*! @brief Set the SEEI field to a new value. */
-#define BW_DMA_SEEI_SEEI(x, v) (ADDRESS_WRITE32(HW_DMA_SEEI_ADDR(x), (HW_DMA_SEEI_RD(x) & ~BM_DMA_SEEI_SEEI) | BF_DMA_SEEI_SEEI(v)))
+#define BW_DMA_SEEI_SEEI(x, v) (UNION_WRITE_REG_FS(HW_DMA_SEEI_ADDR(x), hw_dma_seei, (HW_DMA_SEEI_RD(x) & ~BM_DMA_SEEI_SEEI) | BF_DMA_SEEI_SEEI(v)))
 /*@}*/
 
 /*!
@@ -1775,7 +1775,7 @@ typedef union _hw_dma_cerq
 #define BF_DMA_CERQ_CERQ(v)  ((uint8_t)((uint8_t)(v) << BP_DMA_CERQ_CERQ) & BM_DMA_CERQ_CERQ)
 
 /*! @brief Set the CERQ field to a new value. */
-#define BW_DMA_CERQ_CERQ(x, v) (ADDRESS_WRITE32(HW_DMA_CERQ_ADDR(x), (HW_DMA_CERQ_RD(x) & ~BM_DMA_CERQ_CERQ) | BF_DMA_CERQ_CERQ(v)))
+#define BW_DMA_CERQ_CERQ(x, v) (UNION_WRITE_REG_FS(HW_DMA_CERQ_ADDR(x), hw_dma_cerq, (HW_DMA_CERQ_RD(x) & ~BM_DMA_CERQ_CERQ) | BF_DMA_CERQ_CERQ(v)))
 /*@}*/
 
 /*!
@@ -1873,7 +1873,7 @@ typedef union _hw_dma_serq
 #define BF_DMA_SERQ_SERQ(v)  ((uint8_t)((uint8_t)(v) << BP_DMA_SERQ_SERQ) & BM_DMA_SERQ_SERQ)
 
 /*! @brief Set the SERQ field to a new value. */
-#define BW_DMA_SERQ_SERQ(x, v) (ADDRESS_WRITE32(HW_DMA_SERQ_ADDR(x), (HW_DMA_SERQ_RD(x) & ~BM_DMA_SERQ_SERQ) | BF_DMA_SERQ_SERQ(v)))
+#define BW_DMA_SERQ_SERQ(x, v) (UNION_WRITE_REG_FS(HW_DMA_SERQ_ADDR(x), hw_dma_serq, (HW_DMA_SERQ_RD(x) & ~BM_DMA_SERQ_SERQ) | BF_DMA_SERQ_SERQ(v)))
 /*@}*/
 
 /*!
@@ -1972,7 +1972,7 @@ typedef union _hw_dma_cdne
 #define BF_DMA_CDNE_CDNE(v)  ((uint8_t)((uint8_t)(v) << BP_DMA_CDNE_CDNE) & BM_DMA_CDNE_CDNE)
 
 /*! @brief Set the CDNE field to a new value. */
-#define BW_DMA_CDNE_CDNE(x, v) (ADDRESS_WRITE32(HW_DMA_CDNE_ADDR(x), (HW_DMA_CDNE_RD(x) & ~BM_DMA_CDNE_CDNE) | BF_DMA_CDNE_CDNE(v)))
+#define BW_DMA_CDNE_CDNE(x, v) (UNION_WRITE_REG_FS(HW_DMA_CDNE_ADDR(x), hw_dma_cdne, (HW_DMA_CDNE_RD(x) & ~BM_DMA_CDNE_CDNE) | BF_DMA_CDNE_CDNE(v)))
 /*@}*/
 
 /*!
@@ -2071,7 +2071,7 @@ typedef union _hw_dma_ssrt
 #define BF_DMA_SSRT_SSRT(v)  ((uint8_t)((uint8_t)(v) << BP_DMA_SSRT_SSRT) & BM_DMA_SSRT_SSRT)
 
 /*! @brief Set the SSRT field to a new value. */
-#define BW_DMA_SSRT_SSRT(x, v) (ADDRESS_WRITE32(HW_DMA_SSRT_ADDR(x), (HW_DMA_SSRT_RD(x) & ~BM_DMA_SSRT_SSRT) | BF_DMA_SSRT_SSRT(v)))
+#define BW_DMA_SSRT_SSRT(x, v) (UNION_WRITE_REG_FS(HW_DMA_SSRT_ADDR(x), hw_dma_ssrt, (HW_DMA_SSRT_RD(x) & ~BM_DMA_SSRT_SSRT) | BF_DMA_SSRT_SSRT(v)))
 /*@}*/
 
 /*!
@@ -2170,7 +2170,7 @@ typedef union _hw_dma_cerr
 #define BF_DMA_CERR_CERR(v)  ((uint8_t)((uint8_t)(v) << BP_DMA_CERR_CERR) & BM_DMA_CERR_CERR)
 
 /*! @brief Set the CERR field to a new value. */
-#define BW_DMA_CERR_CERR(x, v) (ADDRESS_WRITE32(HW_DMA_CERR_ADDR(x), (HW_DMA_CERR_RD(x) & ~BM_DMA_CERR_CERR) | BF_DMA_CERR_CERR(v)))
+#define BW_DMA_CERR_CERR(x, v) (UNION_WRITE_REG_FS(HW_DMA_CERR_ADDR(x), hw_dma_cerr, (HW_DMA_CERR_RD(x) & ~BM_DMA_CERR_CERR) | BF_DMA_CERR_CERR(v)))
 /*@}*/
 
 /*!
@@ -2269,7 +2269,7 @@ typedef union _hw_dma_cint
 #define BF_DMA_CINT_CINT(v)  ((uint8_t)((uint8_t)(v) << BP_DMA_CINT_CINT) & BM_DMA_CINT_CINT)
 
 /*! @brief Set the CINT field to a new value. */
-#define BW_DMA_CINT_CINT(x, v) (ADDRESS_WRITE32(HW_DMA_CINT_ADDR(x), (HW_DMA_CINT_RD(x) & ~BM_DMA_CINT_CINT) | BF_DMA_CINT_CINT(v)))
+#define BW_DMA_CINT_CINT(x, v) (UNION_WRITE_REG_FS(HW_DMA_CINT_ADDR(x), hw_dma_cint, (HW_DMA_CINT_RD(x) & ~BM_DMA_CINT_CINT) | BF_DMA_CINT_CINT(v)))
 /*@}*/
 
 /*!
@@ -3594,13 +3594,13 @@ typedef union _hw_dma_dchprin
 #define BS_DMA_DCHPRIn_CHPRI (4U)          /*!< Bit field size in bits for DMA_DCHPRIn_CHPRI. */
 
 /*! @brief Read current value of the DMA_DCHPRIn_CHPRI field. */
-#define BR_DMA_DCHPRIn_CHPRI(x, n) (UNION_READ_FS(HW_DMA_DCHPRIn_ADDR(x, n), hw_dma_dchprin, B.CHPRI))
+#define BR_DMA_DCHPRIn_CHPRI(x, n) (UNION_READ_BIT_FS(HW_DMA_DCHPRIn_ADDR(x, n), hw_dma_dchprin, B.CHPRI))
 
 /*! @brief Format value for bitfield DMA_DCHPRIn_CHPRI. */
 #define BF_DMA_DCHPRIn_CHPRI(v) ((uint8_t)((uint8_t)(v) << BP_DMA_DCHPRIn_CHPRI) & BM_DMA_DCHPRIn_CHPRI)
 
 /*! @brief Set the CHPRI field to a new value. */
-#define BW_DMA_DCHPRIn_CHPRI(x, n, v) (ADDRESS_WRITE32(HW_DMA_DCHPRIn_ADDR(x, n), (HW_DMA_DCHPRIn_RD(x, n) & ~BM_DMA_DCHPRIn_CHPRI) | BF_DMA_DCHPRIn_CHPRI(v)))
+#define BW_DMA_DCHPRIn_CHPRI(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_DCHPRIn_ADDR(x, n), hw_dma_dchprin, (HW_DMA_DCHPRIn_RD(x, n) & ~BM_DMA_DCHPRIn_CHPRI) | BF_DMA_DCHPRIn_CHPRI(v)))
 /*@}*/
 
 /*!
@@ -3698,13 +3698,13 @@ typedef union _hw_dma_tcdn_saddr
 #define BS_DMA_TCDn_SADDR_SADDR (32U)      /*!< Bit field size in bits for DMA_TCDn_SADDR_SADDR. */
 
 /*! @brief Read current value of the DMA_TCDn_SADDR_SADDR field. */
-#define BR_DMA_TCDn_SADDR_SADDR(x, n) (ADDRESS_READ32(HW_DMA_TCDn_SADDR_ADDR(x, n)))
+#define BR_DMA_TCDn_SADDR_SADDR(x, n) (UNION_READ_REG_FS(HW_DMA_TCDn_SADDR_ADDR(x, n), hw_dma_tcdn_saddr))
 
 /*! @brief Format value for bitfield DMA_TCDn_SADDR_SADDR. */
 #define BF_DMA_TCDn_SADDR_SADDR(v) ((uint32_t)((uint32_t)(v) << BP_DMA_TCDn_SADDR_SADDR) & BM_DMA_TCDn_SADDR_SADDR)
 
 /*! @brief Set the SADDR field to a new value. */
-#define BW_DMA_TCDn_SADDR_SADDR(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_SADDR_ADDR(x, n), v))
+#define BW_DMA_TCDn_SADDR_SADDR(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_SADDR_ADDR(x, n), hw_dma_tcdn_saddr, v))
 /*@}*/
 /*******************************************************************************
  * HW_DMA_TCDn_SOFF - TCD Signed Source Address Offset
@@ -3756,13 +3756,13 @@ typedef union _hw_dma_tcdn_soff
 #define BS_DMA_TCDn_SOFF_SOFF (16U)        /*!< Bit field size in bits for DMA_TCDn_SOFF_SOFF. */
 
 /*! @brief Read current value of the DMA_TCDn_SOFF_SOFF field. */
-#define BR_DMA_TCDn_SOFF_SOFF(x, n) (ADDRESS_READ32(HW_DMA_TCDn_SOFF_ADDR(x, n)))
+#define BR_DMA_TCDn_SOFF_SOFF(x, n) (UNION_READ_REG_FS(HW_DMA_TCDn_SOFF_ADDR(x, n), hw_dma_tcdn_soff))
 
 /*! @brief Format value for bitfield DMA_TCDn_SOFF_SOFF. */
 #define BF_DMA_TCDn_SOFF_SOFF(v) ((uint16_t)((uint16_t)(v) << BP_DMA_TCDn_SOFF_SOFF) & BM_DMA_TCDn_SOFF_SOFF)
 
 /*! @brief Set the SOFF field to a new value. */
-#define BW_DMA_TCDn_SOFF_SOFF(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_SOFF_ADDR(x, n), v))
+#define BW_DMA_TCDn_SOFF_SOFF(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_SOFF_ADDR(x, n), hw_dma_tcdn_soff, v))
 /*@}*/
 /*******************************************************************************
  * HW_DMA_TCDn_ATTR - TCD Transfer Attributes
@@ -3816,13 +3816,13 @@ typedef union _hw_dma_tcdn_attr
 #define BS_DMA_TCDn_ATTR_DSIZE (3U)        /*!< Bit field size in bits for DMA_TCDn_ATTR_DSIZE. */
 
 /*! @brief Read current value of the DMA_TCDn_ATTR_DSIZE field. */
-#define BR_DMA_TCDn_ATTR_DSIZE(x, n) (UNION_READ_FS(HW_DMA_TCDn_ATTR_ADDR(x, n), hw_dma_tcdn_attr, B.DSIZE))
+#define BR_DMA_TCDn_ATTR_DSIZE(x, n) (UNION_READ_BIT_FS(HW_DMA_TCDn_ATTR_ADDR(x, n), hw_dma_tcdn_attr, B.DSIZE))
 
 /*! @brief Format value for bitfield DMA_TCDn_ATTR_DSIZE. */
 #define BF_DMA_TCDn_ATTR_DSIZE(v) ((uint16_t)((uint16_t)(v) << BP_DMA_TCDn_ATTR_DSIZE) & BM_DMA_TCDn_ATTR_DSIZE)
 
 /*! @brief Set the DSIZE field to a new value. */
-#define BW_DMA_TCDn_ATTR_DSIZE(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_ATTR_ADDR(x, n), (HW_DMA_TCDn_ATTR_RD(x, n) & ~BM_DMA_TCDn_ATTR_DSIZE) | BF_DMA_TCDn_ATTR_DSIZE(v)))
+#define BW_DMA_TCDn_ATTR_DSIZE(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_ATTR_ADDR(x, n), hw_dma_tcdn_attr, (HW_DMA_TCDn_ATTR_RD(x, n) & ~BM_DMA_TCDn_ATTR_DSIZE) | BF_DMA_TCDn_ATTR_DSIZE(v)))
 /*@}*/
 
 /*!
@@ -3836,13 +3836,13 @@ typedef union _hw_dma_tcdn_attr
 #define BS_DMA_TCDn_ATTR_DMOD (5U)         /*!< Bit field size in bits for DMA_TCDn_ATTR_DMOD. */
 
 /*! @brief Read current value of the DMA_TCDn_ATTR_DMOD field. */
-#define BR_DMA_TCDn_ATTR_DMOD(x, n) (UNION_READ_FS(HW_DMA_TCDn_ATTR_ADDR(x, n), hw_dma_tcdn_attr, B.DMOD))
+#define BR_DMA_TCDn_ATTR_DMOD(x, n) (UNION_READ_BIT_FS(HW_DMA_TCDn_ATTR_ADDR(x, n), hw_dma_tcdn_attr, B.DMOD))
 
 /*! @brief Format value for bitfield DMA_TCDn_ATTR_DMOD. */
 #define BF_DMA_TCDn_ATTR_DMOD(v) ((uint16_t)((uint16_t)(v) << BP_DMA_TCDn_ATTR_DMOD) & BM_DMA_TCDn_ATTR_DMOD)
 
 /*! @brief Set the DMOD field to a new value. */
-#define BW_DMA_TCDn_ATTR_DMOD(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_ATTR_ADDR(x, n), (HW_DMA_TCDn_ATTR_RD(x, n) & ~BM_DMA_TCDn_ATTR_DMOD) | BF_DMA_TCDn_ATTR_DMOD(v)))
+#define BW_DMA_TCDn_ATTR_DMOD(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_ATTR_ADDR(x, n), hw_dma_tcdn_attr, (HW_DMA_TCDn_ATTR_RD(x, n) & ~BM_DMA_TCDn_ATTR_DMOD) | BF_DMA_TCDn_ATTR_DMOD(v)))
 /*@}*/
 
 /*!
@@ -3866,13 +3866,13 @@ typedef union _hw_dma_tcdn_attr
 #define BS_DMA_TCDn_ATTR_SSIZE (3U)        /*!< Bit field size in bits for DMA_TCDn_ATTR_SSIZE. */
 
 /*! @brief Read current value of the DMA_TCDn_ATTR_SSIZE field. */
-#define BR_DMA_TCDn_ATTR_SSIZE(x, n) (UNION_READ_FS(HW_DMA_TCDn_ATTR_ADDR(x, n), hw_dma_tcdn_attr, B.SSIZE))
+#define BR_DMA_TCDn_ATTR_SSIZE(x, n) (UNION_READ_BIT_FS(HW_DMA_TCDn_ATTR_ADDR(x, n), hw_dma_tcdn_attr, B.SSIZE))
 
 /*! @brief Format value for bitfield DMA_TCDn_ATTR_SSIZE. */
 #define BF_DMA_TCDn_ATTR_SSIZE(v) ((uint16_t)((uint16_t)(v) << BP_DMA_TCDn_ATTR_SSIZE) & BM_DMA_TCDn_ATTR_SSIZE)
 
 /*! @brief Set the SSIZE field to a new value. */
-#define BW_DMA_TCDn_ATTR_SSIZE(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_ATTR_ADDR(x, n), (HW_DMA_TCDn_ATTR_RD(x, n) & ~BM_DMA_TCDn_ATTR_SSIZE) | BF_DMA_TCDn_ATTR_SSIZE(v)))
+#define BW_DMA_TCDn_ATTR_SSIZE(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_ATTR_ADDR(x, n), hw_dma_tcdn_attr, (HW_DMA_TCDn_ATTR_RD(x, n) & ~BM_DMA_TCDn_ATTR_SSIZE) | BF_DMA_TCDn_ATTR_SSIZE(v)))
 /*@}*/
 
 /*!
@@ -3887,13 +3887,13 @@ typedef union _hw_dma_tcdn_attr
 #define BS_DMA_TCDn_ATTR_SMOD (5U)         /*!< Bit field size in bits for DMA_TCDn_ATTR_SMOD. */
 
 /*! @brief Read current value of the DMA_TCDn_ATTR_SMOD field. */
-#define BR_DMA_TCDn_ATTR_SMOD(x, n) (UNION_READ_FS(HW_DMA_TCDn_ATTR_ADDR(x, n), hw_dma_tcdn_attr, B.SMOD))
+#define BR_DMA_TCDn_ATTR_SMOD(x, n) (UNION_READ_BIT_FS(HW_DMA_TCDn_ATTR_ADDR(x, n), hw_dma_tcdn_attr, B.SMOD))
 
 /*! @brief Format value for bitfield DMA_TCDn_ATTR_SMOD. */
 #define BF_DMA_TCDn_ATTR_SMOD(v) ((uint16_t)((uint16_t)(v) << BP_DMA_TCDn_ATTR_SMOD) & BM_DMA_TCDn_ATTR_SMOD)
 
 /*! @brief Set the SMOD field to a new value. */
-#define BW_DMA_TCDn_ATTR_SMOD(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_ATTR_ADDR(x, n), (HW_DMA_TCDn_ATTR_RD(x, n) & ~BM_DMA_TCDn_ATTR_SMOD) | BF_DMA_TCDn_ATTR_SMOD(v)))
+#define BW_DMA_TCDn_ATTR_SMOD(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_ATTR_ADDR(x, n), hw_dma_tcdn_attr, (HW_DMA_TCDn_ATTR_RD(x, n) & ~BM_DMA_TCDn_ATTR_SMOD) | BF_DMA_TCDn_ATTR_SMOD(v)))
 /*@}*/
 /*******************************************************************************
  * HW_DMA_TCDn_NBYTES_MLNO - TCD Minor Byte Count (Minor Loop Disabled)
@@ -3961,13 +3961,13 @@ typedef union _hw_dma_tcdn_nbytes_mlno
 #define BS_DMA_TCDn_NBYTES_MLNO_NBYTES (32U) /*!< Bit field size in bits for DMA_TCDn_NBYTES_MLNO_NBYTES. */
 
 /*! @brief Read current value of the DMA_TCDn_NBYTES_MLNO_NBYTES field. */
-#define BR_DMA_TCDn_NBYTES_MLNO_NBYTES(x, n) (ADDRESS_READ32(HW_DMA_TCDn_NBYTES_MLNO_ADDR(x, n)))
+#define BR_DMA_TCDn_NBYTES_MLNO_NBYTES(x, n) (UNION_READ_REG_FS(HW_DMA_TCDn_NBYTES_MLNO_ADDR(x, n), hw_dma_tcdn_nbytes_mlno))
 
 /*! @brief Format value for bitfield DMA_TCDn_NBYTES_MLNO_NBYTES. */
 #define BF_DMA_TCDn_NBYTES_MLNO_NBYTES(v) ((uint32_t)((uint32_t)(v) << BP_DMA_TCDn_NBYTES_MLNO_NBYTES) & BM_DMA_TCDn_NBYTES_MLNO_NBYTES)
 
 /*! @brief Set the NBYTES field to a new value. */
-#define BW_DMA_TCDn_NBYTES_MLNO_NBYTES(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_NBYTES_MLNO_ADDR(x, n), v))
+#define BW_DMA_TCDn_NBYTES_MLNO_NBYTES(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_NBYTES_MLNO_ADDR(x, n), hw_dma_tcdn_nbytes_mlno, v))
 /*@}*/
 /*******************************************************************************
  * HW_DMA_TCDn_NBYTES_MLOFFNO - TCD Signed Minor Loop Offset (Minor Loop Enabled and Offset Disabled)
@@ -4037,13 +4037,13 @@ typedef union _hw_dma_tcdn_nbytes_mloffno
 #define BS_DMA_TCDn_NBYTES_MLOFFNO_NBYTES (30U) /*!< Bit field size in bits for DMA_TCDn_NBYTES_MLOFFNO_NBYTES. */
 
 /*! @brief Read current value of the DMA_TCDn_NBYTES_MLOFFNO_NBYTES field. */
-#define BR_DMA_TCDn_NBYTES_MLOFFNO_NBYTES(x, n) (UNION_READ_FS(HW_DMA_TCDn_NBYTES_MLOFFNO_ADDR(x, n), hw_dma_tcdn_nbytes_mloffno, B.NBYTES))
+#define BR_DMA_TCDn_NBYTES_MLOFFNO_NBYTES(x, n) (UNION_READ_BIT_FS(HW_DMA_TCDn_NBYTES_MLOFFNO_ADDR(x, n), hw_dma_tcdn_nbytes_mloffno, B.NBYTES))
 
 /*! @brief Format value for bitfield DMA_TCDn_NBYTES_MLOFFNO_NBYTES. */
 #define BF_DMA_TCDn_NBYTES_MLOFFNO_NBYTES(v) ((uint32_t)((uint32_t)(v) << BP_DMA_TCDn_NBYTES_MLOFFNO_NBYTES) & BM_DMA_TCDn_NBYTES_MLOFFNO_NBYTES)
 
 /*! @brief Set the NBYTES field to a new value. */
-#define BW_DMA_TCDn_NBYTES_MLOFFNO_NBYTES(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_NBYTES_MLOFFNO_ADDR(x, n), (HW_DMA_TCDn_NBYTES_MLOFFNO_RD(x, n) & ~BM_DMA_TCDn_NBYTES_MLOFFNO_NBYTES) | BF_DMA_TCDn_NBYTES_MLOFFNO_NBYTES(v)))
+#define BW_DMA_TCDn_NBYTES_MLOFFNO_NBYTES(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_NBYTES_MLOFFNO_ADDR(x, n), hw_dma_tcdn_nbytes_mloffno, (HW_DMA_TCDn_NBYTES_MLOFFNO_RD(x, n) & ~BM_DMA_TCDn_NBYTES_MLOFFNO_NBYTES) | BF_DMA_TCDn_NBYTES_MLOFFNO_NBYTES(v)))
 /*@}*/
 
 /*!
@@ -4166,13 +4166,13 @@ typedef union _hw_dma_tcdn_nbytes_mloffyes
 #define BS_DMA_TCDn_NBYTES_MLOFFYES_NBYTES (10U) /*!< Bit field size in bits for DMA_TCDn_NBYTES_MLOFFYES_NBYTES. */
 
 /*! @brief Read current value of the DMA_TCDn_NBYTES_MLOFFYES_NBYTES field. */
-#define BR_DMA_TCDn_NBYTES_MLOFFYES_NBYTES(x, n) (UNION_READ_FS(HW_DMA_TCDn_NBYTES_MLOFFYES_ADDR(x, n), hw_dma_tcdn_nbytes_mloffyes, B.NBYTES))
+#define BR_DMA_TCDn_NBYTES_MLOFFYES_NBYTES(x, n) (UNION_READ_BIT_FS(HW_DMA_TCDn_NBYTES_MLOFFYES_ADDR(x, n), hw_dma_tcdn_nbytes_mloffyes, B.NBYTES))
 
 /*! @brief Format value for bitfield DMA_TCDn_NBYTES_MLOFFYES_NBYTES. */
 #define BF_DMA_TCDn_NBYTES_MLOFFYES_NBYTES(v) ((uint32_t)((uint32_t)(v) << BP_DMA_TCDn_NBYTES_MLOFFYES_NBYTES) & BM_DMA_TCDn_NBYTES_MLOFFYES_NBYTES)
 
 /*! @brief Set the NBYTES field to a new value. */
-#define BW_DMA_TCDn_NBYTES_MLOFFYES_NBYTES(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_NBYTES_MLOFFYES_ADDR(x, n), (HW_DMA_TCDn_NBYTES_MLOFFYES_RD(x, n) & ~BM_DMA_TCDn_NBYTES_MLOFFYES_NBYTES) | BF_DMA_TCDn_NBYTES_MLOFFYES_NBYTES(v)))
+#define BW_DMA_TCDn_NBYTES_MLOFFYES_NBYTES(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_NBYTES_MLOFFYES_ADDR(x, n), hw_dma_tcdn_nbytes_mloffyes, (HW_DMA_TCDn_NBYTES_MLOFFYES_RD(x, n) & ~BM_DMA_TCDn_NBYTES_MLOFFYES_NBYTES) | BF_DMA_TCDn_NBYTES_MLOFFYES_NBYTES(v)))
 /*@}*/
 
 /*!
@@ -4184,13 +4184,13 @@ typedef union _hw_dma_tcdn_nbytes_mloffyes
 #define BS_DMA_TCDn_NBYTES_MLOFFYES_MLOFF (20U) /*!< Bit field size in bits for DMA_TCDn_NBYTES_MLOFFYES_MLOFF. */
 
 /*! @brief Read current value of the DMA_TCDn_NBYTES_MLOFFYES_MLOFF field. */
-#define BR_DMA_TCDn_NBYTES_MLOFFYES_MLOFF(x, n) (UNION_READ_FS(HW_DMA_TCDn_NBYTES_MLOFFYES_ADDR(x, n), hw_dma_tcdn_nbytes_mloffyes, B.MLOFF))
+#define BR_DMA_TCDn_NBYTES_MLOFFYES_MLOFF(x, n) (UNION_READ_BIT_FS(HW_DMA_TCDn_NBYTES_MLOFFYES_ADDR(x, n), hw_dma_tcdn_nbytes_mloffyes, B.MLOFF))
 
 /*! @brief Format value for bitfield DMA_TCDn_NBYTES_MLOFFYES_MLOFF. */
 #define BF_DMA_TCDn_NBYTES_MLOFFYES_MLOFF(v) ((uint32_t)((uint32_t)(v) << BP_DMA_TCDn_NBYTES_MLOFFYES_MLOFF) & BM_DMA_TCDn_NBYTES_MLOFFYES_MLOFF)
 
 /*! @brief Set the MLOFF field to a new value. */
-#define BW_DMA_TCDn_NBYTES_MLOFFYES_MLOFF(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_NBYTES_MLOFFYES_ADDR(x, n), (HW_DMA_TCDn_NBYTES_MLOFFYES_RD(x, n) & ~BM_DMA_TCDn_NBYTES_MLOFFYES_MLOFF) | BF_DMA_TCDn_NBYTES_MLOFFYES_MLOFF(v)))
+#define BW_DMA_TCDn_NBYTES_MLOFFYES_MLOFF(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_NBYTES_MLOFFYES_ADDR(x, n), hw_dma_tcdn_nbytes_mloffyes, (HW_DMA_TCDn_NBYTES_MLOFFYES_RD(x, n) & ~BM_DMA_TCDn_NBYTES_MLOFFYES_MLOFF) | BF_DMA_TCDn_NBYTES_MLOFFYES_MLOFF(v)))
 /*@}*/
 
 /*!
@@ -4294,13 +4294,13 @@ typedef union _hw_dma_tcdn_slast
 #define BS_DMA_TCDn_SLAST_SLAST (32U)      /*!< Bit field size in bits for DMA_TCDn_SLAST_SLAST. */
 
 /*! @brief Read current value of the DMA_TCDn_SLAST_SLAST field. */
-#define BR_DMA_TCDn_SLAST_SLAST(x, n) (ADDRESS_READ32(HW_DMA_TCDn_SLAST_ADDR(x, n)))
+#define BR_DMA_TCDn_SLAST_SLAST(x, n) (UNION_READ_REG_FS(HW_DMA_TCDn_SLAST_ADDR(x, n), hw_dma_tcdn_slast))
 
 /*! @brief Format value for bitfield DMA_TCDn_SLAST_SLAST. */
 #define BF_DMA_TCDn_SLAST_SLAST(v) ((uint32_t)((uint32_t)(v) << BP_DMA_TCDn_SLAST_SLAST) & BM_DMA_TCDn_SLAST_SLAST)
 
 /*! @brief Set the SLAST field to a new value. */
-#define BW_DMA_TCDn_SLAST_SLAST(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_SLAST_ADDR(x, n), v))
+#define BW_DMA_TCDn_SLAST_SLAST(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_SLAST_ADDR(x, n), hw_dma_tcdn_slast, v))
 /*@}*/
 /*******************************************************************************
  * HW_DMA_TCDn_DADDR - TCD Destination Address
@@ -4351,13 +4351,13 @@ typedef union _hw_dma_tcdn_daddr
 #define BS_DMA_TCDn_DADDR_DADDR (32U)      /*!< Bit field size in bits for DMA_TCDn_DADDR_DADDR. */
 
 /*! @brief Read current value of the DMA_TCDn_DADDR_DADDR field. */
-#define BR_DMA_TCDn_DADDR_DADDR(x, n) (ADDRESS_READ32(HW_DMA_TCDn_DADDR_ADDR(x, n)))
+#define BR_DMA_TCDn_DADDR_DADDR(x, n) (UNION_READ_REG_FS(HW_DMA_TCDn_DADDR_ADDR(x, n), hw_dma_tcdn_daddr))
 
 /*! @brief Format value for bitfield DMA_TCDn_DADDR_DADDR. */
 #define BF_DMA_TCDn_DADDR_DADDR(v) ((uint32_t)((uint32_t)(v) << BP_DMA_TCDn_DADDR_DADDR) & BM_DMA_TCDn_DADDR_DADDR)
 
 /*! @brief Set the DADDR field to a new value. */
-#define BW_DMA_TCDn_DADDR_DADDR(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_DADDR_ADDR(x, n), v))
+#define BW_DMA_TCDn_DADDR_DADDR(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_DADDR_ADDR(x, n), hw_dma_tcdn_daddr, v))
 /*@}*/
 /*******************************************************************************
  * HW_DMA_TCDn_DOFF - TCD Signed Destination Address Offset
@@ -4409,13 +4409,13 @@ typedef union _hw_dma_tcdn_doff
 #define BS_DMA_TCDn_DOFF_DOFF (16U)        /*!< Bit field size in bits for DMA_TCDn_DOFF_DOFF. */
 
 /*! @brief Read current value of the DMA_TCDn_DOFF_DOFF field. */
-#define BR_DMA_TCDn_DOFF_DOFF(x, n) (ADDRESS_READ32(HW_DMA_TCDn_DOFF_ADDR(x, n)))
+#define BR_DMA_TCDn_DOFF_DOFF(x, n) (UNION_READ_REG_FS(HW_DMA_TCDn_DOFF_ADDR(x, n), hw_dma_tcdn_doff))
 
 /*! @brief Format value for bitfield DMA_TCDn_DOFF_DOFF. */
 #define BF_DMA_TCDn_DOFF_DOFF(v) ((uint16_t)((uint16_t)(v) << BP_DMA_TCDn_DOFF_DOFF) & BM_DMA_TCDn_DOFF_DOFF)
 
 /*! @brief Set the DOFF field to a new value. */
-#define BW_DMA_TCDn_DOFF_DOFF(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_DOFF_ADDR(x, n), v))
+#define BW_DMA_TCDn_DOFF_DOFF(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_DOFF_ADDR(x, n), hw_dma_tcdn_doff, v))
 /*@}*/
 /*******************************************************************************
  * HW_DMA_TCDn_CITER_ELINKNO - TCD Current Minor Loop Link, Major Loop Count (Channel Linking Disabled)
@@ -4480,13 +4480,13 @@ typedef union _hw_dma_tcdn_citer_elinkno
 #define BS_DMA_TCDn_CITER_ELINKNO_CITER (15U) /*!< Bit field size in bits for DMA_TCDn_CITER_ELINKNO_CITER. */
 
 /*! @brief Read current value of the DMA_TCDn_CITER_ELINKNO_CITER field. */
-#define BR_DMA_TCDn_CITER_ELINKNO_CITER(x, n) (UNION_READ_FS(HW_DMA_TCDn_CITER_ELINKNO_ADDR(x, n), hw_dma_tcdn_citer_elinkno, B.CITER))
+#define BR_DMA_TCDn_CITER_ELINKNO_CITER(x, n) (UNION_READ_BIT_FS(HW_DMA_TCDn_CITER_ELINKNO_ADDR(x, n), hw_dma_tcdn_citer_elinkno, B.CITER))
 
 /*! @brief Format value for bitfield DMA_TCDn_CITER_ELINKNO_CITER. */
 #define BF_DMA_TCDn_CITER_ELINKNO_CITER(v) ((uint16_t)((uint16_t)(v) << BP_DMA_TCDn_CITER_ELINKNO_CITER) & BM_DMA_TCDn_CITER_ELINKNO_CITER)
 
 /*! @brief Set the CITER field to a new value. */
-#define BW_DMA_TCDn_CITER_ELINKNO_CITER(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_CITER_ELINKNO_ADDR(x, n), (HW_DMA_TCDn_CITER_ELINKNO_RD(x, n) & ~BM_DMA_TCDn_CITER_ELINKNO_CITER) | BF_DMA_TCDn_CITER_ELINKNO_CITER(v)))
+#define BW_DMA_TCDn_CITER_ELINKNO_CITER(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_CITER_ELINKNO_ADDR(x, n), hw_dma_tcdn_citer_elinkno, (HW_DMA_TCDn_CITER_ELINKNO_RD(x, n) & ~BM_DMA_TCDn_CITER_ELINKNO_CITER) | BF_DMA_TCDn_CITER_ELINKNO_CITER(v)))
 /*@}*/
 
 /*!
@@ -4583,13 +4583,13 @@ typedef union _hw_dma_tcdn_citer_elinkyes
 #define BS_DMA_TCDn_CITER_ELINKYES_CITER (9U) /*!< Bit field size in bits for DMA_TCDn_CITER_ELINKYES_CITER. */
 
 /*! @brief Read current value of the DMA_TCDn_CITER_ELINKYES_CITER field. */
-#define BR_DMA_TCDn_CITER_ELINKYES_CITER(x, n) (UNION_READ_FS(HW_DMA_TCDn_CITER_ELINKYES_ADDR(x, n), hw_dma_tcdn_citer_elinkyes, B.CITER))
+#define BR_DMA_TCDn_CITER_ELINKYES_CITER(x, n) (UNION_READ_BIT_FS(HW_DMA_TCDn_CITER_ELINKYES_ADDR(x, n), hw_dma_tcdn_citer_elinkyes, B.CITER))
 
 /*! @brief Format value for bitfield DMA_TCDn_CITER_ELINKYES_CITER. */
 #define BF_DMA_TCDn_CITER_ELINKYES_CITER(v) ((uint16_t)((uint16_t)(v) << BP_DMA_TCDn_CITER_ELINKYES_CITER) & BM_DMA_TCDn_CITER_ELINKYES_CITER)
 
 /*! @brief Set the CITER field to a new value. */
-#define BW_DMA_TCDn_CITER_ELINKYES_CITER(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_CITER_ELINKYES_ADDR(x, n), (HW_DMA_TCDn_CITER_ELINKYES_RD(x, n) & ~BM_DMA_TCDn_CITER_ELINKYES_CITER) | BF_DMA_TCDn_CITER_ELINKYES_CITER(v)))
+#define BW_DMA_TCDn_CITER_ELINKYES_CITER(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_CITER_ELINKYES_ADDR(x, n), hw_dma_tcdn_citer_elinkyes, (HW_DMA_TCDn_CITER_ELINKYES_RD(x, n) & ~BM_DMA_TCDn_CITER_ELINKYES_CITER) | BF_DMA_TCDn_CITER_ELINKYES_CITER(v)))
 /*@}*/
 
 /*!
@@ -4605,13 +4605,13 @@ typedef union _hw_dma_tcdn_citer_elinkyes
 #define BS_DMA_TCDn_CITER_ELINKYES_LINKCH (4U) /*!< Bit field size in bits for DMA_TCDn_CITER_ELINKYES_LINKCH. */
 
 /*! @brief Read current value of the DMA_TCDn_CITER_ELINKYES_LINKCH field. */
-#define BR_DMA_TCDn_CITER_ELINKYES_LINKCH(x, n) (UNION_READ_FS(HW_DMA_TCDn_CITER_ELINKYES_ADDR(x, n), hw_dma_tcdn_citer_elinkyes, B.LINKCH))
+#define BR_DMA_TCDn_CITER_ELINKYES_LINKCH(x, n) (UNION_READ_BIT_FS(HW_DMA_TCDn_CITER_ELINKYES_ADDR(x, n), hw_dma_tcdn_citer_elinkyes, B.LINKCH))
 
 /*! @brief Format value for bitfield DMA_TCDn_CITER_ELINKYES_LINKCH. */
 #define BF_DMA_TCDn_CITER_ELINKYES_LINKCH(v) ((uint16_t)((uint16_t)(v) << BP_DMA_TCDn_CITER_ELINKYES_LINKCH) & BM_DMA_TCDn_CITER_ELINKYES_LINKCH)
 
 /*! @brief Set the LINKCH field to a new value. */
-#define BW_DMA_TCDn_CITER_ELINKYES_LINKCH(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_CITER_ELINKYES_ADDR(x, n), (HW_DMA_TCDn_CITER_ELINKYES_RD(x, n) & ~BM_DMA_TCDn_CITER_ELINKYES_LINKCH) | BF_DMA_TCDn_CITER_ELINKYES_LINKCH(v)))
+#define BW_DMA_TCDn_CITER_ELINKYES_LINKCH(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_CITER_ELINKYES_ADDR(x, n), hw_dma_tcdn_citer_elinkyes, (HW_DMA_TCDn_CITER_ELINKYES_RD(x, n) & ~BM_DMA_TCDn_CITER_ELINKYES_LINKCH) | BF_DMA_TCDn_CITER_ELINKYES_LINKCH(v)))
 /*@}*/
 
 /*!
@@ -4703,13 +4703,13 @@ typedef union _hw_dma_tcdn_dlastsga
 #define BS_DMA_TCDn_DLASTSGA_DLASTSGA (32U) /*!< Bit field size in bits for DMA_TCDn_DLASTSGA_DLASTSGA. */
 
 /*! @brief Read current value of the DMA_TCDn_DLASTSGA_DLASTSGA field. */
-#define BR_DMA_TCDn_DLASTSGA_DLASTSGA(x, n) (ADDRESS_READ32(HW_DMA_TCDn_DLASTSGA_ADDR(x, n)))
+#define BR_DMA_TCDn_DLASTSGA_DLASTSGA(x, n) (UNION_READ_REG_FS(HW_DMA_TCDn_DLASTSGA_ADDR(x, n), hw_dma_tcdn_dlastsga))
 
 /*! @brief Format value for bitfield DMA_TCDn_DLASTSGA_DLASTSGA. */
 #define BF_DMA_TCDn_DLASTSGA_DLASTSGA(v) ((uint32_t)((uint32_t)(v) << BP_DMA_TCDn_DLASTSGA_DLASTSGA) & BM_DMA_TCDn_DLASTSGA_DLASTSGA)
 
 /*! @brief Set the DLASTSGA field to a new value. */
-#define BW_DMA_TCDn_DLASTSGA_DLASTSGA(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_DLASTSGA_ADDR(x, n), v))
+#define BW_DMA_TCDn_DLASTSGA_DLASTSGA(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_DLASTSGA_ADDR(x, n), hw_dma_tcdn_dlastsga, v))
 /*@}*/
 /*******************************************************************************
  * HW_DMA_TCDn_CSR - TCD Control and Status
@@ -4987,13 +4987,13 @@ typedef union _hw_dma_tcdn_csr
 #define BS_DMA_TCDn_CSR_MAJORLINKCH (4U)   /*!< Bit field size in bits for DMA_TCDn_CSR_MAJORLINKCH. */
 
 /*! @brief Read current value of the DMA_TCDn_CSR_MAJORLINKCH field. */
-#define BR_DMA_TCDn_CSR_MAJORLINKCH(x, n) (UNION_READ_FS(HW_DMA_TCDn_CSR_ADDR(x, n), hw_dma_tcdn_csr, B.MAJORLINKCH))
+#define BR_DMA_TCDn_CSR_MAJORLINKCH(x, n) (UNION_READ_BIT_FS(HW_DMA_TCDn_CSR_ADDR(x, n), hw_dma_tcdn_csr, B.MAJORLINKCH))
 
 /*! @brief Format value for bitfield DMA_TCDn_CSR_MAJORLINKCH. */
 #define BF_DMA_TCDn_CSR_MAJORLINKCH(v) ((uint16_t)((uint16_t)(v) << BP_DMA_TCDn_CSR_MAJORLINKCH) & BM_DMA_TCDn_CSR_MAJORLINKCH)
 
 /*! @brief Set the MAJORLINKCH field to a new value. */
-#define BW_DMA_TCDn_CSR_MAJORLINKCH(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_CSR_ADDR(x, n), (HW_DMA_TCDn_CSR_RD(x, n) & ~BM_DMA_TCDn_CSR_MAJORLINKCH) | BF_DMA_TCDn_CSR_MAJORLINKCH(v)))
+#define BW_DMA_TCDn_CSR_MAJORLINKCH(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_CSR_ADDR(x, n), hw_dma_tcdn_csr, (HW_DMA_TCDn_CSR_RD(x, n) & ~BM_DMA_TCDn_CSR_MAJORLINKCH) | BF_DMA_TCDn_CSR_MAJORLINKCH(v)))
 /*@}*/
 
 /*!
@@ -5020,13 +5020,13 @@ typedef union _hw_dma_tcdn_csr
 #define BS_DMA_TCDn_CSR_BWC  (2U)          /*!< Bit field size in bits for DMA_TCDn_CSR_BWC. */
 
 /*! @brief Read current value of the DMA_TCDn_CSR_BWC field. */
-#define BR_DMA_TCDn_CSR_BWC(x, n) (UNION_READ_FS(HW_DMA_TCDn_CSR_ADDR(x, n), hw_dma_tcdn_csr, B.BWC))
+#define BR_DMA_TCDn_CSR_BWC(x, n) (UNION_READ_BIT_FS(HW_DMA_TCDn_CSR_ADDR(x, n), hw_dma_tcdn_csr, B.BWC))
 
 /*! @brief Format value for bitfield DMA_TCDn_CSR_BWC. */
 #define BF_DMA_TCDn_CSR_BWC(v) ((uint16_t)((uint16_t)(v) << BP_DMA_TCDn_CSR_BWC) & BM_DMA_TCDn_CSR_BWC)
 
 /*! @brief Set the BWC field to a new value. */
-#define BW_DMA_TCDn_CSR_BWC(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_CSR_ADDR(x, n), (HW_DMA_TCDn_CSR_RD(x, n) & ~BM_DMA_TCDn_CSR_BWC) | BF_DMA_TCDn_CSR_BWC(v)))
+#define BW_DMA_TCDn_CSR_BWC(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_CSR_ADDR(x, n), hw_dma_tcdn_csr, (HW_DMA_TCDn_CSR_RD(x, n) & ~BM_DMA_TCDn_CSR_BWC) | BF_DMA_TCDn_CSR_BWC(v)))
 /*@}*/
 /*******************************************************************************
  * HW_DMA_TCDn_BITER_ELINKNO - TCD Beginning Minor Loop Link, Major Loop Count (Channel Linking Disabled)
@@ -5090,13 +5090,13 @@ typedef union _hw_dma_tcdn_biter_elinkno
 #define BS_DMA_TCDn_BITER_ELINKNO_BITER (15U) /*!< Bit field size in bits for DMA_TCDn_BITER_ELINKNO_BITER. */
 
 /*! @brief Read current value of the DMA_TCDn_BITER_ELINKNO_BITER field. */
-#define BR_DMA_TCDn_BITER_ELINKNO_BITER(x, n) (UNION_READ_FS(HW_DMA_TCDn_BITER_ELINKNO_ADDR(x, n), hw_dma_tcdn_biter_elinkno, B.BITER))
+#define BR_DMA_TCDn_BITER_ELINKNO_BITER(x, n) (UNION_READ_BIT_FS(HW_DMA_TCDn_BITER_ELINKNO_ADDR(x, n), hw_dma_tcdn_biter_elinkno, B.BITER))
 
 /*! @brief Format value for bitfield DMA_TCDn_BITER_ELINKNO_BITER. */
 #define BF_DMA_TCDn_BITER_ELINKNO_BITER(v) ((uint16_t)((uint16_t)(v) << BP_DMA_TCDn_BITER_ELINKNO_BITER) & BM_DMA_TCDn_BITER_ELINKNO_BITER)
 
 /*! @brief Set the BITER field to a new value. */
-#define BW_DMA_TCDn_BITER_ELINKNO_BITER(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_BITER_ELINKNO_ADDR(x, n), (HW_DMA_TCDn_BITER_ELINKNO_RD(x, n) & ~BM_DMA_TCDn_BITER_ELINKNO_BITER) | BF_DMA_TCDn_BITER_ELINKNO_BITER(v)))
+#define BW_DMA_TCDn_BITER_ELINKNO_BITER(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_BITER_ELINKNO_ADDR(x, n), hw_dma_tcdn_biter_elinkno, (HW_DMA_TCDn_BITER_ELINKNO_RD(x, n) & ~BM_DMA_TCDn_BITER_ELINKNO_BITER) | BF_DMA_TCDn_BITER_ELINKNO_BITER(v)))
 /*@}*/
 
 /*!
@@ -5195,13 +5195,13 @@ typedef union _hw_dma_tcdn_biter_elinkyes
 #define BS_DMA_TCDn_BITER_ELINKYES_BITER (9U) /*!< Bit field size in bits for DMA_TCDn_BITER_ELINKYES_BITER. */
 
 /*! @brief Read current value of the DMA_TCDn_BITER_ELINKYES_BITER field. */
-#define BR_DMA_TCDn_BITER_ELINKYES_BITER(x, n) (UNION_READ_FS(HW_DMA_TCDn_BITER_ELINKYES_ADDR(x, n), hw_dma_tcdn_biter_elinkyes, B.BITER))
+#define BR_DMA_TCDn_BITER_ELINKYES_BITER(x, n) (UNION_READ_BIT_FS(HW_DMA_TCDn_BITER_ELINKYES_ADDR(x, n), hw_dma_tcdn_biter_elinkyes, B.BITER))
 
 /*! @brief Format value for bitfield DMA_TCDn_BITER_ELINKYES_BITER. */
 #define BF_DMA_TCDn_BITER_ELINKYES_BITER(v) ((uint16_t)((uint16_t)(v) << BP_DMA_TCDn_BITER_ELINKYES_BITER) & BM_DMA_TCDn_BITER_ELINKYES_BITER)
 
 /*! @brief Set the BITER field to a new value. */
-#define BW_DMA_TCDn_BITER_ELINKYES_BITER(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_BITER_ELINKYES_ADDR(x, n), (HW_DMA_TCDn_BITER_ELINKYES_RD(x, n) & ~BM_DMA_TCDn_BITER_ELINKYES_BITER) | BF_DMA_TCDn_BITER_ELINKYES_BITER(v)))
+#define BW_DMA_TCDn_BITER_ELINKYES_BITER(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_BITER_ELINKYES_ADDR(x, n), hw_dma_tcdn_biter_elinkyes, (HW_DMA_TCDn_BITER_ELINKYES_RD(x, n) & ~BM_DMA_TCDn_BITER_ELINKYES_BITER) | BF_DMA_TCDn_BITER_ELINKYES_BITER(v)))
 /*@}*/
 
 /*!
@@ -5221,13 +5221,13 @@ typedef union _hw_dma_tcdn_biter_elinkyes
 #define BS_DMA_TCDn_BITER_ELINKYES_LINKCH (4U) /*!< Bit field size in bits for DMA_TCDn_BITER_ELINKYES_LINKCH. */
 
 /*! @brief Read current value of the DMA_TCDn_BITER_ELINKYES_LINKCH field. */
-#define BR_DMA_TCDn_BITER_ELINKYES_LINKCH(x, n) (UNION_READ_FS(HW_DMA_TCDn_BITER_ELINKYES_ADDR(x, n), hw_dma_tcdn_biter_elinkyes, B.LINKCH))
+#define BR_DMA_TCDn_BITER_ELINKYES_LINKCH(x, n) (UNION_READ_BIT_FS(HW_DMA_TCDn_BITER_ELINKYES_ADDR(x, n), hw_dma_tcdn_biter_elinkyes, B.LINKCH))
 
 /*! @brief Format value for bitfield DMA_TCDn_BITER_ELINKYES_LINKCH. */
 #define BF_DMA_TCDn_BITER_ELINKYES_LINKCH(v) ((uint16_t)((uint16_t)(v) << BP_DMA_TCDn_BITER_ELINKYES_LINKCH) & BM_DMA_TCDn_BITER_ELINKYES_LINKCH)
 
 /*! @brief Set the LINKCH field to a new value. */
-#define BW_DMA_TCDn_BITER_ELINKYES_LINKCH(x, n, v) (ADDRESS_WRITE32(HW_DMA_TCDn_BITER_ELINKYES_ADDR(x, n), (HW_DMA_TCDn_BITER_ELINKYES_RD(x, n) & ~BM_DMA_TCDn_BITER_ELINKYES_LINKCH) | BF_DMA_TCDn_BITER_ELINKYES_LINKCH(v)))
+#define BW_DMA_TCDn_BITER_ELINKYES_LINKCH(x, n, v) (UNION_WRITE_REG_FS(HW_DMA_TCDn_BITER_ELINKYES_ADDR(x, n), hw_dma_tcdn_biter_elinkyes, (HW_DMA_TCDn_BITER_ELINKYES_RD(x, n) & ~BM_DMA_TCDn_BITER_ELINKYES_LINKCH) | BF_DMA_TCDn_BITER_ELINKYES_LINKCH(v)))
 /*@}*/
 
 /*!

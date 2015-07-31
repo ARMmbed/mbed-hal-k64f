@@ -254,13 +254,13 @@ typedef union _hw_mcg_c1
 #define BS_MCG_C1_FRDIV      (3U)          /*!< Bit field size in bits for MCG_C1_FRDIV. */
 
 /*! @brief Read current value of the MCG_C1_FRDIV field. */
-#define BR_MCG_C1_FRDIV(x)   (UNION_READ_FS(HW_MCG_C1_ADDR(x), hw_mcg_c1, B.FRDIV))
+#define BR_MCG_C1_FRDIV(x)   (UNION_READ_BIT_FS(HW_MCG_C1_ADDR(x), hw_mcg_c1, B.FRDIV))
 
 /*! @brief Format value for bitfield MCG_C1_FRDIV. */
 #define BF_MCG_C1_FRDIV(v)   ((uint8_t)((uint8_t)(v) << BP_MCG_C1_FRDIV) & BM_MCG_C1_FRDIV)
 
 /*! @brief Set the FRDIV field to a new value. */
-#define BW_MCG_C1_FRDIV(x, v) (ADDRESS_WRITE32(HW_MCG_C1_ADDR(x), (HW_MCG_C1_RD(x) & ~BM_MCG_C1_FRDIV) | BF_MCG_C1_FRDIV(v)))
+#define BW_MCG_C1_FRDIV(x, v) (UNION_WRITE_REG_FS(HW_MCG_C1_ADDR(x), hw_mcg_c1, (HW_MCG_C1_RD(x) & ~BM_MCG_C1_FRDIV) | BF_MCG_C1_FRDIV(v)))
 /*@}*/
 
 /*!
@@ -281,13 +281,13 @@ typedef union _hw_mcg_c1
 #define BS_MCG_C1_CLKS       (2U)          /*!< Bit field size in bits for MCG_C1_CLKS. */
 
 /*! @brief Read current value of the MCG_C1_CLKS field. */
-#define BR_MCG_C1_CLKS(x)    (UNION_READ_FS(HW_MCG_C1_ADDR(x), hw_mcg_c1, B.CLKS))
+#define BR_MCG_C1_CLKS(x)    (UNION_READ_BIT_FS(HW_MCG_C1_ADDR(x), hw_mcg_c1, B.CLKS))
 
 /*! @brief Format value for bitfield MCG_C1_CLKS. */
 #define BF_MCG_C1_CLKS(v)    ((uint8_t)((uint8_t)(v) << BP_MCG_C1_CLKS) & BM_MCG_C1_CLKS)
 
 /*! @brief Set the CLKS field to a new value. */
-#define BW_MCG_C1_CLKS(x, v) (ADDRESS_WRITE32(HW_MCG_C1_ADDR(x), (HW_MCG_C1_RD(x) & ~BM_MCG_C1_CLKS) | BF_MCG_C1_CLKS(v)))
+#define BW_MCG_C1_CLKS(x, v) (UNION_WRITE_REG_FS(HW_MCG_C1_ADDR(x), hw_mcg_c1, (HW_MCG_C1_RD(x) & ~BM_MCG_C1_CLKS) | BF_MCG_C1_CLKS(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -451,13 +451,13 @@ typedef union _hw_mcg_c2
 #define BS_MCG_C2_RANGE      (2U)          /*!< Bit field size in bits for MCG_C2_RANGE. */
 
 /*! @brief Read current value of the MCG_C2_RANGE field. */
-#define BR_MCG_C2_RANGE(x)   (UNION_READ_FS(HW_MCG_C2_ADDR(x), hw_mcg_c2, B.RANGE))
+#define BR_MCG_C2_RANGE(x)   (UNION_READ_BIT_FS(HW_MCG_C2_ADDR(x), hw_mcg_c2, B.RANGE))
 
 /*! @brief Format value for bitfield MCG_C2_RANGE. */
 #define BF_MCG_C2_RANGE(v)   ((uint8_t)((uint8_t)(v) << BP_MCG_C2_RANGE) & BM_MCG_C2_RANGE)
 
 /*! @brief Set the RANGE field to a new value. */
-#define BW_MCG_C2_RANGE(x, v) (ADDRESS_WRITE32(HW_MCG_C2_ADDR(x), (HW_MCG_C2_RD(x) & ~BM_MCG_C2_RANGE) | BF_MCG_C2_RANGE(v)))
+#define BW_MCG_C2_RANGE(x, v) (UNION_WRITE_REG_FS(HW_MCG_C2_ADDR(x), hw_mcg_c2, (HW_MCG_C2_RD(x) & ~BM_MCG_C2_RANGE) | BF_MCG_C2_RANGE(v)))
 /*@}*/
 
 /*!
@@ -567,13 +567,13 @@ typedef union _hw_mcg_c3
 #define BS_MCG_C3_SCTRIM     (8U)          /*!< Bit field size in bits for MCG_C3_SCTRIM. */
 
 /*! @brief Read current value of the MCG_C3_SCTRIM field. */
-#define BR_MCG_C3_SCTRIM(x)  (ADDRESS_READ32(HW_MCG_C3_ADDR(x)))
+#define BR_MCG_C3_SCTRIM(x)  (UNION_READ_REG_FS(HW_MCG_C3_ADDR(x), hw_mcg_c3))
 
 /*! @brief Format value for bitfield MCG_C3_SCTRIM. */
 #define BF_MCG_C3_SCTRIM(v)  ((uint8_t)((uint8_t)(v) << BP_MCG_C3_SCTRIM) & BM_MCG_C3_SCTRIM)
 
 /*! @brief Set the SCTRIM field to a new value. */
-#define BW_MCG_C3_SCTRIM(x, v) (ADDRESS_WRITE32(HW_MCG_C3_ADDR(x), v))
+#define BW_MCG_C3_SCTRIM(x, v) (UNION_WRITE_REG_FS(HW_MCG_C3_ADDR(x), hw_mcg_c3, v))
 /*@}*/
 
 /*******************************************************************************
@@ -662,13 +662,13 @@ typedef union _hw_mcg_c4
 #define BS_MCG_C4_FCTRIM     (4U)          /*!< Bit field size in bits for MCG_C4_FCTRIM. */
 
 /*! @brief Read current value of the MCG_C4_FCTRIM field. */
-#define BR_MCG_C4_FCTRIM(x)  (UNION_READ_FS(HW_MCG_C4_ADDR(x), hw_mcg_c4, B.FCTRIM))
+#define BR_MCG_C4_FCTRIM(x)  (UNION_READ_BIT_FS(HW_MCG_C4_ADDR(x), hw_mcg_c4, B.FCTRIM))
 
 /*! @brief Format value for bitfield MCG_C4_FCTRIM. */
 #define BF_MCG_C4_FCTRIM(v)  ((uint8_t)((uint8_t)(v) << BP_MCG_C4_FCTRIM) & BM_MCG_C4_FCTRIM)
 
 /*! @brief Set the FCTRIM field to a new value. */
-#define BW_MCG_C4_FCTRIM(x, v) (ADDRESS_WRITE32(HW_MCG_C4_ADDR(x), (HW_MCG_C4_RD(x) & ~BM_MCG_C4_FCTRIM) | BF_MCG_C4_FCTRIM(v)))
+#define BW_MCG_C4_FCTRIM(x, v) (UNION_WRITE_REG_FS(HW_MCG_C4_ADDR(x), hw_mcg_c4, (HW_MCG_C4_RD(x) & ~BM_MCG_C4_FCTRIM) | BF_MCG_C4_FCTRIM(v)))
 /*@}*/
 
 /*!
@@ -692,13 +692,13 @@ typedef union _hw_mcg_c4
 #define BS_MCG_C4_DRST_DRS   (2U)          /*!< Bit field size in bits for MCG_C4_DRST_DRS. */
 
 /*! @brief Read current value of the MCG_C4_DRST_DRS field. */
-#define BR_MCG_C4_DRST_DRS(x) (UNION_READ_FS(HW_MCG_C4_ADDR(x), hw_mcg_c4, B.DRST_DRS))
+#define BR_MCG_C4_DRST_DRS(x) (UNION_READ_BIT_FS(HW_MCG_C4_ADDR(x), hw_mcg_c4, B.DRST_DRS))
 
 /*! @brief Format value for bitfield MCG_C4_DRST_DRS. */
 #define BF_MCG_C4_DRST_DRS(v) ((uint8_t)((uint8_t)(v) << BP_MCG_C4_DRST_DRS) & BM_MCG_C4_DRST_DRS)
 
 /*! @brief Set the DRST_DRS field to a new value. */
-#define BW_MCG_C4_DRST_DRS(x, v) (ADDRESS_WRITE32(HW_MCG_C4_ADDR(x), (HW_MCG_C4_RD(x) & ~BM_MCG_C4_DRST_DRS) | BF_MCG_C4_DRST_DRS(v)))
+#define BW_MCG_C4_DRST_DRS(x, v) (UNION_WRITE_REG_FS(HW_MCG_C4_ADDR(x), hw_mcg_c4, (HW_MCG_C4_RD(x) & ~BM_MCG_C4_DRST_DRS) | BF_MCG_C4_DRST_DRS(v)))
 /*@}*/
 
 /*!
@@ -791,13 +791,13 @@ typedef union _hw_mcg_c5
 #define BS_MCG_C5_PRDIV0     (5U)          /*!< Bit field size in bits for MCG_C5_PRDIV0. */
 
 /*! @brief Read current value of the MCG_C5_PRDIV0 field. */
-#define BR_MCG_C5_PRDIV0(x)  (UNION_READ_FS(HW_MCG_C5_ADDR(x), hw_mcg_c5, B.PRDIV0))
+#define BR_MCG_C5_PRDIV0(x)  (UNION_READ_BIT_FS(HW_MCG_C5_ADDR(x), hw_mcg_c5, B.PRDIV0))
 
 /*! @brief Format value for bitfield MCG_C5_PRDIV0. */
 #define BF_MCG_C5_PRDIV0(v)  ((uint8_t)((uint8_t)(v) << BP_MCG_C5_PRDIV0) & BM_MCG_C5_PRDIV0)
 
 /*! @brief Set the PRDIV0 field to a new value. */
-#define BW_MCG_C5_PRDIV0(x, v) (ADDRESS_WRITE32(HW_MCG_C5_ADDR(x), (HW_MCG_C5_RD(x) & ~BM_MCG_C5_PRDIV0) | BF_MCG_C5_PRDIV0(v)))
+#define BW_MCG_C5_PRDIV0(x, v) (UNION_WRITE_REG_FS(HW_MCG_C5_ADDR(x), hw_mcg_c5, (HW_MCG_C5_RD(x) & ~BM_MCG_C5_PRDIV0) | BF_MCG_C5_PRDIV0(v)))
 /*@}*/
 
 /*!
@@ -914,13 +914,13 @@ typedef union _hw_mcg_c6
 #define BS_MCG_C6_VDIV0      (5U)          /*!< Bit field size in bits for MCG_C6_VDIV0. */
 
 /*! @brief Read current value of the MCG_C6_VDIV0 field. */
-#define BR_MCG_C6_VDIV0(x)   (UNION_READ_FS(HW_MCG_C6_ADDR(x), hw_mcg_c6, B.VDIV0))
+#define BR_MCG_C6_VDIV0(x)   (UNION_READ_BIT_FS(HW_MCG_C6_ADDR(x), hw_mcg_c6, B.VDIV0))
 
 /*! @brief Format value for bitfield MCG_C6_VDIV0. */
 #define BF_MCG_C6_VDIV0(v)   ((uint8_t)((uint8_t)(v) << BP_MCG_C6_VDIV0) & BM_MCG_C6_VDIV0)
 
 /*! @brief Set the VDIV0 field to a new value. */
-#define BW_MCG_C6_VDIV0(x, v) (ADDRESS_WRITE32(HW_MCG_C6_ADDR(x), (HW_MCG_C6_RD(x) & ~BM_MCG_C6_VDIV0) | BF_MCG_C6_VDIV0(v)))
+#define BW_MCG_C6_VDIV0(x, v) (UNION_WRITE_REG_FS(HW_MCG_C6_ADDR(x), hw_mcg_c6, (HW_MCG_C6_RD(x) & ~BM_MCG_C6_VDIV0) | BF_MCG_C6_VDIV0(v)))
 /*@}*/
 
 /*!
@@ -1109,7 +1109,7 @@ typedef union _hw_mcg_s
 #define BS_MCG_S_CLKST       (2U)          /*!< Bit field size in bits for MCG_S_CLKST. */
 
 /*! @brief Read current value of the MCG_S_CLKST field. */
-#define BR_MCG_S_CLKST(x)    (UNION_READ_FS(HW_MCG_S_ADDR(x), hw_mcg_s, B.CLKST))
+#define BR_MCG_S_CLKST(x)    (UNION_READ_BIT_FS(HW_MCG_S_ADDR(x), hw_mcg_s, B.CLKST))
 /*@}*/
 
 /*!
@@ -1302,13 +1302,13 @@ typedef union _hw_mcg_sc
 #define BS_MCG_SC_FCRDIV     (3U)          /*!< Bit field size in bits for MCG_SC_FCRDIV. */
 
 /*! @brief Read current value of the MCG_SC_FCRDIV field. */
-#define BR_MCG_SC_FCRDIV(x)  (UNION_READ_FS(HW_MCG_SC_ADDR(x), hw_mcg_sc, B.FCRDIV))
+#define BR_MCG_SC_FCRDIV(x)  (UNION_READ_BIT_FS(HW_MCG_SC_ADDR(x), hw_mcg_sc, B.FCRDIV))
 
 /*! @brief Format value for bitfield MCG_SC_FCRDIV. */
 #define BF_MCG_SC_FCRDIV(v)  ((uint8_t)((uint8_t)(v) << BP_MCG_SC_FCRDIV) & BM_MCG_SC_FCRDIV)
 
 /*! @brief Set the FCRDIV field to a new value. */
-#define BW_MCG_SC_FCRDIV(x, v) (ADDRESS_WRITE32(HW_MCG_SC_ADDR(x), (HW_MCG_SC_RD(x) & ~BM_MCG_SC_FCRDIV) | BF_MCG_SC_FCRDIV(v)))
+#define BW_MCG_SC_FCRDIV(x, v) (UNION_WRITE_REG_FS(HW_MCG_SC_ADDR(x), hw_mcg_sc, (HW_MCG_SC_RD(x) & ~BM_MCG_SC_FCRDIV) | BF_MCG_SC_FCRDIV(v)))
 /*@}*/
 
 /*!
@@ -1468,13 +1468,13 @@ typedef union _hw_mcg_atcvh
 #define BS_MCG_ATCVH_ATCVH   (8U)          /*!< Bit field size in bits for MCG_ATCVH_ATCVH. */
 
 /*! @brief Read current value of the MCG_ATCVH_ATCVH field. */
-#define BR_MCG_ATCVH_ATCVH(x) (ADDRESS_READ32(HW_MCG_ATCVH_ADDR(x)))
+#define BR_MCG_ATCVH_ATCVH(x) (UNION_READ_REG_FS(HW_MCG_ATCVH_ADDR(x), hw_mcg_atcvh))
 
 /*! @brief Format value for bitfield MCG_ATCVH_ATCVH. */
 #define BF_MCG_ATCVH_ATCVH(v) ((uint8_t)((uint8_t)(v) << BP_MCG_ATCVH_ATCVH) & BM_MCG_ATCVH_ATCVH)
 
 /*! @brief Set the ATCVH field to a new value. */
-#define BW_MCG_ATCVH_ATCVH(x, v) (ADDRESS_WRITE32(HW_MCG_ATCVH_ADDR(x), v))
+#define BW_MCG_ATCVH_ATCVH(x, v) (UNION_WRITE_REG_FS(HW_MCG_ATCVH_ADDR(x), hw_mcg_atcvh, v))
 /*@}*/
 
 /*******************************************************************************
@@ -1525,13 +1525,13 @@ typedef union _hw_mcg_atcvl
 #define BS_MCG_ATCVL_ATCVL   (8U)          /*!< Bit field size in bits for MCG_ATCVL_ATCVL. */
 
 /*! @brief Read current value of the MCG_ATCVL_ATCVL field. */
-#define BR_MCG_ATCVL_ATCVL(x) (ADDRESS_READ32(HW_MCG_ATCVL_ADDR(x)))
+#define BR_MCG_ATCVL_ATCVL(x) (UNION_READ_REG_FS(HW_MCG_ATCVL_ADDR(x), hw_mcg_atcvl))
 
 /*! @brief Format value for bitfield MCG_ATCVL_ATCVL. */
 #define BF_MCG_ATCVL_ATCVL(v) ((uint8_t)((uint8_t)(v) << BP_MCG_ATCVL_ATCVL) & BM_MCG_ATCVL_ATCVL)
 
 /*! @brief Set the ATCVL field to a new value. */
-#define BW_MCG_ATCVL_ATCVL(x, v) (ADDRESS_WRITE32(HW_MCG_ATCVL_ADDR(x), v))
+#define BW_MCG_ATCVL_ATCVL(x, v) (UNION_WRITE_REG_FS(HW_MCG_ATCVL_ADDR(x), hw_mcg_atcvl, v))
 /*@}*/
 
 /*******************************************************************************
@@ -1588,13 +1588,13 @@ typedef union _hw_mcg_c7
 #define BS_MCG_C7_OSCSEL     (2U)          /*!< Bit field size in bits for MCG_C7_OSCSEL. */
 
 /*! @brief Read current value of the MCG_C7_OSCSEL field. */
-#define BR_MCG_C7_OSCSEL(x)  (UNION_READ_FS(HW_MCG_C7_ADDR(x), hw_mcg_c7, B.OSCSEL))
+#define BR_MCG_C7_OSCSEL(x)  (UNION_READ_BIT_FS(HW_MCG_C7_ADDR(x), hw_mcg_c7, B.OSCSEL))
 
 /*! @brief Format value for bitfield MCG_C7_OSCSEL. */
 #define BF_MCG_C7_OSCSEL(v)  ((uint8_t)((uint8_t)(v) << BP_MCG_C7_OSCSEL) & BM_MCG_C7_OSCSEL)
 
 /*! @brief Set the OSCSEL field to a new value. */
-#define BW_MCG_C7_OSCSEL(x, v) (ADDRESS_WRITE32(HW_MCG_C7_ADDR(x), (HW_MCG_C7_RD(x) & ~BM_MCG_C7_OSCSEL) | BF_MCG_C7_OSCSEL(v)))
+#define BW_MCG_C7_OSCSEL(x, v) (UNION_WRITE_REG_FS(HW_MCG_C7_ADDR(x), hw_mcg_c7, (HW_MCG_C7_RD(x) & ~BM_MCG_C7_OSCSEL) | BF_MCG_C7_OSCSEL(v)))
 /*@}*/
 
 /*******************************************************************************

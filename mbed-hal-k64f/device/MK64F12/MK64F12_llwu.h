@@ -170,13 +170,13 @@ typedef union _hw_llwu_pe1
 #define BS_LLWU_PE1_WUPE0    (2U)          /*!< Bit field size in bits for LLWU_PE1_WUPE0. */
 
 /*! @brief Read current value of the LLWU_PE1_WUPE0 field. */
-#define BR_LLWU_PE1_WUPE0(x) (UNION_READ_FS(HW_LLWU_PE1_ADDR(x), hw_llwu_pe1, B.WUPE0))
+#define BR_LLWU_PE1_WUPE0(x) (UNION_READ_BIT_FS(HW_LLWU_PE1_ADDR(x), hw_llwu_pe1, B.WUPE0))
 
 /*! @brief Format value for bitfield LLWU_PE1_WUPE0. */
 #define BF_LLWU_PE1_WUPE0(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_PE1_WUPE0) & BM_LLWU_PE1_WUPE0)
 
 /*! @brief Set the WUPE0 field to a new value. */
-#define BW_LLWU_PE1_WUPE0(x, v) (ADDRESS_WRITE32(HW_LLWU_PE1_ADDR(x), (HW_LLWU_PE1_RD(x) & ~BM_LLWU_PE1_WUPE0) | BF_LLWU_PE1_WUPE0(v)))
+#define BW_LLWU_PE1_WUPE0(x, v) (UNION_WRITE_REG_FS(HW_LLWU_PE1_ADDR(x), hw_llwu_pe1, (HW_LLWU_PE1_RD(x) & ~BM_LLWU_PE1_WUPE0) | BF_LLWU_PE1_WUPE0(v)))
 /*@}*/
 
 /*!
@@ -196,13 +196,13 @@ typedef union _hw_llwu_pe1
 #define BS_LLWU_PE1_WUPE1    (2U)          /*!< Bit field size in bits for LLWU_PE1_WUPE1. */
 
 /*! @brief Read current value of the LLWU_PE1_WUPE1 field. */
-#define BR_LLWU_PE1_WUPE1(x) (UNION_READ_FS(HW_LLWU_PE1_ADDR(x), hw_llwu_pe1, B.WUPE1))
+#define BR_LLWU_PE1_WUPE1(x) (UNION_READ_BIT_FS(HW_LLWU_PE1_ADDR(x), hw_llwu_pe1, B.WUPE1))
 
 /*! @brief Format value for bitfield LLWU_PE1_WUPE1. */
 #define BF_LLWU_PE1_WUPE1(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_PE1_WUPE1) & BM_LLWU_PE1_WUPE1)
 
 /*! @brief Set the WUPE1 field to a new value. */
-#define BW_LLWU_PE1_WUPE1(x, v) (ADDRESS_WRITE32(HW_LLWU_PE1_ADDR(x), (HW_LLWU_PE1_RD(x) & ~BM_LLWU_PE1_WUPE1) | BF_LLWU_PE1_WUPE1(v)))
+#define BW_LLWU_PE1_WUPE1(x, v) (UNION_WRITE_REG_FS(HW_LLWU_PE1_ADDR(x), hw_llwu_pe1, (HW_LLWU_PE1_RD(x) & ~BM_LLWU_PE1_WUPE1) | BF_LLWU_PE1_WUPE1(v)))
 /*@}*/
 
 /*!
@@ -222,13 +222,13 @@ typedef union _hw_llwu_pe1
 #define BS_LLWU_PE1_WUPE2    (2U)          /*!< Bit field size in bits for LLWU_PE1_WUPE2. */
 
 /*! @brief Read current value of the LLWU_PE1_WUPE2 field. */
-#define BR_LLWU_PE1_WUPE2(x) (UNION_READ_FS(HW_LLWU_PE1_ADDR(x), hw_llwu_pe1, B.WUPE2))
+#define BR_LLWU_PE1_WUPE2(x) (UNION_READ_BIT_FS(HW_LLWU_PE1_ADDR(x), hw_llwu_pe1, B.WUPE2))
 
 /*! @brief Format value for bitfield LLWU_PE1_WUPE2. */
 #define BF_LLWU_PE1_WUPE2(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_PE1_WUPE2) & BM_LLWU_PE1_WUPE2)
 
 /*! @brief Set the WUPE2 field to a new value. */
-#define BW_LLWU_PE1_WUPE2(x, v) (ADDRESS_WRITE32(HW_LLWU_PE1_ADDR(x), (HW_LLWU_PE1_RD(x) & ~BM_LLWU_PE1_WUPE2) | BF_LLWU_PE1_WUPE2(v)))
+#define BW_LLWU_PE1_WUPE2(x, v) (UNION_WRITE_REG_FS(HW_LLWU_PE1_ADDR(x), hw_llwu_pe1, (HW_LLWU_PE1_RD(x) & ~BM_LLWU_PE1_WUPE2) | BF_LLWU_PE1_WUPE2(v)))
 /*@}*/
 
 /*!
@@ -248,13 +248,13 @@ typedef union _hw_llwu_pe1
 #define BS_LLWU_PE1_WUPE3    (2U)          /*!< Bit field size in bits for LLWU_PE1_WUPE3. */
 
 /*! @brief Read current value of the LLWU_PE1_WUPE3 field. */
-#define BR_LLWU_PE1_WUPE3(x) (UNION_READ_FS(HW_LLWU_PE1_ADDR(x), hw_llwu_pe1, B.WUPE3))
+#define BR_LLWU_PE1_WUPE3(x) (UNION_READ_BIT_FS(HW_LLWU_PE1_ADDR(x), hw_llwu_pe1, B.WUPE3))
 
 /*! @brief Format value for bitfield LLWU_PE1_WUPE3. */
 #define BF_LLWU_PE1_WUPE3(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_PE1_WUPE3) & BM_LLWU_PE1_WUPE3)
 
 /*! @brief Set the WUPE3 field to a new value. */
-#define BW_LLWU_PE1_WUPE3(x, v) (ADDRESS_WRITE32(HW_LLWU_PE1_ADDR(x), (HW_LLWU_PE1_RD(x) & ~BM_LLWU_PE1_WUPE3) | BF_LLWU_PE1_WUPE3(v)))
+#define BW_LLWU_PE1_WUPE3(x, v) (UNION_WRITE_REG_FS(HW_LLWU_PE1_ADDR(x), hw_llwu_pe1, (HW_LLWU_PE1_RD(x) & ~BM_LLWU_PE1_WUPE3) | BF_LLWU_PE1_WUPE3(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -321,13 +321,13 @@ typedef union _hw_llwu_pe2
 #define BS_LLWU_PE2_WUPE4    (2U)          /*!< Bit field size in bits for LLWU_PE2_WUPE4. */
 
 /*! @brief Read current value of the LLWU_PE2_WUPE4 field. */
-#define BR_LLWU_PE2_WUPE4(x) (UNION_READ_FS(HW_LLWU_PE2_ADDR(x), hw_llwu_pe2, B.WUPE4))
+#define BR_LLWU_PE2_WUPE4(x) (UNION_READ_BIT_FS(HW_LLWU_PE2_ADDR(x), hw_llwu_pe2, B.WUPE4))
 
 /*! @brief Format value for bitfield LLWU_PE2_WUPE4. */
 #define BF_LLWU_PE2_WUPE4(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_PE2_WUPE4) & BM_LLWU_PE2_WUPE4)
 
 /*! @brief Set the WUPE4 field to a new value. */
-#define BW_LLWU_PE2_WUPE4(x, v) (ADDRESS_WRITE32(HW_LLWU_PE2_ADDR(x), (HW_LLWU_PE2_RD(x) & ~BM_LLWU_PE2_WUPE4) | BF_LLWU_PE2_WUPE4(v)))
+#define BW_LLWU_PE2_WUPE4(x, v) (UNION_WRITE_REG_FS(HW_LLWU_PE2_ADDR(x), hw_llwu_pe2, (HW_LLWU_PE2_RD(x) & ~BM_LLWU_PE2_WUPE4) | BF_LLWU_PE2_WUPE4(v)))
 /*@}*/
 
 /*!
@@ -347,13 +347,13 @@ typedef union _hw_llwu_pe2
 #define BS_LLWU_PE2_WUPE5    (2U)          /*!< Bit field size in bits for LLWU_PE2_WUPE5. */
 
 /*! @brief Read current value of the LLWU_PE2_WUPE5 field. */
-#define BR_LLWU_PE2_WUPE5(x) (UNION_READ_FS(HW_LLWU_PE2_ADDR(x), hw_llwu_pe2, B.WUPE5))
+#define BR_LLWU_PE2_WUPE5(x) (UNION_READ_BIT_FS(HW_LLWU_PE2_ADDR(x), hw_llwu_pe2, B.WUPE5))
 
 /*! @brief Format value for bitfield LLWU_PE2_WUPE5. */
 #define BF_LLWU_PE2_WUPE5(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_PE2_WUPE5) & BM_LLWU_PE2_WUPE5)
 
 /*! @brief Set the WUPE5 field to a new value. */
-#define BW_LLWU_PE2_WUPE5(x, v) (ADDRESS_WRITE32(HW_LLWU_PE2_ADDR(x), (HW_LLWU_PE2_RD(x) & ~BM_LLWU_PE2_WUPE5) | BF_LLWU_PE2_WUPE5(v)))
+#define BW_LLWU_PE2_WUPE5(x, v) (UNION_WRITE_REG_FS(HW_LLWU_PE2_ADDR(x), hw_llwu_pe2, (HW_LLWU_PE2_RD(x) & ~BM_LLWU_PE2_WUPE5) | BF_LLWU_PE2_WUPE5(v)))
 /*@}*/
 
 /*!
@@ -373,13 +373,13 @@ typedef union _hw_llwu_pe2
 #define BS_LLWU_PE2_WUPE6    (2U)          /*!< Bit field size in bits for LLWU_PE2_WUPE6. */
 
 /*! @brief Read current value of the LLWU_PE2_WUPE6 field. */
-#define BR_LLWU_PE2_WUPE6(x) (UNION_READ_FS(HW_LLWU_PE2_ADDR(x), hw_llwu_pe2, B.WUPE6))
+#define BR_LLWU_PE2_WUPE6(x) (UNION_READ_BIT_FS(HW_LLWU_PE2_ADDR(x), hw_llwu_pe2, B.WUPE6))
 
 /*! @brief Format value for bitfield LLWU_PE2_WUPE6. */
 #define BF_LLWU_PE2_WUPE6(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_PE2_WUPE6) & BM_LLWU_PE2_WUPE6)
 
 /*! @brief Set the WUPE6 field to a new value. */
-#define BW_LLWU_PE2_WUPE6(x, v) (ADDRESS_WRITE32(HW_LLWU_PE2_ADDR(x), (HW_LLWU_PE2_RD(x) & ~BM_LLWU_PE2_WUPE6) | BF_LLWU_PE2_WUPE6(v)))
+#define BW_LLWU_PE2_WUPE6(x, v) (UNION_WRITE_REG_FS(HW_LLWU_PE2_ADDR(x), hw_llwu_pe2, (HW_LLWU_PE2_RD(x) & ~BM_LLWU_PE2_WUPE6) | BF_LLWU_PE2_WUPE6(v)))
 /*@}*/
 
 /*!
@@ -399,13 +399,13 @@ typedef union _hw_llwu_pe2
 #define BS_LLWU_PE2_WUPE7    (2U)          /*!< Bit field size in bits for LLWU_PE2_WUPE7. */
 
 /*! @brief Read current value of the LLWU_PE2_WUPE7 field. */
-#define BR_LLWU_PE2_WUPE7(x) (UNION_READ_FS(HW_LLWU_PE2_ADDR(x), hw_llwu_pe2, B.WUPE7))
+#define BR_LLWU_PE2_WUPE7(x) (UNION_READ_BIT_FS(HW_LLWU_PE2_ADDR(x), hw_llwu_pe2, B.WUPE7))
 
 /*! @brief Format value for bitfield LLWU_PE2_WUPE7. */
 #define BF_LLWU_PE2_WUPE7(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_PE2_WUPE7) & BM_LLWU_PE2_WUPE7)
 
 /*! @brief Set the WUPE7 field to a new value. */
-#define BW_LLWU_PE2_WUPE7(x, v) (ADDRESS_WRITE32(HW_LLWU_PE2_ADDR(x), (HW_LLWU_PE2_RD(x) & ~BM_LLWU_PE2_WUPE7) | BF_LLWU_PE2_WUPE7(v)))
+#define BW_LLWU_PE2_WUPE7(x, v) (UNION_WRITE_REG_FS(HW_LLWU_PE2_ADDR(x), hw_llwu_pe2, (HW_LLWU_PE2_RD(x) & ~BM_LLWU_PE2_WUPE7) | BF_LLWU_PE2_WUPE7(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -472,13 +472,13 @@ typedef union _hw_llwu_pe3
 #define BS_LLWU_PE3_WUPE8    (2U)          /*!< Bit field size in bits for LLWU_PE3_WUPE8. */
 
 /*! @brief Read current value of the LLWU_PE3_WUPE8 field. */
-#define BR_LLWU_PE3_WUPE8(x) (UNION_READ_FS(HW_LLWU_PE3_ADDR(x), hw_llwu_pe3, B.WUPE8))
+#define BR_LLWU_PE3_WUPE8(x) (UNION_READ_BIT_FS(HW_LLWU_PE3_ADDR(x), hw_llwu_pe3, B.WUPE8))
 
 /*! @brief Format value for bitfield LLWU_PE3_WUPE8. */
 #define BF_LLWU_PE3_WUPE8(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_PE3_WUPE8) & BM_LLWU_PE3_WUPE8)
 
 /*! @brief Set the WUPE8 field to a new value. */
-#define BW_LLWU_PE3_WUPE8(x, v) (ADDRESS_WRITE32(HW_LLWU_PE3_ADDR(x), (HW_LLWU_PE3_RD(x) & ~BM_LLWU_PE3_WUPE8) | BF_LLWU_PE3_WUPE8(v)))
+#define BW_LLWU_PE3_WUPE8(x, v) (UNION_WRITE_REG_FS(HW_LLWU_PE3_ADDR(x), hw_llwu_pe3, (HW_LLWU_PE3_RD(x) & ~BM_LLWU_PE3_WUPE8) | BF_LLWU_PE3_WUPE8(v)))
 /*@}*/
 
 /*!
@@ -498,13 +498,13 @@ typedef union _hw_llwu_pe3
 #define BS_LLWU_PE3_WUPE9    (2U)          /*!< Bit field size in bits for LLWU_PE3_WUPE9. */
 
 /*! @brief Read current value of the LLWU_PE3_WUPE9 field. */
-#define BR_LLWU_PE3_WUPE9(x) (UNION_READ_FS(HW_LLWU_PE3_ADDR(x), hw_llwu_pe3, B.WUPE9))
+#define BR_LLWU_PE3_WUPE9(x) (UNION_READ_BIT_FS(HW_LLWU_PE3_ADDR(x), hw_llwu_pe3, B.WUPE9))
 
 /*! @brief Format value for bitfield LLWU_PE3_WUPE9. */
 #define BF_LLWU_PE3_WUPE9(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_PE3_WUPE9) & BM_LLWU_PE3_WUPE9)
 
 /*! @brief Set the WUPE9 field to a new value. */
-#define BW_LLWU_PE3_WUPE9(x, v) (ADDRESS_WRITE32(HW_LLWU_PE3_ADDR(x), (HW_LLWU_PE3_RD(x) & ~BM_LLWU_PE3_WUPE9) | BF_LLWU_PE3_WUPE9(v)))
+#define BW_LLWU_PE3_WUPE9(x, v) (UNION_WRITE_REG_FS(HW_LLWU_PE3_ADDR(x), hw_llwu_pe3, (HW_LLWU_PE3_RD(x) & ~BM_LLWU_PE3_WUPE9) | BF_LLWU_PE3_WUPE9(v)))
 /*@}*/
 
 /*!
@@ -524,13 +524,13 @@ typedef union _hw_llwu_pe3
 #define BS_LLWU_PE3_WUPE10   (2U)          /*!< Bit field size in bits for LLWU_PE3_WUPE10. */
 
 /*! @brief Read current value of the LLWU_PE3_WUPE10 field. */
-#define BR_LLWU_PE3_WUPE10(x) (UNION_READ_FS(HW_LLWU_PE3_ADDR(x), hw_llwu_pe3, B.WUPE10))
+#define BR_LLWU_PE3_WUPE10(x) (UNION_READ_BIT_FS(HW_LLWU_PE3_ADDR(x), hw_llwu_pe3, B.WUPE10))
 
 /*! @brief Format value for bitfield LLWU_PE3_WUPE10. */
 #define BF_LLWU_PE3_WUPE10(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_PE3_WUPE10) & BM_LLWU_PE3_WUPE10)
 
 /*! @brief Set the WUPE10 field to a new value. */
-#define BW_LLWU_PE3_WUPE10(x, v) (ADDRESS_WRITE32(HW_LLWU_PE3_ADDR(x), (HW_LLWU_PE3_RD(x) & ~BM_LLWU_PE3_WUPE10) | BF_LLWU_PE3_WUPE10(v)))
+#define BW_LLWU_PE3_WUPE10(x, v) (UNION_WRITE_REG_FS(HW_LLWU_PE3_ADDR(x), hw_llwu_pe3, (HW_LLWU_PE3_RD(x) & ~BM_LLWU_PE3_WUPE10) | BF_LLWU_PE3_WUPE10(v)))
 /*@}*/
 
 /*!
@@ -550,13 +550,13 @@ typedef union _hw_llwu_pe3
 #define BS_LLWU_PE3_WUPE11   (2U)          /*!< Bit field size in bits for LLWU_PE3_WUPE11. */
 
 /*! @brief Read current value of the LLWU_PE3_WUPE11 field. */
-#define BR_LLWU_PE3_WUPE11(x) (UNION_READ_FS(HW_LLWU_PE3_ADDR(x), hw_llwu_pe3, B.WUPE11))
+#define BR_LLWU_PE3_WUPE11(x) (UNION_READ_BIT_FS(HW_LLWU_PE3_ADDR(x), hw_llwu_pe3, B.WUPE11))
 
 /*! @brief Format value for bitfield LLWU_PE3_WUPE11. */
 #define BF_LLWU_PE3_WUPE11(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_PE3_WUPE11) & BM_LLWU_PE3_WUPE11)
 
 /*! @brief Set the WUPE11 field to a new value. */
-#define BW_LLWU_PE3_WUPE11(x, v) (ADDRESS_WRITE32(HW_LLWU_PE3_ADDR(x), (HW_LLWU_PE3_RD(x) & ~BM_LLWU_PE3_WUPE11) | BF_LLWU_PE3_WUPE11(v)))
+#define BW_LLWU_PE3_WUPE11(x, v) (UNION_WRITE_REG_FS(HW_LLWU_PE3_ADDR(x), hw_llwu_pe3, (HW_LLWU_PE3_RD(x) & ~BM_LLWU_PE3_WUPE11) | BF_LLWU_PE3_WUPE11(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -623,13 +623,13 @@ typedef union _hw_llwu_pe4
 #define BS_LLWU_PE4_WUPE12   (2U)          /*!< Bit field size in bits for LLWU_PE4_WUPE12. */
 
 /*! @brief Read current value of the LLWU_PE4_WUPE12 field. */
-#define BR_LLWU_PE4_WUPE12(x) (UNION_READ_FS(HW_LLWU_PE4_ADDR(x), hw_llwu_pe4, B.WUPE12))
+#define BR_LLWU_PE4_WUPE12(x) (UNION_READ_BIT_FS(HW_LLWU_PE4_ADDR(x), hw_llwu_pe4, B.WUPE12))
 
 /*! @brief Format value for bitfield LLWU_PE4_WUPE12. */
 #define BF_LLWU_PE4_WUPE12(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_PE4_WUPE12) & BM_LLWU_PE4_WUPE12)
 
 /*! @brief Set the WUPE12 field to a new value. */
-#define BW_LLWU_PE4_WUPE12(x, v) (ADDRESS_WRITE32(HW_LLWU_PE4_ADDR(x), (HW_LLWU_PE4_RD(x) & ~BM_LLWU_PE4_WUPE12) | BF_LLWU_PE4_WUPE12(v)))
+#define BW_LLWU_PE4_WUPE12(x, v) (UNION_WRITE_REG_FS(HW_LLWU_PE4_ADDR(x), hw_llwu_pe4, (HW_LLWU_PE4_RD(x) & ~BM_LLWU_PE4_WUPE12) | BF_LLWU_PE4_WUPE12(v)))
 /*@}*/
 
 /*!
@@ -649,13 +649,13 @@ typedef union _hw_llwu_pe4
 #define BS_LLWU_PE4_WUPE13   (2U)          /*!< Bit field size in bits for LLWU_PE4_WUPE13. */
 
 /*! @brief Read current value of the LLWU_PE4_WUPE13 field. */
-#define BR_LLWU_PE4_WUPE13(x) (UNION_READ_FS(HW_LLWU_PE4_ADDR(x), hw_llwu_pe4, B.WUPE13))
+#define BR_LLWU_PE4_WUPE13(x) (UNION_READ_BIT_FS(HW_LLWU_PE4_ADDR(x), hw_llwu_pe4, B.WUPE13))
 
 /*! @brief Format value for bitfield LLWU_PE4_WUPE13. */
 #define BF_LLWU_PE4_WUPE13(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_PE4_WUPE13) & BM_LLWU_PE4_WUPE13)
 
 /*! @brief Set the WUPE13 field to a new value. */
-#define BW_LLWU_PE4_WUPE13(x, v) (ADDRESS_WRITE32(HW_LLWU_PE4_ADDR(x), (HW_LLWU_PE4_RD(x) & ~BM_LLWU_PE4_WUPE13) | BF_LLWU_PE4_WUPE13(v)))
+#define BW_LLWU_PE4_WUPE13(x, v) (UNION_WRITE_REG_FS(HW_LLWU_PE4_ADDR(x), hw_llwu_pe4, (HW_LLWU_PE4_RD(x) & ~BM_LLWU_PE4_WUPE13) | BF_LLWU_PE4_WUPE13(v)))
 /*@}*/
 
 /*!
@@ -675,13 +675,13 @@ typedef union _hw_llwu_pe4
 #define BS_LLWU_PE4_WUPE14   (2U)          /*!< Bit field size in bits for LLWU_PE4_WUPE14. */
 
 /*! @brief Read current value of the LLWU_PE4_WUPE14 field. */
-#define BR_LLWU_PE4_WUPE14(x) (UNION_READ_FS(HW_LLWU_PE4_ADDR(x), hw_llwu_pe4, B.WUPE14))
+#define BR_LLWU_PE4_WUPE14(x) (UNION_READ_BIT_FS(HW_LLWU_PE4_ADDR(x), hw_llwu_pe4, B.WUPE14))
 
 /*! @brief Format value for bitfield LLWU_PE4_WUPE14. */
 #define BF_LLWU_PE4_WUPE14(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_PE4_WUPE14) & BM_LLWU_PE4_WUPE14)
 
 /*! @brief Set the WUPE14 field to a new value. */
-#define BW_LLWU_PE4_WUPE14(x, v) (ADDRESS_WRITE32(HW_LLWU_PE4_ADDR(x), (HW_LLWU_PE4_RD(x) & ~BM_LLWU_PE4_WUPE14) | BF_LLWU_PE4_WUPE14(v)))
+#define BW_LLWU_PE4_WUPE14(x, v) (UNION_WRITE_REG_FS(HW_LLWU_PE4_ADDR(x), hw_llwu_pe4, (HW_LLWU_PE4_RD(x) & ~BM_LLWU_PE4_WUPE14) | BF_LLWU_PE4_WUPE14(v)))
 /*@}*/
 
 /*!
@@ -701,13 +701,13 @@ typedef union _hw_llwu_pe4
 #define BS_LLWU_PE4_WUPE15   (2U)          /*!< Bit field size in bits for LLWU_PE4_WUPE15. */
 
 /*! @brief Read current value of the LLWU_PE4_WUPE15 field. */
-#define BR_LLWU_PE4_WUPE15(x) (UNION_READ_FS(HW_LLWU_PE4_ADDR(x), hw_llwu_pe4, B.WUPE15))
+#define BR_LLWU_PE4_WUPE15(x) (UNION_READ_BIT_FS(HW_LLWU_PE4_ADDR(x), hw_llwu_pe4, B.WUPE15))
 
 /*! @brief Format value for bitfield LLWU_PE4_WUPE15. */
 #define BF_LLWU_PE4_WUPE15(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_PE4_WUPE15) & BM_LLWU_PE4_WUPE15)
 
 /*! @brief Set the WUPE15 field to a new value. */
-#define BW_LLWU_PE4_WUPE15(x, v) (ADDRESS_WRITE32(HW_LLWU_PE4_ADDR(x), (HW_LLWU_PE4_RD(x) & ~BM_LLWU_PE4_WUPE15) | BF_LLWU_PE4_WUPE15(v)))
+#define BW_LLWU_PE4_WUPE15(x, v) (UNION_WRITE_REG_FS(HW_LLWU_PE4_ADDR(x), hw_llwu_pe4, (HW_LLWU_PE4_RD(x) & ~BM_LLWU_PE4_WUPE15) | BF_LLWU_PE4_WUPE15(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1738,13 +1738,13 @@ typedef union _hw_llwu_filt1
 #define BS_LLWU_FILT1_FILTSEL (4U)         /*!< Bit field size in bits for LLWU_FILT1_FILTSEL. */
 
 /*! @brief Read current value of the LLWU_FILT1_FILTSEL field. */
-#define BR_LLWU_FILT1_FILTSEL(x) (UNION_READ_FS(HW_LLWU_FILT1_ADDR(x), hw_llwu_filt1, B.FILTSEL))
+#define BR_LLWU_FILT1_FILTSEL(x) (UNION_READ_BIT_FS(HW_LLWU_FILT1_ADDR(x), hw_llwu_filt1, B.FILTSEL))
 
 /*! @brief Format value for bitfield LLWU_FILT1_FILTSEL. */
 #define BF_LLWU_FILT1_FILTSEL(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_FILT1_FILTSEL) & BM_LLWU_FILT1_FILTSEL)
 
 /*! @brief Set the FILTSEL field to a new value. */
-#define BW_LLWU_FILT1_FILTSEL(x, v) (ADDRESS_WRITE32(HW_LLWU_FILT1_ADDR(x), (HW_LLWU_FILT1_RD(x) & ~BM_LLWU_FILT1_FILTSEL) | BF_LLWU_FILT1_FILTSEL(v)))
+#define BW_LLWU_FILT1_FILTSEL(x, v) (UNION_WRITE_REG_FS(HW_LLWU_FILT1_ADDR(x), hw_llwu_filt1, (HW_LLWU_FILT1_RD(x) & ~BM_LLWU_FILT1_FILTSEL) | BF_LLWU_FILT1_FILTSEL(v)))
 /*@}*/
 
 /*!
@@ -1764,13 +1764,13 @@ typedef union _hw_llwu_filt1
 #define BS_LLWU_FILT1_FILTE  (2U)          /*!< Bit field size in bits for LLWU_FILT1_FILTE. */
 
 /*! @brief Read current value of the LLWU_FILT1_FILTE field. */
-#define BR_LLWU_FILT1_FILTE(x) (UNION_READ_FS(HW_LLWU_FILT1_ADDR(x), hw_llwu_filt1, B.FILTE))
+#define BR_LLWU_FILT1_FILTE(x) (UNION_READ_BIT_FS(HW_LLWU_FILT1_ADDR(x), hw_llwu_filt1, B.FILTE))
 
 /*! @brief Format value for bitfield LLWU_FILT1_FILTE. */
 #define BF_LLWU_FILT1_FILTE(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_FILT1_FILTE) & BM_LLWU_FILT1_FILTE)
 
 /*! @brief Set the FILTE field to a new value. */
-#define BW_LLWU_FILT1_FILTE(x, v) (ADDRESS_WRITE32(HW_LLWU_FILT1_ADDR(x), (HW_LLWU_FILT1_RD(x) & ~BM_LLWU_FILT1_FILTE) | BF_LLWU_FILT1_FILTE(v)))
+#define BW_LLWU_FILT1_FILTE(x, v) (UNION_WRITE_REG_FS(HW_LLWU_FILT1_ADDR(x), hw_llwu_filt1, (HW_LLWU_FILT1_RD(x) & ~BM_LLWU_FILT1_FILTE) | BF_LLWU_FILT1_FILTE(v)))
 /*@}*/
 
 /*!
@@ -1861,13 +1861,13 @@ typedef union _hw_llwu_filt2
 #define BS_LLWU_FILT2_FILTSEL (4U)         /*!< Bit field size in bits for LLWU_FILT2_FILTSEL. */
 
 /*! @brief Read current value of the LLWU_FILT2_FILTSEL field. */
-#define BR_LLWU_FILT2_FILTSEL(x) (UNION_READ_FS(HW_LLWU_FILT2_ADDR(x), hw_llwu_filt2, B.FILTSEL))
+#define BR_LLWU_FILT2_FILTSEL(x) (UNION_READ_BIT_FS(HW_LLWU_FILT2_ADDR(x), hw_llwu_filt2, B.FILTSEL))
 
 /*! @brief Format value for bitfield LLWU_FILT2_FILTSEL. */
 #define BF_LLWU_FILT2_FILTSEL(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_FILT2_FILTSEL) & BM_LLWU_FILT2_FILTSEL)
 
 /*! @brief Set the FILTSEL field to a new value. */
-#define BW_LLWU_FILT2_FILTSEL(x, v) (ADDRESS_WRITE32(HW_LLWU_FILT2_ADDR(x), (HW_LLWU_FILT2_RD(x) & ~BM_LLWU_FILT2_FILTSEL) | BF_LLWU_FILT2_FILTSEL(v)))
+#define BW_LLWU_FILT2_FILTSEL(x, v) (UNION_WRITE_REG_FS(HW_LLWU_FILT2_ADDR(x), hw_llwu_filt2, (HW_LLWU_FILT2_RD(x) & ~BM_LLWU_FILT2_FILTSEL) | BF_LLWU_FILT2_FILTSEL(v)))
 /*@}*/
 
 /*!
@@ -1887,13 +1887,13 @@ typedef union _hw_llwu_filt2
 #define BS_LLWU_FILT2_FILTE  (2U)          /*!< Bit field size in bits for LLWU_FILT2_FILTE. */
 
 /*! @brief Read current value of the LLWU_FILT2_FILTE field. */
-#define BR_LLWU_FILT2_FILTE(x) (UNION_READ_FS(HW_LLWU_FILT2_ADDR(x), hw_llwu_filt2, B.FILTE))
+#define BR_LLWU_FILT2_FILTE(x) (UNION_READ_BIT_FS(HW_LLWU_FILT2_ADDR(x), hw_llwu_filt2, B.FILTE))
 
 /*! @brief Format value for bitfield LLWU_FILT2_FILTE. */
 #define BF_LLWU_FILT2_FILTE(v) ((uint8_t)((uint8_t)(v) << BP_LLWU_FILT2_FILTE) & BM_LLWU_FILT2_FILTE)
 
 /*! @brief Set the FILTE field to a new value. */
-#define BW_LLWU_FILT2_FILTE(x, v) (ADDRESS_WRITE32(HW_LLWU_FILT2_ADDR(x), (HW_LLWU_FILT2_RD(x) & ~BM_LLWU_FILT2_FILTE) | BF_LLWU_FILT2_FILTE(v)))
+#define BW_LLWU_FILT2_FILTE(x, v) (UNION_WRITE_REG_FS(HW_LLWU_FILT2_ADDR(x), hw_llwu_filt2, (HW_LLWU_FILT2_RD(x) & ~BM_LLWU_FILT2_FILTE) | BF_LLWU_FILT2_FILTE(v)))
 /*@}*/
 
 /*!

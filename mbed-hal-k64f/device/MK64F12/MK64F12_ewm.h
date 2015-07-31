@@ -283,7 +283,7 @@ typedef union _hw_ewm_serv
 #define BF_EWM_SERV_SERVICE(v) ((uint8_t)((uint8_t)(v) << BP_EWM_SERV_SERVICE) & BM_EWM_SERV_SERVICE)
 
 /*! @brief Set the SERVICE field to a new value. */
-#define BW_EWM_SERV_SERVICE(x, v) (ADDRESS_WRITE32(HW_EWM_SERV_ADDR(x), v))
+#define BW_EWM_SERV_SERVICE(x, v) (UNION_WRITE_REG_FS(HW_EWM_SERV_ADDR(x), hw_ewm_serv, v))
 /*@}*/
 
 /*******************************************************************************
@@ -340,13 +340,13 @@ typedef union _hw_ewm_cmpl
 #define BS_EWM_CMPL_COMPAREL (8U)          /*!< Bit field size in bits for EWM_CMPL_COMPAREL. */
 
 /*! @brief Read current value of the EWM_CMPL_COMPAREL field. */
-#define BR_EWM_CMPL_COMPAREL(x) (ADDRESS_READ32(HW_EWM_CMPL_ADDR(x)))
+#define BR_EWM_CMPL_COMPAREL(x) (UNION_READ_REG_FS(HW_EWM_CMPL_ADDR(x), hw_ewm_cmpl))
 
 /*! @brief Format value for bitfield EWM_CMPL_COMPAREL. */
 #define BF_EWM_CMPL_COMPAREL(v) ((uint8_t)((uint8_t)(v) << BP_EWM_CMPL_COMPAREL) & BM_EWM_CMPL_COMPAREL)
 
 /*! @brief Set the COMPAREL field to a new value. */
-#define BW_EWM_CMPL_COMPAREL(x, v) (ADDRESS_WRITE32(HW_EWM_CMPL_ADDR(x), v))
+#define BW_EWM_CMPL_COMPAREL(x, v) (UNION_WRITE_REG_FS(HW_EWM_CMPL_ADDR(x), hw_ewm_cmpl, v))
 /*@}*/
 
 /*******************************************************************************
@@ -405,13 +405,13 @@ typedef union _hw_ewm_cmph
 #define BS_EWM_CMPH_COMPAREH (8U)          /*!< Bit field size in bits for EWM_CMPH_COMPAREH. */
 
 /*! @brief Read current value of the EWM_CMPH_COMPAREH field. */
-#define BR_EWM_CMPH_COMPAREH(x) (ADDRESS_READ32(HW_EWM_CMPH_ADDR(x)))
+#define BR_EWM_CMPH_COMPAREH(x) (UNION_READ_REG_FS(HW_EWM_CMPH_ADDR(x), hw_ewm_cmph))
 
 /*! @brief Format value for bitfield EWM_CMPH_COMPAREH. */
 #define BF_EWM_CMPH_COMPAREH(v) ((uint8_t)((uint8_t)(v) << BP_EWM_CMPH_COMPAREH) & BM_EWM_CMPH_COMPAREH)
 
 /*! @brief Set the COMPAREH field to a new value. */
-#define BW_EWM_CMPH_COMPAREH(x, v) (ADDRESS_WRITE32(HW_EWM_CMPH_ADDR(x), v))
+#define BW_EWM_CMPH_COMPAREH(x, v) (UNION_WRITE_REG_FS(HW_EWM_CMPH_ADDR(x), hw_ewm_cmph, v))
 /*@}*/
 
 /*******************************************************************************

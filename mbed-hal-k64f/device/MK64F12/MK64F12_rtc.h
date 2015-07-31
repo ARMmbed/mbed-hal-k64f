@@ -158,13 +158,13 @@ typedef union _hw_rtc_tsr
 #define BS_RTC_TSR_TSR       (32U)         /*!< Bit field size in bits for RTC_TSR_TSR. */
 
 /*! @brief Read current value of the RTC_TSR_TSR field. */
-#define BR_RTC_TSR_TSR(x)    (ADDRESS_READ32(HW_RTC_TSR_ADDR(x)))
+#define BR_RTC_TSR_TSR(x)    (UNION_READ_REG_FS(HW_RTC_TSR_ADDR(x), hw_rtc_tsr))
 
 /*! @brief Format value for bitfield RTC_TSR_TSR. */
 #define BF_RTC_TSR_TSR(v)    ((uint32_t)((uint32_t)(v) << BP_RTC_TSR_TSR) & BM_RTC_TSR_TSR)
 
 /*! @brief Set the TSR field to a new value. */
-#define BW_RTC_TSR_TSR(x, v) (ADDRESS_WRITE32(HW_RTC_TSR_ADDR(x), v))
+#define BW_RTC_TSR_TSR(x, v) (UNION_WRITE_REG_FS(HW_RTC_TSR_ADDR(x), hw_rtc_tsr, v))
 /*@}*/
 
 /*******************************************************************************
@@ -219,13 +219,13 @@ typedef union _hw_rtc_tpr
 #define BS_RTC_TPR_TPR       (16U)         /*!< Bit field size in bits for RTC_TPR_TPR. */
 
 /*! @brief Read current value of the RTC_TPR_TPR field. */
-#define BR_RTC_TPR_TPR(x)    (UNION_READ_FS(HW_RTC_TPR_ADDR(x), hw_rtc_tpr, B.TPR))
+#define BR_RTC_TPR_TPR(x)    (UNION_READ_BIT_FS(HW_RTC_TPR_ADDR(x), hw_rtc_tpr, B.TPR))
 
 /*! @brief Format value for bitfield RTC_TPR_TPR. */
 #define BF_RTC_TPR_TPR(v)    ((uint32_t)((uint32_t)(v) << BP_RTC_TPR_TPR) & BM_RTC_TPR_TPR)
 
 /*! @brief Set the TPR field to a new value. */
-#define BW_RTC_TPR_TPR(x, v) (ADDRESS_WRITE32(HW_RTC_TPR_ADDR(x), (HW_RTC_TPR_RD(x) & ~BM_RTC_TPR_TPR) | BF_RTC_TPR_TPR(v)))
+#define BW_RTC_TPR_TPR(x, v) (UNION_WRITE_REG_FS(HW_RTC_TPR_ADDR(x), hw_rtc_tpr, (HW_RTC_TPR_RD(x) & ~BM_RTC_TPR_TPR) | BF_RTC_TPR_TPR(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -277,13 +277,13 @@ typedef union _hw_rtc_tar
 #define BS_RTC_TAR_TAR       (32U)         /*!< Bit field size in bits for RTC_TAR_TAR. */
 
 /*! @brief Read current value of the RTC_TAR_TAR field. */
-#define BR_RTC_TAR_TAR(x)    (ADDRESS_READ32(HW_RTC_TAR_ADDR(x)))
+#define BR_RTC_TAR_TAR(x)    (UNION_READ_REG_FS(HW_RTC_TAR_ADDR(x), hw_rtc_tar))
 
 /*! @brief Format value for bitfield RTC_TAR_TAR. */
 #define BF_RTC_TAR_TAR(v)    ((uint32_t)((uint32_t)(v) << BP_RTC_TAR_TAR) & BM_RTC_TAR_TAR)
 
 /*! @brief Set the TAR field to a new value. */
-#define BW_RTC_TAR_TAR(x, v) (ADDRESS_WRITE32(HW_RTC_TAR_ADDR(x), v))
+#define BW_RTC_TAR_TAR(x, v) (UNION_WRITE_REG_FS(HW_RTC_TAR_ADDR(x), hw_rtc_tar, v))
 /*@}*/
 
 /*******************************************************************************
@@ -345,13 +345,13 @@ typedef union _hw_rtc_tcr
 #define BS_RTC_TCR_TCR       (8U)          /*!< Bit field size in bits for RTC_TCR_TCR. */
 
 /*! @brief Read current value of the RTC_TCR_TCR field. */
-#define BR_RTC_TCR_TCR(x)    (UNION_READ_FS(HW_RTC_TCR_ADDR(x), hw_rtc_tcr, B.TCR))
+#define BR_RTC_TCR_TCR(x)    (UNION_READ_BIT_FS(HW_RTC_TCR_ADDR(x), hw_rtc_tcr, B.TCR))
 
 /*! @brief Format value for bitfield RTC_TCR_TCR. */
 #define BF_RTC_TCR_TCR(v)    ((uint32_t)((uint32_t)(v) << BP_RTC_TCR_TCR) & BM_RTC_TCR_TCR)
 
 /*! @brief Set the TCR field to a new value. */
-#define BW_RTC_TCR_TCR(x, v) (ADDRESS_WRITE32(HW_RTC_TCR_ADDR(x), (HW_RTC_TCR_RD(x) & ~BM_RTC_TCR_TCR) | BF_RTC_TCR_TCR(v)))
+#define BW_RTC_TCR_TCR(x, v) (UNION_WRITE_REG_FS(HW_RTC_TCR_ADDR(x), hw_rtc_tcr, (HW_RTC_TCR_RD(x) & ~BM_RTC_TCR_TCR) | BF_RTC_TCR_TCR(v)))
 /*@}*/
 
 /*!
@@ -370,13 +370,13 @@ typedef union _hw_rtc_tcr
 #define BS_RTC_TCR_CIR       (8U)          /*!< Bit field size in bits for RTC_TCR_CIR. */
 
 /*! @brief Read current value of the RTC_TCR_CIR field. */
-#define BR_RTC_TCR_CIR(x)    (UNION_READ_FS(HW_RTC_TCR_ADDR(x), hw_rtc_tcr, B.CIR))
+#define BR_RTC_TCR_CIR(x)    (UNION_READ_BIT_FS(HW_RTC_TCR_ADDR(x), hw_rtc_tcr, B.CIR))
 
 /*! @brief Format value for bitfield RTC_TCR_CIR. */
 #define BF_RTC_TCR_CIR(v)    ((uint32_t)((uint32_t)(v) << BP_RTC_TCR_CIR) & BM_RTC_TCR_CIR)
 
 /*! @brief Set the CIR field to a new value. */
-#define BW_RTC_TCR_CIR(x, v) (ADDRESS_WRITE32(HW_RTC_TCR_ADDR(x), (HW_RTC_TCR_RD(x) & ~BM_RTC_TCR_CIR) | BF_RTC_TCR_CIR(v)))
+#define BW_RTC_TCR_CIR(x, v) (UNION_WRITE_REG_FS(HW_RTC_TCR_ADDR(x), hw_rtc_tcr, (HW_RTC_TCR_RD(x) & ~BM_RTC_TCR_CIR) | BF_RTC_TCR_CIR(v)))
 /*@}*/
 
 /*!
@@ -393,7 +393,7 @@ typedef union _hw_rtc_tcr
 #define BS_RTC_TCR_TCV       (8U)          /*!< Bit field size in bits for RTC_TCR_TCV. */
 
 /*! @brief Read current value of the RTC_TCR_TCV field. */
-#define BR_RTC_TCR_TCV(x)    (UNION_READ_FS(HW_RTC_TCR_ADDR(x), hw_rtc_tcr, B.TCV))
+#define BR_RTC_TCR_TCV(x)    (UNION_READ_BIT_FS(HW_RTC_TCR_ADDR(x), hw_rtc_tcr, B.TCV))
 /*@}*/
 
 /*!
@@ -409,7 +409,7 @@ typedef union _hw_rtc_tcr
 #define BS_RTC_TCR_CIC       (8U)          /*!< Bit field size in bits for RTC_TCR_CIC. */
 
 /*! @brief Read current value of the RTC_TCR_CIC field. */
-#define BR_RTC_TCR_CIC(x)    (UNION_READ_FS(HW_RTC_TCR_ADDR(x), hw_rtc_tcr, B.CIC))
+#define BR_RTC_TCR_CIC(x)    (UNION_READ_BIT_FS(HW_RTC_TCR_ADDR(x), hw_rtc_tcr, B.CIC))
 /*@}*/
 
 /*******************************************************************************

@@ -197,13 +197,13 @@ typedef union _hw_can_mcr
 #define BS_CAN_MCR_MAXMB     (7U)          /*!< Bit field size in bits for CAN_MCR_MAXMB. */
 
 /*! @brief Read current value of the CAN_MCR_MAXMB field. */
-#define BR_CAN_MCR_MAXMB(x)  (UNION_READ_FS(HW_CAN_MCR_ADDR(x), hw_can_mcr, B.MAXMB))
+#define BR_CAN_MCR_MAXMB(x)  (UNION_READ_BIT_FS(HW_CAN_MCR_ADDR(x), hw_can_mcr, B.MAXMB))
 
 /*! @brief Format value for bitfield CAN_MCR_MAXMB. */
 #define BF_CAN_MCR_MAXMB(v)  ((uint32_t)((uint32_t)(v) << BP_CAN_MCR_MAXMB) & BM_CAN_MCR_MAXMB)
 
 /*! @brief Set the MAXMB field to a new value. */
-#define BW_CAN_MCR_MAXMB(x, v) (ADDRESS_WRITE32(HW_CAN_MCR_ADDR(x), (HW_CAN_MCR_RD(x) & ~BM_CAN_MCR_MAXMB) | BF_CAN_MCR_MAXMB(v)))
+#define BW_CAN_MCR_MAXMB(x, v) (UNION_WRITE_REG_FS(HW_CAN_MCR_ADDR(x), hw_can_mcr, (HW_CAN_MCR_RD(x) & ~BM_CAN_MCR_MAXMB) | BF_CAN_MCR_MAXMB(v)))
 /*@}*/
 
 /*!
@@ -229,13 +229,13 @@ typedef union _hw_can_mcr
 #define BS_CAN_MCR_IDAM      (2U)          /*!< Bit field size in bits for CAN_MCR_IDAM. */
 
 /*! @brief Read current value of the CAN_MCR_IDAM field. */
-#define BR_CAN_MCR_IDAM(x)   (UNION_READ_FS(HW_CAN_MCR_ADDR(x), hw_can_mcr, B.IDAM))
+#define BR_CAN_MCR_IDAM(x)   (UNION_READ_BIT_FS(HW_CAN_MCR_ADDR(x), hw_can_mcr, B.IDAM))
 
 /*! @brief Format value for bitfield CAN_MCR_IDAM. */
 #define BF_CAN_MCR_IDAM(v)   ((uint32_t)((uint32_t)(v) << BP_CAN_MCR_IDAM) & BM_CAN_MCR_IDAM)
 
 /*! @brief Set the IDAM field to a new value. */
-#define BW_CAN_MCR_IDAM(x, v) (ADDRESS_WRITE32(HW_CAN_MCR_ADDR(x), (HW_CAN_MCR_RD(x) & ~BM_CAN_MCR_IDAM) | BF_CAN_MCR_IDAM(v)))
+#define BW_CAN_MCR_IDAM(x, v) (UNION_WRITE_REG_FS(HW_CAN_MCR_ADDR(x), hw_can_mcr, (HW_CAN_MCR_RD(x) & ~BM_CAN_MCR_IDAM) | BF_CAN_MCR_IDAM(v)))
 /*@}*/
 
 /*!
@@ -797,13 +797,13 @@ typedef union _hw_can_ctrl1
 #define BS_CAN_CTRL1_PROPSEG (3U)          /*!< Bit field size in bits for CAN_CTRL1_PROPSEG. */
 
 /*! @brief Read current value of the CAN_CTRL1_PROPSEG field. */
-#define BR_CAN_CTRL1_PROPSEG(x) (UNION_READ_FS(HW_CAN_CTRL1_ADDR(x), hw_can_ctrl1, B.PROPSEG))
+#define BR_CAN_CTRL1_PROPSEG(x) (UNION_READ_BIT_FS(HW_CAN_CTRL1_ADDR(x), hw_can_ctrl1, B.PROPSEG))
 
 /*! @brief Format value for bitfield CAN_CTRL1_PROPSEG. */
 #define BF_CAN_CTRL1_PROPSEG(v) ((uint32_t)((uint32_t)(v) << BP_CAN_CTRL1_PROPSEG) & BM_CAN_CTRL1_PROPSEG)
 
 /*! @brief Set the PROPSEG field to a new value. */
-#define BW_CAN_CTRL1_PROPSEG(x, v) (ADDRESS_WRITE32(HW_CAN_CTRL1_ADDR(x), (HW_CAN_CTRL1_RD(x) & ~BM_CAN_CTRL1_PROPSEG) | BF_CAN_CTRL1_PROPSEG(v)))
+#define BW_CAN_CTRL1_PROPSEG(x, v) (UNION_WRITE_REG_FS(HW_CAN_CTRL1_ADDR(x), hw_can_ctrl1, (HW_CAN_CTRL1_RD(x) & ~BM_CAN_CTRL1_PROPSEG) | BF_CAN_CTRL1_PROPSEG(v)))
 /*@}*/
 
 /*!
@@ -1142,13 +1142,13 @@ typedef union _hw_can_ctrl1
 #define BS_CAN_CTRL1_PSEG2   (3U)          /*!< Bit field size in bits for CAN_CTRL1_PSEG2. */
 
 /*! @brief Read current value of the CAN_CTRL1_PSEG2 field. */
-#define BR_CAN_CTRL1_PSEG2(x) (UNION_READ_FS(HW_CAN_CTRL1_ADDR(x), hw_can_ctrl1, B.PSEG2))
+#define BR_CAN_CTRL1_PSEG2(x) (UNION_READ_BIT_FS(HW_CAN_CTRL1_ADDR(x), hw_can_ctrl1, B.PSEG2))
 
 /*! @brief Format value for bitfield CAN_CTRL1_PSEG2. */
 #define BF_CAN_CTRL1_PSEG2(v) ((uint32_t)((uint32_t)(v) << BP_CAN_CTRL1_PSEG2) & BM_CAN_CTRL1_PSEG2)
 
 /*! @brief Set the PSEG2 field to a new value. */
-#define BW_CAN_CTRL1_PSEG2(x, v) (ADDRESS_WRITE32(HW_CAN_CTRL1_ADDR(x), (HW_CAN_CTRL1_RD(x) & ~BM_CAN_CTRL1_PSEG2) | BF_CAN_CTRL1_PSEG2(v)))
+#define BW_CAN_CTRL1_PSEG2(x, v) (UNION_WRITE_REG_FS(HW_CAN_CTRL1_ADDR(x), hw_can_ctrl1, (HW_CAN_CTRL1_RD(x) & ~BM_CAN_CTRL1_PSEG2) | BF_CAN_CTRL1_PSEG2(v)))
 /*@}*/
 
 /*!
@@ -1165,13 +1165,13 @@ typedef union _hw_can_ctrl1
 #define BS_CAN_CTRL1_PSEG1   (3U)          /*!< Bit field size in bits for CAN_CTRL1_PSEG1. */
 
 /*! @brief Read current value of the CAN_CTRL1_PSEG1 field. */
-#define BR_CAN_CTRL1_PSEG1(x) (UNION_READ_FS(HW_CAN_CTRL1_ADDR(x), hw_can_ctrl1, B.PSEG1))
+#define BR_CAN_CTRL1_PSEG1(x) (UNION_READ_BIT_FS(HW_CAN_CTRL1_ADDR(x), hw_can_ctrl1, B.PSEG1))
 
 /*! @brief Format value for bitfield CAN_CTRL1_PSEG1. */
 #define BF_CAN_CTRL1_PSEG1(v) ((uint32_t)((uint32_t)(v) << BP_CAN_CTRL1_PSEG1) & BM_CAN_CTRL1_PSEG1)
 
 /*! @brief Set the PSEG1 field to a new value. */
-#define BW_CAN_CTRL1_PSEG1(x, v) (ADDRESS_WRITE32(HW_CAN_CTRL1_ADDR(x), (HW_CAN_CTRL1_RD(x) & ~BM_CAN_CTRL1_PSEG1) | BF_CAN_CTRL1_PSEG1(v)))
+#define BW_CAN_CTRL1_PSEG1(x, v) (UNION_WRITE_REG_FS(HW_CAN_CTRL1_ADDR(x), hw_can_ctrl1, (HW_CAN_CTRL1_RD(x) & ~BM_CAN_CTRL1_PSEG1) | BF_CAN_CTRL1_PSEG1(v)))
 /*@}*/
 
 /*!
@@ -1189,13 +1189,13 @@ typedef union _hw_can_ctrl1
 #define BS_CAN_CTRL1_RJW     (2U)          /*!< Bit field size in bits for CAN_CTRL1_RJW. */
 
 /*! @brief Read current value of the CAN_CTRL1_RJW field. */
-#define BR_CAN_CTRL1_RJW(x)  (UNION_READ_FS(HW_CAN_CTRL1_ADDR(x), hw_can_ctrl1, B.RJW))
+#define BR_CAN_CTRL1_RJW(x)  (UNION_READ_BIT_FS(HW_CAN_CTRL1_ADDR(x), hw_can_ctrl1, B.RJW))
 
 /*! @brief Format value for bitfield CAN_CTRL1_RJW. */
 #define BF_CAN_CTRL1_RJW(v)  ((uint32_t)((uint32_t)(v) << BP_CAN_CTRL1_RJW) & BM_CAN_CTRL1_RJW)
 
 /*! @brief Set the RJW field to a new value. */
-#define BW_CAN_CTRL1_RJW(x, v) (ADDRESS_WRITE32(HW_CAN_CTRL1_ADDR(x), (HW_CAN_CTRL1_RD(x) & ~BM_CAN_CTRL1_RJW) | BF_CAN_CTRL1_RJW(v)))
+#define BW_CAN_CTRL1_RJW(x, v) (UNION_WRITE_REG_FS(HW_CAN_CTRL1_ADDR(x), hw_can_ctrl1, (HW_CAN_CTRL1_RD(x) & ~BM_CAN_CTRL1_RJW) | BF_CAN_CTRL1_RJW(v)))
 /*@}*/
 
 /*!
@@ -1216,13 +1216,13 @@ typedef union _hw_can_ctrl1
 #define BS_CAN_CTRL1_PRESDIV (8U)          /*!< Bit field size in bits for CAN_CTRL1_PRESDIV. */
 
 /*! @brief Read current value of the CAN_CTRL1_PRESDIV field. */
-#define BR_CAN_CTRL1_PRESDIV(x) (UNION_READ_FS(HW_CAN_CTRL1_ADDR(x), hw_can_ctrl1, B.PRESDIV))
+#define BR_CAN_CTRL1_PRESDIV(x) (UNION_READ_BIT_FS(HW_CAN_CTRL1_ADDR(x), hw_can_ctrl1, B.PRESDIV))
 
 /*! @brief Format value for bitfield CAN_CTRL1_PRESDIV. */
 #define BF_CAN_CTRL1_PRESDIV(v) ((uint32_t)((uint32_t)(v) << BP_CAN_CTRL1_PRESDIV) & BM_CAN_CTRL1_PRESDIV)
 
 /*! @brief Set the PRESDIV field to a new value. */
-#define BW_CAN_CTRL1_PRESDIV(x, v) (ADDRESS_WRITE32(HW_CAN_CTRL1_ADDR(x), (HW_CAN_CTRL1_RD(x) & ~BM_CAN_CTRL1_PRESDIV) | BF_CAN_CTRL1_PRESDIV(v)))
+#define BW_CAN_CTRL1_PRESDIV(x, v) (UNION_WRITE_REG_FS(HW_CAN_CTRL1_ADDR(x), hw_can_ctrl1, (HW_CAN_CTRL1_RD(x) & ~BM_CAN_CTRL1_PRESDIV) | BF_CAN_CTRL1_PRESDIV(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1290,13 +1290,13 @@ typedef union _hw_can_timer
 #define BS_CAN_TIMER_TIMER   (16U)         /*!< Bit field size in bits for CAN_TIMER_TIMER. */
 
 /*! @brief Read current value of the CAN_TIMER_TIMER field. */
-#define BR_CAN_TIMER_TIMER(x) (UNION_READ_FS(HW_CAN_TIMER_ADDR(x), hw_can_timer, B.TIMER))
+#define BR_CAN_TIMER_TIMER(x) (UNION_READ_BIT_FS(HW_CAN_TIMER_ADDR(x), hw_can_timer, B.TIMER))
 
 /*! @brief Format value for bitfield CAN_TIMER_TIMER. */
 #define BF_CAN_TIMER_TIMER(v) ((uint32_t)((uint32_t)(v) << BP_CAN_TIMER_TIMER) & BM_CAN_TIMER_TIMER)
 
 /*! @brief Set the TIMER field to a new value. */
-#define BW_CAN_TIMER_TIMER(x, v) (ADDRESS_WRITE32(HW_CAN_TIMER_ADDR(x), (HW_CAN_TIMER_RD(x) & ~BM_CAN_TIMER_TIMER) | BF_CAN_TIMER_TIMER(v)))
+#define BW_CAN_TIMER_TIMER(x, v) (UNION_WRITE_REG_FS(HW_CAN_TIMER_ADDR(x), hw_can_timer, (HW_CAN_TIMER_RD(x) & ~BM_CAN_TIMER_TIMER) | BF_CAN_TIMER_TIMER(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1368,13 +1368,13 @@ typedef union _hw_can_rxmgmask
 #define BS_CAN_RXMGMASK_MG   (32U)         /*!< Bit field size in bits for CAN_RXMGMASK_MG. */
 
 /*! @brief Read current value of the CAN_RXMGMASK_MG field. */
-#define BR_CAN_RXMGMASK_MG(x) (ADDRESS_READ32(HW_CAN_RXMGMASK_ADDR(x)))
+#define BR_CAN_RXMGMASK_MG(x) (UNION_READ_REG_FS(HW_CAN_RXMGMASK_ADDR(x), hw_can_rxmgmask))
 
 /*! @brief Format value for bitfield CAN_RXMGMASK_MG. */
 #define BF_CAN_RXMGMASK_MG(v) ((uint32_t)((uint32_t)(v) << BP_CAN_RXMGMASK_MG) & BM_CAN_RXMGMASK_MG)
 
 /*! @brief Set the MG field to a new value. */
-#define BW_CAN_RXMGMASK_MG(x, v) (ADDRESS_WRITE32(HW_CAN_RXMGMASK_ADDR(x), v))
+#define BW_CAN_RXMGMASK_MG(x, v) (UNION_WRITE_REG_FS(HW_CAN_RXMGMASK_ADDR(x), hw_can_rxmgmask, v))
 /*@}*/
 
 /*******************************************************************************
@@ -1436,13 +1436,13 @@ typedef union _hw_can_rx14mask
 #define BS_CAN_RX14MASK_RX14M (32U)        /*!< Bit field size in bits for CAN_RX14MASK_RX14M. */
 
 /*! @brief Read current value of the CAN_RX14MASK_RX14M field. */
-#define BR_CAN_RX14MASK_RX14M(x) (ADDRESS_READ32(HW_CAN_RX14MASK_ADDR(x)))
+#define BR_CAN_RX14MASK_RX14M(x) (UNION_READ_REG_FS(HW_CAN_RX14MASK_ADDR(x), hw_can_rx14mask))
 
 /*! @brief Format value for bitfield CAN_RX14MASK_RX14M. */
 #define BF_CAN_RX14MASK_RX14M(v) ((uint32_t)((uint32_t)(v) << BP_CAN_RX14MASK_RX14M) & BM_CAN_RX14MASK_RX14M)
 
 /*! @brief Set the RX14M field to a new value. */
-#define BW_CAN_RX14MASK_RX14M(x, v) (ADDRESS_WRITE32(HW_CAN_RX14MASK_ADDR(x), v))
+#define BW_CAN_RX14MASK_RX14M(x, v) (UNION_WRITE_REG_FS(HW_CAN_RX14MASK_ADDR(x), hw_can_rx14mask, v))
 /*@}*/
 
 /*******************************************************************************
@@ -1504,13 +1504,13 @@ typedef union _hw_can_rx15mask
 #define BS_CAN_RX15MASK_RX15M (32U)        /*!< Bit field size in bits for CAN_RX15MASK_RX15M. */
 
 /*! @brief Read current value of the CAN_RX15MASK_RX15M field. */
-#define BR_CAN_RX15MASK_RX15M(x) (ADDRESS_READ32(HW_CAN_RX15MASK_ADDR(x)))
+#define BR_CAN_RX15MASK_RX15M(x) (UNION_READ_REG_FS(HW_CAN_RX15MASK_ADDR(x), hw_can_rx15mask))
 
 /*! @brief Format value for bitfield CAN_RX15MASK_RX15M. */
 #define BF_CAN_RX15MASK_RX15M(v) ((uint32_t)((uint32_t)(v) << BP_CAN_RX15MASK_RX15M) & BM_CAN_RX15MASK_RX15M)
 
 /*! @brief Set the RX15M field to a new value. */
-#define BW_CAN_RX15MASK_RX15M(x, v) (ADDRESS_WRITE32(HW_CAN_RX15MASK_ADDR(x), v))
+#define BW_CAN_RX15MASK_RX15M(x, v) (UNION_WRITE_REG_FS(HW_CAN_RX15MASK_ADDR(x), hw_can_rx15mask, v))
 /*@}*/
 
 /*******************************************************************************
@@ -1596,13 +1596,13 @@ typedef union _hw_can_ecr
 #define BS_CAN_ECR_TXERRCNT  (8U)          /*!< Bit field size in bits for CAN_ECR_TXERRCNT. */
 
 /*! @brief Read current value of the CAN_ECR_TXERRCNT field. */
-#define BR_CAN_ECR_TXERRCNT(x) (UNION_READ_FS(HW_CAN_ECR_ADDR(x), hw_can_ecr, B.TXERRCNT))
+#define BR_CAN_ECR_TXERRCNT(x) (UNION_READ_BIT_FS(HW_CAN_ECR_ADDR(x), hw_can_ecr, B.TXERRCNT))
 
 /*! @brief Format value for bitfield CAN_ECR_TXERRCNT. */
 #define BF_CAN_ECR_TXERRCNT(v) ((uint32_t)((uint32_t)(v) << BP_CAN_ECR_TXERRCNT) & BM_CAN_ECR_TXERRCNT)
 
 /*! @brief Set the TXERRCNT field to a new value. */
-#define BW_CAN_ECR_TXERRCNT(x, v) (ADDRESS_WRITE32(HW_CAN_ECR_ADDR(x), (HW_CAN_ECR_RD(x) & ~BM_CAN_ECR_TXERRCNT) | BF_CAN_ECR_TXERRCNT(v)))
+#define BW_CAN_ECR_TXERRCNT(x, v) (UNION_WRITE_REG_FS(HW_CAN_ECR_ADDR(x), hw_can_ecr, (HW_CAN_ECR_RD(x) & ~BM_CAN_ECR_TXERRCNT) | BF_CAN_ECR_TXERRCNT(v)))
 /*@}*/
 
 /*!
@@ -1614,13 +1614,13 @@ typedef union _hw_can_ecr
 #define BS_CAN_ECR_RXERRCNT  (8U)          /*!< Bit field size in bits for CAN_ECR_RXERRCNT. */
 
 /*! @brief Read current value of the CAN_ECR_RXERRCNT field. */
-#define BR_CAN_ECR_RXERRCNT(x) (UNION_READ_FS(HW_CAN_ECR_ADDR(x), hw_can_ecr, B.RXERRCNT))
+#define BR_CAN_ECR_RXERRCNT(x) (UNION_READ_BIT_FS(HW_CAN_ECR_ADDR(x), hw_can_ecr, B.RXERRCNT))
 
 /*! @brief Format value for bitfield CAN_ECR_RXERRCNT. */
 #define BF_CAN_ECR_RXERRCNT(v) ((uint32_t)((uint32_t)(v) << BP_CAN_ECR_RXERRCNT) & BM_CAN_ECR_RXERRCNT)
 
 /*! @brief Set the RXERRCNT field to a new value. */
-#define BW_CAN_ECR_RXERRCNT(x, v) (ADDRESS_WRITE32(HW_CAN_ECR_ADDR(x), (HW_CAN_ECR_RD(x) & ~BM_CAN_ECR_RXERRCNT) | BF_CAN_ECR_RXERRCNT(v)))
+#define BW_CAN_ECR_RXERRCNT(x, v) (UNION_WRITE_REG_FS(HW_CAN_ECR_ADDR(x), hw_can_ecr, (HW_CAN_ECR_RD(x) & ~BM_CAN_ECR_RXERRCNT) | BF_CAN_ECR_RXERRCNT(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1809,7 +1809,7 @@ typedef union _hw_can_esr1
 #define BS_CAN_ESR1_FLTCONF  (2U)          /*!< Bit field size in bits for CAN_ESR1_FLTCONF. */
 
 /*! @brief Read current value of the CAN_ESR1_FLTCONF field. */
-#define BR_CAN_ESR1_FLTCONF(x) (UNION_READ_FS(HW_CAN_ESR1_ADDR(x), hw_can_esr1, B.FLTCONF))
+#define BR_CAN_ESR1_FLTCONF(x) (UNION_READ_BIT_FS(HW_CAN_ESR1_ADDR(x), hw_can_esr1, B.FLTCONF))
 /*@}*/
 
 /*!
@@ -2145,13 +2145,13 @@ typedef union _hw_can_imask1
 #define BS_CAN_IMASK1_BUFLM  (32U)         /*!< Bit field size in bits for CAN_IMASK1_BUFLM. */
 
 /*! @brief Read current value of the CAN_IMASK1_BUFLM field. */
-#define BR_CAN_IMASK1_BUFLM(x) (ADDRESS_READ32(HW_CAN_IMASK1_ADDR(x)))
+#define BR_CAN_IMASK1_BUFLM(x) (UNION_READ_REG_FS(HW_CAN_IMASK1_ADDR(x), hw_can_imask1))
 
 /*! @brief Format value for bitfield CAN_IMASK1_BUFLM. */
 #define BF_CAN_IMASK1_BUFLM(v) ((uint32_t)((uint32_t)(v) << BP_CAN_IMASK1_BUFLM) & BM_CAN_IMASK1_BUFLM)
 
 /*! @brief Set the BUFLM field to a new value. */
-#define BW_CAN_IMASK1_BUFLM(x, v) (ADDRESS_WRITE32(HW_CAN_IMASK1_ADDR(x), v))
+#define BW_CAN_IMASK1_BUFLM(x, v) (UNION_WRITE_REG_FS(HW_CAN_IMASK1_ADDR(x), hw_can_imask1, v))
 /*@}*/
 
 /*******************************************************************************
@@ -2267,13 +2267,13 @@ typedef union _hw_can_iflag1
 #define BS_CAN_IFLAG1_BUF4TO1I (4U)        /*!< Bit field size in bits for CAN_IFLAG1_BUF4TO1I. */
 
 /*! @brief Read current value of the CAN_IFLAG1_BUF4TO1I field. */
-#define BR_CAN_IFLAG1_BUF4TO1I(x) (UNION_READ_FS(HW_CAN_IFLAG1_ADDR(x), hw_can_iflag1, B.BUF4TO1I))
+#define BR_CAN_IFLAG1_BUF4TO1I(x) (UNION_READ_BIT_FS(HW_CAN_IFLAG1_ADDR(x), hw_can_iflag1, B.BUF4TO1I))
 
 /*! @brief Format value for bitfield CAN_IFLAG1_BUF4TO1I. */
 #define BF_CAN_IFLAG1_BUF4TO1I(v) ((uint32_t)((uint32_t)(v) << BP_CAN_IFLAG1_BUF4TO1I) & BM_CAN_IFLAG1_BUF4TO1I)
 
 /*! @brief Set the BUF4TO1I field to a new value. */
-#define BW_CAN_IFLAG1_BUF4TO1I(x, v) (ADDRESS_WRITE32(HW_CAN_IFLAG1_ADDR(x), (HW_CAN_IFLAG1_RD(x) & ~BM_CAN_IFLAG1_BUF4TO1I) | BF_CAN_IFLAG1_BUF4TO1I(v)))
+#define BW_CAN_IFLAG1_BUF4TO1I(x, v) (UNION_WRITE_REG_FS(HW_CAN_IFLAG1_ADDR(x), hw_can_iflag1, (HW_CAN_IFLAG1_RD(x) & ~BM_CAN_IFLAG1_BUF4TO1I) | BF_CAN_IFLAG1_BUF4TO1I(v)))
 /*@}*/
 
 /*!
@@ -2389,13 +2389,13 @@ typedef union _hw_can_iflag1
 #define BS_CAN_IFLAG1_BUF31TO8I (24U)      /*!< Bit field size in bits for CAN_IFLAG1_BUF31TO8I. */
 
 /*! @brief Read current value of the CAN_IFLAG1_BUF31TO8I field. */
-#define BR_CAN_IFLAG1_BUF31TO8I(x) (UNION_READ_FS(HW_CAN_IFLAG1_ADDR(x), hw_can_iflag1, B.BUF31TO8I))
+#define BR_CAN_IFLAG1_BUF31TO8I(x) (UNION_READ_BIT_FS(HW_CAN_IFLAG1_ADDR(x), hw_can_iflag1, B.BUF31TO8I))
 
 /*! @brief Format value for bitfield CAN_IFLAG1_BUF31TO8I. */
 #define BF_CAN_IFLAG1_BUF31TO8I(v) ((uint32_t)((uint32_t)(v) << BP_CAN_IFLAG1_BUF31TO8I) & BM_CAN_IFLAG1_BUF31TO8I)
 
 /*! @brief Set the BUF31TO8I field to a new value. */
-#define BW_CAN_IFLAG1_BUF31TO8I(x, v) (ADDRESS_WRITE32(HW_CAN_IFLAG1_ADDR(x), (HW_CAN_IFLAG1_RD(x) & ~BM_CAN_IFLAG1_BUF31TO8I) | BF_CAN_IFLAG1_BUF31TO8I(v)))
+#define BW_CAN_IFLAG1_BUF31TO8I(x, v) (UNION_WRITE_REG_FS(HW_CAN_IFLAG1_ADDR(x), hw_can_iflag1, (HW_CAN_IFLAG1_RD(x) & ~BM_CAN_IFLAG1_BUF31TO8I) | BF_CAN_IFLAG1_BUF31TO8I(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -2570,13 +2570,13 @@ typedef union _hw_can_ctrl2
 #define BS_CAN_CTRL2_TASD    (5U)          /*!< Bit field size in bits for CAN_CTRL2_TASD. */
 
 /*! @brief Read current value of the CAN_CTRL2_TASD field. */
-#define BR_CAN_CTRL2_TASD(x) (UNION_READ_FS(HW_CAN_CTRL2_ADDR(x), hw_can_ctrl2, B.TASD))
+#define BR_CAN_CTRL2_TASD(x) (UNION_READ_BIT_FS(HW_CAN_CTRL2_ADDR(x), hw_can_ctrl2, B.TASD))
 
 /*! @brief Format value for bitfield CAN_CTRL2_TASD. */
 #define BF_CAN_CTRL2_TASD(v) ((uint32_t)((uint32_t)(v) << BP_CAN_CTRL2_TASD) & BM_CAN_CTRL2_TASD)
 
 /*! @brief Set the TASD field to a new value. */
-#define BW_CAN_CTRL2_TASD(x, v) (ADDRESS_WRITE32(HW_CAN_CTRL2_ADDR(x), (HW_CAN_CTRL2_RD(x) & ~BM_CAN_CTRL2_TASD) | BF_CAN_CTRL2_TASD(v)))
+#define BW_CAN_CTRL2_TASD(x, v) (UNION_WRITE_REG_FS(HW_CAN_CTRL2_ADDR(x), hw_can_ctrl2, (HW_CAN_CTRL2_RD(x) & ~BM_CAN_CTRL2_TASD) | BF_CAN_CTRL2_TASD(v)))
 /*@}*/
 
 /*!
@@ -2622,13 +2622,13 @@ typedef union _hw_can_ctrl2
 #define BS_CAN_CTRL2_RFFN    (4U)          /*!< Bit field size in bits for CAN_CTRL2_RFFN. */
 
 /*! @brief Read current value of the CAN_CTRL2_RFFN field. */
-#define BR_CAN_CTRL2_RFFN(x) (UNION_READ_FS(HW_CAN_CTRL2_ADDR(x), hw_can_ctrl2, B.RFFN))
+#define BR_CAN_CTRL2_RFFN(x) (UNION_READ_BIT_FS(HW_CAN_CTRL2_ADDR(x), hw_can_ctrl2, B.RFFN))
 
 /*! @brief Format value for bitfield CAN_CTRL2_RFFN. */
 #define BF_CAN_CTRL2_RFFN(v) ((uint32_t)((uint32_t)(v) << BP_CAN_CTRL2_RFFN) & BM_CAN_CTRL2_RFFN)
 
 /*! @brief Set the RFFN field to a new value. */
-#define BW_CAN_CTRL2_RFFN(x, v) (ADDRESS_WRITE32(HW_CAN_CTRL2_ADDR(x), (HW_CAN_CTRL2_RD(x) & ~BM_CAN_CTRL2_RFFN) | BF_CAN_CTRL2_RFFN(v)))
+#define BW_CAN_CTRL2_RFFN(x, v) (UNION_WRITE_REG_FS(HW_CAN_CTRL2_ADDR(x), hw_can_ctrl2, (HW_CAN_CTRL2_RD(x) & ~BM_CAN_CTRL2_RFFN) | BF_CAN_CTRL2_RFFN(v)))
 /*@}*/
 
 /*!
@@ -2768,7 +2768,7 @@ typedef union _hw_can_esr2
 #define BS_CAN_ESR2_LPTM     (7U)          /*!< Bit field size in bits for CAN_ESR2_LPTM. */
 
 /*! @brief Read current value of the CAN_ESR2_LPTM field. */
-#define BR_CAN_ESR2_LPTM(x)  (UNION_READ_FS(HW_CAN_ESR2_ADDR(x), hw_can_esr2, B.LPTM))
+#define BR_CAN_ESR2_LPTM(x)  (UNION_READ_BIT_FS(HW_CAN_ESR2_ADDR(x), hw_can_esr2, B.LPTM))
 /*@}*/
 
 /*******************************************************************************
@@ -2820,7 +2820,7 @@ typedef union _hw_can_crcr
 #define BS_CAN_CRCR_TXCRC    (15U)         /*!< Bit field size in bits for CAN_CRCR_TXCRC. */
 
 /*! @brief Read current value of the CAN_CRCR_TXCRC field. */
-#define BR_CAN_CRCR_TXCRC(x) (UNION_READ_FS(HW_CAN_CRCR_ADDR(x), hw_can_crcr, B.TXCRC))
+#define BR_CAN_CRCR_TXCRC(x) (UNION_READ_BIT_FS(HW_CAN_CRCR_ADDR(x), hw_can_crcr, B.TXCRC))
 /*@}*/
 
 /*!
@@ -2835,7 +2835,7 @@ typedef union _hw_can_crcr
 #define BS_CAN_CRCR_MBCRC    (7U)          /*!< Bit field size in bits for CAN_CRCR_MBCRC. */
 
 /*! @brief Read current value of the CAN_CRCR_MBCRC field. */
-#define BR_CAN_CRCR_MBCRC(x) (UNION_READ_FS(HW_CAN_CRCR_ADDR(x), hw_can_crcr, B.MBCRC))
+#define BR_CAN_CRCR_MBCRC(x) (UNION_READ_BIT_FS(HW_CAN_CRCR_ADDR(x), hw_can_crcr, B.MBCRC))
 /*@}*/
 
 /*******************************************************************************
@@ -2903,13 +2903,13 @@ typedef union _hw_can_rxfgmask
 #define BS_CAN_RXFGMASK_FGM  (32U)         /*!< Bit field size in bits for CAN_RXFGMASK_FGM. */
 
 /*! @brief Read current value of the CAN_RXFGMASK_FGM field. */
-#define BR_CAN_RXFGMASK_FGM(x) (ADDRESS_READ32(HW_CAN_RXFGMASK_ADDR(x)))
+#define BR_CAN_RXFGMASK_FGM(x) (UNION_READ_REG_FS(HW_CAN_RXFGMASK_ADDR(x), hw_can_rxfgmask))
 
 /*! @brief Format value for bitfield CAN_RXFGMASK_FGM. */
 #define BF_CAN_RXFGMASK_FGM(v) ((uint32_t)((uint32_t)(v) << BP_CAN_RXFGMASK_FGM) & BM_CAN_RXFGMASK_FGM)
 
 /*! @brief Set the FGM field to a new value. */
-#define BW_CAN_RXFGMASK_FGM(x, v) (ADDRESS_WRITE32(HW_CAN_RXFGMASK_ADDR(x), v))
+#define BW_CAN_RXFGMASK_FGM(x, v) (UNION_WRITE_REG_FS(HW_CAN_RXFGMASK_ADDR(x), hw_can_rxfgmask, v))
 /*@}*/
 
 /*******************************************************************************
@@ -2968,7 +2968,7 @@ typedef union _hw_can_rxfir
 #define BS_CAN_RXFIR_IDHIT   (9U)          /*!< Bit field size in bits for CAN_RXFIR_IDHIT. */
 
 /*! @brief Read current value of the CAN_RXFIR_IDHIT field. */
-#define BR_CAN_RXFIR_IDHIT(x) (UNION_READ_FS(HW_CAN_RXFIR_ADDR(x), hw_can_rxfir, B.IDHIT))
+#define BR_CAN_RXFIR_IDHIT(x) (UNION_READ_BIT_FS(HW_CAN_RXFIR_ADDR(x), hw_can_rxfir, B.IDHIT))
 /*@}*/
 
 /*******************************************************************************
@@ -3032,13 +3032,13 @@ typedef union _hw_can_csn
 #define BS_CAN_CSn_TIME_STAMP (16U)        /*!< Bit field size in bits for CAN_CSn_TIME_STAMP. */
 
 /*! @brief Read current value of the CAN_CSn_TIME_STAMP field. */
-#define BR_CAN_CSn_TIME_STAMP(x, n) (UNION_READ_FS(HW_CAN_CSn_ADDR(x, n), hw_can_csn, B.TIME_STAMP))
+#define BR_CAN_CSn_TIME_STAMP(x, n) (UNION_READ_BIT_FS(HW_CAN_CSn_ADDR(x, n), hw_can_csn, B.TIME_STAMP))
 
 /*! @brief Format value for bitfield CAN_CSn_TIME_STAMP. */
 #define BF_CAN_CSn_TIME_STAMP(v) ((uint32_t)((uint32_t)(v) << BP_CAN_CSn_TIME_STAMP) & BM_CAN_CSn_TIME_STAMP)
 
 /*! @brief Set the TIME_STAMP field to a new value. */
-#define BW_CAN_CSn_TIME_STAMP(x, n, v) (ADDRESS_WRITE32(HW_CAN_CSn_ADDR(x, n), (HW_CAN_CSn_RD(x, n) & ~BM_CAN_CSn_TIME_STAMP) | BF_CAN_CSn_TIME_STAMP(v)))
+#define BW_CAN_CSn_TIME_STAMP(x, n, v) (UNION_WRITE_REG_FS(HW_CAN_CSn_ADDR(x, n), hw_can_csn, (HW_CAN_CSn_RD(x, n) & ~BM_CAN_CSn_TIME_STAMP) | BF_CAN_CSn_TIME_STAMP(v)))
 /*@}*/
 
 /*!
@@ -3050,13 +3050,13 @@ typedef union _hw_can_csn
 #define BS_CAN_CSn_DLC       (4U)          /*!< Bit field size in bits for CAN_CSn_DLC. */
 
 /*! @brief Read current value of the CAN_CSn_DLC field. */
-#define BR_CAN_CSn_DLC(x, n) (UNION_READ_FS(HW_CAN_CSn_ADDR(x, n), hw_can_csn, B.DLC))
+#define BR_CAN_CSn_DLC(x, n) (UNION_READ_BIT_FS(HW_CAN_CSn_ADDR(x, n), hw_can_csn, B.DLC))
 
 /*! @brief Format value for bitfield CAN_CSn_DLC. */
 #define BF_CAN_CSn_DLC(v)    ((uint32_t)((uint32_t)(v) << BP_CAN_CSn_DLC) & BM_CAN_CSn_DLC)
 
 /*! @brief Set the DLC field to a new value. */
-#define BW_CAN_CSn_DLC(x, n, v) (ADDRESS_WRITE32(HW_CAN_CSn_ADDR(x, n), (HW_CAN_CSn_RD(x, n) & ~BM_CAN_CSn_DLC) | BF_CAN_CSn_DLC(v)))
+#define BW_CAN_CSn_DLC(x, n, v) (UNION_WRITE_REG_FS(HW_CAN_CSn_ADDR(x, n), hw_can_csn, (HW_CAN_CSn_RD(x, n) & ~BM_CAN_CSn_DLC) | BF_CAN_CSn_DLC(v)))
 /*@}*/
 
 /*!
@@ -3122,13 +3122,13 @@ typedef union _hw_can_csn
 #define BS_CAN_CSn_CODE      (4U)          /*!< Bit field size in bits for CAN_CSn_CODE. */
 
 /*! @brief Read current value of the CAN_CSn_CODE field. */
-#define BR_CAN_CSn_CODE(x, n) (UNION_READ_FS(HW_CAN_CSn_ADDR(x, n), hw_can_csn, B.CODE))
+#define BR_CAN_CSn_CODE(x, n) (UNION_READ_BIT_FS(HW_CAN_CSn_ADDR(x, n), hw_can_csn, B.CODE))
 
 /*! @brief Format value for bitfield CAN_CSn_CODE. */
 #define BF_CAN_CSn_CODE(v)   ((uint32_t)((uint32_t)(v) << BP_CAN_CSn_CODE) & BM_CAN_CSn_CODE)
 
 /*! @brief Set the CODE field to a new value. */
-#define BW_CAN_CSn_CODE(x, n, v) (ADDRESS_WRITE32(HW_CAN_CSn_ADDR(x, n), (HW_CAN_CSn_RD(x, n) & ~BM_CAN_CSn_CODE) | BF_CAN_CSn_CODE(v)))
+#define BW_CAN_CSn_CODE(x, n, v) (UNION_WRITE_REG_FS(HW_CAN_CSn_ADDR(x, n), hw_can_csn, (HW_CAN_CSn_RD(x, n) & ~BM_CAN_CSn_CODE) | BF_CAN_CSn_CODE(v)))
 /*@}*/
 /*******************************************************************************
  * HW_CAN_IDn - Message Buffer 0 ID Register
@@ -3184,13 +3184,13 @@ typedef union _hw_can_idn
 #define BS_CAN_IDn_EXT       (18U)         /*!< Bit field size in bits for CAN_IDn_EXT. */
 
 /*! @brief Read current value of the CAN_IDn_EXT field. */
-#define BR_CAN_IDn_EXT(x, n) (UNION_READ_FS(HW_CAN_IDn_ADDR(x, n), hw_can_idn, B.EXT))
+#define BR_CAN_IDn_EXT(x, n) (UNION_READ_BIT_FS(HW_CAN_IDn_ADDR(x, n), hw_can_idn, B.EXT))
 
 /*! @brief Format value for bitfield CAN_IDn_EXT. */
 #define BF_CAN_IDn_EXT(v)    ((uint32_t)((uint32_t)(v) << BP_CAN_IDn_EXT) & BM_CAN_IDn_EXT)
 
 /*! @brief Set the EXT field to a new value. */
-#define BW_CAN_IDn_EXT(x, n, v) (ADDRESS_WRITE32(HW_CAN_IDn_ADDR(x, n), (HW_CAN_IDn_RD(x, n) & ~BM_CAN_IDn_EXT) | BF_CAN_IDn_EXT(v)))
+#define BW_CAN_IDn_EXT(x, n, v) (UNION_WRITE_REG_FS(HW_CAN_IDn_ADDR(x, n), hw_can_idn, (HW_CAN_IDn_RD(x, n) & ~BM_CAN_IDn_EXT) | BF_CAN_IDn_EXT(v)))
 /*@}*/
 
 /*!
@@ -3202,13 +3202,13 @@ typedef union _hw_can_idn
 #define BS_CAN_IDn_STD       (11U)         /*!< Bit field size in bits for CAN_IDn_STD. */
 
 /*! @brief Read current value of the CAN_IDn_STD field. */
-#define BR_CAN_IDn_STD(x, n) (UNION_READ_FS(HW_CAN_IDn_ADDR(x, n), hw_can_idn, B.STD))
+#define BR_CAN_IDn_STD(x, n) (UNION_READ_BIT_FS(HW_CAN_IDn_ADDR(x, n), hw_can_idn, B.STD))
 
 /*! @brief Format value for bitfield CAN_IDn_STD. */
 #define BF_CAN_IDn_STD(v)    ((uint32_t)((uint32_t)(v) << BP_CAN_IDn_STD) & BM_CAN_IDn_STD)
 
 /*! @brief Set the STD field to a new value. */
-#define BW_CAN_IDn_STD(x, n, v) (ADDRESS_WRITE32(HW_CAN_IDn_ADDR(x, n), (HW_CAN_IDn_RD(x, n) & ~BM_CAN_IDn_STD) | BF_CAN_IDn_STD(v)))
+#define BW_CAN_IDn_STD(x, n, v) (UNION_WRITE_REG_FS(HW_CAN_IDn_ADDR(x, n), hw_can_idn, (HW_CAN_IDn_RD(x, n) & ~BM_CAN_IDn_STD) | BF_CAN_IDn_STD(v)))
 /*@}*/
 
 /*!
@@ -3220,13 +3220,13 @@ typedef union _hw_can_idn
 #define BS_CAN_IDn_PRIO      (3U)          /*!< Bit field size in bits for CAN_IDn_PRIO. */
 
 /*! @brief Read current value of the CAN_IDn_PRIO field. */
-#define BR_CAN_IDn_PRIO(x, n) (UNION_READ_FS(HW_CAN_IDn_ADDR(x, n), hw_can_idn, B.PRIO))
+#define BR_CAN_IDn_PRIO(x, n) (UNION_READ_BIT_FS(HW_CAN_IDn_ADDR(x, n), hw_can_idn, B.PRIO))
 
 /*! @brief Format value for bitfield CAN_IDn_PRIO. */
 #define BF_CAN_IDn_PRIO(v)   ((uint32_t)((uint32_t)(v) << BP_CAN_IDn_PRIO) & BM_CAN_IDn_PRIO)
 
 /*! @brief Set the PRIO field to a new value. */
-#define BW_CAN_IDn_PRIO(x, n, v) (ADDRESS_WRITE32(HW_CAN_IDn_ADDR(x, n), (HW_CAN_IDn_RD(x, n) & ~BM_CAN_IDn_PRIO) | BF_CAN_IDn_PRIO(v)))
+#define BW_CAN_IDn_PRIO(x, n, v) (UNION_WRITE_REG_FS(HW_CAN_IDn_ADDR(x, n), hw_can_idn, (HW_CAN_IDn_RD(x, n) & ~BM_CAN_IDn_PRIO) | BF_CAN_IDn_PRIO(v)))
 /*@}*/
 /*******************************************************************************
  * HW_CAN_WORD0n - Message Buffer 0 WORD0 Register
@@ -3278,13 +3278,13 @@ typedef union _hw_can_word0n
 #define BS_CAN_WORD0n_DATA_BYTE_3 (8U)     /*!< Bit field size in bits for CAN_WORD0n_DATA_BYTE_3. */
 
 /*! @brief Read current value of the CAN_WORD0n_DATA_BYTE_3 field. */
-#define BR_CAN_WORD0n_DATA_BYTE_3(x, n) (UNION_READ_FS(HW_CAN_WORD0n_ADDR(x, n), hw_can_word0n, B.DATA_BYTE_3))
+#define BR_CAN_WORD0n_DATA_BYTE_3(x, n) (UNION_READ_BIT_FS(HW_CAN_WORD0n_ADDR(x, n), hw_can_word0n, B.DATA_BYTE_3))
 
 /*! @brief Format value for bitfield CAN_WORD0n_DATA_BYTE_3. */
 #define BF_CAN_WORD0n_DATA_BYTE_3(v) ((uint32_t)((uint32_t)(v) << BP_CAN_WORD0n_DATA_BYTE_3) & BM_CAN_WORD0n_DATA_BYTE_3)
 
 /*! @brief Set the DATA_BYTE_3 field to a new value. */
-#define BW_CAN_WORD0n_DATA_BYTE_3(x, n, v) (ADDRESS_WRITE32(HW_CAN_WORD0n_ADDR(x, n), (HW_CAN_WORD0n_RD(x, n) & ~BM_CAN_WORD0n_DATA_BYTE_3) | BF_CAN_WORD0n_DATA_BYTE_3(v)))
+#define BW_CAN_WORD0n_DATA_BYTE_3(x, n, v) (UNION_WRITE_REG_FS(HW_CAN_WORD0n_ADDR(x, n), hw_can_word0n, (HW_CAN_WORD0n_RD(x, n) & ~BM_CAN_WORD0n_DATA_BYTE_3) | BF_CAN_WORD0n_DATA_BYTE_3(v)))
 /*@}*/
 
 /*!
@@ -3296,13 +3296,13 @@ typedef union _hw_can_word0n
 #define BS_CAN_WORD0n_DATA_BYTE_2 (8U)     /*!< Bit field size in bits for CAN_WORD0n_DATA_BYTE_2. */
 
 /*! @brief Read current value of the CAN_WORD0n_DATA_BYTE_2 field. */
-#define BR_CAN_WORD0n_DATA_BYTE_2(x, n) (UNION_READ_FS(HW_CAN_WORD0n_ADDR(x, n), hw_can_word0n, B.DATA_BYTE_2))
+#define BR_CAN_WORD0n_DATA_BYTE_2(x, n) (UNION_READ_BIT_FS(HW_CAN_WORD0n_ADDR(x, n), hw_can_word0n, B.DATA_BYTE_2))
 
 /*! @brief Format value for bitfield CAN_WORD0n_DATA_BYTE_2. */
 #define BF_CAN_WORD0n_DATA_BYTE_2(v) ((uint32_t)((uint32_t)(v) << BP_CAN_WORD0n_DATA_BYTE_2) & BM_CAN_WORD0n_DATA_BYTE_2)
 
 /*! @brief Set the DATA_BYTE_2 field to a new value. */
-#define BW_CAN_WORD0n_DATA_BYTE_2(x, n, v) (ADDRESS_WRITE32(HW_CAN_WORD0n_ADDR(x, n), (HW_CAN_WORD0n_RD(x, n) & ~BM_CAN_WORD0n_DATA_BYTE_2) | BF_CAN_WORD0n_DATA_BYTE_2(v)))
+#define BW_CAN_WORD0n_DATA_BYTE_2(x, n, v) (UNION_WRITE_REG_FS(HW_CAN_WORD0n_ADDR(x, n), hw_can_word0n, (HW_CAN_WORD0n_RD(x, n) & ~BM_CAN_WORD0n_DATA_BYTE_2) | BF_CAN_WORD0n_DATA_BYTE_2(v)))
 /*@}*/
 
 /*!
@@ -3314,13 +3314,13 @@ typedef union _hw_can_word0n
 #define BS_CAN_WORD0n_DATA_BYTE_1 (8U)     /*!< Bit field size in bits for CAN_WORD0n_DATA_BYTE_1. */
 
 /*! @brief Read current value of the CAN_WORD0n_DATA_BYTE_1 field. */
-#define BR_CAN_WORD0n_DATA_BYTE_1(x, n) (UNION_READ_FS(HW_CAN_WORD0n_ADDR(x, n), hw_can_word0n, B.DATA_BYTE_1))
+#define BR_CAN_WORD0n_DATA_BYTE_1(x, n) (UNION_READ_BIT_FS(HW_CAN_WORD0n_ADDR(x, n), hw_can_word0n, B.DATA_BYTE_1))
 
 /*! @brief Format value for bitfield CAN_WORD0n_DATA_BYTE_1. */
 #define BF_CAN_WORD0n_DATA_BYTE_1(v) ((uint32_t)((uint32_t)(v) << BP_CAN_WORD0n_DATA_BYTE_1) & BM_CAN_WORD0n_DATA_BYTE_1)
 
 /*! @brief Set the DATA_BYTE_1 field to a new value. */
-#define BW_CAN_WORD0n_DATA_BYTE_1(x, n, v) (ADDRESS_WRITE32(HW_CAN_WORD0n_ADDR(x, n), (HW_CAN_WORD0n_RD(x, n) & ~BM_CAN_WORD0n_DATA_BYTE_1) | BF_CAN_WORD0n_DATA_BYTE_1(v)))
+#define BW_CAN_WORD0n_DATA_BYTE_1(x, n, v) (UNION_WRITE_REG_FS(HW_CAN_WORD0n_ADDR(x, n), hw_can_word0n, (HW_CAN_WORD0n_RD(x, n) & ~BM_CAN_WORD0n_DATA_BYTE_1) | BF_CAN_WORD0n_DATA_BYTE_1(v)))
 /*@}*/
 
 /*!
@@ -3332,13 +3332,13 @@ typedef union _hw_can_word0n
 #define BS_CAN_WORD0n_DATA_BYTE_0 (8U)     /*!< Bit field size in bits for CAN_WORD0n_DATA_BYTE_0. */
 
 /*! @brief Read current value of the CAN_WORD0n_DATA_BYTE_0 field. */
-#define BR_CAN_WORD0n_DATA_BYTE_0(x, n) (UNION_READ_FS(HW_CAN_WORD0n_ADDR(x, n), hw_can_word0n, B.DATA_BYTE_0))
+#define BR_CAN_WORD0n_DATA_BYTE_0(x, n) (UNION_READ_BIT_FS(HW_CAN_WORD0n_ADDR(x, n), hw_can_word0n, B.DATA_BYTE_0))
 
 /*! @brief Format value for bitfield CAN_WORD0n_DATA_BYTE_0. */
 #define BF_CAN_WORD0n_DATA_BYTE_0(v) ((uint32_t)((uint32_t)(v) << BP_CAN_WORD0n_DATA_BYTE_0) & BM_CAN_WORD0n_DATA_BYTE_0)
 
 /*! @brief Set the DATA_BYTE_0 field to a new value. */
-#define BW_CAN_WORD0n_DATA_BYTE_0(x, n, v) (ADDRESS_WRITE32(HW_CAN_WORD0n_ADDR(x, n), (HW_CAN_WORD0n_RD(x, n) & ~BM_CAN_WORD0n_DATA_BYTE_0) | BF_CAN_WORD0n_DATA_BYTE_0(v)))
+#define BW_CAN_WORD0n_DATA_BYTE_0(x, n, v) (UNION_WRITE_REG_FS(HW_CAN_WORD0n_ADDR(x, n), hw_can_word0n, (HW_CAN_WORD0n_RD(x, n) & ~BM_CAN_WORD0n_DATA_BYTE_0) | BF_CAN_WORD0n_DATA_BYTE_0(v)))
 /*@}*/
 /*******************************************************************************
  * HW_CAN_WORD1n - Message Buffer 0 WORD1 Register
@@ -3390,13 +3390,13 @@ typedef union _hw_can_word1n
 #define BS_CAN_WORD1n_DATA_BYTE_7 (8U)     /*!< Bit field size in bits for CAN_WORD1n_DATA_BYTE_7. */
 
 /*! @brief Read current value of the CAN_WORD1n_DATA_BYTE_7 field. */
-#define BR_CAN_WORD1n_DATA_BYTE_7(x, n) (UNION_READ_FS(HW_CAN_WORD1n_ADDR(x, n), hw_can_word1n, B.DATA_BYTE_7))
+#define BR_CAN_WORD1n_DATA_BYTE_7(x, n) (UNION_READ_BIT_FS(HW_CAN_WORD1n_ADDR(x, n), hw_can_word1n, B.DATA_BYTE_7))
 
 /*! @brief Format value for bitfield CAN_WORD1n_DATA_BYTE_7. */
 #define BF_CAN_WORD1n_DATA_BYTE_7(v) ((uint32_t)((uint32_t)(v) << BP_CAN_WORD1n_DATA_BYTE_7) & BM_CAN_WORD1n_DATA_BYTE_7)
 
 /*! @brief Set the DATA_BYTE_7 field to a new value. */
-#define BW_CAN_WORD1n_DATA_BYTE_7(x, n, v) (ADDRESS_WRITE32(HW_CAN_WORD1n_ADDR(x, n), (HW_CAN_WORD1n_RD(x, n) & ~BM_CAN_WORD1n_DATA_BYTE_7) | BF_CAN_WORD1n_DATA_BYTE_7(v)))
+#define BW_CAN_WORD1n_DATA_BYTE_7(x, n, v) (UNION_WRITE_REG_FS(HW_CAN_WORD1n_ADDR(x, n), hw_can_word1n, (HW_CAN_WORD1n_RD(x, n) & ~BM_CAN_WORD1n_DATA_BYTE_7) | BF_CAN_WORD1n_DATA_BYTE_7(v)))
 /*@}*/
 
 /*!
@@ -3408,13 +3408,13 @@ typedef union _hw_can_word1n
 #define BS_CAN_WORD1n_DATA_BYTE_6 (8U)     /*!< Bit field size in bits for CAN_WORD1n_DATA_BYTE_6. */
 
 /*! @brief Read current value of the CAN_WORD1n_DATA_BYTE_6 field. */
-#define BR_CAN_WORD1n_DATA_BYTE_6(x, n) (UNION_READ_FS(HW_CAN_WORD1n_ADDR(x, n), hw_can_word1n, B.DATA_BYTE_6))
+#define BR_CAN_WORD1n_DATA_BYTE_6(x, n) (UNION_READ_BIT_FS(HW_CAN_WORD1n_ADDR(x, n), hw_can_word1n, B.DATA_BYTE_6))
 
 /*! @brief Format value for bitfield CAN_WORD1n_DATA_BYTE_6. */
 #define BF_CAN_WORD1n_DATA_BYTE_6(v) ((uint32_t)((uint32_t)(v) << BP_CAN_WORD1n_DATA_BYTE_6) & BM_CAN_WORD1n_DATA_BYTE_6)
 
 /*! @brief Set the DATA_BYTE_6 field to a new value. */
-#define BW_CAN_WORD1n_DATA_BYTE_6(x, n, v) (ADDRESS_WRITE32(HW_CAN_WORD1n_ADDR(x, n), (HW_CAN_WORD1n_RD(x, n) & ~BM_CAN_WORD1n_DATA_BYTE_6) | BF_CAN_WORD1n_DATA_BYTE_6(v)))
+#define BW_CAN_WORD1n_DATA_BYTE_6(x, n, v) (UNION_WRITE_REG_FS(HW_CAN_WORD1n_ADDR(x, n), hw_can_word1n, (HW_CAN_WORD1n_RD(x, n) & ~BM_CAN_WORD1n_DATA_BYTE_6) | BF_CAN_WORD1n_DATA_BYTE_6(v)))
 /*@}*/
 
 /*!
@@ -3426,13 +3426,13 @@ typedef union _hw_can_word1n
 #define BS_CAN_WORD1n_DATA_BYTE_5 (8U)     /*!< Bit field size in bits for CAN_WORD1n_DATA_BYTE_5. */
 
 /*! @brief Read current value of the CAN_WORD1n_DATA_BYTE_5 field. */
-#define BR_CAN_WORD1n_DATA_BYTE_5(x, n) (UNION_READ_FS(HW_CAN_WORD1n_ADDR(x, n), hw_can_word1n, B.DATA_BYTE_5))
+#define BR_CAN_WORD1n_DATA_BYTE_5(x, n) (UNION_READ_BIT_FS(HW_CAN_WORD1n_ADDR(x, n), hw_can_word1n, B.DATA_BYTE_5))
 
 /*! @brief Format value for bitfield CAN_WORD1n_DATA_BYTE_5. */
 #define BF_CAN_WORD1n_DATA_BYTE_5(v) ((uint32_t)((uint32_t)(v) << BP_CAN_WORD1n_DATA_BYTE_5) & BM_CAN_WORD1n_DATA_BYTE_5)
 
 /*! @brief Set the DATA_BYTE_5 field to a new value. */
-#define BW_CAN_WORD1n_DATA_BYTE_5(x, n, v) (ADDRESS_WRITE32(HW_CAN_WORD1n_ADDR(x, n), (HW_CAN_WORD1n_RD(x, n) & ~BM_CAN_WORD1n_DATA_BYTE_5) | BF_CAN_WORD1n_DATA_BYTE_5(v)))
+#define BW_CAN_WORD1n_DATA_BYTE_5(x, n, v) (UNION_WRITE_REG_FS(HW_CAN_WORD1n_ADDR(x, n), hw_can_word1n, (HW_CAN_WORD1n_RD(x, n) & ~BM_CAN_WORD1n_DATA_BYTE_5) | BF_CAN_WORD1n_DATA_BYTE_5(v)))
 /*@}*/
 
 /*!
@@ -3444,13 +3444,13 @@ typedef union _hw_can_word1n
 #define BS_CAN_WORD1n_DATA_BYTE_4 (8U)     /*!< Bit field size in bits for CAN_WORD1n_DATA_BYTE_4. */
 
 /*! @brief Read current value of the CAN_WORD1n_DATA_BYTE_4 field. */
-#define BR_CAN_WORD1n_DATA_BYTE_4(x, n) (UNION_READ_FS(HW_CAN_WORD1n_ADDR(x, n), hw_can_word1n, B.DATA_BYTE_4))
+#define BR_CAN_WORD1n_DATA_BYTE_4(x, n) (UNION_READ_BIT_FS(HW_CAN_WORD1n_ADDR(x, n), hw_can_word1n, B.DATA_BYTE_4))
 
 /*! @brief Format value for bitfield CAN_WORD1n_DATA_BYTE_4. */
 #define BF_CAN_WORD1n_DATA_BYTE_4(v) ((uint32_t)((uint32_t)(v) << BP_CAN_WORD1n_DATA_BYTE_4) & BM_CAN_WORD1n_DATA_BYTE_4)
 
 /*! @brief Set the DATA_BYTE_4 field to a new value. */
-#define BW_CAN_WORD1n_DATA_BYTE_4(x, n, v) (ADDRESS_WRITE32(HW_CAN_WORD1n_ADDR(x, n), (HW_CAN_WORD1n_RD(x, n) & ~BM_CAN_WORD1n_DATA_BYTE_4) | BF_CAN_WORD1n_DATA_BYTE_4(v)))
+#define BW_CAN_WORD1n_DATA_BYTE_4(x, n, v) (UNION_WRITE_REG_FS(HW_CAN_WORD1n_ADDR(x, n), hw_can_word1n, (HW_CAN_WORD1n_RD(x, n) & ~BM_CAN_WORD1n_DATA_BYTE_4) | BF_CAN_WORD1n_DATA_BYTE_4(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -3520,13 +3520,13 @@ typedef union _hw_can_rximrn
 #define BS_CAN_RXIMRn_MI     (32U)         /*!< Bit field size in bits for CAN_RXIMRn_MI. */
 
 /*! @brief Read current value of the CAN_RXIMRn_MI field. */
-#define BR_CAN_RXIMRn_MI(x, n) (ADDRESS_READ32(HW_CAN_RXIMRn_ADDR(x, n)))
+#define BR_CAN_RXIMRn_MI(x, n) (UNION_READ_REG_FS(HW_CAN_RXIMRn_ADDR(x, n), hw_can_rximrn))
 
 /*! @brief Format value for bitfield CAN_RXIMRn_MI. */
 #define BF_CAN_RXIMRn_MI(v)  ((uint32_t)((uint32_t)(v) << BP_CAN_RXIMRn_MI) & BM_CAN_RXIMRn_MI)
 
 /*! @brief Set the MI field to a new value. */
-#define BW_CAN_RXIMRn_MI(x, n, v) (ADDRESS_WRITE32(HW_CAN_RXIMRn_ADDR(x, n), v))
+#define BW_CAN_RXIMRn_MI(x, n, v) (UNION_WRITE_REG_FS(HW_CAN_RXIMRn_ADDR(x, n), hw_can_rximrn, v))
 /*@}*/
 
 /*******************************************************************************

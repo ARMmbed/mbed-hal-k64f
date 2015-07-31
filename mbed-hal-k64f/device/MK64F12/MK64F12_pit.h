@@ -245,13 +245,13 @@ typedef union _hw_pit_ldvaln
 #define BS_PIT_LDVALn_TSV    (32U)         /*!< Bit field size in bits for PIT_LDVALn_TSV. */
 
 /*! @brief Read current value of the PIT_LDVALn_TSV field. */
-#define BR_PIT_LDVALn_TSV(x, n) (ADDRESS_READ32(HW_PIT_LDVALn_ADDR(x, n)))
+#define BR_PIT_LDVALn_TSV(x, n) (UNION_READ_REG_FS(HW_PIT_LDVALn_ADDR(x, n), hw_pit_ldvaln))
 
 /*! @brief Format value for bitfield PIT_LDVALn_TSV. */
 #define BF_PIT_LDVALn_TSV(v) ((uint32_t)((uint32_t)(v) << BP_PIT_LDVALn_TSV) & BM_PIT_LDVALn_TSV)
 
 /*! @brief Set the TSV field to a new value. */
-#define BW_PIT_LDVALn_TSV(x, n, v) (ADDRESS_WRITE32(HW_PIT_LDVALn_ADDR(x, n), v))
+#define BW_PIT_LDVALn_TSV(x, n, v) (UNION_WRITE_REG_FS(HW_PIT_LDVALn_ADDR(x, n), hw_pit_ldvaln, v))
 /*@}*/
 /*******************************************************************************
  * HW_PIT_CVALn - Current Timer Value Register
@@ -302,7 +302,7 @@ typedef union _hw_pit_cvaln
 #define BS_PIT_CVALn_TVL     (32U)         /*!< Bit field size in bits for PIT_CVALn_TVL. */
 
 /*! @brief Read current value of the PIT_CVALn_TVL field. */
-#define BR_PIT_CVALn_TVL(x, n) (ADDRESS_READ32(HW_PIT_CVALn_ADDR(x, n)))
+#define BR_PIT_CVALn_TVL(x, n) (UNION_READ_REG_FS(HW_PIT_CVALn_ADDR(x, n), hw_pit_cvaln))
 /*@}*/
 /*******************************************************************************
  * HW_PIT_TCTRLn - Timer Control Register

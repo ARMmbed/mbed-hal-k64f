@@ -193,13 +193,13 @@ typedef union _hw_ftm_sc
 #define BS_FTM_SC_PS         (3U)          /*!< Bit field size in bits for FTM_SC_PS. */
 
 /*! @brief Read current value of the FTM_SC_PS field. */
-#define BR_FTM_SC_PS(x)      (UNION_READ_FS(HW_FTM_SC_ADDR(x), hw_ftm_sc, B.PS))
+#define BR_FTM_SC_PS(x)      (UNION_READ_BIT_FS(HW_FTM_SC_ADDR(x), hw_ftm_sc, B.PS))
 
 /*! @brief Format value for bitfield FTM_SC_PS. */
 #define BF_FTM_SC_PS(v)      ((uint32_t)((uint32_t)(v) << BP_FTM_SC_PS) & BM_FTM_SC_PS)
 
 /*! @brief Set the PS field to a new value. */
-#define BW_FTM_SC_PS(x, v)   (ADDRESS_WRITE32(HW_FTM_SC_ADDR(x), (HW_FTM_SC_RD(x) & ~BM_FTM_SC_PS) | BF_FTM_SC_PS(v)))
+#define BW_FTM_SC_PS(x, v)   (UNION_WRITE_REG_FS(HW_FTM_SC_ADDR(x), hw_ftm_sc, (HW_FTM_SC_RD(x) & ~BM_FTM_SC_PS) | BF_FTM_SC_PS(v)))
 /*@}*/
 
 /*!
@@ -220,13 +220,13 @@ typedef union _hw_ftm_sc
 #define BS_FTM_SC_CLKS       (2U)          /*!< Bit field size in bits for FTM_SC_CLKS. */
 
 /*! @brief Read current value of the FTM_SC_CLKS field. */
-#define BR_FTM_SC_CLKS(x)    (UNION_READ_FS(HW_FTM_SC_ADDR(x), hw_ftm_sc, B.CLKS))
+#define BR_FTM_SC_CLKS(x)    (UNION_READ_BIT_FS(HW_FTM_SC_ADDR(x), hw_ftm_sc, B.CLKS))
 
 /*! @brief Format value for bitfield FTM_SC_CLKS. */
 #define BF_FTM_SC_CLKS(v)    ((uint32_t)((uint32_t)(v) << BP_FTM_SC_CLKS) & BM_FTM_SC_CLKS)
 
 /*! @brief Set the CLKS field to a new value. */
-#define BW_FTM_SC_CLKS(x, v) (ADDRESS_WRITE32(HW_FTM_SC_ADDR(x), (HW_FTM_SC_RD(x) & ~BM_FTM_SC_CLKS) | BF_FTM_SC_CLKS(v)))
+#define BW_FTM_SC_CLKS(x, v) (UNION_WRITE_REG_FS(HW_FTM_SC_ADDR(x), hw_ftm_sc, (HW_FTM_SC_RD(x) & ~BM_FTM_SC_CLKS) | BF_FTM_SC_CLKS(v)))
 /*@}*/
 
 /*!
@@ -360,13 +360,13 @@ typedef union _hw_ftm_cnt
 #define BS_FTM_CNT_COUNT     (16U)         /*!< Bit field size in bits for FTM_CNT_COUNT. */
 
 /*! @brief Read current value of the FTM_CNT_COUNT field. */
-#define BR_FTM_CNT_COUNT(x)  (UNION_READ_FS(HW_FTM_CNT_ADDR(x), hw_ftm_cnt, B.COUNT))
+#define BR_FTM_CNT_COUNT(x)  (UNION_READ_BIT_FS(HW_FTM_CNT_ADDR(x), hw_ftm_cnt, B.COUNT))
 
 /*! @brief Format value for bitfield FTM_CNT_COUNT. */
 #define BF_FTM_CNT_COUNT(v)  ((uint32_t)((uint32_t)(v) << BP_FTM_CNT_COUNT) & BM_FTM_CNT_COUNT)
 
 /*! @brief Set the COUNT field to a new value. */
-#define BW_FTM_CNT_COUNT(x, v) (ADDRESS_WRITE32(HW_FTM_CNT_ADDR(x), (HW_FTM_CNT_RD(x) & ~BM_FTM_CNT_COUNT) | BF_FTM_CNT_COUNT(v)))
+#define BW_FTM_CNT_COUNT(x, v) (UNION_WRITE_REG_FS(HW_FTM_CNT_ADDR(x), hw_ftm_cnt, (HW_FTM_CNT_RD(x) & ~BM_FTM_CNT_COUNT) | BF_FTM_CNT_COUNT(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -428,13 +428,13 @@ typedef union _hw_ftm_mod
 #define BS_FTM_MOD_MOD       (16U)         /*!< Bit field size in bits for FTM_MOD_MOD. */
 
 /*! @brief Read current value of the FTM_MOD_MOD field. */
-#define BR_FTM_MOD_MOD(x)    (UNION_READ_FS(HW_FTM_MOD_ADDR(x), hw_ftm_mod, B.MOD))
+#define BR_FTM_MOD_MOD(x)    (UNION_READ_BIT_FS(HW_FTM_MOD_ADDR(x), hw_ftm_mod, B.MOD))
 
 /*! @brief Format value for bitfield FTM_MOD_MOD. */
 #define BF_FTM_MOD_MOD(v)    ((uint32_t)((uint32_t)(v) << BP_FTM_MOD_MOD) & BM_FTM_MOD_MOD)
 
 /*! @brief Set the MOD field to a new value. */
-#define BW_FTM_MOD_MOD(x, v) (ADDRESS_WRITE32(HW_FTM_MOD_ADDR(x), (HW_FTM_MOD_RD(x) & ~BM_FTM_MOD_MOD) | BF_FTM_MOD_MOD(v)))
+#define BW_FTM_MOD_MOD(x, v) (UNION_WRITE_REG_FS(HW_FTM_MOD_ADDR(x), hw_ftm_mod, (HW_FTM_MOD_RD(x) & ~BM_FTM_MOD_MOD) | BF_FTM_MOD_MOD(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -724,13 +724,13 @@ typedef union _hw_ftm_cnv
 #define BS_FTM_CnV_VAL       (16U)         /*!< Bit field size in bits for FTM_CnV_VAL. */
 
 /*! @brief Read current value of the FTM_CnV_VAL field. */
-#define BR_FTM_CnV_VAL(x, n) (UNION_READ_FS(HW_FTM_CnV_ADDR(x, n), hw_ftm_cnv, B.VAL))
+#define BR_FTM_CnV_VAL(x, n) (UNION_READ_BIT_FS(HW_FTM_CnV_ADDR(x, n), hw_ftm_cnv, B.VAL))
 
 /*! @brief Format value for bitfield FTM_CnV_VAL. */
 #define BF_FTM_CnV_VAL(v)    ((uint32_t)((uint32_t)(v) << BP_FTM_CnV_VAL) & BM_FTM_CnV_VAL)
 
 /*! @brief Set the VAL field to a new value. */
-#define BW_FTM_CnV_VAL(x, n, v) (ADDRESS_WRITE32(HW_FTM_CnV_ADDR(x, n), (HW_FTM_CnV_RD(x, n) & ~BM_FTM_CnV_VAL) | BF_FTM_CnV_VAL(v)))
+#define BW_FTM_CnV_VAL(x, n, v) (UNION_WRITE_REG_FS(HW_FTM_CnV_ADDR(x, n), hw_ftm_cnv, (HW_FTM_CnV_RD(x, n) & ~BM_FTM_CnV_VAL) | BF_FTM_CnV_VAL(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -790,13 +790,13 @@ typedef union _hw_ftm_cntin
 #define BS_FTM_CNTIN_INIT    (16U)         /*!< Bit field size in bits for FTM_CNTIN_INIT. */
 
 /*! @brief Read current value of the FTM_CNTIN_INIT field. */
-#define BR_FTM_CNTIN_INIT(x) (UNION_READ_FS(HW_FTM_CNTIN_ADDR(x), hw_ftm_cntin, B.INIT))
+#define BR_FTM_CNTIN_INIT(x) (UNION_READ_BIT_FS(HW_FTM_CNTIN_ADDR(x), hw_ftm_cntin, B.INIT))
 
 /*! @brief Format value for bitfield FTM_CNTIN_INIT. */
 #define BF_FTM_CNTIN_INIT(v) ((uint32_t)((uint32_t)(v) << BP_FTM_CNTIN_INIT) & BM_FTM_CNTIN_INIT)
 
 /*! @brief Set the INIT field to a new value. */
-#define BW_FTM_CNTIN_INIT(x, v) (ADDRESS_WRITE32(HW_FTM_CNTIN_ADDR(x), (HW_FTM_CNTIN_RD(x) & ~BM_FTM_CNTIN_INIT) | BF_FTM_CNTIN_INIT(v)))
+#define BW_FTM_CNTIN_INIT(x, v) (UNION_WRITE_REG_FS(HW_FTM_CNTIN_ADDR(x), hw_ftm_cntin, (HW_FTM_CNTIN_RD(x) & ~BM_FTM_CNTIN_INIT) | BF_FTM_CNTIN_INIT(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1246,13 +1246,13 @@ typedef union _hw_ftm_mode
 #define BS_FTM_MODE_FAULTM   (2U)          /*!< Bit field size in bits for FTM_MODE_FAULTM. */
 
 /*! @brief Read current value of the FTM_MODE_FAULTM field. */
-#define BR_FTM_MODE_FAULTM(x) (UNION_READ_FS(HW_FTM_MODE_ADDR(x), hw_ftm_mode, B.FAULTM))
+#define BR_FTM_MODE_FAULTM(x) (UNION_READ_BIT_FS(HW_FTM_MODE_ADDR(x), hw_ftm_mode, B.FAULTM))
 
 /*! @brief Format value for bitfield FTM_MODE_FAULTM. */
 #define BF_FTM_MODE_FAULTM(v) ((uint32_t)((uint32_t)(v) << BP_FTM_MODE_FAULTM) & BM_FTM_MODE_FAULTM)
 
 /*! @brief Set the FAULTM field to a new value. */
-#define BW_FTM_MODE_FAULTM(x, v) (ADDRESS_WRITE32(HW_FTM_MODE_ADDR(x), (HW_FTM_MODE_RD(x) & ~BM_FTM_MODE_FAULTM) | BF_FTM_MODE_FAULTM(v)))
+#define BW_FTM_MODE_FAULTM(x, v) (UNION_WRITE_REG_FS(HW_FTM_MODE_ADDR(x), hw_ftm_mode, (HW_FTM_MODE_RD(x) & ~BM_FTM_MODE_FAULTM) | BF_FTM_MODE_FAULTM(v)))
 /*@}*/
 
 /*!
@@ -2895,13 +2895,13 @@ typedef union _hw_ftm_deadtime
 #define BS_FTM_DEADTIME_DTVAL (6U)         /*!< Bit field size in bits for FTM_DEADTIME_DTVAL. */
 
 /*! @brief Read current value of the FTM_DEADTIME_DTVAL field. */
-#define BR_FTM_DEADTIME_DTVAL(x) (UNION_READ_FS(HW_FTM_DEADTIME_ADDR(x), hw_ftm_deadtime, B.DTVAL))
+#define BR_FTM_DEADTIME_DTVAL(x) (UNION_READ_BIT_FS(HW_FTM_DEADTIME_ADDR(x), hw_ftm_deadtime, B.DTVAL))
 
 /*! @brief Format value for bitfield FTM_DEADTIME_DTVAL. */
 #define BF_FTM_DEADTIME_DTVAL(v) ((uint32_t)((uint32_t)(v) << BP_FTM_DEADTIME_DTVAL) & BM_FTM_DEADTIME_DTVAL)
 
 /*! @brief Set the DTVAL field to a new value. */
-#define BW_FTM_DEADTIME_DTVAL(x, v) (ADDRESS_WRITE32(HW_FTM_DEADTIME_ADDR(x), (HW_FTM_DEADTIME_RD(x) & ~BM_FTM_DEADTIME_DTVAL) | BF_FTM_DEADTIME_DTVAL(v)))
+#define BW_FTM_DEADTIME_DTVAL(x, v) (UNION_WRITE_REG_FS(HW_FTM_DEADTIME_ADDR(x), hw_ftm_deadtime, (HW_FTM_DEADTIME_RD(x) & ~BM_FTM_DEADTIME_DTVAL) | BF_FTM_DEADTIME_DTVAL(v)))
 /*@}*/
 
 /*!
@@ -2922,13 +2922,13 @@ typedef union _hw_ftm_deadtime
 #define BS_FTM_DEADTIME_DTPS (2U)          /*!< Bit field size in bits for FTM_DEADTIME_DTPS. */
 
 /*! @brief Read current value of the FTM_DEADTIME_DTPS field. */
-#define BR_FTM_DEADTIME_DTPS(x) (UNION_READ_FS(HW_FTM_DEADTIME_ADDR(x), hw_ftm_deadtime, B.DTPS))
+#define BR_FTM_DEADTIME_DTPS(x) (UNION_READ_BIT_FS(HW_FTM_DEADTIME_ADDR(x), hw_ftm_deadtime, B.DTPS))
 
 /*! @brief Format value for bitfield FTM_DEADTIME_DTPS. */
 #define BF_FTM_DEADTIME_DTPS(v) ((uint32_t)((uint32_t)(v) << BP_FTM_DEADTIME_DTPS) & BM_FTM_DEADTIME_DTPS)
 
 /*! @brief Set the DTPS field to a new value. */
-#define BW_FTM_DEADTIME_DTPS(x, v) (ADDRESS_WRITE32(HW_FTM_DEADTIME_ADDR(x), (HW_FTM_DEADTIME_RD(x) & ~BM_FTM_DEADTIME_DTPS) | BF_FTM_DEADTIME_DTPS(v)))
+#define BW_FTM_DEADTIME_DTPS(x, v) (UNION_WRITE_REG_FS(HW_FTM_DEADTIME_ADDR(x), hw_ftm_deadtime, (HW_FTM_DEADTIME_RD(x) & ~BM_FTM_DEADTIME_DTPS) | BF_FTM_DEADTIME_DTPS(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -3741,13 +3741,13 @@ typedef union _hw_ftm_filter
 #define BS_FTM_FILTER_CH0FVAL (4U)         /*!< Bit field size in bits for FTM_FILTER_CH0FVAL. */
 
 /*! @brief Read current value of the FTM_FILTER_CH0FVAL field. */
-#define BR_FTM_FILTER_CH0FVAL(x) (UNION_READ_FS(HW_FTM_FILTER_ADDR(x), hw_ftm_filter, B.CH0FVAL))
+#define BR_FTM_FILTER_CH0FVAL(x) (UNION_READ_BIT_FS(HW_FTM_FILTER_ADDR(x), hw_ftm_filter, B.CH0FVAL))
 
 /*! @brief Format value for bitfield FTM_FILTER_CH0FVAL. */
 #define BF_FTM_FILTER_CH0FVAL(v) ((uint32_t)((uint32_t)(v) << BP_FTM_FILTER_CH0FVAL) & BM_FTM_FILTER_CH0FVAL)
 
 /*! @brief Set the CH0FVAL field to a new value. */
-#define BW_FTM_FILTER_CH0FVAL(x, v) (ADDRESS_WRITE32(HW_FTM_FILTER_ADDR(x), (HW_FTM_FILTER_RD(x) & ~BM_FTM_FILTER_CH0FVAL) | BF_FTM_FILTER_CH0FVAL(v)))
+#define BW_FTM_FILTER_CH0FVAL(x, v) (UNION_WRITE_REG_FS(HW_FTM_FILTER_ADDR(x), hw_ftm_filter, (HW_FTM_FILTER_RD(x) & ~BM_FTM_FILTER_CH0FVAL) | BF_FTM_FILTER_CH0FVAL(v)))
 /*@}*/
 
 /*!
@@ -3762,13 +3762,13 @@ typedef union _hw_ftm_filter
 #define BS_FTM_FILTER_CH1FVAL (4U)         /*!< Bit field size in bits for FTM_FILTER_CH1FVAL. */
 
 /*! @brief Read current value of the FTM_FILTER_CH1FVAL field. */
-#define BR_FTM_FILTER_CH1FVAL(x) (UNION_READ_FS(HW_FTM_FILTER_ADDR(x), hw_ftm_filter, B.CH1FVAL))
+#define BR_FTM_FILTER_CH1FVAL(x) (UNION_READ_BIT_FS(HW_FTM_FILTER_ADDR(x), hw_ftm_filter, B.CH1FVAL))
 
 /*! @brief Format value for bitfield FTM_FILTER_CH1FVAL. */
 #define BF_FTM_FILTER_CH1FVAL(v) ((uint32_t)((uint32_t)(v) << BP_FTM_FILTER_CH1FVAL) & BM_FTM_FILTER_CH1FVAL)
 
 /*! @brief Set the CH1FVAL field to a new value. */
-#define BW_FTM_FILTER_CH1FVAL(x, v) (ADDRESS_WRITE32(HW_FTM_FILTER_ADDR(x), (HW_FTM_FILTER_RD(x) & ~BM_FTM_FILTER_CH1FVAL) | BF_FTM_FILTER_CH1FVAL(v)))
+#define BW_FTM_FILTER_CH1FVAL(x, v) (UNION_WRITE_REG_FS(HW_FTM_FILTER_ADDR(x), hw_ftm_filter, (HW_FTM_FILTER_RD(x) & ~BM_FTM_FILTER_CH1FVAL) | BF_FTM_FILTER_CH1FVAL(v)))
 /*@}*/
 
 /*!
@@ -3783,13 +3783,13 @@ typedef union _hw_ftm_filter
 #define BS_FTM_FILTER_CH2FVAL (4U)         /*!< Bit field size in bits for FTM_FILTER_CH2FVAL. */
 
 /*! @brief Read current value of the FTM_FILTER_CH2FVAL field. */
-#define BR_FTM_FILTER_CH2FVAL(x) (UNION_READ_FS(HW_FTM_FILTER_ADDR(x), hw_ftm_filter, B.CH2FVAL))
+#define BR_FTM_FILTER_CH2FVAL(x) (UNION_READ_BIT_FS(HW_FTM_FILTER_ADDR(x), hw_ftm_filter, B.CH2FVAL))
 
 /*! @brief Format value for bitfield FTM_FILTER_CH2FVAL. */
 #define BF_FTM_FILTER_CH2FVAL(v) ((uint32_t)((uint32_t)(v) << BP_FTM_FILTER_CH2FVAL) & BM_FTM_FILTER_CH2FVAL)
 
 /*! @brief Set the CH2FVAL field to a new value. */
-#define BW_FTM_FILTER_CH2FVAL(x, v) (ADDRESS_WRITE32(HW_FTM_FILTER_ADDR(x), (HW_FTM_FILTER_RD(x) & ~BM_FTM_FILTER_CH2FVAL) | BF_FTM_FILTER_CH2FVAL(v)))
+#define BW_FTM_FILTER_CH2FVAL(x, v) (UNION_WRITE_REG_FS(HW_FTM_FILTER_ADDR(x), hw_ftm_filter, (HW_FTM_FILTER_RD(x) & ~BM_FTM_FILTER_CH2FVAL) | BF_FTM_FILTER_CH2FVAL(v)))
 /*@}*/
 
 /*!
@@ -3804,13 +3804,13 @@ typedef union _hw_ftm_filter
 #define BS_FTM_FILTER_CH3FVAL (4U)         /*!< Bit field size in bits for FTM_FILTER_CH3FVAL. */
 
 /*! @brief Read current value of the FTM_FILTER_CH3FVAL field. */
-#define BR_FTM_FILTER_CH3FVAL(x) (UNION_READ_FS(HW_FTM_FILTER_ADDR(x), hw_ftm_filter, B.CH3FVAL))
+#define BR_FTM_FILTER_CH3FVAL(x) (UNION_READ_BIT_FS(HW_FTM_FILTER_ADDR(x), hw_ftm_filter, B.CH3FVAL))
 
 /*! @brief Format value for bitfield FTM_FILTER_CH3FVAL. */
 #define BF_FTM_FILTER_CH3FVAL(v) ((uint32_t)((uint32_t)(v) << BP_FTM_FILTER_CH3FVAL) & BM_FTM_FILTER_CH3FVAL)
 
 /*! @brief Set the CH3FVAL field to a new value. */
-#define BW_FTM_FILTER_CH3FVAL(x, v) (ADDRESS_WRITE32(HW_FTM_FILTER_ADDR(x), (HW_FTM_FILTER_RD(x) & ~BM_FTM_FILTER_CH3FVAL) | BF_FTM_FILTER_CH3FVAL(v)))
+#define BW_FTM_FILTER_CH3FVAL(x, v) (UNION_WRITE_REG_FS(HW_FTM_FILTER_ADDR(x), hw_ftm_filter, (HW_FTM_FILTER_RD(x) & ~BM_FTM_FILTER_CH3FVAL) | BF_FTM_FILTER_CH3FVAL(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -4075,13 +4075,13 @@ typedef union _hw_ftm_fltctrl
 #define BS_FTM_FLTCTRL_FFVAL (4U)          /*!< Bit field size in bits for FTM_FLTCTRL_FFVAL. */
 
 /*! @brief Read current value of the FTM_FLTCTRL_FFVAL field. */
-#define BR_FTM_FLTCTRL_FFVAL(x) (UNION_READ_FS(HW_FTM_FLTCTRL_ADDR(x), hw_ftm_fltctrl, B.FFVAL))
+#define BR_FTM_FLTCTRL_FFVAL(x) (UNION_READ_BIT_FS(HW_FTM_FLTCTRL_ADDR(x), hw_ftm_fltctrl, B.FFVAL))
 
 /*! @brief Format value for bitfield FTM_FLTCTRL_FFVAL. */
 #define BF_FTM_FLTCTRL_FFVAL(v) ((uint32_t)((uint32_t)(v) << BP_FTM_FLTCTRL_FFVAL) & BM_FTM_FLTCTRL_FFVAL)
 
 /*! @brief Set the FFVAL field to a new value. */
-#define BW_FTM_FLTCTRL_FFVAL(x, v) (ADDRESS_WRITE32(HW_FTM_FLTCTRL_ADDR(x), (HW_FTM_FLTCTRL_RD(x) & ~BM_FTM_FLTCTRL_FFVAL) | BF_FTM_FLTCTRL_FFVAL(v)))
+#define BW_FTM_FLTCTRL_FFVAL(x, v) (UNION_WRITE_REG_FS(HW_FTM_FLTCTRL_ADDR(x), hw_ftm_fltctrl, (HW_FTM_FLTCTRL_RD(x) & ~BM_FTM_FLTCTRL_FFVAL) | BF_FTM_FLTCTRL_FFVAL(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -4390,13 +4390,13 @@ typedef union _hw_ftm_conf
 #define BS_FTM_CONF_NUMTOF   (5U)          /*!< Bit field size in bits for FTM_CONF_NUMTOF. */
 
 /*! @brief Read current value of the FTM_CONF_NUMTOF field. */
-#define BR_FTM_CONF_NUMTOF(x) (UNION_READ_FS(HW_FTM_CONF_ADDR(x), hw_ftm_conf, B.NUMTOF))
+#define BR_FTM_CONF_NUMTOF(x) (UNION_READ_BIT_FS(HW_FTM_CONF_ADDR(x), hw_ftm_conf, B.NUMTOF))
 
 /*! @brief Format value for bitfield FTM_CONF_NUMTOF. */
 #define BF_FTM_CONF_NUMTOF(v) ((uint32_t)((uint32_t)(v) << BP_FTM_CONF_NUMTOF) & BM_FTM_CONF_NUMTOF)
 
 /*! @brief Set the NUMTOF field to a new value. */
-#define BW_FTM_CONF_NUMTOF(x, v) (ADDRESS_WRITE32(HW_FTM_CONF_ADDR(x), (HW_FTM_CONF_RD(x) & ~BM_FTM_CONF_NUMTOF) | BF_FTM_CONF_NUMTOF(v)))
+#define BW_FTM_CONF_NUMTOF(x, v) (UNION_WRITE_REG_FS(HW_FTM_CONF_ADDR(x), hw_ftm_conf, (HW_FTM_CONF_RD(x) & ~BM_FTM_CONF_NUMTOF) | BF_FTM_CONF_NUMTOF(v)))
 /*@}*/
 
 /*!
@@ -4410,13 +4410,13 @@ typedef union _hw_ftm_conf
 #define BS_FTM_CONF_BDMMODE  (2U)          /*!< Bit field size in bits for FTM_CONF_BDMMODE. */
 
 /*! @brief Read current value of the FTM_CONF_BDMMODE field. */
-#define BR_FTM_CONF_BDMMODE(x) (UNION_READ_FS(HW_FTM_CONF_ADDR(x), hw_ftm_conf, B.BDMMODE))
+#define BR_FTM_CONF_BDMMODE(x) (UNION_READ_BIT_FS(HW_FTM_CONF_ADDR(x), hw_ftm_conf, B.BDMMODE))
 
 /*! @brief Format value for bitfield FTM_CONF_BDMMODE. */
 #define BF_FTM_CONF_BDMMODE(v) ((uint32_t)((uint32_t)(v) << BP_FTM_CONF_BDMMODE) & BM_FTM_CONF_BDMMODE)
 
 /*! @brief Set the BDMMODE field to a new value. */
-#define BW_FTM_CONF_BDMMODE(x, v) (ADDRESS_WRITE32(HW_FTM_CONF_ADDR(x), (HW_FTM_CONF_RD(x) & ~BM_FTM_CONF_BDMMODE) | BF_FTM_CONF_BDMMODE(v)))
+#define BW_FTM_CONF_BDMMODE(x, v) (UNION_WRITE_REG_FS(HW_FTM_CONF_ADDR(x), hw_ftm_conf, (HW_FTM_CONF_RD(x) & ~BM_FTM_CONF_BDMMODE) | BF_FTM_CONF_BDMMODE(v)))
 /*@}*/
 
 /*!

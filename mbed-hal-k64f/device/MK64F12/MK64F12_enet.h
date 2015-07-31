@@ -1499,13 +1499,13 @@ typedef union _hw_enet_mmfr
 #define BS_ENET_MMFR_DATA    (16U)         /*!< Bit field size in bits for ENET_MMFR_DATA. */
 
 /*! @brief Read current value of the ENET_MMFR_DATA field. */
-#define BR_ENET_MMFR_DATA(x) (UNION_READ_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, B.DATA))
+#define BR_ENET_MMFR_DATA(x) (UNION_READ_BIT_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, B.DATA))
 
 /*! @brief Format value for bitfield ENET_MMFR_DATA. */
 #define BF_ENET_MMFR_DATA(v) ((uint32_t)((uint32_t)(v) << BP_ENET_MMFR_DATA) & BM_ENET_MMFR_DATA)
 
 /*! @brief Set the DATA field to a new value. */
-#define BW_ENET_MMFR_DATA(x, v) (ADDRESS_WRITE32(HW_ENET_MMFR_ADDR(x), (HW_ENET_MMFR_RD(x) & ~BM_ENET_MMFR_DATA) | BF_ENET_MMFR_DATA(v)))
+#define BW_ENET_MMFR_DATA(x, v) (UNION_WRITE_REG_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, (HW_ENET_MMFR_RD(x) & ~BM_ENET_MMFR_DATA) | BF_ENET_MMFR_DATA(v)))
 /*@}*/
 
 /*!
@@ -1519,13 +1519,13 @@ typedef union _hw_enet_mmfr
 #define BS_ENET_MMFR_TA      (2U)          /*!< Bit field size in bits for ENET_MMFR_TA. */
 
 /*! @brief Read current value of the ENET_MMFR_TA field. */
-#define BR_ENET_MMFR_TA(x)   (UNION_READ_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, B.TA))
+#define BR_ENET_MMFR_TA(x)   (UNION_READ_BIT_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, B.TA))
 
 /*! @brief Format value for bitfield ENET_MMFR_TA. */
 #define BF_ENET_MMFR_TA(v)   ((uint32_t)((uint32_t)(v) << BP_ENET_MMFR_TA) & BM_ENET_MMFR_TA)
 
 /*! @brief Set the TA field to a new value. */
-#define BW_ENET_MMFR_TA(x, v) (ADDRESS_WRITE32(HW_ENET_MMFR_ADDR(x), (HW_ENET_MMFR_RD(x) & ~BM_ENET_MMFR_TA) | BF_ENET_MMFR_TA(v)))
+#define BW_ENET_MMFR_TA(x, v) (UNION_WRITE_REG_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, (HW_ENET_MMFR_RD(x) & ~BM_ENET_MMFR_TA) | BF_ENET_MMFR_TA(v)))
 /*@}*/
 
 /*!
@@ -1539,13 +1539,13 @@ typedef union _hw_enet_mmfr
 #define BS_ENET_MMFR_RA      (5U)          /*!< Bit field size in bits for ENET_MMFR_RA. */
 
 /*! @brief Read current value of the ENET_MMFR_RA field. */
-#define BR_ENET_MMFR_RA(x)   (UNION_READ_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, B.RA))
+#define BR_ENET_MMFR_RA(x)   (UNION_READ_BIT_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, B.RA))
 
 /*! @brief Format value for bitfield ENET_MMFR_RA. */
 #define BF_ENET_MMFR_RA(v)   ((uint32_t)((uint32_t)(v) << BP_ENET_MMFR_RA) & BM_ENET_MMFR_RA)
 
 /*! @brief Set the RA field to a new value. */
-#define BW_ENET_MMFR_RA(x, v) (ADDRESS_WRITE32(HW_ENET_MMFR_ADDR(x), (HW_ENET_MMFR_RD(x) & ~BM_ENET_MMFR_RA) | BF_ENET_MMFR_RA(v)))
+#define BW_ENET_MMFR_RA(x, v) (UNION_WRITE_REG_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, (HW_ENET_MMFR_RD(x) & ~BM_ENET_MMFR_RA) | BF_ENET_MMFR_RA(v)))
 /*@}*/
 
 /*!
@@ -1559,13 +1559,13 @@ typedef union _hw_enet_mmfr
 #define BS_ENET_MMFR_PA      (5U)          /*!< Bit field size in bits for ENET_MMFR_PA. */
 
 /*! @brief Read current value of the ENET_MMFR_PA field. */
-#define BR_ENET_MMFR_PA(x)   (UNION_READ_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, B.PA))
+#define BR_ENET_MMFR_PA(x)   (UNION_READ_BIT_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, B.PA))
 
 /*! @brief Format value for bitfield ENET_MMFR_PA. */
 #define BF_ENET_MMFR_PA(v)   ((uint32_t)((uint32_t)(v) << BP_ENET_MMFR_PA) & BM_ENET_MMFR_PA)
 
 /*! @brief Set the PA field to a new value. */
-#define BW_ENET_MMFR_PA(x, v) (ADDRESS_WRITE32(HW_ENET_MMFR_ADDR(x), (HW_ENET_MMFR_RD(x) & ~BM_ENET_MMFR_PA) | BF_ENET_MMFR_PA(v)))
+#define BW_ENET_MMFR_PA(x, v) (UNION_WRITE_REG_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, (HW_ENET_MMFR_RD(x) & ~BM_ENET_MMFR_PA) | BF_ENET_MMFR_PA(v)))
 /*@}*/
 
 /*!
@@ -1585,13 +1585,13 @@ typedef union _hw_enet_mmfr
 #define BS_ENET_MMFR_OP      (2U)          /*!< Bit field size in bits for ENET_MMFR_OP. */
 
 /*! @brief Read current value of the ENET_MMFR_OP field. */
-#define BR_ENET_MMFR_OP(x)   (UNION_READ_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, B.OP))
+#define BR_ENET_MMFR_OP(x)   (UNION_READ_BIT_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, B.OP))
 
 /*! @brief Format value for bitfield ENET_MMFR_OP. */
 #define BF_ENET_MMFR_OP(v)   ((uint32_t)((uint32_t)(v) << BP_ENET_MMFR_OP) & BM_ENET_MMFR_OP)
 
 /*! @brief Set the OP field to a new value. */
-#define BW_ENET_MMFR_OP(x, v) (ADDRESS_WRITE32(HW_ENET_MMFR_ADDR(x), (HW_ENET_MMFR_RD(x) & ~BM_ENET_MMFR_OP) | BF_ENET_MMFR_OP(v)))
+#define BW_ENET_MMFR_OP(x, v) (UNION_WRITE_REG_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, (HW_ENET_MMFR_RD(x) & ~BM_ENET_MMFR_OP) | BF_ENET_MMFR_OP(v)))
 /*@}*/
 
 /*!
@@ -1605,13 +1605,13 @@ typedef union _hw_enet_mmfr
 #define BS_ENET_MMFR_ST      (2U)          /*!< Bit field size in bits for ENET_MMFR_ST. */
 
 /*! @brief Read current value of the ENET_MMFR_ST field. */
-#define BR_ENET_MMFR_ST(x)   (UNION_READ_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, B.ST))
+#define BR_ENET_MMFR_ST(x)   (UNION_READ_BIT_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, B.ST))
 
 /*! @brief Format value for bitfield ENET_MMFR_ST. */
 #define BF_ENET_MMFR_ST(v)   ((uint32_t)((uint32_t)(v) << BP_ENET_MMFR_ST) & BM_ENET_MMFR_ST)
 
 /*! @brief Set the ST field to a new value. */
-#define BW_ENET_MMFR_ST(x, v) (ADDRESS_WRITE32(HW_ENET_MMFR_ADDR(x), (HW_ENET_MMFR_RD(x) & ~BM_ENET_MMFR_ST) | BF_ENET_MMFR_ST(v)))
+#define BW_ENET_MMFR_ST(x, v) (UNION_WRITE_REG_FS(HW_ENET_MMFR_ADDR(x), hw_enet_mmfr, (HW_ENET_MMFR_RD(x) & ~BM_ENET_MMFR_ST) | BF_ENET_MMFR_ST(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1684,13 +1684,13 @@ typedef union _hw_enet_mscr
 #define BS_ENET_MSCR_MII_SPEED (6U)        /*!< Bit field size in bits for ENET_MSCR_MII_SPEED. */
 
 /*! @brief Read current value of the ENET_MSCR_MII_SPEED field. */
-#define BR_ENET_MSCR_MII_SPEED(x) (UNION_READ_FS(HW_ENET_MSCR_ADDR(x), hw_enet_mscr, B.MII_SPEED))
+#define BR_ENET_MSCR_MII_SPEED(x) (UNION_READ_BIT_FS(HW_ENET_MSCR_ADDR(x), hw_enet_mscr, B.MII_SPEED))
 
 /*! @brief Format value for bitfield ENET_MSCR_MII_SPEED. */
 #define BF_ENET_MSCR_MII_SPEED(v) ((uint32_t)((uint32_t)(v) << BP_ENET_MSCR_MII_SPEED) & BM_ENET_MSCR_MII_SPEED)
 
 /*! @brief Set the MII_SPEED field to a new value. */
-#define BW_ENET_MSCR_MII_SPEED(x, v) (ADDRESS_WRITE32(HW_ENET_MSCR_ADDR(x), (HW_ENET_MSCR_RD(x) & ~BM_ENET_MSCR_MII_SPEED) | BF_ENET_MSCR_MII_SPEED(v)))
+#define BW_ENET_MSCR_MII_SPEED(x, v) (UNION_WRITE_REG_FS(HW_ENET_MSCR_ADDR(x), hw_enet_mscr, (HW_ENET_MSCR_RD(x) & ~BM_ENET_MSCR_MII_SPEED) | BF_ENET_MSCR_MII_SPEED(v)))
 /*@}*/
 
 /*!
@@ -1738,13 +1738,13 @@ typedef union _hw_enet_mscr
 #define BS_ENET_MSCR_HOLDTIME (3U)         /*!< Bit field size in bits for ENET_MSCR_HOLDTIME. */
 
 /*! @brief Read current value of the ENET_MSCR_HOLDTIME field. */
-#define BR_ENET_MSCR_HOLDTIME(x) (UNION_READ_FS(HW_ENET_MSCR_ADDR(x), hw_enet_mscr, B.HOLDTIME))
+#define BR_ENET_MSCR_HOLDTIME(x) (UNION_READ_BIT_FS(HW_ENET_MSCR_ADDR(x), hw_enet_mscr, B.HOLDTIME))
 
 /*! @brief Format value for bitfield ENET_MSCR_HOLDTIME. */
 #define BF_ENET_MSCR_HOLDTIME(v) ((uint32_t)((uint32_t)(v) << BP_ENET_MSCR_HOLDTIME) & BM_ENET_MSCR_HOLDTIME)
 
 /*! @brief Set the HOLDTIME field to a new value. */
-#define BW_ENET_MSCR_HOLDTIME(x, v) (ADDRESS_WRITE32(HW_ENET_MSCR_ADDR(x), (HW_ENET_MSCR_RD(x) & ~BM_ENET_MSCR_HOLDTIME) | BF_ENET_MSCR_HOLDTIME(v)))
+#define BW_ENET_MSCR_HOLDTIME(x, v) (UNION_WRITE_REG_FS(HW_ENET_MSCR_ADDR(x), hw_enet_mscr, (HW_ENET_MSCR_RD(x) & ~BM_ENET_MSCR_HOLDTIME) | BF_ENET_MSCR_HOLDTIME(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -2206,13 +2206,13 @@ typedef union _hw_enet_rcr
 #define BS_ENET_RCR_MAX_FL   (14U)         /*!< Bit field size in bits for ENET_RCR_MAX_FL. */
 
 /*! @brief Read current value of the ENET_RCR_MAX_FL field. */
-#define BR_ENET_RCR_MAX_FL(x) (UNION_READ_FS(HW_ENET_RCR_ADDR(x), hw_enet_rcr, B.MAX_FL))
+#define BR_ENET_RCR_MAX_FL(x) (UNION_READ_BIT_FS(HW_ENET_RCR_ADDR(x), hw_enet_rcr, B.MAX_FL))
 
 /*! @brief Format value for bitfield ENET_RCR_MAX_FL. */
 #define BF_ENET_RCR_MAX_FL(v) ((uint32_t)((uint32_t)(v) << BP_ENET_RCR_MAX_FL) & BM_ENET_RCR_MAX_FL)
 
 /*! @brief Set the MAX_FL field to a new value. */
-#define BW_ENET_RCR_MAX_FL(x, v) (ADDRESS_WRITE32(HW_ENET_RCR_ADDR(x), (HW_ENET_RCR_RD(x) & ~BM_ENET_RCR_MAX_FL) | BF_ENET_RCR_MAX_FL(v)))
+#define BW_ENET_RCR_MAX_FL(x, v) (UNION_WRITE_REG_FS(HW_ENET_RCR_ADDR(x), hw_enet_rcr, (HW_ENET_RCR_RD(x) & ~BM_ENET_RCR_MAX_FL) | BF_ENET_RCR_MAX_FL(v)))
 /*@}*/
 
 /*!
@@ -2414,13 +2414,13 @@ typedef union _hw_enet_tcr
 #define BS_ENET_TCR_ADDSEL   (3U)          /*!< Bit field size in bits for ENET_TCR_ADDSEL. */
 
 /*! @brief Read current value of the ENET_TCR_ADDSEL field. */
-#define BR_ENET_TCR_ADDSEL(x) (UNION_READ_FS(HW_ENET_TCR_ADDR(x), hw_enet_tcr, B.ADDSEL))
+#define BR_ENET_TCR_ADDSEL(x) (UNION_READ_BIT_FS(HW_ENET_TCR_ADDR(x), hw_enet_tcr, B.ADDSEL))
 
 /*! @brief Format value for bitfield ENET_TCR_ADDSEL. */
 #define BF_ENET_TCR_ADDSEL(v) ((uint32_t)((uint32_t)(v) << BP_ENET_TCR_ADDSEL) & BM_ENET_TCR_ADDSEL)
 
 /*! @brief Set the ADDSEL field to a new value. */
-#define BW_ENET_TCR_ADDSEL(x, v) (ADDRESS_WRITE32(HW_ENET_TCR_ADDR(x), (HW_ENET_TCR_RD(x) & ~BM_ENET_TCR_ADDSEL) | BF_ENET_TCR_ADDSEL(v)))
+#define BW_ENET_TCR_ADDSEL(x, v) (UNION_WRITE_REG_FS(HW_ENET_TCR_ADDR(x), hw_enet_tcr, (HW_ENET_TCR_RD(x) & ~BM_ENET_TCR_ADDSEL) | BF_ENET_TCR_ADDSEL(v)))
 /*@}*/
 
 /*!
@@ -2524,13 +2524,13 @@ typedef union _hw_enet_palr
 #define BS_ENET_PALR_PADDR1  (32U)         /*!< Bit field size in bits for ENET_PALR_PADDR1. */
 
 /*! @brief Read current value of the ENET_PALR_PADDR1 field. */
-#define BR_ENET_PALR_PADDR1(x) (ADDRESS_READ32(HW_ENET_PALR_ADDR(x)))
+#define BR_ENET_PALR_PADDR1(x) (UNION_READ_REG_FS(HW_ENET_PALR_ADDR(x), hw_enet_palr))
 
 /*! @brief Format value for bitfield ENET_PALR_PADDR1. */
 #define BF_ENET_PALR_PADDR1(v) ((uint32_t)((uint32_t)(v) << BP_ENET_PALR_PADDR1) & BM_ENET_PALR_PADDR1)
 
 /*! @brief Set the PADDR1 field to a new value. */
-#define BW_ENET_PALR_PADDR1(x, v) (ADDRESS_WRITE32(HW_ENET_PALR_ADDR(x), v))
+#define BW_ENET_PALR_PADDR1(x, v) (UNION_WRITE_REG_FS(HW_ENET_PALR_ADDR(x), hw_enet_palr, v))
 /*@}*/
 
 /*******************************************************************************
@@ -2589,7 +2589,7 @@ typedef union _hw_enet_paur
 #define BS_ENET_PAUR_TYPE    (16U)         /*!< Bit field size in bits for ENET_PAUR_TYPE. */
 
 /*! @brief Read current value of the ENET_PAUR_TYPE field. */
-#define BR_ENET_PAUR_TYPE(x) (UNION_READ_FS(HW_ENET_PAUR_ADDR(x), hw_enet_paur, B.TYPE))
+#define BR_ENET_PAUR_TYPE(x) (UNION_READ_BIT_FS(HW_ENET_PAUR_ADDR(x), hw_enet_paur, B.TYPE))
 /*@}*/
 
 /*!
@@ -2604,13 +2604,13 @@ typedef union _hw_enet_paur
 #define BS_ENET_PAUR_PADDR2  (16U)         /*!< Bit field size in bits for ENET_PAUR_PADDR2. */
 
 /*! @brief Read current value of the ENET_PAUR_PADDR2 field. */
-#define BR_ENET_PAUR_PADDR2(x) (UNION_READ_FS(HW_ENET_PAUR_ADDR(x), hw_enet_paur, B.PADDR2))
+#define BR_ENET_PAUR_PADDR2(x) (UNION_READ_BIT_FS(HW_ENET_PAUR_ADDR(x), hw_enet_paur, B.PADDR2))
 
 /*! @brief Format value for bitfield ENET_PAUR_PADDR2. */
 #define BF_ENET_PAUR_PADDR2(v) ((uint32_t)((uint32_t)(v) << BP_ENET_PAUR_PADDR2) & BM_ENET_PAUR_PADDR2)
 
 /*! @brief Set the PADDR2 field to a new value. */
-#define BW_ENET_PAUR_PADDR2(x, v) (ADDRESS_WRITE32(HW_ENET_PAUR_ADDR(x), (HW_ENET_PAUR_RD(x) & ~BM_ENET_PAUR_PADDR2) | BF_ENET_PAUR_PADDR2(v)))
+#define BW_ENET_PAUR_PADDR2(x, v) (UNION_WRITE_REG_FS(HW_ENET_PAUR_ADDR(x), hw_enet_paur, (HW_ENET_PAUR_RD(x) & ~BM_ENET_PAUR_PADDR2) | BF_ENET_PAUR_PADDR2(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -2668,13 +2668,13 @@ typedef union _hw_enet_opd
 #define BS_ENET_OPD_PAUSE_DUR (16U)        /*!< Bit field size in bits for ENET_OPD_PAUSE_DUR. */
 
 /*! @brief Read current value of the ENET_OPD_PAUSE_DUR field. */
-#define BR_ENET_OPD_PAUSE_DUR(x) (UNION_READ_FS(HW_ENET_OPD_ADDR(x), hw_enet_opd, B.PAUSE_DUR))
+#define BR_ENET_OPD_PAUSE_DUR(x) (UNION_READ_BIT_FS(HW_ENET_OPD_ADDR(x), hw_enet_opd, B.PAUSE_DUR))
 
 /*! @brief Format value for bitfield ENET_OPD_PAUSE_DUR. */
 #define BF_ENET_OPD_PAUSE_DUR(v) ((uint32_t)((uint32_t)(v) << BP_ENET_OPD_PAUSE_DUR) & BM_ENET_OPD_PAUSE_DUR)
 
 /*! @brief Set the PAUSE_DUR field to a new value. */
-#define BW_ENET_OPD_PAUSE_DUR(x, v) (ADDRESS_WRITE32(HW_ENET_OPD_ADDR(x), (HW_ENET_OPD_RD(x) & ~BM_ENET_OPD_PAUSE_DUR) | BF_ENET_OPD_PAUSE_DUR(v)))
+#define BW_ENET_OPD_PAUSE_DUR(x, v) (UNION_WRITE_REG_FS(HW_ENET_OPD_ADDR(x), hw_enet_opd, (HW_ENET_OPD_RD(x) & ~BM_ENET_OPD_PAUSE_DUR) | BF_ENET_OPD_PAUSE_DUR(v)))
 /*@}*/
 
 /*!
@@ -2688,7 +2688,7 @@ typedef union _hw_enet_opd
 #define BS_ENET_OPD_OPCODE   (16U)         /*!< Bit field size in bits for ENET_OPD_OPCODE. */
 
 /*! @brief Read current value of the ENET_OPD_OPCODE field. */
-#define BR_ENET_OPD_OPCODE(x) (UNION_READ_FS(HW_ENET_OPD_ADDR(x), hw_enet_opd, B.OPCODE))
+#define BR_ENET_OPD_OPCODE(x) (UNION_READ_BIT_FS(HW_ENET_OPD_ADDR(x), hw_enet_opd, B.OPCODE))
 /*@}*/
 
 /*******************************************************************************
@@ -2745,13 +2745,13 @@ typedef union _hw_enet_iaur
 #define BS_ENET_IAUR_IADDR1  (32U)         /*!< Bit field size in bits for ENET_IAUR_IADDR1. */
 
 /*! @brief Read current value of the ENET_IAUR_IADDR1 field. */
-#define BR_ENET_IAUR_IADDR1(x) (ADDRESS_READ32(HW_ENET_IAUR_ADDR(x)))
+#define BR_ENET_IAUR_IADDR1(x) (UNION_READ_REG_FS(HW_ENET_IAUR_ADDR(x), hw_enet_iaur))
 
 /*! @brief Format value for bitfield ENET_IAUR_IADDR1. */
 #define BF_ENET_IAUR_IADDR1(v) ((uint32_t)((uint32_t)(v) << BP_ENET_IAUR_IADDR1) & BM_ENET_IAUR_IADDR1)
 
 /*! @brief Set the IADDR1 field to a new value. */
-#define BW_ENET_IAUR_IADDR1(x, v) (ADDRESS_WRITE32(HW_ENET_IAUR_ADDR(x), v))
+#define BW_ENET_IAUR_IADDR1(x, v) (UNION_WRITE_REG_FS(HW_ENET_IAUR_ADDR(x), hw_enet_iaur, v))
 /*@}*/
 
 /*******************************************************************************
@@ -2808,13 +2808,13 @@ typedef union _hw_enet_ialr
 #define BS_ENET_IALR_IADDR2  (32U)         /*!< Bit field size in bits for ENET_IALR_IADDR2. */
 
 /*! @brief Read current value of the ENET_IALR_IADDR2 field. */
-#define BR_ENET_IALR_IADDR2(x) (ADDRESS_READ32(HW_ENET_IALR_ADDR(x)))
+#define BR_ENET_IALR_IADDR2(x) (UNION_READ_REG_FS(HW_ENET_IALR_ADDR(x), hw_enet_ialr))
 
 /*! @brief Format value for bitfield ENET_IALR_IADDR2. */
 #define BF_ENET_IALR_IADDR2(v) ((uint32_t)((uint32_t)(v) << BP_ENET_IALR_IADDR2) & BM_ENET_IALR_IADDR2)
 
 /*! @brief Set the IADDR2 field to a new value. */
-#define BW_ENET_IALR_IADDR2(x, v) (ADDRESS_WRITE32(HW_ENET_IALR_ADDR(x), v))
+#define BW_ENET_IALR_IADDR2(x, v) (UNION_WRITE_REG_FS(HW_ENET_IALR_ADDR(x), hw_enet_ialr, v))
 /*@}*/
 
 /*******************************************************************************
@@ -2870,13 +2870,13 @@ typedef union _hw_enet_gaur
 #define BS_ENET_GAUR_GADDR1  (32U)         /*!< Bit field size in bits for ENET_GAUR_GADDR1. */
 
 /*! @brief Read current value of the ENET_GAUR_GADDR1 field. */
-#define BR_ENET_GAUR_GADDR1(x) (ADDRESS_READ32(HW_ENET_GAUR_ADDR(x)))
+#define BR_ENET_GAUR_GADDR1(x) (UNION_READ_REG_FS(HW_ENET_GAUR_ADDR(x), hw_enet_gaur))
 
 /*! @brief Format value for bitfield ENET_GAUR_GADDR1. */
 #define BF_ENET_GAUR_GADDR1(v) ((uint32_t)((uint32_t)(v) << BP_ENET_GAUR_GADDR1) & BM_ENET_GAUR_GADDR1)
 
 /*! @brief Set the GADDR1 field to a new value. */
-#define BW_ENET_GAUR_GADDR1(x, v) (ADDRESS_WRITE32(HW_ENET_GAUR_ADDR(x), v))
+#define BW_ENET_GAUR_GADDR1(x, v) (UNION_WRITE_REG_FS(HW_ENET_GAUR_ADDR(x), hw_enet_gaur, v))
 /*@}*/
 
 /*******************************************************************************
@@ -2932,13 +2932,13 @@ typedef union _hw_enet_galr
 #define BS_ENET_GALR_GADDR2  (32U)         /*!< Bit field size in bits for ENET_GALR_GADDR2. */
 
 /*! @brief Read current value of the ENET_GALR_GADDR2 field. */
-#define BR_ENET_GALR_GADDR2(x) (ADDRESS_READ32(HW_ENET_GALR_ADDR(x)))
+#define BR_ENET_GALR_GADDR2(x) (UNION_READ_REG_FS(HW_ENET_GALR_ADDR(x), hw_enet_galr))
 
 /*! @brief Format value for bitfield ENET_GALR_GADDR2. */
 #define BF_ENET_GALR_GADDR2(v) ((uint32_t)((uint32_t)(v) << BP_ENET_GALR_GADDR2) & BM_ENET_GALR_GADDR2)
 
 /*! @brief Set the GADDR2 field to a new value. */
-#define BW_ENET_GALR_GADDR2(x, v) (ADDRESS_WRITE32(HW_ENET_GALR_ADDR(x), v))
+#define BW_ENET_GALR_GADDR2(x, v) (UNION_WRITE_REG_FS(HW_ENET_GALR_ADDR(x), hw_enet_galr, v))
 /*@}*/
 
 /*******************************************************************************
@@ -3021,13 +3021,13 @@ typedef union _hw_enet_tfwr
 #define BS_ENET_TFWR_TFWR    (6U)          /*!< Bit field size in bits for ENET_TFWR_TFWR. */
 
 /*! @brief Read current value of the ENET_TFWR_TFWR field. */
-#define BR_ENET_TFWR_TFWR(x) (UNION_READ_FS(HW_ENET_TFWR_ADDR(x), hw_enet_tfwr, B.TFWR))
+#define BR_ENET_TFWR_TFWR(x) (UNION_READ_BIT_FS(HW_ENET_TFWR_ADDR(x), hw_enet_tfwr, B.TFWR))
 
 /*! @brief Format value for bitfield ENET_TFWR_TFWR. */
 #define BF_ENET_TFWR_TFWR(v) ((uint32_t)((uint32_t)(v) << BP_ENET_TFWR_TFWR) & BM_ENET_TFWR_TFWR)
 
 /*! @brief Set the TFWR field to a new value. */
-#define BW_ENET_TFWR_TFWR(x, v) (ADDRESS_WRITE32(HW_ENET_TFWR_ADDR(x), (HW_ENET_TFWR_RD(x) & ~BM_ENET_TFWR_TFWR) | BF_ENET_TFWR_TFWR(v)))
+#define BW_ENET_TFWR_TFWR(x, v) (UNION_WRITE_REG_FS(HW_ENET_TFWR_ADDR(x), hw_enet_tfwr, (HW_ENET_TFWR_RD(x) & ~BM_ENET_TFWR_TFWR) | BF_ENET_TFWR_TFWR(v)))
 /*@}*/
 
 /*!
@@ -3105,13 +3105,13 @@ typedef union _hw_enet_rdsr
 #define BS_ENET_RDSR_R_DES_START (29U)     /*!< Bit field size in bits for ENET_RDSR_R_DES_START. */
 
 /*! @brief Read current value of the ENET_RDSR_R_DES_START field. */
-#define BR_ENET_RDSR_R_DES_START(x) (UNION_READ_FS(HW_ENET_RDSR_ADDR(x), hw_enet_rdsr, B.R_DES_START))
+#define BR_ENET_RDSR_R_DES_START(x) (UNION_READ_BIT_FS(HW_ENET_RDSR_ADDR(x), hw_enet_rdsr, B.R_DES_START))
 
 /*! @brief Format value for bitfield ENET_RDSR_R_DES_START. */
 #define BF_ENET_RDSR_R_DES_START(v) ((uint32_t)((uint32_t)(v) << BP_ENET_RDSR_R_DES_START) & BM_ENET_RDSR_R_DES_START)
 
 /*! @brief Set the R_DES_START field to a new value. */
-#define BW_ENET_RDSR_R_DES_START(x, v) (ADDRESS_WRITE32(HW_ENET_RDSR_ADDR(x), (HW_ENET_RDSR_RD(x) & ~BM_ENET_RDSR_R_DES_START) | BF_ENET_RDSR_R_DES_START(v)))
+#define BW_ENET_RDSR_R_DES_START(x, v) (UNION_WRITE_REG_FS(HW_ENET_RDSR_ADDR(x), hw_enet_rdsr, (HW_ENET_RDSR_RD(x) & ~BM_ENET_RDSR_R_DES_START) | BF_ENET_RDSR_R_DES_START(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -3167,13 +3167,13 @@ typedef union _hw_enet_tdsr
 #define BS_ENET_TDSR_X_DES_START (29U)     /*!< Bit field size in bits for ENET_TDSR_X_DES_START. */
 
 /*! @brief Read current value of the ENET_TDSR_X_DES_START field. */
-#define BR_ENET_TDSR_X_DES_START(x) (UNION_READ_FS(HW_ENET_TDSR_ADDR(x), hw_enet_tdsr, B.X_DES_START))
+#define BR_ENET_TDSR_X_DES_START(x) (UNION_READ_BIT_FS(HW_ENET_TDSR_ADDR(x), hw_enet_tdsr, B.X_DES_START))
 
 /*! @brief Format value for bitfield ENET_TDSR_X_DES_START. */
 #define BF_ENET_TDSR_X_DES_START(v) ((uint32_t)((uint32_t)(v) << BP_ENET_TDSR_X_DES_START) & BM_ENET_TDSR_X_DES_START)
 
 /*! @brief Set the X_DES_START field to a new value. */
-#define BW_ENET_TDSR_X_DES_START(x, v) (ADDRESS_WRITE32(HW_ENET_TDSR_ADDR(x), (HW_ENET_TDSR_RD(x) & ~BM_ENET_TDSR_X_DES_START) | BF_ENET_TDSR_X_DES_START(v)))
+#define BW_ENET_TDSR_X_DES_START(x, v) (UNION_WRITE_REG_FS(HW_ENET_TDSR_ADDR(x), hw_enet_tdsr, (HW_ENET_TDSR_RD(x) & ~BM_ENET_TDSR_X_DES_START) | BF_ENET_TDSR_X_DES_START(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -3234,13 +3234,13 @@ typedef union _hw_enet_mrbr
 #define BS_ENET_MRBR_R_BUF_SIZE (10U)      /*!< Bit field size in bits for ENET_MRBR_R_BUF_SIZE. */
 
 /*! @brief Read current value of the ENET_MRBR_R_BUF_SIZE field. */
-#define BR_ENET_MRBR_R_BUF_SIZE(x) (UNION_READ_FS(HW_ENET_MRBR_ADDR(x), hw_enet_mrbr, B.R_BUF_SIZE))
+#define BR_ENET_MRBR_R_BUF_SIZE(x) (UNION_READ_BIT_FS(HW_ENET_MRBR_ADDR(x), hw_enet_mrbr, B.R_BUF_SIZE))
 
 /*! @brief Format value for bitfield ENET_MRBR_R_BUF_SIZE. */
 #define BF_ENET_MRBR_R_BUF_SIZE(v) ((uint32_t)((uint32_t)(v) << BP_ENET_MRBR_R_BUF_SIZE) & BM_ENET_MRBR_R_BUF_SIZE)
 
 /*! @brief Set the R_BUF_SIZE field to a new value. */
-#define BW_ENET_MRBR_R_BUF_SIZE(x, v) (ADDRESS_WRITE32(HW_ENET_MRBR_ADDR(x), (HW_ENET_MRBR_RD(x) & ~BM_ENET_MRBR_R_BUF_SIZE) | BF_ENET_MRBR_R_BUF_SIZE(v)))
+#define BW_ENET_MRBR_R_BUF_SIZE(x, v) (UNION_WRITE_REG_FS(HW_ENET_MRBR_ADDR(x), hw_enet_mrbr, (HW_ENET_MRBR_RD(x) & ~BM_ENET_MRBR_R_BUF_SIZE) | BF_ENET_MRBR_R_BUF_SIZE(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -3296,13 +3296,13 @@ typedef union _hw_enet_rsfl
 #define BS_ENET_RSFL_RX_SECTION_FULL (8U)  /*!< Bit field size in bits for ENET_RSFL_RX_SECTION_FULL. */
 
 /*! @brief Read current value of the ENET_RSFL_RX_SECTION_FULL field. */
-#define BR_ENET_RSFL_RX_SECTION_FULL(x) (UNION_READ_FS(HW_ENET_RSFL_ADDR(x), hw_enet_rsfl, B.RX_SECTION_FULL))
+#define BR_ENET_RSFL_RX_SECTION_FULL(x) (UNION_READ_BIT_FS(HW_ENET_RSFL_ADDR(x), hw_enet_rsfl, B.RX_SECTION_FULL))
 
 /*! @brief Format value for bitfield ENET_RSFL_RX_SECTION_FULL. */
 #define BF_ENET_RSFL_RX_SECTION_FULL(v) ((uint32_t)((uint32_t)(v) << BP_ENET_RSFL_RX_SECTION_FULL) & BM_ENET_RSFL_RX_SECTION_FULL)
 
 /*! @brief Set the RX_SECTION_FULL field to a new value. */
-#define BW_ENET_RSFL_RX_SECTION_FULL(x, v) (ADDRESS_WRITE32(HW_ENET_RSFL_ADDR(x), (HW_ENET_RSFL_RD(x) & ~BM_ENET_RSFL_RX_SECTION_FULL) | BF_ENET_RSFL_RX_SECTION_FULL(v)))
+#define BW_ENET_RSFL_RX_SECTION_FULL(x, v) (UNION_WRITE_REG_FS(HW_ENET_RSFL_ADDR(x), hw_enet_rsfl, (HW_ENET_RSFL_RD(x) & ~BM_ENET_RSFL_RX_SECTION_FULL) | BF_ENET_RSFL_RX_SECTION_FULL(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -3362,13 +3362,13 @@ typedef union _hw_enet_rsem
 #define BS_ENET_RSEM_RX_SECTION_EMPTY (8U) /*!< Bit field size in bits for ENET_RSEM_RX_SECTION_EMPTY. */
 
 /*! @brief Read current value of the ENET_RSEM_RX_SECTION_EMPTY field. */
-#define BR_ENET_RSEM_RX_SECTION_EMPTY(x) (UNION_READ_FS(HW_ENET_RSEM_ADDR(x), hw_enet_rsem, B.RX_SECTION_EMPTY))
+#define BR_ENET_RSEM_RX_SECTION_EMPTY(x) (UNION_READ_BIT_FS(HW_ENET_RSEM_ADDR(x), hw_enet_rsem, B.RX_SECTION_EMPTY))
 
 /*! @brief Format value for bitfield ENET_RSEM_RX_SECTION_EMPTY. */
 #define BF_ENET_RSEM_RX_SECTION_EMPTY(v) ((uint32_t)((uint32_t)(v) << BP_ENET_RSEM_RX_SECTION_EMPTY) & BM_ENET_RSEM_RX_SECTION_EMPTY)
 
 /*! @brief Set the RX_SECTION_EMPTY field to a new value. */
-#define BW_ENET_RSEM_RX_SECTION_EMPTY(x, v) (ADDRESS_WRITE32(HW_ENET_RSEM_ADDR(x), (HW_ENET_RSEM_RD(x) & ~BM_ENET_RSEM_RX_SECTION_EMPTY) | BF_ENET_RSEM_RX_SECTION_EMPTY(v)))
+#define BW_ENET_RSEM_RX_SECTION_EMPTY(x, v) (UNION_WRITE_REG_FS(HW_ENET_RSEM_ADDR(x), hw_enet_rsem, (HW_ENET_RSEM_RD(x) & ~BM_ENET_RSEM_RX_SECTION_EMPTY) | BF_ENET_RSEM_RX_SECTION_EMPTY(v)))
 /*@}*/
 
 /*!
@@ -3386,13 +3386,13 @@ typedef union _hw_enet_rsem
 #define BS_ENET_RSEM_STAT_SECTION_EMPTY (5U) /*!< Bit field size in bits for ENET_RSEM_STAT_SECTION_EMPTY. */
 
 /*! @brief Read current value of the ENET_RSEM_STAT_SECTION_EMPTY field. */
-#define BR_ENET_RSEM_STAT_SECTION_EMPTY(x) (UNION_READ_FS(HW_ENET_RSEM_ADDR(x), hw_enet_rsem, B.STAT_SECTION_EMPTY))
+#define BR_ENET_RSEM_STAT_SECTION_EMPTY(x) (UNION_READ_BIT_FS(HW_ENET_RSEM_ADDR(x), hw_enet_rsem, B.STAT_SECTION_EMPTY))
 
 /*! @brief Format value for bitfield ENET_RSEM_STAT_SECTION_EMPTY. */
 #define BF_ENET_RSEM_STAT_SECTION_EMPTY(v) ((uint32_t)((uint32_t)(v) << BP_ENET_RSEM_STAT_SECTION_EMPTY) & BM_ENET_RSEM_STAT_SECTION_EMPTY)
 
 /*! @brief Set the STAT_SECTION_EMPTY field to a new value. */
-#define BW_ENET_RSEM_STAT_SECTION_EMPTY(x, v) (ADDRESS_WRITE32(HW_ENET_RSEM_ADDR(x), (HW_ENET_RSEM_RD(x) & ~BM_ENET_RSEM_STAT_SECTION_EMPTY) | BF_ENET_RSEM_STAT_SECTION_EMPTY(v)))
+#define BW_ENET_RSEM_STAT_SECTION_EMPTY(x, v) (UNION_WRITE_REG_FS(HW_ENET_RSEM_ADDR(x), hw_enet_rsem, (HW_ENET_RSEM_RD(x) & ~BM_ENET_RSEM_STAT_SECTION_EMPTY) | BF_ENET_RSEM_STAT_SECTION_EMPTY(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -3449,13 +3449,13 @@ typedef union _hw_enet_raem
 #define BS_ENET_RAEM_RX_ALMOST_EMPTY (8U)  /*!< Bit field size in bits for ENET_RAEM_RX_ALMOST_EMPTY. */
 
 /*! @brief Read current value of the ENET_RAEM_RX_ALMOST_EMPTY field. */
-#define BR_ENET_RAEM_RX_ALMOST_EMPTY(x) (UNION_READ_FS(HW_ENET_RAEM_ADDR(x), hw_enet_raem, B.RX_ALMOST_EMPTY))
+#define BR_ENET_RAEM_RX_ALMOST_EMPTY(x) (UNION_READ_BIT_FS(HW_ENET_RAEM_ADDR(x), hw_enet_raem, B.RX_ALMOST_EMPTY))
 
 /*! @brief Format value for bitfield ENET_RAEM_RX_ALMOST_EMPTY. */
 #define BF_ENET_RAEM_RX_ALMOST_EMPTY(v) ((uint32_t)((uint32_t)(v) << BP_ENET_RAEM_RX_ALMOST_EMPTY) & BM_ENET_RAEM_RX_ALMOST_EMPTY)
 
 /*! @brief Set the RX_ALMOST_EMPTY field to a new value. */
-#define BW_ENET_RAEM_RX_ALMOST_EMPTY(x, v) (ADDRESS_WRITE32(HW_ENET_RAEM_ADDR(x), (HW_ENET_RAEM_RD(x) & ~BM_ENET_RAEM_RX_ALMOST_EMPTY) | BF_ENET_RAEM_RX_ALMOST_EMPTY(v)))
+#define BW_ENET_RAEM_RX_ALMOST_EMPTY(x, v) (UNION_WRITE_REG_FS(HW_ENET_RAEM_ADDR(x), hw_enet_raem, (HW_ENET_RAEM_RD(x) & ~BM_ENET_RAEM_RX_ALMOST_EMPTY) | BF_ENET_RAEM_RX_ALMOST_EMPTY(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -3512,13 +3512,13 @@ typedef union _hw_enet_rafl
 #define BS_ENET_RAFL_RX_ALMOST_FULL (8U)   /*!< Bit field size in bits for ENET_RAFL_RX_ALMOST_FULL. */
 
 /*! @brief Read current value of the ENET_RAFL_RX_ALMOST_FULL field. */
-#define BR_ENET_RAFL_RX_ALMOST_FULL(x) (UNION_READ_FS(HW_ENET_RAFL_ADDR(x), hw_enet_rafl, B.RX_ALMOST_FULL))
+#define BR_ENET_RAFL_RX_ALMOST_FULL(x) (UNION_READ_BIT_FS(HW_ENET_RAFL_ADDR(x), hw_enet_rafl, B.RX_ALMOST_FULL))
 
 /*! @brief Format value for bitfield ENET_RAFL_RX_ALMOST_FULL. */
 #define BF_ENET_RAFL_RX_ALMOST_FULL(v) ((uint32_t)((uint32_t)(v) << BP_ENET_RAFL_RX_ALMOST_FULL) & BM_ENET_RAFL_RX_ALMOST_FULL)
 
 /*! @brief Set the RX_ALMOST_FULL field to a new value. */
-#define BW_ENET_RAFL_RX_ALMOST_FULL(x, v) (ADDRESS_WRITE32(HW_ENET_RAFL_ADDR(x), (HW_ENET_RAFL_RD(x) & ~BM_ENET_RAFL_RX_ALMOST_FULL) | BF_ENET_RAFL_RX_ALMOST_FULL(v)))
+#define BW_ENET_RAFL_RX_ALMOST_FULL(x, v) (UNION_WRITE_REG_FS(HW_ENET_RAFL_ADDR(x), hw_enet_rafl, (HW_ENET_RAFL_RD(x) & ~BM_ENET_RAFL_RX_ALMOST_FULL) | BF_ENET_RAFL_RX_ALMOST_FULL(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -3572,13 +3572,13 @@ typedef union _hw_enet_tsem
 #define BS_ENET_TSEM_TX_SECTION_EMPTY (8U) /*!< Bit field size in bits for ENET_TSEM_TX_SECTION_EMPTY. */
 
 /*! @brief Read current value of the ENET_TSEM_TX_SECTION_EMPTY field. */
-#define BR_ENET_TSEM_TX_SECTION_EMPTY(x) (UNION_READ_FS(HW_ENET_TSEM_ADDR(x), hw_enet_tsem, B.TX_SECTION_EMPTY))
+#define BR_ENET_TSEM_TX_SECTION_EMPTY(x) (UNION_READ_BIT_FS(HW_ENET_TSEM_ADDR(x), hw_enet_tsem, B.TX_SECTION_EMPTY))
 
 /*! @brief Format value for bitfield ENET_TSEM_TX_SECTION_EMPTY. */
 #define BF_ENET_TSEM_TX_SECTION_EMPTY(v) ((uint32_t)((uint32_t)(v) << BP_ENET_TSEM_TX_SECTION_EMPTY) & BM_ENET_TSEM_TX_SECTION_EMPTY)
 
 /*! @brief Set the TX_SECTION_EMPTY field to a new value. */
-#define BW_ENET_TSEM_TX_SECTION_EMPTY(x, v) (ADDRESS_WRITE32(HW_ENET_TSEM_ADDR(x), (HW_ENET_TSEM_RD(x) & ~BM_ENET_TSEM_TX_SECTION_EMPTY) | BF_ENET_TSEM_TX_SECTION_EMPTY(v)))
+#define BW_ENET_TSEM_TX_SECTION_EMPTY(x, v) (UNION_WRITE_REG_FS(HW_ENET_TSEM_ADDR(x), hw_enet_tsem, (HW_ENET_TSEM_RD(x) & ~BM_ENET_TSEM_TX_SECTION_EMPTY) | BF_ENET_TSEM_TX_SECTION_EMPTY(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -3635,13 +3635,13 @@ typedef union _hw_enet_taem
 #define BS_ENET_TAEM_TX_ALMOST_EMPTY (8U)  /*!< Bit field size in bits for ENET_TAEM_TX_ALMOST_EMPTY. */
 
 /*! @brief Read current value of the ENET_TAEM_TX_ALMOST_EMPTY field. */
-#define BR_ENET_TAEM_TX_ALMOST_EMPTY(x) (UNION_READ_FS(HW_ENET_TAEM_ADDR(x), hw_enet_taem, B.TX_ALMOST_EMPTY))
+#define BR_ENET_TAEM_TX_ALMOST_EMPTY(x) (UNION_READ_BIT_FS(HW_ENET_TAEM_ADDR(x), hw_enet_taem, B.TX_ALMOST_EMPTY))
 
 /*! @brief Format value for bitfield ENET_TAEM_TX_ALMOST_EMPTY. */
 #define BF_ENET_TAEM_TX_ALMOST_EMPTY(v) ((uint32_t)((uint32_t)(v) << BP_ENET_TAEM_TX_ALMOST_EMPTY) & BM_ENET_TAEM_TX_ALMOST_EMPTY)
 
 /*! @brief Set the TX_ALMOST_EMPTY field to a new value. */
-#define BW_ENET_TAEM_TX_ALMOST_EMPTY(x, v) (ADDRESS_WRITE32(HW_ENET_TAEM_ADDR(x), (HW_ENET_TAEM_RD(x) & ~BM_ENET_TAEM_TX_ALMOST_EMPTY) | BF_ENET_TAEM_TX_ALMOST_EMPTY(v)))
+#define BW_ENET_TAEM_TX_ALMOST_EMPTY(x, v) (UNION_WRITE_REG_FS(HW_ENET_TAEM_ADDR(x), hw_enet_taem, (HW_ENET_TAEM_RD(x) & ~BM_ENET_TAEM_TX_ALMOST_EMPTY) | BF_ENET_TAEM_TX_ALMOST_EMPTY(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -3704,13 +3704,13 @@ typedef union _hw_enet_tafl
 #define BS_ENET_TAFL_TX_ALMOST_FULL (8U)   /*!< Bit field size in bits for ENET_TAFL_TX_ALMOST_FULL. */
 
 /*! @brief Read current value of the ENET_TAFL_TX_ALMOST_FULL field. */
-#define BR_ENET_TAFL_TX_ALMOST_FULL(x) (UNION_READ_FS(HW_ENET_TAFL_ADDR(x), hw_enet_tafl, B.TX_ALMOST_FULL))
+#define BR_ENET_TAFL_TX_ALMOST_FULL(x) (UNION_READ_BIT_FS(HW_ENET_TAFL_ADDR(x), hw_enet_tafl, B.TX_ALMOST_FULL))
 
 /*! @brief Format value for bitfield ENET_TAFL_TX_ALMOST_FULL. */
 #define BF_ENET_TAFL_TX_ALMOST_FULL(v) ((uint32_t)((uint32_t)(v) << BP_ENET_TAFL_TX_ALMOST_FULL) & BM_ENET_TAFL_TX_ALMOST_FULL)
 
 /*! @brief Set the TX_ALMOST_FULL field to a new value. */
-#define BW_ENET_TAFL_TX_ALMOST_FULL(x, v) (ADDRESS_WRITE32(HW_ENET_TAFL_ADDR(x), (HW_ENET_TAFL_RD(x) & ~BM_ENET_TAFL_TX_ALMOST_FULL) | BF_ENET_TAFL_TX_ALMOST_FULL(v)))
+#define BW_ENET_TAFL_TX_ALMOST_FULL(x, v) (UNION_WRITE_REG_FS(HW_ENET_TAFL_ADDR(x), hw_enet_tafl, (HW_ENET_TAFL_RD(x) & ~BM_ENET_TAFL_TX_ALMOST_FULL) | BF_ENET_TAFL_TX_ALMOST_FULL(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -3763,13 +3763,13 @@ typedef union _hw_enet_tipg
 #define BS_ENET_TIPG_IPG     (5U)          /*!< Bit field size in bits for ENET_TIPG_IPG. */
 
 /*! @brief Read current value of the ENET_TIPG_IPG field. */
-#define BR_ENET_TIPG_IPG(x)  (UNION_READ_FS(HW_ENET_TIPG_ADDR(x), hw_enet_tipg, B.IPG))
+#define BR_ENET_TIPG_IPG(x)  (UNION_READ_BIT_FS(HW_ENET_TIPG_ADDR(x), hw_enet_tipg, B.IPG))
 
 /*! @brief Format value for bitfield ENET_TIPG_IPG. */
 #define BF_ENET_TIPG_IPG(v)  ((uint32_t)((uint32_t)(v) << BP_ENET_TIPG_IPG) & BM_ENET_TIPG_IPG)
 
 /*! @brief Set the IPG field to a new value. */
-#define BW_ENET_TIPG_IPG(x, v) (ADDRESS_WRITE32(HW_ENET_TIPG_ADDR(x), (HW_ENET_TIPG_RD(x) & ~BM_ENET_TIPG_IPG) | BF_ENET_TIPG_IPG(v)))
+#define BW_ENET_TIPG_IPG(x, v) (UNION_WRITE_REG_FS(HW_ENET_TIPG_ADDR(x), hw_enet_tipg, (HW_ENET_TIPG_RD(x) & ~BM_ENET_TIPG_IPG) | BF_ENET_TIPG_IPG(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -3823,13 +3823,13 @@ typedef union _hw_enet_ftrl
 #define BS_ENET_FTRL_TRUNC_FL (14U)        /*!< Bit field size in bits for ENET_FTRL_TRUNC_FL. */
 
 /*! @brief Read current value of the ENET_FTRL_TRUNC_FL field. */
-#define BR_ENET_FTRL_TRUNC_FL(x) (UNION_READ_FS(HW_ENET_FTRL_ADDR(x), hw_enet_ftrl, B.TRUNC_FL))
+#define BR_ENET_FTRL_TRUNC_FL(x) (UNION_READ_BIT_FS(HW_ENET_FTRL_ADDR(x), hw_enet_ftrl, B.TRUNC_FL))
 
 /*! @brief Format value for bitfield ENET_FTRL_TRUNC_FL. */
 #define BF_ENET_FTRL_TRUNC_FL(v) ((uint32_t)((uint32_t)(v) << BP_ENET_FTRL_TRUNC_FL) & BM_ENET_FTRL_TRUNC_FL)
 
 /*! @brief Set the TRUNC_FL field to a new value. */
-#define BW_ENET_FTRL_TRUNC_FL(x, v) (ADDRESS_WRITE32(HW_ENET_FTRL_ADDR(x), (HW_ENET_FTRL_RD(x) & ~BM_ENET_FTRL_TRUNC_FL) | BF_ENET_FTRL_TRUNC_FL(v)))
+#define BW_ENET_FTRL_TRUNC_FL(x, v) (UNION_WRITE_REG_FS(HW_ENET_FTRL_ADDR(x), hw_enet_ftrl, (HW_ENET_FTRL_RD(x) & ~BM_ENET_FTRL_TRUNC_FL) | BF_ENET_FTRL_TRUNC_FL(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -4166,7 +4166,7 @@ typedef union _hw_enet_rmon_t_packets
 #define BS_ENET_RMON_T_PACKETS_TXPKTS (16U) /*!< Bit field size in bits for ENET_RMON_T_PACKETS_TXPKTS. */
 
 /*! @brief Read current value of the ENET_RMON_T_PACKETS_TXPKTS field. */
-#define BR_ENET_RMON_T_PACKETS_TXPKTS(x) (UNION_READ_FS(HW_ENET_RMON_T_PACKETS_ADDR(x), hw_enet_rmon_t_packets, B.TXPKTS))
+#define BR_ENET_RMON_T_PACKETS_TXPKTS(x) (UNION_READ_BIT_FS(HW_ENET_RMON_T_PACKETS_ADDR(x), hw_enet_rmon_t_packets, B.TXPKTS))
 /*@}*/
 
 /*******************************************************************************
@@ -4213,7 +4213,7 @@ typedef union _hw_enet_rmon_t_bc_pkt
 #define BS_ENET_RMON_T_BC_PKT_TXPKTS (16U) /*!< Bit field size in bits for ENET_RMON_T_BC_PKT_TXPKTS. */
 
 /*! @brief Read current value of the ENET_RMON_T_BC_PKT_TXPKTS field. */
-#define BR_ENET_RMON_T_BC_PKT_TXPKTS(x) (UNION_READ_FS(HW_ENET_RMON_T_BC_PKT_ADDR(x), hw_enet_rmon_t_bc_pkt, B.TXPKTS))
+#define BR_ENET_RMON_T_BC_PKT_TXPKTS(x) (UNION_READ_BIT_FS(HW_ENET_RMON_T_BC_PKT_ADDR(x), hw_enet_rmon_t_bc_pkt, B.TXPKTS))
 /*@}*/
 
 /*******************************************************************************
@@ -4258,7 +4258,7 @@ typedef union _hw_enet_rmon_t_mc_pkt
 #define BS_ENET_RMON_T_MC_PKT_TXPKTS (16U) /*!< Bit field size in bits for ENET_RMON_T_MC_PKT_TXPKTS. */
 
 /*! @brief Read current value of the ENET_RMON_T_MC_PKT_TXPKTS field. */
-#define BR_ENET_RMON_T_MC_PKT_TXPKTS(x) (UNION_READ_FS(HW_ENET_RMON_T_MC_PKT_ADDR(x), hw_enet_rmon_t_mc_pkt, B.TXPKTS))
+#define BR_ENET_RMON_T_MC_PKT_TXPKTS(x) (UNION_READ_BIT_FS(HW_ENET_RMON_T_MC_PKT_ADDR(x), hw_enet_rmon_t_mc_pkt, B.TXPKTS))
 /*@}*/
 
 /*******************************************************************************
@@ -4303,7 +4303,7 @@ typedef union _hw_enet_rmon_t_crc_align
 #define BS_ENET_RMON_T_CRC_ALIGN_TXPKTS (16U) /*!< Bit field size in bits for ENET_RMON_T_CRC_ALIGN_TXPKTS. */
 
 /*! @brief Read current value of the ENET_RMON_T_CRC_ALIGN_TXPKTS field. */
-#define BR_ENET_RMON_T_CRC_ALIGN_TXPKTS(x) (UNION_READ_FS(HW_ENET_RMON_T_CRC_ALIGN_ADDR(x), hw_enet_rmon_t_crc_align, B.TXPKTS))
+#define BR_ENET_RMON_T_CRC_ALIGN_TXPKTS(x) (UNION_READ_BIT_FS(HW_ENET_RMON_T_CRC_ALIGN_ADDR(x), hw_enet_rmon_t_crc_align, B.TXPKTS))
 /*@}*/
 
 /*******************************************************************************
@@ -4348,7 +4348,7 @@ typedef union _hw_enet_rmon_t_undersize
 #define BS_ENET_RMON_T_UNDERSIZE_TXPKTS (16U) /*!< Bit field size in bits for ENET_RMON_T_UNDERSIZE_TXPKTS. */
 
 /*! @brief Read current value of the ENET_RMON_T_UNDERSIZE_TXPKTS field. */
-#define BR_ENET_RMON_T_UNDERSIZE_TXPKTS(x) (UNION_READ_FS(HW_ENET_RMON_T_UNDERSIZE_ADDR(x), hw_enet_rmon_t_undersize, B.TXPKTS))
+#define BR_ENET_RMON_T_UNDERSIZE_TXPKTS(x) (UNION_READ_BIT_FS(HW_ENET_RMON_T_UNDERSIZE_ADDR(x), hw_enet_rmon_t_undersize, B.TXPKTS))
 /*@}*/
 
 /*******************************************************************************
@@ -4393,7 +4393,7 @@ typedef union _hw_enet_rmon_t_oversize
 #define BS_ENET_RMON_T_OVERSIZE_TXPKTS (16U) /*!< Bit field size in bits for ENET_RMON_T_OVERSIZE_TXPKTS. */
 
 /*! @brief Read current value of the ENET_RMON_T_OVERSIZE_TXPKTS field. */
-#define BR_ENET_RMON_T_OVERSIZE_TXPKTS(x) (UNION_READ_FS(HW_ENET_RMON_T_OVERSIZE_ADDR(x), hw_enet_rmon_t_oversize, B.TXPKTS))
+#define BR_ENET_RMON_T_OVERSIZE_TXPKTS(x) (UNION_READ_BIT_FS(HW_ENET_RMON_T_OVERSIZE_ADDR(x), hw_enet_rmon_t_oversize, B.TXPKTS))
 /*@}*/
 
 /*******************************************************************************
@@ -4440,7 +4440,7 @@ typedef union _hw_enet_rmon_t_frag
 #define BS_ENET_RMON_T_FRAG_TXPKTS (16U)   /*!< Bit field size in bits for ENET_RMON_T_FRAG_TXPKTS. */
 
 /*! @brief Read current value of the ENET_RMON_T_FRAG_TXPKTS field. */
-#define BR_ENET_RMON_T_FRAG_TXPKTS(x) (UNION_READ_FS(HW_ENET_RMON_T_FRAG_ADDR(x), hw_enet_rmon_t_frag, B.TXPKTS))
+#define BR_ENET_RMON_T_FRAG_TXPKTS(x) (UNION_READ_BIT_FS(HW_ENET_RMON_T_FRAG_ADDR(x), hw_enet_rmon_t_frag, B.TXPKTS))
 /*@}*/
 
 /*******************************************************************************
@@ -4485,7 +4485,7 @@ typedef union _hw_enet_rmon_t_jab
 #define BS_ENET_RMON_T_JAB_TXPKTS (16U)    /*!< Bit field size in bits for ENET_RMON_T_JAB_TXPKTS. */
 
 /*! @brief Read current value of the ENET_RMON_T_JAB_TXPKTS field. */
-#define BR_ENET_RMON_T_JAB_TXPKTS(x) (UNION_READ_FS(HW_ENET_RMON_T_JAB_ADDR(x), hw_enet_rmon_t_jab, B.TXPKTS))
+#define BR_ENET_RMON_T_JAB_TXPKTS(x) (UNION_READ_BIT_FS(HW_ENET_RMON_T_JAB_ADDR(x), hw_enet_rmon_t_jab, B.TXPKTS))
 /*@}*/
 
 /*******************************************************************************
@@ -4530,7 +4530,7 @@ typedef union _hw_enet_rmon_t_col
 #define BS_ENET_RMON_T_COL_TXPKTS (16U)    /*!< Bit field size in bits for ENET_RMON_T_COL_TXPKTS. */
 
 /*! @brief Read current value of the ENET_RMON_T_COL_TXPKTS field. */
-#define BR_ENET_RMON_T_COL_TXPKTS(x) (UNION_READ_FS(HW_ENET_RMON_T_COL_ADDR(x), hw_enet_rmon_t_col, B.TXPKTS))
+#define BR_ENET_RMON_T_COL_TXPKTS(x) (UNION_READ_BIT_FS(HW_ENET_RMON_T_COL_ADDR(x), hw_enet_rmon_t_col, B.TXPKTS))
 /*@}*/
 
 /*******************************************************************************
@@ -4577,7 +4577,7 @@ typedef union _hw_enet_rmon_t_p64
 #define BS_ENET_RMON_T_P64_TXPKTS (16U)    /*!< Bit field size in bits for ENET_RMON_T_P64_TXPKTS. */
 
 /*! @brief Read current value of the ENET_RMON_T_P64_TXPKTS field. */
-#define BR_ENET_RMON_T_P64_TXPKTS(x) (UNION_READ_FS(HW_ENET_RMON_T_P64_ADDR(x), hw_enet_rmon_t_p64, B.TXPKTS))
+#define BR_ENET_RMON_T_P64_TXPKTS(x) (UNION_READ_BIT_FS(HW_ENET_RMON_T_P64_ADDR(x), hw_enet_rmon_t_p64, B.TXPKTS))
 /*@}*/
 
 /*******************************************************************************
@@ -4622,7 +4622,7 @@ typedef union _hw_enet_rmon_t_p65to127
 #define BS_ENET_RMON_T_P65TO127_TXPKTS (16U) /*!< Bit field size in bits for ENET_RMON_T_P65TO127_TXPKTS. */
 
 /*! @brief Read current value of the ENET_RMON_T_P65TO127_TXPKTS field. */
-#define BR_ENET_RMON_T_P65TO127_TXPKTS(x) (UNION_READ_FS(HW_ENET_RMON_T_P65TO127_ADDR(x), hw_enet_rmon_t_p65to127, B.TXPKTS))
+#define BR_ENET_RMON_T_P65TO127_TXPKTS(x) (UNION_READ_BIT_FS(HW_ENET_RMON_T_P65TO127_ADDR(x), hw_enet_rmon_t_p65to127, B.TXPKTS))
 /*@}*/
 
 /*******************************************************************************
@@ -4667,7 +4667,7 @@ typedef union _hw_enet_rmon_t_p128to255
 #define BS_ENET_RMON_T_P128TO255_TXPKTS (16U) /*!< Bit field size in bits for ENET_RMON_T_P128TO255_TXPKTS. */
 
 /*! @brief Read current value of the ENET_RMON_T_P128TO255_TXPKTS field. */
-#define BR_ENET_RMON_T_P128TO255_TXPKTS(x) (UNION_READ_FS(HW_ENET_RMON_T_P128TO255_ADDR(x), hw_enet_rmon_t_p128to255, B.TXPKTS))
+#define BR_ENET_RMON_T_P128TO255_TXPKTS(x) (UNION_READ_BIT_FS(HW_ENET_RMON_T_P128TO255_ADDR(x), hw_enet_rmon_t_p128to255, B.TXPKTS))
 /*@}*/
 
 /*******************************************************************************
@@ -4712,7 +4712,7 @@ typedef union _hw_enet_rmon_t_p256to511
 #define BS_ENET_RMON_T_P256TO511_TXPKTS (16U) /*!< Bit field size in bits for ENET_RMON_T_P256TO511_TXPKTS. */
 
 /*! @brief Read current value of the ENET_RMON_T_P256TO511_TXPKTS field. */
-#define BR_ENET_RMON_T_P256TO511_TXPKTS(x) (UNION_READ_FS(HW_ENET_RMON_T_P256TO511_ADDR(x), hw_enet_rmon_t_p256to511, B.TXPKTS))
+#define BR_ENET_RMON_T_P256TO511_TXPKTS(x) (UNION_READ_BIT_FS(HW_ENET_RMON_T_P256TO511_ADDR(x), hw_enet_rmon_t_p256to511, B.TXPKTS))
 /*@}*/
 
 /*******************************************************************************
@@ -4759,7 +4759,7 @@ typedef union _hw_enet_rmon_t_p512to1023
 #define BS_ENET_RMON_T_P512TO1023_TXPKTS (16U) /*!< Bit field size in bits for ENET_RMON_T_P512TO1023_TXPKTS. */
 
 /*! @brief Read current value of the ENET_RMON_T_P512TO1023_TXPKTS field. */
-#define BR_ENET_RMON_T_P512TO1023_TXPKTS(x) (UNION_READ_FS(HW_ENET_RMON_T_P512TO1023_ADDR(x), hw_enet_rmon_t_p512to1023, B.TXPKTS))
+#define BR_ENET_RMON_T_P512TO1023_TXPKTS(x) (UNION_READ_BIT_FS(HW_ENET_RMON_T_P512TO1023_ADDR(x), hw_enet_rmon_t_p512to1023, B.TXPKTS))
 /*@}*/
 
 /*******************************************************************************
@@ -4804,7 +4804,7 @@ typedef union _hw_enet_rmon_t_p1024to2047
 #define BS_ENET_RMON_T_P1024TO2047_TXPKTS (16U) /*!< Bit field size in bits for ENET_RMON_T_P1024TO2047_TXPKTS. */
 
 /*! @brief Read current value of the ENET_RMON_T_P1024TO2047_TXPKTS field. */
-#define BR_ENET_RMON_T_P1024TO2047_TXPKTS(x) (UNION_READ_FS(HW_ENET_RMON_T_P1024TO2047_ADDR(x), hw_enet_rmon_t_p1024to2047, B.TXPKTS))
+#define BR_ENET_RMON_T_P1024TO2047_TXPKTS(x) (UNION_READ_BIT_FS(HW_ENET_RMON_T_P1024TO2047_ADDR(x), hw_enet_rmon_t_p1024to2047, B.TXPKTS))
 /*@}*/
 
 /*******************************************************************************
@@ -4849,7 +4849,7 @@ typedef union _hw_enet_rmon_t_p_gte2048
 #define BS_ENET_RMON_T_P_GTE2048_TXPKTS (16U) /*!< Bit field size in bits for ENET_RMON_T_P_GTE2048_TXPKTS. */
 
 /*! @brief Read current value of the ENET_RMON_T_P_GTE2048_TXPKTS field. */
-#define BR_ENET_RMON_T_P_GTE2048_TXPKTS(x) (UNION_READ_FS(HW_ENET_RMON_T_P_GTE2048_ADDR(x), hw_enet_rmon_t_p_gte2048, B.TXPKTS))
+#define BR_ENET_RMON_T_P_GTE2048_TXPKTS(x) (UNION_READ_BIT_FS(HW_ENET_RMON_T_P_GTE2048_ADDR(x), hw_enet_rmon_t_p_gte2048, B.TXPKTS))
 /*@}*/
 
 /*******************************************************************************
@@ -4893,7 +4893,7 @@ typedef union _hw_enet_rmon_t_octets
 #define BS_ENET_RMON_T_OCTETS_TXOCTS (32U) /*!< Bit field size in bits for ENET_RMON_T_OCTETS_TXOCTS. */
 
 /*! @brief Read current value of the ENET_RMON_T_OCTETS_TXOCTS field. */
-#define BR_ENET_RMON_T_OCTETS_TXOCTS(x) (ADDRESS_READ32(HW_ENET_RMON_T_OCTETS_ADDR(x)))
+#define BR_ENET_RMON_T_OCTETS_TXOCTS(x) (UNION_READ_REG_FS(HW_ENET_RMON_T_OCTETS_ADDR(x), hw_enet_rmon_t_octets))
 /*@}*/
 
 /*******************************************************************************
@@ -4938,7 +4938,7 @@ typedef union _hw_enet_ieee_t_frame_ok
 #define BS_ENET_IEEE_T_FRAME_OK_COUNT (16U) /*!< Bit field size in bits for ENET_IEEE_T_FRAME_OK_COUNT. */
 
 /*! @brief Read current value of the ENET_IEEE_T_FRAME_OK_COUNT field. */
-#define BR_ENET_IEEE_T_FRAME_OK_COUNT(x) (UNION_READ_FS(HW_ENET_IEEE_T_FRAME_OK_ADDR(x), hw_enet_ieee_t_frame_ok, B.COUNT))
+#define BR_ENET_IEEE_T_FRAME_OK_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_IEEE_T_FRAME_OK_ADDR(x), hw_enet_ieee_t_frame_ok, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -4983,7 +4983,7 @@ typedef union _hw_enet_ieee_t_1col
 #define BS_ENET_IEEE_T_1COL_COUNT (16U)    /*!< Bit field size in bits for ENET_IEEE_T_1COL_COUNT. */
 
 /*! @brief Read current value of the ENET_IEEE_T_1COL_COUNT field. */
-#define BR_ENET_IEEE_T_1COL_COUNT(x) (UNION_READ_FS(HW_ENET_IEEE_T_1COL_ADDR(x), hw_enet_ieee_t_1col, B.COUNT))
+#define BR_ENET_IEEE_T_1COL_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_IEEE_T_1COL_ADDR(x), hw_enet_ieee_t_1col, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5028,7 +5028,7 @@ typedef union _hw_enet_ieee_t_mcol
 #define BS_ENET_IEEE_T_MCOL_COUNT (16U)    /*!< Bit field size in bits for ENET_IEEE_T_MCOL_COUNT. */
 
 /*! @brief Read current value of the ENET_IEEE_T_MCOL_COUNT field. */
-#define BR_ENET_IEEE_T_MCOL_COUNT(x) (UNION_READ_FS(HW_ENET_IEEE_T_MCOL_ADDR(x), hw_enet_ieee_t_mcol, B.COUNT))
+#define BR_ENET_IEEE_T_MCOL_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_IEEE_T_MCOL_ADDR(x), hw_enet_ieee_t_mcol, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5073,7 +5073,7 @@ typedef union _hw_enet_ieee_t_def
 #define BS_ENET_IEEE_T_DEF_COUNT (16U)     /*!< Bit field size in bits for ENET_IEEE_T_DEF_COUNT. */
 
 /*! @brief Read current value of the ENET_IEEE_T_DEF_COUNT field. */
-#define BR_ENET_IEEE_T_DEF_COUNT(x) (UNION_READ_FS(HW_ENET_IEEE_T_DEF_ADDR(x), hw_enet_ieee_t_def, B.COUNT))
+#define BR_ENET_IEEE_T_DEF_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_IEEE_T_DEF_ADDR(x), hw_enet_ieee_t_def, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5118,7 +5118,7 @@ typedef union _hw_enet_ieee_t_lcol
 #define BS_ENET_IEEE_T_LCOL_COUNT (16U)    /*!< Bit field size in bits for ENET_IEEE_T_LCOL_COUNT. */
 
 /*! @brief Read current value of the ENET_IEEE_T_LCOL_COUNT field. */
-#define BR_ENET_IEEE_T_LCOL_COUNT(x) (UNION_READ_FS(HW_ENET_IEEE_T_LCOL_ADDR(x), hw_enet_ieee_t_lcol, B.COUNT))
+#define BR_ENET_IEEE_T_LCOL_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_IEEE_T_LCOL_ADDR(x), hw_enet_ieee_t_lcol, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5163,7 +5163,7 @@ typedef union _hw_enet_ieee_t_excol
 #define BS_ENET_IEEE_T_EXCOL_COUNT (16U)   /*!< Bit field size in bits for ENET_IEEE_T_EXCOL_COUNT. */
 
 /*! @brief Read current value of the ENET_IEEE_T_EXCOL_COUNT field. */
-#define BR_ENET_IEEE_T_EXCOL_COUNT(x) (UNION_READ_FS(HW_ENET_IEEE_T_EXCOL_ADDR(x), hw_enet_ieee_t_excol, B.COUNT))
+#define BR_ENET_IEEE_T_EXCOL_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_IEEE_T_EXCOL_ADDR(x), hw_enet_ieee_t_excol, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5208,7 +5208,7 @@ typedef union _hw_enet_ieee_t_macerr
 #define BS_ENET_IEEE_T_MACERR_COUNT (16U)  /*!< Bit field size in bits for ENET_IEEE_T_MACERR_COUNT. */
 
 /*! @brief Read current value of the ENET_IEEE_T_MACERR_COUNT field. */
-#define BR_ENET_IEEE_T_MACERR_COUNT(x) (UNION_READ_FS(HW_ENET_IEEE_T_MACERR_ADDR(x), hw_enet_ieee_t_macerr, B.COUNT))
+#define BR_ENET_IEEE_T_MACERR_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_IEEE_T_MACERR_ADDR(x), hw_enet_ieee_t_macerr, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5253,7 +5253,7 @@ typedef union _hw_enet_ieee_t_cserr
 #define BS_ENET_IEEE_T_CSERR_COUNT (16U)   /*!< Bit field size in bits for ENET_IEEE_T_CSERR_COUNT. */
 
 /*! @brief Read current value of the ENET_IEEE_T_CSERR_COUNT field. */
-#define BR_ENET_IEEE_T_CSERR_COUNT(x) (UNION_READ_FS(HW_ENET_IEEE_T_CSERR_ADDR(x), hw_enet_ieee_t_cserr, B.COUNT))
+#define BR_ENET_IEEE_T_CSERR_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_IEEE_T_CSERR_ADDR(x), hw_enet_ieee_t_cserr, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5298,7 +5298,7 @@ typedef union _hw_enet_ieee_t_fdxfc
 #define BS_ENET_IEEE_T_FDXFC_COUNT (16U)   /*!< Bit field size in bits for ENET_IEEE_T_FDXFC_COUNT. */
 
 /*! @brief Read current value of the ENET_IEEE_T_FDXFC_COUNT field. */
-#define BR_ENET_IEEE_T_FDXFC_COUNT(x) (UNION_READ_FS(HW_ENET_IEEE_T_FDXFC_ADDR(x), hw_enet_ieee_t_fdxfc, B.COUNT))
+#define BR_ENET_IEEE_T_FDXFC_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_IEEE_T_FDXFC_ADDR(x), hw_enet_ieee_t_fdxfc, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5344,7 +5344,7 @@ typedef union _hw_enet_ieee_t_octets_ok
 #define BS_ENET_IEEE_T_OCTETS_OK_COUNT (32U) /*!< Bit field size in bits for ENET_IEEE_T_OCTETS_OK_COUNT. */
 
 /*! @brief Read current value of the ENET_IEEE_T_OCTETS_OK_COUNT field. */
-#define BR_ENET_IEEE_T_OCTETS_OK_COUNT(x) (ADDRESS_READ32(HW_ENET_IEEE_T_OCTETS_OK_ADDR(x)))
+#define BR_ENET_IEEE_T_OCTETS_OK_COUNT(x) (UNION_READ_REG_FS(HW_ENET_IEEE_T_OCTETS_OK_ADDR(x), hw_enet_ieee_t_octets_ok))
 /*@}*/
 
 /*******************************************************************************
@@ -5389,7 +5389,7 @@ typedef union _hw_enet_rmon_r_packets
 #define BS_ENET_RMON_R_PACKETS_COUNT (16U) /*!< Bit field size in bits for ENET_RMON_R_PACKETS_COUNT. */
 
 /*! @brief Read current value of the ENET_RMON_R_PACKETS_COUNT field. */
-#define BR_ENET_RMON_R_PACKETS_COUNT(x) (UNION_READ_FS(HW_ENET_RMON_R_PACKETS_ADDR(x), hw_enet_rmon_r_packets, B.COUNT))
+#define BR_ENET_RMON_R_PACKETS_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_RMON_R_PACKETS_ADDR(x), hw_enet_rmon_r_packets, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5434,7 +5434,7 @@ typedef union _hw_enet_rmon_r_bc_pkt
 #define BS_ENET_RMON_R_BC_PKT_COUNT (16U)  /*!< Bit field size in bits for ENET_RMON_R_BC_PKT_COUNT. */
 
 /*! @brief Read current value of the ENET_RMON_R_BC_PKT_COUNT field. */
-#define BR_ENET_RMON_R_BC_PKT_COUNT(x) (UNION_READ_FS(HW_ENET_RMON_R_BC_PKT_ADDR(x), hw_enet_rmon_r_bc_pkt, B.COUNT))
+#define BR_ENET_RMON_R_BC_PKT_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_RMON_R_BC_PKT_ADDR(x), hw_enet_rmon_r_bc_pkt, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5479,7 +5479,7 @@ typedef union _hw_enet_rmon_r_mc_pkt
 #define BS_ENET_RMON_R_MC_PKT_COUNT (16U)  /*!< Bit field size in bits for ENET_RMON_R_MC_PKT_COUNT. */
 
 /*! @brief Read current value of the ENET_RMON_R_MC_PKT_COUNT field. */
-#define BR_ENET_RMON_R_MC_PKT_COUNT(x) (UNION_READ_FS(HW_ENET_RMON_R_MC_PKT_ADDR(x), hw_enet_rmon_r_mc_pkt, B.COUNT))
+#define BR_ENET_RMON_R_MC_PKT_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_RMON_R_MC_PKT_ADDR(x), hw_enet_rmon_r_mc_pkt, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5524,7 +5524,7 @@ typedef union _hw_enet_rmon_r_crc_align
 #define BS_ENET_RMON_R_CRC_ALIGN_COUNT (16U) /*!< Bit field size in bits for ENET_RMON_R_CRC_ALIGN_COUNT. */
 
 /*! @brief Read current value of the ENET_RMON_R_CRC_ALIGN_COUNT field. */
-#define BR_ENET_RMON_R_CRC_ALIGN_COUNT(x) (UNION_READ_FS(HW_ENET_RMON_R_CRC_ALIGN_ADDR(x), hw_enet_rmon_r_crc_align, B.COUNT))
+#define BR_ENET_RMON_R_CRC_ALIGN_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_RMON_R_CRC_ALIGN_ADDR(x), hw_enet_rmon_r_crc_align, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5569,7 +5569,7 @@ typedef union _hw_enet_rmon_r_undersize
 #define BS_ENET_RMON_R_UNDERSIZE_COUNT (16U) /*!< Bit field size in bits for ENET_RMON_R_UNDERSIZE_COUNT. */
 
 /*! @brief Read current value of the ENET_RMON_R_UNDERSIZE_COUNT field. */
-#define BR_ENET_RMON_R_UNDERSIZE_COUNT(x) (UNION_READ_FS(HW_ENET_RMON_R_UNDERSIZE_ADDR(x), hw_enet_rmon_r_undersize, B.COUNT))
+#define BR_ENET_RMON_R_UNDERSIZE_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_RMON_R_UNDERSIZE_ADDR(x), hw_enet_rmon_r_undersize, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5614,7 +5614,7 @@ typedef union _hw_enet_rmon_r_oversize
 #define BS_ENET_RMON_R_OVERSIZE_COUNT (16U) /*!< Bit field size in bits for ENET_RMON_R_OVERSIZE_COUNT. */
 
 /*! @brief Read current value of the ENET_RMON_R_OVERSIZE_COUNT field. */
-#define BR_ENET_RMON_R_OVERSIZE_COUNT(x) (UNION_READ_FS(HW_ENET_RMON_R_OVERSIZE_ADDR(x), hw_enet_rmon_r_oversize, B.COUNT))
+#define BR_ENET_RMON_R_OVERSIZE_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_RMON_R_OVERSIZE_ADDR(x), hw_enet_rmon_r_oversize, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5659,7 +5659,7 @@ typedef union _hw_enet_rmon_r_frag
 #define BS_ENET_RMON_R_FRAG_COUNT (16U)    /*!< Bit field size in bits for ENET_RMON_R_FRAG_COUNT. */
 
 /*! @brief Read current value of the ENET_RMON_R_FRAG_COUNT field. */
-#define BR_ENET_RMON_R_FRAG_COUNT(x) (UNION_READ_FS(HW_ENET_RMON_R_FRAG_ADDR(x), hw_enet_rmon_r_frag, B.COUNT))
+#define BR_ENET_RMON_R_FRAG_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_RMON_R_FRAG_ADDR(x), hw_enet_rmon_r_frag, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5704,7 +5704,7 @@ typedef union _hw_enet_rmon_r_jab
 #define BS_ENET_RMON_R_JAB_COUNT (16U)     /*!< Bit field size in bits for ENET_RMON_R_JAB_COUNT. */
 
 /*! @brief Read current value of the ENET_RMON_R_JAB_COUNT field. */
-#define BR_ENET_RMON_R_JAB_COUNT(x) (UNION_READ_FS(HW_ENET_RMON_R_JAB_ADDR(x), hw_enet_rmon_r_jab, B.COUNT))
+#define BR_ENET_RMON_R_JAB_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_RMON_R_JAB_ADDR(x), hw_enet_rmon_r_jab, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5749,7 +5749,7 @@ typedef union _hw_enet_rmon_r_p64
 #define BS_ENET_RMON_R_P64_COUNT (16U)     /*!< Bit field size in bits for ENET_RMON_R_P64_COUNT. */
 
 /*! @brief Read current value of the ENET_RMON_R_P64_COUNT field. */
-#define BR_ENET_RMON_R_P64_COUNT(x) (UNION_READ_FS(HW_ENET_RMON_R_P64_ADDR(x), hw_enet_rmon_r_p64, B.COUNT))
+#define BR_ENET_RMON_R_P64_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_RMON_R_P64_ADDR(x), hw_enet_rmon_r_p64, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5794,7 +5794,7 @@ typedef union _hw_enet_rmon_r_p65to127
 #define BS_ENET_RMON_R_P65TO127_COUNT (16U) /*!< Bit field size in bits for ENET_RMON_R_P65TO127_COUNT. */
 
 /*! @brief Read current value of the ENET_RMON_R_P65TO127_COUNT field. */
-#define BR_ENET_RMON_R_P65TO127_COUNT(x) (UNION_READ_FS(HW_ENET_RMON_R_P65TO127_ADDR(x), hw_enet_rmon_r_p65to127, B.COUNT))
+#define BR_ENET_RMON_R_P65TO127_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_RMON_R_P65TO127_ADDR(x), hw_enet_rmon_r_p65to127, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5839,7 +5839,7 @@ typedef union _hw_enet_rmon_r_p128to255
 #define BS_ENET_RMON_R_P128TO255_COUNT (16U) /*!< Bit field size in bits for ENET_RMON_R_P128TO255_COUNT. */
 
 /*! @brief Read current value of the ENET_RMON_R_P128TO255_COUNT field. */
-#define BR_ENET_RMON_R_P128TO255_COUNT(x) (UNION_READ_FS(HW_ENET_RMON_R_P128TO255_ADDR(x), hw_enet_rmon_r_p128to255, B.COUNT))
+#define BR_ENET_RMON_R_P128TO255_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_RMON_R_P128TO255_ADDR(x), hw_enet_rmon_r_p128to255, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5884,7 +5884,7 @@ typedef union _hw_enet_rmon_r_p256to511
 #define BS_ENET_RMON_R_P256TO511_COUNT (16U) /*!< Bit field size in bits for ENET_RMON_R_P256TO511_COUNT. */
 
 /*! @brief Read current value of the ENET_RMON_R_P256TO511_COUNT field. */
-#define BR_ENET_RMON_R_P256TO511_COUNT(x) (UNION_READ_FS(HW_ENET_RMON_R_P256TO511_ADDR(x), hw_enet_rmon_r_p256to511, B.COUNT))
+#define BR_ENET_RMON_R_P256TO511_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_RMON_R_P256TO511_ADDR(x), hw_enet_rmon_r_p256to511, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5929,7 +5929,7 @@ typedef union _hw_enet_rmon_r_p512to1023
 #define BS_ENET_RMON_R_P512TO1023_COUNT (16U) /*!< Bit field size in bits for ENET_RMON_R_P512TO1023_COUNT. */
 
 /*! @brief Read current value of the ENET_RMON_R_P512TO1023_COUNT field. */
-#define BR_ENET_RMON_R_P512TO1023_COUNT(x) (UNION_READ_FS(HW_ENET_RMON_R_P512TO1023_ADDR(x), hw_enet_rmon_r_p512to1023, B.COUNT))
+#define BR_ENET_RMON_R_P512TO1023_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_RMON_R_P512TO1023_ADDR(x), hw_enet_rmon_r_p512to1023, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -5974,7 +5974,7 @@ typedef union _hw_enet_rmon_r_p1024to2047
 #define BS_ENET_RMON_R_P1024TO2047_COUNT (16U) /*!< Bit field size in bits for ENET_RMON_R_P1024TO2047_COUNT. */
 
 /*! @brief Read current value of the ENET_RMON_R_P1024TO2047_COUNT field. */
-#define BR_ENET_RMON_R_P1024TO2047_COUNT(x) (UNION_READ_FS(HW_ENET_RMON_R_P1024TO2047_ADDR(x), hw_enet_rmon_r_p1024to2047, B.COUNT))
+#define BR_ENET_RMON_R_P1024TO2047_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_RMON_R_P1024TO2047_ADDR(x), hw_enet_rmon_r_p1024to2047, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -6019,7 +6019,7 @@ typedef union _hw_enet_rmon_r_p_gte2048
 #define BS_ENET_RMON_R_P_GTE2048_COUNT (16U) /*!< Bit field size in bits for ENET_RMON_R_P_GTE2048_COUNT. */
 
 /*! @brief Read current value of the ENET_RMON_R_P_GTE2048_COUNT field. */
-#define BR_ENET_RMON_R_P_GTE2048_COUNT(x) (UNION_READ_FS(HW_ENET_RMON_R_P_GTE2048_ADDR(x), hw_enet_rmon_r_p_gte2048, B.COUNT))
+#define BR_ENET_RMON_R_P_GTE2048_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_RMON_R_P_GTE2048_ADDR(x), hw_enet_rmon_r_p_gte2048, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -6063,7 +6063,7 @@ typedef union _hw_enet_rmon_r_octets
 #define BS_ENET_RMON_R_OCTETS_COUNT (32U)  /*!< Bit field size in bits for ENET_RMON_R_OCTETS_COUNT. */
 
 /*! @brief Read current value of the ENET_RMON_R_OCTETS_COUNT field. */
-#define BR_ENET_RMON_R_OCTETS_COUNT(x) (ADDRESS_READ32(HW_ENET_RMON_R_OCTETS_ADDR(x)))
+#define BR_ENET_RMON_R_OCTETS_COUNT(x) (UNION_READ_REG_FS(HW_ENET_RMON_R_OCTETS_ADDR(x), hw_enet_rmon_r_octets))
 /*@}*/
 
 /*******************************************************************************
@@ -6112,7 +6112,7 @@ typedef union _hw_enet_ieee_r_drop
 #define BS_ENET_IEEE_R_DROP_COUNT (16U)    /*!< Bit field size in bits for ENET_IEEE_R_DROP_COUNT. */
 
 /*! @brief Read current value of the ENET_IEEE_R_DROP_COUNT field. */
-#define BR_ENET_IEEE_R_DROP_COUNT(x) (UNION_READ_FS(HW_ENET_IEEE_R_DROP_ADDR(x), hw_enet_ieee_r_drop, B.COUNT))
+#define BR_ENET_IEEE_R_DROP_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_IEEE_R_DROP_ADDR(x), hw_enet_ieee_r_drop, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -6157,7 +6157,7 @@ typedef union _hw_enet_ieee_r_frame_ok
 #define BS_ENET_IEEE_R_FRAME_OK_COUNT (16U) /*!< Bit field size in bits for ENET_IEEE_R_FRAME_OK_COUNT. */
 
 /*! @brief Read current value of the ENET_IEEE_R_FRAME_OK_COUNT field. */
-#define BR_ENET_IEEE_R_FRAME_OK_COUNT(x) (UNION_READ_FS(HW_ENET_IEEE_R_FRAME_OK_ADDR(x), hw_enet_ieee_r_frame_ok, B.COUNT))
+#define BR_ENET_IEEE_R_FRAME_OK_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_IEEE_R_FRAME_OK_ADDR(x), hw_enet_ieee_r_frame_ok, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -6202,7 +6202,7 @@ typedef union _hw_enet_ieee_r_crc
 #define BS_ENET_IEEE_R_CRC_COUNT (16U)     /*!< Bit field size in bits for ENET_IEEE_R_CRC_COUNT. */
 
 /*! @brief Read current value of the ENET_IEEE_R_CRC_COUNT field. */
-#define BR_ENET_IEEE_R_CRC_COUNT(x) (UNION_READ_FS(HW_ENET_IEEE_R_CRC_ADDR(x), hw_enet_ieee_r_crc, B.COUNT))
+#define BR_ENET_IEEE_R_CRC_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_IEEE_R_CRC_ADDR(x), hw_enet_ieee_r_crc, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -6247,7 +6247,7 @@ typedef union _hw_enet_ieee_r_align
 #define BS_ENET_IEEE_R_ALIGN_COUNT (16U)   /*!< Bit field size in bits for ENET_IEEE_R_ALIGN_COUNT. */
 
 /*! @brief Read current value of the ENET_IEEE_R_ALIGN_COUNT field. */
-#define BR_ENET_IEEE_R_ALIGN_COUNT(x) (UNION_READ_FS(HW_ENET_IEEE_R_ALIGN_ADDR(x), hw_enet_ieee_r_align, B.COUNT))
+#define BR_ENET_IEEE_R_ALIGN_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_IEEE_R_ALIGN_ADDR(x), hw_enet_ieee_r_align, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -6292,7 +6292,7 @@ typedef union _hw_enet_ieee_r_macerr
 #define BS_ENET_IEEE_R_MACERR_COUNT (16U)  /*!< Bit field size in bits for ENET_IEEE_R_MACERR_COUNT. */
 
 /*! @brief Read current value of the ENET_IEEE_R_MACERR_COUNT field. */
-#define BR_ENET_IEEE_R_MACERR_COUNT(x) (UNION_READ_FS(HW_ENET_IEEE_R_MACERR_ADDR(x), hw_enet_ieee_r_macerr, B.COUNT))
+#define BR_ENET_IEEE_R_MACERR_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_IEEE_R_MACERR_ADDR(x), hw_enet_ieee_r_macerr, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -6337,7 +6337,7 @@ typedef union _hw_enet_ieee_r_fdxfc
 #define BS_ENET_IEEE_R_FDXFC_COUNT (16U)   /*!< Bit field size in bits for ENET_IEEE_R_FDXFC_COUNT. */
 
 /*! @brief Read current value of the ENET_IEEE_R_FDXFC_COUNT field. */
-#define BR_ENET_IEEE_R_FDXFC_COUNT(x) (UNION_READ_FS(HW_ENET_IEEE_R_FDXFC_ADDR(x), hw_enet_ieee_r_fdxfc, B.COUNT))
+#define BR_ENET_IEEE_R_FDXFC_COUNT(x) (UNION_READ_BIT_FS(HW_ENET_IEEE_R_FDXFC_ADDR(x), hw_enet_ieee_r_fdxfc, B.COUNT))
 /*@}*/
 
 /*******************************************************************************
@@ -6381,7 +6381,7 @@ typedef union _hw_enet_ieee_r_octets_ok
 #define BS_ENET_IEEE_R_OCTETS_OK_COUNT (32U) /*!< Bit field size in bits for ENET_IEEE_R_OCTETS_OK_COUNT. */
 
 /*! @brief Read current value of the ENET_IEEE_R_OCTETS_OK_COUNT field. */
-#define BR_ENET_IEEE_R_OCTETS_OK_COUNT(x) (ADDRESS_READ32(HW_ENET_IEEE_R_OCTETS_OK_ADDR(x)))
+#define BR_ENET_IEEE_R_OCTETS_OK_COUNT(x) (UNION_READ_REG_FS(HW_ENET_IEEE_R_OCTETS_OK_ADDR(x), hw_enet_ieee_r_octets_ok))
 /*@}*/
 
 /*******************************************************************************
@@ -6678,13 +6678,13 @@ typedef union _hw_enet_atvr
 #define BS_ENET_ATVR_ATIME   (32U)         /*!< Bit field size in bits for ENET_ATVR_ATIME. */
 
 /*! @brief Read current value of the ENET_ATVR_ATIME field. */
-#define BR_ENET_ATVR_ATIME(x) (ADDRESS_READ32(HW_ENET_ATVR_ADDR(x)))
+#define BR_ENET_ATVR_ATIME(x) (UNION_READ_REG_FS(HW_ENET_ATVR_ADDR(x), hw_enet_atvr))
 
 /*! @brief Format value for bitfield ENET_ATVR_ATIME. */
 #define BF_ENET_ATVR_ATIME(v) ((uint32_t)((uint32_t)(v) << BP_ENET_ATVR_ATIME) & BM_ENET_ATVR_ATIME)
 
 /*! @brief Set the ATIME field to a new value. */
-#define BW_ENET_ATVR_ATIME(x, v) (ADDRESS_WRITE32(HW_ENET_ATVR_ADDR(x), v))
+#define BW_ENET_ATVR_ATIME(x, v) (UNION_WRITE_REG_FS(HW_ENET_ATVR_ADDR(x), hw_enet_atvr, v))
 /*@}*/
 
 /*******************************************************************************
@@ -6736,13 +6736,13 @@ typedef union _hw_enet_atoff
 #define BS_ENET_ATOFF_OFFSET (32U)         /*!< Bit field size in bits for ENET_ATOFF_OFFSET. */
 
 /*! @brief Read current value of the ENET_ATOFF_OFFSET field. */
-#define BR_ENET_ATOFF_OFFSET(x) (ADDRESS_READ32(HW_ENET_ATOFF_ADDR(x)))
+#define BR_ENET_ATOFF_OFFSET(x) (UNION_READ_REG_FS(HW_ENET_ATOFF_ADDR(x), hw_enet_atoff))
 
 /*! @brief Format value for bitfield ENET_ATOFF_OFFSET. */
 #define BF_ENET_ATOFF_OFFSET(v) ((uint32_t)((uint32_t)(v) << BP_ENET_ATOFF_OFFSET) & BM_ENET_ATOFF_OFFSET)
 
 /*! @brief Set the OFFSET field to a new value. */
-#define BW_ENET_ATOFF_OFFSET(x, v) (ADDRESS_WRITE32(HW_ENET_ATOFF_ADDR(x), v))
+#define BW_ENET_ATOFF_OFFSET(x, v) (UNION_WRITE_REG_FS(HW_ENET_ATOFF_ADDR(x), hw_enet_atoff, v))
 /*@}*/
 
 /*******************************************************************************
@@ -6798,13 +6798,13 @@ typedef union _hw_enet_atper
 #define BS_ENET_ATPER_PERIOD (32U)         /*!< Bit field size in bits for ENET_ATPER_PERIOD. */
 
 /*! @brief Read current value of the ENET_ATPER_PERIOD field. */
-#define BR_ENET_ATPER_PERIOD(x) (ADDRESS_READ32(HW_ENET_ATPER_ADDR(x)))
+#define BR_ENET_ATPER_PERIOD(x) (UNION_READ_REG_FS(HW_ENET_ATPER_ADDR(x), hw_enet_atper))
 
 /*! @brief Format value for bitfield ENET_ATPER_PERIOD. */
 #define BF_ENET_ATPER_PERIOD(v) ((uint32_t)((uint32_t)(v) << BP_ENET_ATPER_PERIOD) & BM_ENET_ATPER_PERIOD)
 
 /*! @brief Set the PERIOD field to a new value. */
-#define BW_ENET_ATPER_PERIOD(x, v) (ADDRESS_WRITE32(HW_ENET_ATPER_ADDR(x), v))
+#define BW_ENET_ATPER_PERIOD(x, v) (UNION_WRITE_REG_FS(HW_ENET_ATPER_ADDR(x), hw_enet_atper, v))
 /*@}*/
 
 /*******************************************************************************
@@ -6859,13 +6859,13 @@ typedef union _hw_enet_atcor
 #define BS_ENET_ATCOR_COR    (31U)         /*!< Bit field size in bits for ENET_ATCOR_COR. */
 
 /*! @brief Read current value of the ENET_ATCOR_COR field. */
-#define BR_ENET_ATCOR_COR(x) (UNION_READ_FS(HW_ENET_ATCOR_ADDR(x), hw_enet_atcor, B.COR))
+#define BR_ENET_ATCOR_COR(x) (UNION_READ_BIT_FS(HW_ENET_ATCOR_ADDR(x), hw_enet_atcor, B.COR))
 
 /*! @brief Format value for bitfield ENET_ATCOR_COR. */
 #define BF_ENET_ATCOR_COR(v) ((uint32_t)((uint32_t)(v) << BP_ENET_ATCOR_COR) & BM_ENET_ATCOR_COR)
 
 /*! @brief Set the COR field to a new value. */
-#define BW_ENET_ATCOR_COR(x, v) (ADDRESS_WRITE32(HW_ENET_ATCOR_ADDR(x), (HW_ENET_ATCOR_RD(x) & ~BM_ENET_ATCOR_COR) | BF_ENET_ATCOR_COR(v)))
+#define BW_ENET_ATCOR_COR(x, v) (UNION_WRITE_REG_FS(HW_ENET_ATCOR_ADDR(x), hw_enet_atcor, (HW_ENET_ATCOR_RD(x) & ~BM_ENET_ATCOR_COR) | BF_ENET_ATCOR_COR(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -6921,13 +6921,13 @@ typedef union _hw_enet_atinc
 #define BS_ENET_ATINC_INC    (7U)          /*!< Bit field size in bits for ENET_ATINC_INC. */
 
 /*! @brief Read current value of the ENET_ATINC_INC field. */
-#define BR_ENET_ATINC_INC(x) (UNION_READ_FS(HW_ENET_ATINC_ADDR(x), hw_enet_atinc, B.INC))
+#define BR_ENET_ATINC_INC(x) (UNION_READ_BIT_FS(HW_ENET_ATINC_ADDR(x), hw_enet_atinc, B.INC))
 
 /*! @brief Format value for bitfield ENET_ATINC_INC. */
 #define BF_ENET_ATINC_INC(v) ((uint32_t)((uint32_t)(v) << BP_ENET_ATINC_INC) & BM_ENET_ATINC_INC)
 
 /*! @brief Set the INC field to a new value. */
-#define BW_ENET_ATINC_INC(x, v) (ADDRESS_WRITE32(HW_ENET_ATINC_ADDR(x), (HW_ENET_ATINC_RD(x) & ~BM_ENET_ATINC_INC) | BF_ENET_ATINC_INC(v)))
+#define BW_ENET_ATINC_INC(x, v) (UNION_WRITE_REG_FS(HW_ENET_ATINC_ADDR(x), hw_enet_atinc, (HW_ENET_ATINC_RD(x) & ~BM_ENET_ATINC_INC) | BF_ENET_ATINC_INC(v)))
 /*@}*/
 
 /*!
@@ -6943,13 +6943,13 @@ typedef union _hw_enet_atinc
 #define BS_ENET_ATINC_INC_CORR (7U)        /*!< Bit field size in bits for ENET_ATINC_INC_CORR. */
 
 /*! @brief Read current value of the ENET_ATINC_INC_CORR field. */
-#define BR_ENET_ATINC_INC_CORR(x) (UNION_READ_FS(HW_ENET_ATINC_ADDR(x), hw_enet_atinc, B.INC_CORR))
+#define BR_ENET_ATINC_INC_CORR(x) (UNION_READ_BIT_FS(HW_ENET_ATINC_ADDR(x), hw_enet_atinc, B.INC_CORR))
 
 /*! @brief Format value for bitfield ENET_ATINC_INC_CORR. */
 #define BF_ENET_ATINC_INC_CORR(v) ((uint32_t)((uint32_t)(v) << BP_ENET_ATINC_INC_CORR) & BM_ENET_ATINC_INC_CORR)
 
 /*! @brief Set the INC_CORR field to a new value. */
-#define BW_ENET_ATINC_INC_CORR(x, v) (ADDRESS_WRITE32(HW_ENET_ATINC_ADDR(x), (HW_ENET_ATINC_RD(x) & ~BM_ENET_ATINC_INC_CORR) | BF_ENET_ATINC_INC_CORR(v)))
+#define BW_ENET_ATINC_INC_CORR(x, v) (UNION_WRITE_REG_FS(HW_ENET_ATINC_ADDR(x), hw_enet_atinc, (HW_ENET_ATINC_RD(x) & ~BM_ENET_ATINC_INC_CORR) | BF_ENET_ATINC_INC_CORR(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -6996,7 +6996,7 @@ typedef union _hw_enet_atstmp
 #define BS_ENET_ATSTMP_TIMESTAMP (32U)     /*!< Bit field size in bits for ENET_ATSTMP_TIMESTAMP. */
 
 /*! @brief Read current value of the ENET_ATSTMP_TIMESTAMP field. */
-#define BR_ENET_ATSTMP_TIMESTAMP(x) (ADDRESS_READ32(HW_ENET_ATSTMP_ADDR(x)))
+#define BR_ENET_ATSTMP_TIMESTAMP(x) (UNION_READ_REG_FS(HW_ENET_ATSTMP_ADDR(x), hw_enet_atstmp))
 /*@}*/
 
 /*******************************************************************************
@@ -7229,13 +7229,13 @@ typedef union _hw_enet_tcsrn
 #define BS_ENET_TCSRn_TMODE  (4U)          /*!< Bit field size in bits for ENET_TCSRn_TMODE. */
 
 /*! @brief Read current value of the ENET_TCSRn_TMODE field. */
-#define BR_ENET_TCSRn_TMODE(x, n) (UNION_READ_FS(HW_ENET_TCSRn_ADDR(x, n), hw_enet_tcsrn, B.TMODE))
+#define BR_ENET_TCSRn_TMODE(x, n) (UNION_READ_BIT_FS(HW_ENET_TCSRn_ADDR(x, n), hw_enet_tcsrn, B.TMODE))
 
 /*! @brief Format value for bitfield ENET_TCSRn_TMODE. */
 #define BF_ENET_TCSRn_TMODE(v) ((uint32_t)((uint32_t)(v) << BP_ENET_TCSRn_TMODE) & BM_ENET_TCSRn_TMODE)
 
 /*! @brief Set the TMODE field to a new value. */
-#define BW_ENET_TCSRn_TMODE(x, n, v) (ADDRESS_WRITE32(HW_ENET_TCSRn_ADDR(x, n), (HW_ENET_TCSRn_RD(x, n) & ~BM_ENET_TCSRn_TMODE) | BF_ENET_TCSRn_TMODE(v)))
+#define BW_ENET_TCSRn_TMODE(x, n, v) (UNION_WRITE_REG_FS(HW_ENET_TCSRn_ADDR(x, n), hw_enet_tcsrn, (HW_ENET_TCSRn_RD(x, n) & ~BM_ENET_TCSRn_TMODE) | BF_ENET_TCSRn_TMODE(v)))
 /*@}*/
 
 /*!
@@ -7352,13 +7352,13 @@ typedef union _hw_enet_tccrn
 #define BS_ENET_TCCRn_TCC    (32U)         /*!< Bit field size in bits for ENET_TCCRn_TCC. */
 
 /*! @brief Read current value of the ENET_TCCRn_TCC field. */
-#define BR_ENET_TCCRn_TCC(x, n) (ADDRESS_READ32(HW_ENET_TCCRn_ADDR(x, n)))
+#define BR_ENET_TCCRn_TCC(x, n) (UNION_READ_REG_FS(HW_ENET_TCCRn_ADDR(x, n), hw_enet_tccrn))
 
 /*! @brief Format value for bitfield ENET_TCCRn_TCC. */
 #define BF_ENET_TCCRn_TCC(v) ((uint32_t)((uint32_t)(v) << BP_ENET_TCCRn_TCC) & BM_ENET_TCCRn_TCC)
 
 /*! @brief Set the TCC field to a new value. */
-#define BW_ENET_TCCRn_TCC(x, n, v) (ADDRESS_WRITE32(HW_ENET_TCCRn_ADDR(x, n), v))
+#define BW_ENET_TCCRn_TCC(x, n, v) (UNION_WRITE_REG_FS(HW_ENET_TCCRn_ADDR(x, n), hw_enet_tccrn, v))
 /*@}*/
 
 /*******************************************************************************

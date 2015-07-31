@@ -152,7 +152,7 @@ typedef union _hw_nv_backkey3
 #define BS_NV_BACKKEY3_KEY   (8U)          /*!< Bit field size in bits for NV_BACKKEY3_KEY. */
 
 /*! @brief Read current value of the NV_BACKKEY3_KEY field. */
-#define BR_NV_BACKKEY3_KEY(x) (ADDRESS_READ32(HW_NV_BACKKEY3_ADDR(x)))
+#define BR_NV_BACKKEY3_KEY(x) (UNION_READ_REG_FS(HW_NV_BACKKEY3_ADDR(x), hw_nv_backkey3))
 /*@}*/
 
 /*******************************************************************************
@@ -196,7 +196,7 @@ typedef union _hw_nv_backkey2
 #define BS_NV_BACKKEY2_KEY   (8U)          /*!< Bit field size in bits for NV_BACKKEY2_KEY. */
 
 /*! @brief Read current value of the NV_BACKKEY2_KEY field. */
-#define BR_NV_BACKKEY2_KEY(x) (ADDRESS_READ32(HW_NV_BACKKEY2_ADDR(x)))
+#define BR_NV_BACKKEY2_KEY(x) (UNION_READ_REG_FS(HW_NV_BACKKEY2_ADDR(x), hw_nv_backkey2))
 /*@}*/
 
 /*******************************************************************************
@@ -240,7 +240,7 @@ typedef union _hw_nv_backkey1
 #define BS_NV_BACKKEY1_KEY   (8U)          /*!< Bit field size in bits for NV_BACKKEY1_KEY. */
 
 /*! @brief Read current value of the NV_BACKKEY1_KEY field. */
-#define BR_NV_BACKKEY1_KEY(x) (ADDRESS_READ32(HW_NV_BACKKEY1_ADDR(x)))
+#define BR_NV_BACKKEY1_KEY(x) (UNION_READ_REG_FS(HW_NV_BACKKEY1_ADDR(x), hw_nv_backkey1))
 /*@}*/
 
 /*******************************************************************************
@@ -284,7 +284,7 @@ typedef union _hw_nv_backkey0
 #define BS_NV_BACKKEY0_KEY   (8U)          /*!< Bit field size in bits for NV_BACKKEY0_KEY. */
 
 /*! @brief Read current value of the NV_BACKKEY0_KEY field. */
-#define BR_NV_BACKKEY0_KEY(x) (ADDRESS_READ32(HW_NV_BACKKEY0_ADDR(x)))
+#define BR_NV_BACKKEY0_KEY(x) (UNION_READ_REG_FS(HW_NV_BACKKEY0_ADDR(x), hw_nv_backkey0))
 /*@}*/
 
 /*******************************************************************************
@@ -328,7 +328,7 @@ typedef union _hw_nv_backkey7
 #define BS_NV_BACKKEY7_KEY   (8U)          /*!< Bit field size in bits for NV_BACKKEY7_KEY. */
 
 /*! @brief Read current value of the NV_BACKKEY7_KEY field. */
-#define BR_NV_BACKKEY7_KEY(x) (ADDRESS_READ32(HW_NV_BACKKEY7_ADDR(x)))
+#define BR_NV_BACKKEY7_KEY(x) (UNION_READ_REG_FS(HW_NV_BACKKEY7_ADDR(x), hw_nv_backkey7))
 /*@}*/
 
 /*******************************************************************************
@@ -372,7 +372,7 @@ typedef union _hw_nv_backkey6
 #define BS_NV_BACKKEY6_KEY   (8U)          /*!< Bit field size in bits for NV_BACKKEY6_KEY. */
 
 /*! @brief Read current value of the NV_BACKKEY6_KEY field. */
-#define BR_NV_BACKKEY6_KEY(x) (ADDRESS_READ32(HW_NV_BACKKEY6_ADDR(x)))
+#define BR_NV_BACKKEY6_KEY(x) (UNION_READ_REG_FS(HW_NV_BACKKEY6_ADDR(x), hw_nv_backkey6))
 /*@}*/
 
 /*******************************************************************************
@@ -416,7 +416,7 @@ typedef union _hw_nv_backkey5
 #define BS_NV_BACKKEY5_KEY   (8U)          /*!< Bit field size in bits for NV_BACKKEY5_KEY. */
 
 /*! @brief Read current value of the NV_BACKKEY5_KEY field. */
-#define BR_NV_BACKKEY5_KEY(x) (ADDRESS_READ32(HW_NV_BACKKEY5_ADDR(x)))
+#define BR_NV_BACKKEY5_KEY(x) (UNION_READ_REG_FS(HW_NV_BACKKEY5_ADDR(x), hw_nv_backkey5))
 /*@}*/
 
 /*******************************************************************************
@@ -460,7 +460,7 @@ typedef union _hw_nv_backkey4
 #define BS_NV_BACKKEY4_KEY   (8U)          /*!< Bit field size in bits for NV_BACKKEY4_KEY. */
 
 /*! @brief Read current value of the NV_BACKKEY4_KEY field. */
-#define BR_NV_BACKKEY4_KEY(x) (ADDRESS_READ32(HW_NV_BACKKEY4_ADDR(x)))
+#define BR_NV_BACKKEY4_KEY(x) (UNION_READ_REG_FS(HW_NV_BACKKEY4_ADDR(x), hw_nv_backkey4))
 /*@}*/
 
 /*******************************************************************************
@@ -504,7 +504,7 @@ typedef union _hw_nv_fprot3
 #define BS_NV_FPROT3_PROT    (8U)          /*!< Bit field size in bits for NV_FPROT3_PROT. */
 
 /*! @brief Read current value of the NV_FPROT3_PROT field. */
-#define BR_NV_FPROT3_PROT(x) (ADDRESS_READ32(HW_NV_FPROT3_ADDR(x)))
+#define BR_NV_FPROT3_PROT(x) (UNION_READ_REG_FS(HW_NV_FPROT3_ADDR(x), hw_nv_fprot3))
 /*@}*/
 
 /*******************************************************************************
@@ -548,7 +548,7 @@ typedef union _hw_nv_fprot2
 #define BS_NV_FPROT2_PROT    (8U)          /*!< Bit field size in bits for NV_FPROT2_PROT. */
 
 /*! @brief Read current value of the NV_FPROT2_PROT field. */
-#define BR_NV_FPROT2_PROT(x) (ADDRESS_READ32(HW_NV_FPROT2_ADDR(x)))
+#define BR_NV_FPROT2_PROT(x) (UNION_READ_REG_FS(HW_NV_FPROT2_ADDR(x), hw_nv_fprot2))
 /*@}*/
 
 /*******************************************************************************
@@ -592,7 +592,7 @@ typedef union _hw_nv_fprot1
 #define BS_NV_FPROT1_PROT    (8U)          /*!< Bit field size in bits for NV_FPROT1_PROT. */
 
 /*! @brief Read current value of the NV_FPROT1_PROT field. */
-#define BR_NV_FPROT1_PROT(x) (ADDRESS_READ32(HW_NV_FPROT1_ADDR(x)))
+#define BR_NV_FPROT1_PROT(x) (UNION_READ_REG_FS(HW_NV_FPROT1_ADDR(x), hw_nv_fprot1))
 /*@}*/
 
 /*******************************************************************************
@@ -636,7 +636,7 @@ typedef union _hw_nv_fprot0
 #define BS_NV_FPROT0_PROT    (8U)          /*!< Bit field size in bits for NV_FPROT0_PROT. */
 
 /*! @brief Read current value of the NV_FPROT0_PROT field. */
-#define BR_NV_FPROT0_PROT(x) (ADDRESS_READ32(HW_NV_FPROT0_ADDR(x)))
+#define BR_NV_FPROT0_PROT(x) (UNION_READ_REG_FS(HW_NV_FPROT0_ADDR(x), hw_nv_fprot0))
 /*@}*/
 
 /*******************************************************************************
@@ -690,7 +690,7 @@ typedef union _hw_nv_fsec
 #define BS_NV_FSEC_SEC       (2U)          /*!< Bit field size in bits for NV_FSEC_SEC. */
 
 /*! @brief Read current value of the NV_FSEC_SEC field. */
-#define BR_NV_FSEC_SEC(x)    (UNION_READ_FS(HW_NV_FSEC_ADDR(x), hw_nv_fsec, B.SEC))
+#define BR_NV_FSEC_SEC(x)    (UNION_READ_BIT_FS(HW_NV_FSEC_ADDR(x), hw_nv_fsec, B.SEC))
 /*@}*/
 
 /*!
@@ -706,7 +706,7 @@ typedef union _hw_nv_fsec
 #define BS_NV_FSEC_FSLACC    (2U)          /*!< Bit field size in bits for NV_FSEC_FSLACC. */
 
 /*! @brief Read current value of the NV_FSEC_FSLACC field. */
-#define BR_NV_FSEC_FSLACC(x) (UNION_READ_FS(HW_NV_FSEC_ADDR(x), hw_nv_fsec, B.FSLACC))
+#define BR_NV_FSEC_FSLACC(x) (UNION_READ_BIT_FS(HW_NV_FSEC_ADDR(x), hw_nv_fsec, B.FSLACC))
 /*@}*/
 
 /*!
@@ -722,7 +722,7 @@ typedef union _hw_nv_fsec
 #define BS_NV_FSEC_MEEN      (2U)          /*!< Bit field size in bits for NV_FSEC_MEEN. */
 
 /*! @brief Read current value of the NV_FSEC_MEEN field. */
-#define BR_NV_FSEC_MEEN(x)   (UNION_READ_FS(HW_NV_FSEC_ADDR(x), hw_nv_fsec, B.MEEN))
+#define BR_NV_FSEC_MEEN(x)   (UNION_READ_BIT_FS(HW_NV_FSEC_ADDR(x), hw_nv_fsec, B.MEEN))
 /*@}*/
 
 /*!
@@ -738,7 +738,7 @@ typedef union _hw_nv_fsec
 #define BS_NV_FSEC_KEYEN     (2U)          /*!< Bit field size in bits for NV_FSEC_KEYEN. */
 
 /*! @brief Read current value of the NV_FSEC_KEYEN field. */
-#define BR_NV_FSEC_KEYEN(x)  (UNION_READ_FS(HW_NV_FSEC_ADDR(x), hw_nv_fsec, B.KEYEN))
+#define BR_NV_FSEC_KEYEN(x)  (UNION_READ_BIT_FS(HW_NV_FSEC_ADDR(x), hw_nv_fsec, B.KEYEN))
 /*@}*/
 
 /*******************************************************************************
@@ -844,7 +844,7 @@ typedef union _hw_nv_feprot
 #define BS_NV_FEPROT_EPROT   (8U)          /*!< Bit field size in bits for NV_FEPROT_EPROT. */
 
 /*! @brief Read current value of the NV_FEPROT_EPROT field. */
-#define BR_NV_FEPROT_EPROT(x) (ADDRESS_READ32(HW_NV_FEPROT_ADDR(x)))
+#define BR_NV_FEPROT_EPROT(x) (UNION_READ_REG_FS(HW_NV_FEPROT_ADDR(x), hw_nv_feprot))
 /*@}*/
 
 /*******************************************************************************
@@ -888,7 +888,7 @@ typedef union _hw_nv_fdprot
 #define BS_NV_FDPROT_DPROT   (8U)          /*!< Bit field size in bits for NV_FDPROT_DPROT. */
 
 /*! @brief Read current value of the NV_FDPROT_DPROT field. */
-#define BR_NV_FDPROT_DPROT(x) (ADDRESS_READ32(HW_NV_FDPROT_ADDR(x)))
+#define BR_NV_FDPROT_DPROT(x) (UNION_READ_REG_FS(HW_NV_FDPROT_ADDR(x), hw_nv_fdprot))
 /*@}*/
 
 /*******************************************************************************

@@ -157,13 +157,13 @@ typedef union _hw_vref_trm
 #define BS_VREF_TRM_TRIM     (6U)          /*!< Bit field size in bits for VREF_TRM_TRIM. */
 
 /*! @brief Read current value of the VREF_TRM_TRIM field. */
-#define BR_VREF_TRM_TRIM(x)  (UNION_READ_FS(HW_VREF_TRM_ADDR(x), hw_vref_trm, B.TRIM))
+#define BR_VREF_TRM_TRIM(x)  (UNION_READ_BIT_FS(HW_VREF_TRM_ADDR(x), hw_vref_trm, B.TRIM))
 
 /*! @brief Format value for bitfield VREF_TRM_TRIM. */
 #define BF_VREF_TRM_TRIM(v)  ((uint8_t)((uint8_t)(v) << BP_VREF_TRM_TRIM) & BM_VREF_TRM_TRIM)
 
 /*! @brief Set the TRIM field to a new value. */
-#define BW_VREF_TRM_TRIM(x, v) (ADDRESS_WRITE32(HW_VREF_TRM_ADDR(x), (HW_VREF_TRM_RD(x) & ~BM_VREF_TRM_TRIM) | BF_VREF_TRM_TRIM(v)))
+#define BW_VREF_TRM_TRIM(x, v) (UNION_WRITE_REG_FS(HW_VREF_TRM_ADDR(x), hw_vref_trm, (HW_VREF_TRM_RD(x) & ~BM_VREF_TRM_TRIM) | BF_VREF_TRM_TRIM(v)))
 /*@}*/
 
 /*!
@@ -253,13 +253,13 @@ typedef union _hw_vref_sc
 #define BS_VREF_SC_MODE_LV   (2U)          /*!< Bit field size in bits for VREF_SC_MODE_LV. */
 
 /*! @brief Read current value of the VREF_SC_MODE_LV field. */
-#define BR_VREF_SC_MODE_LV(x) (UNION_READ_FS(HW_VREF_SC_ADDR(x), hw_vref_sc, B.MODE_LV))
+#define BR_VREF_SC_MODE_LV(x) (UNION_READ_BIT_FS(HW_VREF_SC_ADDR(x), hw_vref_sc, B.MODE_LV))
 
 /*! @brief Format value for bitfield VREF_SC_MODE_LV. */
 #define BF_VREF_SC_MODE_LV(v) ((uint8_t)((uint8_t)(v) << BP_VREF_SC_MODE_LV) & BM_VREF_SC_MODE_LV)
 
 /*! @brief Set the MODE_LV field to a new value. */
-#define BW_VREF_SC_MODE_LV(x, v) (ADDRESS_WRITE32(HW_VREF_SC_ADDR(x), (HW_VREF_SC_RD(x) & ~BM_VREF_SC_MODE_LV) | BF_VREF_SC_MODE_LV(v)))
+#define BW_VREF_SC_MODE_LV(x, v) (UNION_WRITE_REG_FS(HW_VREF_SC_ADDR(x), hw_vref_sc, (HW_VREF_SC_RD(x) & ~BM_VREF_SC_MODE_LV) | BF_VREF_SC_MODE_LV(v)))
 /*@}*/
 
 /*!

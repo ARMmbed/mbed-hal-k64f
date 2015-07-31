@@ -154,7 +154,7 @@ typedef union _hw_mcm_plasc
 #define BS_MCM_PLASC_ASC     (8U)          /*!< Bit field size in bits for MCM_PLASC_ASC. */
 
 /*! @brief Read current value of the MCM_PLASC_ASC field. */
-#define BR_MCM_PLASC_ASC(x)  (UNION_READ_FS(HW_MCM_PLASC_ADDR(x), hw_mcm_plasc, B.ASC))
+#define BR_MCM_PLASC_ASC(x)  (UNION_READ_BIT_FS(HW_MCM_PLASC_ADDR(x), hw_mcm_plasc, B.ASC))
 /*@}*/
 
 /*******************************************************************************
@@ -207,7 +207,7 @@ typedef union _hw_mcm_plamc
 #define BS_MCM_PLAMC_AMC     (8U)          /*!< Bit field size in bits for MCM_PLAMC_AMC. */
 
 /*! @brief Read current value of the MCM_PLAMC_AMC field. */
-#define BR_MCM_PLAMC_AMC(x)  (UNION_READ_FS(HW_MCM_PLAMC_ADDR(x), hw_mcm_plamc, B.AMC))
+#define BR_MCM_PLAMC_AMC(x)  (UNION_READ_BIT_FS(HW_MCM_PLAMC_ADDR(x), hw_mcm_plamc, B.AMC))
 /*@}*/
 
 /*******************************************************************************
@@ -273,13 +273,13 @@ typedef union _hw_mcm_cr
 #define BS_MCM_CR_SRAMUAP    (2U)          /*!< Bit field size in bits for MCM_CR_SRAMUAP. */
 
 /*! @brief Read current value of the MCM_CR_SRAMUAP field. */
-#define BR_MCM_CR_SRAMUAP(x) (UNION_READ_FS(HW_MCM_CR_ADDR(x), hw_mcm_cr, B.SRAMUAP))
+#define BR_MCM_CR_SRAMUAP(x) (UNION_READ_BIT_FS(HW_MCM_CR_ADDR(x), hw_mcm_cr, B.SRAMUAP))
 
 /*! @brief Format value for bitfield MCM_CR_SRAMUAP. */
 #define BF_MCM_CR_SRAMUAP(v) ((uint32_t)((uint32_t)(v) << BP_MCM_CR_SRAMUAP) & BM_MCM_CR_SRAMUAP)
 
 /*! @brief Set the SRAMUAP field to a new value. */
-#define BW_MCM_CR_SRAMUAP(x, v) (ADDRESS_WRITE32(HW_MCM_CR_ADDR(x), (HW_MCM_CR_RD(x) & ~BM_MCM_CR_SRAMUAP) | BF_MCM_CR_SRAMUAP(v)))
+#define BW_MCM_CR_SRAMUAP(x, v) (UNION_WRITE_REG_FS(HW_MCM_CR_ADDR(x), hw_mcm_cr, (HW_MCM_CR_RD(x) & ~BM_MCM_CR_SRAMUAP) | BF_MCM_CR_SRAMUAP(v)))
 /*@}*/
 
 /*!
@@ -293,13 +293,13 @@ typedef union _hw_mcm_cr
 #define BS_MCM_CR_SRAMUWP    (1U)          /*!< Bit field size in bits for MCM_CR_SRAMUWP. */
 
 /*! @brief Read current value of the MCM_CR_SRAMUWP field. */
-#define BR_MCM_CR_SRAMUWP(x) (UNION_READ_FS(HW_MCM_CR_ADDR(x), hw_mcm_cr, B.SRAMUWP))
+#define BR_MCM_CR_SRAMUWP(x) (UNION_READ_BIT_FS(HW_MCM_CR_ADDR(x), hw_mcm_cr, B.SRAMUWP))
 
 /*! @brief Format value for bitfield MCM_CR_SRAMUWP. */
 #define BF_MCM_CR_SRAMUWP(v) ((uint32_t)((uint32_t)(v) << BP_MCM_CR_SRAMUWP) & BM_MCM_CR_SRAMUWP)
 
 /*! @brief Set the SRAMUWP field to a new value. */
-#define BW_MCM_CR_SRAMUWP(x, v) (ADDRESS_WRITE32(HW_MCM_CR_ADDR(x), (HW_MCM_CR_RD(x) & ~BM_MCM_CR_SRAMUWP) | BF_MCM_CR_SRAMUWP(v)))
+#define BW_MCM_CR_SRAMUWP(x, v) (UNION_WRITE_REG_FS(HW_MCM_CR_ADDR(x), hw_mcm_cr, (HW_MCM_CR_RD(x) & ~BM_MCM_CR_SRAMUWP) | BF_MCM_CR_SRAMUWP(v)))
 /*@}*/
 
 /*!
@@ -320,13 +320,13 @@ typedef union _hw_mcm_cr
 #define BS_MCM_CR_SRAMLAP    (2U)          /*!< Bit field size in bits for MCM_CR_SRAMLAP. */
 
 /*! @brief Read current value of the MCM_CR_SRAMLAP field. */
-#define BR_MCM_CR_SRAMLAP(x) (UNION_READ_FS(HW_MCM_CR_ADDR(x), hw_mcm_cr, B.SRAMLAP))
+#define BR_MCM_CR_SRAMLAP(x) (UNION_READ_BIT_FS(HW_MCM_CR_ADDR(x), hw_mcm_cr, B.SRAMLAP))
 
 /*! @brief Format value for bitfield MCM_CR_SRAMLAP. */
 #define BF_MCM_CR_SRAMLAP(v) ((uint32_t)((uint32_t)(v) << BP_MCM_CR_SRAMLAP) & BM_MCM_CR_SRAMLAP)
 
 /*! @brief Set the SRAMLAP field to a new value. */
-#define BW_MCM_CR_SRAMLAP(x, v) (ADDRESS_WRITE32(HW_MCM_CR_ADDR(x), (HW_MCM_CR_RD(x) & ~BM_MCM_CR_SRAMLAP) | BF_MCM_CR_SRAMLAP(v)))
+#define BW_MCM_CR_SRAMLAP(x, v) (UNION_WRITE_REG_FS(HW_MCM_CR_ADDR(x), hw_mcm_cr, (HW_MCM_CR_RD(x) & ~BM_MCM_CR_SRAMLAP) | BF_MCM_CR_SRAMLAP(v)))
 /*@}*/
 
 /*!
@@ -340,13 +340,13 @@ typedef union _hw_mcm_cr
 #define BS_MCM_CR_SRAMLWP    (1U)          /*!< Bit field size in bits for MCM_CR_SRAMLWP. */
 
 /*! @brief Read current value of the MCM_CR_SRAMLWP field. */
-#define BR_MCM_CR_SRAMLWP(x) (UNION_READ_FS(HW_MCM_CR_ADDR(x), hw_mcm_cr, B.SRAMLWP))
+#define BR_MCM_CR_SRAMLWP(x) (UNION_READ_BIT_FS(HW_MCM_CR_ADDR(x), hw_mcm_cr, B.SRAMLWP))
 
 /*! @brief Format value for bitfield MCM_CR_SRAMLWP. */
 #define BF_MCM_CR_SRAMLWP(v) ((uint32_t)((uint32_t)(v) << BP_MCM_CR_SRAMLWP) & BM_MCM_CR_SRAMLWP)
 
 /*! @brief Set the SRAMLWP field to a new value. */
-#define BW_MCM_CR_SRAMLWP(x, v) (ADDRESS_WRITE32(HW_MCM_CR_ADDR(x), (HW_MCM_CR_RD(x) & ~BM_MCM_CR_SRAMLWP) | BF_MCM_CR_SRAMLWP(v)))
+#define BW_MCM_CR_SRAMLWP(x, v) (UNION_WRITE_REG_FS(HW_MCM_CR_ADDR(x), hw_mcm_cr, (HW_MCM_CR_RD(x) & ~BM_MCM_CR_SRAMLWP) | BF_MCM_CR_SRAMLWP(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -420,13 +420,13 @@ typedef union _hw_mcm_iscr
 #define BS_MCM_ISCR_IRQ      (1U)          /*!< Bit field size in bits for MCM_ISCR_IRQ. */
 
 /*! @brief Read current value of the MCM_ISCR_IRQ field. */
-#define BR_MCM_ISCR_IRQ(x)   (UNION_READ_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.IRQ))
+#define BR_MCM_ISCR_IRQ(x)   (UNION_READ_BIT_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.IRQ))
 
 /*! @brief Format value for bitfield MCM_ISCR_IRQ. */
 #define BF_MCM_ISCR_IRQ(v)   ((uint32_t)((uint32_t)(v) << BP_MCM_ISCR_IRQ) & BM_MCM_ISCR_IRQ)
 
 /*! @brief Set the IRQ field to a new value. */
-#define BW_MCM_ISCR_IRQ(x, v) (ADDRESS_WRITE32(HW_MCM_ISCR_ADDR(x), (HW_MCM_ISCR_RD(x) & ~BM_MCM_ISCR_IRQ) | BF_MCM_ISCR_IRQ(v)))
+#define BW_MCM_ISCR_IRQ(x, v) (UNION_WRITE_REG_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, (HW_MCM_ISCR_RD(x) & ~BM_MCM_ISCR_IRQ) | BF_MCM_ISCR_IRQ(v)))
 /*@}*/
 
 /*!
@@ -444,13 +444,13 @@ typedef union _hw_mcm_iscr
 #define BS_MCM_ISCR_NMI      (1U)          /*!< Bit field size in bits for MCM_ISCR_NMI. */
 
 /*! @brief Read current value of the MCM_ISCR_NMI field. */
-#define BR_MCM_ISCR_NMI(x)   (UNION_READ_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.NMI))
+#define BR_MCM_ISCR_NMI(x)   (UNION_READ_BIT_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.NMI))
 
 /*! @brief Format value for bitfield MCM_ISCR_NMI. */
 #define BF_MCM_ISCR_NMI(v)   ((uint32_t)((uint32_t)(v) << BP_MCM_ISCR_NMI) & BM_MCM_ISCR_NMI)
 
 /*! @brief Set the NMI field to a new value. */
-#define BW_MCM_ISCR_NMI(x, v) (ADDRESS_WRITE32(HW_MCM_ISCR_ADDR(x), (HW_MCM_ISCR_RD(x) & ~BM_MCM_ISCR_NMI) | BF_MCM_ISCR_NMI(v)))
+#define BW_MCM_ISCR_NMI(x, v) (UNION_WRITE_REG_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, (HW_MCM_ISCR_RD(x) & ~BM_MCM_ISCR_NMI) | BF_MCM_ISCR_NMI(v)))
 /*@}*/
 
 /*!
@@ -470,7 +470,7 @@ typedef union _hw_mcm_iscr
 #define BS_MCM_ISCR_DHREQ    (1U)          /*!< Bit field size in bits for MCM_ISCR_DHREQ. */
 
 /*! @brief Read current value of the MCM_ISCR_DHREQ field. */
-#define BR_MCM_ISCR_DHREQ(x) (UNION_READ_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.DHREQ))
+#define BR_MCM_ISCR_DHREQ(x) (UNION_READ_BIT_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.DHREQ))
 /*@}*/
 
 /*!
@@ -490,7 +490,7 @@ typedef union _hw_mcm_iscr
 #define BS_MCM_ISCR_FIOC     (1U)          /*!< Bit field size in bits for MCM_ISCR_FIOC. */
 
 /*! @brief Read current value of the MCM_ISCR_FIOC field. */
-#define BR_MCM_ISCR_FIOC(x)  (UNION_READ_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FIOC))
+#define BR_MCM_ISCR_FIOC(x)  (UNION_READ_BIT_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FIOC))
 /*@}*/
 
 /*!
@@ -510,7 +510,7 @@ typedef union _hw_mcm_iscr
 #define BS_MCM_ISCR_FDZC     (1U)          /*!< Bit field size in bits for MCM_ISCR_FDZC. */
 
 /*! @brief Read current value of the MCM_ISCR_FDZC field. */
-#define BR_MCM_ISCR_FDZC(x)  (UNION_READ_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FDZC))
+#define BR_MCM_ISCR_FDZC(x)  (UNION_READ_BIT_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FDZC))
 /*@}*/
 
 /*!
@@ -530,7 +530,7 @@ typedef union _hw_mcm_iscr
 #define BS_MCM_ISCR_FOFC     (1U)          /*!< Bit field size in bits for MCM_ISCR_FOFC. */
 
 /*! @brief Read current value of the MCM_ISCR_FOFC field. */
-#define BR_MCM_ISCR_FOFC(x)  (UNION_READ_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FOFC))
+#define BR_MCM_ISCR_FOFC(x)  (UNION_READ_BIT_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FOFC))
 /*@}*/
 
 /*!
@@ -550,7 +550,7 @@ typedef union _hw_mcm_iscr
 #define BS_MCM_ISCR_FUFC     (1U)          /*!< Bit field size in bits for MCM_ISCR_FUFC. */
 
 /*! @brief Read current value of the MCM_ISCR_FUFC field. */
-#define BR_MCM_ISCR_FUFC(x)  (UNION_READ_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FUFC))
+#define BR_MCM_ISCR_FUFC(x)  (UNION_READ_BIT_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FUFC))
 /*@}*/
 
 /*!
@@ -570,7 +570,7 @@ typedef union _hw_mcm_iscr
 #define BS_MCM_ISCR_FIXC     (1U)          /*!< Bit field size in bits for MCM_ISCR_FIXC. */
 
 /*! @brief Read current value of the MCM_ISCR_FIXC field. */
-#define BR_MCM_ISCR_FIXC(x)  (UNION_READ_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FIXC))
+#define BR_MCM_ISCR_FIXC(x)  (UNION_READ_BIT_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FIXC))
 /*@}*/
 
 /*!
@@ -590,7 +590,7 @@ typedef union _hw_mcm_iscr
 #define BS_MCM_ISCR_FIDC     (1U)          /*!< Bit field size in bits for MCM_ISCR_FIDC. */
 
 /*! @brief Read current value of the MCM_ISCR_FIDC field. */
-#define BR_MCM_ISCR_FIDC(x)  (UNION_READ_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FIDC))
+#define BR_MCM_ISCR_FIDC(x)  (UNION_READ_BIT_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FIDC))
 /*@}*/
 
 /*!
@@ -606,13 +606,13 @@ typedef union _hw_mcm_iscr
 #define BS_MCM_ISCR_FIOCE    (1U)          /*!< Bit field size in bits for MCM_ISCR_FIOCE. */
 
 /*! @brief Read current value of the MCM_ISCR_FIOCE field. */
-#define BR_MCM_ISCR_FIOCE(x) (UNION_READ_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FIOCE))
+#define BR_MCM_ISCR_FIOCE(x) (UNION_READ_BIT_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FIOCE))
 
 /*! @brief Format value for bitfield MCM_ISCR_FIOCE. */
 #define BF_MCM_ISCR_FIOCE(v) ((uint32_t)((uint32_t)(v) << BP_MCM_ISCR_FIOCE) & BM_MCM_ISCR_FIOCE)
 
 /*! @brief Set the FIOCE field to a new value. */
-#define BW_MCM_ISCR_FIOCE(x, v) (ADDRESS_WRITE32(HW_MCM_ISCR_ADDR(x), (HW_MCM_ISCR_RD(x) & ~BM_MCM_ISCR_FIOCE) | BF_MCM_ISCR_FIOCE(v)))
+#define BW_MCM_ISCR_FIOCE(x, v) (UNION_WRITE_REG_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, (HW_MCM_ISCR_RD(x) & ~BM_MCM_ISCR_FIOCE) | BF_MCM_ISCR_FIOCE(v)))
 /*@}*/
 
 /*!
@@ -628,13 +628,13 @@ typedef union _hw_mcm_iscr
 #define BS_MCM_ISCR_FDZCE    (1U)          /*!< Bit field size in bits for MCM_ISCR_FDZCE. */
 
 /*! @brief Read current value of the MCM_ISCR_FDZCE field. */
-#define BR_MCM_ISCR_FDZCE(x) (UNION_READ_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FDZCE))
+#define BR_MCM_ISCR_FDZCE(x) (UNION_READ_BIT_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FDZCE))
 
 /*! @brief Format value for bitfield MCM_ISCR_FDZCE. */
 #define BF_MCM_ISCR_FDZCE(v) ((uint32_t)((uint32_t)(v) << BP_MCM_ISCR_FDZCE) & BM_MCM_ISCR_FDZCE)
 
 /*! @brief Set the FDZCE field to a new value. */
-#define BW_MCM_ISCR_FDZCE(x, v) (ADDRESS_WRITE32(HW_MCM_ISCR_ADDR(x), (HW_MCM_ISCR_RD(x) & ~BM_MCM_ISCR_FDZCE) | BF_MCM_ISCR_FDZCE(v)))
+#define BW_MCM_ISCR_FDZCE(x, v) (UNION_WRITE_REG_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, (HW_MCM_ISCR_RD(x) & ~BM_MCM_ISCR_FDZCE) | BF_MCM_ISCR_FDZCE(v)))
 /*@}*/
 
 /*!
@@ -650,13 +650,13 @@ typedef union _hw_mcm_iscr
 #define BS_MCM_ISCR_FOFCE    (1U)          /*!< Bit field size in bits for MCM_ISCR_FOFCE. */
 
 /*! @brief Read current value of the MCM_ISCR_FOFCE field. */
-#define BR_MCM_ISCR_FOFCE(x) (UNION_READ_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FOFCE))
+#define BR_MCM_ISCR_FOFCE(x) (UNION_READ_BIT_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FOFCE))
 
 /*! @brief Format value for bitfield MCM_ISCR_FOFCE. */
 #define BF_MCM_ISCR_FOFCE(v) ((uint32_t)((uint32_t)(v) << BP_MCM_ISCR_FOFCE) & BM_MCM_ISCR_FOFCE)
 
 /*! @brief Set the FOFCE field to a new value. */
-#define BW_MCM_ISCR_FOFCE(x, v) (ADDRESS_WRITE32(HW_MCM_ISCR_ADDR(x), (HW_MCM_ISCR_RD(x) & ~BM_MCM_ISCR_FOFCE) | BF_MCM_ISCR_FOFCE(v)))
+#define BW_MCM_ISCR_FOFCE(x, v) (UNION_WRITE_REG_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, (HW_MCM_ISCR_RD(x) & ~BM_MCM_ISCR_FOFCE) | BF_MCM_ISCR_FOFCE(v)))
 /*@}*/
 
 /*!
@@ -672,13 +672,13 @@ typedef union _hw_mcm_iscr
 #define BS_MCM_ISCR_FUFCE    (1U)          /*!< Bit field size in bits for MCM_ISCR_FUFCE. */
 
 /*! @brief Read current value of the MCM_ISCR_FUFCE field. */
-#define BR_MCM_ISCR_FUFCE(x) (UNION_READ_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FUFCE))
+#define BR_MCM_ISCR_FUFCE(x) (UNION_READ_BIT_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FUFCE))
 
 /*! @brief Format value for bitfield MCM_ISCR_FUFCE. */
 #define BF_MCM_ISCR_FUFCE(v) ((uint32_t)((uint32_t)(v) << BP_MCM_ISCR_FUFCE) & BM_MCM_ISCR_FUFCE)
 
 /*! @brief Set the FUFCE field to a new value. */
-#define BW_MCM_ISCR_FUFCE(x, v) (ADDRESS_WRITE32(HW_MCM_ISCR_ADDR(x), (HW_MCM_ISCR_RD(x) & ~BM_MCM_ISCR_FUFCE) | BF_MCM_ISCR_FUFCE(v)))
+#define BW_MCM_ISCR_FUFCE(x, v) (UNION_WRITE_REG_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, (HW_MCM_ISCR_RD(x) & ~BM_MCM_ISCR_FUFCE) | BF_MCM_ISCR_FUFCE(v)))
 /*@}*/
 
 /*!
@@ -694,13 +694,13 @@ typedef union _hw_mcm_iscr
 #define BS_MCM_ISCR_FIXCE    (1U)          /*!< Bit field size in bits for MCM_ISCR_FIXCE. */
 
 /*! @brief Read current value of the MCM_ISCR_FIXCE field. */
-#define BR_MCM_ISCR_FIXCE(x) (UNION_READ_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FIXCE))
+#define BR_MCM_ISCR_FIXCE(x) (UNION_READ_BIT_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FIXCE))
 
 /*! @brief Format value for bitfield MCM_ISCR_FIXCE. */
 #define BF_MCM_ISCR_FIXCE(v) ((uint32_t)((uint32_t)(v) << BP_MCM_ISCR_FIXCE) & BM_MCM_ISCR_FIXCE)
 
 /*! @brief Set the FIXCE field to a new value. */
-#define BW_MCM_ISCR_FIXCE(x, v) (ADDRESS_WRITE32(HW_MCM_ISCR_ADDR(x), (HW_MCM_ISCR_RD(x) & ~BM_MCM_ISCR_FIXCE) | BF_MCM_ISCR_FIXCE(v)))
+#define BW_MCM_ISCR_FIXCE(x, v) (UNION_WRITE_REG_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, (HW_MCM_ISCR_RD(x) & ~BM_MCM_ISCR_FIXCE) | BF_MCM_ISCR_FIXCE(v)))
 /*@}*/
 
 /*!
@@ -716,13 +716,13 @@ typedef union _hw_mcm_iscr
 #define BS_MCM_ISCR_FIDCE    (1U)          /*!< Bit field size in bits for MCM_ISCR_FIDCE. */
 
 /*! @brief Read current value of the MCM_ISCR_FIDCE field. */
-#define BR_MCM_ISCR_FIDCE(x) (UNION_READ_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FIDCE))
+#define BR_MCM_ISCR_FIDCE(x) (UNION_READ_BIT_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, B.FIDCE))
 
 /*! @brief Format value for bitfield MCM_ISCR_FIDCE. */
 #define BF_MCM_ISCR_FIDCE(v) ((uint32_t)((uint32_t)(v) << BP_MCM_ISCR_FIDCE) & BM_MCM_ISCR_FIDCE)
 
 /*! @brief Set the FIDCE field to a new value. */
-#define BW_MCM_ISCR_FIDCE(x, v) (ADDRESS_WRITE32(HW_MCM_ISCR_ADDR(x), (HW_MCM_ISCR_RD(x) & ~BM_MCM_ISCR_FIDCE) | BF_MCM_ISCR_FIDCE(v)))
+#define BW_MCM_ISCR_FIDCE(x, v) (UNION_WRITE_REG_FS(HW_MCM_ISCR_ADDR(x), hw_mcm_iscr, (HW_MCM_ISCR_RD(x) & ~BM_MCM_ISCR_FIDCE) | BF_MCM_ISCR_FIDCE(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -781,13 +781,13 @@ typedef union _hw_mcm_etbcc
 #define BS_MCM_ETBCC_CNTEN   (1U)          /*!< Bit field size in bits for MCM_ETBCC_CNTEN. */
 
 /*! @brief Read current value of the MCM_ETBCC_CNTEN field. */
-#define BR_MCM_ETBCC_CNTEN(x) (UNION_READ_FS(HW_MCM_ETBCC_ADDR(x), hw_mcm_etbcc, B.CNTEN))
+#define BR_MCM_ETBCC_CNTEN(x) (UNION_READ_BIT_FS(HW_MCM_ETBCC_ADDR(x), hw_mcm_etbcc, B.CNTEN))
 
 /*! @brief Format value for bitfield MCM_ETBCC_CNTEN. */
 #define BF_MCM_ETBCC_CNTEN(v) ((uint32_t)((uint32_t)(v) << BP_MCM_ETBCC_CNTEN) & BM_MCM_ETBCC_CNTEN)
 
 /*! @brief Set the CNTEN field to a new value. */
-#define BW_MCM_ETBCC_CNTEN(x, v) (ADDRESS_WRITE32(HW_MCM_ETBCC_ADDR(x), (HW_MCM_ETBCC_RD(x) & ~BM_MCM_ETBCC_CNTEN) | BF_MCM_ETBCC_CNTEN(v)))
+#define BW_MCM_ETBCC_CNTEN(x, v) (UNION_WRITE_REG_FS(HW_MCM_ETBCC_ADDR(x), hw_mcm_etbcc, (HW_MCM_ETBCC_RD(x) & ~BM_MCM_ETBCC_CNTEN) | BF_MCM_ETBCC_CNTEN(v)))
 /*@}*/
 
 /*!
@@ -805,13 +805,13 @@ typedef union _hw_mcm_etbcc
 #define BS_MCM_ETBCC_RSPT    (2U)          /*!< Bit field size in bits for MCM_ETBCC_RSPT. */
 
 /*! @brief Read current value of the MCM_ETBCC_RSPT field. */
-#define BR_MCM_ETBCC_RSPT(x) (UNION_READ_FS(HW_MCM_ETBCC_ADDR(x), hw_mcm_etbcc, B.RSPT))
+#define BR_MCM_ETBCC_RSPT(x) (UNION_READ_BIT_FS(HW_MCM_ETBCC_ADDR(x), hw_mcm_etbcc, B.RSPT))
 
 /*! @brief Format value for bitfield MCM_ETBCC_RSPT. */
 #define BF_MCM_ETBCC_RSPT(v) ((uint32_t)((uint32_t)(v) << BP_MCM_ETBCC_RSPT) & BM_MCM_ETBCC_RSPT)
 
 /*! @brief Set the RSPT field to a new value. */
-#define BW_MCM_ETBCC_RSPT(x, v) (ADDRESS_WRITE32(HW_MCM_ETBCC_ADDR(x), (HW_MCM_ETBCC_RD(x) & ~BM_MCM_ETBCC_RSPT) | BF_MCM_ETBCC_RSPT(v)))
+#define BW_MCM_ETBCC_RSPT(x, v) (UNION_WRITE_REG_FS(HW_MCM_ETBCC_ADDR(x), hw_mcm_etbcc, (HW_MCM_ETBCC_RD(x) & ~BM_MCM_ETBCC_RSPT) | BF_MCM_ETBCC_RSPT(v)))
 /*@}*/
 
 /*!
@@ -833,13 +833,13 @@ typedef union _hw_mcm_etbcc
 #define BS_MCM_ETBCC_RLRQ    (1U)          /*!< Bit field size in bits for MCM_ETBCC_RLRQ. */
 
 /*! @brief Read current value of the MCM_ETBCC_RLRQ field. */
-#define BR_MCM_ETBCC_RLRQ(x) (UNION_READ_FS(HW_MCM_ETBCC_ADDR(x), hw_mcm_etbcc, B.RLRQ))
+#define BR_MCM_ETBCC_RLRQ(x) (UNION_READ_BIT_FS(HW_MCM_ETBCC_ADDR(x), hw_mcm_etbcc, B.RLRQ))
 
 /*! @brief Format value for bitfield MCM_ETBCC_RLRQ. */
 #define BF_MCM_ETBCC_RLRQ(v) ((uint32_t)((uint32_t)(v) << BP_MCM_ETBCC_RLRQ) & BM_MCM_ETBCC_RLRQ)
 
 /*! @brief Set the RLRQ field to a new value. */
-#define BW_MCM_ETBCC_RLRQ(x, v) (ADDRESS_WRITE32(HW_MCM_ETBCC_ADDR(x), (HW_MCM_ETBCC_RD(x) & ~BM_MCM_ETBCC_RLRQ) | BF_MCM_ETBCC_RLRQ(v)))
+#define BW_MCM_ETBCC_RLRQ(x, v) (UNION_WRITE_REG_FS(HW_MCM_ETBCC_ADDR(x), hw_mcm_etbcc, (HW_MCM_ETBCC_RD(x) & ~BM_MCM_ETBCC_RLRQ) | BF_MCM_ETBCC_RLRQ(v)))
 /*@}*/
 
 /*!
@@ -857,13 +857,13 @@ typedef union _hw_mcm_etbcc
 #define BS_MCM_ETBCC_ETDIS   (1U)          /*!< Bit field size in bits for MCM_ETBCC_ETDIS. */
 
 /*! @brief Read current value of the MCM_ETBCC_ETDIS field. */
-#define BR_MCM_ETBCC_ETDIS(x) (UNION_READ_FS(HW_MCM_ETBCC_ADDR(x), hw_mcm_etbcc, B.ETDIS))
+#define BR_MCM_ETBCC_ETDIS(x) (UNION_READ_BIT_FS(HW_MCM_ETBCC_ADDR(x), hw_mcm_etbcc, B.ETDIS))
 
 /*! @brief Format value for bitfield MCM_ETBCC_ETDIS. */
 #define BF_MCM_ETBCC_ETDIS(v) ((uint32_t)((uint32_t)(v) << BP_MCM_ETBCC_ETDIS) & BM_MCM_ETBCC_ETDIS)
 
 /*! @brief Set the ETDIS field to a new value. */
-#define BW_MCM_ETBCC_ETDIS(x, v) (ADDRESS_WRITE32(HW_MCM_ETBCC_ADDR(x), (HW_MCM_ETBCC_RD(x) & ~BM_MCM_ETBCC_ETDIS) | BF_MCM_ETBCC_ETDIS(v)))
+#define BW_MCM_ETBCC_ETDIS(x, v) (UNION_WRITE_REG_FS(HW_MCM_ETBCC_ADDR(x), hw_mcm_etbcc, (HW_MCM_ETBCC_RD(x) & ~BM_MCM_ETBCC_ETDIS) | BF_MCM_ETBCC_ETDIS(v)))
 /*@}*/
 
 /*!
@@ -881,13 +881,13 @@ typedef union _hw_mcm_etbcc
 #define BS_MCM_ETBCC_ITDIS   (1U)          /*!< Bit field size in bits for MCM_ETBCC_ITDIS. */
 
 /*! @brief Read current value of the MCM_ETBCC_ITDIS field. */
-#define BR_MCM_ETBCC_ITDIS(x) (UNION_READ_FS(HW_MCM_ETBCC_ADDR(x), hw_mcm_etbcc, B.ITDIS))
+#define BR_MCM_ETBCC_ITDIS(x) (UNION_READ_BIT_FS(HW_MCM_ETBCC_ADDR(x), hw_mcm_etbcc, B.ITDIS))
 
 /*! @brief Format value for bitfield MCM_ETBCC_ITDIS. */
 #define BF_MCM_ETBCC_ITDIS(v) ((uint32_t)((uint32_t)(v) << BP_MCM_ETBCC_ITDIS) & BM_MCM_ETBCC_ITDIS)
 
 /*! @brief Set the ITDIS field to a new value. */
-#define BW_MCM_ETBCC_ITDIS(x, v) (ADDRESS_WRITE32(HW_MCM_ETBCC_ADDR(x), (HW_MCM_ETBCC_RD(x) & ~BM_MCM_ETBCC_ITDIS) | BF_MCM_ETBCC_ITDIS(v)))
+#define BW_MCM_ETBCC_ITDIS(x, v) (UNION_WRITE_REG_FS(HW_MCM_ETBCC_ADDR(x), hw_mcm_etbcc, (HW_MCM_ETBCC_RD(x) & ~BM_MCM_ETBCC_ITDIS) | BF_MCM_ETBCC_ITDIS(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -939,13 +939,13 @@ typedef union _hw_mcm_etbrl
 #define BS_MCM_ETBRL_RELOAD  (11U)         /*!< Bit field size in bits for MCM_ETBRL_RELOAD. */
 
 /*! @brief Read current value of the MCM_ETBRL_RELOAD field. */
-#define BR_MCM_ETBRL_RELOAD(x) (UNION_READ_FS(HW_MCM_ETBRL_ADDR(x), hw_mcm_etbrl, B.RELOAD))
+#define BR_MCM_ETBRL_RELOAD(x) (UNION_READ_BIT_FS(HW_MCM_ETBRL_ADDR(x), hw_mcm_etbrl, B.RELOAD))
 
 /*! @brief Format value for bitfield MCM_ETBRL_RELOAD. */
 #define BF_MCM_ETBRL_RELOAD(v) ((uint32_t)((uint32_t)(v) << BP_MCM_ETBRL_RELOAD) & BM_MCM_ETBRL_RELOAD)
 
 /*! @brief Set the RELOAD field to a new value. */
-#define BW_MCM_ETBRL_RELOAD(x, v) (ADDRESS_WRITE32(HW_MCM_ETBRL_ADDR(x), (HW_MCM_ETBRL_RD(x) & ~BM_MCM_ETBRL_RELOAD) | BF_MCM_ETBRL_RELOAD(v)))
+#define BW_MCM_ETBRL_RELOAD(x, v) (UNION_WRITE_REG_FS(HW_MCM_ETBRL_ADDR(x), hw_mcm_etbrl, (HW_MCM_ETBRL_RD(x) & ~BM_MCM_ETBRL_RELOAD) | BF_MCM_ETBRL_RELOAD(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -992,7 +992,7 @@ typedef union _hw_mcm_etbcnt
 #define BS_MCM_ETBCNT_COUNTER (11U)        /*!< Bit field size in bits for MCM_ETBCNT_COUNTER. */
 
 /*! @brief Read current value of the MCM_ETBCNT_COUNTER field. */
-#define BR_MCM_ETBCNT_COUNTER(x) (UNION_READ_FS(HW_MCM_ETBCNT_ADDR(x), hw_mcm_etbcnt, B.COUNTER))
+#define BR_MCM_ETBCNT_COUNTER(x) (UNION_READ_BIT_FS(HW_MCM_ETBCNT_ADDR(x), hw_mcm_etbcnt, B.COUNTER))
 /*@}*/
 
 /*******************************************************************************
@@ -1048,13 +1048,13 @@ typedef union _hw_mcm_pid
 #define BS_MCM_PID_PID       (8U)          /*!< Bit field size in bits for MCM_PID_PID. */
 
 /*! @brief Read current value of the MCM_PID_PID field. */
-#define BR_MCM_PID_PID(x)    (UNION_READ_FS(HW_MCM_PID_ADDR(x), hw_mcm_pid, B.PID))
+#define BR_MCM_PID_PID(x)    (UNION_READ_BIT_FS(HW_MCM_PID_ADDR(x), hw_mcm_pid, B.PID))
 
 /*! @brief Format value for bitfield MCM_PID_PID. */
 #define BF_MCM_PID_PID(v)    ((uint32_t)((uint32_t)(v) << BP_MCM_PID_PID) & BM_MCM_PID_PID)
 
 /*! @brief Set the PID field to a new value. */
-#define BW_MCM_PID_PID(x, v) (ADDRESS_WRITE32(HW_MCM_PID_ADDR(x), (HW_MCM_PID_RD(x) & ~BM_MCM_PID_PID) | BF_MCM_PID_PID(v)))
+#define BW_MCM_PID_PID(x, v) (UNION_WRITE_REG_FS(HW_MCM_PID_ADDR(x), hw_mcm_pid, (HW_MCM_PID_RD(x) & ~BM_MCM_PID_PID) | BF_MCM_PID_PID(v)))
 /*@}*/
 
 /*******************************************************************************

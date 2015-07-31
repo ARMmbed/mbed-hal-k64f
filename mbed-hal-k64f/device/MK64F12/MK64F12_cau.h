@@ -1475,7 +1475,7 @@ typedef union _hw_cau_str_casr
 #define BS_CAU_STR_CASR_IC   (1U)          /*!< Bit field size in bits for CAU_STR_CASR_IC. */
 
 /*! @brief Read current value of the CAU_STR_CASR_IC field. */
-#define BR_CAU_STR_CASR_IC(x) (UNION_READ_FS(HW_CAU_STR_CASR_ADDR(x), hw_cau_str_casr, B.IC))
+#define BR_CAU_STR_CASR_IC(x) (UNION_READ_BIT_FS(HW_CAU_STR_CASR_ADDR(x), hw_cau_str_casr, B.IC))
 /*@}*/
 
 /*!
@@ -1491,7 +1491,7 @@ typedef union _hw_cau_str_casr
 #define BS_CAU_STR_CASR_DPE  (1U)          /*!< Bit field size in bits for CAU_STR_CASR_DPE. */
 
 /*! @brief Read current value of the CAU_STR_CASR_DPE field. */
-#define BR_CAU_STR_CASR_DPE(x) (UNION_READ_FS(HW_CAU_STR_CASR_ADDR(x), hw_cau_str_casr, B.DPE))
+#define BR_CAU_STR_CASR_DPE(x) (UNION_READ_BIT_FS(HW_CAU_STR_CASR_ADDR(x), hw_cau_str_casr, B.DPE))
 /*@}*/
 
 /*!
@@ -1508,7 +1508,7 @@ typedef union _hw_cau_str_casr
 #define BS_CAU_STR_CASR_VER  (4U)          /*!< Bit field size in bits for CAU_STR_CASR_VER. */
 
 /*! @brief Read current value of the CAU_STR_CASR_VER field. */
-#define BR_CAU_STR_CASR_VER(x) (UNION_READ_FS(HW_CAU_STR_CASR_ADDR(x), hw_cau_str_casr, B.VER))
+#define BR_CAU_STR_CASR_VER(x) (UNION_READ_BIT_FS(HW_CAU_STR_CASR_ADDR(x), hw_cau_str_casr, B.VER))
 /*@}*/
 
 /*******************************************************************************
@@ -1552,7 +1552,7 @@ typedef union _hw_cau_str_caa
 #define BS_CAU_STR_CAA_ACC   (32U)         /*!< Bit field size in bits for CAU_STR_CAA_ACC. */
 
 /*! @brief Read current value of the CAU_STR_CAA_ACC field. */
-#define BR_CAU_STR_CAA_ACC(x) (ADDRESS_READ32(HW_CAU_STR_CAA_ADDR(x)))
+#define BR_CAU_STR_CAA_ACC(x) (UNION_READ_REG_FS(HW_CAU_STR_CAA_ADDR(x), hw_cau_str_caa))
 /*@}*/
 
 /*******************************************************************************
@@ -1596,7 +1596,7 @@ typedef union _hw_cau_str_ca0
 #define BS_CAU_STR_CA0_CA0   (32U)         /*!< Bit field size in bits for CAU_STR_CA0_CA0. */
 
 /*! @brief Read current value of the CAU_STR_CA0_CA0 field. */
-#define BR_CAU_STR_CA0_CA0(x) (ADDRESS_READ32(HW_CAU_STR_CA0_ADDR(x)))
+#define BR_CAU_STR_CA0_CA0(x) (UNION_READ_REG_FS(HW_CAU_STR_CA0_ADDR(x), hw_cau_str_ca0))
 /*@}*/
 
 /*******************************************************************************
@@ -1640,7 +1640,7 @@ typedef union _hw_cau_str_ca1
 #define BS_CAU_STR_CA1_CA1   (32U)         /*!< Bit field size in bits for CAU_STR_CA1_CA1. */
 
 /*! @brief Read current value of the CAU_STR_CA1_CA1 field. */
-#define BR_CAU_STR_CA1_CA1(x) (ADDRESS_READ32(HW_CAU_STR_CA1_ADDR(x)))
+#define BR_CAU_STR_CA1_CA1(x) (UNION_READ_REG_FS(HW_CAU_STR_CA1_ADDR(x), hw_cau_str_ca1))
 /*@}*/
 
 /*******************************************************************************
@@ -1684,7 +1684,7 @@ typedef union _hw_cau_str_ca2
 #define BS_CAU_STR_CA2_CA2   (32U)         /*!< Bit field size in bits for CAU_STR_CA2_CA2. */
 
 /*! @brief Read current value of the CAU_STR_CA2_CA2 field. */
-#define BR_CAU_STR_CA2_CA2(x) (ADDRESS_READ32(HW_CAU_STR_CA2_ADDR(x)))
+#define BR_CAU_STR_CA2_CA2(x) (UNION_READ_REG_FS(HW_CAU_STR_CA2_ADDR(x), hw_cau_str_ca2))
 /*@}*/
 
 /*******************************************************************************
@@ -1728,7 +1728,7 @@ typedef union _hw_cau_str_ca3
 #define BS_CAU_STR_CA3_CA3   (32U)         /*!< Bit field size in bits for CAU_STR_CA3_CA3. */
 
 /*! @brief Read current value of the CAU_STR_CA3_CA3 field. */
-#define BR_CAU_STR_CA3_CA3(x) (ADDRESS_READ32(HW_CAU_STR_CA3_ADDR(x)))
+#define BR_CAU_STR_CA3_CA3(x) (UNION_READ_REG_FS(HW_CAU_STR_CA3_ADDR(x), hw_cau_str_ca3))
 /*@}*/
 
 /*******************************************************************************
@@ -1772,7 +1772,7 @@ typedef union _hw_cau_str_ca4
 #define BS_CAU_STR_CA4_CA4   (32U)         /*!< Bit field size in bits for CAU_STR_CA4_CA4. */
 
 /*! @brief Read current value of the CAU_STR_CA4_CA4 field. */
-#define BR_CAU_STR_CA4_CA4(x) (ADDRESS_READ32(HW_CAU_STR_CA4_ADDR(x)))
+#define BR_CAU_STR_CA4_CA4(x) (UNION_READ_REG_FS(HW_CAU_STR_CA4_ADDR(x), hw_cau_str_ca4))
 /*@}*/
 
 /*******************************************************************************
@@ -1816,7 +1816,7 @@ typedef union _hw_cau_str_ca5
 #define BS_CAU_STR_CA5_CA5   (32U)         /*!< Bit field size in bits for CAU_STR_CA5_CA5. */
 
 /*! @brief Read current value of the CAU_STR_CA5_CA5 field. */
-#define BR_CAU_STR_CA5_CA5(x) (ADDRESS_READ32(HW_CAU_STR_CA5_ADDR(x)))
+#define BR_CAU_STR_CA5_CA5(x) (UNION_READ_REG_FS(HW_CAU_STR_CA5_ADDR(x), hw_cau_str_ca5))
 /*@}*/
 
 /*******************************************************************************
@@ -1860,7 +1860,7 @@ typedef union _hw_cau_str_ca6
 #define BS_CAU_STR_CA6_CA6   (32U)         /*!< Bit field size in bits for CAU_STR_CA6_CA6. */
 
 /*! @brief Read current value of the CAU_STR_CA6_CA6 field. */
-#define BR_CAU_STR_CA6_CA6(x) (ADDRESS_READ32(HW_CAU_STR_CA6_ADDR(x)))
+#define BR_CAU_STR_CA6_CA6(x) (UNION_READ_REG_FS(HW_CAU_STR_CA6_ADDR(x), hw_cau_str_ca6))
 /*@}*/
 
 /*******************************************************************************
@@ -1904,7 +1904,7 @@ typedef union _hw_cau_str_ca7
 #define BS_CAU_STR_CA7_CA7   (32U)         /*!< Bit field size in bits for CAU_STR_CA7_CA7. */
 
 /*! @brief Read current value of the CAU_STR_CA7_CA7 field. */
-#define BR_CAU_STR_CA7_CA7(x) (ADDRESS_READ32(HW_CAU_STR_CA7_ADDR(x)))
+#define BR_CAU_STR_CA7_CA7(x) (UNION_READ_REG_FS(HW_CAU_STR_CA7_ADDR(x), hw_cau_str_ca7))
 /*@}*/
 
 /*******************************************************************************
@@ -1948,7 +1948,7 @@ typedef union _hw_cau_str_ca8
 #define BS_CAU_STR_CA8_CA8   (32U)         /*!< Bit field size in bits for CAU_STR_CA8_CA8. */
 
 /*! @brief Read current value of the CAU_STR_CA8_CA8 field. */
-#define BR_CAU_STR_CA8_CA8(x) (ADDRESS_READ32(HW_CAU_STR_CA8_ADDR(x)))
+#define BR_CAU_STR_CA8_CA8(x) (UNION_READ_REG_FS(HW_CAU_STR_CA8_ADDR(x), hw_cau_str_ca8))
 /*@}*/
 
 /*******************************************************************************

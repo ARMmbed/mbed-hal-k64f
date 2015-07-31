@@ -302,13 +302,13 @@ typedef union _hw_smc_pmctrl
 #define BS_SMC_PMCTRL_STOPM  (3U)          /*!< Bit field size in bits for SMC_PMCTRL_STOPM. */
 
 /*! @brief Read current value of the SMC_PMCTRL_STOPM field. */
-#define BR_SMC_PMCTRL_STOPM(x) (UNION_READ_FS(HW_SMC_PMCTRL_ADDR(x), hw_smc_pmctrl, B.STOPM))
+#define BR_SMC_PMCTRL_STOPM(x) (UNION_READ_BIT_FS(HW_SMC_PMCTRL_ADDR(x), hw_smc_pmctrl, B.STOPM))
 
 /*! @brief Format value for bitfield SMC_PMCTRL_STOPM. */
 #define BF_SMC_PMCTRL_STOPM(v) ((uint8_t)((uint8_t)(v) << BP_SMC_PMCTRL_STOPM) & BM_SMC_PMCTRL_STOPM)
 
 /*! @brief Set the STOPM field to a new value. */
-#define BW_SMC_PMCTRL_STOPM(x, v) (ADDRESS_WRITE32(HW_SMC_PMCTRL_ADDR(x), (HW_SMC_PMCTRL_RD(x) & ~BM_SMC_PMCTRL_STOPM) | BF_SMC_PMCTRL_STOPM(v)))
+#define BW_SMC_PMCTRL_STOPM(x, v) (UNION_WRITE_REG_FS(HW_SMC_PMCTRL_ADDR(x), hw_smc_pmctrl, (HW_SMC_PMCTRL_RD(x) & ~BM_SMC_PMCTRL_STOPM) | BF_SMC_PMCTRL_STOPM(v)))
 /*@}*/
 
 /*!
@@ -352,13 +352,13 @@ typedef union _hw_smc_pmctrl
 #define BS_SMC_PMCTRL_RUNM   (2U)          /*!< Bit field size in bits for SMC_PMCTRL_RUNM. */
 
 /*! @brief Read current value of the SMC_PMCTRL_RUNM field. */
-#define BR_SMC_PMCTRL_RUNM(x) (UNION_READ_FS(HW_SMC_PMCTRL_ADDR(x), hw_smc_pmctrl, B.RUNM))
+#define BR_SMC_PMCTRL_RUNM(x) (UNION_READ_BIT_FS(HW_SMC_PMCTRL_ADDR(x), hw_smc_pmctrl, B.RUNM))
 
 /*! @brief Format value for bitfield SMC_PMCTRL_RUNM. */
 #define BF_SMC_PMCTRL_RUNM(v) ((uint8_t)((uint8_t)(v) << BP_SMC_PMCTRL_RUNM) & BM_SMC_PMCTRL_RUNM)
 
 /*! @brief Set the RUNM field to a new value. */
-#define BW_SMC_PMCTRL_RUNM(x, v) (ADDRESS_WRITE32(HW_SMC_PMCTRL_ADDR(x), (HW_SMC_PMCTRL_RD(x) & ~BM_SMC_PMCTRL_RUNM) | BF_SMC_PMCTRL_RUNM(v)))
+#define BW_SMC_PMCTRL_RUNM(x, v) (UNION_WRITE_REG_FS(HW_SMC_PMCTRL_ADDR(x), hw_smc_pmctrl, (HW_SMC_PMCTRL_RD(x) & ~BM_SMC_PMCTRL_RUNM) | BF_SMC_PMCTRL_RUNM(v)))
 /*@}*/
 
 /*!
@@ -454,13 +454,13 @@ typedef union _hw_smc_vllsctrl
 #define BS_SMC_VLLSCTRL_VLLSM (3U)         /*!< Bit field size in bits for SMC_VLLSCTRL_VLLSM. */
 
 /*! @brief Read current value of the SMC_VLLSCTRL_VLLSM field. */
-#define BR_SMC_VLLSCTRL_VLLSM(x) (UNION_READ_FS(HW_SMC_VLLSCTRL_ADDR(x), hw_smc_vllsctrl, B.VLLSM))
+#define BR_SMC_VLLSCTRL_VLLSM(x) (UNION_READ_BIT_FS(HW_SMC_VLLSCTRL_ADDR(x), hw_smc_vllsctrl, B.VLLSM))
 
 /*! @brief Format value for bitfield SMC_VLLSCTRL_VLLSM. */
 #define BF_SMC_VLLSCTRL_VLLSM(v) ((uint8_t)((uint8_t)(v) << BP_SMC_VLLSCTRL_VLLSM) & BM_SMC_VLLSCTRL_VLLSM)
 
 /*! @brief Set the VLLSM field to a new value. */
-#define BW_SMC_VLLSCTRL_VLLSM(x, v) (ADDRESS_WRITE32(HW_SMC_VLLSCTRL_ADDR(x), (HW_SMC_VLLSCTRL_RD(x) & ~BM_SMC_VLLSCTRL_VLLSM) | BF_SMC_VLLSCTRL_VLLSM(v)))
+#define BW_SMC_VLLSCTRL_VLLSM(x, v) (UNION_WRITE_REG_FS(HW_SMC_VLLSCTRL_ADDR(x), hw_smc_vllsctrl, (HW_SMC_VLLSCTRL_RD(x) & ~BM_SMC_VLLSCTRL_VLLSM) | BF_SMC_VLLSCTRL_VLLSM(v)))
 /*@}*/
 
 /*!
@@ -537,7 +537,7 @@ typedef union _hw_smc_pmstat
 #define BS_SMC_PMSTAT_PMSTAT (7U)          /*!< Bit field size in bits for SMC_PMSTAT_PMSTAT. */
 
 /*! @brief Read current value of the SMC_PMSTAT_PMSTAT field. */
-#define BR_SMC_PMSTAT_PMSTAT(x) (UNION_READ_FS(HW_SMC_PMSTAT_ADDR(x), hw_smc_pmstat, B.PMSTAT))
+#define BR_SMC_PMSTAT_PMSTAT(x) (UNION_READ_BIT_FS(HW_SMC_PMSTAT_ADDR(x), hw_smc_pmstat, B.PMSTAT))
 /*@}*/
 
 /*******************************************************************************

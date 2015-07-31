@@ -511,13 +511,13 @@ typedef union _hw_rcm_rpfc
 #define BS_RCM_RPFC_RSTFLTSRW (2U)         /*!< Bit field size in bits for RCM_RPFC_RSTFLTSRW. */
 
 /*! @brief Read current value of the RCM_RPFC_RSTFLTSRW field. */
-#define BR_RCM_RPFC_RSTFLTSRW(x) (UNION_READ_FS(HW_RCM_RPFC_ADDR(x), hw_rcm_rpfc, B.RSTFLTSRW))
+#define BR_RCM_RPFC_RSTFLTSRW(x) (UNION_READ_BIT_FS(HW_RCM_RPFC_ADDR(x), hw_rcm_rpfc, B.RSTFLTSRW))
 
 /*! @brief Format value for bitfield RCM_RPFC_RSTFLTSRW. */
 #define BF_RCM_RPFC_RSTFLTSRW(v) ((uint8_t)((uint8_t)(v) << BP_RCM_RPFC_RSTFLTSRW) & BM_RCM_RPFC_RSTFLTSRW)
 
 /*! @brief Set the RSTFLTSRW field to a new value. */
-#define BW_RCM_RPFC_RSTFLTSRW(x, v) (ADDRESS_WRITE32(HW_RCM_RPFC_ADDR(x), (HW_RCM_RPFC_RD(x) & ~BM_RCM_RPFC_RSTFLTSRW) | BF_RCM_RPFC_RSTFLTSRW(v)))
+#define BW_RCM_RPFC_RSTFLTSRW(x, v) (UNION_WRITE_REG_FS(HW_RCM_RPFC_ADDR(x), hw_rcm_rpfc, (HW_RCM_RPFC_RD(x) & ~BM_RCM_RPFC_RSTFLTSRW) | BF_RCM_RPFC_RSTFLTSRW(v)))
 /*@}*/
 
 /*!
@@ -629,13 +629,13 @@ typedef union _hw_rcm_rpfw
 #define BS_RCM_RPFW_RSTFLTSEL (5U)         /*!< Bit field size in bits for RCM_RPFW_RSTFLTSEL. */
 
 /*! @brief Read current value of the RCM_RPFW_RSTFLTSEL field. */
-#define BR_RCM_RPFW_RSTFLTSEL(x) (UNION_READ_FS(HW_RCM_RPFW_ADDR(x), hw_rcm_rpfw, B.RSTFLTSEL))
+#define BR_RCM_RPFW_RSTFLTSEL(x) (UNION_READ_BIT_FS(HW_RCM_RPFW_ADDR(x), hw_rcm_rpfw, B.RSTFLTSEL))
 
 /*! @brief Format value for bitfield RCM_RPFW_RSTFLTSEL. */
 #define BF_RCM_RPFW_RSTFLTSEL(v) ((uint8_t)((uint8_t)(v) << BP_RCM_RPFW_RSTFLTSEL) & BM_RCM_RPFW_RSTFLTSEL)
 
 /*! @brief Set the RSTFLTSEL field to a new value. */
-#define BW_RCM_RPFW_RSTFLTSEL(x, v) (ADDRESS_WRITE32(HW_RCM_RPFW_ADDR(x), (HW_RCM_RPFW_RD(x) & ~BM_RCM_RPFW_RSTFLTSEL) | BF_RCM_RPFW_RSTFLTSEL(v)))
+#define BW_RCM_RPFW_RSTFLTSEL(x, v) (UNION_WRITE_REG_FS(HW_RCM_RPFW_ADDR(x), hw_rcm_rpfw, (HW_RCM_RPFW_RD(x) & ~BM_RCM_RPFW_RSTFLTSEL) | BF_RCM_RPFW_RSTFLTSEL(v)))
 /*@}*/
 
 /*******************************************************************************

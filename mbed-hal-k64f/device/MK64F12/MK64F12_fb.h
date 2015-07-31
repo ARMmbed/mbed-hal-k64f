@@ -157,13 +157,13 @@ typedef union _hw_fb_csarn
 #define BS_FB_CSARn_BA       (16U)         /*!< Bit field size in bits for FB_CSARn_BA. */
 
 /*! @brief Read current value of the FB_CSARn_BA field. */
-#define BR_FB_CSARn_BA(x, n) (UNION_READ_FS(HW_FB_CSARn_ADDR(x, n), hw_fb_csarn, B.BA))
+#define BR_FB_CSARn_BA(x, n) (UNION_READ_BIT_FS(HW_FB_CSARn_ADDR(x, n), hw_fb_csarn, B.BA))
 
 /*! @brief Format value for bitfield FB_CSARn_BA. */
 #define BF_FB_CSARn_BA(v)    ((uint32_t)((uint32_t)(v) << BP_FB_CSARn_BA) & BM_FB_CSARn_BA)
 
 /*! @brief Set the BA field to a new value. */
-#define BW_FB_CSARn_BA(x, n, v) (ADDRESS_WRITE32(HW_FB_CSARn_ADDR(x, n), (HW_FB_CSARn_RD(x, n) & ~BM_FB_CSARn_BA) | BF_FB_CSARn_BA(v)))
+#define BW_FB_CSARn_BA(x, n, v) (UNION_WRITE_REG_FS(HW_FB_CSARn_ADDR(x, n), hw_fb_csarn, (HW_FB_CSARn_RD(x, n) & ~BM_FB_CSARn_BA) | BF_FB_CSARn_BA(v)))
 /*@}*/
 /*******************************************************************************
  * HW_FB_CSMRn - Chip Select Mask Register
@@ -281,13 +281,13 @@ typedef union _hw_fb_csmrn
 #define BS_FB_CSMRn_BAM      (16U)         /*!< Bit field size in bits for FB_CSMRn_BAM. */
 
 /*! @brief Read current value of the FB_CSMRn_BAM field. */
-#define BR_FB_CSMRn_BAM(x, n) (UNION_READ_FS(HW_FB_CSMRn_ADDR(x, n), hw_fb_csmrn, B.BAM))
+#define BR_FB_CSMRn_BAM(x, n) (UNION_READ_BIT_FS(HW_FB_CSMRn_ADDR(x, n), hw_fb_csmrn, B.BAM))
 
 /*! @brief Format value for bitfield FB_CSMRn_BAM. */
 #define BF_FB_CSMRn_BAM(v)   ((uint32_t)((uint32_t)(v) << BP_FB_CSMRn_BAM) & BM_FB_CSMRn_BAM)
 
 /*! @brief Set the BAM field to a new value. */
-#define BW_FB_CSMRn_BAM(x, n, v) (ADDRESS_WRITE32(HW_FB_CSMRn_ADDR(x, n), (HW_FB_CSMRn_RD(x, n) & ~BM_FB_CSMRn_BAM) | BF_FB_CSMRn_BAM(v)))
+#define BW_FB_CSMRn_BAM(x, n, v) (UNION_WRITE_REG_FS(HW_FB_CSMRn_ADDR(x, n), hw_fb_csmrn, (HW_FB_CSMRn_RD(x, n) & ~BM_FB_CSMRn_BAM) | BF_FB_CSMRn_BAM(v)))
 /*@}*/
 /*******************************************************************************
  * HW_FB_CSCRn - Chip Select Control Register
@@ -451,13 +451,13 @@ typedef union _hw_fb_cscrn
 #define BS_FB_CSCRn_PS       (2U)          /*!< Bit field size in bits for FB_CSCRn_PS. */
 
 /*! @brief Read current value of the FB_CSCRn_PS field. */
-#define BR_FB_CSCRn_PS(x, n) (UNION_READ_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, B.PS))
+#define BR_FB_CSCRn_PS(x, n) (UNION_READ_BIT_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, B.PS))
 
 /*! @brief Format value for bitfield FB_CSCRn_PS. */
 #define BF_FB_CSCRn_PS(v)    ((uint32_t)((uint32_t)(v) << BP_FB_CSCRn_PS) & BM_FB_CSCRn_PS)
 
 /*! @brief Set the PS field to a new value. */
-#define BW_FB_CSCRn_PS(x, n, v) (ADDRESS_WRITE32(HW_FB_CSCRn_ADDR(x, n), (HW_FB_CSCRn_RD(x, n) & ~BM_FB_CSCRn_PS) | BF_FB_CSCRn_PS(v)))
+#define BW_FB_CSCRn_PS(x, n, v) (UNION_WRITE_REG_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, (HW_FB_CSCRn_RD(x, n) & ~BM_FB_CSCRn_PS) | BF_FB_CSCRn_PS(v)))
 /*@}*/
 
 /*!
@@ -527,13 +527,13 @@ typedef union _hw_fb_cscrn
 #define BS_FB_CSCRn_WS       (6U)          /*!< Bit field size in bits for FB_CSCRn_WS. */
 
 /*! @brief Read current value of the FB_CSCRn_WS field. */
-#define BR_FB_CSCRn_WS(x, n) (UNION_READ_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, B.WS))
+#define BR_FB_CSCRn_WS(x, n) (UNION_READ_BIT_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, B.WS))
 
 /*! @brief Format value for bitfield FB_CSCRn_WS. */
 #define BF_FB_CSCRn_WS(v)    ((uint32_t)((uint32_t)(v) << BP_FB_CSCRn_WS) & BM_FB_CSCRn_WS)
 
 /*! @brief Set the WS field to a new value. */
-#define BW_FB_CSCRn_WS(x, n, v) (ADDRESS_WRITE32(HW_FB_CSCRn_ADDR(x, n), (HW_FB_CSCRn_RD(x, n) & ~BM_FB_CSCRn_WS) | BF_FB_CSCRn_WS(v)))
+#define BW_FB_CSCRn_WS(x, n, v) (UNION_WRITE_REG_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, (HW_FB_CSCRn_RD(x, n) & ~BM_FB_CSCRn_WS) | BF_FB_CSCRn_WS(v)))
 /*@}*/
 
 /*!
@@ -557,13 +557,13 @@ typedef union _hw_fb_cscrn
 #define BS_FB_CSCRn_WRAH     (2U)          /*!< Bit field size in bits for FB_CSCRn_WRAH. */
 
 /*! @brief Read current value of the FB_CSCRn_WRAH field. */
-#define BR_FB_CSCRn_WRAH(x, n) (UNION_READ_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, B.WRAH))
+#define BR_FB_CSCRn_WRAH(x, n) (UNION_READ_BIT_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, B.WRAH))
 
 /*! @brief Format value for bitfield FB_CSCRn_WRAH. */
 #define BF_FB_CSCRn_WRAH(v)  ((uint32_t)((uint32_t)(v) << BP_FB_CSCRn_WRAH) & BM_FB_CSCRn_WRAH)
 
 /*! @brief Set the WRAH field to a new value. */
-#define BW_FB_CSCRn_WRAH(x, n, v) (ADDRESS_WRITE32(HW_FB_CSCRn_ADDR(x, n), (HW_FB_CSCRn_RD(x, n) & ~BM_FB_CSCRn_WRAH) | BF_FB_CSCRn_WRAH(v)))
+#define BW_FB_CSCRn_WRAH(x, n, v) (UNION_WRITE_REG_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, (HW_FB_CSCRn_RD(x, n) & ~BM_FB_CSCRn_WRAH) | BF_FB_CSCRn_WRAH(v)))
 /*@}*/
 
 /*!
@@ -588,13 +588,13 @@ typedef union _hw_fb_cscrn
 #define BS_FB_CSCRn_RDAH     (2U)          /*!< Bit field size in bits for FB_CSCRn_RDAH. */
 
 /*! @brief Read current value of the FB_CSCRn_RDAH field. */
-#define BR_FB_CSCRn_RDAH(x, n) (UNION_READ_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, B.RDAH))
+#define BR_FB_CSCRn_RDAH(x, n) (UNION_READ_BIT_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, B.RDAH))
 
 /*! @brief Format value for bitfield FB_CSCRn_RDAH. */
 #define BF_FB_CSCRn_RDAH(v)  ((uint32_t)((uint32_t)(v) << BP_FB_CSCRn_RDAH) & BM_FB_CSCRn_RDAH)
 
 /*! @brief Set the RDAH field to a new value. */
-#define BW_FB_CSCRn_RDAH(x, n, v) (ADDRESS_WRITE32(HW_FB_CSCRn_ADDR(x, n), (HW_FB_CSCRn_RD(x, n) & ~BM_FB_CSCRn_RDAH) | BF_FB_CSCRn_RDAH(v)))
+#define BW_FB_CSCRn_RDAH(x, n, v) (UNION_WRITE_REG_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, (HW_FB_CSCRn_RD(x, n) & ~BM_FB_CSCRn_RDAH) | BF_FB_CSCRn_RDAH(v)))
 /*@}*/
 
 /*!
@@ -619,13 +619,13 @@ typedef union _hw_fb_cscrn
 #define BS_FB_CSCRn_ASET     (2U)          /*!< Bit field size in bits for FB_CSCRn_ASET. */
 
 /*! @brief Read current value of the FB_CSCRn_ASET field. */
-#define BR_FB_CSCRn_ASET(x, n) (UNION_READ_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, B.ASET))
+#define BR_FB_CSCRn_ASET(x, n) (UNION_READ_BIT_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, B.ASET))
 
 /*! @brief Format value for bitfield FB_CSCRn_ASET. */
 #define BF_FB_CSCRn_ASET(v)  ((uint32_t)((uint32_t)(v) << BP_FB_CSCRn_ASET) & BM_FB_CSCRn_ASET)
 
 /*! @brief Set the ASET field to a new value. */
-#define BW_FB_CSCRn_ASET(x, n, v) (ADDRESS_WRITE32(HW_FB_CSCRn_ADDR(x, n), (HW_FB_CSCRn_RD(x, n) & ~BM_FB_CSCRn_ASET) | BF_FB_CSCRn_ASET(v)))
+#define BW_FB_CSCRn_ASET(x, n, v) (UNION_WRITE_REG_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, (HW_FB_CSCRn_RD(x, n) & ~BM_FB_CSCRn_ASET) | BF_FB_CSCRn_ASET(v)))
 /*@}*/
 
 /*!
@@ -692,13 +692,13 @@ typedef union _hw_fb_cscrn
 #define BS_FB_CSCRn_SWS      (6U)          /*!< Bit field size in bits for FB_CSCRn_SWS. */
 
 /*! @brief Read current value of the FB_CSCRn_SWS field. */
-#define BR_FB_CSCRn_SWS(x, n) (UNION_READ_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, B.SWS))
+#define BR_FB_CSCRn_SWS(x, n) (UNION_READ_BIT_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, B.SWS))
 
 /*! @brief Format value for bitfield FB_CSCRn_SWS. */
 #define BF_FB_CSCRn_SWS(v)   ((uint32_t)((uint32_t)(v) << BP_FB_CSCRn_SWS) & BM_FB_CSCRn_SWS)
 
 /*! @brief Set the SWS field to a new value. */
-#define BW_FB_CSCRn_SWS(x, n, v) (ADDRESS_WRITE32(HW_FB_CSCRn_ADDR(x, n), (HW_FB_CSCRn_RD(x, n) & ~BM_FB_CSCRn_SWS) | BF_FB_CSCRn_SWS(v)))
+#define BW_FB_CSCRn_SWS(x, n, v) (UNION_WRITE_REG_FS(HW_FB_CSCRn_ADDR(x, n), hw_fb_cscrn, (HW_FB_CSCRn_RD(x, n) & ~BM_FB_CSCRn_SWS) | BF_FB_CSCRn_SWS(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -769,13 +769,13 @@ typedef union _hw_fb_cspmcr
 #define BS_FB_CSPMCR_GROUP5  (4U)          /*!< Bit field size in bits for FB_CSPMCR_GROUP5. */
 
 /*! @brief Read current value of the FB_CSPMCR_GROUP5 field. */
-#define BR_FB_CSPMCR_GROUP5(x) (UNION_READ_FS(HW_FB_CSPMCR_ADDR(x), hw_fb_cspmcr, B.GROUP5))
+#define BR_FB_CSPMCR_GROUP5(x) (UNION_READ_BIT_FS(HW_FB_CSPMCR_ADDR(x), hw_fb_cspmcr, B.GROUP5))
 
 /*! @brief Format value for bitfield FB_CSPMCR_GROUP5. */
 #define BF_FB_CSPMCR_GROUP5(v) ((uint32_t)((uint32_t)(v) << BP_FB_CSPMCR_GROUP5) & BM_FB_CSPMCR_GROUP5)
 
 /*! @brief Set the GROUP5 field to a new value. */
-#define BW_FB_CSPMCR_GROUP5(x, v) (ADDRESS_WRITE32(HW_FB_CSPMCR_ADDR(x), (HW_FB_CSPMCR_RD(x) & ~BM_FB_CSPMCR_GROUP5) | BF_FB_CSPMCR_GROUP5(v)))
+#define BW_FB_CSPMCR_GROUP5(x, v) (UNION_WRITE_REG_FS(HW_FB_CSPMCR_ADDR(x), hw_fb_cspmcr, (HW_FB_CSPMCR_RD(x) & ~BM_FB_CSPMCR_GROUP5) | BF_FB_CSPMCR_GROUP5(v)))
 /*@}*/
 
 /*!
@@ -794,13 +794,13 @@ typedef union _hw_fb_cspmcr
 #define BS_FB_CSPMCR_GROUP4  (4U)          /*!< Bit field size in bits for FB_CSPMCR_GROUP4. */
 
 /*! @brief Read current value of the FB_CSPMCR_GROUP4 field. */
-#define BR_FB_CSPMCR_GROUP4(x) (UNION_READ_FS(HW_FB_CSPMCR_ADDR(x), hw_fb_cspmcr, B.GROUP4))
+#define BR_FB_CSPMCR_GROUP4(x) (UNION_READ_BIT_FS(HW_FB_CSPMCR_ADDR(x), hw_fb_cspmcr, B.GROUP4))
 
 /*! @brief Format value for bitfield FB_CSPMCR_GROUP4. */
 #define BF_FB_CSPMCR_GROUP4(v) ((uint32_t)((uint32_t)(v) << BP_FB_CSPMCR_GROUP4) & BM_FB_CSPMCR_GROUP4)
 
 /*! @brief Set the GROUP4 field to a new value. */
-#define BW_FB_CSPMCR_GROUP4(x, v) (ADDRESS_WRITE32(HW_FB_CSPMCR_ADDR(x), (HW_FB_CSPMCR_RD(x) & ~BM_FB_CSPMCR_GROUP4) | BF_FB_CSPMCR_GROUP4(v)))
+#define BW_FB_CSPMCR_GROUP4(x, v) (UNION_WRITE_REG_FS(HW_FB_CSPMCR_ADDR(x), hw_fb_cspmcr, (HW_FB_CSPMCR_RD(x) & ~BM_FB_CSPMCR_GROUP4) | BF_FB_CSPMCR_GROUP4(v)))
 /*@}*/
 
 /*!
@@ -819,13 +819,13 @@ typedef union _hw_fb_cspmcr
 #define BS_FB_CSPMCR_GROUP3  (4U)          /*!< Bit field size in bits for FB_CSPMCR_GROUP3. */
 
 /*! @brief Read current value of the FB_CSPMCR_GROUP3 field. */
-#define BR_FB_CSPMCR_GROUP3(x) (UNION_READ_FS(HW_FB_CSPMCR_ADDR(x), hw_fb_cspmcr, B.GROUP3))
+#define BR_FB_CSPMCR_GROUP3(x) (UNION_READ_BIT_FS(HW_FB_CSPMCR_ADDR(x), hw_fb_cspmcr, B.GROUP3))
 
 /*! @brief Format value for bitfield FB_CSPMCR_GROUP3. */
 #define BF_FB_CSPMCR_GROUP3(v) ((uint32_t)((uint32_t)(v) << BP_FB_CSPMCR_GROUP3) & BM_FB_CSPMCR_GROUP3)
 
 /*! @brief Set the GROUP3 field to a new value. */
-#define BW_FB_CSPMCR_GROUP3(x, v) (ADDRESS_WRITE32(HW_FB_CSPMCR_ADDR(x), (HW_FB_CSPMCR_RD(x) & ~BM_FB_CSPMCR_GROUP3) | BF_FB_CSPMCR_GROUP3(v)))
+#define BW_FB_CSPMCR_GROUP3(x, v) (UNION_WRITE_REG_FS(HW_FB_CSPMCR_ADDR(x), hw_fb_cspmcr, (HW_FB_CSPMCR_RD(x) & ~BM_FB_CSPMCR_GROUP3) | BF_FB_CSPMCR_GROUP3(v)))
 /*@}*/
 
 /*!
@@ -844,13 +844,13 @@ typedef union _hw_fb_cspmcr
 #define BS_FB_CSPMCR_GROUP2  (4U)          /*!< Bit field size in bits for FB_CSPMCR_GROUP2. */
 
 /*! @brief Read current value of the FB_CSPMCR_GROUP2 field. */
-#define BR_FB_CSPMCR_GROUP2(x) (UNION_READ_FS(HW_FB_CSPMCR_ADDR(x), hw_fb_cspmcr, B.GROUP2))
+#define BR_FB_CSPMCR_GROUP2(x) (UNION_READ_BIT_FS(HW_FB_CSPMCR_ADDR(x), hw_fb_cspmcr, B.GROUP2))
 
 /*! @brief Format value for bitfield FB_CSPMCR_GROUP2. */
 #define BF_FB_CSPMCR_GROUP2(v) ((uint32_t)((uint32_t)(v) << BP_FB_CSPMCR_GROUP2) & BM_FB_CSPMCR_GROUP2)
 
 /*! @brief Set the GROUP2 field to a new value. */
-#define BW_FB_CSPMCR_GROUP2(x, v) (ADDRESS_WRITE32(HW_FB_CSPMCR_ADDR(x), (HW_FB_CSPMCR_RD(x) & ~BM_FB_CSPMCR_GROUP2) | BF_FB_CSPMCR_GROUP2(v)))
+#define BW_FB_CSPMCR_GROUP2(x, v) (UNION_WRITE_REG_FS(HW_FB_CSPMCR_ADDR(x), hw_fb_cspmcr, (HW_FB_CSPMCR_RD(x) & ~BM_FB_CSPMCR_GROUP2) | BF_FB_CSPMCR_GROUP2(v)))
 /*@}*/
 
 /*!
@@ -869,13 +869,13 @@ typedef union _hw_fb_cspmcr
 #define BS_FB_CSPMCR_GROUP1  (4U)          /*!< Bit field size in bits for FB_CSPMCR_GROUP1. */
 
 /*! @brief Read current value of the FB_CSPMCR_GROUP1 field. */
-#define BR_FB_CSPMCR_GROUP1(x) (UNION_READ_FS(HW_FB_CSPMCR_ADDR(x), hw_fb_cspmcr, B.GROUP1))
+#define BR_FB_CSPMCR_GROUP1(x) (UNION_READ_BIT_FS(HW_FB_CSPMCR_ADDR(x), hw_fb_cspmcr, B.GROUP1))
 
 /*! @brief Format value for bitfield FB_CSPMCR_GROUP1. */
 #define BF_FB_CSPMCR_GROUP1(v) ((uint32_t)((uint32_t)(v) << BP_FB_CSPMCR_GROUP1) & BM_FB_CSPMCR_GROUP1)
 
 /*! @brief Set the GROUP1 field to a new value. */
-#define BW_FB_CSPMCR_GROUP1(x, v) (ADDRESS_WRITE32(HW_FB_CSPMCR_ADDR(x), (HW_FB_CSPMCR_RD(x) & ~BM_FB_CSPMCR_GROUP1) | BF_FB_CSPMCR_GROUP1(v)))
+#define BW_FB_CSPMCR_GROUP1(x, v) (UNION_WRITE_REG_FS(HW_FB_CSPMCR_ADDR(x), hw_fb_cspmcr, (HW_FB_CSPMCR_RD(x) & ~BM_FB_CSPMCR_GROUP1) | BF_FB_CSPMCR_GROUP1(v)))
 /*@}*/
 
 /*******************************************************************************
