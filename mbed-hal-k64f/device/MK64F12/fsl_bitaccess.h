@@ -84,36 +84,16 @@
 /*
  * Fallback macros for write/read operations
  */
-#ifndef ADDRESS_READ32
-#define ADDRESS_READ32(addr) *((uint32_t volatile *) (addr))
-#endif
-#ifndef ADDRESS_READ16
-#define ADDRESS_READ16(addr) *((uint16_t volatile *) (addr))
-#endif
-#ifndef ADDRESS_READ8
-#define ADDRESS_READ8(addr)  *((uint8_t  volatile *) (addr))
+#ifndef ADDRESS_READ
+#define ADDRESS_READ(type, addr) (*((type *) addr))
 #endif
 
-#ifndef ADDRESS_WRITE32
-#define ADDRESS_WRITE32(addr, val) (*((uint32_t volatile *) (addr)) = (val))
-#endif
-#ifndef ADDRESS_WRITE16
-#define ADDRESS_WRITE16(addr, val) (*((uint16_t volatile *) (addr)) = (val))
-#endif
-#ifndef ADDRESS_WRITE8
-#define ADDRESS_WRITE8(addr, val)  (*((uint8_t  volatile *) (addr)) = (val))
+#ifndef ADDRESS_WRITE
+#define ADDRESS_WRITE(type, addr, val) (*((type *) (addr)) = (val))
 #endif
 
-#ifndef UNION_READ_BIT_FS
-#define UNION_READ_BIT_FS(addr, type, field) ((*((__IO type ## _t *) (addr))).field)
-#endif
-
-#ifndef UNION_READ_REG_FS
-#define UNION_READ_REG_FS(addr, type) ((*((__IO type ## _t *) (addr))).U)
-#endif
-
-#ifndef UNION_WRITE_REG_FS
-#define UNION_WRITE_REG_FS(addr, type, val) (*((__IO type ## _t *) (addr)) = (val))
+#ifndef UNION_READ
+#define UNION_READ(type, addr, fieldU, fieldB) ((*((type *) (addr))).fieldB)
 #endif
 
 /*
