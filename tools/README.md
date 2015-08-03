@@ -25,10 +25,10 @@ The Solution
 ------------
 The solution is to replace every direct access to memory in the header files with a macro that implements memory access indirectly, so that if uVisor is used it turns into a [dedicated function](https://github.com/ARMmbed/uvisor/blob/change_bitband_support/core/mbed/uvisor-lib/secure_access.h), otherwise the straightforward pointer de-referencing is used.
 
-This is done using a script, `uvisor_replace.py`, that scans header files using a total of 18 regular expressions. These capture all the combinations of possible macros, classified as follows:
+This is done using a script, `uvisor_replace.py`, that scans header files using a total of 5 regular expressions. These capture all the combinations of possible macros, classified as follows:
 - regular read/write (8, 16, 32 bits)
 - bitbanded read/write (8, 16, 32 bits)
-- union bitfield read (Freescale specifc)
+- union bitfield read
 
 Why Do I Care?
 --------------
