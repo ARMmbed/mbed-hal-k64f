@@ -132,8 +132,8 @@ typedef union _hw_osc_cr
 #define HW_OSC_CR_ADDR(x)        ((x) + 0x0U)
 
 #define HW_OSC_CR(x)             (*(__IO hw_osc_cr_t *) HW_OSC_CR_ADDR(x))
-#define HW_OSC_CR_RD(x)          (HW_OSC_CR(x).U)
-#define HW_OSC_CR_WR(x, v)       (HW_OSC_CR(x).U = (v))
+#define HW_OSC_CR_RD(x)          (ADDRESS_READ(hw_osc_cr_t, HW_OSC_CR_ADDR(x)))
+#define HW_OSC_CR_WR(x, v)       (ADDRESS_WRITE(hw_osc_cr_t, HW_OSC_CR_ADDR(x), v))
 #define HW_OSC_CR_SET(x, v)      (HW_OSC_CR_WR(x, HW_OSC_CR_RD(x) |  (v)))
 #define HW_OSC_CR_CLR(x, v)      (HW_OSC_CR_WR(x, HW_OSC_CR_RD(x) & ~(v)))
 #define HW_OSC_CR_TOG(x, v)      (HW_OSC_CR_WR(x, HW_OSC_CR_RD(x) ^  (v)))
@@ -158,13 +158,13 @@ typedef union _hw_osc_cr
 #define BS_OSC_CR_SC16P      (1U)          /*!< Bit field size in bits for OSC_CR_SC16P. */
 
 /*! @brief Read current value of the OSC_CR_SC16P field. */
-#define BR_OSC_CR_SC16P(x)   (ADDRESS_READ8(BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_SC16P)))
+#define BR_OSC_CR_SC16P(x)   (ADDRESS_READ(uint8_t, BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_SC16P)))
 
 /*! @brief Format value for bitfield OSC_CR_SC16P. */
 #define BF_OSC_CR_SC16P(v)   ((uint8_t)((uint8_t)(v) << BP_OSC_CR_SC16P) & BM_OSC_CR_SC16P)
 
 /*! @brief Set the SC16P field to a new value. */
-#define BW_OSC_CR_SC16P(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_SC16P), v))
+#define BW_OSC_CR_SC16P(x, v) (ADDRESS_WRITE(uint8_t, BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_SC16P), v))
 /*@}*/
 
 /*!
@@ -182,13 +182,13 @@ typedef union _hw_osc_cr
 #define BS_OSC_CR_SC8P       (1U)          /*!< Bit field size in bits for OSC_CR_SC8P. */
 
 /*! @brief Read current value of the OSC_CR_SC8P field. */
-#define BR_OSC_CR_SC8P(x)    (ADDRESS_READ8(BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_SC8P)))
+#define BR_OSC_CR_SC8P(x)    (ADDRESS_READ(uint8_t, BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_SC8P)))
 
 /*! @brief Format value for bitfield OSC_CR_SC8P. */
 #define BF_OSC_CR_SC8P(v)    ((uint8_t)((uint8_t)(v) << BP_OSC_CR_SC8P) & BM_OSC_CR_SC8P)
 
 /*! @brief Set the SC8P field to a new value. */
-#define BW_OSC_CR_SC8P(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_SC8P), v))
+#define BW_OSC_CR_SC8P(x, v) (ADDRESS_WRITE(uint8_t, BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_SC8P), v))
 /*@}*/
 
 /*!
@@ -206,13 +206,13 @@ typedef union _hw_osc_cr
 #define BS_OSC_CR_SC4P       (1U)          /*!< Bit field size in bits for OSC_CR_SC4P. */
 
 /*! @brief Read current value of the OSC_CR_SC4P field. */
-#define BR_OSC_CR_SC4P(x)    (ADDRESS_READ8(BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_SC4P)))
+#define BR_OSC_CR_SC4P(x)    (ADDRESS_READ(uint8_t, BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_SC4P)))
 
 /*! @brief Format value for bitfield OSC_CR_SC4P. */
 #define BF_OSC_CR_SC4P(v)    ((uint8_t)((uint8_t)(v) << BP_OSC_CR_SC4P) & BM_OSC_CR_SC4P)
 
 /*! @brief Set the SC4P field to a new value. */
-#define BW_OSC_CR_SC4P(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_SC4P), v))
+#define BW_OSC_CR_SC4P(x, v) (ADDRESS_WRITE(uint8_t, BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_SC4P), v))
 /*@}*/
 
 /*!
@@ -230,13 +230,13 @@ typedef union _hw_osc_cr
 #define BS_OSC_CR_SC2P       (1U)          /*!< Bit field size in bits for OSC_CR_SC2P. */
 
 /*! @brief Read current value of the OSC_CR_SC2P field. */
-#define BR_OSC_CR_SC2P(x)    (ADDRESS_READ8(BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_SC2P)))
+#define BR_OSC_CR_SC2P(x)    (ADDRESS_READ(uint8_t, BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_SC2P)))
 
 /*! @brief Format value for bitfield OSC_CR_SC2P. */
 #define BF_OSC_CR_SC2P(v)    ((uint8_t)((uint8_t)(v) << BP_OSC_CR_SC2P) & BM_OSC_CR_SC2P)
 
 /*! @brief Set the SC2P field to a new value. */
-#define BW_OSC_CR_SC2P(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_SC2P), v))
+#define BW_OSC_CR_SC2P(x, v) (ADDRESS_WRITE(uint8_t, BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_SC2P), v))
 /*@}*/
 
 /*!
@@ -256,13 +256,13 @@ typedef union _hw_osc_cr
 #define BS_OSC_CR_EREFSTEN   (1U)          /*!< Bit field size in bits for OSC_CR_EREFSTEN. */
 
 /*! @brief Read current value of the OSC_CR_EREFSTEN field. */
-#define BR_OSC_CR_EREFSTEN(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_EREFSTEN)))
+#define BR_OSC_CR_EREFSTEN(x) (ADDRESS_READ(uint8_t, BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_EREFSTEN)))
 
 /*! @brief Format value for bitfield OSC_CR_EREFSTEN. */
 #define BF_OSC_CR_EREFSTEN(v) ((uint8_t)((uint8_t)(v) << BP_OSC_CR_EREFSTEN) & BM_OSC_CR_EREFSTEN)
 
 /*! @brief Set the EREFSTEN field to a new value. */
-#define BW_OSC_CR_EREFSTEN(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_EREFSTEN), v))
+#define BW_OSC_CR_EREFSTEN(x, v) (ADDRESS_WRITE(uint8_t, BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_EREFSTEN), v))
 /*@}*/
 
 /*!
@@ -280,13 +280,13 @@ typedef union _hw_osc_cr
 #define BS_OSC_CR_ERCLKEN    (1U)          /*!< Bit field size in bits for OSC_CR_ERCLKEN. */
 
 /*! @brief Read current value of the OSC_CR_ERCLKEN field. */
-#define BR_OSC_CR_ERCLKEN(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_ERCLKEN)))
+#define BR_OSC_CR_ERCLKEN(x) (ADDRESS_READ(uint8_t, BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_ERCLKEN)))
 
 /*! @brief Format value for bitfield OSC_CR_ERCLKEN. */
 #define BF_OSC_CR_ERCLKEN(v) ((uint8_t)((uint8_t)(v) << BP_OSC_CR_ERCLKEN) & BM_OSC_CR_ERCLKEN)
 
 /*! @brief Set the ERCLKEN field to a new value. */
-#define BW_OSC_CR_ERCLKEN(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_ERCLKEN), v))
+#define BW_OSC_CR_ERCLKEN(x, v) (ADDRESS_WRITE(uint8_t, BITBAND_ADDRESS8(HW_OSC_CR_ADDR(x), BP_OSC_CR_ERCLKEN), v))
 /*@}*/
 
 /*******************************************************************************

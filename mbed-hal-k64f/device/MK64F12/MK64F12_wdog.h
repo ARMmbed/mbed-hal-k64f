@@ -145,8 +145,8 @@ typedef union _hw_wdog_stctrlh
 #define HW_WDOG_STCTRLH_ADDR(x)  ((x) + 0x0U)
 
 #define HW_WDOG_STCTRLH(x)       (*(__IO hw_wdog_stctrlh_t *) HW_WDOG_STCTRLH_ADDR(x))
-#define HW_WDOG_STCTRLH_RD(x)    (HW_WDOG_STCTRLH(x).U)
-#define HW_WDOG_STCTRLH_WR(x, v) (HW_WDOG_STCTRLH(x).U = (v))
+#define HW_WDOG_STCTRLH_RD(x)    (ADDRESS_READ(hw_wdog_stctrlh_t, HW_WDOG_STCTRLH_ADDR(x)))
+#define HW_WDOG_STCTRLH_WR(x, v) (ADDRESS_WRITE(hw_wdog_stctrlh_t, HW_WDOG_STCTRLH_ADDR(x), v))
 #define HW_WDOG_STCTRLH_SET(x, v) (HW_WDOG_STCTRLH_WR(x, HW_WDOG_STCTRLH_RD(x) |  (v)))
 #define HW_WDOG_STCTRLH_CLR(x, v) (HW_WDOG_STCTRLH_WR(x, HW_WDOG_STCTRLH_RD(x) & ~(v)))
 #define HW_WDOG_STCTRLH_TOG(x, v) (HW_WDOG_STCTRLH_WR(x, HW_WDOG_STCTRLH_RD(x) ^  (v)))
@@ -174,13 +174,13 @@ typedef union _hw_wdog_stctrlh
 #define BS_WDOG_STCTRLH_WDOGEN (1U)        /*!< Bit field size in bits for WDOG_STCTRLH_WDOGEN. */
 
 /*! @brief Read current value of the WDOG_STCTRLH_WDOGEN field. */
-#define BR_WDOG_STCTRLH_WDOGEN(x) (ADDRESS_READ16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_WDOGEN)))
+#define BR_WDOG_STCTRLH_WDOGEN(x) (ADDRESS_READ(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_WDOGEN)))
 
 /*! @brief Format value for bitfield WDOG_STCTRLH_WDOGEN. */
 #define BF_WDOG_STCTRLH_WDOGEN(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_STCTRLH_WDOGEN) & BM_WDOG_STCTRLH_WDOGEN)
 
 /*! @brief Set the WDOGEN field to a new value. */
-#define BW_WDOG_STCTRLH_WDOGEN(x, v) (ADDRESS_WRITE16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_WDOGEN), v))
+#define BW_WDOG_STCTRLH_WDOGEN(x, v) (ADDRESS_WRITE(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_WDOGEN), v))
 /*@}*/
 
 /*!
@@ -198,13 +198,13 @@ typedef union _hw_wdog_stctrlh
 #define BS_WDOG_STCTRLH_CLKSRC (1U)        /*!< Bit field size in bits for WDOG_STCTRLH_CLKSRC. */
 
 /*! @brief Read current value of the WDOG_STCTRLH_CLKSRC field. */
-#define BR_WDOG_STCTRLH_CLKSRC(x) (ADDRESS_READ16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_CLKSRC)))
+#define BR_WDOG_STCTRLH_CLKSRC(x) (ADDRESS_READ(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_CLKSRC)))
 
 /*! @brief Format value for bitfield WDOG_STCTRLH_CLKSRC. */
 #define BF_WDOG_STCTRLH_CLKSRC(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_STCTRLH_CLKSRC) & BM_WDOG_STCTRLH_CLKSRC)
 
 /*! @brief Set the CLKSRC field to a new value. */
-#define BW_WDOG_STCTRLH_CLKSRC(x, v) (ADDRESS_WRITE16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_CLKSRC), v))
+#define BW_WDOG_STCTRLH_CLKSRC(x, v) (ADDRESS_WRITE(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_CLKSRC), v))
 /*@}*/
 
 /*!
@@ -224,13 +224,13 @@ typedef union _hw_wdog_stctrlh
 #define BS_WDOG_STCTRLH_IRQRSTEN (1U)      /*!< Bit field size in bits for WDOG_STCTRLH_IRQRSTEN. */
 
 /*! @brief Read current value of the WDOG_STCTRLH_IRQRSTEN field. */
-#define BR_WDOG_STCTRLH_IRQRSTEN(x) (ADDRESS_READ16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_IRQRSTEN)))
+#define BR_WDOG_STCTRLH_IRQRSTEN(x) (ADDRESS_READ(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_IRQRSTEN)))
 
 /*! @brief Format value for bitfield WDOG_STCTRLH_IRQRSTEN. */
 #define BF_WDOG_STCTRLH_IRQRSTEN(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_STCTRLH_IRQRSTEN) & BM_WDOG_STCTRLH_IRQRSTEN)
 
 /*! @brief Set the IRQRSTEN field to a new value. */
-#define BW_WDOG_STCTRLH_IRQRSTEN(x, v) (ADDRESS_WRITE16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_IRQRSTEN), v))
+#define BW_WDOG_STCTRLH_IRQRSTEN(x, v) (ADDRESS_WRITE(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_IRQRSTEN), v))
 /*@}*/
 
 /*!
@@ -248,13 +248,13 @@ typedef union _hw_wdog_stctrlh
 #define BS_WDOG_STCTRLH_WINEN (1U)         /*!< Bit field size in bits for WDOG_STCTRLH_WINEN. */
 
 /*! @brief Read current value of the WDOG_STCTRLH_WINEN field. */
-#define BR_WDOG_STCTRLH_WINEN(x) (ADDRESS_READ16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_WINEN)))
+#define BR_WDOG_STCTRLH_WINEN(x) (ADDRESS_READ(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_WINEN)))
 
 /*! @brief Format value for bitfield WDOG_STCTRLH_WINEN. */
 #define BF_WDOG_STCTRLH_WINEN(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_STCTRLH_WINEN) & BM_WDOG_STCTRLH_WINEN)
 
 /*! @brief Set the WINEN field to a new value. */
-#define BW_WDOG_STCTRLH_WINEN(x, v) (ADDRESS_WRITE16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_WINEN), v))
+#define BW_WDOG_STCTRLH_WINEN(x, v) (ADDRESS_WRITE(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_WINEN), v))
 /*@}*/
 
 /*!
@@ -273,13 +273,13 @@ typedef union _hw_wdog_stctrlh
 #define BS_WDOG_STCTRLH_ALLOWUPDATE (1U)   /*!< Bit field size in bits for WDOG_STCTRLH_ALLOWUPDATE. */
 
 /*! @brief Read current value of the WDOG_STCTRLH_ALLOWUPDATE field. */
-#define BR_WDOG_STCTRLH_ALLOWUPDATE(x) (ADDRESS_READ16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_ALLOWUPDATE)))
+#define BR_WDOG_STCTRLH_ALLOWUPDATE(x) (ADDRESS_READ(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_ALLOWUPDATE)))
 
 /*! @brief Format value for bitfield WDOG_STCTRLH_ALLOWUPDATE. */
 #define BF_WDOG_STCTRLH_ALLOWUPDATE(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_STCTRLH_ALLOWUPDATE) & BM_WDOG_STCTRLH_ALLOWUPDATE)
 
 /*! @brief Set the ALLOWUPDATE field to a new value. */
-#define BW_WDOG_STCTRLH_ALLOWUPDATE(x, v) (ADDRESS_WRITE16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_ALLOWUPDATE), v))
+#define BW_WDOG_STCTRLH_ALLOWUPDATE(x, v) (ADDRESS_WRITE(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_ALLOWUPDATE), v))
 /*@}*/
 
 /*!
@@ -297,13 +297,13 @@ typedef union _hw_wdog_stctrlh
 #define BS_WDOG_STCTRLH_DBGEN (1U)         /*!< Bit field size in bits for WDOG_STCTRLH_DBGEN. */
 
 /*! @brief Read current value of the WDOG_STCTRLH_DBGEN field. */
-#define BR_WDOG_STCTRLH_DBGEN(x) (ADDRESS_READ16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_DBGEN)))
+#define BR_WDOG_STCTRLH_DBGEN(x) (ADDRESS_READ(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_DBGEN)))
 
 /*! @brief Format value for bitfield WDOG_STCTRLH_DBGEN. */
 #define BF_WDOG_STCTRLH_DBGEN(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_STCTRLH_DBGEN) & BM_WDOG_STCTRLH_DBGEN)
 
 /*! @brief Set the DBGEN field to a new value. */
-#define BW_WDOG_STCTRLH_DBGEN(x, v) (ADDRESS_WRITE16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_DBGEN), v))
+#define BW_WDOG_STCTRLH_DBGEN(x, v) (ADDRESS_WRITE(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_DBGEN), v))
 /*@}*/
 
 /*!
@@ -321,13 +321,13 @@ typedef union _hw_wdog_stctrlh
 #define BS_WDOG_STCTRLH_STOPEN (1U)        /*!< Bit field size in bits for WDOG_STCTRLH_STOPEN. */
 
 /*! @brief Read current value of the WDOG_STCTRLH_STOPEN field. */
-#define BR_WDOG_STCTRLH_STOPEN(x) (ADDRESS_READ16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_STOPEN)))
+#define BR_WDOG_STCTRLH_STOPEN(x) (ADDRESS_READ(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_STOPEN)))
 
 /*! @brief Format value for bitfield WDOG_STCTRLH_STOPEN. */
 #define BF_WDOG_STCTRLH_STOPEN(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_STCTRLH_STOPEN) & BM_WDOG_STCTRLH_STOPEN)
 
 /*! @brief Set the STOPEN field to a new value. */
-#define BW_WDOG_STCTRLH_STOPEN(x, v) (ADDRESS_WRITE16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_STOPEN), v))
+#define BW_WDOG_STCTRLH_STOPEN(x, v) (ADDRESS_WRITE(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_STOPEN), v))
 /*@}*/
 
 /*!
@@ -345,13 +345,13 @@ typedef union _hw_wdog_stctrlh
 #define BS_WDOG_STCTRLH_WAITEN (1U)        /*!< Bit field size in bits for WDOG_STCTRLH_WAITEN. */
 
 /*! @brief Read current value of the WDOG_STCTRLH_WAITEN field. */
-#define BR_WDOG_STCTRLH_WAITEN(x) (ADDRESS_READ16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_WAITEN)))
+#define BR_WDOG_STCTRLH_WAITEN(x) (ADDRESS_READ(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_WAITEN)))
 
 /*! @brief Format value for bitfield WDOG_STCTRLH_WAITEN. */
 #define BF_WDOG_STCTRLH_WAITEN(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_STCTRLH_WAITEN) & BM_WDOG_STCTRLH_WAITEN)
 
 /*! @brief Set the WAITEN field to a new value. */
-#define BW_WDOG_STCTRLH_WAITEN(x, v) (ADDRESS_WRITE16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_WAITEN), v))
+#define BW_WDOG_STCTRLH_WAITEN(x, v) (ADDRESS_WRITE(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_WAITEN), v))
 /*@}*/
 
 /*!
@@ -369,13 +369,13 @@ typedef union _hw_wdog_stctrlh
 #define BS_WDOG_STCTRLH_TESTWDOG (1U)      /*!< Bit field size in bits for WDOG_STCTRLH_TESTWDOG. */
 
 /*! @brief Read current value of the WDOG_STCTRLH_TESTWDOG field. */
-#define BR_WDOG_STCTRLH_TESTWDOG(x) (ADDRESS_READ16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_TESTWDOG)))
+#define BR_WDOG_STCTRLH_TESTWDOG(x) (ADDRESS_READ(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_TESTWDOG)))
 
 /*! @brief Format value for bitfield WDOG_STCTRLH_TESTWDOG. */
 #define BF_WDOG_STCTRLH_TESTWDOG(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_STCTRLH_TESTWDOG) & BM_WDOG_STCTRLH_TESTWDOG)
 
 /*! @brief Set the TESTWDOG field to a new value. */
-#define BW_WDOG_STCTRLH_TESTWDOG(x, v) (ADDRESS_WRITE16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_TESTWDOG), v))
+#define BW_WDOG_STCTRLH_TESTWDOG(x, v) (ADDRESS_WRITE(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_TESTWDOG), v))
 /*@}*/
 
 /*!
@@ -398,13 +398,13 @@ typedef union _hw_wdog_stctrlh
 #define BS_WDOG_STCTRLH_TESTSEL (1U)       /*!< Bit field size in bits for WDOG_STCTRLH_TESTSEL. */
 
 /*! @brief Read current value of the WDOG_STCTRLH_TESTSEL field. */
-#define BR_WDOG_STCTRLH_TESTSEL(x) (ADDRESS_READ16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_TESTSEL)))
+#define BR_WDOG_STCTRLH_TESTSEL(x) (ADDRESS_READ(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_TESTSEL)))
 
 /*! @brief Format value for bitfield WDOG_STCTRLH_TESTSEL. */
 #define BF_WDOG_STCTRLH_TESTSEL(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_STCTRLH_TESTSEL) & BM_WDOG_STCTRLH_TESTSEL)
 
 /*! @brief Set the TESTSEL field to a new value. */
-#define BW_WDOG_STCTRLH_TESTSEL(x, v) (ADDRESS_WRITE16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_TESTSEL), v))
+#define BW_WDOG_STCTRLH_TESTSEL(x, v) (ADDRESS_WRITE(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_TESTSEL), v))
 /*@}*/
 
 /*!
@@ -425,13 +425,13 @@ typedef union _hw_wdog_stctrlh
 #define BS_WDOG_STCTRLH_BYTESEL (2U)       /*!< Bit field size in bits for WDOG_STCTRLH_BYTESEL. */
 
 /*! @brief Read current value of the WDOG_STCTRLH_BYTESEL field. */
-#define BR_WDOG_STCTRLH_BYTESEL(x) (UNION_READ_BIT_FS(HW_WDOG_STCTRLH_ADDR(x), hw_wdog_stctrlh, B.BYTESEL))
+#define BR_WDOG_STCTRLH_BYTESEL(x) (UNION_READ(hw_wdog_stctrlh_t, HW_WDOG_STCTRLH_ADDR(x), U, B.BYTESEL))
 
 /*! @brief Format value for bitfield WDOG_STCTRLH_BYTESEL. */
 #define BF_WDOG_STCTRLH_BYTESEL(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_STCTRLH_BYTESEL) & BM_WDOG_STCTRLH_BYTESEL)
 
 /*! @brief Set the BYTESEL field to a new value. */
-#define BW_WDOG_STCTRLH_BYTESEL(x, v) (UNION_WRITE_REG_FS(HW_WDOG_STCTRLH_ADDR(x), hw_wdog_stctrlh, (HW_WDOG_STCTRLH_RD(x) & ~BM_WDOG_STCTRLH_BYTESEL) | BF_WDOG_STCTRLH_BYTESEL(v)))
+#define BW_WDOG_STCTRLH_BYTESEL(x, v) (HW_WDOG_STCTRLH_WR(x, (HW_WDOG_STCTRLH_RD(x) & ~BM_WDOG_STCTRLH_BYTESEL) | BF_WDOG_STCTRLH_BYTESEL(v)))
 /*@}*/
 
 /*!
@@ -451,13 +451,13 @@ typedef union _hw_wdog_stctrlh
 #define BS_WDOG_STCTRLH_DISTESTWDOG (1U)   /*!< Bit field size in bits for WDOG_STCTRLH_DISTESTWDOG. */
 
 /*! @brief Read current value of the WDOG_STCTRLH_DISTESTWDOG field. */
-#define BR_WDOG_STCTRLH_DISTESTWDOG(x) (ADDRESS_READ16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_DISTESTWDOG)))
+#define BR_WDOG_STCTRLH_DISTESTWDOG(x) (ADDRESS_READ(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_DISTESTWDOG)))
 
 /*! @brief Format value for bitfield WDOG_STCTRLH_DISTESTWDOG. */
 #define BF_WDOG_STCTRLH_DISTESTWDOG(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_STCTRLH_DISTESTWDOG) & BM_WDOG_STCTRLH_DISTESTWDOG)
 
 /*! @brief Set the DISTESTWDOG field to a new value. */
-#define BW_WDOG_STCTRLH_DISTESTWDOG(x, v) (ADDRESS_WRITE16(BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_DISTESTWDOG), v))
+#define BW_WDOG_STCTRLH_DISTESTWDOG(x, v) (ADDRESS_WRITE(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLH_ADDR(x), BP_WDOG_STCTRLH_DISTESTWDOG), v))
 /*@}*/
 
 /*******************************************************************************
@@ -486,8 +486,8 @@ typedef union _hw_wdog_stctrll
 #define HW_WDOG_STCTRLL_ADDR(x)  ((x) + 0x2U)
 
 #define HW_WDOG_STCTRLL(x)       (*(__IO hw_wdog_stctrll_t *) HW_WDOG_STCTRLL_ADDR(x))
-#define HW_WDOG_STCTRLL_RD(x)    (HW_WDOG_STCTRLL(x).U)
-#define HW_WDOG_STCTRLL_WR(x, v) (HW_WDOG_STCTRLL(x).U = (v))
+#define HW_WDOG_STCTRLL_RD(x)    (ADDRESS_READ(hw_wdog_stctrll_t, HW_WDOG_STCTRLL_ADDR(x)))
+#define HW_WDOG_STCTRLL_WR(x, v) (ADDRESS_WRITE(hw_wdog_stctrll_t, HW_WDOG_STCTRLL_ADDR(x), v))
 #define HW_WDOG_STCTRLL_SET(x, v) (HW_WDOG_STCTRLL_WR(x, HW_WDOG_STCTRLL_RD(x) |  (v)))
 #define HW_WDOG_STCTRLL_CLR(x, v) (HW_WDOG_STCTRLL_WR(x, HW_WDOG_STCTRLL_RD(x) & ~(v)))
 #define HW_WDOG_STCTRLL_TOG(x, v) (HW_WDOG_STCTRLL_WR(x, HW_WDOG_STCTRLL_RD(x) ^  (v)))
@@ -511,13 +511,13 @@ typedef union _hw_wdog_stctrll
 #define BS_WDOG_STCTRLL_INTFLG (1U)        /*!< Bit field size in bits for WDOG_STCTRLL_INTFLG. */
 
 /*! @brief Read current value of the WDOG_STCTRLL_INTFLG field. */
-#define BR_WDOG_STCTRLL_INTFLG(x) (ADDRESS_READ16(BITBAND_ADDRESS16(HW_WDOG_STCTRLL_ADDR(x), BP_WDOG_STCTRLL_INTFLG)))
+#define BR_WDOG_STCTRLL_INTFLG(x) (ADDRESS_READ(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLL_ADDR(x), BP_WDOG_STCTRLL_INTFLG)))
 
 /*! @brief Format value for bitfield WDOG_STCTRLL_INTFLG. */
 #define BF_WDOG_STCTRLL_INTFLG(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_STCTRLL_INTFLG) & BM_WDOG_STCTRLL_INTFLG)
 
 /*! @brief Set the INTFLG field to a new value. */
-#define BW_WDOG_STCTRLL_INTFLG(x, v) (ADDRESS_WRITE16(BITBAND_ADDRESS16(HW_WDOG_STCTRLL_ADDR(x), BP_WDOG_STCTRLL_INTFLG), v))
+#define BW_WDOG_STCTRLL_INTFLG(x, v) (ADDRESS_WRITE(uint16_t, BITBAND_ADDRESS16(HW_WDOG_STCTRLL_ADDR(x), BP_WDOG_STCTRLL_INTFLG), v))
 /*@}*/
 
 /*******************************************************************************
@@ -545,8 +545,8 @@ typedef union _hw_wdog_tovalh
 #define HW_WDOG_TOVALH_ADDR(x)   ((x) + 0x4U)
 
 #define HW_WDOG_TOVALH(x)        (*(__IO hw_wdog_tovalh_t *) HW_WDOG_TOVALH_ADDR(x))
-#define HW_WDOG_TOVALH_RD(x)     (HW_WDOG_TOVALH(x).U)
-#define HW_WDOG_TOVALH_WR(x, v)  (HW_WDOG_TOVALH(x).U = (v))
+#define HW_WDOG_TOVALH_RD(x)     (ADDRESS_READ(hw_wdog_tovalh_t, HW_WDOG_TOVALH_ADDR(x)))
+#define HW_WDOG_TOVALH_WR(x, v)  (ADDRESS_WRITE(hw_wdog_tovalh_t, HW_WDOG_TOVALH_ADDR(x), v))
 #define HW_WDOG_TOVALH_SET(x, v) (HW_WDOG_TOVALH_WR(x, HW_WDOG_TOVALH_RD(x) |  (v)))
 #define HW_WDOG_TOVALH_CLR(x, v) (HW_WDOG_TOVALH_WR(x, HW_WDOG_TOVALH_RD(x) & ~(v)))
 #define HW_WDOG_TOVALH_TOG(x, v) (HW_WDOG_TOVALH_WR(x, HW_WDOG_TOVALH_RD(x) ^  (v)))
@@ -568,13 +568,13 @@ typedef union _hw_wdog_tovalh
 #define BS_WDOG_TOVALH_TOVALHIGH (16U)     /*!< Bit field size in bits for WDOG_TOVALH_TOVALHIGH. */
 
 /*! @brief Read current value of the WDOG_TOVALH_TOVALHIGH field. */
-#define BR_WDOG_TOVALH_TOVALHIGH(x) (UNION_READ_REG_FS(HW_WDOG_TOVALH_ADDR(x), hw_wdog_tovalh))
+#define BR_WDOG_TOVALH_TOVALHIGH(x) (HW_WDOG_TOVALH(x).U)
 
 /*! @brief Format value for bitfield WDOG_TOVALH_TOVALHIGH. */
 #define BF_WDOG_TOVALH_TOVALHIGH(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_TOVALH_TOVALHIGH) & BM_WDOG_TOVALH_TOVALHIGH)
 
 /*! @brief Set the TOVALHIGH field to a new value. */
-#define BW_WDOG_TOVALH_TOVALHIGH(x, v) (UNION_WRITE_REG_FS(HW_WDOG_TOVALH_ADDR(x), hw_wdog_tovalh, v))
+#define BW_WDOG_TOVALH_TOVALHIGH(x, v) (HW_WDOG_TOVALH_WR(x, v))
 /*@}*/
 
 /*******************************************************************************
@@ -606,8 +606,8 @@ typedef union _hw_wdog_tovall
 #define HW_WDOG_TOVALL_ADDR(x)   ((x) + 0x6U)
 
 #define HW_WDOG_TOVALL(x)        (*(__IO hw_wdog_tovall_t *) HW_WDOG_TOVALL_ADDR(x))
-#define HW_WDOG_TOVALL_RD(x)     (HW_WDOG_TOVALL(x).U)
-#define HW_WDOG_TOVALL_WR(x, v)  (HW_WDOG_TOVALL(x).U = (v))
+#define HW_WDOG_TOVALL_RD(x)     (ADDRESS_READ(hw_wdog_tovall_t, HW_WDOG_TOVALL_ADDR(x)))
+#define HW_WDOG_TOVALL_WR(x, v)  (ADDRESS_WRITE(hw_wdog_tovall_t, HW_WDOG_TOVALL_ADDR(x), v))
 #define HW_WDOG_TOVALL_SET(x, v) (HW_WDOG_TOVALL_WR(x, HW_WDOG_TOVALL_RD(x) |  (v)))
 #define HW_WDOG_TOVALL_CLR(x, v) (HW_WDOG_TOVALL_WR(x, HW_WDOG_TOVALL_RD(x) & ~(v)))
 #define HW_WDOG_TOVALL_TOG(x, v) (HW_WDOG_TOVALL_WR(x, HW_WDOG_TOVALL_RD(x) ^  (v)))
@@ -629,13 +629,13 @@ typedef union _hw_wdog_tovall
 #define BS_WDOG_TOVALL_TOVALLOW (16U)      /*!< Bit field size in bits for WDOG_TOVALL_TOVALLOW. */
 
 /*! @brief Read current value of the WDOG_TOVALL_TOVALLOW field. */
-#define BR_WDOG_TOVALL_TOVALLOW(x) (UNION_READ_REG_FS(HW_WDOG_TOVALL_ADDR(x), hw_wdog_tovall))
+#define BR_WDOG_TOVALL_TOVALLOW(x) (HW_WDOG_TOVALL(x).U)
 
 /*! @brief Format value for bitfield WDOG_TOVALL_TOVALLOW. */
 #define BF_WDOG_TOVALL_TOVALLOW(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_TOVALL_TOVALLOW) & BM_WDOG_TOVALL_TOVALLOW)
 
 /*! @brief Set the TOVALLOW field to a new value. */
-#define BW_WDOG_TOVALL_TOVALLOW(x, v) (UNION_WRITE_REG_FS(HW_WDOG_TOVALL_ADDR(x), hw_wdog_tovall, v))
+#define BW_WDOG_TOVALL_TOVALLOW(x, v) (HW_WDOG_TOVALL_WR(x, v))
 /*@}*/
 
 /*******************************************************************************
@@ -665,8 +665,8 @@ typedef union _hw_wdog_winh
 #define HW_WDOG_WINH_ADDR(x)     ((x) + 0x8U)
 
 #define HW_WDOG_WINH(x)          (*(__IO hw_wdog_winh_t *) HW_WDOG_WINH_ADDR(x))
-#define HW_WDOG_WINH_RD(x)       (HW_WDOG_WINH(x).U)
-#define HW_WDOG_WINH_WR(x, v)    (HW_WDOG_WINH(x).U = (v))
+#define HW_WDOG_WINH_RD(x)       (ADDRESS_READ(hw_wdog_winh_t, HW_WDOG_WINH_ADDR(x)))
+#define HW_WDOG_WINH_WR(x, v)    (ADDRESS_WRITE(hw_wdog_winh_t, HW_WDOG_WINH_ADDR(x), v))
 #define HW_WDOG_WINH_SET(x, v)   (HW_WDOG_WINH_WR(x, HW_WDOG_WINH_RD(x) |  (v)))
 #define HW_WDOG_WINH_CLR(x, v)   (HW_WDOG_WINH_WR(x, HW_WDOG_WINH_RD(x) & ~(v)))
 #define HW_WDOG_WINH_TOG(x, v)   (HW_WDOG_WINH_WR(x, HW_WDOG_WINH_RD(x) ^  (v)))
@@ -692,13 +692,13 @@ typedef union _hw_wdog_winh
 #define BS_WDOG_WINH_WINHIGH (16U)         /*!< Bit field size in bits for WDOG_WINH_WINHIGH. */
 
 /*! @brief Read current value of the WDOG_WINH_WINHIGH field. */
-#define BR_WDOG_WINH_WINHIGH(x) (UNION_READ_REG_FS(HW_WDOG_WINH_ADDR(x), hw_wdog_winh))
+#define BR_WDOG_WINH_WINHIGH(x) (HW_WDOG_WINH(x).U)
 
 /*! @brief Format value for bitfield WDOG_WINH_WINHIGH. */
 #define BF_WDOG_WINH_WINHIGH(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_WINH_WINHIGH) & BM_WDOG_WINH_WINHIGH)
 
 /*! @brief Set the WINHIGH field to a new value. */
-#define BW_WDOG_WINH_WINHIGH(x, v) (UNION_WRITE_REG_FS(HW_WDOG_WINH_ADDR(x), hw_wdog_winh, v))
+#define BW_WDOG_WINH_WINHIGH(x, v) (HW_WDOG_WINH_WR(x, v))
 /*@}*/
 
 /*******************************************************************************
@@ -728,8 +728,8 @@ typedef union _hw_wdog_winl
 #define HW_WDOG_WINL_ADDR(x)     ((x) + 0xAU)
 
 #define HW_WDOG_WINL(x)          (*(__IO hw_wdog_winl_t *) HW_WDOG_WINL_ADDR(x))
-#define HW_WDOG_WINL_RD(x)       (HW_WDOG_WINL(x).U)
-#define HW_WDOG_WINL_WR(x, v)    (HW_WDOG_WINL(x).U = (v))
+#define HW_WDOG_WINL_RD(x)       (ADDRESS_READ(hw_wdog_winl_t, HW_WDOG_WINL_ADDR(x)))
+#define HW_WDOG_WINL_WR(x, v)    (ADDRESS_WRITE(hw_wdog_winl_t, HW_WDOG_WINL_ADDR(x), v))
 #define HW_WDOG_WINL_SET(x, v)   (HW_WDOG_WINL_WR(x, HW_WDOG_WINL_RD(x) |  (v)))
 #define HW_WDOG_WINL_CLR(x, v)   (HW_WDOG_WINL_WR(x, HW_WDOG_WINL_RD(x) & ~(v)))
 #define HW_WDOG_WINL_TOG(x, v)   (HW_WDOG_WINL_WR(x, HW_WDOG_WINL_RD(x) ^  (v)))
@@ -755,13 +755,13 @@ typedef union _hw_wdog_winl
 #define BS_WDOG_WINL_WINLOW  (16U)         /*!< Bit field size in bits for WDOG_WINL_WINLOW. */
 
 /*! @brief Read current value of the WDOG_WINL_WINLOW field. */
-#define BR_WDOG_WINL_WINLOW(x) (UNION_READ_REG_FS(HW_WDOG_WINL_ADDR(x), hw_wdog_winl))
+#define BR_WDOG_WINL_WINLOW(x) (HW_WDOG_WINL(x).U)
 
 /*! @brief Format value for bitfield WDOG_WINL_WINLOW. */
 #define BF_WDOG_WINL_WINLOW(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_WINL_WINLOW) & BM_WDOG_WINL_WINLOW)
 
 /*! @brief Set the WINLOW field to a new value. */
-#define BW_WDOG_WINL_WINLOW(x, v) (UNION_WRITE_REG_FS(HW_WDOG_WINL_ADDR(x), hw_wdog_winl, v))
+#define BW_WDOG_WINL_WINLOW(x, v) (HW_WDOG_WINL_WR(x, v))
 /*@}*/
 
 /*******************************************************************************
@@ -789,8 +789,8 @@ typedef union _hw_wdog_refresh
 #define HW_WDOG_REFRESH_ADDR(x)  ((x) + 0xCU)
 
 #define HW_WDOG_REFRESH(x)       (*(__IO hw_wdog_refresh_t *) HW_WDOG_REFRESH_ADDR(x))
-#define HW_WDOG_REFRESH_RD(x)    (HW_WDOG_REFRESH(x).U)
-#define HW_WDOG_REFRESH_WR(x, v) (HW_WDOG_REFRESH(x).U = (v))
+#define HW_WDOG_REFRESH_RD(x)    (ADDRESS_READ(hw_wdog_refresh_t, HW_WDOG_REFRESH_ADDR(x)))
+#define HW_WDOG_REFRESH_WR(x, v) (ADDRESS_WRITE(hw_wdog_refresh_t, HW_WDOG_REFRESH_ADDR(x), v))
 #define HW_WDOG_REFRESH_SET(x, v) (HW_WDOG_REFRESH_WR(x, HW_WDOG_REFRESH_RD(x) |  (v)))
 #define HW_WDOG_REFRESH_CLR(x, v) (HW_WDOG_REFRESH_WR(x, HW_WDOG_REFRESH_RD(x) & ~(v)))
 #define HW_WDOG_REFRESH_TOG(x, v) (HW_WDOG_REFRESH_WR(x, HW_WDOG_REFRESH_RD(x) ^  (v)))
@@ -815,13 +815,13 @@ typedef union _hw_wdog_refresh
 #define BS_WDOG_REFRESH_WDOGREFRESH (16U)  /*!< Bit field size in bits for WDOG_REFRESH_WDOGREFRESH. */
 
 /*! @brief Read current value of the WDOG_REFRESH_WDOGREFRESH field. */
-#define BR_WDOG_REFRESH_WDOGREFRESH(x) (UNION_READ_REG_FS(HW_WDOG_REFRESH_ADDR(x), hw_wdog_refresh))
+#define BR_WDOG_REFRESH_WDOGREFRESH(x) (HW_WDOG_REFRESH(x).U)
 
 /*! @brief Format value for bitfield WDOG_REFRESH_WDOGREFRESH. */
 #define BF_WDOG_REFRESH_WDOGREFRESH(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_REFRESH_WDOGREFRESH) & BM_WDOG_REFRESH_WDOGREFRESH)
 
 /*! @brief Set the WDOGREFRESH field to a new value. */
-#define BW_WDOG_REFRESH_WDOGREFRESH(x, v) (UNION_WRITE_REG_FS(HW_WDOG_REFRESH_ADDR(x), hw_wdog_refresh, v))
+#define BW_WDOG_REFRESH_WDOGREFRESH(x, v) (HW_WDOG_REFRESH_WR(x, v))
 /*@}*/
 
 /*******************************************************************************
@@ -849,8 +849,8 @@ typedef union _hw_wdog_unlock
 #define HW_WDOG_UNLOCK_ADDR(x)   ((x) + 0xEU)
 
 #define HW_WDOG_UNLOCK(x)        (*(__IO hw_wdog_unlock_t *) HW_WDOG_UNLOCK_ADDR(x))
-#define HW_WDOG_UNLOCK_RD(x)     (HW_WDOG_UNLOCK(x).U)
-#define HW_WDOG_UNLOCK_WR(x, v)  (HW_WDOG_UNLOCK(x).U = (v))
+#define HW_WDOG_UNLOCK_RD(x)     (ADDRESS_READ(hw_wdog_unlock_t, HW_WDOG_UNLOCK_ADDR(x)))
+#define HW_WDOG_UNLOCK_WR(x, v)  (ADDRESS_WRITE(hw_wdog_unlock_t, HW_WDOG_UNLOCK_ADDR(x), v))
 #define HW_WDOG_UNLOCK_SET(x, v) (HW_WDOG_UNLOCK_WR(x, HW_WDOG_UNLOCK_RD(x) |  (v)))
 #define HW_WDOG_UNLOCK_CLR(x, v) (HW_WDOG_UNLOCK_WR(x, HW_WDOG_UNLOCK_RD(x) & ~(v)))
 #define HW_WDOG_UNLOCK_TOG(x, v) (HW_WDOG_UNLOCK_WR(x, HW_WDOG_UNLOCK_RD(x) ^  (v)))
@@ -878,13 +878,13 @@ typedef union _hw_wdog_unlock
 #define BS_WDOG_UNLOCK_WDOGUNLOCK (16U)    /*!< Bit field size in bits for WDOG_UNLOCK_WDOGUNLOCK. */
 
 /*! @brief Read current value of the WDOG_UNLOCK_WDOGUNLOCK field. */
-#define BR_WDOG_UNLOCK_WDOGUNLOCK(x) (UNION_READ_REG_FS(HW_WDOG_UNLOCK_ADDR(x), hw_wdog_unlock))
+#define BR_WDOG_UNLOCK_WDOGUNLOCK(x) (HW_WDOG_UNLOCK(x).U)
 
 /*! @brief Format value for bitfield WDOG_UNLOCK_WDOGUNLOCK. */
 #define BF_WDOG_UNLOCK_WDOGUNLOCK(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_UNLOCK_WDOGUNLOCK) & BM_WDOG_UNLOCK_WDOGUNLOCK)
 
 /*! @brief Set the WDOGUNLOCK field to a new value. */
-#define BW_WDOG_UNLOCK_WDOGUNLOCK(x, v) (UNION_WRITE_REG_FS(HW_WDOG_UNLOCK_ADDR(x), hw_wdog_unlock, v))
+#define BW_WDOG_UNLOCK_WDOGUNLOCK(x, v) (HW_WDOG_UNLOCK_WR(x, v))
 /*@}*/
 
 /*******************************************************************************
@@ -912,8 +912,8 @@ typedef union _hw_wdog_tmrouth
 #define HW_WDOG_TMROUTH_ADDR(x)  ((x) + 0x10U)
 
 #define HW_WDOG_TMROUTH(x)       (*(__IO hw_wdog_tmrouth_t *) HW_WDOG_TMROUTH_ADDR(x))
-#define HW_WDOG_TMROUTH_RD(x)    (HW_WDOG_TMROUTH(x).U)
-#define HW_WDOG_TMROUTH_WR(x, v) (HW_WDOG_TMROUTH(x).U = (v))
+#define HW_WDOG_TMROUTH_RD(x)    (ADDRESS_READ(hw_wdog_tmrouth_t, HW_WDOG_TMROUTH_ADDR(x)))
+#define HW_WDOG_TMROUTH_WR(x, v) (ADDRESS_WRITE(hw_wdog_tmrouth_t, HW_WDOG_TMROUTH_ADDR(x), v))
 #define HW_WDOG_TMROUTH_SET(x, v) (HW_WDOG_TMROUTH_WR(x, HW_WDOG_TMROUTH_RD(x) |  (v)))
 #define HW_WDOG_TMROUTH_CLR(x, v) (HW_WDOG_TMROUTH_WR(x, HW_WDOG_TMROUTH_RD(x) & ~(v)))
 #define HW_WDOG_TMROUTH_TOG(x, v) (HW_WDOG_TMROUTH_WR(x, HW_WDOG_TMROUTH_RD(x) ^  (v)))
@@ -934,13 +934,13 @@ typedef union _hw_wdog_tmrouth
 #define BS_WDOG_TMROUTH_TIMEROUTHIGH (16U) /*!< Bit field size in bits for WDOG_TMROUTH_TIMEROUTHIGH. */
 
 /*! @brief Read current value of the WDOG_TMROUTH_TIMEROUTHIGH field. */
-#define BR_WDOG_TMROUTH_TIMEROUTHIGH(x) (UNION_READ_REG_FS(HW_WDOG_TMROUTH_ADDR(x), hw_wdog_tmrouth))
+#define BR_WDOG_TMROUTH_TIMEROUTHIGH(x) (HW_WDOG_TMROUTH(x).U)
 
 /*! @brief Format value for bitfield WDOG_TMROUTH_TIMEROUTHIGH. */
 #define BF_WDOG_TMROUTH_TIMEROUTHIGH(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_TMROUTH_TIMEROUTHIGH) & BM_WDOG_TMROUTH_TIMEROUTHIGH)
 
 /*! @brief Set the TIMEROUTHIGH field to a new value. */
-#define BW_WDOG_TMROUTH_TIMEROUTHIGH(x, v) (UNION_WRITE_REG_FS(HW_WDOG_TMROUTH_ADDR(x), hw_wdog_tmrouth, v))
+#define BW_WDOG_TMROUTH_TIMEROUTHIGH(x, v) (HW_WDOG_TMROUTH_WR(x, v))
 /*@}*/
 
 /*******************************************************************************
@@ -973,8 +973,8 @@ typedef union _hw_wdog_tmroutl
 #define HW_WDOG_TMROUTL_ADDR(x)  ((x) + 0x12U)
 
 #define HW_WDOG_TMROUTL(x)       (*(__IO hw_wdog_tmroutl_t *) HW_WDOG_TMROUTL_ADDR(x))
-#define HW_WDOG_TMROUTL_RD(x)    (HW_WDOG_TMROUTL(x).U)
-#define HW_WDOG_TMROUTL_WR(x, v) (HW_WDOG_TMROUTL(x).U = (v))
+#define HW_WDOG_TMROUTL_RD(x)    (ADDRESS_READ(hw_wdog_tmroutl_t, HW_WDOG_TMROUTL_ADDR(x)))
+#define HW_WDOG_TMROUTL_WR(x, v) (ADDRESS_WRITE(hw_wdog_tmroutl_t, HW_WDOG_TMROUTL_ADDR(x), v))
 #define HW_WDOG_TMROUTL_SET(x, v) (HW_WDOG_TMROUTL_WR(x, HW_WDOG_TMROUTL_RD(x) |  (v)))
 #define HW_WDOG_TMROUTL_CLR(x, v) (HW_WDOG_TMROUTL_WR(x, HW_WDOG_TMROUTL_RD(x) & ~(v)))
 #define HW_WDOG_TMROUTL_TOG(x, v) (HW_WDOG_TMROUTL_WR(x, HW_WDOG_TMROUTL_RD(x) ^  (v)))
@@ -995,13 +995,13 @@ typedef union _hw_wdog_tmroutl
 #define BS_WDOG_TMROUTL_TIMEROUTLOW (16U)  /*!< Bit field size in bits for WDOG_TMROUTL_TIMEROUTLOW. */
 
 /*! @brief Read current value of the WDOG_TMROUTL_TIMEROUTLOW field. */
-#define BR_WDOG_TMROUTL_TIMEROUTLOW(x) (UNION_READ_REG_FS(HW_WDOG_TMROUTL_ADDR(x), hw_wdog_tmroutl))
+#define BR_WDOG_TMROUTL_TIMEROUTLOW(x) (HW_WDOG_TMROUTL(x).U)
 
 /*! @brief Format value for bitfield WDOG_TMROUTL_TIMEROUTLOW. */
 #define BF_WDOG_TMROUTL_TIMEROUTLOW(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_TMROUTL_TIMEROUTLOW) & BM_WDOG_TMROUTL_TIMEROUTLOW)
 
 /*! @brief Set the TIMEROUTLOW field to a new value. */
-#define BW_WDOG_TMROUTL_TIMEROUTLOW(x, v) (UNION_WRITE_REG_FS(HW_WDOG_TMROUTL_ADDR(x), hw_wdog_tmroutl, v))
+#define BW_WDOG_TMROUTL_TIMEROUTLOW(x, v) (HW_WDOG_TMROUTL_WR(x, v))
 /*@}*/
 
 /*******************************************************************************
@@ -1029,8 +1029,8 @@ typedef union _hw_wdog_rstcnt
 #define HW_WDOG_RSTCNT_ADDR(x)   ((x) + 0x14U)
 
 #define HW_WDOG_RSTCNT(x)        (*(__IO hw_wdog_rstcnt_t *) HW_WDOG_RSTCNT_ADDR(x))
-#define HW_WDOG_RSTCNT_RD(x)     (HW_WDOG_RSTCNT(x).U)
-#define HW_WDOG_RSTCNT_WR(x, v)  (HW_WDOG_RSTCNT(x).U = (v))
+#define HW_WDOG_RSTCNT_RD(x)     (ADDRESS_READ(hw_wdog_rstcnt_t, HW_WDOG_RSTCNT_ADDR(x)))
+#define HW_WDOG_RSTCNT_WR(x, v)  (ADDRESS_WRITE(hw_wdog_rstcnt_t, HW_WDOG_RSTCNT_ADDR(x), v))
 #define HW_WDOG_RSTCNT_SET(x, v) (HW_WDOG_RSTCNT_WR(x, HW_WDOG_RSTCNT_RD(x) |  (v)))
 #define HW_WDOG_RSTCNT_CLR(x, v) (HW_WDOG_RSTCNT_WR(x, HW_WDOG_RSTCNT_RD(x) & ~(v)))
 #define HW_WDOG_RSTCNT_TOG(x, v) (HW_WDOG_RSTCNT_WR(x, HW_WDOG_RSTCNT_RD(x) ^  (v)))
@@ -1053,13 +1053,13 @@ typedef union _hw_wdog_rstcnt
 #define BS_WDOG_RSTCNT_RSTCNT (16U)        /*!< Bit field size in bits for WDOG_RSTCNT_RSTCNT. */
 
 /*! @brief Read current value of the WDOG_RSTCNT_RSTCNT field. */
-#define BR_WDOG_RSTCNT_RSTCNT(x) (UNION_READ_REG_FS(HW_WDOG_RSTCNT_ADDR(x), hw_wdog_rstcnt))
+#define BR_WDOG_RSTCNT_RSTCNT(x) (HW_WDOG_RSTCNT(x).U)
 
 /*! @brief Format value for bitfield WDOG_RSTCNT_RSTCNT. */
 #define BF_WDOG_RSTCNT_RSTCNT(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_RSTCNT_RSTCNT) & BM_WDOG_RSTCNT_RSTCNT)
 
 /*! @brief Set the RSTCNT field to a new value. */
-#define BW_WDOG_RSTCNT_RSTCNT(x, v) (UNION_WRITE_REG_FS(HW_WDOG_RSTCNT_ADDR(x), hw_wdog_rstcnt, v))
+#define BW_WDOG_RSTCNT_RSTCNT(x, v) (HW_WDOG_RSTCNT_WR(x, v))
 /*@}*/
 
 /*******************************************************************************
@@ -1089,8 +1089,8 @@ typedef union _hw_wdog_presc
 #define HW_WDOG_PRESC_ADDR(x)    ((x) + 0x16U)
 
 #define HW_WDOG_PRESC(x)         (*(__IO hw_wdog_presc_t *) HW_WDOG_PRESC_ADDR(x))
-#define HW_WDOG_PRESC_RD(x)      (HW_WDOG_PRESC(x).U)
-#define HW_WDOG_PRESC_WR(x, v)   (HW_WDOG_PRESC(x).U = (v))
+#define HW_WDOG_PRESC_RD(x)      (ADDRESS_READ(hw_wdog_presc_t, HW_WDOG_PRESC_ADDR(x)))
+#define HW_WDOG_PRESC_WR(x, v)   (ADDRESS_WRITE(hw_wdog_presc_t, HW_WDOG_PRESC_ADDR(x), v))
 #define HW_WDOG_PRESC_SET(x, v)  (HW_WDOG_PRESC_WR(x, HW_WDOG_PRESC_RD(x) |  (v)))
 #define HW_WDOG_PRESC_CLR(x, v)  (HW_WDOG_PRESC_WR(x, HW_WDOG_PRESC_RD(x) & ~(v)))
 #define HW_WDOG_PRESC_TOG(x, v)  (HW_WDOG_PRESC_WR(x, HW_WDOG_PRESC_RD(x) ^  (v)))
@@ -1113,13 +1113,13 @@ typedef union _hw_wdog_presc
 #define BS_WDOG_PRESC_PRESCVAL (3U)        /*!< Bit field size in bits for WDOG_PRESC_PRESCVAL. */
 
 /*! @brief Read current value of the WDOG_PRESC_PRESCVAL field. */
-#define BR_WDOG_PRESC_PRESCVAL(x) (UNION_READ_BIT_FS(HW_WDOG_PRESC_ADDR(x), hw_wdog_presc, B.PRESCVAL))
+#define BR_WDOG_PRESC_PRESCVAL(x) (UNION_READ(hw_wdog_presc_t, HW_WDOG_PRESC_ADDR(x), U, B.PRESCVAL))
 
 /*! @brief Format value for bitfield WDOG_PRESC_PRESCVAL. */
 #define BF_WDOG_PRESC_PRESCVAL(v) ((uint16_t)((uint16_t)(v) << BP_WDOG_PRESC_PRESCVAL) & BM_WDOG_PRESC_PRESCVAL)
 
 /*! @brief Set the PRESCVAL field to a new value. */
-#define BW_WDOG_PRESC_PRESCVAL(x, v) (UNION_WRITE_REG_FS(HW_WDOG_PRESC_ADDR(x), hw_wdog_presc, (HW_WDOG_PRESC_RD(x) & ~BM_WDOG_PRESC_PRESCVAL) | BF_WDOG_PRESC_PRESCVAL(v)))
+#define BW_WDOG_PRESC_PRESCVAL(x, v) (HW_WDOG_PRESC_WR(x, (HW_WDOG_PRESC_RD(x) & ~BM_WDOG_PRESC_PRESCVAL) | BF_WDOG_PRESC_PRESCVAL(v)))
 /*@}*/
 
 /*******************************************************************************

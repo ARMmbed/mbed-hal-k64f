@@ -171,8 +171,8 @@ typedef union _hw_adc_sc1n
 #define HW_ADC_SC1n_ADDR(x, n)   ((x) + 0x0U + (0x4U * (n)))
 
 #define HW_ADC_SC1n(x, n)        (*(__IO hw_adc_sc1n_t *) HW_ADC_SC1n_ADDR(x, n))
-#define HW_ADC_SC1n_RD(x, n)     (HW_ADC_SC1n(x, n).U)
-#define HW_ADC_SC1n_WR(x, n, v)  (HW_ADC_SC1n(x, n).U = (v))
+#define HW_ADC_SC1n_RD(x, n)     (ADDRESS_READ(hw_adc_sc1n_t, HW_ADC_SC1n_ADDR(x, n)))
+#define HW_ADC_SC1n_WR(x, n, v)  (ADDRESS_WRITE(hw_adc_sc1n_t, HW_ADC_SC1n_ADDR(x, n), v))
 #define HW_ADC_SC1n_SET(x, n, v) (HW_ADC_SC1n_WR(x, n, HW_ADC_SC1n_RD(x, n) |  (v)))
 #define HW_ADC_SC1n_CLR(x, n, v) (HW_ADC_SC1n_WR(x, n, HW_ADC_SC1n_RD(x, n) & ~(v)))
 #define HW_ADC_SC1n_TOG(x, n, v) (HW_ADC_SC1n_WR(x, n, HW_ADC_SC1n_RD(x, n) ^  (v)))
@@ -247,13 +247,13 @@ typedef union _hw_adc_sc1n
 #define BS_ADC_SC1n_ADCH     (5U)          /*!< Bit field size in bits for ADC_SC1n_ADCH. */
 
 /*! @brief Read current value of the ADC_SC1n_ADCH field. */
-#define BR_ADC_SC1n_ADCH(x, n) (UNION_READ_BIT_FS(HW_ADC_SC1n_ADDR(x, n), hw_adc_sc1n, B.ADCH))
+#define BR_ADC_SC1n_ADCH(x, n) (UNION_READ(hw_adc_sc1n_t, HW_ADC_SC1n_ADDR(x, n), U, B.ADCH))
 
 /*! @brief Format value for bitfield ADC_SC1n_ADCH. */
 #define BF_ADC_SC1n_ADCH(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_SC1n_ADCH) & BM_ADC_SC1n_ADCH)
 
 /*! @brief Set the ADCH field to a new value. */
-#define BW_ADC_SC1n_ADCH(x, n, v) (UNION_WRITE_REG_FS(HW_ADC_SC1n_ADDR(x, n), hw_adc_sc1n, (HW_ADC_SC1n_RD(x, n) & ~BM_ADC_SC1n_ADCH) | BF_ADC_SC1n_ADCH(v)))
+#define BW_ADC_SC1n_ADCH(x, n, v) (HW_ADC_SC1n_WR(x, n, (HW_ADC_SC1n_RD(x, n) & ~BM_ADC_SC1n_ADCH) | BF_ADC_SC1n_ADCH(v)))
 /*@}*/
 
 /*!
@@ -273,13 +273,13 @@ typedef union _hw_adc_sc1n
 #define BS_ADC_SC1n_DIFF     (1U)          /*!< Bit field size in bits for ADC_SC1n_DIFF. */
 
 /*! @brief Read current value of the ADC_SC1n_DIFF field. */
-#define BR_ADC_SC1n_DIFF(x, n) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_SC1n_ADDR(x, n), BP_ADC_SC1n_DIFF)))
+#define BR_ADC_SC1n_DIFF(x, n) (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC1n_ADDR(x, n), BP_ADC_SC1n_DIFF)))
 
 /*! @brief Format value for bitfield ADC_SC1n_DIFF. */
 #define BF_ADC_SC1n_DIFF(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_SC1n_DIFF) & BM_ADC_SC1n_DIFF)
 
 /*! @brief Set the DIFF field to a new value. */
-#define BW_ADC_SC1n_DIFF(x, n, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_ADC_SC1n_ADDR(x, n), BP_ADC_SC1n_DIFF), v))
+#define BW_ADC_SC1n_DIFF(x, n, v) (ADDRESS_WRITE(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC1n_ADDR(x, n), BP_ADC_SC1n_DIFF), v))
 /*@}*/
 
 /*!
@@ -298,13 +298,13 @@ typedef union _hw_adc_sc1n
 #define BS_ADC_SC1n_AIEN     (1U)          /*!< Bit field size in bits for ADC_SC1n_AIEN. */
 
 /*! @brief Read current value of the ADC_SC1n_AIEN field. */
-#define BR_ADC_SC1n_AIEN(x, n) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_SC1n_ADDR(x, n), BP_ADC_SC1n_AIEN)))
+#define BR_ADC_SC1n_AIEN(x, n) (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC1n_ADDR(x, n), BP_ADC_SC1n_AIEN)))
 
 /*! @brief Format value for bitfield ADC_SC1n_AIEN. */
 #define BF_ADC_SC1n_AIEN(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_SC1n_AIEN) & BM_ADC_SC1n_AIEN)
 
 /*! @brief Set the AIEN field to a new value. */
-#define BW_ADC_SC1n_AIEN(x, n, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_ADC_SC1n_ADDR(x, n), BP_ADC_SC1n_AIEN), v))
+#define BW_ADC_SC1n_AIEN(x, n, v) (ADDRESS_WRITE(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC1n_ADDR(x, n), BP_ADC_SC1n_AIEN), v))
 /*@}*/
 
 /*!
@@ -330,7 +330,7 @@ typedef union _hw_adc_sc1n
 #define BS_ADC_SC1n_COCO     (1U)          /*!< Bit field size in bits for ADC_SC1n_COCO. */
 
 /*! @brief Read current value of the ADC_SC1n_COCO field. */
-#define BR_ADC_SC1n_COCO(x, n) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_SC1n_ADDR(x, n), BP_ADC_SC1n_COCO)))
+#define BR_ADC_SC1n_COCO(x, n) (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC1n_ADDR(x, n), BP_ADC_SC1n_COCO)))
 /*@}*/
 
 /*******************************************************************************
@@ -366,8 +366,8 @@ typedef union _hw_adc_cfg1
 #define HW_ADC_CFG1_ADDR(x)      ((x) + 0x8U)
 
 #define HW_ADC_CFG1(x)           (*(__IO hw_adc_cfg1_t *) HW_ADC_CFG1_ADDR(x))
-#define HW_ADC_CFG1_RD(x)        (HW_ADC_CFG1(x).U)
-#define HW_ADC_CFG1_WR(x, v)     (HW_ADC_CFG1(x).U = (v))
+#define HW_ADC_CFG1_RD(x)        (ADDRESS_READ(hw_adc_cfg1_t, HW_ADC_CFG1_ADDR(x)))
+#define HW_ADC_CFG1_WR(x, v)     (ADDRESS_WRITE(hw_adc_cfg1_t, HW_ADC_CFG1_ADDR(x), v))
 #define HW_ADC_CFG1_SET(x, v)    (HW_ADC_CFG1_WR(x, HW_ADC_CFG1_RD(x) |  (v)))
 #define HW_ADC_CFG1_CLR(x, v)    (HW_ADC_CFG1_WR(x, HW_ADC_CFG1_RD(x) & ~(v)))
 #define HW_ADC_CFG1_TOG(x, v)    (HW_ADC_CFG1_WR(x, HW_ADC_CFG1_RD(x) ^  (v)))
@@ -400,13 +400,13 @@ typedef union _hw_adc_cfg1
 #define BS_ADC_CFG1_ADICLK   (2U)          /*!< Bit field size in bits for ADC_CFG1_ADICLK. */
 
 /*! @brief Read current value of the ADC_CFG1_ADICLK field. */
-#define BR_ADC_CFG1_ADICLK(x) (UNION_READ_BIT_FS(HW_ADC_CFG1_ADDR(x), hw_adc_cfg1, B.ADICLK))
+#define BR_ADC_CFG1_ADICLK(x) (UNION_READ(hw_adc_cfg1_t, HW_ADC_CFG1_ADDR(x), U, B.ADICLK))
 
 /*! @brief Format value for bitfield ADC_CFG1_ADICLK. */
 #define BF_ADC_CFG1_ADICLK(v) ((uint32_t)((uint32_t)(v) << BP_ADC_CFG1_ADICLK) & BM_ADC_CFG1_ADICLK)
 
 /*! @brief Set the ADICLK field to a new value. */
-#define BW_ADC_CFG1_ADICLK(x, v) (UNION_WRITE_REG_FS(HW_ADC_CFG1_ADDR(x), hw_adc_cfg1, (HW_ADC_CFG1_RD(x) & ~BM_ADC_CFG1_ADICLK) | BF_ADC_CFG1_ADICLK(v)))
+#define BW_ADC_CFG1_ADICLK(x, v) (HW_ADC_CFG1_WR(x, (HW_ADC_CFG1_RD(x) & ~BM_ADC_CFG1_ADICLK) | BF_ADC_CFG1_ADICLK(v)))
 /*@}*/
 
 /*!
@@ -430,13 +430,13 @@ typedef union _hw_adc_cfg1
 #define BS_ADC_CFG1_MODE     (2U)          /*!< Bit field size in bits for ADC_CFG1_MODE. */
 
 /*! @brief Read current value of the ADC_CFG1_MODE field. */
-#define BR_ADC_CFG1_MODE(x)  (UNION_READ_BIT_FS(HW_ADC_CFG1_ADDR(x), hw_adc_cfg1, B.MODE))
+#define BR_ADC_CFG1_MODE(x)  (UNION_READ(hw_adc_cfg1_t, HW_ADC_CFG1_ADDR(x), U, B.MODE))
 
 /*! @brief Format value for bitfield ADC_CFG1_MODE. */
 #define BF_ADC_CFG1_MODE(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_CFG1_MODE) & BM_ADC_CFG1_MODE)
 
 /*! @brief Set the MODE field to a new value. */
-#define BW_ADC_CFG1_MODE(x, v) (UNION_WRITE_REG_FS(HW_ADC_CFG1_ADDR(x), hw_adc_cfg1, (HW_ADC_CFG1_RD(x) & ~BM_ADC_CFG1_MODE) | BF_ADC_CFG1_MODE(v)))
+#define BW_ADC_CFG1_MODE(x, v) (HW_ADC_CFG1_WR(x, (HW_ADC_CFG1_RD(x) & ~BM_ADC_CFG1_MODE) | BF_ADC_CFG1_MODE(v)))
 /*@}*/
 
 /*!
@@ -460,13 +460,13 @@ typedef union _hw_adc_cfg1
 #define BS_ADC_CFG1_ADLSMP   (1U)          /*!< Bit field size in bits for ADC_CFG1_ADLSMP. */
 
 /*! @brief Read current value of the ADC_CFG1_ADLSMP field. */
-#define BR_ADC_CFG1_ADLSMP(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_CFG1_ADDR(x), BP_ADC_CFG1_ADLSMP)))
+#define BR_ADC_CFG1_ADLSMP(x) (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_CFG1_ADDR(x), BP_ADC_CFG1_ADLSMP)))
 
 /*! @brief Format value for bitfield ADC_CFG1_ADLSMP. */
 #define BF_ADC_CFG1_ADLSMP(v) ((uint32_t)((uint32_t)(v) << BP_ADC_CFG1_ADLSMP) & BM_ADC_CFG1_ADLSMP)
 
 /*! @brief Set the ADLSMP field to a new value. */
-#define BW_ADC_CFG1_ADLSMP(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_ADC_CFG1_ADDR(x), BP_ADC_CFG1_ADLSMP), v))
+#define BW_ADC_CFG1_ADLSMP(x, v) (ADDRESS_WRITE(uint32_t, BITBAND_ADDRESS32(HW_ADC_CFG1_ADDR(x), BP_ADC_CFG1_ADLSMP), v))
 /*@}*/
 
 /*!
@@ -486,13 +486,13 @@ typedef union _hw_adc_cfg1
 #define BS_ADC_CFG1_ADIV     (2U)          /*!< Bit field size in bits for ADC_CFG1_ADIV. */
 
 /*! @brief Read current value of the ADC_CFG1_ADIV field. */
-#define BR_ADC_CFG1_ADIV(x)  (UNION_READ_BIT_FS(HW_ADC_CFG1_ADDR(x), hw_adc_cfg1, B.ADIV))
+#define BR_ADC_CFG1_ADIV(x)  (UNION_READ(hw_adc_cfg1_t, HW_ADC_CFG1_ADDR(x), U, B.ADIV))
 
 /*! @brief Format value for bitfield ADC_CFG1_ADIV. */
 #define BF_ADC_CFG1_ADIV(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_CFG1_ADIV) & BM_ADC_CFG1_ADIV)
 
 /*! @brief Set the ADIV field to a new value. */
-#define BW_ADC_CFG1_ADIV(x, v) (UNION_WRITE_REG_FS(HW_ADC_CFG1_ADDR(x), hw_adc_cfg1, (HW_ADC_CFG1_RD(x) & ~BM_ADC_CFG1_ADIV) | BF_ADC_CFG1_ADIV(v)))
+#define BW_ADC_CFG1_ADIV(x, v) (HW_ADC_CFG1_WR(x, (HW_ADC_CFG1_RD(x) & ~BM_ADC_CFG1_ADIV) | BF_ADC_CFG1_ADIV(v)))
 /*@}*/
 
 /*!
@@ -512,13 +512,13 @@ typedef union _hw_adc_cfg1
 #define BS_ADC_CFG1_ADLPC    (1U)          /*!< Bit field size in bits for ADC_CFG1_ADLPC. */
 
 /*! @brief Read current value of the ADC_CFG1_ADLPC field. */
-#define BR_ADC_CFG1_ADLPC(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_CFG1_ADDR(x), BP_ADC_CFG1_ADLPC)))
+#define BR_ADC_CFG1_ADLPC(x) (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_CFG1_ADDR(x), BP_ADC_CFG1_ADLPC)))
 
 /*! @brief Format value for bitfield ADC_CFG1_ADLPC. */
 #define BF_ADC_CFG1_ADLPC(v) ((uint32_t)((uint32_t)(v) << BP_ADC_CFG1_ADLPC) & BM_ADC_CFG1_ADLPC)
 
 /*! @brief Set the ADLPC field to a new value. */
-#define BW_ADC_CFG1_ADLPC(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_ADC_CFG1_ADDR(x), BP_ADC_CFG1_ADLPC), v))
+#define BW_ADC_CFG1_ADLPC(x, v) (ADDRESS_WRITE(uint32_t, BITBAND_ADDRESS32(HW_ADC_CFG1_ADDR(x), BP_ADC_CFG1_ADLPC), v))
 /*@}*/
 
 /*******************************************************************************
@@ -554,8 +554,8 @@ typedef union _hw_adc_cfg2
 #define HW_ADC_CFG2_ADDR(x)      ((x) + 0xCU)
 
 #define HW_ADC_CFG2(x)           (*(__IO hw_adc_cfg2_t *) HW_ADC_CFG2_ADDR(x))
-#define HW_ADC_CFG2_RD(x)        (HW_ADC_CFG2(x).U)
-#define HW_ADC_CFG2_WR(x, v)     (HW_ADC_CFG2(x).U = (v))
+#define HW_ADC_CFG2_RD(x)        (ADDRESS_READ(hw_adc_cfg2_t, HW_ADC_CFG2_ADDR(x)))
+#define HW_ADC_CFG2_WR(x, v)     (ADDRESS_WRITE(hw_adc_cfg2_t, HW_ADC_CFG2_ADDR(x), v))
 #define HW_ADC_CFG2_SET(x, v)    (HW_ADC_CFG2_WR(x, HW_ADC_CFG2_RD(x) |  (v)))
 #define HW_ADC_CFG2_CLR(x, v)    (HW_ADC_CFG2_WR(x, HW_ADC_CFG2_RD(x) & ~(v)))
 #define HW_ADC_CFG2_TOG(x, v)    (HW_ADC_CFG2_WR(x, HW_ADC_CFG2_RD(x) ^  (v)))
@@ -587,13 +587,13 @@ typedef union _hw_adc_cfg2
 #define BS_ADC_CFG2_ADLSTS   (2U)          /*!< Bit field size in bits for ADC_CFG2_ADLSTS. */
 
 /*! @brief Read current value of the ADC_CFG2_ADLSTS field. */
-#define BR_ADC_CFG2_ADLSTS(x) (UNION_READ_BIT_FS(HW_ADC_CFG2_ADDR(x), hw_adc_cfg2, B.ADLSTS))
+#define BR_ADC_CFG2_ADLSTS(x) (UNION_READ(hw_adc_cfg2_t, HW_ADC_CFG2_ADDR(x), U, B.ADLSTS))
 
 /*! @brief Format value for bitfield ADC_CFG2_ADLSTS. */
 #define BF_ADC_CFG2_ADLSTS(v) ((uint32_t)((uint32_t)(v) << BP_ADC_CFG2_ADLSTS) & BM_ADC_CFG2_ADLSTS)
 
 /*! @brief Set the ADLSTS field to a new value. */
-#define BW_ADC_CFG2_ADLSTS(x, v) (UNION_WRITE_REG_FS(HW_ADC_CFG2_ADDR(x), hw_adc_cfg2, (HW_ADC_CFG2_RD(x) & ~BM_ADC_CFG2_ADLSTS) | BF_ADC_CFG2_ADLSTS(v)))
+#define BW_ADC_CFG2_ADLSTS(x, v) (HW_ADC_CFG2_WR(x, (HW_ADC_CFG2_RD(x) & ~BM_ADC_CFG2_ADLSTS) | BF_ADC_CFG2_ADLSTS(v)))
 /*@}*/
 
 /*!
@@ -614,13 +614,13 @@ typedef union _hw_adc_cfg2
 #define BS_ADC_CFG2_ADHSC    (1U)          /*!< Bit field size in bits for ADC_CFG2_ADHSC. */
 
 /*! @brief Read current value of the ADC_CFG2_ADHSC field. */
-#define BR_ADC_CFG2_ADHSC(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_CFG2_ADDR(x), BP_ADC_CFG2_ADHSC)))
+#define BR_ADC_CFG2_ADHSC(x) (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_CFG2_ADDR(x), BP_ADC_CFG2_ADHSC)))
 
 /*! @brief Format value for bitfield ADC_CFG2_ADHSC. */
 #define BF_ADC_CFG2_ADHSC(v) ((uint32_t)((uint32_t)(v) << BP_ADC_CFG2_ADHSC) & BM_ADC_CFG2_ADHSC)
 
 /*! @brief Set the ADHSC field to a new value. */
-#define BW_ADC_CFG2_ADHSC(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_ADC_CFG2_ADDR(x), BP_ADC_CFG2_ADHSC), v))
+#define BW_ADC_CFG2_ADHSC(x, v) (ADDRESS_WRITE(uint32_t, BITBAND_ADDRESS32(HW_ADC_CFG2_ADDR(x), BP_ADC_CFG2_ADHSC), v))
 /*@}*/
 
 /*!
@@ -646,13 +646,13 @@ typedef union _hw_adc_cfg2
 #define BS_ADC_CFG2_ADACKEN  (1U)          /*!< Bit field size in bits for ADC_CFG2_ADACKEN. */
 
 /*! @brief Read current value of the ADC_CFG2_ADACKEN field. */
-#define BR_ADC_CFG2_ADACKEN(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_CFG2_ADDR(x), BP_ADC_CFG2_ADACKEN)))
+#define BR_ADC_CFG2_ADACKEN(x) (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_CFG2_ADDR(x), BP_ADC_CFG2_ADACKEN)))
 
 /*! @brief Format value for bitfield ADC_CFG2_ADACKEN. */
 #define BF_ADC_CFG2_ADACKEN(v) ((uint32_t)((uint32_t)(v) << BP_ADC_CFG2_ADACKEN) & BM_ADC_CFG2_ADACKEN)
 
 /*! @brief Set the ADACKEN field to a new value. */
-#define BW_ADC_CFG2_ADACKEN(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_ADC_CFG2_ADDR(x), BP_ADC_CFG2_ADACKEN), v))
+#define BW_ADC_CFG2_ADACKEN(x, v) (ADDRESS_WRITE(uint32_t, BITBAND_ADDRESS32(HW_ADC_CFG2_ADDR(x), BP_ADC_CFG2_ADACKEN), v))
 /*@}*/
 
 /*!
@@ -670,13 +670,13 @@ typedef union _hw_adc_cfg2
 #define BS_ADC_CFG2_MUXSEL   (1U)          /*!< Bit field size in bits for ADC_CFG2_MUXSEL. */
 
 /*! @brief Read current value of the ADC_CFG2_MUXSEL field. */
-#define BR_ADC_CFG2_MUXSEL(x) (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_CFG2_ADDR(x), BP_ADC_CFG2_MUXSEL)))
+#define BR_ADC_CFG2_MUXSEL(x) (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_CFG2_ADDR(x), BP_ADC_CFG2_MUXSEL)))
 
 /*! @brief Format value for bitfield ADC_CFG2_MUXSEL. */
 #define BF_ADC_CFG2_MUXSEL(v) ((uint32_t)((uint32_t)(v) << BP_ADC_CFG2_MUXSEL) & BM_ADC_CFG2_MUXSEL)
 
 /*! @brief Set the MUXSEL field to a new value. */
-#define BW_ADC_CFG2_MUXSEL(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_ADC_CFG2_ADDR(x), BP_ADC_CFG2_MUXSEL), v))
+#define BW_ADC_CFG2_MUXSEL(x, v) (ADDRESS_WRITE(uint32_t, BITBAND_ADDRESS32(HW_ADC_CFG2_ADDR(x), BP_ADC_CFG2_MUXSEL), v))
 /*@}*/
 
 /*******************************************************************************
@@ -728,7 +728,7 @@ typedef union _hw_adc_rn
 #define HW_ADC_Rn_ADDR(x, n)     ((x) + 0x10U + (0x4U * (n)))
 
 #define HW_ADC_Rn(x, n)          (*(__I hw_adc_rn_t *) HW_ADC_Rn_ADDR(x, n))
-#define HW_ADC_Rn_RD(x, n)       (HW_ADC_Rn(x, n).U)
+#define HW_ADC_Rn_RD(x, n)       (ADDRESS_READ(hw_adc_rn_t, HW_ADC_Rn_ADDR(x, n)))
 /*@}*/
 
 /*
@@ -744,7 +744,7 @@ typedef union _hw_adc_rn
 #define BS_ADC_Rn_D          (16U)         /*!< Bit field size in bits for ADC_Rn_D. */
 
 /*! @brief Read current value of the ADC_Rn_D field. */
-#define BR_ADC_Rn_D(x, n)    (UNION_READ_BIT_FS(HW_ADC_Rn_ADDR(x, n), hw_adc_rn, B.D))
+#define BR_ADC_Rn_D(x, n)    (UNION_READ(hw_adc_rn_t, HW_ADC_Rn_ADDR(x, n), U, B.D))
 /*@}*/
 
 /*******************************************************************************
@@ -782,8 +782,8 @@ typedef union _hw_adc_cv1
 #define HW_ADC_CV1_ADDR(x)       ((x) + 0x18U)
 
 #define HW_ADC_CV1(x)            (*(__IO hw_adc_cv1_t *) HW_ADC_CV1_ADDR(x))
-#define HW_ADC_CV1_RD(x)         (HW_ADC_CV1(x).U)
-#define HW_ADC_CV1_WR(x, v)      (HW_ADC_CV1(x).U = (v))
+#define HW_ADC_CV1_RD(x)         (ADDRESS_READ(hw_adc_cv1_t, HW_ADC_CV1_ADDR(x)))
+#define HW_ADC_CV1_WR(x, v)      (ADDRESS_WRITE(hw_adc_cv1_t, HW_ADC_CV1_ADDR(x), v))
 #define HW_ADC_CV1_SET(x, v)     (HW_ADC_CV1_WR(x, HW_ADC_CV1_RD(x) |  (v)))
 #define HW_ADC_CV1_CLR(x, v)     (HW_ADC_CV1_WR(x, HW_ADC_CV1_RD(x) & ~(v)))
 #define HW_ADC_CV1_TOG(x, v)     (HW_ADC_CV1_WR(x, HW_ADC_CV1_RD(x) ^  (v)))
@@ -802,13 +802,13 @@ typedef union _hw_adc_cv1
 #define BS_ADC_CV1_CV        (16U)         /*!< Bit field size in bits for ADC_CV1_CV. */
 
 /*! @brief Read current value of the ADC_CV1_CV field. */
-#define BR_ADC_CV1_CV(x)     (UNION_READ_BIT_FS(HW_ADC_CV1_ADDR(x), hw_adc_cv1, B.CV))
+#define BR_ADC_CV1_CV(x)     (UNION_READ(hw_adc_cv1_t, HW_ADC_CV1_ADDR(x), U, B.CV))
 
 /*! @brief Format value for bitfield ADC_CV1_CV. */
 #define BF_ADC_CV1_CV(v)     ((uint32_t)((uint32_t)(v) << BP_ADC_CV1_CV) & BM_ADC_CV1_CV)
 
 /*! @brief Set the CV field to a new value. */
-#define BW_ADC_CV1_CV(x, v)  (UNION_WRITE_REG_FS(HW_ADC_CV1_ADDR(x), hw_adc_cv1, (HW_ADC_CV1_RD(x) & ~BM_ADC_CV1_CV) | BF_ADC_CV1_CV(v)))
+#define BW_ADC_CV1_CV(x, v)  (HW_ADC_CV1_WR(x, (HW_ADC_CV1_RD(x) & ~BM_ADC_CV1_CV) | BF_ADC_CV1_CV(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -846,8 +846,8 @@ typedef union _hw_adc_cv2
 #define HW_ADC_CV2_ADDR(x)       ((x) + 0x1CU)
 
 #define HW_ADC_CV2(x)            (*(__IO hw_adc_cv2_t *) HW_ADC_CV2_ADDR(x))
-#define HW_ADC_CV2_RD(x)         (HW_ADC_CV2(x).U)
-#define HW_ADC_CV2_WR(x, v)      (HW_ADC_CV2(x).U = (v))
+#define HW_ADC_CV2_RD(x)         (ADDRESS_READ(hw_adc_cv2_t, HW_ADC_CV2_ADDR(x)))
+#define HW_ADC_CV2_WR(x, v)      (ADDRESS_WRITE(hw_adc_cv2_t, HW_ADC_CV2_ADDR(x), v))
 #define HW_ADC_CV2_SET(x, v)     (HW_ADC_CV2_WR(x, HW_ADC_CV2_RD(x) |  (v)))
 #define HW_ADC_CV2_CLR(x, v)     (HW_ADC_CV2_WR(x, HW_ADC_CV2_RD(x) & ~(v)))
 #define HW_ADC_CV2_TOG(x, v)     (HW_ADC_CV2_WR(x, HW_ADC_CV2_RD(x) ^  (v)))
@@ -866,13 +866,13 @@ typedef union _hw_adc_cv2
 #define BS_ADC_CV2_CV        (16U)         /*!< Bit field size in bits for ADC_CV2_CV. */
 
 /*! @brief Read current value of the ADC_CV2_CV field. */
-#define BR_ADC_CV2_CV(x)     (UNION_READ_BIT_FS(HW_ADC_CV2_ADDR(x), hw_adc_cv2, B.CV))
+#define BR_ADC_CV2_CV(x)     (UNION_READ(hw_adc_cv2_t, HW_ADC_CV2_ADDR(x), U, B.CV))
 
 /*! @brief Format value for bitfield ADC_CV2_CV. */
 #define BF_ADC_CV2_CV(v)     ((uint32_t)((uint32_t)(v) << BP_ADC_CV2_CV) & BM_ADC_CV2_CV)
 
 /*! @brief Set the CV field to a new value. */
-#define BW_ADC_CV2_CV(x, v)  (UNION_WRITE_REG_FS(HW_ADC_CV2_ADDR(x), hw_adc_cv2, (HW_ADC_CV2_RD(x) & ~BM_ADC_CV2_CV) | BF_ADC_CV2_CV(v)))
+#define BW_ADC_CV2_CV(x, v)  (HW_ADC_CV2_WR(x, (HW_ADC_CV2_RD(x) & ~BM_ADC_CV2_CV) | BF_ADC_CV2_CV(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -911,8 +911,8 @@ typedef union _hw_adc_sc2
 #define HW_ADC_SC2_ADDR(x)       ((x) + 0x20U)
 
 #define HW_ADC_SC2(x)            (*(__IO hw_adc_sc2_t *) HW_ADC_SC2_ADDR(x))
-#define HW_ADC_SC2_RD(x)         (HW_ADC_SC2(x).U)
-#define HW_ADC_SC2_WR(x, v)      (HW_ADC_SC2(x).U = (v))
+#define HW_ADC_SC2_RD(x)         (ADDRESS_READ(hw_adc_sc2_t, HW_ADC_SC2_ADDR(x)))
+#define HW_ADC_SC2_WR(x, v)      (ADDRESS_WRITE(hw_adc_sc2_t, HW_ADC_SC2_ADDR(x), v))
 #define HW_ADC_SC2_SET(x, v)     (HW_ADC_SC2_WR(x, HW_ADC_SC2_RD(x) |  (v)))
 #define HW_ADC_SC2_CLR(x, v)     (HW_ADC_SC2_WR(x, HW_ADC_SC2_RD(x) & ~(v)))
 #define HW_ADC_SC2_TOG(x, v)     (HW_ADC_SC2_WR(x, HW_ADC_SC2_RD(x) ^  (v)))
@@ -943,13 +943,13 @@ typedef union _hw_adc_sc2
 #define BS_ADC_SC2_REFSEL    (2U)          /*!< Bit field size in bits for ADC_SC2_REFSEL. */
 
 /*! @brief Read current value of the ADC_SC2_REFSEL field. */
-#define BR_ADC_SC2_REFSEL(x) (UNION_READ_BIT_FS(HW_ADC_SC2_ADDR(x), hw_adc_sc2, B.REFSEL))
+#define BR_ADC_SC2_REFSEL(x) (UNION_READ(hw_adc_sc2_t, HW_ADC_SC2_ADDR(x), U, B.REFSEL))
 
 /*! @brief Format value for bitfield ADC_SC2_REFSEL. */
 #define BF_ADC_SC2_REFSEL(v) ((uint32_t)((uint32_t)(v) << BP_ADC_SC2_REFSEL) & BM_ADC_SC2_REFSEL)
 
 /*! @brief Set the REFSEL field to a new value. */
-#define BW_ADC_SC2_REFSEL(x, v) (UNION_WRITE_REG_FS(HW_ADC_SC2_ADDR(x), hw_adc_sc2, (HW_ADC_SC2_RD(x) & ~BM_ADC_SC2_REFSEL) | BF_ADC_SC2_REFSEL(v)))
+#define BW_ADC_SC2_REFSEL(x, v) (HW_ADC_SC2_WR(x, (HW_ADC_SC2_RD(x) & ~BM_ADC_SC2_REFSEL) | BF_ADC_SC2_REFSEL(v)))
 /*@}*/
 
 /*!
@@ -966,13 +966,13 @@ typedef union _hw_adc_sc2
 #define BS_ADC_SC2_DMAEN     (1U)          /*!< Bit field size in bits for ADC_SC2_DMAEN. */
 
 /*! @brief Read current value of the ADC_SC2_DMAEN field. */
-#define BR_ADC_SC2_DMAEN(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_DMAEN)))
+#define BR_ADC_SC2_DMAEN(x)  (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_DMAEN)))
 
 /*! @brief Format value for bitfield ADC_SC2_DMAEN. */
 #define BF_ADC_SC2_DMAEN(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_SC2_DMAEN) & BM_ADC_SC2_DMAEN)
 
 /*! @brief Set the DMAEN field to a new value. */
-#define BW_ADC_SC2_DMAEN(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_DMAEN), v))
+#define BW_ADC_SC2_DMAEN(x, v) (ADDRESS_WRITE(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_DMAEN), v))
 /*@}*/
 
 /*!
@@ -993,13 +993,13 @@ typedef union _hw_adc_sc2
 #define BS_ADC_SC2_ACREN     (1U)          /*!< Bit field size in bits for ADC_SC2_ACREN. */
 
 /*! @brief Read current value of the ADC_SC2_ACREN field. */
-#define BR_ADC_SC2_ACREN(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ACREN)))
+#define BR_ADC_SC2_ACREN(x)  (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ACREN)))
 
 /*! @brief Format value for bitfield ADC_SC2_ACREN. */
 #define BF_ADC_SC2_ACREN(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_SC2_ACREN) & BM_ADC_SC2_ACREN)
 
 /*! @brief Set the ACREN field to a new value. */
-#define BW_ADC_SC2_ACREN(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ACREN), v))
+#define BW_ADC_SC2_ACREN(x, v) (ADDRESS_WRITE(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ACREN), v))
 /*@}*/
 
 /*!
@@ -1022,13 +1022,13 @@ typedef union _hw_adc_sc2
 #define BS_ADC_SC2_ACFGT     (1U)          /*!< Bit field size in bits for ADC_SC2_ACFGT. */
 
 /*! @brief Read current value of the ADC_SC2_ACFGT field. */
-#define BR_ADC_SC2_ACFGT(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ACFGT)))
+#define BR_ADC_SC2_ACFGT(x)  (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ACFGT)))
 
 /*! @brief Format value for bitfield ADC_SC2_ACFGT. */
 #define BF_ADC_SC2_ACFGT(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_SC2_ACFGT) & BM_ADC_SC2_ACFGT)
 
 /*! @brief Set the ACFGT field to a new value. */
-#define BW_ADC_SC2_ACFGT(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ACFGT), v))
+#define BW_ADC_SC2_ACFGT(x, v) (ADDRESS_WRITE(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ACFGT), v))
 /*@}*/
 
 /*!
@@ -1046,13 +1046,13 @@ typedef union _hw_adc_sc2
 #define BS_ADC_SC2_ACFE      (1U)          /*!< Bit field size in bits for ADC_SC2_ACFE. */
 
 /*! @brief Read current value of the ADC_SC2_ACFE field. */
-#define BR_ADC_SC2_ACFE(x)   (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ACFE)))
+#define BR_ADC_SC2_ACFE(x)   (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ACFE)))
 
 /*! @brief Format value for bitfield ADC_SC2_ACFE. */
 #define BF_ADC_SC2_ACFE(v)   ((uint32_t)((uint32_t)(v) << BP_ADC_SC2_ACFE) & BM_ADC_SC2_ACFE)
 
 /*! @brief Set the ACFE field to a new value. */
-#define BW_ADC_SC2_ACFE(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ACFE), v))
+#define BW_ADC_SC2_ACFE(x, v) (ADDRESS_WRITE(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ACFE), v))
 /*@}*/
 
 /*!
@@ -1074,13 +1074,13 @@ typedef union _hw_adc_sc2
 #define BS_ADC_SC2_ADTRG     (1U)          /*!< Bit field size in bits for ADC_SC2_ADTRG. */
 
 /*! @brief Read current value of the ADC_SC2_ADTRG field. */
-#define BR_ADC_SC2_ADTRG(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ADTRG)))
+#define BR_ADC_SC2_ADTRG(x)  (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ADTRG)))
 
 /*! @brief Format value for bitfield ADC_SC2_ADTRG. */
 #define BF_ADC_SC2_ADTRG(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_SC2_ADTRG) & BM_ADC_SC2_ADTRG)
 
 /*! @brief Set the ADTRG field to a new value. */
-#define BW_ADC_SC2_ADTRG(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ADTRG), v))
+#define BW_ADC_SC2_ADTRG(x, v) (ADDRESS_WRITE(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ADTRG), v))
 /*@}*/
 
 /*!
@@ -1100,7 +1100,7 @@ typedef union _hw_adc_sc2
 #define BS_ADC_SC2_ADACT     (1U)          /*!< Bit field size in bits for ADC_SC2_ADACT. */
 
 /*! @brief Read current value of the ADC_SC2_ADACT field. */
-#define BR_ADC_SC2_ADACT(x)  (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ADACT)))
+#define BR_ADC_SC2_ADACT(x)  (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC2_ADDR(x), BP_ADC_SC2_ADACT)))
 /*@}*/
 
 /*******************************************************************************
@@ -1137,8 +1137,8 @@ typedef union _hw_adc_sc3
 #define HW_ADC_SC3_ADDR(x)       ((x) + 0x24U)
 
 #define HW_ADC_SC3(x)            (*(__IO hw_adc_sc3_t *) HW_ADC_SC3_ADDR(x))
-#define HW_ADC_SC3_RD(x)         (HW_ADC_SC3(x).U)
-#define HW_ADC_SC3_WR(x, v)      (HW_ADC_SC3(x).U = (v))
+#define HW_ADC_SC3_RD(x)         (ADDRESS_READ(hw_adc_sc3_t, HW_ADC_SC3_ADDR(x)))
+#define HW_ADC_SC3_WR(x, v)      (ADDRESS_WRITE(hw_adc_sc3_t, HW_ADC_SC3_ADDR(x), v))
 #define HW_ADC_SC3_SET(x, v)     (HW_ADC_SC3_WR(x, HW_ADC_SC3_RD(x) |  (v)))
 #define HW_ADC_SC3_CLR(x, v)     (HW_ADC_SC3_WR(x, HW_ADC_SC3_RD(x) & ~(v)))
 #define HW_ADC_SC3_TOG(x, v)     (HW_ADC_SC3_WR(x, HW_ADC_SC3_RD(x) ^  (v)))
@@ -1166,13 +1166,13 @@ typedef union _hw_adc_sc3
 #define BS_ADC_SC3_AVGS      (2U)          /*!< Bit field size in bits for ADC_SC3_AVGS. */
 
 /*! @brief Read current value of the ADC_SC3_AVGS field. */
-#define BR_ADC_SC3_AVGS(x)   (UNION_READ_BIT_FS(HW_ADC_SC3_ADDR(x), hw_adc_sc3, B.AVGS))
+#define BR_ADC_SC3_AVGS(x)   (UNION_READ(hw_adc_sc3_t, HW_ADC_SC3_ADDR(x), U, B.AVGS))
 
 /*! @brief Format value for bitfield ADC_SC3_AVGS. */
 #define BF_ADC_SC3_AVGS(v)   ((uint32_t)((uint32_t)(v) << BP_ADC_SC3_AVGS) & BM_ADC_SC3_AVGS)
 
 /*! @brief Set the AVGS field to a new value. */
-#define BW_ADC_SC3_AVGS(x, v) (UNION_WRITE_REG_FS(HW_ADC_SC3_ADDR(x), hw_adc_sc3, (HW_ADC_SC3_RD(x) & ~BM_ADC_SC3_AVGS) | BF_ADC_SC3_AVGS(v)))
+#define BW_ADC_SC3_AVGS(x, v) (HW_ADC_SC3_WR(x, (HW_ADC_SC3_RD(x) & ~BM_ADC_SC3_AVGS) | BF_ADC_SC3_AVGS(v)))
 /*@}*/
 
 /*!
@@ -1190,13 +1190,13 @@ typedef union _hw_adc_sc3
 #define BS_ADC_SC3_AVGE      (1U)          /*!< Bit field size in bits for ADC_SC3_AVGE. */
 
 /*! @brief Read current value of the ADC_SC3_AVGE field. */
-#define BR_ADC_SC3_AVGE(x)   (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_SC3_ADDR(x), BP_ADC_SC3_AVGE)))
+#define BR_ADC_SC3_AVGE(x)   (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC3_ADDR(x), BP_ADC_SC3_AVGE)))
 
 /*! @brief Format value for bitfield ADC_SC3_AVGE. */
 #define BF_ADC_SC3_AVGE(v)   ((uint32_t)((uint32_t)(v) << BP_ADC_SC3_AVGE) & BM_ADC_SC3_AVGE)
 
 /*! @brief Set the AVGE field to a new value. */
-#define BW_ADC_SC3_AVGE(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_ADC_SC3_ADDR(x), BP_ADC_SC3_AVGE), v))
+#define BW_ADC_SC3_AVGE(x, v) (ADDRESS_WRITE(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC3_ADDR(x), BP_ADC_SC3_AVGE), v))
 /*@}*/
 
 /*!
@@ -1216,13 +1216,13 @@ typedef union _hw_adc_sc3
 #define BS_ADC_SC3_ADCO      (1U)          /*!< Bit field size in bits for ADC_SC3_ADCO. */
 
 /*! @brief Read current value of the ADC_SC3_ADCO field. */
-#define BR_ADC_SC3_ADCO(x)   (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_SC3_ADDR(x), BP_ADC_SC3_ADCO)))
+#define BR_ADC_SC3_ADCO(x)   (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC3_ADDR(x), BP_ADC_SC3_ADCO)))
 
 /*! @brief Format value for bitfield ADC_SC3_ADCO. */
 #define BF_ADC_SC3_ADCO(v)   ((uint32_t)((uint32_t)(v) << BP_ADC_SC3_ADCO) & BM_ADC_SC3_ADCO)
 
 /*! @brief Set the ADCO field to a new value. */
-#define BW_ADC_SC3_ADCO(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_ADC_SC3_ADDR(x), BP_ADC_SC3_ADCO), v))
+#define BW_ADC_SC3_ADCO(x, v) (ADDRESS_WRITE(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC3_ADDR(x), BP_ADC_SC3_ADCO), v))
 /*@}*/
 
 /*!
@@ -1242,7 +1242,7 @@ typedef union _hw_adc_sc3
 #define BS_ADC_SC3_CALF      (1U)          /*!< Bit field size in bits for ADC_SC3_CALF. */
 
 /*! @brief Read current value of the ADC_SC3_CALF field. */
-#define BR_ADC_SC3_CALF(x)   (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_SC3_ADDR(x), BP_ADC_SC3_CALF)))
+#define BR_ADC_SC3_CALF(x)   (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC3_ADDR(x), BP_ADC_SC3_CALF)))
 /*@}*/
 
 /*!
@@ -1261,13 +1261,13 @@ typedef union _hw_adc_sc3
 #define BS_ADC_SC3_CAL       (1U)          /*!< Bit field size in bits for ADC_SC3_CAL. */
 
 /*! @brief Read current value of the ADC_SC3_CAL field. */
-#define BR_ADC_SC3_CAL(x)    (ADDRESS_READ32(BITBAND_ADDRESS32(HW_ADC_SC3_ADDR(x), BP_ADC_SC3_CAL)))
+#define BR_ADC_SC3_CAL(x)    (ADDRESS_READ(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC3_ADDR(x), BP_ADC_SC3_CAL)))
 
 /*! @brief Format value for bitfield ADC_SC3_CAL. */
 #define BF_ADC_SC3_CAL(v)    ((uint32_t)((uint32_t)(v) << BP_ADC_SC3_CAL) & BM_ADC_SC3_CAL)
 
 /*! @brief Set the CAL field to a new value. */
-#define BW_ADC_SC3_CAL(x, v) (ADDRESS_WRITE32(BITBAND_ADDRESS32(HW_ADC_SC3_ADDR(x), BP_ADC_SC3_CAL), v))
+#define BW_ADC_SC3_CAL(x, v) (ADDRESS_WRITE(uint32_t, BITBAND_ADDRESS32(HW_ADC_SC3_ADDR(x), BP_ADC_SC3_CAL), v))
 /*@}*/
 
 /*******************************************************************************
@@ -1303,8 +1303,8 @@ typedef union _hw_adc_ofs
 #define HW_ADC_OFS_ADDR(x)       ((x) + 0x28U)
 
 #define HW_ADC_OFS(x)            (*(__IO hw_adc_ofs_t *) HW_ADC_OFS_ADDR(x))
-#define HW_ADC_OFS_RD(x)         (HW_ADC_OFS(x).U)
-#define HW_ADC_OFS_WR(x, v)      (HW_ADC_OFS(x).U = (v))
+#define HW_ADC_OFS_RD(x)         (ADDRESS_READ(hw_adc_ofs_t, HW_ADC_OFS_ADDR(x)))
+#define HW_ADC_OFS_WR(x, v)      (ADDRESS_WRITE(hw_adc_ofs_t, HW_ADC_OFS_ADDR(x), v))
 #define HW_ADC_OFS_SET(x, v)     (HW_ADC_OFS_WR(x, HW_ADC_OFS_RD(x) |  (v)))
 #define HW_ADC_OFS_CLR(x, v)     (HW_ADC_OFS_WR(x, HW_ADC_OFS_RD(x) & ~(v)))
 #define HW_ADC_OFS_TOG(x, v)     (HW_ADC_OFS_WR(x, HW_ADC_OFS_RD(x) ^  (v)))
@@ -1323,13 +1323,13 @@ typedef union _hw_adc_ofs
 #define BS_ADC_OFS_OFS       (16U)         /*!< Bit field size in bits for ADC_OFS_OFS. */
 
 /*! @brief Read current value of the ADC_OFS_OFS field. */
-#define BR_ADC_OFS_OFS(x)    (UNION_READ_BIT_FS(HW_ADC_OFS_ADDR(x), hw_adc_ofs, B.OFS))
+#define BR_ADC_OFS_OFS(x)    (UNION_READ(hw_adc_ofs_t, HW_ADC_OFS_ADDR(x), U, B.OFS))
 
 /*! @brief Format value for bitfield ADC_OFS_OFS. */
 #define BF_ADC_OFS_OFS(v)    ((uint32_t)((uint32_t)(v) << BP_ADC_OFS_OFS) & BM_ADC_OFS_OFS)
 
 /*! @brief Set the OFS field to a new value. */
-#define BW_ADC_OFS_OFS(x, v) (UNION_WRITE_REG_FS(HW_ADC_OFS_ADDR(x), hw_adc_ofs, (HW_ADC_OFS_RD(x) & ~BM_ADC_OFS_OFS) | BF_ADC_OFS_OFS(v)))
+#define BW_ADC_OFS_OFS(x, v) (HW_ADC_OFS_WR(x, (HW_ADC_OFS_RD(x) & ~BM_ADC_OFS_OFS) | BF_ADC_OFS_OFS(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1365,8 +1365,8 @@ typedef union _hw_adc_pg
 #define HW_ADC_PG_ADDR(x)        ((x) + 0x2CU)
 
 #define HW_ADC_PG(x)             (*(__IO hw_adc_pg_t *) HW_ADC_PG_ADDR(x))
-#define HW_ADC_PG_RD(x)          (HW_ADC_PG(x).U)
-#define HW_ADC_PG_WR(x, v)       (HW_ADC_PG(x).U = (v))
+#define HW_ADC_PG_RD(x)          (ADDRESS_READ(hw_adc_pg_t, HW_ADC_PG_ADDR(x)))
+#define HW_ADC_PG_WR(x, v)       (ADDRESS_WRITE(hw_adc_pg_t, HW_ADC_PG_ADDR(x), v))
 #define HW_ADC_PG_SET(x, v)      (HW_ADC_PG_WR(x, HW_ADC_PG_RD(x) |  (v)))
 #define HW_ADC_PG_CLR(x, v)      (HW_ADC_PG_WR(x, HW_ADC_PG_RD(x) & ~(v)))
 #define HW_ADC_PG_TOG(x, v)      (HW_ADC_PG_WR(x, HW_ADC_PG_RD(x) ^  (v)))
@@ -1385,13 +1385,13 @@ typedef union _hw_adc_pg
 #define BS_ADC_PG_PG         (16U)         /*!< Bit field size in bits for ADC_PG_PG. */
 
 /*! @brief Read current value of the ADC_PG_PG field. */
-#define BR_ADC_PG_PG(x)      (UNION_READ_BIT_FS(HW_ADC_PG_ADDR(x), hw_adc_pg, B.PG))
+#define BR_ADC_PG_PG(x)      (UNION_READ(hw_adc_pg_t, HW_ADC_PG_ADDR(x), U, B.PG))
 
 /*! @brief Format value for bitfield ADC_PG_PG. */
 #define BF_ADC_PG_PG(v)      ((uint32_t)((uint32_t)(v) << BP_ADC_PG_PG) & BM_ADC_PG_PG)
 
 /*! @brief Set the PG field to a new value. */
-#define BW_ADC_PG_PG(x, v)   (UNION_WRITE_REG_FS(HW_ADC_PG_ADDR(x), hw_adc_pg, (HW_ADC_PG_RD(x) & ~BM_ADC_PG_PG) | BF_ADC_PG_PG(v)))
+#define BW_ADC_PG_PG(x, v)   (HW_ADC_PG_WR(x, (HW_ADC_PG_RD(x) & ~BM_ADC_PG_PG) | BF_ADC_PG_PG(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1427,8 +1427,8 @@ typedef union _hw_adc_mg
 #define HW_ADC_MG_ADDR(x)        ((x) + 0x30U)
 
 #define HW_ADC_MG(x)             (*(__IO hw_adc_mg_t *) HW_ADC_MG_ADDR(x))
-#define HW_ADC_MG_RD(x)          (HW_ADC_MG(x).U)
-#define HW_ADC_MG_WR(x, v)       (HW_ADC_MG(x).U = (v))
+#define HW_ADC_MG_RD(x)          (ADDRESS_READ(hw_adc_mg_t, HW_ADC_MG_ADDR(x)))
+#define HW_ADC_MG_WR(x, v)       (ADDRESS_WRITE(hw_adc_mg_t, HW_ADC_MG_ADDR(x), v))
 #define HW_ADC_MG_SET(x, v)      (HW_ADC_MG_WR(x, HW_ADC_MG_RD(x) |  (v)))
 #define HW_ADC_MG_CLR(x, v)      (HW_ADC_MG_WR(x, HW_ADC_MG_RD(x) & ~(v)))
 #define HW_ADC_MG_TOG(x, v)      (HW_ADC_MG_WR(x, HW_ADC_MG_RD(x) ^  (v)))
@@ -1447,13 +1447,13 @@ typedef union _hw_adc_mg
 #define BS_ADC_MG_MG         (16U)         /*!< Bit field size in bits for ADC_MG_MG. */
 
 /*! @brief Read current value of the ADC_MG_MG field. */
-#define BR_ADC_MG_MG(x)      (UNION_READ_BIT_FS(HW_ADC_MG_ADDR(x), hw_adc_mg, B.MG))
+#define BR_ADC_MG_MG(x)      (UNION_READ(hw_adc_mg_t, HW_ADC_MG_ADDR(x), U, B.MG))
 
 /*! @brief Format value for bitfield ADC_MG_MG. */
 #define BF_ADC_MG_MG(v)      ((uint32_t)((uint32_t)(v) << BP_ADC_MG_MG) & BM_ADC_MG_MG)
 
 /*! @brief Set the MG field to a new value. */
-#define BW_ADC_MG_MG(x, v)   (UNION_WRITE_REG_FS(HW_ADC_MG_ADDR(x), hw_adc_mg, (HW_ADC_MG_RD(x) & ~BM_ADC_MG_MG) | BF_ADC_MG_MG(v)))
+#define BW_ADC_MG_MG(x, v)   (HW_ADC_MG_WR(x, (HW_ADC_MG_RD(x) & ~BM_ADC_MG_MG) | BF_ADC_MG_MG(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1490,8 +1490,8 @@ typedef union _hw_adc_clpd
 #define HW_ADC_CLPD_ADDR(x)      ((x) + 0x34U)
 
 #define HW_ADC_CLPD(x)           (*(__IO hw_adc_clpd_t *) HW_ADC_CLPD_ADDR(x))
-#define HW_ADC_CLPD_RD(x)        (HW_ADC_CLPD(x).U)
-#define HW_ADC_CLPD_WR(x, v)     (HW_ADC_CLPD(x).U = (v))
+#define HW_ADC_CLPD_RD(x)        (ADDRESS_READ(hw_adc_clpd_t, HW_ADC_CLPD_ADDR(x)))
+#define HW_ADC_CLPD_WR(x, v)     (ADDRESS_WRITE(hw_adc_clpd_t, HW_ADC_CLPD_ADDR(x), v))
 #define HW_ADC_CLPD_SET(x, v)    (HW_ADC_CLPD_WR(x, HW_ADC_CLPD_RD(x) |  (v)))
 #define HW_ADC_CLPD_CLR(x, v)    (HW_ADC_CLPD_WR(x, HW_ADC_CLPD_RD(x) & ~(v)))
 #define HW_ADC_CLPD_TOG(x, v)    (HW_ADC_CLPD_WR(x, HW_ADC_CLPD_RD(x) ^  (v)))
@@ -1512,13 +1512,13 @@ typedef union _hw_adc_clpd
 #define BS_ADC_CLPD_CLPD     (6U)          /*!< Bit field size in bits for ADC_CLPD_CLPD. */
 
 /*! @brief Read current value of the ADC_CLPD_CLPD field. */
-#define BR_ADC_CLPD_CLPD(x)  (UNION_READ_BIT_FS(HW_ADC_CLPD_ADDR(x), hw_adc_clpd, B.CLPD))
+#define BR_ADC_CLPD_CLPD(x)  (UNION_READ(hw_adc_clpd_t, HW_ADC_CLPD_ADDR(x), U, B.CLPD))
 
 /*! @brief Format value for bitfield ADC_CLPD_CLPD. */
 #define BF_ADC_CLPD_CLPD(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_CLPD_CLPD) & BM_ADC_CLPD_CLPD)
 
 /*! @brief Set the CLPD field to a new value. */
-#define BW_ADC_CLPD_CLPD(x, v) (UNION_WRITE_REG_FS(HW_ADC_CLPD_ADDR(x), hw_adc_clpd, (HW_ADC_CLPD_RD(x) & ~BM_ADC_CLPD_CLPD) | BF_ADC_CLPD_CLPD(v)))
+#define BW_ADC_CLPD_CLPD(x, v) (HW_ADC_CLPD_WR(x, (HW_ADC_CLPD_RD(x) & ~BM_ADC_CLPD_CLPD) | BF_ADC_CLPD_CLPD(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1549,8 +1549,8 @@ typedef union _hw_adc_clps
 #define HW_ADC_CLPS_ADDR(x)      ((x) + 0x38U)
 
 #define HW_ADC_CLPS(x)           (*(__IO hw_adc_clps_t *) HW_ADC_CLPS_ADDR(x))
-#define HW_ADC_CLPS_RD(x)        (HW_ADC_CLPS(x).U)
-#define HW_ADC_CLPS_WR(x, v)     (HW_ADC_CLPS(x).U = (v))
+#define HW_ADC_CLPS_RD(x)        (ADDRESS_READ(hw_adc_clps_t, HW_ADC_CLPS_ADDR(x)))
+#define HW_ADC_CLPS_WR(x, v)     (ADDRESS_WRITE(hw_adc_clps_t, HW_ADC_CLPS_ADDR(x), v))
 #define HW_ADC_CLPS_SET(x, v)    (HW_ADC_CLPS_WR(x, HW_ADC_CLPS_RD(x) |  (v)))
 #define HW_ADC_CLPS_CLR(x, v)    (HW_ADC_CLPS_WR(x, HW_ADC_CLPS_RD(x) & ~(v)))
 #define HW_ADC_CLPS_TOG(x, v)    (HW_ADC_CLPS_WR(x, HW_ADC_CLPS_RD(x) ^  (v)))
@@ -1571,13 +1571,13 @@ typedef union _hw_adc_clps
 #define BS_ADC_CLPS_CLPS     (6U)          /*!< Bit field size in bits for ADC_CLPS_CLPS. */
 
 /*! @brief Read current value of the ADC_CLPS_CLPS field. */
-#define BR_ADC_CLPS_CLPS(x)  (UNION_READ_BIT_FS(HW_ADC_CLPS_ADDR(x), hw_adc_clps, B.CLPS))
+#define BR_ADC_CLPS_CLPS(x)  (UNION_READ(hw_adc_clps_t, HW_ADC_CLPS_ADDR(x), U, B.CLPS))
 
 /*! @brief Format value for bitfield ADC_CLPS_CLPS. */
 #define BF_ADC_CLPS_CLPS(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_CLPS_CLPS) & BM_ADC_CLPS_CLPS)
 
 /*! @brief Set the CLPS field to a new value. */
-#define BW_ADC_CLPS_CLPS(x, v) (UNION_WRITE_REG_FS(HW_ADC_CLPS_ADDR(x), hw_adc_clps, (HW_ADC_CLPS_RD(x) & ~BM_ADC_CLPS_CLPS) | BF_ADC_CLPS_CLPS(v)))
+#define BW_ADC_CLPS_CLPS(x, v) (HW_ADC_CLPS_WR(x, (HW_ADC_CLPS_RD(x) & ~BM_ADC_CLPS_CLPS) | BF_ADC_CLPS_CLPS(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1608,8 +1608,8 @@ typedef union _hw_adc_clp4
 #define HW_ADC_CLP4_ADDR(x)      ((x) + 0x3CU)
 
 #define HW_ADC_CLP4(x)           (*(__IO hw_adc_clp4_t *) HW_ADC_CLP4_ADDR(x))
-#define HW_ADC_CLP4_RD(x)        (HW_ADC_CLP4(x).U)
-#define HW_ADC_CLP4_WR(x, v)     (HW_ADC_CLP4(x).U = (v))
+#define HW_ADC_CLP4_RD(x)        (ADDRESS_READ(hw_adc_clp4_t, HW_ADC_CLP4_ADDR(x)))
+#define HW_ADC_CLP4_WR(x, v)     (ADDRESS_WRITE(hw_adc_clp4_t, HW_ADC_CLP4_ADDR(x), v))
 #define HW_ADC_CLP4_SET(x, v)    (HW_ADC_CLP4_WR(x, HW_ADC_CLP4_RD(x) |  (v)))
 #define HW_ADC_CLP4_CLR(x, v)    (HW_ADC_CLP4_WR(x, HW_ADC_CLP4_RD(x) & ~(v)))
 #define HW_ADC_CLP4_TOG(x, v)    (HW_ADC_CLP4_WR(x, HW_ADC_CLP4_RD(x) ^  (v)))
@@ -1630,13 +1630,13 @@ typedef union _hw_adc_clp4
 #define BS_ADC_CLP4_CLP4     (10U)         /*!< Bit field size in bits for ADC_CLP4_CLP4. */
 
 /*! @brief Read current value of the ADC_CLP4_CLP4 field. */
-#define BR_ADC_CLP4_CLP4(x)  (UNION_READ_BIT_FS(HW_ADC_CLP4_ADDR(x), hw_adc_clp4, B.CLP4))
+#define BR_ADC_CLP4_CLP4(x)  (UNION_READ(hw_adc_clp4_t, HW_ADC_CLP4_ADDR(x), U, B.CLP4))
 
 /*! @brief Format value for bitfield ADC_CLP4_CLP4. */
 #define BF_ADC_CLP4_CLP4(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_CLP4_CLP4) & BM_ADC_CLP4_CLP4)
 
 /*! @brief Set the CLP4 field to a new value. */
-#define BW_ADC_CLP4_CLP4(x, v) (UNION_WRITE_REG_FS(HW_ADC_CLP4_ADDR(x), hw_adc_clp4, (HW_ADC_CLP4_RD(x) & ~BM_ADC_CLP4_CLP4) | BF_ADC_CLP4_CLP4(v)))
+#define BW_ADC_CLP4_CLP4(x, v) (HW_ADC_CLP4_WR(x, (HW_ADC_CLP4_RD(x) & ~BM_ADC_CLP4_CLP4) | BF_ADC_CLP4_CLP4(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1667,8 +1667,8 @@ typedef union _hw_adc_clp3
 #define HW_ADC_CLP3_ADDR(x)      ((x) + 0x40U)
 
 #define HW_ADC_CLP3(x)           (*(__IO hw_adc_clp3_t *) HW_ADC_CLP3_ADDR(x))
-#define HW_ADC_CLP3_RD(x)        (HW_ADC_CLP3(x).U)
-#define HW_ADC_CLP3_WR(x, v)     (HW_ADC_CLP3(x).U = (v))
+#define HW_ADC_CLP3_RD(x)        (ADDRESS_READ(hw_adc_clp3_t, HW_ADC_CLP3_ADDR(x)))
+#define HW_ADC_CLP3_WR(x, v)     (ADDRESS_WRITE(hw_adc_clp3_t, HW_ADC_CLP3_ADDR(x), v))
 #define HW_ADC_CLP3_SET(x, v)    (HW_ADC_CLP3_WR(x, HW_ADC_CLP3_RD(x) |  (v)))
 #define HW_ADC_CLP3_CLR(x, v)    (HW_ADC_CLP3_WR(x, HW_ADC_CLP3_RD(x) & ~(v)))
 #define HW_ADC_CLP3_TOG(x, v)    (HW_ADC_CLP3_WR(x, HW_ADC_CLP3_RD(x) ^  (v)))
@@ -1689,13 +1689,13 @@ typedef union _hw_adc_clp3
 #define BS_ADC_CLP3_CLP3     (9U)          /*!< Bit field size in bits for ADC_CLP3_CLP3. */
 
 /*! @brief Read current value of the ADC_CLP3_CLP3 field. */
-#define BR_ADC_CLP3_CLP3(x)  (UNION_READ_BIT_FS(HW_ADC_CLP3_ADDR(x), hw_adc_clp3, B.CLP3))
+#define BR_ADC_CLP3_CLP3(x)  (UNION_READ(hw_adc_clp3_t, HW_ADC_CLP3_ADDR(x), U, B.CLP3))
 
 /*! @brief Format value for bitfield ADC_CLP3_CLP3. */
 #define BF_ADC_CLP3_CLP3(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_CLP3_CLP3) & BM_ADC_CLP3_CLP3)
 
 /*! @brief Set the CLP3 field to a new value. */
-#define BW_ADC_CLP3_CLP3(x, v) (UNION_WRITE_REG_FS(HW_ADC_CLP3_ADDR(x), hw_adc_clp3, (HW_ADC_CLP3_RD(x) & ~BM_ADC_CLP3_CLP3) | BF_ADC_CLP3_CLP3(v)))
+#define BW_ADC_CLP3_CLP3(x, v) (HW_ADC_CLP3_WR(x, (HW_ADC_CLP3_RD(x) & ~BM_ADC_CLP3_CLP3) | BF_ADC_CLP3_CLP3(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1726,8 +1726,8 @@ typedef union _hw_adc_clp2
 #define HW_ADC_CLP2_ADDR(x)      ((x) + 0x44U)
 
 #define HW_ADC_CLP2(x)           (*(__IO hw_adc_clp2_t *) HW_ADC_CLP2_ADDR(x))
-#define HW_ADC_CLP2_RD(x)        (HW_ADC_CLP2(x).U)
-#define HW_ADC_CLP2_WR(x, v)     (HW_ADC_CLP2(x).U = (v))
+#define HW_ADC_CLP2_RD(x)        (ADDRESS_READ(hw_adc_clp2_t, HW_ADC_CLP2_ADDR(x)))
+#define HW_ADC_CLP2_WR(x, v)     (ADDRESS_WRITE(hw_adc_clp2_t, HW_ADC_CLP2_ADDR(x), v))
 #define HW_ADC_CLP2_SET(x, v)    (HW_ADC_CLP2_WR(x, HW_ADC_CLP2_RD(x) |  (v)))
 #define HW_ADC_CLP2_CLR(x, v)    (HW_ADC_CLP2_WR(x, HW_ADC_CLP2_RD(x) & ~(v)))
 #define HW_ADC_CLP2_TOG(x, v)    (HW_ADC_CLP2_WR(x, HW_ADC_CLP2_RD(x) ^  (v)))
@@ -1748,13 +1748,13 @@ typedef union _hw_adc_clp2
 #define BS_ADC_CLP2_CLP2     (8U)          /*!< Bit field size in bits for ADC_CLP2_CLP2. */
 
 /*! @brief Read current value of the ADC_CLP2_CLP2 field. */
-#define BR_ADC_CLP2_CLP2(x)  (UNION_READ_BIT_FS(HW_ADC_CLP2_ADDR(x), hw_adc_clp2, B.CLP2))
+#define BR_ADC_CLP2_CLP2(x)  (UNION_READ(hw_adc_clp2_t, HW_ADC_CLP2_ADDR(x), U, B.CLP2))
 
 /*! @brief Format value for bitfield ADC_CLP2_CLP2. */
 #define BF_ADC_CLP2_CLP2(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_CLP2_CLP2) & BM_ADC_CLP2_CLP2)
 
 /*! @brief Set the CLP2 field to a new value. */
-#define BW_ADC_CLP2_CLP2(x, v) (UNION_WRITE_REG_FS(HW_ADC_CLP2_ADDR(x), hw_adc_clp2, (HW_ADC_CLP2_RD(x) & ~BM_ADC_CLP2_CLP2) | BF_ADC_CLP2_CLP2(v)))
+#define BW_ADC_CLP2_CLP2(x, v) (HW_ADC_CLP2_WR(x, (HW_ADC_CLP2_RD(x) & ~BM_ADC_CLP2_CLP2) | BF_ADC_CLP2_CLP2(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1785,8 +1785,8 @@ typedef union _hw_adc_clp1
 #define HW_ADC_CLP1_ADDR(x)      ((x) + 0x48U)
 
 #define HW_ADC_CLP1(x)           (*(__IO hw_adc_clp1_t *) HW_ADC_CLP1_ADDR(x))
-#define HW_ADC_CLP1_RD(x)        (HW_ADC_CLP1(x).U)
-#define HW_ADC_CLP1_WR(x, v)     (HW_ADC_CLP1(x).U = (v))
+#define HW_ADC_CLP1_RD(x)        (ADDRESS_READ(hw_adc_clp1_t, HW_ADC_CLP1_ADDR(x)))
+#define HW_ADC_CLP1_WR(x, v)     (ADDRESS_WRITE(hw_adc_clp1_t, HW_ADC_CLP1_ADDR(x), v))
 #define HW_ADC_CLP1_SET(x, v)    (HW_ADC_CLP1_WR(x, HW_ADC_CLP1_RD(x) |  (v)))
 #define HW_ADC_CLP1_CLR(x, v)    (HW_ADC_CLP1_WR(x, HW_ADC_CLP1_RD(x) & ~(v)))
 #define HW_ADC_CLP1_TOG(x, v)    (HW_ADC_CLP1_WR(x, HW_ADC_CLP1_RD(x) ^  (v)))
@@ -1807,13 +1807,13 @@ typedef union _hw_adc_clp1
 #define BS_ADC_CLP1_CLP1     (7U)          /*!< Bit field size in bits for ADC_CLP1_CLP1. */
 
 /*! @brief Read current value of the ADC_CLP1_CLP1 field. */
-#define BR_ADC_CLP1_CLP1(x)  (UNION_READ_BIT_FS(HW_ADC_CLP1_ADDR(x), hw_adc_clp1, B.CLP1))
+#define BR_ADC_CLP1_CLP1(x)  (UNION_READ(hw_adc_clp1_t, HW_ADC_CLP1_ADDR(x), U, B.CLP1))
 
 /*! @brief Format value for bitfield ADC_CLP1_CLP1. */
 #define BF_ADC_CLP1_CLP1(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_CLP1_CLP1) & BM_ADC_CLP1_CLP1)
 
 /*! @brief Set the CLP1 field to a new value. */
-#define BW_ADC_CLP1_CLP1(x, v) (UNION_WRITE_REG_FS(HW_ADC_CLP1_ADDR(x), hw_adc_clp1, (HW_ADC_CLP1_RD(x) & ~BM_ADC_CLP1_CLP1) | BF_ADC_CLP1_CLP1(v)))
+#define BW_ADC_CLP1_CLP1(x, v) (HW_ADC_CLP1_WR(x, (HW_ADC_CLP1_RD(x) & ~BM_ADC_CLP1_CLP1) | BF_ADC_CLP1_CLP1(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1844,8 +1844,8 @@ typedef union _hw_adc_clp0
 #define HW_ADC_CLP0_ADDR(x)      ((x) + 0x4CU)
 
 #define HW_ADC_CLP0(x)           (*(__IO hw_adc_clp0_t *) HW_ADC_CLP0_ADDR(x))
-#define HW_ADC_CLP0_RD(x)        (HW_ADC_CLP0(x).U)
-#define HW_ADC_CLP0_WR(x, v)     (HW_ADC_CLP0(x).U = (v))
+#define HW_ADC_CLP0_RD(x)        (ADDRESS_READ(hw_adc_clp0_t, HW_ADC_CLP0_ADDR(x)))
+#define HW_ADC_CLP0_WR(x, v)     (ADDRESS_WRITE(hw_adc_clp0_t, HW_ADC_CLP0_ADDR(x), v))
 #define HW_ADC_CLP0_SET(x, v)    (HW_ADC_CLP0_WR(x, HW_ADC_CLP0_RD(x) |  (v)))
 #define HW_ADC_CLP0_CLR(x, v)    (HW_ADC_CLP0_WR(x, HW_ADC_CLP0_RD(x) & ~(v)))
 #define HW_ADC_CLP0_TOG(x, v)    (HW_ADC_CLP0_WR(x, HW_ADC_CLP0_RD(x) ^  (v)))
@@ -1866,13 +1866,13 @@ typedef union _hw_adc_clp0
 #define BS_ADC_CLP0_CLP0     (6U)          /*!< Bit field size in bits for ADC_CLP0_CLP0. */
 
 /*! @brief Read current value of the ADC_CLP0_CLP0 field. */
-#define BR_ADC_CLP0_CLP0(x)  (UNION_READ_BIT_FS(HW_ADC_CLP0_ADDR(x), hw_adc_clp0, B.CLP0))
+#define BR_ADC_CLP0_CLP0(x)  (UNION_READ(hw_adc_clp0_t, HW_ADC_CLP0_ADDR(x), U, B.CLP0))
 
 /*! @brief Format value for bitfield ADC_CLP0_CLP0. */
 #define BF_ADC_CLP0_CLP0(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_CLP0_CLP0) & BM_ADC_CLP0_CLP0)
 
 /*! @brief Set the CLP0 field to a new value. */
-#define BW_ADC_CLP0_CLP0(x, v) (UNION_WRITE_REG_FS(HW_ADC_CLP0_ADDR(x), hw_adc_clp0, (HW_ADC_CLP0_RD(x) & ~BM_ADC_CLP0_CLP0) | BF_ADC_CLP0_CLP0(v)))
+#define BW_ADC_CLP0_CLP0(x, v) (HW_ADC_CLP0_WR(x, (HW_ADC_CLP0_RD(x) & ~BM_ADC_CLP0_CLP0) | BF_ADC_CLP0_CLP0(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1909,8 +1909,8 @@ typedef union _hw_adc_clmd
 #define HW_ADC_CLMD_ADDR(x)      ((x) + 0x54U)
 
 #define HW_ADC_CLMD(x)           (*(__IO hw_adc_clmd_t *) HW_ADC_CLMD_ADDR(x))
-#define HW_ADC_CLMD_RD(x)        (HW_ADC_CLMD(x).U)
-#define HW_ADC_CLMD_WR(x, v)     (HW_ADC_CLMD(x).U = (v))
+#define HW_ADC_CLMD_RD(x)        (ADDRESS_READ(hw_adc_clmd_t, HW_ADC_CLMD_ADDR(x)))
+#define HW_ADC_CLMD_WR(x, v)     (ADDRESS_WRITE(hw_adc_clmd_t, HW_ADC_CLMD_ADDR(x), v))
 #define HW_ADC_CLMD_SET(x, v)    (HW_ADC_CLMD_WR(x, HW_ADC_CLMD_RD(x) |  (v)))
 #define HW_ADC_CLMD_CLR(x, v)    (HW_ADC_CLMD_WR(x, HW_ADC_CLMD_RD(x) & ~(v)))
 #define HW_ADC_CLMD_TOG(x, v)    (HW_ADC_CLMD_WR(x, HW_ADC_CLMD_RD(x) ^  (v)))
@@ -1931,13 +1931,13 @@ typedef union _hw_adc_clmd
 #define BS_ADC_CLMD_CLMD     (6U)          /*!< Bit field size in bits for ADC_CLMD_CLMD. */
 
 /*! @brief Read current value of the ADC_CLMD_CLMD field. */
-#define BR_ADC_CLMD_CLMD(x)  (UNION_READ_BIT_FS(HW_ADC_CLMD_ADDR(x), hw_adc_clmd, B.CLMD))
+#define BR_ADC_CLMD_CLMD(x)  (UNION_READ(hw_adc_clmd_t, HW_ADC_CLMD_ADDR(x), U, B.CLMD))
 
 /*! @brief Format value for bitfield ADC_CLMD_CLMD. */
 #define BF_ADC_CLMD_CLMD(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_CLMD_CLMD) & BM_ADC_CLMD_CLMD)
 
 /*! @brief Set the CLMD field to a new value. */
-#define BW_ADC_CLMD_CLMD(x, v) (UNION_WRITE_REG_FS(HW_ADC_CLMD_ADDR(x), hw_adc_clmd, (HW_ADC_CLMD_RD(x) & ~BM_ADC_CLMD_CLMD) | BF_ADC_CLMD_CLMD(v)))
+#define BW_ADC_CLMD_CLMD(x, v) (HW_ADC_CLMD_WR(x, (HW_ADC_CLMD_RD(x) & ~BM_ADC_CLMD_CLMD) | BF_ADC_CLMD_CLMD(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -1968,8 +1968,8 @@ typedef union _hw_adc_clms
 #define HW_ADC_CLMS_ADDR(x)      ((x) + 0x58U)
 
 #define HW_ADC_CLMS(x)           (*(__IO hw_adc_clms_t *) HW_ADC_CLMS_ADDR(x))
-#define HW_ADC_CLMS_RD(x)        (HW_ADC_CLMS(x).U)
-#define HW_ADC_CLMS_WR(x, v)     (HW_ADC_CLMS(x).U = (v))
+#define HW_ADC_CLMS_RD(x)        (ADDRESS_READ(hw_adc_clms_t, HW_ADC_CLMS_ADDR(x)))
+#define HW_ADC_CLMS_WR(x, v)     (ADDRESS_WRITE(hw_adc_clms_t, HW_ADC_CLMS_ADDR(x), v))
 #define HW_ADC_CLMS_SET(x, v)    (HW_ADC_CLMS_WR(x, HW_ADC_CLMS_RD(x) |  (v)))
 #define HW_ADC_CLMS_CLR(x, v)    (HW_ADC_CLMS_WR(x, HW_ADC_CLMS_RD(x) & ~(v)))
 #define HW_ADC_CLMS_TOG(x, v)    (HW_ADC_CLMS_WR(x, HW_ADC_CLMS_RD(x) ^  (v)))
@@ -1990,13 +1990,13 @@ typedef union _hw_adc_clms
 #define BS_ADC_CLMS_CLMS     (6U)          /*!< Bit field size in bits for ADC_CLMS_CLMS. */
 
 /*! @brief Read current value of the ADC_CLMS_CLMS field. */
-#define BR_ADC_CLMS_CLMS(x)  (UNION_READ_BIT_FS(HW_ADC_CLMS_ADDR(x), hw_adc_clms, B.CLMS))
+#define BR_ADC_CLMS_CLMS(x)  (UNION_READ(hw_adc_clms_t, HW_ADC_CLMS_ADDR(x), U, B.CLMS))
 
 /*! @brief Format value for bitfield ADC_CLMS_CLMS. */
 #define BF_ADC_CLMS_CLMS(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_CLMS_CLMS) & BM_ADC_CLMS_CLMS)
 
 /*! @brief Set the CLMS field to a new value. */
-#define BW_ADC_CLMS_CLMS(x, v) (UNION_WRITE_REG_FS(HW_ADC_CLMS_ADDR(x), hw_adc_clms, (HW_ADC_CLMS_RD(x) & ~BM_ADC_CLMS_CLMS) | BF_ADC_CLMS_CLMS(v)))
+#define BW_ADC_CLMS_CLMS(x, v) (HW_ADC_CLMS_WR(x, (HW_ADC_CLMS_RD(x) & ~BM_ADC_CLMS_CLMS) | BF_ADC_CLMS_CLMS(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -2027,8 +2027,8 @@ typedef union _hw_adc_clm4
 #define HW_ADC_CLM4_ADDR(x)      ((x) + 0x5CU)
 
 #define HW_ADC_CLM4(x)           (*(__IO hw_adc_clm4_t *) HW_ADC_CLM4_ADDR(x))
-#define HW_ADC_CLM4_RD(x)        (HW_ADC_CLM4(x).U)
-#define HW_ADC_CLM4_WR(x, v)     (HW_ADC_CLM4(x).U = (v))
+#define HW_ADC_CLM4_RD(x)        (ADDRESS_READ(hw_adc_clm4_t, HW_ADC_CLM4_ADDR(x)))
+#define HW_ADC_CLM4_WR(x, v)     (ADDRESS_WRITE(hw_adc_clm4_t, HW_ADC_CLM4_ADDR(x), v))
 #define HW_ADC_CLM4_SET(x, v)    (HW_ADC_CLM4_WR(x, HW_ADC_CLM4_RD(x) |  (v)))
 #define HW_ADC_CLM4_CLR(x, v)    (HW_ADC_CLM4_WR(x, HW_ADC_CLM4_RD(x) & ~(v)))
 #define HW_ADC_CLM4_TOG(x, v)    (HW_ADC_CLM4_WR(x, HW_ADC_CLM4_RD(x) ^  (v)))
@@ -2049,13 +2049,13 @@ typedef union _hw_adc_clm4
 #define BS_ADC_CLM4_CLM4     (10U)         /*!< Bit field size in bits for ADC_CLM4_CLM4. */
 
 /*! @brief Read current value of the ADC_CLM4_CLM4 field. */
-#define BR_ADC_CLM4_CLM4(x)  (UNION_READ_BIT_FS(HW_ADC_CLM4_ADDR(x), hw_adc_clm4, B.CLM4))
+#define BR_ADC_CLM4_CLM4(x)  (UNION_READ(hw_adc_clm4_t, HW_ADC_CLM4_ADDR(x), U, B.CLM4))
 
 /*! @brief Format value for bitfield ADC_CLM4_CLM4. */
 #define BF_ADC_CLM4_CLM4(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_CLM4_CLM4) & BM_ADC_CLM4_CLM4)
 
 /*! @brief Set the CLM4 field to a new value. */
-#define BW_ADC_CLM4_CLM4(x, v) (UNION_WRITE_REG_FS(HW_ADC_CLM4_ADDR(x), hw_adc_clm4, (HW_ADC_CLM4_RD(x) & ~BM_ADC_CLM4_CLM4) | BF_ADC_CLM4_CLM4(v)))
+#define BW_ADC_CLM4_CLM4(x, v) (HW_ADC_CLM4_WR(x, (HW_ADC_CLM4_RD(x) & ~BM_ADC_CLM4_CLM4) | BF_ADC_CLM4_CLM4(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -2086,8 +2086,8 @@ typedef union _hw_adc_clm3
 #define HW_ADC_CLM3_ADDR(x)      ((x) + 0x60U)
 
 #define HW_ADC_CLM3(x)           (*(__IO hw_adc_clm3_t *) HW_ADC_CLM3_ADDR(x))
-#define HW_ADC_CLM3_RD(x)        (HW_ADC_CLM3(x).U)
-#define HW_ADC_CLM3_WR(x, v)     (HW_ADC_CLM3(x).U = (v))
+#define HW_ADC_CLM3_RD(x)        (ADDRESS_READ(hw_adc_clm3_t, HW_ADC_CLM3_ADDR(x)))
+#define HW_ADC_CLM3_WR(x, v)     (ADDRESS_WRITE(hw_adc_clm3_t, HW_ADC_CLM3_ADDR(x), v))
 #define HW_ADC_CLM3_SET(x, v)    (HW_ADC_CLM3_WR(x, HW_ADC_CLM3_RD(x) |  (v)))
 #define HW_ADC_CLM3_CLR(x, v)    (HW_ADC_CLM3_WR(x, HW_ADC_CLM3_RD(x) & ~(v)))
 #define HW_ADC_CLM3_TOG(x, v)    (HW_ADC_CLM3_WR(x, HW_ADC_CLM3_RD(x) ^  (v)))
@@ -2108,13 +2108,13 @@ typedef union _hw_adc_clm3
 #define BS_ADC_CLM3_CLM3     (9U)          /*!< Bit field size in bits for ADC_CLM3_CLM3. */
 
 /*! @brief Read current value of the ADC_CLM3_CLM3 field. */
-#define BR_ADC_CLM3_CLM3(x)  (UNION_READ_BIT_FS(HW_ADC_CLM3_ADDR(x), hw_adc_clm3, B.CLM3))
+#define BR_ADC_CLM3_CLM3(x)  (UNION_READ(hw_adc_clm3_t, HW_ADC_CLM3_ADDR(x), U, B.CLM3))
 
 /*! @brief Format value for bitfield ADC_CLM3_CLM3. */
 #define BF_ADC_CLM3_CLM3(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_CLM3_CLM3) & BM_ADC_CLM3_CLM3)
 
 /*! @brief Set the CLM3 field to a new value. */
-#define BW_ADC_CLM3_CLM3(x, v) (UNION_WRITE_REG_FS(HW_ADC_CLM3_ADDR(x), hw_adc_clm3, (HW_ADC_CLM3_RD(x) & ~BM_ADC_CLM3_CLM3) | BF_ADC_CLM3_CLM3(v)))
+#define BW_ADC_CLM3_CLM3(x, v) (HW_ADC_CLM3_WR(x, (HW_ADC_CLM3_RD(x) & ~BM_ADC_CLM3_CLM3) | BF_ADC_CLM3_CLM3(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -2145,8 +2145,8 @@ typedef union _hw_adc_clm2
 #define HW_ADC_CLM2_ADDR(x)      ((x) + 0x64U)
 
 #define HW_ADC_CLM2(x)           (*(__IO hw_adc_clm2_t *) HW_ADC_CLM2_ADDR(x))
-#define HW_ADC_CLM2_RD(x)        (HW_ADC_CLM2(x).U)
-#define HW_ADC_CLM2_WR(x, v)     (HW_ADC_CLM2(x).U = (v))
+#define HW_ADC_CLM2_RD(x)        (ADDRESS_READ(hw_adc_clm2_t, HW_ADC_CLM2_ADDR(x)))
+#define HW_ADC_CLM2_WR(x, v)     (ADDRESS_WRITE(hw_adc_clm2_t, HW_ADC_CLM2_ADDR(x), v))
 #define HW_ADC_CLM2_SET(x, v)    (HW_ADC_CLM2_WR(x, HW_ADC_CLM2_RD(x) |  (v)))
 #define HW_ADC_CLM2_CLR(x, v)    (HW_ADC_CLM2_WR(x, HW_ADC_CLM2_RD(x) & ~(v)))
 #define HW_ADC_CLM2_TOG(x, v)    (HW_ADC_CLM2_WR(x, HW_ADC_CLM2_RD(x) ^  (v)))
@@ -2167,13 +2167,13 @@ typedef union _hw_adc_clm2
 #define BS_ADC_CLM2_CLM2     (8U)          /*!< Bit field size in bits for ADC_CLM2_CLM2. */
 
 /*! @brief Read current value of the ADC_CLM2_CLM2 field. */
-#define BR_ADC_CLM2_CLM2(x)  (UNION_READ_BIT_FS(HW_ADC_CLM2_ADDR(x), hw_adc_clm2, B.CLM2))
+#define BR_ADC_CLM2_CLM2(x)  (UNION_READ(hw_adc_clm2_t, HW_ADC_CLM2_ADDR(x), U, B.CLM2))
 
 /*! @brief Format value for bitfield ADC_CLM2_CLM2. */
 #define BF_ADC_CLM2_CLM2(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_CLM2_CLM2) & BM_ADC_CLM2_CLM2)
 
 /*! @brief Set the CLM2 field to a new value. */
-#define BW_ADC_CLM2_CLM2(x, v) (UNION_WRITE_REG_FS(HW_ADC_CLM2_ADDR(x), hw_adc_clm2, (HW_ADC_CLM2_RD(x) & ~BM_ADC_CLM2_CLM2) | BF_ADC_CLM2_CLM2(v)))
+#define BW_ADC_CLM2_CLM2(x, v) (HW_ADC_CLM2_WR(x, (HW_ADC_CLM2_RD(x) & ~BM_ADC_CLM2_CLM2) | BF_ADC_CLM2_CLM2(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -2204,8 +2204,8 @@ typedef union _hw_adc_clm1
 #define HW_ADC_CLM1_ADDR(x)      ((x) + 0x68U)
 
 #define HW_ADC_CLM1(x)           (*(__IO hw_adc_clm1_t *) HW_ADC_CLM1_ADDR(x))
-#define HW_ADC_CLM1_RD(x)        (HW_ADC_CLM1(x).U)
-#define HW_ADC_CLM1_WR(x, v)     (HW_ADC_CLM1(x).U = (v))
+#define HW_ADC_CLM1_RD(x)        (ADDRESS_READ(hw_adc_clm1_t, HW_ADC_CLM1_ADDR(x)))
+#define HW_ADC_CLM1_WR(x, v)     (ADDRESS_WRITE(hw_adc_clm1_t, HW_ADC_CLM1_ADDR(x), v))
 #define HW_ADC_CLM1_SET(x, v)    (HW_ADC_CLM1_WR(x, HW_ADC_CLM1_RD(x) |  (v)))
 #define HW_ADC_CLM1_CLR(x, v)    (HW_ADC_CLM1_WR(x, HW_ADC_CLM1_RD(x) & ~(v)))
 #define HW_ADC_CLM1_TOG(x, v)    (HW_ADC_CLM1_WR(x, HW_ADC_CLM1_RD(x) ^  (v)))
@@ -2226,13 +2226,13 @@ typedef union _hw_adc_clm1
 #define BS_ADC_CLM1_CLM1     (7U)          /*!< Bit field size in bits for ADC_CLM1_CLM1. */
 
 /*! @brief Read current value of the ADC_CLM1_CLM1 field. */
-#define BR_ADC_CLM1_CLM1(x)  (UNION_READ_BIT_FS(HW_ADC_CLM1_ADDR(x), hw_adc_clm1, B.CLM1))
+#define BR_ADC_CLM1_CLM1(x)  (UNION_READ(hw_adc_clm1_t, HW_ADC_CLM1_ADDR(x), U, B.CLM1))
 
 /*! @brief Format value for bitfield ADC_CLM1_CLM1. */
 #define BF_ADC_CLM1_CLM1(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_CLM1_CLM1) & BM_ADC_CLM1_CLM1)
 
 /*! @brief Set the CLM1 field to a new value. */
-#define BW_ADC_CLM1_CLM1(x, v) (UNION_WRITE_REG_FS(HW_ADC_CLM1_ADDR(x), hw_adc_clm1, (HW_ADC_CLM1_RD(x) & ~BM_ADC_CLM1_CLM1) | BF_ADC_CLM1_CLM1(v)))
+#define BW_ADC_CLM1_CLM1(x, v) (HW_ADC_CLM1_WR(x, (HW_ADC_CLM1_RD(x) & ~BM_ADC_CLM1_CLM1) | BF_ADC_CLM1_CLM1(v)))
 /*@}*/
 
 /*******************************************************************************
@@ -2263,8 +2263,8 @@ typedef union _hw_adc_clm0
 #define HW_ADC_CLM0_ADDR(x)      ((x) + 0x6CU)
 
 #define HW_ADC_CLM0(x)           (*(__IO hw_adc_clm0_t *) HW_ADC_CLM0_ADDR(x))
-#define HW_ADC_CLM0_RD(x)        (HW_ADC_CLM0(x).U)
-#define HW_ADC_CLM0_WR(x, v)     (HW_ADC_CLM0(x).U = (v))
+#define HW_ADC_CLM0_RD(x)        (ADDRESS_READ(hw_adc_clm0_t, HW_ADC_CLM0_ADDR(x)))
+#define HW_ADC_CLM0_WR(x, v)     (ADDRESS_WRITE(hw_adc_clm0_t, HW_ADC_CLM0_ADDR(x), v))
 #define HW_ADC_CLM0_SET(x, v)    (HW_ADC_CLM0_WR(x, HW_ADC_CLM0_RD(x) |  (v)))
 #define HW_ADC_CLM0_CLR(x, v)    (HW_ADC_CLM0_WR(x, HW_ADC_CLM0_RD(x) & ~(v)))
 #define HW_ADC_CLM0_TOG(x, v)    (HW_ADC_CLM0_WR(x, HW_ADC_CLM0_RD(x) ^  (v)))
@@ -2285,13 +2285,13 @@ typedef union _hw_adc_clm0
 #define BS_ADC_CLM0_CLM0     (6U)          /*!< Bit field size in bits for ADC_CLM0_CLM0. */
 
 /*! @brief Read current value of the ADC_CLM0_CLM0 field. */
-#define BR_ADC_CLM0_CLM0(x)  (UNION_READ_BIT_FS(HW_ADC_CLM0_ADDR(x), hw_adc_clm0, B.CLM0))
+#define BR_ADC_CLM0_CLM0(x)  (UNION_READ(hw_adc_clm0_t, HW_ADC_CLM0_ADDR(x), U, B.CLM0))
 
 /*! @brief Format value for bitfield ADC_CLM0_CLM0. */
 #define BF_ADC_CLM0_CLM0(v)  ((uint32_t)((uint32_t)(v) << BP_ADC_CLM0_CLM0) & BM_ADC_CLM0_CLM0)
 
 /*! @brief Set the CLM0 field to a new value. */
-#define BW_ADC_CLM0_CLM0(x, v) (UNION_WRITE_REG_FS(HW_ADC_CLM0_ADDR(x), hw_adc_clm0, (HW_ADC_CLM0_RD(x) & ~BM_ADC_CLM0_CLM0) | BF_ADC_CLM0_CLM0(v)))
+#define BW_ADC_CLM0_CLM0(x, v) (HW_ADC_CLM0_WR(x, (HW_ADC_CLM0_RD(x) & ~BM_ADC_CLM0_CLM0) | BF_ADC_CLM0_CLM0(v)))
 /*@}*/
 
 /*******************************************************************************

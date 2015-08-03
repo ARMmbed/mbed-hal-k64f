@@ -129,8 +129,8 @@ typedef union _hw_vref_trm
 #define HW_VREF_TRM_ADDR(x)      ((x) + 0x0U)
 
 #define HW_VREF_TRM(x)           (*(__IO hw_vref_trm_t *) HW_VREF_TRM_ADDR(x))
-#define HW_VREF_TRM_RD(x)        (HW_VREF_TRM(x).U)
-#define HW_VREF_TRM_WR(x, v)     (HW_VREF_TRM(x).U = (v))
+#define HW_VREF_TRM_RD(x)        (ADDRESS_READ(hw_vref_trm_t, HW_VREF_TRM_ADDR(x)))
+#define HW_VREF_TRM_WR(x, v)     (ADDRESS_WRITE(hw_vref_trm_t, HW_VREF_TRM_ADDR(x), v))
 #define HW_VREF_TRM_SET(x, v)    (HW_VREF_TRM_WR(x, HW_VREF_TRM_RD(x) |  (v)))
 #define HW_VREF_TRM_CLR(x, v)    (HW_VREF_TRM_WR(x, HW_VREF_TRM_RD(x) & ~(v)))
 #define HW_VREF_TRM_TOG(x, v)    (HW_VREF_TRM_WR(x, HW_VREF_TRM_RD(x) ^  (v)))
@@ -157,13 +157,13 @@ typedef union _hw_vref_trm
 #define BS_VREF_TRM_TRIM     (6U)          /*!< Bit field size in bits for VREF_TRM_TRIM. */
 
 /*! @brief Read current value of the VREF_TRM_TRIM field. */
-#define BR_VREF_TRM_TRIM(x)  (UNION_READ_BIT_FS(HW_VREF_TRM_ADDR(x), hw_vref_trm, B.TRIM))
+#define BR_VREF_TRM_TRIM(x)  (UNION_READ(hw_vref_trm_t, HW_VREF_TRM_ADDR(x), U, B.TRIM))
 
 /*! @brief Format value for bitfield VREF_TRM_TRIM. */
 #define BF_VREF_TRM_TRIM(v)  ((uint8_t)((uint8_t)(v) << BP_VREF_TRM_TRIM) & BM_VREF_TRM_TRIM)
 
 /*! @brief Set the TRIM field to a new value. */
-#define BW_VREF_TRM_TRIM(x, v) (UNION_WRITE_REG_FS(HW_VREF_TRM_ADDR(x), hw_vref_trm, (HW_VREF_TRM_RD(x) & ~BM_VREF_TRM_TRIM) | BF_VREF_TRM_TRIM(v)))
+#define BW_VREF_TRM_TRIM(x, v) (HW_VREF_TRM_WR(x, (HW_VREF_TRM_RD(x) & ~BM_VREF_TRM_TRIM) | BF_VREF_TRM_TRIM(v)))
 /*@}*/
 
 /*!
@@ -182,13 +182,13 @@ typedef union _hw_vref_trm
 #define BS_VREF_TRM_CHOPEN   (1U)          /*!< Bit field size in bits for VREF_TRM_CHOPEN. */
 
 /*! @brief Read current value of the VREF_TRM_CHOPEN field. */
-#define BR_VREF_TRM_CHOPEN(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_VREF_TRM_ADDR(x), BP_VREF_TRM_CHOPEN)))
+#define BR_VREF_TRM_CHOPEN(x) (ADDRESS_READ(uint8_t, BITBAND_ADDRESS8(HW_VREF_TRM_ADDR(x), BP_VREF_TRM_CHOPEN)))
 
 /*! @brief Format value for bitfield VREF_TRM_CHOPEN. */
 #define BF_VREF_TRM_CHOPEN(v) ((uint8_t)((uint8_t)(v) << BP_VREF_TRM_CHOPEN) & BM_VREF_TRM_CHOPEN)
 
 /*! @brief Set the CHOPEN field to a new value. */
-#define BW_VREF_TRM_CHOPEN(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_VREF_TRM_ADDR(x), BP_VREF_TRM_CHOPEN), v))
+#define BW_VREF_TRM_CHOPEN(x, v) (ADDRESS_WRITE(uint8_t, BITBAND_ADDRESS8(HW_VREF_TRM_ADDR(x), BP_VREF_TRM_CHOPEN), v))
 /*@}*/
 
 /*******************************************************************************
@@ -225,8 +225,8 @@ typedef union _hw_vref_sc
 #define HW_VREF_SC_ADDR(x)       ((x) + 0x1U)
 
 #define HW_VREF_SC(x)            (*(__IO hw_vref_sc_t *) HW_VREF_SC_ADDR(x))
-#define HW_VREF_SC_RD(x)         (HW_VREF_SC(x).U)
-#define HW_VREF_SC_WR(x, v)      (HW_VREF_SC(x).U = (v))
+#define HW_VREF_SC_RD(x)         (ADDRESS_READ(hw_vref_sc_t, HW_VREF_SC_ADDR(x)))
+#define HW_VREF_SC_WR(x, v)      (ADDRESS_WRITE(hw_vref_sc_t, HW_VREF_SC_ADDR(x), v))
 #define HW_VREF_SC_SET(x, v)     (HW_VREF_SC_WR(x, HW_VREF_SC_RD(x) |  (v)))
 #define HW_VREF_SC_CLR(x, v)     (HW_VREF_SC_WR(x, HW_VREF_SC_RD(x) & ~(v)))
 #define HW_VREF_SC_TOG(x, v)     (HW_VREF_SC_WR(x, HW_VREF_SC_RD(x) ^  (v)))
@@ -253,13 +253,13 @@ typedef union _hw_vref_sc
 #define BS_VREF_SC_MODE_LV   (2U)          /*!< Bit field size in bits for VREF_SC_MODE_LV. */
 
 /*! @brief Read current value of the VREF_SC_MODE_LV field. */
-#define BR_VREF_SC_MODE_LV(x) (UNION_READ_BIT_FS(HW_VREF_SC_ADDR(x), hw_vref_sc, B.MODE_LV))
+#define BR_VREF_SC_MODE_LV(x) (UNION_READ(hw_vref_sc_t, HW_VREF_SC_ADDR(x), U, B.MODE_LV))
 
 /*! @brief Format value for bitfield VREF_SC_MODE_LV. */
 #define BF_VREF_SC_MODE_LV(v) ((uint8_t)((uint8_t)(v) << BP_VREF_SC_MODE_LV) & BM_VREF_SC_MODE_LV)
 
 /*! @brief Set the MODE_LV field to a new value. */
-#define BW_VREF_SC_MODE_LV(x, v) (UNION_WRITE_REG_FS(HW_VREF_SC_ADDR(x), hw_vref_sc, (HW_VREF_SC_RD(x) & ~BM_VREF_SC_MODE_LV) | BF_VREF_SC_MODE_LV(v)))
+#define BW_VREF_SC_MODE_LV(x, v) (HW_VREF_SC_WR(x, (HW_VREF_SC_RD(x) & ~BM_VREF_SC_MODE_LV) | BF_VREF_SC_MODE_LV(v)))
 /*@}*/
 
 /*!
@@ -278,7 +278,7 @@ typedef union _hw_vref_sc
 #define BS_VREF_SC_VREFST    (1U)          /*!< Bit field size in bits for VREF_SC_VREFST. */
 
 /*! @brief Read current value of the VREF_SC_VREFST field. */
-#define BR_VREF_SC_VREFST(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_VREF_SC_ADDR(x), BP_VREF_SC_VREFST)))
+#define BR_VREF_SC_VREFST(x) (ADDRESS_READ(uint8_t, BITBAND_ADDRESS8(HW_VREF_SC_ADDR(x), BP_VREF_SC_VREFST)))
 /*@}*/
 
 /*!
@@ -297,13 +297,13 @@ typedef union _hw_vref_sc
 #define BS_VREF_SC_ICOMPEN   (1U)          /*!< Bit field size in bits for VREF_SC_ICOMPEN. */
 
 /*! @brief Read current value of the VREF_SC_ICOMPEN field. */
-#define BR_VREF_SC_ICOMPEN(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_VREF_SC_ADDR(x), BP_VREF_SC_ICOMPEN)))
+#define BR_VREF_SC_ICOMPEN(x) (ADDRESS_READ(uint8_t, BITBAND_ADDRESS8(HW_VREF_SC_ADDR(x), BP_VREF_SC_ICOMPEN)))
 
 /*! @brief Format value for bitfield VREF_SC_ICOMPEN. */
 #define BF_VREF_SC_ICOMPEN(v) ((uint8_t)((uint8_t)(v) << BP_VREF_SC_ICOMPEN) & BM_VREF_SC_ICOMPEN)
 
 /*! @brief Set the ICOMPEN field to a new value. */
-#define BW_VREF_SC_ICOMPEN(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_VREF_SC_ADDR(x), BP_VREF_SC_ICOMPEN), v))
+#define BW_VREF_SC_ICOMPEN(x, v) (ADDRESS_WRITE(uint8_t, BITBAND_ADDRESS8(HW_VREF_SC_ADDR(x), BP_VREF_SC_ICOMPEN), v))
 /*@}*/
 
 /*!
@@ -327,13 +327,13 @@ typedef union _hw_vref_sc
 #define BS_VREF_SC_REGEN     (1U)          /*!< Bit field size in bits for VREF_SC_REGEN. */
 
 /*! @brief Read current value of the VREF_SC_REGEN field. */
-#define BR_VREF_SC_REGEN(x)  (ADDRESS_READ8(BITBAND_ADDRESS8(HW_VREF_SC_ADDR(x), BP_VREF_SC_REGEN)))
+#define BR_VREF_SC_REGEN(x)  (ADDRESS_READ(uint8_t, BITBAND_ADDRESS8(HW_VREF_SC_ADDR(x), BP_VREF_SC_REGEN)))
 
 /*! @brief Format value for bitfield VREF_SC_REGEN. */
 #define BF_VREF_SC_REGEN(v)  ((uint8_t)((uint8_t)(v) << BP_VREF_SC_REGEN) & BM_VREF_SC_REGEN)
 
 /*! @brief Set the REGEN field to a new value. */
-#define BW_VREF_SC_REGEN(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_VREF_SC_ADDR(x), BP_VREF_SC_REGEN), v))
+#define BW_VREF_SC_REGEN(x, v) (ADDRESS_WRITE(uint8_t, BITBAND_ADDRESS8(HW_VREF_SC_ADDR(x), BP_VREF_SC_REGEN), v))
 /*@}*/
 
 /*!
@@ -354,13 +354,13 @@ typedef union _hw_vref_sc
 #define BS_VREF_SC_VREFEN    (1U)          /*!< Bit field size in bits for VREF_SC_VREFEN. */
 
 /*! @brief Read current value of the VREF_SC_VREFEN field. */
-#define BR_VREF_SC_VREFEN(x) (ADDRESS_READ8(BITBAND_ADDRESS8(HW_VREF_SC_ADDR(x), BP_VREF_SC_VREFEN)))
+#define BR_VREF_SC_VREFEN(x) (ADDRESS_READ(uint8_t, BITBAND_ADDRESS8(HW_VREF_SC_ADDR(x), BP_VREF_SC_VREFEN)))
 
 /*! @brief Format value for bitfield VREF_SC_VREFEN. */
 #define BF_VREF_SC_VREFEN(v) ((uint8_t)((uint8_t)(v) << BP_VREF_SC_VREFEN) & BM_VREF_SC_VREFEN)
 
 /*! @brief Set the VREFEN field to a new value. */
-#define BW_VREF_SC_VREFEN(x, v) (ADDRESS_WRITE8(BITBAND_ADDRESS8(HW_VREF_SC_ADDR(x), BP_VREF_SC_VREFEN), v))
+#define BW_VREF_SC_VREFEN(x, v) (ADDRESS_WRITE(uint8_t, BITBAND_ADDRESS8(HW_VREF_SC_ADDR(x), BP_VREF_SC_VREFEN), v))
 /*@}*/
 
 /*******************************************************************************
