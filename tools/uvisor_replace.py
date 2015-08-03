@@ -1,4 +1,6 @@
-import fileinput
+# Copyright 2015-2015 ARM Limited
+#
+# Licensed under the Apache License, Version 2.0
 import re
 import argparse
 
