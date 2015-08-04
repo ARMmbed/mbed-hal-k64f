@@ -35,7 +35,7 @@
       "uvisor-lib": "~0.7.0"
     },
     "frdm-k64f": {
-      "mbed-hal-frdm-k64f": "~0.3.0"
+      "mbed-hal-frdm-k64f": "~0.4.0"
     }
   }
 }
