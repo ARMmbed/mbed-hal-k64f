@@ -85,11 +85,32 @@
  * Fallback macros for write/read operations
  */
 #ifndef ADDRESS_READ
-#define ADDRESS_READ(type, addr) (*((type *) addr))
+/* the conditional statement will be optimised away since the compiler already
+ * knows the sizeof(type) */
+#define ADDRESS_READ(type, addr) \
+    (sizeof(type) == 4 ? *((volatile uint32_t *) (addr)) : \
+     sizeof(type) == 2 ? *((volatile uint16_t *) (addr)) : \
+     sizeof(type) == 1 ? *((volatile uint8_t  *) (addr)) : 0)
 #endif
 
 #ifndef ADDRESS_WRITE
-#define ADDRESS_WRITE(type, addr, val) (*((type *) (addr)) = (val))
+/* the switch statement will be optimised away since the compiler already knows
+ * the sizeof(type) */
+#define ADDRESS_WRITE(type, addr, val) \
+    { \
+        switch(sizeof(type)) \
+        { \
+            case 4: \
+                *((volatile uint32_t *) (addr)) = (uint32_t) (val); \
+                break; \
+            case 2: \
+                *((volatile uint16_t *) (addr)) = (uint16_t) (val); \
+                break; \
+            case 1: \
+                *((volatile uint8_t  *) (addr)) = (uint8_t ) (val); \
+                break; \
+        } \
+    }
 #endif
 
 #ifndef UNION_READ
