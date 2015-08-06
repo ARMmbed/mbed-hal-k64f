@@ -114,7 +114,7 @@
 #endif
 
 #ifndef UNION_READ
-#define UNION_READ(type, addr, fieldU, fieldB) ((*((type *) (addr))).fieldB)
+#define UNION_READ(type, addr, fieldU, fieldB) ((*((volatile type *) (addr))).fieldB)
 #endif
 
 /*
