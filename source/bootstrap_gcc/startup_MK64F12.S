@@ -4,6 +4,9 @@
  * Version: V1.2
  * Date: 15 Nov 2011
  *
+ * Copyright (c) 1997 - 2011 Freescale Semiconductor, Inc. 
+ * All Rights Reserved.
+ *
  * Copyright (c) 2011, ARM Limited
  * All rights reserved.
  *
