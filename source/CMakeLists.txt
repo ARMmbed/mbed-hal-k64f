@@ -61,13 +61,19 @@ set_target_properties(mbed-hal-k64f PROPERTIES
 if(TARGET_LIKE_GCC)
     set(EXTRA_LINK_LIBS uvisor-lib)
 else()
-    set(EXTRA_LINK_LIBS)
+    set()
+endif()
+
+if(TARGET_LIKE_FRDM_K64F)
+    set(PLATFORM_SPECIFIC_HAL_LIB mbed-hal-frdm-k64f)
+elseif(TARGET_LIKE_MTS_GAMBIT)
+    set(PLATFORM_SPECIFIC_HAL_LIB mbed-hal-gambit)
+else()
+    message(FATAL_ERROR "Missing PLATFORM_SPECIFIC_HAL_LIB")
 endif()
 
 target_link_libraries(mbed-hal-k64f
     ${EXTRA_LINK_LIBS}
     mbed-hal
-    mbed-hal-frdm-k64f
+    ${PLATFORM_SPECIFIC_HAL_LIB}
 )
-
-
