@@ -61,7 +61,7 @@ set_target_properties(mbed-hal-k64f PROPERTIES
 if(TARGET_LIKE_GCC)
     set(EXTRA_LINK_LIBS uvisor-lib)
 else()
-    set()
+    set(EXTRA_LINK_LIBS)
 endif()
 
 if(TARGET_LIKE_FRDM_K64F)
