@@ -7,7 +7,8 @@
     "hal",
     "k64f",
     "ksdk",
-    "freescale"
+    "freescale",
+    "mbed-official"
   ],
   "author": "martin.kojtal@arm.com",
   "repository": {
@@ -31,10 +32,10 @@
   },
   "targetDependencies": {
     "gcc": {
-      "uvisor-lib": "~0.8.0"
+      "uvisor-lib": "~0.9.0"
     },
     "frdm-k64f": {
-      "mbed-hal-frdm-k64f": "~0.5.0"
+      "mbed-hal-frdm-k64f": "^1.0.0"
     },
     "mts-gambit": {
       "mbed-hal-gambit": "~0.5.0"
