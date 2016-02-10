@@ -52,6 +52,7 @@ add_library(mbed-hal-k64f
     ${STARTUP_SRC}
     "fsl_clock_K64F12.c"
     "fsl_sim_hal_K64F12.c"
+    "crc.c"
 )
 set_target_properties(mbed-hal-k64f PROPERTIES
     LINKER_LANGUAGE C
