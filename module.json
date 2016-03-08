@@ -32,7 +32,7 @@
   },
   "targetDependencies": {
     "gcc": {
-      "uvisor-lib": "^1.0.0"
+      "uvisor-lib": ">=1.0.0,<3.0.0"
     },
     "frdm-k64f": {
       "mbed-hal-frdm-k64f": "^1.0.0"
